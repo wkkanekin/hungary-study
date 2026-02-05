@@ -684,3 +684,37 @@ font-size: 0.86rem;
 #searchBtn{
 width: 100%;
 }
+
+/* External Links (NEW) */
+.external-links{
+margin-top: 10px;
+padding: 12px 12px;
+border-radius: 14px;
+border: 1px solid rgba(20,30,60,0.10);
+background: rgba(27,31,42,0.02);
+}
+.external-links-title{
+font-weight: 900;
+color: #121628;
+margin-bottom: 8px;
+}
+.external-links-items{
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+.ext-link{
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 8px 12px;
+border-radius: 999px;
+font-weight: 900;
+color: var(--primaryDark);
+background: rgba(42,82,190,0.08);
+border: 1px solid rgba(42,82,190,0.18);
+text-decoration: none;
+}
+.ext-link:hover{
+background: rgba(42,82,190,0.12);
+}

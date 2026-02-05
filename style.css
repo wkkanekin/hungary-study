@@ -422,7 +422,7 @@ background: #fff;
 /* Responsive */
 @media (min-width: 740px){
 .badges{ grid-template-columns: 1fr 1fr 1fr; }
-.search-grid{ grid-template-columns: 2fr 1fr 1fr; }
+.search-grid{ grid-template-columns: 2fr 1fr 1fr 1fr; }
 .steps{ grid-template-columns: 1fr 1fr 1fr; }
 .profile-image{ height: 220px; }
 }
@@ -627,51 +627,60 @@ height: 520px;
 }
 
 /* =========================
-ADDED: Suggest dropdown / no-results / contact
+Suggest dropdown (NEW)
 ========================= */
 .suggest-wrap{
 position: relative;
 }
-.suggest-box{
-position: absolute;
-top: calc(100% + 6px);
-left: 0;
-right: 0;
+
+.suggest{
+margin-top: 10px;
 background: #fff;
-border: 1px solid rgba(20,30,60,0.18);
-border-radius: 12px;
-box-shadow: var(--shadow);
+border: 1px solid rgba(20,30,60,0.14);
+border-radius: 14px;
+box-shadow: 0 14px 34px rgba(20, 30, 60, 0.12);
 overflow: hidden;
-z-index: 50;
 }
+
 .suggest-item{
+display:flex;
+gap: 10px;
+align-items: center;
 padding: 10px 12px;
 cursor: pointer;
-font-weight: 800;
-color: #23283a;
 border-bottom: 1px solid rgba(20,30,60,0.08);
 }
 .suggest-item:last-child{ border-bottom: none; }
+
 .suggest-item:hover{
-background: rgba(42, 82, 190, 0.06);
+background: rgba(42,82,190,0.06);
 }
-.suggest-muted{
+
+.suggest-kind{
+font-weight: 900;
+color: var(--primaryDark);
+background: rgba(42,82,190,0.10);
+border: 1px solid rgba(42,82,190,0.16);
+border-radius: 999px;
+padding: 4px 10px;
+font-size: 0.82rem;
+flex: 0 0 auto;
+}
+
+.suggest-text{
+font-weight: 800;
+color: #121628;
+font-size: 0.95rem;
+line-height: 1.3;
+}
+
+.suggest-note{
+margin-top: 8px;
 color: #6d7486;
-font-weight: 700;
-font-size: 0.9rem;
+font-size: 0.86rem;
 }
 
-.no-results{
-margin-top: 14px;
-}
-
-.contact-links{
-display: grid;
-grid-template-columns: 1fr;
-gap: 10px;
-}
-@media (min-width: 740px){
-.contact-links{
-grid-template-columns: 1fr 1fr;
-}
+/* ensure search button looks like others on desktop too */
+#searchBtn{
+width: 100%;
 }

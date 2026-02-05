@@ -1,7 +1,18 @@
 {
-"facebook": "https://facebook.com/yourpage",
-"youtube": "https://youtube.com/@yourchannel",
-"instagram": "https://instagram.com/youraccount",
-"email": "yourmail@example.com",
-"formUrl": "https://forms.gle/your-google-form"
+"formUrl": "https://forms.gle/xxxxxxxxxx",
+"email": "contact@example.com",
+"socials": [
+{
+"label": "YouTube",
+"url": "https://www.youtube.com/@example"
+},
+{
+"label": "Instagram",
+"url": "https://www.instagram.com/example"
+},
+{
+"label": "Facebook",
+"url": "https://www.facebook.com/example"
+}
+]
 }

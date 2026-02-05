@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ハンガリー現役大学生相談サービス（β）</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
 </head>
 
 <body>
@@ -31,199 +25,6 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <p class="pill">初めての留学相談でもご安心ください</p>
-
-      <h2 class="hero-title">
-        ハンガリー留学、まずは全体像だけ知りたい方へ
-      </h2>
-
-      <p class="hero-text">
-        いきなり「相談」でもOKですが、<br />
-        まずはハンガリー留学の“前提”を1分で掴めるように、基本情報をまとめました。
-      </p>
-
-      <div class="card soft hungary-lead" id="basics">
-        <h3 class="basics-title">ハンガリー留学の前提（ざっくり）</h3>
-        <ul class="bullets">
-          <li>中欧のEU加盟国。首都はブダペスト。通貨はフォリント（HUF）。</li>
-          <li>英語開講プログラムのある大学が複数あり、学部〜大学院まで進学ルートがある（大学・専攻による）。</li>
-          <li>留学生比率が高め（参考値：高等教育在籍者のうち外国籍が約14%台の年度あり）。</li>
-        </ul>
-
-        <h3 class="basics-title">費用・英語・生活感：まずここだけ押さえる</h3>
-
-        <div class="info-grid" aria-label="費用・英語・生活の要点">
-          <div class="info-card">
-            <div class="info-k">学費（目安）</div>
-            <div class="info-v">年 €5,000〜€8,000</div>
-            <div class="info-s">一般学部の目安レンジ。医学系などは高くなる傾向。</div>
-          </div>
-
-          <div class="info-card">
-            <div class="info-k">生活費（目安）</div>
-            <div class="info-v">月 25万HUF 前後</div>
-            <div class="info-s">家賃・食費・移動・雑費込みの最低限目安（都市・生活スタイルで変動）。</div>
-          </div>
-
-          <div class="info-card">
-            <div class="info-k">住まい（例）</div>
-            <div class="info-v">寮 3.5万HUF〜 / 部屋 20万HUF〜</div>
-            <div class="info-s">ブダペスト等の例。地方は下がることがある。</div>
-          </div>
-
-          <div class="info-card">
-            <div class="info-k">英語要件（傾向）</div>
-            <div class="info-v">専攻・大学で差</div>
-            <div class="info-s">IELTS/TOEFL必須でないケースもあるが、授業についていく英語力は必要。</div>
-          </div>
-
-          <div class="info-card">
-            <div class="info-k">就労（参考）</div>
-            <div class="info-v">週 最大30時間</div>
-            <div class="info-s">学生の就労上限の目安（在留資格・制度により変わる可能性）。</div>
-          </div>
-
-          <div class="info-card">
-            <div class="info-k">最低賃金（参考）</div>
-            <div class="info-v">時給 1,672 HUF</div>
-            <div class="info-s">年度により更新あり。バイト可否は言語・職種で差が出やすい。</div>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <h3 class="basics-title">公的情報で分かること／現役生に聞くべきこと</h3>
-        <div class="compare-grid">
-          <div class="compare-card">
-            <div class="compare-h">公的情報（JASSO・大学公式など）</div>
-            <ul class="bullets">
-              <li>制度（ビザ/就労/学位区分の基本）</li>
-              <li>学費レンジ・出願の一般情報</li>
-              <li>大学一覧・公式手続き・締切</li>
-            </ul>
-          </div>
-
-          <div class="compare-card">
-            <div class="compare-h">現役生（いま現地にいる人）</div>
-            <ul class="bullets">
-              <li>授業のリアル（課題量・試験・評価方法）</li>
-              <li>住まい探しの勝ち筋（避ける物件/契約の注意点）</li>
-              <li>生活費の“実態”（節約/食費/移動/想定外出費）</li>
-              <li>英語で困る場面と突破法（行政・病院・バイト等）</li>
-              <li>出願で詰まりやすいポイント（体験談ベース）</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="source">
-          ※数値は年度・都市・専攻で変動します。LPでは「目安」として掲載し、詳細は面談で最新情報を共有します。<br />
-          出典例：JASSO留学情報（ハンガリー）、大学公式情報、ハンガリー高等教育関連統計等
-        </p>
-      </div>
-
-      <h2 class="hero-title hero-title-2">
-        ハンガリー留学について、現役生に相談できます。
-      </h2>
-
-      <p class="hero-text">
-        ハンガリー在住の現役大学生が、<br />
-        あなたの留学・進学の不安を一緒に整理します。
-      </p>
-
-      <p class="hero-text">
-        留学エージェントでは伝えきれない、<br />
-        現地の生活や授業、治安、出願のリアルタイムな情報を知ることができます。
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn" href="#students">現役生を見る</a>
-        <a class="btn ghost" href="#flow">相談の流れを見る</a>
-        <a class="btn ghost" href="#basics">ハンガリー基本情報を見る</a>
-      </div>
-
-      <p class="disclaimer">
-        ※本サービスは留学エージェントではありません。合否や入学を保証するものではなく、経験に基づく情報共有サービスです。
-      </p>
-    </section>
-
-    <!-- BADGES -->
-    <section class="section">
-      <div class="badges">
-        <div class="badge">
-          <div class="badge-k">形式</div>
-          <div class="badge-v">オンライン1対1</div>
-          <div class="badge-s">（Zoomを使用します）</div>
-        </div>
-
-        <div class="badge">
-          <div class="badge-k">料金</div>
-          <div class="badge-v">8,000円 / 60分</div>
-          <div class="badge-s">（留学を本気で考え始めた方が、無理なく相談できる価格です）</div>
-        </div>
-
-        <div class="badge">
-          <div class="badge-k">相談内容</div>
-          <div class="badge-v">生活・大学・出願</div>
-          <div class="badge-s">（実体験をもとにお話しします）</div>
-        </div>
-      </div>
-
-      <div class="card soft">
-        <p class="para">
-          本気で検討し始めた方から、まだ漠然と興味がある段階の方まで、<br />
-          ハンガリー留学に関する疑問を整理するための相談の場を目指しています。
-        </p>
-      </div>
-    </section>
-
-    <!-- WHAT YOU CAN ASK -->
-    <section class="section" id="what">
-      <h2>どんな相談ができますか？</h2>
-
-      <p class="para">
-        現役生の実体験をもとに、いまの自分に必要な話を、必要なタイミングで聞けます。
-      </p>
-
-      <p class="para">
-        大学の雰囲気や授業の進み方、試験の実際、現地での生活費や住まい、治安、<br />
-        出願や奨学金に関する考え方など、現地で学び、暮らしているからこそ分かる内容について相談できます。
-      </p>
-
-      <p class="para">
-        大学や学部を見て、「この人に聞きたい」を選んで相談できます。
-      </p>
-
-      <div class="topics-box">
-        <h3>相談でよく出るテーマ</h3>
-        <div class="chips" aria-label="相談テーマ">
-          <span class="chip">#生活費</span>
-          <span class="chip">#住まい</span>
-          <span class="chip">#大学選び</span>
-          <span class="chip">#英語/語学</span>
-          <span class="chip">#出願</span>
-          <span class="chip">#治安</span>
-          <span class="chip">#奨学金</span>
-        </div>
-
-        <p class="fineprint">
-          ※ 奨学金については、スティペンディウム・ハンガリカムを含め、実際に調べたことや、利用・出願した経験をもとに情報を共有します。
-        </p>
-
-        <p class="para">
-          迷ったらまずは「気になる現役生」を選んで、空き枠を確認してみてください。
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn full" href="#students">現役生を見る</a>
-          <button class="btn ghost full" type="button" data-copy-template>
-            質問例をコピー
-          </button>
-        </div>
-      </div>
-    </section>
-
     <!-- SEARCH -->
     <section class="section" id="search">
       <h2>現役大学生一覧・検索</h2>
@@ -231,53 +32,19 @@
         <input
           type="text"
           id="keyword"
-          placeholder="大学名・地域・キーワードで検索（例：ブダペスト、Szeged、医学部、奨学金）"
+          placeholder="大学名・地域・キーワードで検索"
         />
         <select id="regionFilter">
           <option value="">地域指定なし</option>
           <option value="ブダペスト">ブダペスト</option>
           <option value="セゲド">セゲド</option>
-          <option value="ペーチ">ペーチ</option>
-          <option value="デブレツェン">デブレツェン</option>
-          <option value="ミシュコルツ">ミシュコルツ</option>
-          <option value="ヴェスプレーム">ヴェスプレーム</option>
-          <option value="ショプロン">ショプロン</option>
         </select>
         <select id="courseFilter">
           <option value="">分野指定なし</option>
-          <option value="医学部">医学部</option>
-          <option value="理系">理系</option>
-          <option value="社会系">社会系</option>
-          <option value="教育">教育</option>
-          <option value="芸術">芸術</option>
           <option value="経営">経営</option>
+          <option value="社会系">社会系</option>
+          <option value="医学部">医学部</option>
         </select>
-      </div>
-    </section>
-
-    <!-- MAP (NEW) -->
-    <section class="section" id="mapSearch">
-      <h2>地図から大学を探す</h2>
-      <p class="para">
-        都市をクリックすると、その都市の大学が表示されます。<br />
-        大学名をクリックすると、上の検索欄に反映されて現役生カードが絞り込まれます。
-      </p>
-
-      <div class="map-layout">
-        <div class="map-card">
-          <div id="huMap" class="hu-map" aria-label="Hungary map"></div>
-          <p class="fineprint">※スマホでは「タップ」で動作します。</p>
-        </div>
-
-        <aside class="map-results card">
-          <h3 class="map-results-title">大学一覧</h3>
-          <div id="mapHint" class="map-hint">地図上の都市をクリックしてください</div>
-          <div id="uniList" class="uni-list"></div>
-
-          <div class="map-actions">
-            <button id="clearUniFilter" class="btn ghost full" type="button">検索欄をクリア</button>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -285,293 +52,23 @@
     <section class="section" id="students">
       <h2>現役生（順次追加予定）</h2>
 
-      <div class="student-list">
-
-        <!-- =========================
-             カネコ（実リンク）
-        ========================== -->
-        <article class="student-card" data-region="ブダペスト" data-course="経営">
-          <div class="profile-image profile-circle">
-            <img src="https://placehold.co/520x520/png?text=Kaneko" alt="カネコのプロフィール写真（プレースホルダー）" />
-          </div>
-
-          <div class="info">
-            <h3 class="student-name">カネコ（30代）</h3>
-
-            <div class="profile-meta">
-              <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">Budapest University of Economics and Business</span></div>
-              <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">ブダペスト</span></div>
-              <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">Tourism Management（修士）</span></div>
-              <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">CEFR C1（英語）</span></div>
-              <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">Zoomのみ</span></div>
-            </div>
-
-            <p class="bio">
-              日本で大学を卒業後、外資系製薬での勤務を経て、ハンガリー大学院に進学。<br />
-              社会人から留学に踏み切った理由、準備・費用・現地生活のリアル、学業との両立などを経験ベースで共有できます。
-            </p>
-
-            <div class="tagline">
-              <span class="hash">#社会人留学</span>
-              <span class="hash">#英語学習</span>
-              <span class="hash">#キャリアチェンジ</span>
-              <span class="hash">#ブダペスト生活</span>
-            </div>
-
-            <div class="card-actions">
-              <a class="btn" href="https://calendly.com/wkkanekin/meet-with-me" target="_blank" rel="noopener noreferrer">
-                空き枠を見る（8,000円 / 60分）
-              </a>
-              <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
-            </div>
-
-            <p class="fineprint">※面談はZoomで行います（Meet等は使用しません）。</p>
-          </div>
-        </article>
-
-        <!-- ダミー（以下そのまま） -->
-        <article class="student-card is-disabled" data-region="ブダペスト" data-course="社会系">
-          <div class="profile-image profile-circle">
-            <img src="https://placehold.co/520x520/png?text=Airi" alt="Airiのプロフィール写真（プレースホルダー）" />
-          </div>
-
-          <div class="info">
-            <h3 class="student-name">アイリ（20代）</h3>
-
-            <div class="profile-meta">
-              <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">Eötvös Loránd University（ELTE）</span></div>
-              <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">ブダペスト</span></div>
-              <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">Psychology（学士）</span></div>
-              <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">CEFR C1（英語）</span></div>
-              <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">Zoomのみ</span></div>
-            </div>
-
-            <p class="bio">
-              高校卒業後すぐに単身で渡航。最初は情報・ネットワークがなく苦労した経験から、<br />
-              「一人で挑戦する人が孤独にならない」ための情報共有に関心があります。生活立ち上げや学業のリアルを話せます。
-            </p>
-
-            <div class="tagline">
-              <span class="hash">#単身留学</span>
-              <span class="hash">#ELTE</span>
-              <span class="hash">#現地生活</span>
-              <span class="hash">#メンタル</span>
-            </div>
-
-            <div class="card-actions">
-              <a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>
-              <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
-            </div>
-
-            <p class="fineprint">※準備が整い次第、予約枠を公開します。</p>
-          </div>
-        </article>
-
-        <article class="student-card is-disabled" data-region="セゲド" data-course="医学部">
-          <div class="profile-image profile-circle">
-            <img src="https://placehold.co/520x520/png?text=Kenta" alt="Kentaのプロフィール写真（プレースホルダー）" />
-          </div>
-
-          <div class="info">
-            <h3 class="student-name">ケンタ（20代）</h3>
-
-            <div class="profile-meta">
-              <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">University of Szeged</span></div>
-              <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">セゲド</span></div>
-              <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">Medicine（学士/MD）</span></div>
-              <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">CEFR B2（英語）</span></div>
-              <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">Zoomのみ</span></div>
-            </div>
-
-            <p class="bio">
-              医学部の授業量・試験の負荷、日々の勉強ルーティン、生活費の実態など、<br />
-              「継続してやり切る」観点からリアルを共有できます。出願準備で詰まった点の体験談も。
-            </p>
-
-            <div class="tagline">
-              <span class="hash">#医学部</span>
-              <span class="hash">#セゲド</span>
-              <span class="hash">#試験対策</span>
-              <span class="hash">#生活費</span>
-            </div>
-
-            <div class="card-actions">
-              <a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>
-              <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
-            </div>
-
-            <p class="fineprint">※準備が整い次第、予約枠を公開します。</p>
-          </div>
-        </article>
-
-        <article class="student-card is-disabled" data-region="ペーチ" data-course="芸術">
-          <div class="profile-image profile-circle">
-            <img src="https://placehold.co/520x520/png?text=Mika" alt="Mikaのプロフィール写真（プレースホルダー）" />
-          </div>
-
-          <div class="info">
-            <h3 class="student-name">ミカ（20代）</h3>
-
-            <div class="profile-meta">
-              <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">University of Pécs</span></div>
-              <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">ペーチ</span></div>
-              <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">Arts & Design（学士）</span></div>
-              <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">CEFR B2（英語）</span></div>
-              <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">Zoomのみ</span></div>
-            </div>
-
-            <p class="bio">
-              地方都市での暮らし（家賃・治安・移動）や、学内の雰囲気、課題の進め方など、<br />
-              ブダペストとは違う「地方留学の現実」を共有できます。はじめての海外生活の立ち上げも相談OK。
-            </p>
-
-            <div class="tagline">
-              <span class="hash">#ペーチ</span>
-              <span class="hash">#芸術</span>
-              <span class="hash">#地方留学</span>
-              <span class="hash">#住まい</span>
-            </div>
-
-            <div class="card-actions">
-              <a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>
-              <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
-            </div>
-
-            <p class="fineprint">※準備が整い次第、予約枠を公開します。</p>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="cta-bar">
-        <a class="btn full" href="#flow">相談の流れを見る</a>
+      <!-- ★ ここが重要：JSが自動生成する -->
+      <div class="student-list" id="studentList">
+        <!-- students.json から自動生成 -->
       </div>
     </section>
 
-    <!-- FLOW -->
-    <section class="section" id="flow">
-      <h2>相談の流れ（かんたん3ステップ）</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div>
-            <h3>現役生を選ぶ</h3>
-            <p>大学・地域・キーワードで探せます。気になる人がいればカードから詳細を確認。</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-no">2</div>
-          <div>
-            <h3>空き枠を確認して予約</h3>
-            <p>「空き枠を見る」から予約ページへ。β期間は予約ページ側の案内に従ってください。</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-no">3</div>
-          <div>
-            <h3>Zoomで1対1相談</h3>
-            <p>事前に質問をメモしておくと60分が濃くなります。コピー用の質問例も用意しています。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-bar">
-        <button class="btn full" type="button" data-copy-template>質問例をコピー</button>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <h2>よくある質問（FAQ）</h2>
-
-      <div class="faq">
-        <details>
-          <summary>留学エージェントと何が違うんですか？</summary>
-          <p>
-            本サービスは、現地在住の現役学生が「経験ベースの情報」を共有する相談サービスです。
-            手続き代行や合否の保証は行いません。一次情報で判断したい方に向いています。
-          </p>
-        </details>
-
-        <details>
-          <summary>どんな相談ができますか？</summary>
-          <p>
-            生活費・家探し・大学の雰囲気・授業や試験の実際・現地の治安・出願の進め方（体験談）などが多いです。
-            事前に質問をメモしておくと60分が濃くなります。
-          </p>
-        </details>
-
-        <details>
-          <summary>支払い方法は？</summary>
-          <p>
-            β期間は予約ページ（Calendly等）側の案内に従ってください。今後は決済一体化を検討しています。
-          </p>
-        </details>
-
-        <details>
-          <summary>まだ枠が「準備中」の人もいます</summary>
-          <p>
-            順次、予約枠を整備中です。まずは現在予約可能な現役生からご利用ください。
-          </p>
-        </details>
-
-        <details>
-          <summary>奨学金（スティペンディウム・ハンガリカム）も相談できますか？</summary>
-          <p>
-            はい。実際に調べたことや、利用・出願した経験をもとに情報を共有します。
-            申請の代行や合否の保証を行うものではありません。
-          </p>
-        </details>
-      </div>
-    </section>
-
-    <!-- QUESTION TEMPLATE (hidden) -->
-    <textarea id="questionTemplate" class="sr-only" aria-hidden="true">
+    <!-- QUESTION TEMPLATE -->
+    <textarea id="questionTemplate" class="sr-only">
 【大学・学業について】
-・大学全体の雰囲気や、授業の進み方について教えてください
-・授業や試験は、どのくらいの難易度・負荷がありますか？
-・実際の評価方法（テスト・レポート・出席など）はどんな感じですか？
-
-【語学力について】
-・入学時の語学力はどのくらいでしたか？
-・現在の語学力はどのくらいですか？
-・授業についていくために、どの程度の英語力が必要だと感じますか？
-・語学面で最初に苦労したことがあれば教えてください
-
-【学生・環境について】
-・クラスや大学内での日本人の割合はどのくらいですか？
-・周りの学生の国籍や年齢層、全体の雰囲気はどんな感じですか？
-・日本人留学生として過ごすうえで、良い点・大変だった点はありますか？
-
-【進路選択について】
-・なぜこの大学・学部を選んだのか、理由を教えてください
-・ハンガリーを留学先として選んだ理由は何ですか？
-・他の国（ヨーロッパ・英語圏など）も検討しましたか？最終的にハンガリーに決めた決め手は何でしたか？
-
-【生活について】
-・生活費は月にどれくらいかかっていますか？
-・住まい（寮・家探し）の実態や探し方を教えてください
-・治安や日常生活で、実際に気をつけていることはありますか？
-
-【出願・準備について】
-・出願準備で大変だった点は何ですか？
-・事前に知っておきたかったことがあれば教えてください
-・これから出願する人に、準備面で伝えたいことはありますか？
-
-【奨学金について】
-・（奨学金）スティペンディウム・ハンガリカムについて、
-  調べたことや、出願・利用した経験があれば教えてください
-・奨学金を含めて、費用面で想定と違った点があれば知りたいです
+・大学全体の雰囲気や授業について
+・試験や課題の負荷
     </textarea>
   </main>
 
   <footer class="site-footer">
     <p>© 2026 Hungary Study 現役生相談サービス（β）</p>
-    <p class="fineprint">お問い合わせ導線はβ期間は簡易運用（SNS/フォーム等）を想定。必要なら追加します。</p>
   </footer>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script src="script.js"></script>
 </body>

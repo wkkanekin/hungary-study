@@ -3,153 +3,67 @@
 <head>
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>ハンガリー現役大学生相談サービス（β）</title>
+ <title>ハンガリー現役大学生に直接聞けるオンライン留学相談</title>
+
  <link rel="stylesheet" href="style.css" />
 
- <!-- Leaflet CSS -->
- <link
- rel="stylesheet"
- href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
- />
+ <!-- Leaflet (Map) -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
- <header class="site-header">
+ <!-- 右上：ミニ目次（開閉は script.js） -->
+ <div class="miniToc" aria-label="ページ目次">
+ <button class="tocBtn" id="tocToggle" type="button" aria-expanded="false">
+ ☰ <span>このページ</span>
+ </button>
+
+ <nav class="tocPanel" id="tocPanel" aria-label="目次">
+ <a href="#service">サービス内容</a>
+ <a href="#flow">相談の流れ</a>
+
+ <a href="#basics-cards">全体像</a>
+ <div class="sub">
+ <a href="basics.html#hungary">1. ハンガリーについて</a>
+ <a href="basics.html#programs">2. 大学の探し方</a>
+ <a href="basics.html#scholarship">3. 奨学金（スティペンディウム・ハンガリカム）</a>
+ </div>
+
+ <a href="#search">現役生を探す</a>
+ <a href="#mapSearch">地図から探す</a>
+ <a href="#faq">FAQ</a>
+ <a href="#recruit">現役生募集中</a>
+ <a href="#contact">お問い合わせ</a>
+ </nav>
+ </div>
+
+ <header class="site-header hero-header" id="top">
  <div class="header-inner">
- <div class="logo">HU</div>
- <div>
- <h1>ハンガリー現役大学生相談サービス（β）</h1>
+ <!-- ロゴは画像差し替えしやすいように箱だけ -->
+ <div class="logo" aria-label="ロゴ（ダミー）">
+ HU
+ <!-- <img src="logo.png" alt="ロゴ" /> -->
+ </div>
+
+ <div class="header-copy">
+ <p class="pill">初めての留学相談でもご安心ください</p>
+
+ <h1 class="site-title">ハンガリー現役大学生に直接聞けるオンライン留学相談</h1>
+
  <p class="sub">
- 現役ハンガリー大学生と1対1で、<br />
- 留学や進学、現地生活のリアルを相談できるオンラインサービス
- </p>
- <p class="fineprint">
- ※β期間中は、まずは気軽に相談してもらうためのテスト運用です。
+ 留学・進学・現地生活について、実際に学んでいる現役生が1対1でお話しします。
  </p>
  </div>
  </div>
+
+ <!-- 背景画像は style.css の --hero-bg を差し替え（HTMLは触らない） -->
  </header>
 
  <main>
- <!-- HERO -->
- <section class="hero" id="top">
- <p class="pill">初めての留学相談でもご安心ください</p>
+ <!-- 1) サービス内容 -->
+ <section class="section" id="service">
+ <h2>サービス内容</h2>
 
- <h2 class="hero-title">
- ハンガリー留学、まずは全体像だけ知りたい方へ
- </h2>
-
- <p class="hero-text">
- いきなり「相談」でもOKですが、<br />
- まずはハンガリー留学の“前提”を1分で掴めるように、基本情報をまとめました。
- </p>
-
- <div class="card soft hungary-lead" id="basics">
- <h3 class="basics-title">ハンガリー留学の前提（ざっくり）</h3>
- <ul class="bullets">
- <li>中欧のEU加盟国。首都はブダペスト。通貨はフォリント（HUF）。</li>
- <li>英語開講プログラムのある大学が複数あり、学部〜大学院まで進学ルートがある（大学・専攻による）。</li>
- <li>留学生比率が高め（参考値：高等教育在籍者のうち外国籍が約14%台の年度あり）。</li>
- </ul>
-
- <h3 class="basics-title">費用・英語・生活感：まずここだけ押さえる</h3>
-
- <div class="info-grid" aria-label="費用・英語・生活の要点">
- <div class="info-card">
- <div class="info-k">学費（目安）</div>
- <div class="info-v">年 €5,000〜€8,000</div>
- <div class="info-s">一般学部の目安レンジ。医学系などは高くなる傾向。</div>
- </div>
-
- <div class="info-card">
- <div class="info-k">生活費（目安）</div>
- <div class="info-v">月 25万HUF 前後</div>
- <div class="info-s">家賃・食費・移動・雑費込みの最低限目安（都市・生活スタイルで変動）。</div>
- </div>
-
- <div class="info-card">
- <div class="info-k">住まい（例）</div>
- <div class="info-v">寮 3.5万HUF〜 / 部屋 20万HUF〜</div>
- <div class="info-s">ブダペスト等の例。地方は下がることがある。</div>
- </div>
-
- <div class="info-card">
- <div class="info-k">英語要件（傾向）</div>
- <div class="info-v">専攻・大学で差</div>
- <div class="info-s">IELTS/TOEFL必須でないケースもあるが、授業についていく英語力は必要。</div>
- </div>
-
- <div class="info-card">
- <div class="info-k">就労（参考）</div>
- <div class="info-v">週 最大30時間</div>
- <div class="info-s">学生の就労上限の目安（在留資格・制度により変わる可能性）。</div>
- </div>
-
- <div class="info-card">
- <div class="info-k">最低賃金（参考）</div>
- <div class="info-v">時給 1,672 HUF</div>
- <div class="info-s">年度により更新あり。バイト可否は言語・職種で差が出やすい。</div>
- </div>
- </div>
-
- <div class="divider"></div>
-
- <h3 class="basics-title">公的情報で分かること／現役生に聞くべきこと</h3>
- <div class="compare-grid">
- <div class="compare-card">
- <div class="compare-h">公的情報（JASSO・大学公式など）</div>
- <ul class="bullets">
- <li>制度（ビザ/就労/学位区分の基本）</li>
- <li>学費レンジ・出願の一般情報</li>
- <li>大学一覧・公式手続き・締切</li>
- </ul>
- </div>
-
- <div class="compare-card">
- <div class="compare-h">現役生（いま現地にいる人）</div>
- <ul class="bullets">
- <li>授業のリアル（課題量・試験・評価方法）</li>
- <li>住まい探しの勝ち筋（避ける物件/契約の注意点）</li>
- <li>生活費の“実態”（節約/食費/移動/想定外出費）</li>
- <li>英語で困る場面と突破法（行政・病院・バイト等）</li>
- <li>出願で詰まりやすいポイント（体験談ベース）</li>
- </ul>
- </div>
- </div>
-
- <p class="source">
- ※数値は年度・都市・専攻で変動します。LPでは「目安」として掲載し、詳細は面談で最新情報を共有します。<br />
- 出典例：JASSO留学情報（ハンガリー）、大学公式情報、ハンガリー高等教育関連統計等
- </p>
- </div>
-
- <h2 class="hero-title hero-title-2">
- ハンガリー留学について、現役生に相談できます。
- </h2>
-
- <p class="hero-text">
- ハンガリー在住の現役大学生が、<br />
- あなたの留学・進学の不安を一緒に整理します。
- </p>
-
- <p class="hero-text">
- 留学エージェントでは伝えきれない、<br />
- 現地の生活や授業、治安、出願のリアルタイムな情報を知ることができます。
- </p>
-
- <div class="hero-actions">
- <a class="btn" href="#students">現役生を見る</a>
- <a class="btn ghost" href="#flow">相談の流れを見る</a>
- <a class="btn ghost" href="#basics">ハンガリー基本情報を見る</a>
- </div>
-
- <p class="disclaimer">
- ※本サービスは留学エージェントではありません。合否や入学を保証するものではなく、経験に基づく情報共有サービスです。
- </p>
- </section>
-
- <!-- BADGES -->
- <section class="section">
  <div class="badges">
  <div class="badge">
  <div class="badge-k">形式</div>
@@ -160,7 +74,7 @@
  <div class="badge">
  <div class="badge-k">料金</div>
  <div class="badge-v">6,000円 / 40分</div>
- <div class="badge-s">（Zoom無料だと最大40分で切れるため、まずは40分で相談できる形にしています）</div>
+ <div class="badge-s">（留学を本気で考え始めた方が、無理なく相談できる価格です）</div>
  </div>
 
  <div class="badge">
@@ -170,68 +84,108 @@
  </div>
  </div>
 
+ <div class="card soft purposeBox">
+ <p class="lead">
+ 相談の目的は、いま感じている不安や疑問を整理し、次の行動を明確にすることです。
+ </p>
+ <div class="list">
+ <div class="item">どの大学・専攻が合いそうか、</div>
+ <div class="item">現地での生活費や暮らしの実態、</div>
+ <div class="item">出願でつまずきやすいポイントなどを、</div>
+ </div>
+ <p class="tail">
+ 実際にハンガリーで学び、生活している現役生の一次情報をもとに整理できます。
+ </p>
+ </div>
+ </section>
+
+ <!-- 2) 相談の流れ -->
+ <section class="section" id="flow">
+ <h2>相談の流れ（かんたん3ステップ）</h2>
+
+ <div class="steps">
+ <div class="step">
+ <div class="step-no">1</div>
+ <div>
+ <h3>現役生を探す</h3>
+ <p>大学・地域・キーワードで探して、気になる現役生を選びます。</p>
+ </div>
+ </div>
+
+ <div class="step">
+ <div class="step-no">2</div>
+ <div>
+ <h3>空き枠を確認して予約</h3>
+ <p>カードの「空き枠を見る」から予約ページへ進みます（β期間は簡易運用）。</p>
+ </div>
+ </div>
+
+ <div class="step">
+ <div class="step-no">3</div>
+ <div>
+ <h3>オンライン留学相談（40分）</h3>
+ <p>事前に聞きたいことをメモしておくと、時間を濃く使えます。</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- 3) 全体像：3カード（別ページへ） -->
+ <section class="section" id="basics-cards">
+ <h2>まずは全体像（3つの入口）</h2>
+ <p class="para">詳細は別ページにまとめています。気になるところから読んでください。</p>
+
+ <div class="learn-grid">
+ <article class="learn-card">
+ <div class="learn-media" aria-label="画像ダミー（後で差し替え）"></div>
+ <div class="learn-top">
+ <h3 class="learn-title">1. ハンガリーについて</h3>
+ <p class="learn-text">場所・文化・生活感など、まず押さえる前提を整理。</p>
+ </div>
+ <a class="btn full learn-btn" href="basics.html#hungary">詳細を見る</a>
+ </article>
+
+ <article class="learn-card">
+ <div class="learn-media" aria-label="画像ダミー（後で差し替え）"></div>
+ <div class="learn-top">
+ <h3 class="learn-title">2. 大学の探し方</h3>
+ <p class="learn-text">公式情報の見方、比較の軸、探し方の手順を整理。</p>
+ </div>
+ <a class="btn full learn-btn" href="basics.html#programs">詳細を見る</a>
+ </article>
+
+ <article class="learn-card">
+ <div class="learn-media" aria-label="画像ダミー（後で差し替え）"></div>
+ <div class="learn-top">
+ <h3 class="learn-title">3. スティペンディウム・ハンガリカム奨学金</h3>
+ <p class="learn-text">制度の概要、何がカバーされるか、応募の流れを整理。</p>
+ </div>
+ <a class="btn full learn-btn" href="basics.html#scholarship">詳細を見る</a>
+ </article>
+ </div>
+ </section>
+
+ <!-- 4) 検索 -->
+ <section class="section" id="search">
+ <h2>現役生を探す</h2>
+
  <div class="card soft">
  <p class="para">
- 本気で検討し始めた方から、まだ漠然と興味がある段階の方まで、<br />
- ハンガリー留学に関する疑問を整理するための相談の場を目指しています。
- </p>
- </div>
- </section>
-
- <!-- WHAT YOU CAN ASK -->
- <section class="section" id="what">
- <h2>どんな相談ができますか？</h2>
-
- <p class="para">
- 現役生の実体験をもとに、いまの自分に必要な話を、必要なタイミングで聞けます。
+ students.json のデータから検索します。<br />
+ 候補（サジェスト）は入力に応じて表示されます。
  </p>
 
- <p class="para">
- 大学の雰囲気や授業の進み方、試験の実際、現地での生活費や住まい、治安、<br />
- 出願や奨学金に関する考え方など、現地で学び、暮らしているからこそ分かる内容について相談できます。
- </p>
-
- <p class="para">
- 大学や学部を見て、「この人に聞きたい」を選んで相談できます。
- </p>
-
- <div class="topics-box">
- <h3>相談でよく出るテーマ</h3>
- <div class="chips" aria-label="相談テーマ">
- <span class="chip">#生活費</span>
- <span class="chip">#住まい</span>
- <span class="chip">#大学選び</span>
- <span class="chip">#英語/語学</span>
- <span class="chip">#出願</span>
- <span class="chip">#治安</span>
- <span class="chip">#奨学金</span>
- </div>
-
- <p class="fineprint">
- ※ 奨学金については、スティペンディウム・ハンガリカムを含め、実際に調べたことや、利用・出願した経験をもとに情報を共有します。
- </p>
-
- <p class="para">
- 迷ったらまずは「気になる現役生」を検索して、検索ボタンで絞り込んでみてください。
- </p>
-
- <div class="hero-actions">
- <a class="btn full" href="#search">現役生を検索する</a>
- </div>
- </div>
- </section>
-
- <!-- SEARCH -->
- <section class="section" id="search">
- <h2>現役大学生一覧・検索</h2>
-
- <div class="search-grid">
+ <div class="search-grid search-with-suggest">
+ <div class="suggest-wrap">
+ <label class="sr-only" for="keyword">大学名・地域・キーワードで検索</label>
  <input
  type="text"
  id="keyword"
- placeholder="大学名・地域・キーワードで検索（例：ブダペスト、Szeged、医学部、奨学金）"
  autocomplete="off"
+ placeholder="大学名・地域・キーワード（例：ブダペスト、Szeged、医学部、奨学金）"
  />
+ <div id="suggestBox" class="suggest-box" role="listbox" aria-label="検索候補"></div>
+ </div>
 
  <select id="regionFilter">
  <option value="">地域指定なし</option>
@@ -253,26 +207,37 @@
  <option value="芸術">芸術</option>
  <option value="経営">経営</option>
  </select>
-
- <!-- 検索ボタン（JSでここを押した時だけフィルタ＆ジャンプ） -->
- <button id="searchBtn" class="btn full" type="button">検索する</button>
  </div>
 
- <!-- サジェスト（JSで表示） -->
- <div id="suggestWrap" class="suggest-wrap" aria-label="検索候補" aria-live="polite"></div>
+ <div class="search-actions">
+ <button id="applySearch" class="btn full" type="button">検索する</button>
+ <button id="clearSearch" class="btn ghost full" type="button">条件をクリア</button>
+ </div>
+
+ <p class="fineprint">
+ ※検索は「検索する」ボタンを押した時点で反映されます。
+ </p>
+ </div>
  </section>
 
- <!-- MAP (NEW) -->
+ <!-- 5) 地図 -->
  <section class="section" id="mapSearch">
  <h2>地図から大学を探す</h2>
  <p class="para">
- 都市をクリックすると、その都市の大学が表示されます。<br />
- 大学名をクリックすると、上の検索欄に反映されます。最後に「検索する」を押してください。
+ 都市をクリックすると大学一覧が表示されます。<br />
+ 大学名をクリックすると検索条件に反映され、現役生一覧へ移動して絞り込みます。
  </p>
 
  <div class="map-layout">
  <div class="map-card">
  <div id="huMap" class="hu-map" aria-label="Hungary map"></div>
+
+ <!-- 地図側の「検索ボタン」 -->
+ <div class="map-actions">
+ <button id="mapApplySearch" class="btn full" type="button">この条件で検索する</button>
+ <button id="clearUniFilter" class="btn ghost full" type="button">検索条件をクリア</button>
+ </div>
+
  <p class="fineprint">※スマホでは「タップ」で動作します。</p>
  </div>
 
@@ -280,68 +245,31 @@
  <h3 class="map-results-title">大学一覧</h3>
  <div id="mapHint" class="map-hint">地図上の都市をクリックしてください</div>
  <div id="uniList" class="uni-list"></div>
-
- <div class="map-actions">
- <button id="clearUniFilter" class="btn ghost full" type="button">検索欄をクリア</button>
- </div>
  </aside>
  </div>
  </section>
 
- <!-- STUDENTS -->
+ <!-- 6) 現役生一覧 -->
  <section class="section" id="students">
  <h2>現役生（順次追加予定）</h2>
 
- <!-- 検索ヒット0件の時にここを表示（JSで制御） -->
- <div id="noResults" class="card soft" style="display:none;">
- <h3>現在、現役生を募集中です</h3>
+ <!-- 0件時に表示（script.js が制御） -->
+ <div id="noResults" class="card soft no-results" style="display:none;">
+ <h3 class="basics-title">現在、該当する現役生が見つかりませんでした。</h3>
  <p class="para">
- 条件に合う現役生がまだいません。<br />
- 現役生として参加に興味がある方は、下の「現役生募集」または「質問フォーム」からご連絡ください。
+ 現役生は順次追加予定です。<br />
+ 現役生として参加したい方は、<a href="#recruit" class="inline-link">現役生募集中</a> をご確認ください。
  </p>
  <div class="hero-actions">
- <a class="btn full" href="#recruit">現役生募集を見る</a>
- <a class="btn ghost full" href="#contact">質問フォームへ</a>
+ <a class="btn full" href="#recruit">現役生募集中へ</a>
  </div>
  </div>
 
- <!-- ここに students.json からJSでカードを描画する -->
- <div class="student-list" id="studentList"></div>
-
- <div class="cta-bar">
- <a class="btn full" href="#flow">相談の流れを見る</a>
- </div>
+ <!-- students.json から生成 -->
+ <div id="studentList" class="student-list" aria-label="現役生一覧"></div>
  </section>
 
- <!-- FLOW -->
- <section class="section" id="flow">
- <h2>相談の流れ（かんたん3ステップ）</h2>
- <div class="steps">
- <div class="step">
- <div class="step-no">1</div>
- <div>
- <h3>現役生を探す</h3>
- <p>大学・地域・キーワードで検索できます。検索ボタンを押して一覧へ。</p>
- </div>
- </div>
- <div class="step">
- <div class="step-no">2</div>
- <div>
- <h3>空き枠を確認して予約</h3>
- <p>カードの「空き枠を見る」から予約ページへ。β期間は予約ページ側の案内に従ってください。</p>
- </div>
- </div>
- <div class="step">
- <div class="step-no">3</div>
- <div>
- <h3>Zoomで1対1相談</h3>
- <p>40分でも濃くするために、事前に聞きたいことをメモしておくのがおすすめです。</p>
- </div>
- </div>
- </div>
- </section>
-
- <!-- FAQ -->
+ <!-- 7) FAQ -->
  <section class="section" id="faq">
  <h2>よくある質問（FAQ）</h2>
 
@@ -368,52 +296,24 @@
  β期間は予約ページ（Calendly等）側の案内に従ってください。今後は決済一体化を検討しています。
  </p>
  </details>
-
- <details>
- <summary>まだ枠が「準備中」の人もいます</summary>
- <p>
- 順次、予約枠を整備中です。まずは現在予約可能な現役生からご利用ください。
- </p>
- </details>
-
- <details>
- <summary>奨学金（スティペンディウム・ハンガリカム）も相談できますか？</summary>
- <p>
- はい。実際に調べたことや、利用・出願した経験をもとに情報を共有します。
- 申請の代行や合否の保証を行うものではありません。
- </p>
- </details>
-
- <details>
- <summary>現役生で参加したいのですが</summary>
- <p>
- 現役生として参加に興味がある方は、ページ下部の「質問フォーム」からご連絡ください。
- こちらから折り返しご案内します。
- </p>
- </details>
  </div>
  </section>
 
- <!-- RECRUIT -->
+ <!-- 8) 現役生募集中 -->
  <section class="section" id="recruit">
- <h2>現役生募集</h2>
+ <h2>現役生募集中</h2>
 
  <div class="card soft">
  <p class="para">
- 現役生として、本サービスに参加してみたい方を募集しています。<br />
- 「大学の情報を必要としている人に、経験ベースでリアルを共有したい」方は、ぜひご連絡ください。
+ 現役生を積極的に募集しております！！<br />
+ ご興味ある方は、質問フォームからご連絡ください。こちらから折り返しご案内いたします。
  </p>
 
  <ul class="bullets">
  <li>対象：ハンガリーの大学に在籍中（学部・修士・博士）</li>
  <li>形式：Zoomで1対1面談（40分）</li>
- <li>掲載：匿名表示（例：カネコ（30代））／アバター利用OK</li>
- <li>追加できる項目：奨学金、学年、外部リンク（YouTube / note / SNS など）</li>
+ <li>掲載：匿名表示（例：ヤマダタロウ（20代））／アバター利用OK</li>
  </ul>
-
- <p class="fineprint">
- 興味がある方は、下の質問フォームよりご連絡ください。
- </p>
 
  <div class="hero-actions">
  <a class="btn full" href="#contact">質問フォームへ</a>
@@ -421,42 +321,43 @@
  </div>
  </section>
 
- <!-- CONTACT / QUESTION FORM -->
+ <!-- 9) お問い合わせ -->
  <section class="section" id="contact">
  <h2>質問フォーム（お問い合わせ）</h2>
 
- <div class="card">
+ <div class="card soft">
  <p class="para">
  留学相談についての質問、現役生参加の相談、取材・提携など、こちらからお問い合わせください。<br />
- ※運営の連絡先リンクは、後から簡単に差し替えられるようにしています（config.json を参照）。
+ ※フォーム/SNS/メールは config.json を差し替えるだけで更新できます。
  </p>
 
- <div class="hero-actions">
- <!-- JSで config.json から差し込み（無い場合は非表示） -->
- <a id="contactFormBtn" class="btn full" href="#" target="_blank" rel="noopener noreferrer" style="display:none;">質問フォームを開く</a>
+ <div class="contact-grid" id="contactSocials" aria-label="SNSリンク一覧">
+ <!-- script.js が config.json から生成 -->
  </div>
 
  <div class="divider"></div>
 
- <h3>運営（外部リンク）</h3>
- <div class="chips" id="socialLinks">
- <!-- JSで差し込み -->
+ <div class="hero-actions">
+ <a id="contactFormBtn" class="btn full" href="#" target="_blank" rel="noopener noreferrer">
+ 質問フォームを開く
+ </a>
  </div>
 
- <p class="fineprint" id="contactEmail" style="display:none;"></p>
+ <p class="fineprint" id="contactEmailLine">
+ <!-- script.js が email を表示 -->
+ </p>
  </div>
  </section>
  </main>
 
  <footer class="site-footer">
  <p>© 2026 Hungary Study 現役生相談サービス（β）</p>
- <p class="fineprint">お問い合わせ導線はβ期間は簡易運用（SNS/フォーム等）を想定。必要なら追加します。</p>
  </footer>
 
  <!-- Leaflet JS -->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
- <!-- IMPORTANT: script.js -->
+ <!-- Main JS -->
  <script src="script.js"></script>
 </body>
 </html>

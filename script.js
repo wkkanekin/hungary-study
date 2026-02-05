@@ -1,66 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
  // -------------------------
- // Helpers (safe HTML)
- // -------------------------
- function escapeHtml(input) {
- const s = String(input ?? "");
- return s
- .replaceAll("&", "&amp;")
- .replaceAll("<", "&lt;")
- .replaceAll(">", "&gt;")
- .replaceAll('"', "&quot;")
- .replaceAll("'", "&#039;");
- }
-
- function escapeAttr(input) {
- // href/src用：最低限のエスケープ
- const s = String(input ?? "");
- return s
- .replaceAll("&", "&amp;")
- .replaceAll('"', "&quot;")
- .replaceAll("<", "&lt;")
- .replaceAll(">", "&gt;");
- }
-
- // -------------------------
- // Search filter
+ // DOM refs
  // -------------------------
  const keywordInput = document.getElementById("keyword");
  const regionFilter = document.getElementById("regionFilter");
  const courseFilter = document.getElementById("courseFilter");
 
- function filterStudents() {
- const keyword = (keywordInput?.value || "").trim().toLowerCase();
- const region = regionFilter?.value || "";
- const course = courseFilter?.value || "";
+ const searchBtn = document.getElementById("searchBtn");
+ const clearBtn = document.getElementById("clearBtn");
 
- // ★学生カードはJS生成なので、毎回取り直す（ここが重要）
- const studentCards = document.querySelectorAll(".student-card");
+ const studentListEl = document.getElementById("studentList");
+ const noResultsEl = document.getElementById("noResults");
 
- studentCards.forEach((card) => {
- const text = (card.innerText || "").toLowerCase();
- const matchKeyword = !keyword || text.includes(keyword);
- const matchRegion = !region || text.includes(region);
- const matchCourse = !course || text.includes(course);
- card.style.display = matchKeyword && matchRegion && matchCourse ? "block" : "none";
- });
- }
+ const suggestBox = document.getElementById("suggestBox");
 
- if (keywordInput) keywordInput.addEventListener("input", filterStudents);
- if (regionFilter) regionFilter.addEventListener("change", filterStudents);
- if (courseFilter) courseFilter.addEventListener("change", filterStudents);
+ // Map refs
+ const mapEl = document.getElementById("huMap");
+ const uniListEl = document.getElementById("uniList");
+ const mapHintEl = document.getElementById("mapHint");
+ const clearUniBtn = document.getElementById("clearUniFilter");
+ const mapToSearchBtn = document.getElementById("mapToSearchBtn");
 
- // -------------------------
- // Copy question template
- // -------------------------
+ // Contact refs
+ const contactFacebook = document.getElementById("contactFacebook");
+ const contactYouTube = document.getElementById("contactYouTube");
+ const contactInstagram = document.getElementById("contactInstagram");
+ const contactEmail = document.getElementById("contactEmail");
+ const contactFormBtn = document.getElementById("contactFormBtn");
+
+ // Template
  const templateEl = document.getElementById("questionTemplate");
 
+ // -------------------------
+ // helpers (toast / copy)
+ // -------------------------
  async function copyToClipboard(text) {
  try {
  await navigator.clipboard.writeText(text);
  return true;
  } catch (e) {
- // Fallback for older browsers / insecure contexts
  const ta = document.createElement("textarea");
  ta.value = text;
  document.body.appendChild(ta);
@@ -109,6 +87,295 @@ document.addEventListener("DOMContentLoaded", () => {
  });
 
  // -------------------------
+ // load JSON (students + config)
+ // -------------------------
+ let students = [];
+ let config = null;
+
+ async function loadJson(path) {
+ const res = await fetch(path, { cache: "no-store" });
+ if (!res.ok) throw new Error(`Failed to load ${path}`);
+ return await res.json();
+ }
+
+ try {
+ students = await loadJson("./students.json");
+ } catch (e) {
+ console.error(e);
+ toast("students.json の読み込みに失敗しました");
+ }
+
+ try {
+ config = await loadJson("./config.json");
+ } catch (e) {
+ console.error(e);
+ // configは無くても動く
+ }
+
+ // reflect config into links
+ if (config) {
+ if (contactFacebook && config.facebook) contactFacebook.href = config.facebook;
+ if (contactYouTube && config.youtube) contactYouTube.href = config.youtube;
+ if (contactInstagram && config.instagram) contactInstagram.href = config.instagram;
+
+ if (contactEmail && config.email) {
+ contactEmail.href = `mailto:${config.email}`;
+ contactEmail.textContent = `メール（${config.email}）`;
+ }
+
+ if (contactFormBtn && config.formUrl) contactFormBtn.href = config.formUrl;
+ }
+
+ // -------------------------
+ // Render students
+ // -------------------------
+ function escapeHtml(str) {
+ return String(str ?? "")
+ .replaceAll("&", "&amp;")
+ .replaceAll("<", "&lt;")
+ .replaceAll(">", "&gt;")
+ .replaceAll('"', "&quot;")
+ .replaceAll("'", "&#039;");
+ }
+
+ function buildLinks(links) {
+ if (!Array.isArray(links) || links.length === 0) return "";
+ const items = links
+ .filter((l) => l && l.label && l.url)
+ .map((l) => {
+ const label = escapeHtml(l.label);
+ const url = escapeHtml(l.url);
+ return `<a class="btn ghost full" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+ })
+ .join("");
+ return `
+ <div class="divider"></div>
+ <h3>その他（外部リンク）</h3>
+ <div class="contact-links">${items}</div>
+ `;
+ }
+
+ function studentCardHtml(s) {
+ const isDisabled = !s.enabled;
+ const cardClass = `student-card${isDisabled ? " is-disabled" : ""}`;
+
+ // stipendium
+ let stipendText = "—";
+ if (s.stipendium && s.stipendium.has) {
+ stipendText = escapeHtml(s.stipendium.name || "スティペンディウム・ハンガリカム");
+ }
+
+ const bookingUrl = s.bookingUrl || "#";
+ const bookingBtn = s.enabled
+ ? `<a class="btn" href="${escapeHtml(bookingUrl)}" target="_blank" rel="noopener noreferrer">空き枠を見る（6,000円 / 40分）</a>`
+ : `<a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>`;
+
+ const fineprint = s.enabled
+ ? `※面談はZoomで行います（Meet等は使用しません）。`
+ : `※準備が整い次第、予約枠を公開します。`;
+
+ const tagsHtml = Array.isArray(s.tags)
+ ? s.tags.map((t) => `<span class="hash">${escapeHtml(t)}</span>`).join("")
+ : "";
+
+ // 重要：検索のためにdata-属性を維持
+ const dataRegion = escapeHtml(s.region || "");
+ const dataCourse = escapeHtml(s.course || "");
+
+ // カード本文（デザインは元の構造に合わせる）
+ return `
+ <article class="${cardClass}" data-region="${dataRegion}" data-course="${dataCourse}">
+ <div class="profile-image profile-circle">
+ <img src="${escapeHtml(s.avatar || "https://placehold.co/520x520/png?text=Student")}" alt="${escapeHtml(s.name || "学生")}のプロフィール写真（プレースホルダー）" />
+ </div>
+
+ <div class="info">
+ <h3 class="student-name">${escapeHtml(s.name || "")}</h3>
+
+ <div class="profile-meta">
+ <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">${escapeHtml(s.university || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">${escapeHtml(s.region || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">${escapeHtml(s.major || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">学年：</span><span class="meta-v">${escapeHtml(s.year || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">${escapeHtml(s.language || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">${stipendText}</span></div>
+ <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">${escapeHtml(s.meeting || "Zoomのみ")}</span></div>
+ </div>
+
+ <p class="bio">
+ ${escapeHtml(s.bio || "")}
+ </p>
+
+ <div class="tagline">
+ ${tagsHtml}
+ </div>
+
+ <div class="card-actions">
+ ${bookingBtn}
+ <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
+ </div>
+
+ <p class="fineprint">${fineprint}</p>
+
+ ${buildLinks(s.links)}
+ </div>
+ </article>
+ `;
+ }
+
+ function renderAllStudents() {
+ if (!studentListEl) return;
+ studentListEl.innerHTML = students.map(studentCardHtml).join("");
+ }
+
+ renderAllStudents();
+
+ // -------------------------
+ // Search apply (button only)
+ // -------------------------
+ function normalize(str) {
+ return String(str || "").trim().toLowerCase();
+ }
+
+ function applyFilters() {
+ const keyword = normalize(keywordInput?.value);
+ const region = (regionFilter?.value || "").trim();
+ const course = (courseFilter?.value || "").trim();
+
+ const cards = Array.from(document.querySelectorAll(".student-card"));
+ let visibleCount = 0;
+
+ cards.forEach((card) => {
+ const text = normalize(card.innerText);
+ const matchKeyword = !keyword || text.includes(keyword);
+ const matchRegion = !region || text.includes(region);
+ const matchCourse = !course || text.includes(course);
+
+ const show = matchKeyword && matchRegion && matchCourse;
+ card.style.display = show ? "block" : "none";
+ if (show) visibleCount += 1;
+ });
+
+ // show/hide noResults
+ if (noResultsEl) {
+ noResultsEl.hidden = visibleCount !== 0;
+ }
+
+ // if 0, hide list container spacing isn't needed but OK
+ return visibleCount;
+ }
+
+ function jumpToStudents() {
+ document.getElementById("students")?.scrollIntoView({ behavior: "smooth", block: "start" });
+ }
+
+ if (searchBtn) {
+ searchBtn.addEventListener("click", () => {
+ const count = applyFilters();
+ jumpToStudents();
+ if (count === 0) {
+ // 0件ならメッセージを見せる（募集へ誘導）
+ // さらに「募集中」表示へユーザー視線が行くようにtoast
+ toast("一致する現役生が見つかりませんでした");
+ }
+ });
+ }
+
+ // clear filters
+ function clearFilters() {
+ if (keywordInput) keywordInput.value = "";
+ if (regionFilter) regionFilter.value = "";
+ if (courseFilter) courseFilter.value = "";
+
+ // 全表示に戻す
+ const cards = Array.from(document.querySelectorAll(".student-card"));
+ cards.forEach((c) => (c.style.display = "block"));
+ if (noResultsEl) noResultsEl.hidden = true;
+
+ // suggestも消す
+ hideSuggest();
+ }
+
+ if (clearBtn) clearBtn.addEventListener("click", clearFilters);
+
+ // -------------------------
+ // Suggest dropdown (from students.json)
+ // -------------------------
+ function uniq(arr) {
+ return Array.from(new Set(arr.filter(Boolean)));
+ }
+
+ function buildSuggestPool() {
+ const pool = [];
+ students.forEach((s) => {
+ pool.push(s.university);
+ pool.push(s.region);
+ pool.push(s.course);
+ pool.push(s.major);
+ pool.push(s.year);
+ if (Array.isArray(s.tags)) pool.push(...s.tags);
+ if (s.stipendium && s.stipendium.has) pool.push(s.stipendium.name || "スティペンディウム・ハンガリカム");
+ });
+ return uniq(pool.map((x) => String(x).trim()).filter((x) => x.length > 0));
+ }
+
+ const suggestPool = buildSuggestPool();
+
+ function hideSuggest() {
+ if (!suggestBox) return;
+ suggestBox.hidden = true;
+ suggestBox.innerHTML = "";
+ }
+
+ function showSuggest(items) {
+ if (!suggestBox) return;
+ if (!items || items.length === 0) {
+ hideSuggest();
+ return;
+ }
+ suggestBox.innerHTML = items
+ .slice(0, 10)
+ .map((t) => {
+ const safe = escapeHtml(t);
+ return `<div class="suggest-item" data-value="${safe}">${safe}</div>`;
+ })
+ .join("");
+ suggestBox.hidden = false;
+
+ suggestBox.querySelectorAll(".suggest-item").forEach((el) => {
+ el.addEventListener("mousedown", (e) => {
+ // clickだとblurが先に走って閉じる場合があるのでmousedown
+ const v = el.getAttribute("data-value") || "";
+ if (keywordInput) keywordInput.value = v;
+ hideSuggest();
+ });
+ });
+ }
+
+ function suggestFor(query) {
+ const q = normalize(query);
+ if (!q) return [];
+ return suggestPool.filter((t) => normalize(t).includes(q));
+ }
+
+ if (keywordInput) {
+ keywordInput.addEventListener("input", () => {
+ const items = suggestFor(keywordInput.value);
+ showSuggest(items);
+ });
+
+ keywordInput.addEventListener("focus", () => {
+ const items = suggestFor(keywordInput.value);
+ showSuggest(items);
+ });
+
+ keywordInput.addEventListener("blur", () => {
+ // 少し遅らせてクリック拾う
+ setTimeout(hideSuggest, 120);
+ });
+ }
+
+ // -------------------------
  // FAQ accordion-like behavior
  // -------------------------
  const faqDetails = document.querySelectorAll(".faq details");
@@ -122,203 +389,9 @@ document.addEventListener("DOMContentLoaded", () => {
  });
 
  // -------------------------
- // Students (JSON -> Cards) ★ここがメイン変更点
+ // Map-based university search (Leaflet)
+ // ※「選んだ瞬間に絞り込み」しない。keywordに入れるだけ。
  // -------------------------
- const studentListEl = document.getElementById("studentList");
-
- function buildStudentCard(s) {
- const region = s.region || "";
- const course = s.course || "";
- const isEnabled = !!s.enabled;
-
- const metaRows = [];
-
- // 大学
- if (s.university) {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">${escapeHtml(s.university)}</span></div>`
- );
- }
- // 地域
- if (s.region) {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">${escapeHtml(s.region)}</span></div>`
- );
- }
- // 専攻
- if (s.major) {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">${escapeHtml(s.major)}</span></div>`
- );
- }
- // 学年（NEW）
- if (s.year) {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">学年：</span><span class="meta-v">${escapeHtml(s.year)}</span></div>`
- );
- }
- // 語学
- if (s.language) {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">${escapeHtml(s.language)}</span></div>`
- );
- }
- // 面談
- if (s.meeting) {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">${escapeHtml(s.meeting)}</span></div>`
- );
- }
- // 奨学金（NEW）
- if (s.stipendium && typeof s.stipendium.has === "boolean") {
- if (s.stipendium.has) {
- const nm = s.stipendium.name ? s.stipendium.name : "奨学金あり";
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">${escapeHtml(nm)}</span></div>`
- );
- } else {
- metaRows.push(
- `<div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">なし</span></div>`
- );
- }
- }
-
- const tags = Array.isArray(s.tags) ? s.tags : [];
- const tagsHtml = tags
- .filter(t => String(t || "").trim().length > 0)
- .map(t => `<span class="hash">${escapeHtml(t)}</span>`)
- .join("");
-
- // 外部リンク（NEW）
- let linksHtml = "";
- if (Array.isArray(s.links) && s.links.length > 0) {
- const btns = s.links
- .filter(l => l && l.label && l.url)
- .map(l => {
- const label = escapeHtml(l.label);
- const url = escapeAttr(l.url);
- return `<a class="ext-link" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
- })
- .join("");
-
- if (btns.trim().length > 0) {
- linksHtml = `
- <div class="ext-links">
- <div class="ext-title">その他（外部リンク）</div>
- <div class="ext-buttons">${btns}</div>
- </div>
- `;
- }
- }
-
- // 予約ボタン
- const bookingUrl = s.bookingUrl || "#";
- const bookingBtn = isEnabled
- ? `<a class="btn" href="${escapeAttr(bookingUrl)}" target="_blank" rel="noopener noreferrer">空き枠を見る（8,000円 / 60分）</a>`
- : `<a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>`;
-
- // fineprint
- const fineprint = isEnabled
- ? `※面談はZoomで行います（Meet等は使用しません）。`
- : `※準備が整い次第、予約枠を公開します。`;
-
- const avatar = s.avatar || "https://placehold.co/520x520/png?text=Student";
- const name = s.name || "名前（未設定）";
-
- return `
- <article class="student-card ${isEnabled ? "" : "is-disabled"}" data-region="${escapeAttr(region)}" data-course="${escapeAttr(course)}">
- <div class="profile-image profile-circle">
- <img src="${escapeAttr(avatar)}" alt="${escapeAttr(name)}のプロフィール写真（プレースホルダー）" />
- </div>
-
- <div class="info">
- <h3 class="student-name">${escapeHtml(name)}</h3>
-
- <div class="profile-meta">
- ${metaRows.join("")}
- </div>
-
- <p class="bio">
- ${escapeHtml(s.bio || "").replaceAll("\n", "<br />")}
- </p>
-
- <div class="tagline">
- ${tagsHtml}
- </div>
-
- ${linksHtml}
-
- <div class="card-actions">
- ${bookingBtn}
- <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
- </div>
-
- <p class="fineprint">${fineprint}</p>
- </div>
- </article>
- `;
- }
-
- function renderStudents(students) {
- if (!studentListEl) return;
- studentListEl.innerHTML = "";
-
- const list = Array.isArray(students) ? students : [];
- const enabledFirst = [...list].sort((a, b) => Number(!!b.enabled) - Number(!!a.enabled));
-
- const html = enabledFirst.map(buildStudentCard).join("");
- studentListEl.innerHTML = html;
-
- // 学生カード生成後に、コピーイベントが新DOMに効くよう付け直し
- studentListEl.querySelectorAll("[data-copy-template]").forEach((btn) => {
- btn.addEventListener("click", async () => {
- const text = (templateEl?.value || "").trim();
- if (!text) {
- toast("テンプレの読み込みに失敗しました。");
- return;
- }
- const ok = await copyToClipboard(text);
- toast(ok ? "質問例をコピーしました" : "コピーに失敗しました");
- });
- });
-
- // 初期状態でフィルタ反映（検索欄が残ってる場合にも対応）
- filterStudents();
- }
-
- async function loadStudents() {
- try {
- const res = await fetch("students.json", { cache: "no-store" });
- if (!res.ok) throw new Error(`students.json load failed: ${res.status}`);
- const data = await res.json();
- renderStudents(data);
- } catch (e) {
- console.error(e);
- if (studentListEl) {
- studentListEl.innerHTML = `
- <div class="card soft">
- <p class="para">
- 学生データの読み込みに失敗しました。<br />
- students.json が同じ階層にあるか、JSONのカンマや括弧が壊れていないか確認してください。
- </p>
- </div>
- `;
- }
- }
- }
-
- loadStudents();
-
- // -------------------------
- // Map-based university search (Leaflet) - NEW
- // -------------------------
- const mapEl = document.getElementById("huMap");
- const uniListEl = document.getElementById("uniList");
- const mapHintEl = document.getElementById("mapHint");
- const clearUniBtn = document.getElementById("clearUniFilter");
-
- // ざっくり都市座標（大学は都市に紐づけ）
- // ※必要ならあとで精度上げればOK
  const cityCoords = {
  "ブダペスト": { lat: 47.4979, lng: 19.0402 },
  "デブレツェン": { lat: 47.5316, lng: 21.6273 },
@@ -335,10 +408,9 @@ document.addEventListener("DOMContentLoaded", () => {
  "エゲル": { lat: 47.9025, lng: 20.3772 },
  "シャーロシュパタク": { lat: 48.3245, lng: 21.5686 },
  "ヴァーツ": { lat: 47.7785, lng: 19.1280 },
- "バヤ": { lat: 46.1803, lng: 18.9567 },
+ "バヤ": { lat: 46.1803, lng: 18.9567 }
  };
 
- // 大学データ（都市に紐づく）
  const universities = [
  // Budapest
  { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
@@ -380,7 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
  { name: "Apor Vilmos Catholic College", city: "ヴァーツ" },
  { name: "Episcopal Theological College of Pécs", city: "ペーチ" },
  { name: "Eötvös József College", city: "バヤ" },
- { name: "Kodály Institute", city: "ケチケメート" },
+ { name: "Kodály Institute", city: "ケチケメート" }
  ];
 
  function groupByCity(items) {
@@ -412,10 +484,9 @@ document.addEventListener("DOMContentLoaded", () => {
  btn.textContent = u.name;
 
  btn.addEventListener("click", () => {
- // 既存検索欄に流し込み → 既存filterで絞り込み
  if (keywordInput) {
- keywordInput.value = u.name;
- filterStudents();
+ keywordInput.value = u.name; // 入れるだけ
+ toast("検索欄に反映しました。検索するを押してください");
  document.getElementById("search")?.scrollIntoView({ behavior: "smooth", block: "start" });
  }
  });
@@ -427,33 +498,31 @@ document.addEventListener("DOMContentLoaded", () => {
  }
 
  function clearUniversityFilter() {
- if (keywordInput) {
- keywordInput.value = "";
- filterStudents();
- }
+ if (keywordInput) keywordInput.value = "";
  if (uniListEl) uniListEl.innerHTML = "";
  if (mapHintEl) mapHintEl.style.display = "block";
+ hideSuggest();
  }
 
  if (clearUniBtn) clearUniBtn.addEventListener("click", clearUniversityFilter);
 
- // 地図を置く要素がある場合のみ起動
- if (mapEl && window.L) {
- const huMap = L.map("huMap", {
- scrollWheelZoom: false, // LPなので誤操作防止
+ if (mapToSearchBtn) {
+ mapToSearchBtn.addEventListener("click", () => {
+ document.getElementById("search")?.scrollIntoView({ behavior: "smooth", block: "start" });
+ toast("検索欄を確認して「検索する」を押してください");
  });
+ }
 
- // 表示範囲：ハンガリー周辺
+ if (mapEl && window.L) {
+ const huMap = L.map("huMap", { scrollWheelZoom: false });
  huMap.setView([47.1625, 19.5033], 7);
 
- // タイル（無料）
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
- attribution: "&copy; OpenStreetMap contributors",
+ attribution: "&copy; OpenStreetMap contributors"
  }).addTo(huMap);
 
  const byCity = groupByCity(universities);
 
- // 都市ごとに「円マーカー」を置く（ホバーで誇張）
  byCity.forEach((list, city) => {
  const c = cityCoords[city];
  if (!c) return;
@@ -461,7 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
  const marker = L.circleMarker([c.lat, c.lng], {
  radius: 8,
  weight: 2,
- fillOpacity: 0.7,
+ fillOpacity: 0.7
  }).addTo(huMap);
 
  marker.bindTooltip(`${city}（${list.length}）`, { direction: "top" });
@@ -471,12 +540,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
  marker.on("click", () => {
  renderUniversityList(city, list);
-
- // 都市クリック時に「地域フィルタ」も合わせたい場合はここをON
- // if (regionFilter) {
- // regionFilter.value = city;
- // filterStudents();
- // }
  });
  });
  }

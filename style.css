@@ -627,39 +627,51 @@ height: 520px;
 }
 
 /* =========================
-External links (NEW)
+ADDED: Suggest dropdown / no-results / contact
 ========================= */
-.ext-links{
-margin-top: 10px;
-padding: 12px 12px;
-border-radius: 14px;
-border: 1px solid rgba(20,30,60,0.10);
-background: rgba(27,31,42,0.02);
+.suggest-wrap{
+position: relative;
 }
-.ext-title{
-font-weight: 900;
-color: #121628;
-margin-bottom: 8px;
-font-size: 0.95rem;
+.suggest-box{
+position: absolute;
+top: calc(100% + 6px);
+left: 0;
+right: 0;
+background: #fff;
+border: 1px solid rgba(20,30,60,0.18);
+border-radius: 12px;
+box-shadow: var(--shadow);
+overflow: hidden;
+z-index: 50;
 }
-.ext-buttons{
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
+.suggest-item{
+padding: 10px 12px;
+cursor: pointer;
+font-weight: 800;
+color: #23283a;
+border-bottom: 1px solid rgba(20,30,60,0.08);
 }
-.ext-link{
-display: inline-flex;
-align-items: center;
-justify-content: center;
-padding: 8px 12px;
-border-radius: 999px;
-background: rgba(42,82,190,0.06);
-border: 1px solid rgba(42,82,190,0.20);
-color: var(--primaryDark);
-text-decoration: none;
-font-weight: 900;
-font-size: 0.92rem;
+.suggest-item:last-child{ border-bottom: none; }
+.suggest-item:hover{
+background: rgba(42, 82, 190, 0.06);
 }
-.ext-link:hover{
-background: rgba(42,82,190,0.10);
+.suggest-muted{
+color: #6d7486;
+font-weight: 700;
+font-size: 0.9rem;
+}
+
+.no-results{
+margin-top: 14px;
+}
+
+.contact-links{
+display: grid;
+grid-template-columns: 1fr;
+gap: 10px;
+}
+@media (min-width: 740px){
+.contact-links{
+grid-template-columns: 1fr 1fr;
+}
 }

@@ -138,7 +138,7 @@
  </p>
 
  <div class="hero-actions">
- <a class="btn" href="#students">現役生を見る</a>
+ <a class="btn" href="#search">検索して探す</a>
  <a class="btn ghost" href="#flow">相談の流れを見る</a>
  <a class="btn ghost" href="#basics">ハンガリー基本情報を見る</a>
  </div>
@@ -159,8 +159,8 @@
 
  <div class="badge">
  <div class="badge-k">料金</div>
- <div class="badge-v">8,000円 / 60分</div>
- <div class="badge-s">（留学を本気で考え始めた方が、無理なく相談できる価格です）</div>
+ <div class="badge-v">6,000円 / 40分</div>
+ <div class="badge-s">（Zoom無料プランだと最大40分のため、それに合わせています）</div>
  </div>
 
  <div class="badge">
@@ -174,6 +174,9 @@
  <p class="para">
  本気で検討し始めた方から、まだ漠然と興味がある段階の方まで、<br />
  ハンガリー留学に関する疑問を整理するための相談の場を目指しています。
+ </p>
+ <p class="fineprint">
+ ※Zoomは無料プランの場合、一定時間で自動終了します。本サービスは40分に合わせています。
  </p>
  </div>
  </section>
@@ -212,11 +215,11 @@
  </p>
 
  <p class="para">
- 迷ったらまずは「気になる現役生」を選んで、空き枠を確認してみてください。
+ 迷ったらまずは「気になる現役生」を検索して、ヒットしたら一覧へ進んでください。
  </p>
 
  <div class="hero-actions">
- <a class="btn full" href="#students">現役生を見る</a>
+ <a class="btn full" href="#search">検索へ進む</a>
  <button class="btn ghost full" type="button" data-copy-template>
  質問例をコピー
  </button>
@@ -227,12 +230,18 @@
  <!-- SEARCH -->
  <section class="section" id="search">
  <h2>現役大学生一覧・検索</h2>
+
  <div class="search-grid">
+ <div class="suggest-wrap">
  <input
  type="text"
  id="keyword"
+ autocomplete="off"
  placeholder="大学名・地域・キーワードで検索（例：ブダペスト、Szeged、医学部、奨学金）"
  />
+ <div id="suggestBox" class="suggest-box" aria-label="suggestions" hidden></div>
+ </div>
+
  <select id="regionFilter">
  <option value="">地域指定なし</option>
  <option value="ブダペスト">ブダペスト</option>
@@ -243,6 +252,7 @@
  <option value="ヴェスプレーム">ヴェスプレーム</option>
  <option value="ショプロン">ショプロン</option>
  </select>
+
  <select id="courseFilter">
  <option value="">分野指定なし</option>
  <option value="医学部">医学部</option>
@@ -253,6 +263,15 @@
  <option value="経営">経営</option>
  </select>
  </div>
+
+ <div class="cta-bar">
+ <button id="searchBtn" class="btn full" type="button">検索する</button>
+ <button id="clearBtn" class="btn ghost full" type="button">検索条件をクリア</button>
+ </div>
+
+ <p class="fineprint">
+ ※入力した時点では一覧は動きません。「検索する」を押すと一覧に移動し、絞り込みが反映されます。
+ </p>
  </section>
 
  <!-- MAP (NEW) -->
@@ -260,7 +279,7 @@
  <h2>地図から大学を探す</h2>
  <p class="para">
  都市をクリックすると、その都市の大学が表示されます。<br />
- 大学名をクリックすると、上の検索欄に反映されて現役生カードが絞り込まれます。
+ 大学名をクリックすると、上の検索欄に反映されます（※検索は「検索する」を押してください）。
  </p>
 
  <div class="map-layout">
@@ -275,6 +294,7 @@
  <div id="uniList" class="uni-list"></div>
 
  <div class="map-actions">
+ <button id="mapToSearchBtn" class="btn full" type="button">この条件で検索する</button>
  <button id="clearUniFilter" class="btn ghost full" type="button">検索欄をクリア</button>
  </div>
  </aside>
@@ -285,8 +305,20 @@
  <section class="section" id="students">
  <h2>現役生（順次追加予定）</h2>
 
- <!-- ★ここだけJSONで描画する -->
- <div class="student-list" id="studentList"></div>
+ <!-- ここにJSで cards を描画 -->
+ <div id="studentList" class="student-list"></div>
+
+ <!-- 0件のときに出す -->
+ <div id="noResults" class="card soft no-results" hidden>
+ <h3>現在、現役生を募集中です</h3>
+ <p class="para">
+ 条件に一致する現役生がまだ登録されていません。<br />
+ 現役生として参加したい方は、下の募集案内をご覧ください。
+ </p>
+ <div class="hero-actions">
+ <a class="btn full" href="#recruit">現役生募集を見る</a>
+ </div>
+ </div>
 
  <div class="cta-bar">
  <a class="btn full" href="#flow">相談の流れを見る</a>
@@ -300,8 +332,8 @@
  <div class="step">
  <div class="step-no">1</div>
  <div>
- <h3>現役生を選ぶ</h3>
- <p>大学・地域・キーワードで探せます。気になる人がいればカードから詳細を確認。</p>
+ <h3>現役生を探す</h3>
+ <p>大学・地域・キーワードで検索して「検索する」を押してください。</p>
  </div>
  </div>
  <div class="step">
@@ -314,8 +346,8 @@
  <div class="step">
  <div class="step-no">3</div>
  <div>
- <h3>Zoomで1対1相談</h3>
- <p>事前に質問をメモしておくと60分が濃くなります。コピー用の質問例も用意しています。</p>
+ <h3>Zoomで1対1相談（40分）</h3>
+ <p>事前に質問をメモしておくと40分が濃くなります。コピー用の質問例も用意しています。</p>
  </div>
  </div>
  </div>
@@ -342,7 +374,7 @@
  <summary>どんな相談ができますか？</summary>
  <p>
  生活費・家探し・大学の雰囲気・授業や試験の実際・現地の治安・出願の進め方（体験談）などが多いです。
- 事前に質問をメモしておくと60分が濃くなります。
+ 事前に質問をメモしておくと40分が濃くなります。
  </p>
  </details>
 
@@ -367,6 +399,68 @@
  申請の代行や合否の保証を行うものではありません。
  </p>
  </details>
+ </div>
+ </section>
+
+ <!-- RECRUIT (NEW) -->
+ <section class="section" id="recruit">
+ <h2>現役生を募集しています</h2>
+
+ <div class="card soft">
+ <p class="para">
+ ハンガリーの大学に在学中で、これから留学・進学する人に情報共有できる方を募集しています。<br />
+ 「顔出し無し」「オンライン（Zoom）」前提でOKです。
+ </p>
+
+ <ul class="bullets">
+ <li>対象：ハンガリーの大学（学部/修士/博士/準備課程など）在学者</li>
+ <li>内容：生活・授業・出願の実体験を共有（40分）</li>
+ <li>登録後：プロフィール掲載 → 予約が入ったら面談対応</li>
+ </ul>
+
+ <div class="hero-actions">
+ <a class="btn full" href="#contact">参加希望・質問はこちら</a>
+ </div>
+
+ <p class="fineprint">
+ ※募集内容や条件は運用しながら調整します。
+ </p>
+ </div>
+ </section>
+
+ <!-- CONTACT / QUESTION FORM (NEW) -->
+ <section class="section" id="contact">
+ <h2>質問・お問い合わせ</h2>
+
+ <div class="card soft">
+ <p class="para">
+ 質問・取材・現役生参加希望などはこちらから送れます。<br />
+ 下のリンクは <code>config.json</code> を書き換えるだけで差し替え可能です。
+ </p>
+
+ <div class="contact-links">
+ <a id="contactFacebook" class="btn ghost full" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+ <a id="contactYouTube" class="btn ghost full" href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+ <a id="contactInstagram" class="btn ghost full" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+ <a id="contactEmail" class="btn full" href="#">メール</a>
+ </div>
+
+ <div class="divider"></div>
+
+ <h3>質問フォーム</h3>
+ <p class="fineprint">
+ ※フォームURLも <code>config.json</code> で差し替えできます。
+ </p>
+
+ <div class="hero-actions">
+ <a id="contactFormBtn" class="btn full" href="#" target="_blank" rel="noopener noreferrer">
+ フォームを開く
+ </a>
+ </div>
+
+ <p class="fineprint">
+ ※（任意）Googleフォームを埋め込みたい場合は、後でiframe対応もできます。
+ </p>
  </div>
  </section>
 
@@ -418,7 +512,7 @@
  <!-- Leaflet JS -->
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
- <!-- ★必須：あなたが言ってたやつ。入ってる -->
+ <!-- IMPORTANT: script.js を必ず入れる -->
  <script src="script.js"></script>
 </body>
 </html>

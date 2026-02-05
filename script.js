@@ -5,18 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
  const keywordInput = document.getElementById("keyword");
  const regionFilter = document.getElementById("regionFilter");
  const courseFilter = document.getElementById("courseFilter");
-
- // ★ students.json で描画した後も拾えるように「都度取得」にする
- function getStudentCards() {
- return document.querySelectorAll(".student-card");
- }
+ let studentCards = document.querySelectorAll(".student-card");
 
  function filterStudents() {
  const keyword = (keywordInput?.value || "").trim().toLowerCase();
  const region = regionFilter?.value || "";
  const course = courseFilter?.value || "";
-
- const studentCards = getStudentCards();
 
  studentCards.forEach((card) => {
  const text = card.innerText.toLowerCase();
@@ -30,171 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
  if (keywordInput) keywordInput.addEventListener("input", filterStudents);
  if (regionFilter) regionFilter.addEventListener("change", filterStudents);
  if (courseFilter) courseFilter.addEventListener("change", filterStudents);
-
- // -------------------------
- // Students JSON render (NEW) ←★追加
- // -------------------------
- const studentListEl = document.getElementById("studentList");
-
- function safeText(v) {
- return (v ?? "").toString();
- }
-
- function setBioWithBreaks(pEl, text) {
- // 改行が入っても <br> で表示できるように
- const t = safeText(text);
- pEl.innerHTML = t.replace(/\n/g, "<br />");
- }
-
- function createStudentCard(s) {
- const enabled = !!s.enabled;
-
- const article = document.createElement("article");
- article.className = enabled ? "student-card" : "student-card is-disabled";
- article.setAttribute("data-region", safeText(s.region));
- article.setAttribute("data-course", safeText(s.course));
-
- // image
- const profileWrap = document.createElement("div");
- profileWrap.className = "profile-image profile-circle";
-
- const img = document.createElement("img");
- img.src = safeText(s.avatar) || "https://placehold.co/520x520/png?text=Student";
- img.alt = `${safeText(s.name)}のプロフィール写真（プレースホルダー）`;
- profileWrap.appendChild(img);
-
- // info
- const info = document.createElement("div");
- info.className = "info";
-
- const name = document.createElement("h3");
- name.className = "student-name";
- name.textContent = safeText(s.name);
-
- // meta
- const meta = document.createElement("div");
- meta.className = "profile-meta";
-
- const rows = [
- ["大学：", safeText(s.university)],
- ["地域：", safeText(s.region)],
- ["専攻：", safeText(s.major)],
- ["語学力：", safeText(s.language)],
- ["面談：", safeText(s.meeting)],
- ];
-
- rows.forEach(([k, v]) => {
- const row = document.createElement("div");
- row.className = "meta-row";
-
- const kSpan = document.createElement("span");
- kSpan.className = "meta-k";
- kSpan.textContent = k;
-
- const vSpan = document.createElement("span");
- vSpan.className = "meta-v";
- vSpan.textContent = v;
-
- row.appendChild(kSpan);
- row.appendChild(vSpan);
- meta.appendChild(row);
- });
-
- // bio
- const bio = document.createElement("p");
- bio.className = "bio";
- setBioWithBreaks(bio, s.bio);
-
- // tags
- const tagline = document.createElement("div");
- tagline.className = "tagline";
-
- const tags = Array.isArray(s.tags) ? s.tags : [];
- tags.forEach((t) => {
- const tag = document.createElement("span");
- tag.className = "hash";
- tag.textContent = safeText(t);
- tagline.appendChild(tag);
- });
-
- // actions
- const actions = document.createElement("div");
- actions.className = "card-actions";
-
- const a = document.createElement("a");
- a.className = enabled ? "btn" : "btn disabled";
- a.textContent = enabled ? "空き枠を見る（8,000円 / 60分）" : "空き枠を見る（準備中）";
-
- if (enabled && s.bookingUrl && s.bookingUrl !== "#") {
- a.href = safeText(s.bookingUrl);
- a.target = "_blank";
- a.rel = "noopener noreferrer";
- } else {
- a.href = "#";
- a.setAttribute("aria-disabled", "true");
- }
-
- const copyBtn = document.createElement("button");
- copyBtn.className = "btn ghost";
- copyBtn.type = "button";
- copyBtn.setAttribute("data-copy-template", "");
- copyBtn.textContent = "質問例をコピー";
-
- actions.appendChild(a);
- actions.appendChild(copyBtn);
-
- // fineprint
- const fine = document.createElement("p");
- fine.className = "fineprint";
- fine.textContent = enabled
- ? "※面談はZoomで行います（Meet等は使用しません）。"
- : "※準備が整い次第、予約枠を公開します。";
-
- // assemble
- info.appendChild(name);
- info.appendChild(meta);
- info.appendChild(bio);
- info.appendChild(tagline);
- info.appendChild(actions);
- info.appendChild(fine);
-
- article.appendChild(profileWrap);
- article.appendChild(info);
-
- return article;
- }
-
- async function loadAndRenderStudents() {
- if (!studentListEl) return;
-
- // 一旦空に
- studentListEl.innerHTML = "";
-
- try {
- const res = await fetch("students.json", { cache: "no-store" });
- if (!res.ok) throw new Error(`students.json load failed: ${res.status}`);
- const students = await res.json();
-
- if (!Array.isArray(students)) throw new Error("students.json is not an array");
-
- students.forEach((s) => {
- const card = createStudentCard(s);
- studentListEl.appendChild(card);
- });
-
- // 描画後にフィルタを適用
- filterStudents();
-
- // ここで「質問例コピー」ボタンも描画後に効くようにするため、下の処理が動く（※後述で再バインド）
- bindCopyButtons();
- } catch (e) {
- const err = document.createElement("div");
- err.className = "card";
- err.textContent = "現役生データの読み込みに失敗しました（students.jsonを確認してください）";
- studentListEl.appendChild(err);
- console.error(e);
- }
- }
 
  // -------------------------
  // Copy question template
@@ -242,13 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
  setTimeout(() => el.remove(), 1800);
  }
 
- // ★students.jsonでボタンが後から増えるので「関数化して再バインド」できるように
- function bindCopyButtons() {
  document.querySelectorAll("[data-copy-template]").forEach((btn) => {
- // 二重登録防止
- if (btn.dataset.bound === "1") return;
- btn.dataset.bound = "1";
-
  btn.addEventListener("click", async () => {
  const text = (templateEl?.value || "").trim();
  if (!text) {
@@ -259,10 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
  toast(ok ? "質問例をコピーしました" : "コピーに失敗しました");
  });
  });
- }
-
- // 初期HTML上のボタン分もバインド
- bindCopyButtons();
 
  // -------------------------
  // FAQ accordion-like behavior
@@ -449,6 +268,94 @@ document.addEventListener("DOMContentLoaded", () => {
  });
  }
 
- // 最後に students.json を読み込んで描画
- loadAndRenderStudents();
+ // =========================
+ // STUDENTS JSON（ここから追加）
+ // =========================
+ const studentListEl = document.getElementById("studentList");
+
+ function escapeHtml(str) {
+ return String(str)
+ .replaceAll("&", "&amp;")
+ .replaceAll("<", "&lt;")
+ .replaceAll(">", "&gt;")
+ .replaceAll('"', "&quot;")
+ .replaceAll("'", "&#039;");
+ }
+
+ fetch("students.json")
+ .then((res) => {
+ if (!res.ok) throw new Error("students.json が読み込めませんでした");
+ return res.json();
+ })
+ .then((students) => {
+ if (!studentListEl) return;
+
+ // 現役生カードはJSONから生成する
+ studentListEl.innerHTML = "";
+
+ students.forEach((s) => {
+ const enabled = !!s.enabled;
+
+ const article = document.createElement("article");
+ article.className = "student-card" + (enabled ? "" : " is-disabled");
+ article.setAttribute("data-region", s.region || "");
+ article.setAttribute("data-course", s.course || "");
+
+ const tagsHtml = Array.isArray(s.tags)
+ ? s.tags.map((t) => `<span class="hash">${escapeHtml(t)}</span>`).join("")
+ : "";
+
+ const actionHtml = enabled
+ ? `<a class="btn" href="${escapeHtml(s.bookingUrl || "#")}" target="_blank" rel="noopener noreferrer">
+ 空き枠を見る（8,000円 / 60分）
+ </a>`
+ : `<a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>`;
+
+ const fineprint = enabled
+ ? "※面談はZoomで行います（Meet等は使用しません）。"
+ : "※準備が整い次第、予約枠を公開します。";
+
+ article.innerHTML = `
+ <div class="profile-image profile-circle">
+ <img src="${escapeHtml(s.avatar || "")}" alt="${escapeHtml(s.name || "")}のプロフィール写真（プレースホルダー）" />
+ </div>
+
+ <div class="info">
+ <h3 class="student-name">${escapeHtml(s.name || "")}</h3>
+
+ <div class="profile-meta">
+ <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">${escapeHtml(s.university || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">${escapeHtml(s.region || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">${escapeHtml(s.major || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">${escapeHtml(s.language || "")}</span></div>
+ <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">${escapeHtml(s.meeting || "")}</span></div>
+ </div>
+
+ <p class="bio">
+ ${escapeHtml(s.bio || "").replaceAll("\n", "<br />")}
+ </p>
+
+ <div class="tagline">
+ ${tagsHtml}
+ </div>
+
+ <div class="card-actions">
+ ${actionHtml}
+ <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
+ </div>
+
+ <p class="fineprint">${fineprint}</p>
+ </div>
+ `;
+
+ studentListEl.appendChild(article);
+ });
+
+ // JSONで生成した後に、カード一覧を取り直して検索を効かせる
+ studentCards = document.querySelectorAll(".student-card");
+ filterStudents();
+ })
+ .catch((err) => {
+ console.error(err);
+ });
 });

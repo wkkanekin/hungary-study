@@ -1,47 +1,101 @@
 [
-  {
-    "id": "kaneko",
-    "enabled": true,
-    "name": "カネコ（30代）",
-    "region": "ブダペスト",
-    "course": "経営",
-    "university": "Budapest University of Economics and Business",
-    "major": "Tourism Management（修士）",
-    "language": "CEFR C1（英語）",
-    "meeting": "Zoomのみ",
-    "bio": "日本で大学を卒業後、外資系製薬での勤務を経て、ハンガリー大学院に進学。社会人から留学に踏み切った理由、準備・費用・現地生活のリアル、学業との両立などを経験ベースで共有できます。",
-    "tags": ["#社会人留学", "#英語学習", "#キャリアチェンジ", "#ブダペスト生活"],
-    "avatar": "https://placehold.co/520x520/png?text=Kaneko",
-    "bookingUrl": "https://calendly.com/wkkanekin/meet-with-me"
-  },
-  {
-    "id": "airi",
-    "enabled": false,
-    "name": "アイリ（20代）",
-    "region": "ブダペスト",
-    "course": "社会系",
-    "university": "Eötvös Loránd University（ELTE）",
-    "major": "Psychology（学士）",
-    "language": "CEFR C1（英語）",
-    "meeting": "Zoomのみ",
-    "bio": "高校卒業後すぐに単身で渡航。最初は情報・ネットワークがなく苦労した経験から、「一人で挑戦する人が孤独にならない」ための情報共有に関心があります。生活立ち上げや学業のリアルを話せます。",
-    "tags": ["#単身留学", "#ELTE", "#現地生活", "#メンタル"],
-    "avatar": "https://placehold.co/520x520/png?text=Airi",
-    "bookingUrl": "#"
-  },
-  {
-    "id": "kenta",
-    "enabled": false,
-    "name": "ケンタ（20代）",
-    "region": "セゲド",
-    "course": "医学部",
-    "university": "University of Szeged",
-    "major": "Medicine（学士/MD）",
-    "language": "CEFR B2（英語）",
-    "meeting": "Zoomのみ",
-    "bio": "医学部の授業量・試験の負荷、日々の勉強ルーティン、生活費の実態など、「継続してやり切る」観点からリアルを共有できます。出願準備で詰まった点の体験談も。",
-    "tags": ["#医学部", "#セゲド", "#試験対策", "#生活費"],
-    "avatar": "https://placehold.co/520x520/png?text=Kenta",
-    "bookingUrl": "#"
-  }
+{
+"id": "kaneko",
+"enabled": true,
+"name": "カネコ（30代）",
+"region": "ブダペスト",
+"course": "経営",
+"university": "Budapest University of Economics and Business",
+"major": "Tourism Management（修士）",
+"year": "修士1年",
+"language": "CEFR C1（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": true,
+"name": "スティペンディウム・ハンガリカム"
+},
+"bio": "日本で大学を卒業後、外資系製薬での勤務を経て、ハンガリー大学院に進学。\n社会人から留学に踏み切った理由、準備・費用・現地生活のリアル、学業との両立などを経験ベースで共有できます。",
+"tags": ["#社会人留学", "#英語学習", "#キャリアチェンジ", "#ブダペスト生活"],
+"links": [
+{ "label": "YouTubeインタビュー", "url": "https://youtube.com/xxxx" },
+{ "label": "note（準備中）", "url": "#" }
+],
+"avatar": "https://placehold.co/520x520/png?text=Kaneko",
+"bookingUrl": "https://calendly.com/..."
+},
+
+{
+"id": "airi",
+"enabled": false,
+"name": "アイリ（20代）",
+"region": "ブダペスト",
+"course": "社会系",
+"university": "Eötvös Loránd University（ELTE）",
+"major": "Psychology（学士）",
+"year": "学士3年",
+"language": "CEFR C1（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": false,
+"name": "スティペンディウム・ハンガリカム"
+},
+"bio": "高校卒業後すぐに単身で渡航。最初は情報・ネットワークがなく苦労した経験から、\n「一人で挑戦する人が孤独にならない」ための情報共有に関心があります。生活立ち上げや学業のリアルを話せます。",
+"tags": ["#単身留学", "#ELTE", "#現地生活", "#メンタル"],
+"links": [
+{ "label": "YouTube（準備中）", "url": "#" },
+{ "label": "SNS（準備中）", "url": "#" }
+],
+"avatar": "https://placehold.co/520x520/png?text=Airi",
+"bookingUrl": "#"
+},
+
+{
+"id": "kenta",
+"enabled": false,
+"name": "ケンタ（20代）",
+"region": "セゲド",
+"course": "医学部",
+"university": "University of Szeged",
+"major": "Medicine（学士/MD）",
+"year": "医学部4年",
+"language": "CEFR B2（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": false,
+"name": "スティペンディウム・ハンガリカム"
+},
+"bio": "医学部の授業量・試験の負荷、日々の勉強ルーティン、生活費の実態など、\n「継続してやり切る」観点からリアルを共有できます。出願準備で詰まった点の体験談も。",
+"tags": ["#医学部", "#セゲド", "#試験対策", "#生活費"],
+"links": [
+{ "label": "YouTube（準備中）", "url": "#" },
+{ "label": "note（準備中）", "url": "#" }
+],
+"avatar": "https://placehold.co/520x520/png?text=Kenta",
+"bookingUrl": "#"
+},
+
+{
+"id": "mika",
+"enabled": false,
+"name": "ミカ（20代）",
+"region": "ペーチ",
+"course": "芸術",
+"university": "University of Pécs",
+"major": "Arts & Design（学士）",
+"year": "学士2年",
+"language": "CEFR B2（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": true,
+"name": "スティペンディウム・ハンガリカム"
+},
+"bio": "地方都市での暮らし（家賃・治安・移動）や、学内の雰囲気、課題の進め方など、\nブダペストとは違う「地方留学の現実」を共有できます。はじめての海外生活の立ち上げも相談OK。",
+"tags": ["#ペーチ", "#芸術", "#地方留学", "#住まい"],
+"links": [
+{ "label": "ポートフォリオ（準備中）", "url": "#" },
+{ "label": "Instagram（準備中）", "url": "#" }
+],
+"avatar": "https://placehold.co/520x520/png?text=Mika",
+"bookingUrl": "#"
+}
 ]

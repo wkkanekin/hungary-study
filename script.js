@@ -1,19 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
  // -------------------------
+ // Helpers (safe HTML)
+ // -------------------------
+ function escapeHtml(input) {
+ const s = String(input ?? "");
+ return s
+ .replaceAll("&", "&amp;")
+ .replaceAll("<", "&lt;")
+ .replaceAll(">", "&gt;")
+ .replaceAll('"', "&quot;")
+ .replaceAll("'", "&#039;");
+ }
+
+ function escapeAttr(input) {
+ // href/src用：最低限のエスケープ
+ const s = String(input ?? "");
+ return s
+ .replaceAll("&", "&amp;")
+ .replaceAll('"', "&quot;")
+ .replaceAll("<", "&lt;")
+ .replaceAll(">", "&gt;");
+ }
+
+ // -------------------------
  // Search filter
  // -------------------------
  const keywordInput = document.getElementById("keyword");
  const regionFilter = document.getElementById("regionFilter");
  const courseFilter = document.getElementById("courseFilter");
- let studentCards = document.querySelectorAll(".student-card");
 
  function filterStudents() {
  const keyword = (keywordInput?.value || "").trim().toLowerCase();
  const region = regionFilter?.value || "";
  const course = courseFilter?.value || "";
 
+ // ★学生カードはJS生成なので、毎回取り直す（ここが重要）
+ const studentCards = document.querySelectorAll(".student-card");
+
  studentCards.forEach((card) => {
- const text = card.innerText.toLowerCase();
+ const text = (card.innerText || "").toLowerCase();
  const matchKeyword = !keyword || text.includes(keyword);
  const matchRegion = !region || text.includes(region);
  const matchCourse = !course || text.includes(course);
@@ -95,6 +120,194 @@ document.addEventListener("DOMContentLoaded", () => {
  });
  });
  });
+
+ // -------------------------
+ // Students (JSON -> Cards) ★ここがメイン変更点
+ // -------------------------
+ const studentListEl = document.getElementById("studentList");
+
+ function buildStudentCard(s) {
+ const region = s.region || "";
+ const course = s.course || "";
+ const isEnabled = !!s.enabled;
+
+ const metaRows = [];
+
+ // 大学
+ if (s.university) {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">${escapeHtml(s.university)}</span></div>`
+ );
+ }
+ // 地域
+ if (s.region) {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">${escapeHtml(s.region)}</span></div>`
+ );
+ }
+ // 専攻
+ if (s.major) {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">${escapeHtml(s.major)}</span></div>`
+ );
+ }
+ // 学年（NEW）
+ if (s.year) {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">学年：</span><span class="meta-v">${escapeHtml(s.year)}</span></div>`
+ );
+ }
+ // 語学
+ if (s.language) {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">${escapeHtml(s.language)}</span></div>`
+ );
+ }
+ // 面談
+ if (s.meeting) {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">${escapeHtml(s.meeting)}</span></div>`
+ );
+ }
+ // 奨学金（NEW）
+ if (s.stipendium && typeof s.stipendium.has === "boolean") {
+ if (s.stipendium.has) {
+ const nm = s.stipendium.name ? s.stipendium.name : "奨学金あり";
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">${escapeHtml(nm)}</span></div>`
+ );
+ } else {
+ metaRows.push(
+ `<div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">なし</span></div>`
+ );
+ }
+ }
+
+ const tags = Array.isArray(s.tags) ? s.tags : [];
+ const tagsHtml = tags
+ .filter(t => String(t || "").trim().length > 0)
+ .map(t => `<span class="hash">${escapeHtml(t)}</span>`)
+ .join("");
+
+ // 外部リンク（NEW）
+ let linksHtml = "";
+ if (Array.isArray(s.links) && s.links.length > 0) {
+ const btns = s.links
+ .filter(l => l && l.label && l.url)
+ .map(l => {
+ const label = escapeHtml(l.label);
+ const url = escapeAttr(l.url);
+ return `<a class="ext-link" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+ })
+ .join("");
+
+ if (btns.trim().length > 0) {
+ linksHtml = `
+ <div class="ext-links">
+ <div class="ext-title">その他（外部リンク）</div>
+ <div class="ext-buttons">${btns}</div>
+ </div>
+ `;
+ }
+ }
+
+ // 予約ボタン
+ const bookingUrl = s.bookingUrl || "#";
+ const bookingBtn = isEnabled
+ ? `<a class="btn" href="${escapeAttr(bookingUrl)}" target="_blank" rel="noopener noreferrer">空き枠を見る（8,000円 / 60分）</a>`
+ : `<a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>`;
+
+ // fineprint
+ const fineprint = isEnabled
+ ? `※面談はZoomで行います（Meet等は使用しません）。`
+ : `※準備が整い次第、予約枠を公開します。`;
+
+ const avatar = s.avatar || "https://placehold.co/520x520/png?text=Student";
+ const name = s.name || "名前（未設定）";
+
+ return `
+ <article class="student-card ${isEnabled ? "" : "is-disabled"}" data-region="${escapeAttr(region)}" data-course="${escapeAttr(course)}">
+ <div class="profile-image profile-circle">
+ <img src="${escapeAttr(avatar)}" alt="${escapeAttr(name)}のプロフィール写真（プレースホルダー）" />
+ </div>
+
+ <div class="info">
+ <h3 class="student-name">${escapeHtml(name)}</h3>
+
+ <div class="profile-meta">
+ ${metaRows.join("")}
+ </div>
+
+ <p class="bio">
+ ${escapeHtml(s.bio || "").replaceAll("\n", "<br />")}
+ </p>
+
+ <div class="tagline">
+ ${tagsHtml}
+ </div>
+
+ ${linksHtml}
+
+ <div class="card-actions">
+ ${bookingBtn}
+ <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
+ </div>
+
+ <p class="fineprint">${fineprint}</p>
+ </div>
+ </article>
+ `;
+ }
+
+ function renderStudents(students) {
+ if (!studentListEl) return;
+ studentListEl.innerHTML = "";
+
+ const list = Array.isArray(students) ? students : [];
+ const enabledFirst = [...list].sort((a, b) => Number(!!b.enabled) - Number(!!a.enabled));
+
+ const html = enabledFirst.map(buildStudentCard).join("");
+ studentListEl.innerHTML = html;
+
+ // 学生カード生成後に、コピーイベントが新DOMに効くよう付け直し
+ studentListEl.querySelectorAll("[data-copy-template]").forEach((btn) => {
+ btn.addEventListener("click", async () => {
+ const text = (templateEl?.value || "").trim();
+ if (!text) {
+ toast("テンプレの読み込みに失敗しました。");
+ return;
+ }
+ const ok = await copyToClipboard(text);
+ toast(ok ? "質問例をコピーしました" : "コピーに失敗しました");
+ });
+ });
+
+ // 初期状態でフィルタ反映（検索欄が残ってる場合にも対応）
+ filterStudents();
+ }
+
+ async function loadStudents() {
+ try {
+ const res = await fetch("students.json", { cache: "no-store" });
+ if (!res.ok) throw new Error(`students.json load failed: ${res.status}`);
+ const data = await res.json();
+ renderStudents(data);
+ } catch (e) {
+ console.error(e);
+ if (studentListEl) {
+ studentListEl.innerHTML = `
+ <div class="card soft">
+ <p class="para">
+ 学生データの読み込みに失敗しました。<br />
+ students.json が同じ階層にあるか、JSONのカンマや括弧が壊れていないか確認してください。
+ </p>
+ </div>
+ `;
+ }
+ }
+ }
+
+ loadStudents();
 
  // -------------------------
  // Map-based university search (Leaflet) - NEW
@@ -267,95 +480,4 @@ document.addEventListener("DOMContentLoaded", () => {
  });
  });
  }
-
- // =========================
- // STUDENTS JSON（ここから追加）
- // =========================
- const studentListEl = document.getElementById("studentList");
-
- function escapeHtml(str) {
- return String(str)
- .replaceAll("&", "&amp;")
- .replaceAll("<", "&lt;")
- .replaceAll(">", "&gt;")
- .replaceAll('"', "&quot;")
- .replaceAll("'", "&#039;");
- }
-
- fetch("students.json")
- .then((res) => {
- if (!res.ok) throw new Error("students.json が読み込めませんでした");
- return res.json();
- })
- .then((students) => {
- if (!studentListEl) return;
-
- // 現役生カードはJSONから生成する
- studentListEl.innerHTML = "";
-
- students.forEach((s) => {
- const enabled = !!s.enabled;
-
- const article = document.createElement("article");
- article.className = "student-card" + (enabled ? "" : " is-disabled");
- article.setAttribute("data-region", s.region || "");
- article.setAttribute("data-course", s.course || "");
-
- const tagsHtml = Array.isArray(s.tags)
- ? s.tags.map((t) => `<span class="hash">${escapeHtml(t)}</span>`).join("")
- : "";
-
- const actionHtml = enabled
- ? `<a class="btn" href="${escapeHtml(s.bookingUrl || "#")}" target="_blank" rel="noopener noreferrer">
- 空き枠を見る（8,000円 / 60分）
- </a>`
- : `<a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>`;
-
- const fineprint = enabled
- ? "※面談はZoomで行います（Meet等は使用しません）。"
- : "※準備が整い次第、予約枠を公開します。";
-
- article.innerHTML = `
- <div class="profile-image profile-circle">
- <img src="${escapeHtml(s.avatar || "")}" alt="${escapeHtml(s.name || "")}のプロフィール写真（プレースホルダー）" />
- </div>
-
- <div class="info">
- <h3 class="student-name">${escapeHtml(s.name || "")}</h3>
-
- <div class="profile-meta">
- <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">${escapeHtml(s.university || "")}</span></div>
- <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">${escapeHtml(s.region || "")}</span></div>
- <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">${escapeHtml(s.major || "")}</span></div>
- <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">${escapeHtml(s.language || "")}</span></div>
- <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">${escapeHtml(s.meeting || "")}</span></div>
- </div>
-
- <p class="bio">
- ${escapeHtml(s.bio || "").replaceAll("\n", "<br />")}
- </p>
-
- <div class="tagline">
- ${tagsHtml}
- </div>
-
- <div class="card-actions">
- ${actionHtml}
- <button class="btn ghost" type="button" data-copy-template>質問例をコピー</button>
- </div>
-
- <p class="fineprint">${fineprint}</p>
- </div>
- `;
-
- studentListEl.appendChild(article);
- });
-
- // JSONで生成した後に、カード一覧を取り直して検索を効かせる
- studentCards = document.querySelectorAll(".student-card");
- filterStudents();
- })
- .catch((err) => {
- console.error(err);
- });
 });

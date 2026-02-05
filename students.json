@@ -17,10 +17,9 @@
 "bio": "日本で大学を卒業後、外資系製薬での勤務を経て、ハンガリー大学院に進学。社会人から留学に踏み切った理由、準備・費用・現地生活のリアル、学業との両立などを経験ベースで共有できます。",
 "tags": ["#社会人留学", "#英語学習", "#キャリアチェンジ", "#ブダペスト生活"],
 "links": [
-{
-"label": "YouTubeインタビュー",
-"url": "https://youtube.com/xxxx"
-}
+{ "label": "大学公式サイト", "url": "https://www.bge.hu/" },
+{ "label": "YouTubeインタビュー", "url": "https://youtube.com/xxxx" },
+{ "label": "note", "url": "https://note.com/xxxx" }
 ],
 "avatar": "https://placehold.co/520x520/png?text=Kaneko",
 "bookingUrl": "https://calendly.com/..."
@@ -42,7 +41,11 @@
 },
 "bio": "高校卒業後すぐに単身で渡航。最初は情報・ネットワークがなく苦労した経験から、一人で挑戦する人が孤独にならないための情報共有に関心があります。",
 "tags": ["#単身留学", "#ELTE", "#現地生活", "#メンタル"],
-"links": [],
+"links": [
+{ "label": "大学公式サイト", "url": "https://www.elte.hu/en/" },
+{ "label": "YouTubeインタビュー", "url": "https://youtube.com/xxxx" },
+{ "label": "note", "url": "https://note.com/xxxx" }
+],
 "avatar": "https://placehold.co/520x520/png?text=Airi",
 "bookingUrl": "#"
 },
@@ -63,7 +66,11 @@
 },
 "bio": "医学部の授業量・試験の負荷、日々の勉強ルーティン、生活費の実態など、継続してやり切る観点からリアルを共有できます。",
 "tags": ["#医学部", "#セゲド", "#試験対策", "#生活費"],
-"links": [],
+"links": [ 
+{ "label": "大学公式サイト", "url": "https://u-szeged.hu/english" },
+{ "label": "YouTubeインタビュー", "url": "https://youtube.com/xxxx" },
+{ "label": "note", "url": "https://note.com/xxxx" }
+],
 "avatar": "https://placehold.co/520x520/png?text=Kenta",
 "bookingUrl": "#"
 }

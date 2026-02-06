@@ -1,71 +1,61 @@
+// script.js
 document.addEventListener("DOMContentLoaded", () => {
- // ----------------------------
+ // =========================
  // Mini TOC
- // ----------------------------
+ // =========================
  const tocToggle = document.getElementById("tocToggle");
  const tocPanel = document.getElementById("tocPanel");
+
  if (tocToggle && tocPanel) {
  tocToggle.addEventListener("click", () => {
- const open = tocPanel.classList.toggle("open");
- tocToggle.setAttribute("aria-expanded", String(open));
+ tocPanel.classList.toggle("open");
  });
-
  tocPanel.querySelectorAll("a").forEach((a) => {
- a.addEventListener("click", () => {
- tocPanel.classList.remove("open");
- tocToggle.setAttribute("aria-expanded", "false");
+ a.addEventListener("click", () => tocPanel.classList.remove("open"));
  });
- });
-
  document.addEventListener("click", (e) => {
- const t = e.target;
- if (!t) return;
- const inside = tocPanel.contains(t) || tocToggle.contains(t);
- if (!inside) {
- tocPanel.classList.remove("open");
- tocToggle.setAttribute("aria-expanded", "false");
- }
+ const within = e.target.closest(".mini-toc");
+ if (!within) tocPanel.classList.remove("open");
  });
  }
 
- // ----------------------------
+ // =========================
  // Elements
- // ----------------------------
+ // =========================
  const keywordInput = document.getElementById("keyword");
  const regionFilter = document.getElementById("regionFilter");
  const courseFilter = document.getElementById("courseFilter");
- const applySearchBtn = document.getElementById("applySearch");
- const clearSearchBtn = document.getElementById("clearSearch");
+ const searchBtn = document.getElementById("searchBtn");
+ const clearBtn = document.getElementById("clearBtn");
 
- const suggestBox = document.getElementById("suggestBox");
+ const suggestBox = document.getElementById("suggestBox"); // (optional if present)
+ // NOTE: index.html の最新版は suggestBox を置いてないけど、置いてもOK。未配置でも動くようにしてる。
 
  const studentListEl = document.getElementById("studentList");
- const noResultsEl = document.getElementById("noResults");
+ const universityListEl = document.getElementById("universityList");
 
- const contactGrid = document.getElementById("contactGrid");
- const openFormBtn = document.getElementById("openFormBtn");
+ // recruit form
+ const openFormBtn = document.getElementById("openForm");
+ const applyForm = document.getElementById("applyForm");
 
- // Map
- const mapEl = document.getElementById("huMap");
- const uniListEl = document.getElementById("uniList");
- const mapHintEl = document.getElementById("mapHint");
- const mapStatusEl = document.getElementById("mapStatus");
- const clearUniBtn = document.getElementById("clearUniFilter");
- const applyMapSearchBtn = document.getElementById("applyMapSearch");
- const pickedUniEl = document.getElementById("pickedUni");
+ // =========================
+ // Load JSON
+ // =========================
+ let STUDENTS = [];
+ let CONFIG = null;
 
- // ----------------------------
- // Data stores
- // ----------------------------
- let students = [];
- let suggestPool = []; // string suggestions
- let pickedUniversityName = ""; // selected from map
+ async function loadJson(path) {
+ const res = await fetch(path, { cache: "no-store" });
+ if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+ return await res.json();
+ }
 
- // ----------------------------
- // Helpers
- // ----------------------------
- function esc(str) {
- return String(str ?? "")
+ function uniq(arr) {
+ return Array.from(new Set(arr)).filter(Boolean);
+ }
+
+ function escapeHtml(str) {
+ return String(str)
  .replaceAll("&", "&amp;")
  .replaceAll("<", "&lt;")
  .replaceAll(">", "&gt;")
@@ -73,471 +63,522 @@ document.addEventListener("DOMContentLoaded", () => {
  .replaceAll("'", "&#039;");
  }
 
- function norm(str) {
- return String(str ?? "").trim().toLowerCase();
+ // =========================
+ // Populate filters from students.json
+ // =========================
+ function buildFilters(students) {
+ if (!regionFilter || !courseFilter) return;
+
+ const regions = uniq(students.map((s) => s.region));
+ const courses = uniq(students.map((s) => s.course));
+
+ regionFilter.innerHTML = `<option value="">地域指定</option>` + regions
+ .map((r) => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`)
+ .join("");
+
+ courseFilter.innerHTML = `<option value="">分野指定</option>` + courses
+ .map((c) => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`)
+ .join("");
  }
 
- function scrollToStudents() {
- document.getElementById("students")?.scrollIntoView({ behavior: "smooth", block: "start" });
+ // =========================
+ // Suggest (dropdown) from students data
+ // =========================
+ let SUGGEST_POOL = [];
+
+ function buildSuggestPool(students) {
+ const pool = [];
+ students.forEach((s) => {
+ pool.push(s.university, s.region, s.course, s.major, s.year);
+ (s.tags || []).forEach((t) => pool.push(t));
+ (s.links || []).forEach((l) => pool.push(l.label));
+ });
+ SUGGEST_POOL = uniq(pool).sort((a, b) => String(a).localeCompare(String(b), "ja"));
  }
 
- function showNoResults(show) {
- if (!noResultsEl) return;
- noResultsEl.style.display = show ? "block" : "none";
+ function ensureSuggestBox() {
+ // index.html に suggestBox が無い場合は自動で作って keyword の下に差し込む
+ if (document.getElementById("suggestBox")) return document.getElementById("suggestBox");
+ if (!keywordInput) return null;
+
+ const wrap = document.createElement("div");
+ wrap.className = "suggest-wrap";
+ keywordInput.parentNode.insertBefore(wrap, keywordInput);
+ wrap.appendChild(keywordInput);
+
+ const box = document.createElement("div");
+ box.id = "suggestBox";
+ box.setAttribute("role", "listbox");
+ wrap.appendChild(box);
+ return box;
  }
 
- function isEnabled(stu) {
- return !!stu.enabled;
+ function showSuggest(items) {
+ const box = ensureSuggestBox();
+ if (!box) return;
+
+ if (!items.length) {
+ box.classList.remove("open");
+ box.innerHTML = "";
+ return;
+ }
+ box.innerHTML = items.slice(0, 8)
+ .map((t) => `<div class="suggest-item" data-value="${escapeHtml(t)}">${escapeHtml(t)}</div>`)
+ .join("");
+ box.classList.add("open");
+
+ box.querySelectorAll(".suggest-item").forEach((it) => {
+ it.addEventListener("click", () => {
+ const v = it.getAttribute("data-value") || "";
+ keywordInput.value = v;
+ box.classList.remove("open");
+ });
+ });
  }
 
- function buildSearchText(stu) {
- const tags = Array.isArray(stu.tags) ? stu.tags.join(" ") : "";
- const links = Array.isArray(stu.links) ? stu.links.map(l => `${l.label} ${l.url}`).join(" ") : "";
- const stip = stu?.stipendium?.has ? (stu?.stipendium?.name || "stipendium") : "";
- return norm([
- stu.name,
- stu.region,
- stu.course,
- stu.university,
- stu.major,
- stu.year,
- stu.language,
- stu.meeting,
- tags,
- links,
- stu.bio,
- stip
- ].join(" "));
+ function bindSuggest() {
+ if (!keywordInput) return;
+ const box = ensureSuggestBox();
+
+ keywordInput.addEventListener("input", () => {
+ const q = (keywordInput.value || "").trim().toLowerCase();
+ if (!q) return showSuggest([]);
+ const hits = SUGGEST_POOL.filter((t) => String(t).toLowerCase().includes(q));
+ showSuggest(hits);
+ });
+
+ document.addEventListener("click", (e) => {
+ const within = e.target.closest(".suggest-wrap");
+ if (!within && box) box.classList.remove("open");
+ });
+ }
+
+ // =========================
+ // Render students (vertical + centered)
+ // =========================
+ function renderNoResults() {
+ if (!studentListEl) return;
+ studentListEl.innerHTML = `
+ <div class="student-card no-results">
+ <p style="margin:0;font-weight:950;color:#0f2a5a">現在、該当する現役生が見つかりませんでした。</p>
+ <p style="margin:10px 0 0;" class="muted">
+ 現役生は順次追加予定です。<br />
+ 現役生として参加したい方は <a href="#recruit">現役生募集</a> をご確認ください。
+ </p>
+ </div>
+ `;
  }
 
  function renderStudents(list) {
  if (!studentListEl) return;
-
  studentListEl.innerHTML = "";
 
  if (!list.length) {
- showNoResults(true);
+ renderNoResults();
  return;
  }
 
- showNoResults(false);
+ list.forEach((s) => {
+ const enabled = !!s.enabled;
+ const avatarLetter = (s.name || "").trim().slice(0, 1) || "H";
 
- list.forEach((stu) => {
- const disabled = !isEnabled(stu);
- const stipBadge = stu?.stipendium?.has
- ? `<span class="badgeMini">奨学金：${esc(stu?.stipendium?.name || "取得")}</span>`
+ const stipendiumLine = (s.stipendium && s.stipendium.has)
+ ? ` / 奨学金：${escapeHtml(s.stipendium.name || "あり")}`
  : "";
 
- const tagsHtml = (stu.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
+ const links = (s.links || []).map((l) => {
+ const label = escapeHtml(l.label || "リンク");
+ const url = escapeHtml(l.url || "#");
+ return `<a class="student-link" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+ }).join("");
 
- const linksHtml = (stu.links || [])
- .filter(l => l && l.label && l.url)
- .map((l) => `<a class="linkPill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`)
- .join("");
+ const booking = enabled && s.bookingUrl && s.bookingUrl !== "#"
+ ? `<a class="student-link primary" href="${escapeHtml(s.bookingUrl)}" target="_blank" rel="noopener noreferrer">空き枠を見る（6,000円 / 40分）</a>`
+ : `<span class="student-link" style="opacity:.65; cursor:not-allowed">空き枠を見る（準備中）</span>`;
 
- const bookingBtn = disabled
- ? `<a class="btn" href="#" aria-disabled="true" onclick="return false;">空き枠を見る（準備中）</a>`
- : `<a class="btn primary" href="${esc(stu.bookingUrl)}" target="_blank" rel="noopener">空き枠を見る（6,000円 / 40分）</a>`;
+ const el = document.createElement("article");
+ el.className = "student-card";
+ el.dataset.region = s.region || "";
+ el.dataset.course = s.course || "";
 
- const card = document.createElement("article");
- card.className = `studentCard${disabled ? " disabled" : ""}`;
-
- card.innerHTML = `
- <div class="studentTop">
- <div class="avatar" aria-label="アバター">
- <img src="${esc(stu.avatar)}" alt="${esc(stu.name)} のアバター" />
+ el.innerHTML = `
+ <div class="student-top">
+ <div class="student-avatar" aria-label="アバター">
+ ${s.avatar ? `<img src="${escapeHtml(s.avatar)}" alt="${escapeHtml(s.name || "avatar")}">` : escapeHtml(avatarLetter)}
  </div>
  <div>
- <p class="studentName">${esc(stu.name)}</p>
- <p class="studentMeta">${esc(stu.university)} / ${esc(stu.region)} / ${esc(stu.course)}</p>
+ <p class="student-name">${escapeHtml(s.name || "")}</p>
+ <p class="student-meta">
+ ${escapeHtml(s.university || "")} / ${escapeHtml(s.region || "")} / ${escapeHtml(s.course || "")}
+ ${s.year ? ` / ${escapeHtml(s.year)}` : ""}
+ ${stipendiumLine}
+ </p>
  </div>
  </div>
 
- ${stipBadge ? `<div>${stipBadge}</div>` : ""}
+ <p class="student-bio">${escapeHtml(s.bio || "")}</p>
 
- <div class="metaBox" aria-label="プロフィール情報">
- <div class="metaRow"><span class="metaK">大学：</span><span class="metaV">${esc(stu.university)}</span></div>
- <div class="metaRow"><span class="metaK">地域：</span><span class="metaV">${esc(stu.region)}</span></div>
- <div class="metaRow"><span class="metaK">専攻：</span><span class="metaV">${esc(stu.major)}</span></div>
- <div class="metaRow"><span class="metaK">学年：</span><span class="metaV">${esc(stu.year)}</span></div>
- <div class="metaRow"><span class="metaK">語学：</span><span class="metaV">${esc(stu.language)}</span></div>
- <div class="metaRow"><span class="metaK">面談：</span><span class="metaV">${esc(stu.meeting)}</span></div>
+ <div class="student-tags">
+ ${(s.tags || []).map((t) => `<span class="student-tag">${escapeHtml(t)}</span>`).join("")}
  </div>
 
- <p class="bio">${esc(stu.bio)}</p>
-
- ${tagsHtml ? `<div class="tags">${tagsHtml}</div>` : ""}
-
- ${linksHtml ? `<div class="linkList" aria-label="外部リンク">${linksHtml}</div>` : ""}
-
- ${bookingBtn}
+ <div class="student-links">
+ ${booking}
+ ${links}
+ </div>
  `;
-
- studentListEl.appendChild(card);
+ studentListEl.appendChild(el);
  });
  }
 
- function applyFilterAndJump() {
- const kw = norm(keywordInput?.value);
- const region = regionFilter?.value || "";
- const course = courseFilter?.value || "";
+ function applyFilter() {
+ const kw = (keywordInput?.value || "").trim().toLowerCase();
+ const r = regionFilter?.value || "";
+ const c = courseFilter?.value || "";
 
- const filtered = students.filter((stu) => {
- const text = buildSearchText(stu);
+ const filtered = STUDENTS
+ .filter((s) => true) // keep even disabled to show "準備中"
+ .filter((s) => {
+ const blob = [
+ s.name, s.region, s.course, s.university, s.major, s.year,
+ s.language, s.meeting, s.bio,
+ ...(s.tags || []),
+ ...(s.links || []).map((l) => l.label),
+ ...(s.links || []).map((l) => l.url),
+ s.stipendium?.name
+ ].filter(Boolean).join(" ").toLowerCase();
 
- const okKw = !kw || text.includes(kw);
- const okRegion = !region || String(stu.region) === region;
- const okCourse = !course || String(stu.course) === course;
-
- return okKw && okRegion && okCourse;
+ const okKw = !kw || blob.includes(kw);
+ const okR = !r || String(s.region || "") === r;
+ const okC = !c || String(s.course || "") === c;
+ return okKw && okR && okC;
  });
 
  renderStudents(filtered);
- scrollToStudents();
+
+ // 検索結果が表示されたら students にスクロール
+ // （search セクション内に結果があるのでここでは不要だが、要望通り“検索したら結果へ”）
+ studentListEl?.scrollIntoView({ behavior: "smooth", block: "start" });
  }
 
- function clearSearch() {
+ function clearFilter() {
  if (keywordInput) keywordInput.value = "";
  if (regionFilter) regionFilter.value = "";
  if (courseFilter) courseFilter.value = "";
- closeSuggest();
- renderStudents(students);
+ renderStudents(STUDENTS);
  }
 
- // ----------------------------
- // Suggest (dropdown)
- // ----------------------------
- function openSuggest() {
- if (!suggestBox) return;
- suggestBox.classList.add("open");
+ // =========================
+ // Contact from config.json
+ // =========================
+ function renderContact(cfg) {
+ const wrap = document.getElementById("contactLinks");
+ if (!wrap || !cfg) return;
+
+ const items = [];
+
+ if (cfg.email) {
+ items.push({
+ label: "メール",
+ value: cfg.email,
+ url: `mailto:${cfg.email}`
+ });
  }
 
- function closeSuggest() {
- if (!suggestBox) return;
- suggestBox.classList.remove("open");
- suggestBox.innerHTML = "";
- }
-
- function buildSuggestPool(studentsArr) {
- const set = new Set();
-
- studentsArr.forEach((s) => {
- if (s.university) set.add(String(s.university));
- if (s.region) set.add(String(s.region));
- if (s.course) set.add(String(s.course));
- if (Array.isArray(s.tags)) s.tags.forEach((t) => set.add(String(t)));
-
- // links label also can be searched
- if (Array.isArray(s.links)) s.links.forEach((l) => l?.label && set.add(String(l.label)));
+ (cfg.socials || []).forEach((s) => {
+ items.push({
+ label: s.label || "SNS",
+ value: s.url || "",
+ url: s.url || "#"
+ });
  });
 
- // common helpful words
- ["奨学金", "Stipendium", "スティペンディウム", "出願", "生活費", "住まい", "治安"].forEach((w) => set.add(w));
-
- return Array.from(set);
- }
-
- function renderSuggest(query) {
- if (!suggestBox) return;
- const q = norm(query);
- if (!q) {
- closeSuggest();
- return;
- }
-
- const hits = suggestPool
- .map((s) => ({ raw: s, n: norm(s) }))
- .filter((x) => x.n.includes(q))
- .slice(0, 8);
-
- if (!hits.length) {
- closeSuggest();
- return;
- }
-
- suggestBox.innerHTML = "";
- hits.forEach((h) => {
- const item = document.createElement("div");
- item.className = "suggestItem";
- item.innerHTML = `${esc(h.raw)}<span class="suggestMeta">クリックで入力</span>`;
- item.addEventListener("click", () => {
- if (keywordInput) keywordInput.value = h.raw;
- closeSuggest();
- keywordInput?.focus();
+ if (cfg.formUrl) {
+ items.push({
+ label: "フォーム",
+ value: cfg.formUrl,
+ url: cfg.formUrl
  });
- suggestBox.appendChild(item);
+ }
+
+ wrap.innerHTML = items.map((it) => `
+ <a class="contact-item" href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer">
+ <span class="contact-label">${escapeHtml(it.label)}</span>
+ <span class="contact-value">${escapeHtml(it.value)}</span>
+ </a>
+ `).join("");
+ }
+
+ // =========================
+ // Recruit inline form behavior (mailto fallback)
+ // =========================
+ function bindRecruitForm() {
+ if (openFormBtn && applyForm) {
+ openFormBtn.addEventListener("click", () => {
+ applyForm.classList.toggle("open");
+ if (applyForm.classList.contains("open")) {
+ applyForm.scrollIntoView({ behavior: "smooth", block: "start" });
+ }
  });
-
- openSuggest();
  }
 
- document.addEventListener("click", (e) => {
- const t = e.target;
- if (!t) return;
- const inside = (suggestBox && suggestBox.contains(t)) || (keywordInput && keywordInput.contains(t));
- if (!inside) closeSuggest();
- });
+ if (applyForm) {
+ applyForm.addEventListener("submit", (e) => {
+ e.preventDefault();
 
- if (keywordInput) {
- keywordInput.addEventListener("input", () => renderSuggest(keywordInput.value));
- keywordInput.addEventListener("focus", () => renderSuggest(keywordInput.value));
- }
+ const inputs = applyForm.querySelectorAll("input, textarea");
+ const values = Array.from(inputs).map((el) => el.value || "");
 
- // ----------------------------
- // Load JSON
- // ----------------------------
- async function loadStudents() {
- const res = await fetch("students.json", { cache: "no-store" });
- if (!res.ok) throw new Error("students.json が読み込めません: " + res.status);
- const data = await res.json();
- if (!Array.isArray(data)) throw new Error("students.json の形式が不正です（配列にしてください）");
- students = data;
- suggestPool = buildSuggestPool(students);
- renderStudents(students);
- }
+ const name = values[0] || "";
+ const uni = values[1] || "";
+ const year = values[2] || "";
+ const email = values[3] || "";
+ const note = values[4] || "";
 
- async function loadConfig() {
- const res = await fetch("config.json", { cache: "no-store" });
- if (!res.ok) throw new Error("config.json が読み込めません: " + res.status);
- const cfg = await res.json();
+ // 送信先が無い場合でも落ちないように
+ const to = (CONFIG && CONFIG.email) ? CONFIG.email : "contact@example.com";
 
- // Form
- if (openFormBtn) {
- openFormBtn.href = cfg.formUrl || "#";
- }
+ const subject = encodeURIComponent("【現役生参加申し込み】");
+ const body = encodeURIComponent(
+ `名前（表示名）：${name}\n` +
+ `大学名：${uni}\n` +
+ `学年・課程：${year}\n` +
+ `メールアドレス：${email}\n` +
+ `自由記述：\n${note}\n`
+ );
 
- // Contact grid
- if (contactGrid) {
- contactGrid.innerHTML = "";
-
- // Email
- const email = cfg.email || "";
- const emailCard = document.createElement("a");
- emailCard.className = "contactItem";
- emailCard.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
- emailCard.innerHTML = `
- <div class="contactK">メール</div>
- <div class="contactV">${esc(email || "設定中")}</div>
- `;
- contactGrid.appendChild(emailCard);
-
- // Socials
- const socials = Array.isArray(cfg.socials) ? cfg.socials : [];
- socials.forEach((s) => {
- const a = document.createElement("a");
- a.className = "contactItem";
- a.href = s.url || "#";
- a.target = "_blank";
- a.rel = "noopener";
- a.innerHTML = `
- <div class="contactK">${esc(s.label || "SNS")}</div>
- <div class="contactV">${esc(s.url || "設定中")}</div>
- `;
- contactGrid.appendChild(a);
+ // mailtoで運営へ送れるようにする（サーバ不要）
+ window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
  });
  }
  }
 
- // ----------------------------
- // Search Buttons
- // ----------------------------
- if (applySearchBtn) applySearchBtn.addEventListener("click", applyFilterAndJump);
- if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
-
- // ----------------------------
- // Map (Leaflet) - city markers + university list
- // ----------------------------
- const cityCoords = {
- "ブダペスト": { lat: 47.4979, lng: 19.0402 },
- "デブレツェン": { lat: 47.5316, lng: 21.6273 },
- "セゲド": { lat: 46.2530, lng: 20.1414 },
- "ペーチ": { lat: 46.0727, lng: 18.2323 },
- "ミシュコルツ": { lat: 48.1035, lng: 20.7784 },
- "ショプロン": { lat: 47.6817, lng: 16.5845 },
- "ジェール": { lat: 47.6875, lng: 17.6504 },
- "ヴェスプレーム": { lat: 47.0930, lng: 17.9110 },
- "ニーレジハーザ": { lat: 47.9554, lng: 21.7167 },
- "ドゥナウーイヴァーロシュ": { lat: 46.9619, lng: 18.9355 },
- "ケチケメート": { lat: 46.8964, lng: 19.6897 },
- "ギョドゥルー": { lat: 47.5966, lng: 19.3552 },
- "エゲル": { lat: 47.9025, lng: 20.3772 },
- "シャーロシュパタク": { lat: 48.3245, lng: 21.5686 },
- "ヴァーツ": { lat: 47.7785, lng: 19.1280 },
- "バヤ": { lat: 46.1803, lng: 18.9567 },
- };
-
- const universities = [
- // Budapest
- { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
- { name: "Corvinus University of Budapest", city: "ブダペスト" },
- { name: "Eötvös Loránd University", city: "ブダペスト" },
- { name: "Semmelweis University", city: "ブダペスト" },
- { name: "Hungarian University of Fine Arts", city: "ブダペスト" },
- { name: "Hungarian University of Sports Science", city: "ブダペスト" },
- { name: "Hungarian Dance University", city: "ブダペスト" },
- { name: "Liszt Ferenc Academy of Music", city: "ブダペスト" },
- { name: "Moholy-Nagy University of Art and Design", city: "ブダペスト" },
- { name: "Óbuda University", city: "ブダペスト" },
- { name: "Pázmány Péter Catholic University", city: "ブダペスト" },
- { name: "Károli Gáspár University of the Reformed Church in Hungary", city: "ブダペスト" },
- { name: "Ludovika University of Public Service", city: "ブダペスト" },
- { name: "John Wesley Theological College", city: "ブダペスト" },
- { name: "Dharma Gate Buddhist College", city: "ブダペスト" },
- { name: "Budapest Metropolitan University", city: "ブダペスト" },
- { name: "Budapest University of Economics and Business", city: "ブダペスト" },
- { name: "University of Veterinary Medicine Budapest", city: "ブダペスト" },
- { name: "MFA Balassi Preparatory Programme", city: "ブダペスト" },
-
- // Regional
- { name: "University of Debrecen", city: "デブレツェン" },
- { name: "University of Szeged", city: "セゲド" },
- { name: "University of Pécs", city: "ペーチ" },
- { name: "University of Miskolc", city: "ミシュコルツ" },
- { name: "University of Sopron", city: "ショプロン" },
- { name: "Széchenyi István University", city: "ジェール" },
- { name: "University of Pannonia", city: "ヴェスプレーム" },
- { name: "University of Nyíregyháza", city: "ニーレジハーザ" },
- { name: "University of Dunaújváros", city: "ドゥナウーイヴァーロシュ" },
- { name: "John von Neumann University", city: "ケチケメート" },
- { name: "Hungarian University of Agriculture and Life Sciences (MATE)", city: "ギョドゥルー" },
- { name: "Eszterházy Károly Catholic University", city: "エゲル" },
- { name: "University of Tokaj", city: "シャーロシュパタク" },
-
- // Small / specialized
- { name: "Apor Vilmos Catholic College", city: "ヴァーツ" },
- { name: "Episcopal Theological College of Pécs", city: "ペーチ" },
- { name: "Eötvös József College", city: "バヤ" },
- { name: "Kodály Institute", city: "ケチケメート" },
- ];
-
- function groupByCity(items) {
- const map = new Map();
- items.forEach((u) => {
- if (!map.has(u.city)) map.set(u.city, []);
- map.get(u.city).push(u);
- });
- return map;
- }
-
- function setPickedUniversity(name) {
- pickedUniversityName = name || "";
- if (pickedUniEl) pickedUniEl.textContent = pickedUniversityName || "未選択";
- }
-
- function renderUniversityList(city, list) {
- if (!uniListEl) return;
- if (mapHintEl) mapHintEl.style.display = "none";
-
- uniListEl.innerHTML = "";
-
- const group = document.createElement("div");
- group.className = "uniGroup";
-
- const head = document.createElement("div");
- head.className = "uniCity";
- head.textContent = `${city}（${list.length}校）`;
- group.appendChild(head);
-
- list.forEach((u) => {
- const btn = document.createElement("button");
- btn.type = "button";
- btn.className = "uniBtn";
- btn.textContent = u.name;
-
- btn.addEventListener("click", () => {
- setPickedUniversity(u.name);
- if (keywordInput) keywordInput.value = u.name;
- closeSuggest();
- applyFilterAndJump(); // click university -> immediately search & jump
- });
-
- group.appendChild(btn);
- });
-
- uniListEl.appendChild(group);
- }
-
- function clearUniversityFilter() {
- setPickedUniversity("");
- if (uniListEl) uniListEl.innerHTML = "";
- if (mapHintEl) mapHintEl.style.display = "block";
- }
-
- if (clearUniBtn) clearUniBtn.addEventListener("click", () => {
- clearUniversityFilter();
- });
-
- if (applyMapSearchBtn) {
- applyMapSearchBtn.addEventListener("click", () => {
- // If picked uni exists, use it. Otherwise just jump with current search inputs.
- if (pickedUniversityName && keywordInput) {
- keywordInput.value = pickedUniversityName;
- }
- closeSuggest();
- applyFilterAndJump();
- });
- }
+ // =========================
+ // Map: Overpass (all universities) + list large + "この大学で検索"
+ // =========================
+ let map = null;
+ let markersLayer = null;
+ let universitiesCache = []; // {name, website, lat, lon}
 
  function initMap() {
+ const mapEl = document.getElementById("map");
  if (!mapEl || !window.L) return;
 
- if (mapStatusEl) mapStatusEl.textContent = "準備中…";
-
- const huMap = L.map("huMap", { scrollWheelZoom: false });
- huMap.setView([47.1625, 19.5033], 7);
+ map = L.map("map", { scrollWheelZoom: false }).setView([47.1625, 19.5033], 7);
 
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+ maxZoom: 19,
  attribution: "&copy; OpenStreetMap contributors",
- maxZoom: 18,
- }).addTo(huMap);
+ }).addTo(map);
 
- const byCity = groupByCity(universities);
+ markersLayer = L.layerGroup().addTo(map);
 
- let cityCount = 0;
- byCity.forEach((list, city) => {
- const c = cityCoords[city];
- if (!c) return;
-
- const marker = L.circleMarker([c.lat, c.lng], {
- radius: 8,
- weight: 2,
- fillOpacity: 0.7,
- }).addTo(huMap);
-
- marker.bindTooltip(`${city}（${list.length}）`, { direction: "top" });
-
- marker.on("mouseover", () => marker.setStyle({ radius: 12, weight: 3, fillOpacity: 0.9 }));
- marker.on("mouseout", () => marker.setStyle({ radius: 8, weight: 2, fillOpacity: 0.7 }));
-
- marker.on("click", () => {
- renderUniversityList(city, list);
- // No auto-search here (list click searches). User asked search button exists too.
- document.getElementById("mapSearch")?.scrollIntoView({ behavior: "smooth", block: "start" });
- });
-
- cityCount++;
- });
-
- if (mapStatusEl) mapStatusEl.textContent = `都市マーカー：${cityCount} / 大学：${universities.length}`;
+ loadUniversitiesFromOverpass();
  }
 
- // ----------------------------
- // Boot
- // ----------------------------
- (async () => {
+ async function loadUniversitiesFromOverpass() {
+ const overpassUrl = "https://overpass-api.de/api/interpreter";
+
+ const query = `
+ [out:json][timeout:30];
+ area["name"="Hungary"]["boundary"="administrative"]["admin_level"="2"]->.a;
+ (
+ node["amenity"="university"](area.a);
+ way["amenity"="university"](area.a);
+ relation["amenity"="university"](area.a);
+ );
+ out center tags;
+ `.trim();
+
  try {
- await Promise.all([loadStudents(), loadConfig()]);
- initMap();
+ const res = await fetch(overpassUrl, {
+ method: "POST",
+ headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
+ body: "data=" + encodeURIComponent(query),
+ });
+
+ if (!res.ok) throw new Error("Overpass error: " + res.status);
+
+ const data = await res.json();
+ const els = data.elements || [];
+
+ universitiesCache = els.map((e) => {
+ const lat = e.lat ?? (e.center && e.center.lat);
+ const lon = e.lon ?? (e.center && e.center.lon);
+ if (typeof lat !== "number" || typeof lon !== "number") return null;
+
+ const tags = e.tags || {};
+ const name = tags.name || tags["name:en"] || "University";
+ const website = tags.website || tags.url || tags["contact:website"] || "";
+ return { name, website, lat, lon };
+ }).filter(Boolean);
+
+ renderMapMarkers(universitiesCache);
+ // 初期は大学一覧は表示しない（クリックしたら出る）
  } catch (e) {
  console.error(e);
- // fallback: still show something
- if (mapStatusEl) mapStatusEl.textContent = "読み込み失敗";
- if (studentListEl) {
- studentListEl.innerHTML = `<div class="card" style="padding:16px">
- <div style="font-weight:950;color:#0f2a5a">読み込みに失敗しました</div>
- <div class="muted" style="font-weight:850; margin-top:6px">students.json / config.json の配置・ファイル名を確認してください。</div>
- </div>`;
  }
+ }
+
+ function renderMapMarkers(list) {
+ if (!markersLayer) return;
+ markersLayer.clearLayers();
+
+ list.forEach((u) => {
+ const marker = L.circleMarker([u.lat, u.lon], {
+ radius: 6,
+ weight: 2,
+ fillOpacity: 0.7,
+ });
+
+ marker.bindPopup(`
+ <strong>${escapeHtml(u.name)}</strong>
+ ${u.website ? `<div style="margin-top:6px;"><a href="${escapeHtml(u.website)}" target="_blank" rel="noopener">公式サイト</a></div>` : ""}
+ <div style="margin-top:10px;">
+ <button type="button" data-map-search="${escapeHtml(u.name)}" style="
+ padding:10px 12px;border-radius:12px;border:1px solid rgba(29,78,216,.22);
+ background:#f3f6ff;font-weight:900;color:#173a8f;cursor:pointer;width:100%;
+ ">この大学で検索</button>
+ </div>
+ `);
+
+ marker.on("popupopen", () => {
+ // popup内ボタンを拾う
+ setTimeout(() => {
+ const btn = document.querySelector(`[data-map-search="${CSS.escape(u.name)}"]`);
+ if (btn) {
+ btn.addEventListener("click", () => {
+ keywordInput.value = u.name;
+ // 検索実行 → 結果へ
+ applyFilter();
+ // 大学一覧も出す（その大学だけを表示）
+ renderUniversityList([u]);
+ });
+ }
+ }, 0);
+ });
+
+ marker.addTo(markersLayer);
+ });
+ }
+
+ function renderUniversityList(list) {
+ if (!universityListEl) return;
+ universityListEl.classList.add("open");
+
+ // clear button (map area) only shown when list is visible
+ let mapClearBtn = document.getElementById("mapClearBtn");
+ if (!mapClearBtn) {
+ mapClearBtn = document.createElement("button");
+ mapClearBtn.id = "mapClearBtn";
+ mapClearBtn.textContent = "検索条件をクリア";
+ mapClearBtn.type = "button";
+ mapClearBtn.addEventListener("click", () => {
+ universityListEl.classList.remove("open");
+ universityListEl.innerHTML = "";
+ clearFilter();
+ });
+ universityListEl.parentNode.insertBefore(mapClearBtn, universityListEl);
+ }
+ mapClearBtn.classList.add("show");
+
+ const panel = document.createElement("div");
+ panel.className = "uni-panel";
+ panel.innerHTML = `
+ <h3>大学一覧</h3>
+ <div id="uniItems"></div>
+ <div class="uni-actions">
+ <button type="button" id="closeUniList">閉じる</button>
+ </div>
+ `;
+
+ universityListEl.innerHTML = "";
+ universityListEl.appendChild(panel);
+
+ const uniItems = panel.querySelector("#uniItems");
+ list.forEach((u) => {
+ const row = document.createElement("div");
+ row.className = "uni-item";
+
+ row.innerHTML = `
+ <div class="uni-name">${escapeHtml(u.name)}</div>
+ <button type="button" class="uni-btn">この大学で検索</button>
+ `;
+
+ row.querySelector(".uni-btn").addEventListener("click", () => {
+ keywordInput.value = u.name;
+ applyFilter();
+ });
+
+ uniItems.appendChild(row);
+ });
+
+ panel.querySelector("#closeUniList").addEventListener("click", () => {
+ universityListEl.classList.remove("open");
+ universityListEl.innerHTML = "";
+ mapClearBtn.classList.remove("show");
+ });
+
+ // 表示されたらそこへスクロール（スマホ向け）
+ universityListEl.scrollIntoView({ behavior: "smooth", block: "start" });
+ }
+
+ // =========================
+ // Bind search buttons
+ // =========================
+ function bindSearchButtons() {
+ if (searchBtn) searchBtn.addEventListener("click", applyFilter);
+ if (clearBtn) clearBtn.addEventListener("click", () => {
+ clearFilter();
+ // 地図側一覧も閉じる
+ if (universityListEl) {
+ universityListEl.classList.remove("open");
+ universityListEl.innerHTML = "";
+ }
+ const mapClearBtn = document.getElementById("mapClearBtn");
+ if (mapClearBtn) mapClearBtn.classList.remove("show");
+ });
+
+ // Enter key triggers search
+ if (keywordInput) {
+ keywordInput.addEventListener("keydown", (e) => {
+ if (e.key === "Enter") {
+ e.preventDefault();
+ applyFilter();
+ }
+ });
+ }
+ }
+
+ // =========================
+ // Boot
+ // =========================
+ (async function boot() {
+ try {
+ // load
+ [STUDENTS, CONFIG] = await Promise.all([
+ loadJson("students.json"),
+ loadJson("config.json")
+ ]);
+
+ buildFilters(STUDENTS);
+ buildSuggestPool(STUDENTS);
+ bindSuggest();
+
+ // initial render students
+ renderStudents(STUDENTS);
+
+ renderContact(CONFIG);
+ bindRecruitForm();
+ bindSearchButtons();
+
+ // map
+ initMap();
+
+ } catch (e) {
+ console.error(e);
+ // fallback render minimal
+ renderNoResults();
  }
  })();
 });

@@ -1,18 +1,15 @@
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
- // =========================
- // Mini TOC (right-top)
- // =========================
+ // ----------------------------
+ // Mini TOC
+ // ----------------------------
  const tocToggle = document.getElementById("tocToggle");
  const tocPanel = document.getElementById("tocPanel");
-
  if (tocToggle && tocPanel) {
  tocToggle.addEventListener("click", () => {
  const open = tocPanel.classList.toggle("open");
  tocToggle.setAttribute("aria-expanded", String(open));
  });
 
- // close when clicking a link
  tocPanel.querySelectorAll("a").forEach((a) => {
  a.addEventListener("click", () => {
  tocPanel.classList.remove("open");
@@ -20,23 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
  });
  });
 
- // close when clicking outside
  document.addEventListener("click", (e) => {
  const t = e.target;
  if (!t) return;
- if (tocPanel.contains(t) || tocToggle.contains(t)) return;
+ const inside = tocPanel.contains(t) || tocToggle.contains(t);
+ if (!inside) {
  tocPanel.classList.remove("open");
  tocToggle.setAttribute("aria-expanded", "false");
+ }
  });
  }
 
- // =========================
- // DOM refs
- // =========================
+ // ----------------------------
+ // Elements
+ // ----------------------------
  const keywordInput = document.getElementById("keyword");
  const regionFilter = document.getElementById("regionFilter");
  const courseFilter = document.getElementById("courseFilter");
-
  const applySearchBtn = document.getElementById("applySearch");
  const clearSearchBtn = document.getElementById("clearSearch");
 
@@ -45,147 +42,30 @@ document.addEventListener("DOMContentLoaded", () => {
  const studentListEl = document.getElementById("studentList");
  const noResultsEl = document.getElementById("noResults");
 
- // Map (city-based)
+ const contactGrid = document.getElementById("contactGrid");
+ const openFormBtn = document.getElementById("openFormBtn");
+
+ // Map
  const mapEl = document.getElementById("huMap");
  const uniListEl = document.getElementById("uniList");
  const mapHintEl = document.getElementById("mapHint");
+ const mapStatusEl = document.getElementById("mapStatus");
  const clearUniBtn = document.getElementById("clearUniFilter");
+ const applyMapSearchBtn = document.getElementById("applyMapSearch");
+ const pickedUniEl = document.getElementById("pickedUni");
 
- // Map (All universities via Overpass API)
- const allUniMapEl = document.getElementById("map"); // (index.html側にあれば動く)
+ // ----------------------------
+ // Data stores
+ // ----------------------------
+ let students = [];
+ let suggestPool = []; // string suggestions
+ let pickedUniversityName = ""; // selected from map
 
- // =========================
- // Data load
- // =========================
- let STUDENTS = [];
- let CONFIG = null;
-
- async function loadJSON(url) {
- const res = await fetch(url, { cache: "no-store" });
- if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
- return res.json();
- }
-
- async function init() {
- // Load students + config if exists
- try {
- STUDENTS = await loadJSON("students.json");
- } catch (e) {
- console.error(e);
- STUDENTS = [];
- }
-
- try {
- CONFIG = await loadJSON("config.json");
- applyContactConfig(CONFIG);
- } catch (e) {
- // config optional (but you said it exists)
- console.error(e);
- }
-
- buildSuggestIndex(STUDENTS);
- renderStudents(STUDENTS); // initial render (all)
-
- // Wire search actions
- if (applySearchBtn) {
- applySearchBtn.addEventListener("click", () => {
- applySearchAndJump();
- });
- }
-
- if (clearSearchBtn) {
- clearSearchBtn.addEventListener("click", () => {
- clearSearchFields();
- renderStudents(STUDENTS);
- hideNoResults();
- });
- }
-
- // Suggest dropdown (custom)
- if (keywordInput) {
- keywordInput.addEventListener("input", () => showSuggestions(keywordInput.value));
- keywordInput.addEventListener("focus", () => showSuggestions(keywordInput.value));
- keywordInput.addEventListener("blur", () => {
- // wait a bit so click on suggestion works
- setTimeout(() => hideSuggestions(), 120);
- });
- keywordInput.addEventListener("keydown", (e) => {
- // Enter => apply search
- if (e.key === "Enter") {
- e.preventDefault();
- applySearchAndJump();
- }
- });
- }
-
- // Region/course changes should NOT auto filter (you requested button-based)
- // so we do nothing on change.
- // If you still want to hide suggestions on change:
- if (regionFilter) regionFilter.addEventListener("change", () => hideSuggestions());
- if (courseFilter) courseFilter.addEventListener("change", () => hideSuggestions());
-
- // Init map(s)
- initCityMap();
- initAllUniversitiesMap();
- }
-
- // =========================
- // Contact config
- // =========================
- function applyContactConfig(cfg) {
- if (!cfg) return;
-
- // form
- const formBtn = document.getElementById("contactFormBtn");
- if (formBtn && cfg.formUrl) {
- formBtn.href = cfg.formUrl;
- }
-
- // email
- const emailEl = document.getElementById("contactEmail");
- const emailText = document.getElementById("contactEmailText");
- if (emailEl && emailText && cfg.email) {
- emailEl.href = `mailto:${cfg.email}`;
- emailText.textContent = cfg.email;
- }
-
- // socials: expects {label,url} list
- const socials = Array.isArray(cfg.socials) ? cfg.socials : [];
- const map = new Map(socials.map((s) => [String(s.label || "").toLowerCase(), s.url]));
-
- // YouTube
- const yt = map.get("youtube");
- const ytEl = document.getElementById("contactYoutube");
- const ytText = document.getElementById("contactYoutubeText");
- if (ytEl && ytText && yt) {
- ytEl.href = yt;
- ytText.textContent = yt;
- }
-
- // Instagram
- const ig = map.get("instagram");
- const igEl = document.getElementById("contactInstagram");
- const igText = document.getElementById("contactInstagramText");
- if (igEl && igText && ig) {
- igEl.href = ig;
- igText.textContent = ig;
- }
-
- // Facebook
- const fb = map.get("facebook");
- const fbEl = document.getElementById("contactFacebook");
- const fbText = document.getElementById("contactFacebookText");
- if (fbEl && fbText && fb) {
- fbEl.href = fb;
- fbText.textContent = fb;
- }
- }
-
- // =========================
- // Student render
- // =========================
- function escapeHtml(str) {
- return String(str)
+ // ----------------------------
+ // Helpers
+ // ----------------------------
+ function esc(str) {
+ return String(str ?? "")
  .replaceAll("&", "&amp;")
  .replaceAll("<", "&lt;")
  .replaceAll(">", "&gt;")
@@ -193,257 +73,280 @@ document.addEventListener("DOMContentLoaded", () => {
  .replaceAll("'", "&#039;");
  }
 
- function isEnabled(student) {
- return !!student.enabled;
+ function norm(str) {
+ return String(str ?? "").trim().toLowerCase();
+ }
+
+ function scrollToStudents() {
+ document.getElementById("students")?.scrollIntoView({ behavior: "smooth", block: "start" });
+ }
+
+ function showNoResults(show) {
+ if (!noResultsEl) return;
+ noResultsEl.style.display = show ? "block" : "none";
+ }
+
+ function isEnabled(stu) {
+ return !!stu.enabled;
+ }
+
+ function buildSearchText(stu) {
+ const tags = Array.isArray(stu.tags) ? stu.tags.join(" ") : "";
+ const links = Array.isArray(stu.links) ? stu.links.map(l => `${l.label} ${l.url}`).join(" ") : "";
+ const stip = stu?.stipendium?.has ? (stu?.stipendium?.name || "stipendium") : "";
+ return norm([
+ stu.name,
+ stu.region,
+ stu.course,
+ stu.university,
+ stu.major,
+ stu.year,
+ stu.language,
+ stu.meeting,
+ tags,
+ links,
+ stu.bio,
+ stip
+ ].join(" "));
  }
 
  function renderStudents(list) {
  if (!studentListEl) return;
+
  studentListEl.innerHTML = "";
 
- // Only show enabled + disabled (but disabled shows "準備中")
- list.forEach((s) => {
- const disabled = !isEnabled(s);
-
- const article = document.createElement("article");
- article.className = "student-card" + (disabled ? " is-disabled" : "");
- article.dataset.region = s.region || "";
- article.dataset.course = s.course || "";
-
- // stipendium display
- const stipendiumLine = s?.stipendium?.has
- ? `<div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">${escapeHtml(
- s.stipendium.name || "奨学金あり"
- )}</span></div>`
- : `<div class="meta-row"><span class="meta-k">奨学金：</span><span class="meta-v">なし</span></div>`;
-
- // links display (external links)
- const links = Array.isArray(s.links) ? s.links : [];
- const linksHtml =
- links.length > 0
- ? `
- <div class="meta-row">
- <span class="meta-k">外部：</span>
- <span class="meta-v">
- ${links
- .map((l) => {
- const label = escapeHtml(l.label || "リンク");
- const url = escapeHtml(l.url || "#");
- return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">${label}</a>`;
- })
- .join(" / ")}
- </span>
- </div>`
- : `
- <div class="meta-row">
- <span class="meta-k">外部：</span>
- <span class="meta-v">—</span>
- </div>`;
-
- const tags = Array.isArray(s.tags) ? s.tags : [];
- const tagHtml = tags.map((t) => `<span class="hash">${escapeHtml(t)}</span>`).join("");
-
- const bookingBtnHtml = disabled
- ? `<a class="btn disabled" href="#" aria-disabled="true">空き枠を見る（準備中）</a>`
- : `<a class="btn" href="${escapeHtml(
- s.bookingUrl || "#"
- )}" target="_blank" rel="noopener noreferrer">空き枠を見る（6,000円 / 40分）</a>`;
-
- article.innerHTML = `
- <div class="profile-image profile-circle">
- <img src="${escapeHtml(s.avatar || "")}" alt="${escapeHtml(
- s.name || "プロフィール"
- )}のアバター" />
- </div>
-
- <div class="info">
- <h3 class="student-name">${escapeHtml(s.name || "")}</h3>
-
- <div class="profile-meta">
- <div class="meta-row"><span class="meta-k">大学：</span><span class="meta-v">${escapeHtml(
- s.university || ""
- )}</span></div>
- <div class="meta-row"><span class="meta-k">地域：</span><span class="meta-v">${escapeHtml(
- s.region || ""
- )}</span></div>
- <div class="meta-row"><span class="meta-k">専攻：</span><span class="meta-v">${escapeHtml(
- s.major || ""
- )}</span></div>
- <div class="meta-row"><span class="meta-k">学年：</span><span class="meta-v">${escapeHtml(
- s.year || ""
- )}</span></div>
- <div class="meta-row"><span class="meta-k">語学力：</span><span class="meta-v">${escapeHtml(
- s.language || ""
- )}</span></div>
- <div class="meta-row"><span class="meta-k">面談：</span><span class="meta-v">${escapeHtml(
- s.meeting || ""
- )}</span></div>
-
- ${stipendiumLine}
- ${linksHtml}
- </div>
-
- <p class="bio">${escapeHtml(s.bio || "")}</p>
-
- <div class="tagline">
- ${tagHtml}
- </div>
-
- <div class="card-actions">
- ${bookingBtnHtml}
- </div>
-
- ${
- disabled
- ? `<p class="fineprint">※準備が整い次第、予約枠を公開します。</p>`
- : `<p class="fineprint">※面談はZoomで行います。</p>`
+ if (!list.length) {
+ showNoResults(true);
+ return;
  }
+
+ showNoResults(false);
+
+ list.forEach((stu) => {
+ const disabled = !isEnabled(stu);
+ const stipBadge = stu?.stipendium?.has
+ ? `<span class="badgeMini">奨学金：${esc(stu?.stipendium?.name || "取得")}</span>`
+ : "";
+
+ const tagsHtml = (stu.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
+
+ const linksHtml = (stu.links || [])
+ .filter(l => l && l.label && l.url)
+ .map((l) => `<a class="linkPill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`)
+ .join("");
+
+ const bookingBtn = disabled
+ ? `<a class="btn" href="#" aria-disabled="true" onclick="return false;">空き枠を見る（準備中）</a>`
+ : `<a class="btn primary" href="${esc(stu.bookingUrl)}" target="_blank" rel="noopener">空き枠を見る（6,000円 / 40分）</a>`;
+
+ const card = document.createElement("article");
+ card.className = `studentCard${disabled ? " disabled" : ""}`;
+
+ card.innerHTML = `
+ <div class="studentTop">
+ <div class="avatar" aria-label="アバター">
+ <img src="${esc(stu.avatar)}" alt="${esc(stu.name)} のアバター" />
  </div>
+ <div>
+ <p class="studentName">${esc(stu.name)}</p>
+ <p class="studentMeta">${esc(stu.university)} / ${esc(stu.region)} / ${esc(stu.course)}</p>
+ </div>
+ </div>
+
+ ${stipBadge ? `<div>${stipBadge}</div>` : ""}
+
+ <div class="metaBox" aria-label="プロフィール情報">
+ <div class="metaRow"><span class="metaK">大学：</span><span class="metaV">${esc(stu.university)}</span></div>
+ <div class="metaRow"><span class="metaK">地域：</span><span class="metaV">${esc(stu.region)}</span></div>
+ <div class="metaRow"><span class="metaK">専攻：</span><span class="metaV">${esc(stu.major)}</span></div>
+ <div class="metaRow"><span class="metaK">学年：</span><span class="metaV">${esc(stu.year)}</span></div>
+ <div class="metaRow"><span class="metaK">語学：</span><span class="metaV">${esc(stu.language)}</span></div>
+ <div class="metaRow"><span class="metaK">面談：</span><span class="metaV">${esc(stu.meeting)}</span></div>
+ </div>
+
+ <p class="bio">${esc(stu.bio)}</p>
+
+ ${tagsHtml ? `<div class="tags">${tagsHtml}</div>` : ""}
+
+ ${linksHtml ? `<div class="linkList" aria-label="外部リンク">${linksHtml}</div>` : ""}
+
+ ${bookingBtn}
  `;
 
- studentListEl.appendChild(article);
+ studentListEl.appendChild(card);
  });
  }
 
- function hideNoResults() {
- if (noResultsEl) noResultsEl.style.display = "none";
- }
-
- function showNoResults() {
- if (noResultsEl) noResultsEl.style.display = "block";
- }
-
- function applySearchAndJump() {
- const filtered = filterStudentsFromFields();
- if (filtered.length === 0) {
- // hide cards, show no results block
- renderStudents([]); // clears
- showNoResults();
- } else {
- hideNoResults();
- renderStudents(filtered);
- }
-
- // jump to students section
- document.getElementById("students")?.scrollIntoView({ behavior: "smooth", block: "start" });
- }
-
- function clearSearchFields() {
- if (keywordInput) keywordInput.value = "";
- if (regionFilter) regionFilter.value = "";
- if (courseFilter) courseFilter.value = "";
- hideSuggestions();
- }
-
- function filterStudentsFromFields() {
- const kw = (keywordInput?.value || "").trim().toLowerCase();
+ function applyFilterAndJump() {
+ const kw = norm(keywordInput?.value);
  const region = regionFilter?.value || "";
  const course = courseFilter?.value || "";
 
- return STUDENTS.filter((s) => {
- const hay = [
- s.name,
- s.region,
- s.course,
- s.university,
- s.major,
- s.year,
- s.language,
- s.meeting,
- s.bio,
- ...(Array.isArray(s.tags) ? s.tags : []),
- ...(Array.isArray(s.links) ? s.links.map((l) => `${l.label} ${l.url}`) : []),
- s?.stipendium?.has ? s?.stipendium?.name : "",
- ]
- .filter(Boolean)
- .join(" ")
- .toLowerCase();
+ const filtered = students.filter((stu) => {
+ const text = buildSearchText(stu);
 
- const okKw = !kw || hay.includes(kw);
- const okRegion = !region || (s.region || "") === region;
- const okCourse = !course || (s.course || "") === course;
+ const okKw = !kw || text.includes(kw);
+ const okRegion = !region || String(stu.region) === region;
+ const okCourse = !course || String(stu.course) === course;
+
  return okKw && okRegion && okCourse;
  });
+
+ renderStudents(filtered);
+ scrollToStudents();
  }
 
- // =========================
+ function clearSearch() {
+ if (keywordInput) keywordInput.value = "";
+ if (regionFilter) regionFilter.value = "";
+ if (courseFilter) courseFilter.value = "";
+ closeSuggest();
+ renderStudents(students);
+ }
+
+ // ----------------------------
  // Suggest (dropdown)
- // =========================
- let SUGGEST_INDEX = [];
-
- function buildSuggestIndex(students) {
- const set = new Set();
-
- students.forEach((s) => {
- if (!s) return;
- if (s.name) set.add(s.name);
- if (s.region) set.add(s.region);
- if (s.course) set.add(s.course);
- if (s.university) set.add(s.university);
- if (s.major) set.add(s.major);
- if (s.year) set.add(s.year);
-
- (Array.isArray(s.tags) ? s.tags : []).forEach((t) => set.add(t));
- (Array.isArray(s.links) ? s.links : []).forEach((l) => {
- if (l?.label) set.add(l.label);
- });
-
- if (s?.stipendium?.has && s?.stipendium?.name) set.add(s.stipendium.name);
- });
-
- SUGGEST_INDEX = Array.from(set).filter(Boolean);
+ // ----------------------------
+ function openSuggest() {
+ if (!suggestBox) return;
+ suggestBox.classList.add("open");
  }
 
- function hideSuggestions() {
+ function closeSuggest() {
  if (!suggestBox) return;
- suggestBox.style.display = "none";
+ suggestBox.classList.remove("open");
  suggestBox.innerHTML = "";
  }
 
- function showSuggestions(query) {
- if (!suggestBox || !keywordInput) return;
+ function buildSuggestPool(studentsArr) {
+ const set = new Set();
 
- const q = (query || "").trim().toLowerCase();
+ studentsArr.forEach((s) => {
+ if (s.university) set.add(String(s.university));
+ if (s.region) set.add(String(s.region));
+ if (s.course) set.add(String(s.course));
+ if (Array.isArray(s.tags)) s.tags.forEach((t) => set.add(String(t)));
+
+ // links label also can be searched
+ if (Array.isArray(s.links)) s.links.forEach((l) => l?.label && set.add(String(l.label)));
+ });
+
+ // common helpful words
+ ["奨学金", "Stipendium", "スティペンディウム", "出願", "生活費", "住まい", "治安"].forEach((w) => set.add(w));
+
+ return Array.from(set);
+ }
+
+ function renderSuggest(query) {
+ if (!suggestBox) return;
+ const q = norm(query);
  if (!q) {
- hideSuggestions();
+ closeSuggest();
  return;
  }
 
- const hits = SUGGEST_INDEX.filter((s) => String(s).toLowerCase().includes(q)).slice(0, 10);
- if (hits.length === 0) {
- hideSuggestions();
+ const hits = suggestPool
+ .map((s) => ({ raw: s, n: norm(s) }))
+ .filter((x) => x.n.includes(q))
+ .slice(0, 8);
+
+ if (!hits.length) {
+ closeSuggest();
  return;
  }
 
- suggestBox.innerHTML = hits
- .map(
- (h) =>
- `<button type="button" class="suggest-item" data-value="${escapeHtml(h)}">${escapeHtml(
- h
- )}</button>`
- )
- .join("");
-
- suggestBox.style.display = "block";
-
- suggestBox.querySelectorAll(".suggest-item").forEach((btn) => {
- btn.addEventListener("mousedown", (e) => {
- // mousedown so it runs before blur
- e.preventDefault();
- const v = btn.getAttribute("data-value") || "";
- keywordInput.value = v;
- hideSuggestions();
+ suggestBox.innerHTML = "";
+ hits.forEach((h) => {
+ const item = document.createElement("div");
+ item.className = "suggestItem";
+ item.innerHTML = `${esc(h.raw)}<span class="suggestMeta">クリックで入力</span>`;
+ item.addEventListener("click", () => {
+ if (keywordInput) keywordInput.value = h.raw;
+ closeSuggest();
+ keywordInput?.focus();
  });
+ suggestBox.appendChild(item);
  });
+
+ openSuggest();
  }
 
- // =========================
- // City map (your original style)
- // =========================
- function initCityMap() {
- if (!mapEl || !window.L) return;
+ document.addEventListener("click", (e) => {
+ const t = e.target;
+ if (!t) return;
+ const inside = (suggestBox && suggestBox.contains(t)) || (keywordInput && keywordInput.contains(t));
+ if (!inside) closeSuggest();
+ });
 
- // city coords
+ if (keywordInput) {
+ keywordInput.addEventListener("input", () => renderSuggest(keywordInput.value));
+ keywordInput.addEventListener("focus", () => renderSuggest(keywordInput.value));
+ }
+
+ // ----------------------------
+ // Load JSON
+ // ----------------------------
+ async function loadStudents() {
+ const res = await fetch("students.json", { cache: "no-store" });
+ if (!res.ok) throw new Error("students.json が読み込めません: " + res.status);
+ const data = await res.json();
+ if (!Array.isArray(data)) throw new Error("students.json の形式が不正です（配列にしてください）");
+ students = data;
+ suggestPool = buildSuggestPool(students);
+ renderStudents(students);
+ }
+
+ async function loadConfig() {
+ const res = await fetch("config.json", { cache: "no-store" });
+ if (!res.ok) throw new Error("config.json が読み込めません: " + res.status);
+ const cfg = await res.json();
+
+ // Form
+ if (openFormBtn) {
+ openFormBtn.href = cfg.formUrl || "#";
+ }
+
+ // Contact grid
+ if (contactGrid) {
+ contactGrid.innerHTML = "";
+
+ // Email
+ const email = cfg.email || "";
+ const emailCard = document.createElement("a");
+ emailCard.className = "contactItem";
+ emailCard.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
+ emailCard.innerHTML = `
+ <div class="contactK">メール</div>
+ <div class="contactV">${esc(email || "設定中")}</div>
+ `;
+ contactGrid.appendChild(emailCard);
+
+ // Socials
+ const socials = Array.isArray(cfg.socials) ? cfg.socials : [];
+ socials.forEach((s) => {
+ const a = document.createElement("a");
+ a.className = "contactItem";
+ a.href = s.url || "#";
+ a.target = "_blank";
+ a.rel = "noopener";
+ a.innerHTML = `
+ <div class="contactK">${esc(s.label || "SNS")}</div>
+ <div class="contactV">${esc(s.url || "設定中")}</div>
+ `;
+ contactGrid.appendChild(a);
+ });
+ }
+ }
+
+ // ----------------------------
+ // Search Buttons
+ // ----------------------------
+ if (applySearchBtn) applySearchBtn.addEventListener("click", applyFilterAndJump);
+ if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
+
+ // ----------------------------
+ // Map (Leaflet) - city markers + university list
+ // ----------------------------
  const cityCoords = {
  "ブダペスト": { lat: 47.4979, lng: 19.0402 },
  "デブレツェン": { lat: 47.5316, lng: 21.6273 },
@@ -463,7 +366,6 @@ document.addEventListener("DOMContentLoaded", () => {
  "バヤ": { lat: 46.1803, lng: 18.9567 },
  };
 
- // universities by city (same list as you gave earlier)
  const universities = [
  // Budapest
  { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
@@ -517,56 +419,81 @@ document.addEventListener("DOMContentLoaded", () => {
  return map;
  }
 
+ function setPickedUniversity(name) {
+ pickedUniversityName = name || "";
+ if (pickedUniEl) pickedUniEl.textContent = pickedUniversityName || "未選択";
+ }
+
  function renderUniversityList(city, list) {
  if (!uniListEl) return;
  if (mapHintEl) mapHintEl.style.display = "none";
+
  uniListEl.innerHTML = "";
 
- const wrap = document.createElement("div");
- wrap.className = "uni-item";
+ const group = document.createElement("div");
+ group.className = "uniGroup";
 
- const cityEl = document.createElement("div");
- cityEl.className = "uni-city";
- cityEl.textContent = `${city}（${list.length}校）`;
- wrap.appendChild(cityEl);
+ const head = document.createElement("div");
+ head.className = "uniCity";
+ head.textContent = `${city}（${list.length}校）`;
+ group.appendChild(head);
 
  list.forEach((u) => {
  const btn = document.createElement("button");
  btn.type = "button";
- btn.className = "uni-btn";
+ btn.className = "uniBtn";
  btn.textContent = u.name;
 
  btn.addEventListener("click", () => {
- // put into keyword + apply search + jump
+ setPickedUniversity(u.name);
  if (keywordInput) keywordInput.value = u.name;
- hideSuggestions();
- applySearchAndJump();
+ closeSuggest();
+ applyFilterAndJump(); // click university -> immediately search & jump
  });
 
- wrap.appendChild(btn);
+ group.appendChild(btn);
  });
 
- uniListEl.appendChild(wrap);
+ uniListEl.appendChild(group);
  }
 
  function clearUniversityFilter() {
- if (keywordInput) keywordInput.value = "";
- hideSuggestions();
+ setPickedUniversity("");
  if (uniListEl) uniListEl.innerHTML = "";
  if (mapHintEl) mapHintEl.style.display = "block";
  }
 
- if (clearUniBtn) clearUniBtn.addEventListener("click", clearUniversityFilter);
+ if (clearUniBtn) clearUniBtn.addEventListener("click", () => {
+ clearUniversityFilter();
+ });
+
+ if (applyMapSearchBtn) {
+ applyMapSearchBtn.addEventListener("click", () => {
+ // If picked uni exists, use it. Otherwise just jump with current search inputs.
+ if (pickedUniversityName && keywordInput) {
+ keywordInput.value = pickedUniversityName;
+ }
+ closeSuggest();
+ applyFilterAndJump();
+ });
+ }
+
+ function initMap() {
+ if (!mapEl || !window.L) return;
+
+ if (mapStatusEl) mapStatusEl.textContent = "準備中…";
 
  const huMap = L.map("huMap", { scrollWheelZoom: false });
  huMap.setView([47.1625, 19.5033], 7);
 
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
  attribution: "&copy; OpenStreetMap contributors",
+ maxZoom: 18,
  }).addTo(huMap);
 
  const byCity = groupByCity(universities);
 
+ let cityCount = 0;
  byCity.forEach((list, city) => {
  const c = cityCoords[city];
  if (!c) return;
@@ -584,101 +511,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
  marker.on("click", () => {
  renderUniversityList(city, list);
+ // No auto-search here (list click searches). User asked search button exists too.
+ document.getElementById("mapSearch")?.scrollIntoView({ behavior: "smooth", block: "start" });
  });
+
+ cityCount++;
  });
+
+ if (mapStatusEl) mapStatusEl.textContent = `都市マーカー：${cityCount} / 大学：${universities.length}`;
  }
 
- // =========================
- // All universities map (Overpass) - optional
- // =========================
- async function initAllUniversitiesMap() {
- // This block only runs if index.html has a #map element.
- if (!allUniMapEl || !window.L) return;
-
- const mapStatus = document.getElementById("mapStatus");
- const overpassUrl = "https://overpass-api.de/api/interpreter";
-
- const map = L.map("map", { scrollWheelZoom: false }).setView([47.1625, 19.5033], 7);
-
- L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
- maxZoom: 19,
- attribution: "&copy; OpenStreetMap contributors",
- }).addTo(map);
-
- // If MarkerCluster is available, use it.
- const hasCluster = !!L.markerClusterGroup;
- const cluster = hasCluster
- ? L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 44 })
- : null;
-
- if (cluster) map.addLayer(cluster);
-
- const query = `
-[out:json][timeout:30];
-area["name"="Hungary"]["boundary"="administrative"]["admin_level"="2"]->.a;
-(
- node["amenity"="university"](area.a);
- way["amenity"="university"](area.a);
- relation["amenity"="university"](area.a);
-);
-out center tags;
-`.trim();
-
+ // ----------------------------
+ // Boot
+ // ----------------------------
+ (async () => {
  try {
- if (mapStatus) mapStatus.textContent = "大学データ取得中…";
-
- const res = await fetch(overpassUrl, {
- method: "POST",
- headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
- body: "data=" + encodeURIComponent(query),
- });
-
- if (!res.ok) throw new Error("Overpass error: " + res.status);
-
- const data = await res.json();
- const els = data.elements || [];
-
- let count = 0;
-
- els.forEach((e) => {
- const lat = e.lat ?? (e.center && e.center.lat);
- const lon = e.lon ?? (e.center && e.center.lon);
- if (typeof lat !== "number" || typeof lon !== "number") return;
-
- const name = (e.tags && (e.tags.name || e.tags["name:en"])) || "University (no name)";
- const website = e.tags && (e.tags.website || e.tags.url || e.tags["contact:website"]);
- const city = e.tags && (e.tags["addr:city"] || e.tags["is_in:city"] || e.tags["addr:suburb"]);
-
- const lines = [];
- lines.push(`<strong>${escapeHtml(name)}</strong>`);
- if (city)
- lines.push(`<div style="margin-top:6px;font-weight:800;color:#475569">City: ${escapeHtml(city)}</div>`);
- if (website)
- lines.push(
- `<div style="margin-top:6px"><a href="${escapeHtml(
- website
- )}" target="_blank" rel="noopener">Website</a></div>`
- );
-
- const marker = L.marker([lat, lon]).bindPopup(lines.join(""));
-
- if (cluster) {
- cluster.addLayer(marker);
- } else {
- marker.addTo(map);
- }
- count++;
- });
-
- if (mapStatus) mapStatus.textContent = `表示中：${count.toLocaleString()} 校`;
- } catch (err) {
- console.error(err);
- if (mapStatus) mapStatus.textContent = "読み込み失敗（時間を置いて再読み込みしてください）";
+ await Promise.all([loadStudents(), loadConfig()]);
+ initMap();
+ } catch (e) {
+ console.error(e);
+ // fallback: still show something
+ if (mapStatusEl) mapStatusEl.textContent = "読み込み失敗";
+ if (studentListEl) {
+ studentListEl.innerHTML = `<div class="card" style="padding:16px">
+ <div style="font-weight:950;color:#0f2a5a">読み込みに失敗しました</div>
+ <div class="muted" style="font-weight:850; margin-top:6px">students.json / config.json の配置・ファイル名を確認してください。</div>
+ </div>`;
  }
  }
-
- // =========================
- // Kick off
- // =========================
- init();
+ })();
 });

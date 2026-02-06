@@ -26,33 +26,27 @@
  <nav class="tocPanel" id="tocPanel" aria-label="目次">
  <a href="#service">サービス内容</a>
  <a href="#flow">相談の流れ</a>
-
  <a href="#basics-cards">全体像</a>
- <div class="sub">
- <a href="#basics-cards">1. ハンガリーについて</a>
- <a href="#basics-cards">2. 大学の探し方</a>
- <a href="#basics-cards">3. 奨学金（スティペンディウム・ハンガリカム）</a>
- </div>
-
  <a href="#search">現役生を探す</a>
  <a href="#mapSearch">地図から探す</a>
  <a href="#students">現役生一覧</a>
  <a href="#faq">FAQ</a>
  <a href="#recruit">現役生募集中</a>
  <a href="#contact">お問い合わせ</a>
+ <a href="#sns">SNS・外部リンク</a>
  </nav>
  </div>
 
  <div class="container">
- <!-- 0. Header -->
+ <!-- Header -->
  <header class="card heroHeader" id="top">
  <div class="heroBg" aria-hidden="true"></div>
 
  <div class="headerRow">
- <!-- Dummy logo (replace with <img> later) -->
+ <!-- Dummy logo -->
  <div class="logoBox" aria-label="ロゴ（ダミー）">
  <span>HU</span>
- <!-- <img src="logo.png" alt="ロゴ"> -->
+ <!-- <img src="assets/logo.png" alt="ロゴ"> -->
  </div>
 
  <div class="headerText">
@@ -64,9 +58,9 @@
  </div>
  </header>
 
- <!-- 1. Service content -->
+ <!-- Service -->
  <section class="section" id="service">
- <h2>サービス内容</h2>
+ <h2 class="secTitle">サービス内容</h2>
 
  <div class="grid3">
  <div class="infoCard">
@@ -109,9 +103,9 @@
  </div>
  </section>
 
- <!-- 2. Flow -->
+ <!-- Flow -->
  <section class="section" id="flow">
- <h2>相談の流れ（かんたん3ステップ）</h2>
+ <h2 class="secTitle">相談の流れ（かんたん3ステップ）</h2>
  <div class="grid3 flowWrap">
  <div class="stepCard">
  <div class="stepTop"><span class="stepNum">1</span>現役生を探す</div>
@@ -128,19 +122,21 @@
  </div>
  </section>
 
- <!-- 3. Basics cards -->
+ <!-- Basics cards -->
  <section class="section" id="basics-cards">
- <h2>全体像（3つの入口）</h2>
+ <h2 class="secTitle">全体像（3つの入口）</h2>
  <p class="basicsIntro">
  詳細は別ページでまとめています。気になるところから読んでください。
  </p>
 
  <div class="grid3 basicsGrid">
  <article class="basicCard">
- <div class="imgPh" aria-label="画像ダミー（後で差し替え）"><small>Hungary</small></div>
+ <div class="basicImgWrap" aria-label="画像ダミー（後で差し替え）">
+ <img class="basicImg" src="https://placehold.co/1200x700/png?text=Hungary" alt="ハンガリーについて（ダミー画像）" />
+ </div>
  <div class="basicBody">
- <h3 class="basicTitle">1. ハンガリーについて</h3>
- <p class="basicKicker">国の雰囲気・暮らしの前提</p>
+ <h3 class="basicTitle">生活・費用・治安・英語</h3>
+ <p class="basicKicker">ハンガリーについて</p>
  <p class="basicDesc">生活感・費用感・治安・英語など、まず押さえるポイントを整理。</p>
  <div class="basicFooter">
  <a class="btn" href="basics-hungary.html">詳細を見る</a>
@@ -149,10 +145,12 @@
  </article>
 
  <article class="basicCard">
- <div class="imgPh" aria-label="画像ダミー（後で差し替え）"><small>Programs</small></div>
+ <div class="basicImgWrap" aria-label="画像ダミー（後で差し替え）">
+ <img class="basicImg" src="https://placehold.co/1200x700/png?text=University" alt="大学の探し方（ダミー画像）" />
+ </div>
  <div class="basicBody">
- <h3 class="basicTitle">2. 大学の探し方</h3>
- <p class="basicKicker">自分に合う専攻の見つけ方</p>
+ <h3 class="basicTitle">専攻・比較・公式情報</h3>
+ <p class="basicKicker">大学の探し方</p>
  <p class="basicDesc">探し方の手順・公式情報の見方・英語要件のチェックポイント。</p>
  <div class="basicFooter">
  <a class="btn" href="basics-university.html">詳細を見る</a>
@@ -161,10 +159,12 @@
  </article>
 
  <article class="basicCard">
- <div class="imgPh" aria-label="画像ダミー（後で差し替え）"><small>Scholarship</small></div>
+ <div class="basicImgWrap" aria-label="画像ダミー（後で差し替え）">
+ <img class="basicImg" src="https://placehold.co/1200x700/png?text=Scholarship" alt="奨学金（ダミー画像）" />
+ </div>
  <div class="basicBody">
- <h3 class="basicTitle">3. 奨学金（スティペンディウム・ハンガリカム）</h3>
- <p class="basicKicker">制度の概要と応募の流れ</p>
+ <h3 class="basicTitle">スティペンディウム・ハンガリカム</h3>
+ <p class="basicKicker">奨学金</p>
  <p class="basicDesc">何がカバーされるか／難易度／応募プロセスの全体像を整理。</p>
  <div class="basicFooter">
  <a class="btn" href="basics-scholarship.html">詳細を見る</a>
@@ -174,20 +174,16 @@
  </div>
  </section>
 
- <!-- 4. Search -->
+ <!-- Search -->
  <section class="section" id="search">
- <h2>現役生を探す</h2>
+ <h2 class="secTitle">現役生を探す</h2>
 
  <div class="card searchBox">
- <p class="muted searchLead">
- students.json をもとに候補（サジェスト）が出ます。
- </p>
-
- <!-- 指定レイアウト：1段目キーワード / 2段目(地域+分野) / 3段目(検索+クリア) -->
- <div class="searchLayout" aria-label="検索フォーム">
- <div class="searchRow searchRow1">
- <div class="suggestWrap">
+ <!-- row 1 -->
+ <div class="searchRow">
  <label class="srOnly" for="keyword">大学名・地域・キーワード</label>
+ <div class="suggestWrap">
+ <div class="searchLabel">大学名・地域・キーワード</div>
  <input
  id="keyword"
  type="text"
@@ -198,7 +194,9 @@
  </div>
  </div>
 
- <div class="searchRow searchRow2">
+ <!-- row 2 -->
+ <div class="searchRow twoColsRow">
+ <div>
  <select id="regionFilter" aria-label="地域">
  <option value="">地域指定なし</option>
  <option value="ブダペスト">ブダペスト</option>
@@ -209,7 +207,9 @@
  <option value="ヴェスプレーム">ヴェスプレーム</option>
  <option value="ショプロン">ショプロン</option>
  </select>
+ </div>
 
+ <div>
  <select id="courseFilter" aria-label="分野">
  <option value="">分野指定なし</option>
  <option value="医学部">医学部</option>
@@ -220,45 +220,43 @@
  <option value="経営">経営</option>
  </select>
  </div>
+ </div>
 
- <div class="searchRow searchRow3">
+ <!-- row 3 -->
+ <div class="searchRow centerActions">
  <button class="btn primary" id="applySearch" type="button">検索</button>
  <button class="btn" id="clearSearch" type="button">条件クリア</button>
  </div>
  </div>
- </div>
  </section>
 
- <!-- 5. Map Search -->
+ <!-- Map Search -->
  <section class="section" id="mapSearch">
- <h2>地図から大学を探す</h2>
+ <h2 class="secTitle">地図から大学を探す</h2>
  <p class="muted">
- 都市をクリック → その都市の大学一覧が出ます。大学をクリックすると、そのまま「検索→現役生一覧」へ移動します。<br />
- 地図の「検索する」ボタンでも同じ動きになります。
+ 都市をクリック → その都市の大学一覧が出ます。大学名をクリックすると、そのまま現役生一覧へ絞り込み＆移動します。
  </p>
 
  <div class="mapLayout">
  <div class="mapCard">
  <div id="huMap" class="huMap" aria-label="Hungary map"></div>
+
  <div class="mapBar">
  <div class="mapLeft">
- <span class="pill">地図：都市→大学一覧</span>
+ <span class="pill">都市：<span id="mapCityCount">-</span> / 大学：<span id="mapUniCount">-</span></span>
  <span id="mapStatus" class="mapStatus">読み込み中…</span>
  </div>
+
  <div class="mapRight">
  <button class="btn primary" id="applyMapSearch" type="button">検索する</button>
- <!-- クリアは大学一覧が出た時だけ表示（JSで制御） -->
- <button class="btn" id="clearUniFilter" type="button" style="display:none;">検索条件をクリア</button>
+ <button class="btn isHidden" id="clearUniFilter" type="button">検索条件をクリア</button>
  </div>
  </div>
  </div>
 
  <aside class="card mapResults">
- <div class="mapResultsHead">
  <h3 class="mapResultsTitle">大学一覧</h3>
  <div id="mapHint" class="mapHint">地図上の都市をクリックしてください</div>
- </div>
-
  <div id="uniList" class="uniList"></div>
 
  <div class="mapPicked">
@@ -270,9 +268,9 @@
  </div>
  </section>
 
- <!-- 6. Students -->
+ <!-- Students -->
  <section class="section" id="students">
- <h2>現役生一覧（順次追加予定）</h2>
+ <h2 class="secTitle">現役生一覧（順次追加予定）</h2>
 
  <div id="noResults" class="card emptyCard" style="display:none;">
  <h3 class="emptyTitle">現在、該当する現役生が見つかりませんでした。</h3>
@@ -280,17 +278,14 @@
  現役生は順次追加予定です。<br />
  現役生として参加したい方は <a href="#recruit" class="inlineLink">現役生募集中</a> をご確認ください。
  </p>
- <div class="emptyActions">
- <a class="btn primary" href="#recruit">現役生募集中へ</a>
- </div>
  </div>
 
  <div id="studentList" class="studentList" aria-label="現役生一覧"></div>
  </section>
 
- <!-- 7. FAQ -->
+ <!-- FAQ -->
  <section class="section" id="faq">
- <h2>よくある質問（FAQ）</h2>
+ <h2 class="secTitle">よくある質問（FAQ）</h2>
 
  <div class="faqCard">
  <details>
@@ -303,93 +298,114 @@
  <details>
  <summary>どんな相談ができますか？</summary>
  <p>
- 生活費・家探し・大学の雰囲気・授業や試験の実際・現地の治安・出願の進め方（体験談）などが多いです。
+ 生活費・住まい・大学の雰囲気・授業や試験の実際・治安・出願の進め方（体験談）などが多いです。
  </p>
  </details>
 
  <details>
  <summary>支払い方法は？</summary>
  <p>
- 予約ページ（Calendly 等）側の案内に従ってください。今後は決済一体化を検討しています。
+ β期間は予約ページ（Calendly 等）側の案内に従ってください。今後は決済一体化を検討しています。
  </p>
  </details>
  </div>
  </section>
 
- <!-- 8. Recruit -->
+ <!-- Recruit -->
  <section class="section" id="recruit">
- <h2>現役生募集中</h2>
+ <h2 class="secTitle">現役生募集中</h2>
 
  <div class="card simpleCard">
  <p class="recruitLead">
- 現役生を積極的に募集しております！！<br />
- ご興味ある方は、申し込みフォームからご連絡ください。こちらから折り返しご案内いたします。
+ 現役生を積極的に募集しております。<br />
+ 「大学の情報を必要としている人に、経験ベースでリアルを共有したい」方は、ぜひご参加ください。
  </p>
 
  <div class="ctaRow">
  <button class="btn primary" id="openRecruitForm" type="button">申し込みフォームへ</button>
  </div>
 
- <!-- ページ内フォーム：押したら展開（JSで表示切替） -->
- <div id="recruitFormWrap" class="recruitFormWrap" style="display:none;" aria-label="現役生 申し込みフォーム">
+ <!-- Accordion form -->
+ <details class="recruitAccordion" id="recruitAccordion">
+ <summary>申し込みフォーム（開く）</summary>
+
  <form id="recruitForm" class="recruitForm" autocomplete="on">
- <div class="formRow">
- <label for="rfName">名前（表示名）</label>
- <input id="rfName" name="name" type="text" required />
- <p class="muted formNote">※ ニックネーム可</p>
+ <div class="formGrid">
+ <div class="field">
+ <label for="rf_name">名前（表示名）※ニックネーム可</label>
+ <input id="rf_name" name="name" type="text" required />
  </div>
 
- <div class="formRow">
- <label for="rfUniversity">大学名</label>
- <input id="rfUniversity" name="university" type="text" required />
+ <div class="field">
+ <label for="rf_uni">大学名</label>
+ <input id="rf_uni" name="university" type="text" required />
  </div>
 
- <div class="formRow">
- <label for="rfYear">学年・課程</label>
- <input id="rfYear" name="year" type="text" required />
+ <div class="field">
+ <label for="rf_year">学年・課程</label>
+ <input id="rf_year" name="year" type="text" required />
  </div>
 
- <div class="formRow">
- <label for="rfEmail">メールアドレス</label>
- <input id="rfEmail" name="email" type="email" required />
- <p class="muted formNote">※ 折り返し連絡用</p>
+ <div class="field">
+ <label for="rf_email">メールアドレス（折り返し連絡用）</label>
+ <input id="rf_email" name="email" type="email" required />
  </div>
 
- <div class="formRow">
- <label for="rfMsg">自由記述（任意）</label>
- <textarea id="rfMsg" name="message" rows="5" placeholder="質問・補足があればご自由にお書きください"></textarea>
+ <div class="field full">
+ <label for="rf_note">自由記述（任意）</label>
+ <textarea
+ id="rf_note"
+ name="note"
+ rows="5"
+ placeholder="質問・補足があればご自由にお書きください"
+ ></textarea>
+ </div>
  </div>
 
- <p class="muted formFoot">
- ※ まずは簡単な情報だけで大丈夫です。内容を確認後、こちらから詳しくご連絡いたします。
- </p>
+ <div class="formHelp">
+ ※ まずは簡単な情報だけで大丈夫です。<br />
+ 内容を確認後、こちらから詳しくご連絡いたします。
+ </div>
 
- <div class="formActions">
+ <div class="ctaRow">
  <button class="btn primary" type="submit">送信（メール下書きを作成）</button>
- <button class="btn" id="closeRecruitForm" type="button">閉じる</button>
  </div>
  </form>
+ </details>
+ </div>
+ </section>
+
+ <!-- Contact (Email only) -->
+ <section class="section" id="contact">
+ <h2 class="secTitle">お問い合わせ</h2>
+
+ <div class="card simpleCard">
+ <p class="muted">お問い合わせはメールで受け付けています。</p>
+
+ <div class="contactOnly">
+ <a class="contactMail" id="contactEmailLink" href="#">
+ <span class="mailIcon" aria-hidden="true"> </span>
+ <span class="mailText" id="contactEmailText">contact@example.com</span>
+ </a>
  </div>
  </div>
  </section>
 
- <!-- 9. Contact -->
- <section class="section" id="contact">
- <h2>お問い合わせ</h2>
+ <!-- SNS / Links -->
+ <section class="section" id="sns">
+ <h2 class="secTitle">SNS・外部リンク</h2>
 
  <div class="card simpleCard">
- <p class="muted">
- メール・SNSのリンクは <code>config.json</code> を差し替えるだけで更新できます。
- </p>
+ <p class="muted">各アイコンをタップすると移動します。</p>
 
- <div class="contactGrid" id="contactGrid" aria-label="連絡先">
+ <div class="snsGrid" id="snsGrid" aria-label="SNSリンク">
  <!-- JS renders from config.json -->
  </div>
  </div>
  </section>
 
  <footer class="footer">
- © 2026 ハンガリー現役大学生に直接聞けるオンライン留学相談
+ ハンガリー現役大学生に直接聞けるオンライン留学相談
  </footer>
  </div>
 

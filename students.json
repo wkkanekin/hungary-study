@@ -2,6 +2,7 @@
 {
 "id": "kaneko",
 "enabled": true,
+"featured": true,
 "name": "カネコ（30代）",
 "region": "ブダペスト",
 "course": "経営",
@@ -9,38 +10,20 @@
 "major": "Tourism Management（修士）",
 "year": "修士1年",
 "language": "CEFR C1（英語）",
-"meeting": "Zoomのみ",
+"meeting": "Zoom",
 "stipendium": {
 "has": true,
 "name": "スティペンディウム・ハンガリカム"
 },
-"bio": "日本で大学を卒業後、外資系製薬会社に勤務。その後、社会人留学としてハンガリー大学院へ進学。準備期間・費用感・現地生活・学業との両立など、実体験ベースでお話しできます。",
-"tags": [
-"#社会人留学",
-"#英語学習",
-"#キャリアチェンジ",
-"#ブダペスト生活"
-],
-"links": [
-{
-"label": "大学公式サイト",
-"url": "https://www.bge.hu/"
-},
-{
-"label": "YouTubeインタビュー",
-"url": "https://youtube.com/xxxx"
-},
-{
-"label": "note",
-"url": "https://note.com/xxxx"
-}
-],
-"avatar": "https://placehold.co/520x520/png?text=Kaneko",
-"bookingUrl": "https://calendly.com/..."
+"bio": "日本で大学を卒業後、外資系製薬会社で勤務。その後キャリアチェンジを決断し、ハンガリー大学院へ進学。社会人留学の準備、費用感、現地生活のリアルを経験ベースで共有できます。",
+"tags": ["社会人留学", "奨学金", "ブダペスト生活", "英語留学"],
+"avatar": "https://placehold.co/600x600/png?text=Kaneko",
+"bookingUrl": "https://calendly.com/xxxx"
 },
 {
 "id": "airi",
-"enabled": false,
+"enabled": true,
+"featured": true,
 "name": "アイリ（20代）",
 "region": "ブダペスト",
 "course": "社会系",
@@ -48,72 +31,35 @@
 "major": "Psychology（学士）",
 "year": "学士3年",
 "language": "CEFR C1（英語）",
-"meeting": "Zoomのみ",
+"meeting": "Zoom",
 "stipendium": {
 "has": false,
 "name": ""
 },
-"bio": "高校卒業後すぐに単身でハンガリーへ。情報や人脈がない中で苦労した経験から、これから挑戦する人が孤立しないための情報共有を大切にしています。",
-"tags": [
-"#単身留学",
-"#ELTE",
-"#現地生活",
-"#メンタル"
-],
-"links": [
-{
-"label": "大学公式サイト",
-"url": "https://www.elte.hu/en/"
-},
-{
-"label": "YouTubeインタビュー",
-"url": "https://youtube.com/xxxx"
-},
-{
-"label": "note",
-"url": "https://note.com/xxxx"
-}
-],
-"avatar": "https://placehold.co/520x520/png?text=Airi",
-"bookingUrl": "#"
+"bio": "高校卒業後すぐに単身でハンガリーへ。情報ゼロから準備した経験をもとに、学部進学・生活立ち上げ・不安の乗り越え方をリアルに話せます。",
+"tags": ["学部留学", "ELTE", "単身渡航", "現地生活"],
+"avatar": "https://placehold.co/600x600/png?text=Airi",
+"bookingUrl": "https://calendly.com/xxxx"
 },
 {
 "id": "kenta",
 "enabled": false,
+"featured": false,
 "name": "ケンタ（20代）",
 "region": "セゲド",
 "course": "医学部",
 "university": "University of Szeged",
-"major": "Medicine（学士/MD）",
+"major": "Medicine（MD）",
 "year": "学士4年",
 "language": "CEFR B2（英語）",
-"meeting": "Zoomのみ",
+"meeting": "Zoom",
 "stipendium": {
 "has": false,
 "name": ""
 },
-"bio": "医学部の勉強量や試験の厳しさ、日々の学習ルーティン、生活費の実態など、継続してやり切る視点でリアルを共有できます。",
-"tags": [
-"#医学部",
-"#セゲド",
-"#試験対策",
-"#生活費"
-],
-"links": [
-{
-"label": "大学公式サイト",
-"url": "https://u-szeged.hu/english"
-},
-{
-"label": "YouTubeインタビュー",
-"url": "https://youtube.com/xxxx"
-},
-{
-"label": "note",
-"url": "https://note.com/xxxx"
-}
-],
-"avatar": "https://placehold.co/520x520/png?text=Kenta",
+"bio": "医学部の勉強量・試験対策・日々の生活リズムなど、継続の大変さとリアルを共有できます。",
+"tags": ["医学部", "セゲド", "試験対策"],
+"avatar": "https://placehold.co/600x600/png?text=Kenta",
 "bookingUrl": "#"
 }
 ]

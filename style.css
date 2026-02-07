@@ -721,3 +721,30 @@ hr.sep{
   margin-top: 0 !important;
   transform: none !important;
 }
+
+/* ===== 全体像3カード：画像エリアを抑える（本命） ===== */
+.basicCard{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 画像エリア（ダミー含む） */
+.basicCard .cardMedia{
+  height: clamp(140px, 14vw, 200px); /* PCでもデカくならない */
+  flex-shrink: 0;
+}
+
+/* ダミー文字の見た目調整 */
+.basicCard .cardMedia .dummy{
+  font-size: clamp(32px, 4vw, 56px); /* 文字が暴れない */
+  letter-spacing: .06em;
+}
+
+/* 文字エリアは必ず下・白背景 */
+.basicCard .cardPad{
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+

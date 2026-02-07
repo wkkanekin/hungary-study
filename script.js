@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================================================
   const tocToggle = $("tocToggle");
   const tocPanel = $("tocPanel");
+
   if (tocToggle && tocPanel) {
-    const close = () => {
+    const closeToc = () => {
       tocPanel.classList.remove("open");
       tocToggle.setAttribute("aria-expanded", "false");
     };
@@ -37,54 +38,55 @@ document.addEventListener("DOMContentLoaded", () => {
       tocToggle.setAttribute("aria-expanded", String(open));
     });
 
-    tocPanel.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
+    tocPanel.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => closeToc());
+    });
 
     document.addEventListener("click", (e) => {
       const t = e.target;
       if (!t) return;
-      if (!tocPanel.contains(t) && !tocToggle.contains(t)) close();
+      const inside = tocPanel.contains(t) || tocToggle.contains(t);
+      if (!inside) closeToc();
     });
   }
 
   // =========================================================
-  // 2) Elements (Search)
+  // 2) Elements (Search / Students)
   // =========================================================
   const keywordInput = $("keyword");
   const regionFilter = $("regionFilter");
   const courseFilter = $("courseFilter");
   const applySearchBtn = $("applySearch");
   const clearSearchBtn = $("clearSearch");
+
   const suggestBox = $("suggestBox");
 
-  // =========================================================
-  // 3) Elements (Students)
-  // =========================================================
   const studentListEl = $("studentList");
-  const studentListTitleEl = $("studentListTitle");
   const noResultsEl = $("noResults");
-  const goTopSearchBtn = $("goTopSearch");
 
   // =========================================================
-  // 4) Elements (Contact / Social)
+  // 3) Elements (Contact / SNS)
   // =========================================================
-  const contactGrid = $("contactGrid");
-  const socialGrid = $("socialGrid");
+  const contactGrid = $("contactGrid"); // email only
+  const snsGrid = $("snsGrid"); // socials
 
   // =========================================================
-  // 5) Elements (Map)
+  // 4) Elements (Map)
   // =========================================================
   const mapEl = $("huMap");
   const uniListEl = $("uniList");
   const mapHintEl = $("mapHint");
   const mapStatusEl = $("mapStatus");
+
   const clearUniBtn = $("clearUniFilter");
   const applyMapSearchBtn = $("applyMapSearch");
   const pickedUniEl = $("pickedUni");
 
   // =========================================================
-  // 6) Elements (Recruit inline form)
+  // 5) Elements (Recruit inline form)
   // =========================================================
   const recruitOpenBtn = $("recruitOpenBtn");
+  const recruitCloseBtn = $("recruitCloseBtn");
   const recruitFormWrap = $("recruitFormWrap");
   const recruitName = $("recruitName");
   const recruitUniversity = $("recruitUniversity");
@@ -93,165 +95,260 @@ document.addEventListener("DOMContentLoaded", () => {
   const recruitNote = $("recruitNote");
   const recruitSendBtn = $("recruitSendBtn");
   const recruitMsg = $("recruitMsg");
-  const closeRecruitFormBtn = $("closeRecruitForm");
 
   // =========================================================
-  // Data
+  // 6) Data stores
   // =========================================================
   let students = [];
-  let config = null;
   let suggestPool = [];
+  let config = null;
+
   let pickedUniversityName = "";
+  let hasSearched = false; // 初期は検索していない（注目2名だけ）
 
   // =========================================================
-  // Icons
+  // 7) Build search text
   // =========================================================
-  const iconSvg = (name) => {
-    const n = norm(name);
-    if (n.includes("youtube"))
-      return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M21.6 7.2c-.2-1.1-.9-2-2-2.2C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.6.4c-1.1.2-1.8 1.1-2 2.2C2 9 2 12 2 12s0 3 .4 4.8c.2 1.1.9 2 2 2.2 1.8.4 7.6.4 7.6.4s5.8 0 7.6-.4c1.1-.2 1.8-1.1 2-2.2.4-1.8.4-4.8.4-4.8s0-3-.4-4.8z"></path><path d="M10 15.5v-7l6 3.5-6 3.5z" fill="white"></path></svg>`;
-    if (n.includes("instagram"))
-      return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"></path><path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path><path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path></svg>`;
-    if (n === "x" || n.includes("twitter"))
-      return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.5L6.2 22H3l7.3-8.4L1 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"></path></svg>`;
-    if (n.includes("note"))
-      return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 4h12v16H6V4zm2 2v12h8V6H8z"></path></svg>`;
-    if (n.includes("facebook"))
-      return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2-2H17V2.2C16.5 2.1 15.3 2 14 2c-2.8 0-5 1.7-5 5v3H6v4h3v8h4z"></path></svg>`;
-    // email default
-    return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>`;
+  const buildSearchText = (stu) => {
+    const tags = Array.isArray(stu.tags) ? stu.tags.join(" ") : "";
+    const links = Array.isArray(stu.links)
+      ? stu.links.map((l) => `${l?.label ?? ""} ${l?.url ?? ""}`).join(" ")
+      : "";
+    const stip = stu?.stipendium?.has ? stu?.stipendium?.name || "stipendium" : "";
+
+    return norm(
+      [
+        stu.name,
+        stu.region,
+        stu.course,
+        stu.university,
+        stu.major,
+        stu.year,
+        stu.ageDecade,
+        stu.language,
+        stu.meeting,
+        tags,
+        links,
+        stu.bio,
+        stip,
+      ].join(" ")
+    );
+  };
+
+  const isEnabled = (stu) => !!stu.enabled;
+
+  const getAgeLabel = (stu) => {
+    const raw = String(stu?.ageDecade || "").trim();
+    if (raw) return raw;
+    const num = Number(String(stu?.age || "").trim());
+    if (Number.isFinite(num) && num > 0) {
+      const d = Math.floor(num / 10) * 10;
+      return `${d}代`;
+    }
+    return "";
   };
 
   // =========================================================
-  // Load config.json
+  // 8) Render students (カード設計：上は「名前＋年代＋奨学金」だけ)
   // =========================================================
-  const loadConfig = async () => {
-    const res = await fetch("config.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("config.jsonが読み込めません");
-    config = await res.json();
+  const renderStudents = (list) => {
+    if (!studentListEl) return;
 
-    // Email only
-    if (contactGrid) {
-      contactGrid.innerHTML = "";
-      const email = config?.email || "";
+    studentListEl.innerHTML = "";
 
-      const a = document.createElement("a");
-      a.className = "contactItem";
-      a.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
-      a.innerHTML = `
-        <div class="contactIcon">${iconSvg("email")}</div>
-        <div>
-          <div class="contactK">メール</div>
-          <div class="contactV">${esc(email || "未設定")}</div>
-        </div>
-      `;
-      contactGrid.appendChild(a);
+    if (!list.length) {
+      if (noResultsEl) noResultsEl.style.display = "block";
+      return;
     }
+    if (noResultsEl) noResultsEl.style.display = "none";
 
-    // Socials
-    if (socialGrid) {
-      socialGrid.innerHTML = "";
-      const socials = Array.isArray(config?.socials) ? config.socials : [];
-      socials.forEach((s) => {
-        if (!s?.url) return;
-        const a = document.createElement("a");
-        a.className = "contactItem";
-        a.href = s.url;
-        a.target = "_blank";
-        a.rel = "noopener";
-        a.innerHTML = `
-          <div class="contactIcon">${iconSvg(s?.label || "sns")}</div>
-          <div>
-            <div class="contactK">${esc(s?.label || "SNS")}</div>
-            <div class="contactV">${esc(s.url)}</div>
+    list.forEach((stu) => {
+      const disabled = !isEnabled(stu);
+
+      const tagsHtml = (Array.isArray(stu.tags) ? stu.tags : [])
+        .map((t) => `<span class="tag">${esc(t)}</span>`)
+        .join("");
+
+      const linksHtml = (Array.isArray(stu.links) ? stu.links : [])
+        .filter((l) => l && l.label && l.url)
+        .map(
+          (l) =>
+            `<a class="linkPill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(
+              l.label
+            )}</a>`
+        )
+        .join("");
+
+      const stipendiumBadge = stu?.stipendium?.has
+        ? `<span class="badgeMini">奨学金：${esc(stu?.stipendium?.name || "取得")}</span>`
+        : "";
+
+      const ageLabel = getAgeLabel(stu);
+      const topLineParts = [];
+      if (ageLabel) topLineParts.push(esc(ageLabel));
+      if (stu?.stipendium?.has) topLineParts.push("奨学金あり");
+      const topLine = topLineParts.length ? topLineParts.join(" / ") : "";
+
+      const bookingBtn = disabled
+        ? `<a class="btn" href="#" aria-disabled="true" onclick="return false;">空き枠を見る（準備中）</a>`
+        : `<a class="btn primary" href="${esc(stu.bookingUrl || "#")}" target="_blank" rel="noopener">空き枠を見る（6,000円 / 40分）</a>`;
+
+      const avatarUrl = stu.avatar || "https://placehold.co/520x520/png?text=Avatar";
+
+      const card = document.createElement("article");
+      card.className = `studentCard${disabled ? " disabled" : ""}`;
+
+      card.innerHTML = `
+        <div class="studentTop">
+          <div class="avatar" aria-label="アバター">
+            <img src="${esc(avatarUrl)}" alt="${esc(stu.name)} のアバター" loading="lazy" />
           </div>
-        `;
-        socialGrid.appendChild(a);
-      });
-    }
-  };
+          <div>
+            <p class="studentName">${esc(stu.name)}</p>
+            ${topLine ? `<p class="studentMeta">${esc(topLine)}</p>` : ``}
+            ${stipendiumBadge ? `<div style="margin-top:6px">${stipendiumBadge}</div>` : ``}
+          </div>
+        </div>
 
-  // =========================================================
-  // Load students.json
-  // =========================================================
-  const loadStudents = async () => {
-    const res = await fetch("students.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("students.jsonが読み込めません");
-    const data = await res.json();
-    if (!Array.isArray(data)) throw new Error("students.jsonは配列にしてください");
-    students = data;
+        <div class="metaBox" aria-label="詳細情報">
+          <div class="metaRow"><span class="metaK">大学</span><span class="metaV">${esc(stu.university || "")}</span></div>
+          <div class="metaRow"><span class="metaK">地域</span><span class="metaV">${esc(stu.region || "")}</span></div>
+          <div class="metaRow"><span class="metaK">分野</span><span class="metaV">${esc(stu.course || "")}</span></div>
+          <div class="metaRow"><span class="metaK">専攻</span><span class="metaV">${esc(stu.major || "")}</span></div>
+          <div class="metaRow"><span class="metaK">学年</span><span class="metaV">${esc(stu.year || "")}</span></div>
+          <div class="metaRow"><span class="metaK">語学</span><span class="metaV">${esc(stu.language || "")}</span></div>
+          <div class="metaRow"><span class="metaK">面談</span><span class="metaV">${esc(stu.meeting || "")}</span></div>
+        </div>
 
-    // build filters
-    const regions = Array.from(new Set(students.map((s) => s.region).filter(Boolean)));
-    const courses = Array.from(new Set(students.map((s) => s.course).filter(Boolean)));
+        ${stu.bio ? `<p class="bio">${esc(stu.bio)}</p>` : ""}
 
-    if (regionFilter) {
-      regions.forEach((r) => {
-        const op = document.createElement("option");
-        op.value = r;
-        op.textContent = r;
-        regionFilter.appendChild(op);
-      });
-    }
-    if (courseFilter) {
-      courses.forEach((c) => {
-        const op = document.createElement("option");
-        op.value = c;
-        op.textContent = c;
-        courseFilter.appendChild(op);
-      });
-    }
+        ${tagsHtml ? `<div class="tags">${tagsHtml}</div>` : ""}
 
-    suggestPool = buildSuggestPool(students);
-  };
+        ${linksHtml ? `<div class="linkList" aria-label="外部リンク">${linksHtml}</div>` : ""}
 
-  const buildSuggestPool = (arr) => {
-    const set = new Set();
-    arr.forEach((s) => {
-      if (s.university) set.add(String(s.university));
-      if (s.major) set.add(String(s.major));
-      if (s.region) set.add(String(s.region));
-      if (s.course) set.add(String(s.course));
-      if (Array.isArray(s.tags)) s.tags.forEach((t) => set.add(String(t)));
+        ${bookingBtn}
+      `;
+
+      studentListEl.appendChild(card);
     });
-    return Array.from(set);
   };
 
   // =========================================================
-  // Suggest
+  // 9) 初期表示：今月の注目（最大2名）
   // =========================================================
+  const pickFeaturedStudents = (arr) => {
+    const enabled = arr.filter((s) => isEnabled(s));
+    const featured = enabled.filter((s) => !!s.featured);
+    if (featured.length >= 2) return featured.slice(0, 2);
+    if (featured.length === 1) {
+      const rest = enabled.filter((s) => s !== featured[0]);
+      return [featured[0], ...(rest.slice(0, 1))];
+    }
+    return enabled.slice(0, 2);
+  };
+
+  const renderInitialFeatured = () => {
+    const list = pickFeaturedStudents(students);
+    renderStudents(list);
+  };
+
+  // =========================================================
+  // 10) Filter + jump to students
+  // =========================================================
+  const applyFilterAndJump = () => {
+    const kw = norm(keywordInput?.value);
+    const region = regionFilter?.value || "";
+    const course = courseFilter?.value || "";
+
+    const filtered = students.filter((stu) => {
+      const text = buildSearchText(stu);
+      const okKw = !kw || text.includes(kw);
+      const okRegion = !region || String(stu.region) === region;
+      const okCourse = !course || String(stu.course) === course;
+      return okKw && okRegion && okCourse;
+    });
+
+    hasSearched = true;
+    renderStudents(filtered);
+    smoothScrollTo("#students");
+  };
+
+  const clearSearch = () => {
+    if (keywordInput) keywordInput.value = "";
+    if (regionFilter) regionFilter.value = "";
+    if (courseFilter) courseFilter.value = "";
+    closeSuggest();
+
+    hasSearched = false;
+    renderInitialFeatured();
+  };
+
+  // =========================================================
+  // 11) Suggest dropdown
+  // =========================================================
+  const openSuggest = () => {
+    if (!suggestBox) return;
+    suggestBox.classList.add("open");
+  };
+
   const closeSuggest = () => {
     if (!suggestBox) return;
     suggestBox.classList.remove("open");
     suggestBox.innerHTML = "";
   };
 
-  const renderSuggest = (q) => {
+  const buildSuggestPool = (studentsArr) => {
+    const set = new Set();
+
+    studentsArr.forEach((s) => {
+      if (s.university) set.add(String(s.university));
+      if (s.region) set.add(String(s.region));
+      if (s.course) set.add(String(s.course));
+      if (s.major) set.add(String(s.major));
+      if (Array.isArray(s.tags)) s.tags.forEach((t) => set.add(String(t)));
+      if (Array.isArray(s.links)) s.links.forEach((l) => l?.label && set.add(String(l.label)));
+      if (s.ageDecade) set.add(String(s.ageDecade));
+    });
+
+    ["奨学金", "Stipendium", "スティペンディウム", "出願", "生活費", "住まい", "治安"].forEach((w) =>
+      set.add(w)
+    );
+
+    return Array.from(set);
+  };
+
+  const renderSuggest = (query) => {
     if (!suggestBox) return;
-    const query = norm(q);
-    if (!query) return closeSuggest();
+    const q = norm(query);
+    if (!q) {
+      closeSuggest();
+      return;
+    }
 
     const hits = suggestPool
-      .map((v) => ({ raw: v, n: norm(v) }))
-      .filter((x) => x.n.includes(query))
+      .map((s) => ({ raw: s, n: norm(s) }))
+      .filter((x) => x.n.includes(q))
       .slice(0, 8);
 
-    if (!hits.length) return closeSuggest();
+    if (!hits.length) {
+      closeSuggest();
+      return;
+    }
 
     suggestBox.innerHTML = "";
     hits.forEach((h) => {
-      const div = document.createElement("div");
-      div.className = "suggestItem";
-      div.innerHTML = `${esc(h.raw)}<span class="suggestMeta">クリックで入力</span>`;
-      div.addEventListener("click", () => {
+      const item = document.createElement("div");
+      item.className = "suggestItem";
+      item.innerHTML = `${esc(h.raw)}<span class="suggestMeta">クリックで入力</span>`;
+      item.addEventListener("click", () => {
         if (keywordInput) keywordInput.value = h.raw;
         closeSuggest();
         keywordInput?.focus();
       });
-      suggestBox.appendChild(div);
+      suggestBox.appendChild(item);
     });
 
-    suggestBox.classList.add("open");
+    openSuggest();
   };
 
   document.addEventListener("click", (e) => {
@@ -267,190 +364,129 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================================================
-  // Students render
+  // 12) Load JSON
   // =========================================================
-  const getAgeLabel = (stu) => {
-    if (stu.ageDecade) return String(stu.ageDecade);
-    const n = Number(stu.age);
-    if (Number.isFinite(n) && n > 0) return `${Math.floor(n / 10) * 10}代`;
-    return "";
+  const loadStudents = async () => {
+    const res = await fetch("students.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("students.json が読み込めません: " + res.status);
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error("students.json の形式が不正です（配列にしてください）");
+
+    students = data;
+
+    // suggest pool
+    suggestPool = buildSuggestPool(students);
+
+    // 初期表示：注目2名のみ
+    renderInitialFeatured();
   };
 
-  const renderStudents = (list) => {
-    if (!studentListEl) return;
-    studentListEl.innerHTML = "";
-
-    if (!list.length) {
-      if (noResultsEl) noResultsEl.style.display = "block";
-      return;
-    }
-    if (noResultsEl) noResultsEl.style.display = "none";
-
-    list.forEach((stu) => {
-      const ageLabel = getAgeLabel(stu);
-      const avatarUrl = stu.avatar || "https://placehold.co/400x400/png?text=Avatar";
-
-      const stipend = stu?.stipendium?.has
-        ? `<span class="badgeMini">奨学金：${esc(stu?.stipendium?.name || "あり")}</span>`
-        : "";
-
-      const tagsHtml = (Array.isArray(stu.tags) ? stu.tags : [])
-        .map((t) => `<span class="tag">${esc(t)}</span>`)
-        .join("");
-
-      const card = document.createElement("article");
-      card.className = "studentCard";
-
-      card.innerHTML = `
-        <div class="studentTop">
-          <div class="avatar"><img src="${esc(avatarUrl)}" alt="${esc(stu.name)}" loading="lazy"></div>
-          <div class="studentHead">
-            <p class="studentName">${esc(stu.name)}</p>
-            <div class="studentMini">
-              ${ageLabel ? `<span class="pill">${esc(ageLabel)}</span>` : ""}
-              ${stipend}
-            </div>
-          </div>
-        </div>
-
-        <div class="metaBox">
-          <div class="metaRow"><span class="metaK">大学</span><span class="metaV">${esc(stu.university || "")}</span></div>
-          <div class="metaRow"><span class="metaK">専攻</span><span class="metaV">${esc(stu.major || "")}</span></div>
-          <div class="metaRow"><span class="metaK">学年</span><span class="metaV">${esc(stu.year || "")}</span></div>
-        </div>
-
-        ${stu.bio ? `<p class="bio">${esc(stu.bio)}</p>` : ""}
-        ${tagsHtml ? `<div class="tags">${tagsHtml}</div>` : ""}
-
-        ${
-          stu.bookingUrl
-            ? `<a class="btn primary" href="${esc(stu.bookingUrl)}" target="_blank" rel="noopener">空き枠を見る（6,000円 / 40分）</a>`
-            : `<a class="btn" href="#" onclick="return false;">空き枠を見る（準備中）</a>`
-        }
+  const iconSvg = (name) => {
+    const n = norm(name);
+    if (n.includes("youtube")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path d="M21.6 7.2c-.2-1.1-.9-2-2-2.2C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.6.4c-1.1.2-1.8 1.1-2 2.2C2 9 2 12 2 12s0 3 .4 4.8c.2 1.1.9 2 2 2.2 1.8.4 7.6.4 7.6.4s5.8 0 7.6-.4c1.1-.2 1.8-1.1 2-2.2.4-1.8.4-4.8.4-4.8s0-3-.4-4.8z"></path>
+          <path d="M10 15.5v-7l6 3.5-6 3.5z" fill="white"></path>
+        </svg>
       `;
-
-      studentListEl.appendChild(card);
-    });
+    }
+    if (n.includes("instagram")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"></path>
+          <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"></path>
+          <path d="M17.5 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+        </svg>
+      `;
+    }
+    if (n === "x" || n.includes("twitter")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.5L6.2 22H3l7.3-8.4L1 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"></path>
+        </svg>
+      `;
+    }
+    if (n.includes("note")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path d="M6 4h12v16H6V4zm2 2v12h8V6H8z"></path>
+        </svg>
+      `;
+    }
+    if (n.includes("facebook")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path d="M13 22v-8h3l1-4h-4V7.5c0-1.2.4-2 2-2H17V2.2C16.5 2.1 15.3 2 14 2c-2.8 0-5 1.7-5 5v3H6v4h3v8h4z"></path>
+        </svg>
+      `;
+    }
+    if (n.includes("email") || n.includes("mail")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"></path>
+        </svg>
+      `;
+    }
+    return `
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+        <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"></path>
+      </svg>
+    `;
   };
 
-  const renderFeatured = () => {
-    if (studentListTitleEl) studentListTitleEl.textContent = "今月の注目現役生（最大2名）";
-    const featured = students.filter((s) => s.enabled !== false && s.featured === true).slice(0, 2);
-    renderStudents(featured);
+  const loadConfig = async () => {
+    const res = await fetch("config.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("config.json が読み込めません: " + res.status);
+    config = await res.json();
+
+    // Email only
+    if (contactGrid) {
+      contactGrid.innerHTML = "";
+      const email = config?.email || "";
+      const emailCard = document.createElement("a");
+      emailCard.className = "contactItem";
+      emailCard.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
+      emailCard.innerHTML = `
+        <div class="contactIcon">${iconSvg("email")}</div>
+        <div>
+          <div class="contactK">メール</div>
+          <div class="contactV">${esc(email || "設定中")}</div>
+        </div>
+      `;
+      contactGrid.appendChild(emailCard);
+    }
+
+    // Socials only
+    if (snsGrid) {
+      snsGrid.innerHTML = "";
+      const socials = Array.isArray(config?.socials) ? config.socials : [];
+      socials.forEach((s) => {
+        const a = document.createElement("a");
+        a.className = "contactItem";
+        a.href = s?.url || "#";
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.innerHTML = `
+          <div class="contactIcon">${iconSvg(s?.label || "sns")}</div>
+          <div>
+            <div class="contactK">${esc(s?.label || "SNS")}</div>
+            <div class="contactV">${esc(s?.url || "設定中")}</div>
+          </div>
+        `;
+        snsGrid.appendChild(a);
+      });
+    }
   };
 
-  const applyFilterAndJump = () => {
-    if (studentListTitleEl) studentListTitleEl.textContent = "検索結果";
-
-    const kw = norm(keywordInput?.value || "");
-    const region = regionFilter?.value || "";
-    const course = courseFilter?.value || "";
-
-    const filtered = students.filter((s) => {
-      if (s.enabled === false) return false;
-
-      const text = norm(
-        [
-          s.name,
-          s.university,
-          s.major,
-          s.year,
-          s.region,
-          s.course,
-          (Array.isArray(s.tags) ? s.tags.join(" ") : ""),
-          s.bio,
-          s?.stipendium?.name,
-        ].join(" ")
-      );
-
-      const okKw = !kw || text.includes(kw);
-      const okRegion = !region || String(s.region) === region;
-      const okCourse = !course || String(s.course) === course;
-      return okKw && okRegion && okCourse;
-    });
-
-    renderStudents(filtered);
-    smoothScrollTo("#students");
-  };
-
+  // =========================================================
+  // 13) Search buttons
+  // =========================================================
   if (applySearchBtn) applySearchBtn.addEventListener("click", applyFilterAndJump);
-
-  if (clearSearchBtn)
-    clearSearchBtn.addEventListener("click", () => {
-      if (keywordInput) keywordInput.value = "";
-      if (regionFilter) regionFilter.value = "";
-      if (courseFilter) courseFilter.value = "";
-      closeSuggest();
-      renderFeatured();
-      smoothScrollTo("#students");
-    });
-
-  if (goTopSearchBtn)
-    goTopSearchBtn.addEventListener("click", () => {
-      smoothScrollTo("#search");
-      keywordInput?.focus();
-    });
+  if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
 
   // =========================================================
-  // Recruit accordion + mailto
-  // =========================================================
-  const setRecruitMsg = (t) => {
-    if (recruitMsg) recruitMsg.textContent = t || "";
-  };
-
-  const openRecruitForm = () => {
-    if (!recruitFormWrap) return;
-    recruitFormWrap.style.display = "block";
-    smoothScrollTo(recruitFormWrap);
-  };
-
-  const closeRecruitForm = () => {
-    if (!recruitFormWrap) return;
-    recruitFormWrap.style.display = "none";
-  };
-
-  if (recruitOpenBtn) recruitOpenBtn.addEventListener("click", openRecruitForm);
-  if (closeRecruitFormBtn) closeRecruitFormBtn.addEventListener("click", closeRecruitForm);
-
-  if (recruitSendBtn) {
-    recruitSendBtn.addEventListener("click", () => {
-      const to = config?.email || "";
-      if (!to) return setRecruitMsg("送信先メール（config.json の email）が未設定です。");
-
-      const name = (recruitName?.value || "").trim();
-      const uni = (recruitUniversity?.value || "").trim();
-      const year = (recruitYear?.value || "").trim();
-      const email = (recruitEmail?.value || "").trim();
-      const note = (recruitNote?.value || "").trim();
-
-      if (!name || !uni || !year || !email) {
-        return setRecruitMsg("必須項目（名前・大学名・学年・メール）を入力してください。");
-      }
-
-      setRecruitMsg("");
-
-      const subject = "【現役生参加希望】申し込みフォーム";
-      const body = [
-        "現役生として参加希望です。",
-        "",
-        "【入力内容】",
-        `・名前（表示名）：${name}`,
-        `・大学名：${uni}`,
-        `・学年・課程：${year}`,
-        `・メールアドレス：${email}`,
-        `・自由記述：${note || "（なし）"}`,
-        "",
-        "※ まずは簡単な情報だけで大丈夫です。内容を確認後、こちらから詳しくご連絡いたします。",
-      ].join("\n");
-
-      window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
-    });
-  }
-
-  // =========================================================
-  // Map (Leaflet)
+  // 14) Map: Leaflet (cities -> universities list)
   // =========================================================
   const cityCoords = {
     ブダペスト: { lat: 47.4979, lng: 19.0402 },
@@ -458,17 +494,61 @@ document.addEventListener("DOMContentLoaded", () => {
     セゲド: { lat: 46.253, lng: 20.1414 },
     ペーチ: { lat: 46.0727, lng: 18.2323 },
     ミシュコルツ: { lat: 48.1035, lng: 20.7784 },
+    ショプロン: { lat: 47.6817, lng: 16.5845 },
+    ジェール: { lat: 47.6875, lng: 17.6504 },
+    ヴェスプレーム: { lat: 47.093, lng: 17.911 },
+    ニーレジハーザ: { lat: 47.9554, lng: 21.7167 },
+    ドゥナウーイヴァーロシュ: { lat: 46.9619, lng: 18.9355 },
+    ケチケメート: { lat: 46.8964, lng: 19.6897 },
+    ギョドゥルー: { lat: 47.5966, lng: 19.3552 },
+    エゲル: { lat: 47.9025, lng: 20.3772 },
+    シャーロシュパタク: { lat: 48.3245, lng: 21.5686 },
+    ヴァーツ: { lat: 47.7785, lng: 19.128 },
+    バヤ: { lat: 46.1803, lng: 18.9567 },
   };
 
   const universities = [
+    // Budapest
+    { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
+    { name: "Corvinus University of Budapest", city: "ブダペスト" },
     { name: "Eötvös Loránd University", city: "ブダペスト" },
     { name: "Semmelweis University", city: "ブダペスト" },
-    { name: "Corvinus University of Budapest", city: "ブダペスト" },
-    { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
+    { name: "Hungarian University of Fine Arts", city: "ブダペスト" },
+    { name: "Hungarian University of Sports Science", city: "ブダペスト" },
+    { name: "Hungarian Dance University", city: "ブダペスト" },
+    { name: "Liszt Ferenc Academy of Music", city: "ブダペスト" },
+    { name: "Moholy-Nagy University of Art and Design", city: "ブダペスト" },
+    { name: "Óbuda University", city: "ブダペスト" },
+    { name: "Pázmány Péter Catholic University", city: "ブダペスト" },
+    { name: "Károli Gáspár University of the Reformed Church in Hungary", city: "ブダペスト" },
+    { name: "Ludovika University of Public Service", city: "ブダペスト" },
+    { name: "John Wesley Theological College", city: "ブダペスト" },
+    { name: "Dharma Gate Buddhist College", city: "ブダペスト" },
+    { name: "Budapest Metropolitan University", city: "ブダペスト" },
+    { name: "Budapest University of Economics and Business", city: "ブダペスト" },
+    { name: "University of Veterinary Medicine Budapest", city: "ブダペスト" },
+    { name: "MFA Balassi Preparatory Programme", city: "ブダペスト" },
+
+    // Regional
     { name: "University of Debrecen", city: "デブレツェン" },
     { name: "University of Szeged", city: "セゲド" },
     { name: "University of Pécs", city: "ペーチ" },
     { name: "University of Miskolc", city: "ミシュコルツ" },
+    { name: "University of Sopron", city: "ショプロン" },
+    { name: "Széchenyi István University", city: "ジェール" },
+    { name: "University of Pannonia", city: "ヴェスプレーム" },
+    { name: "University of Nyíregyháza", city: "ニーレジハーザ" },
+    { name: "University of Dunaújváros", city: "ドゥナウーイヴァーロシュ" },
+    { name: "John von Neumann University", city: "ケチケメート" },
+    { name: "Hungarian University of Agriculture and Life Sciences (MATE)", city: "ギョドゥルー" },
+    { name: "Eszterházy Károly Catholic University", city: "エゲル" },
+    { name: "University of Tokaj", city: "シャーロシュパタク" },
+
+    // Small / specialized
+    { name: "Apor Vilmos Catholic College", city: "ヴァーツ" },
+    { name: "Episcopal Theological College of Pécs", city: "ペーチ" },
+    { name: "Eötvös József College", city: "バヤ" },
+    { name: "Kodály Institute", city: "ケチケメート" },
   ];
 
   const groupByCity = (items) => {
@@ -492,6 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const renderUniversityList = (city, list) => {
     if (!uniListEl) return;
+
     if (mapHintEl) mapHintEl.style.display = "none";
 
     uniListEl.innerHTML = "";
@@ -509,42 +590,48 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.type = "button";
       btn.className = "uniBtn";
       btn.textContent = u.name;
+
       btn.addEventListener("click", () => {
         setPickedUniversity(u.name);
         if (keywordInput) keywordInput.value = u.name;
         closeSuggest();
-        applyFilterAndJump();
+        applyFilterAndJump(); // 大学クリック → 即検索＆現役生へ
       });
+
       group.appendChild(btn);
     });
 
     uniListEl.appendChild(group);
+
+    // 大学一覧が出た瞬間だけ「検索条件をクリア」を表示
     showClearUniButton(true);
+  };
+
+  const clearUniversityList = () => {
+    setPickedUniversity("");
+    if (uniListEl) uniListEl.innerHTML = "";
+    if (mapHintEl) mapHintEl.style.display = "block";
+    showClearUniButton(false);
   };
 
   if (clearUniBtn) {
     clearUniBtn.addEventListener("click", () => {
-      setPickedUniversity("");
-      if (uniListEl) uniListEl.innerHTML = "";
-      if (mapHintEl) mapHintEl.style.display = "block";
-      showClearUniButton(false);
+      clearUniversityList();
     });
   }
 
   if (applyMapSearchBtn) {
     applyMapSearchBtn.addEventListener("click", () => {
-      if (pickedUniversityName && keywordInput) keywordInput.value = pickedUniversityName;
+      if (pickedUniversityName && keywordInput) {
+        keywordInput.value = pickedUniversityName;
+      }
       closeSuggest();
       applyFilterAndJump();
     });
   }
 
   const initMap = () => {
-    if (!mapEl) return;
-    if (!window.L) {
-      if (mapStatusEl) mapStatusEl.textContent = "地図ライブラリが読み込めません（Leaflet）";
-      return;
-    }
+    if (!mapEl || !window.L) return;
 
     if (mapStatusEl) mapStatusEl.textContent = "準備中…";
 
@@ -570,25 +657,126 @@ document.addEventListener("DOMContentLoaded", () => {
       }).addTo(huMap);
 
       marker.bindTooltip(`${city}（${list.length}）`, { direction: "top" });
-      marker.on("click", () => renderUniversityList(city, list));
+
+      marker.on("mouseover", () => marker.setStyle({ radius: 12, weight: 3, fillOpacity: 0.9 }));
+      marker.on("mouseout", () => marker.setStyle({ radius: 8, weight: 2, fillOpacity: 0.7 }));
+
+      marker.on("click", () => {
+        renderUniversityList(city, list);
+      });
+
       cityCount++;
     });
 
-    if (mapStatusEl) mapStatusEl.textContent = `都市：${cityCount} / 大学：${universities.length}`;
+    if (mapStatusEl) {
+      mapStatusEl.textContent = `都市：${cityCount} / 大学：${universities.length}`;
+    }
+
     showClearUniButton(false);
   };
 
   // =========================================================
-  // Boot
+  // 15) Recruit inline form (mailto draft)
+  // =========================================================
+  const setRecruitMsg = (text) => {
+    if (!recruitMsg) return;
+    recruitMsg.textContent = text || "";
+  };
+
+  const openRecruitForm = () => {
+    if (!recruitFormWrap) return;
+    recruitFormWrap.style.display = "block";
+    smoothScrollTo(recruitFormWrap);
+  };
+
+  const closeRecruitForm = () => {
+    if (!recruitFormWrap) return;
+    recruitFormWrap.style.display = "none";
+  };
+
+  if (recruitOpenBtn) {
+    recruitOpenBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openRecruitForm();
+    });
+  }
+
+  if (recruitCloseBtn) {
+    recruitCloseBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeRecruitForm();
+    });
+  }
+
+  if (recruitSendBtn) {
+    recruitSendBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const to = config?.email || "";
+      if (!to) {
+        setRecruitMsg("送信先メール（config.json の email）が未設定です。");
+        return;
+      }
+
+      const name = (recruitName?.value || "").trim();
+      const uni = (recruitUniversity?.value || "").trim();
+      const year = (recruitYear?.value || "").trim();
+      const email = (recruitEmail?.value || "").trim();
+      const note = (recruitNote?.value || "").trim();
+
+      if (!name || !uni || !year || !email) {
+        setRecruitMsg("必須項目（名前・大学・学年・メール）を入力してください。");
+        return;
+      }
+
+      setRecruitMsg("");
+
+      const subject = "【現役生参加希望】申し込みフォーム";
+      const bodyLines = [
+        "現役生として参加希望です。",
+        "",
+        "【入力内容】",
+        `・名前（表示名）：${name}`,
+        `・大学名：${uni}`,
+        `・学年・課程：${year}`,
+        `・メールアドレス：${email}`,
+        `・自由記述：${note || "（なし）"}`,
+        "",
+        "※ まずは簡単な情報だけで大丈夫です。内容を確認後、こちらから詳しくご連絡いたします。",
+      ];
+      const body = bodyLines.join("\n");
+
+      const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailto;
+    });
+  }
+
+  // =========================================================
+  // 16) Boot
   // =========================================================
   (async () => {
     try {
       await Promise.all([loadStudents(), loadConfig()]);
-      renderFeatured();
       initMap();
+      clearUniversityList();
     } catch (e) {
       console.error(e);
-      if (mapStatusEl) mapStatusEl.textContent = "読み込み失敗（Console を確認）";
+
+      if (mapStatusEl) mapStatusEl.textContent = "読み込み失敗";
+
+      if (studentListEl) {
+        studentListEl.innerHTML = `
+          <div class="card" style="padding:16px">
+            <div style="font-weight:950;color:#0f2a5a">読み込みに失敗しました</div>
+            <div class="muted" style="font-weight:850;margin-top:6px">
+              students.json / config.json の配置・ファイル名・GitHub Pages のパスを確認してください。
+            </div>
+          </div>
+        `;
+      }
     }
   })();
 });

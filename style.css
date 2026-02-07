@@ -688,3 +688,22 @@ details p{
   .formGrid{grid-template-columns:1fr}
   .snsGrid{grid-template-columns: repeat(3, minmax(0, 1fr));}
 }
+
+/* 3つの入口（カード）の画像がデカすぎるのを抑える */
+.basicCard img,
+.infoCard img,
+.stepCard img{
+  width: 100%;
+  height: clamp(160px, 18vw, 260px); /* スマホ:160px〜 PC:最大260px */
+  object-fit: cover;                 /* はみ出しはトリミング */
+  display: block;
+}
+
+/* 画像の親に余計な高さ指定がある場合の保険 */
+.basicCard .thumb,
+.basicCard .cardImg,
+.basicCard .imgWrap{
+  height: auto !important;
+  min-height: 0 !important;
+}
+

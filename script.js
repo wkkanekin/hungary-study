@@ -30,16 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const courseFilter = document.getElementById("courseFilter");
   const applySearchBtn = document.getElementById("applySearch");
   const clearSearchBtn = document.getElementById("clearSearch");
+  const showAllStudentsBtn = document.getElementById("showAllStudents");
   const suggestBox = document.getElementById("suggestBox");
 
   const studentListEl = document.getElementById("studentList");
   const noResultsEl = document.getElementById("noResults");
+  const hitCountEl = document.getElementById("hitCount");
 
-  // Contact (email only)
+  // Contact
   const contactEmailLink = document.getElementById("contactEmailLink");
   const contactEmailText = document.getElementById("contactEmailText");
 
-  // SNS area
+  // SNS
   const snsGridEl = document.getElementById("snsGrid");
 
   // Recruit form
@@ -55,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const uniListEl = document.getElementById("uniList");
   const mapHintEl = document.getElementById("mapHint");
   const mapStatusEl = document.getElementById("mapStatus");
+  const mapCountsEl = document.getElementById("mapCounts");
   const clearUniBtn = document.getElementById("clearUniFilter");
   const applyMapSearchBtn = document.getElementById("applyMapSearch");
   const pickedUniEl = document.getElementById("pickedUni");
@@ -84,6 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function scrollToStudents() {
     document.getElementById("students")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function setHitLabel(text) {
+    if (!hitCountEl) return;
+    hitCountEl.textContent = text || "";
   }
 
   function showNoResults(show) {
@@ -197,10 +205,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ----------------------------
+  // Students list controls
+  // ----------------------------
   function applyFilterAndJump() {
     // 条件が無い場合は「おすすめ」だけ表示してLPを短く
     if (!hasAnySearchCondition()) {
-      renderStudents(getFeaturedStudents(2));
+      const featured = getFeaturedStudents(2);
+      renderStudents(featured);
+      setHitLabel(`ピックアップ：${featured.length}名`);
       scrollToStudents();
       return;
     }
@@ -220,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     renderStudents(filtered);
+    setHitLabel(`検索結果：${filtered.length}名`);
     scrollToStudents();
   }
 
@@ -232,7 +246,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pickedUniEl) pickedUniEl.textContent = "未選択";
 
     closeSuggest();
-    renderStudents(getFeaturedStudents(2));
+
+    const featured = getFeaturedStudents(2);
+    renderStudents(featured);
+    setHitLabel(`ピックアップ：${featured.length}名`);
+  }
+
+  function showAllStudents() {
+    // 「全登録者を一覧で見たい」用：検索条件に関係なく全員表示
+    renderStudents(students);
+    setHitLabel(`全学生：${students.length}名`);
+    scrollToStudents();
   }
 
   // ----------------------------
@@ -257,7 +281,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (s.region) set.add(String(s.region));
       if (s.course) set.add(String(s.course));
       if (Array.isArray(s.tags)) s.tags.forEach((t) => set.add(String(t)));
-
       if (Array.isArray(s.links)) s.links.forEach((l) => l?.label && set.add(String(l.label)));
     });
 
@@ -320,11 +343,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!res.ok) throw new Error("students.json が読み込めません: " + res.status);
     const data = await res.json();
     if (!Array.isArray(data)) throw new Error("students.json の形式が不正です（配列にしてください）");
+
     students = data;
     suggestPool = buildSuggestPool(students);
 
-    // 初期表示は「おすすめ」だけ（最大2）
-    renderStudents(getFeaturedStudents(2));
+    const featured = getFeaturedStudents(2);
+    renderStudents(featured);
+    setHitLabel(`ピックアップ：${featured.length}名`);
   }
 
   async function loadConfig() {
@@ -332,14 +357,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!res.ok) throw new Error("config.json が読み込めません: " + res.status);
     const cfg = await res.json();
 
-    // Contact: email only
     if (contactEmailLink && contactEmailText) {
       const email = String(cfg.email || "").trim();
       contactEmailLink.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
       contactEmailText.textContent = email || "設定中";
     }
 
-    // SNS
     if (snsGridEl) {
       snsGridEl.innerHTML = "";
       const socials = Array.isArray(cfg.socials) ? cfg.socials : [];
@@ -358,13 +381,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Recruit mailto target
     if (recruitForm) {
       recruitForm.dataset.mailto = String(cfg.email || "").trim();
     }
   }
 
-  // Simple emoji icons (確実に動く)
   function iconForLabel(label) {
     const l = norm(label);
     if (l.includes("youtube")) return "▶️";
@@ -380,6 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------
   if (applySearchBtn) applySearchBtn.addEventListener("click", applyFilterAndJump);
   if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
+  if (showAllStudentsBtn) showAllStudentsBtn.addEventListener("click", showAllStudents);
 
   // ----------------------------
   // Recruit mailto submit
@@ -409,8 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const body = bodyLines.join("\n");
-    const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    return mailto;
+    return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   if (recruitForm) {
@@ -429,7 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------------------------
-  // Map (Leaflet) - city markers + university list
+  // Map (Leaflet)
   // ----------------------------
   const cityCoords = {
     "ブダペスト": { lat: 47.4979, lng: 19.0402 },
@@ -451,7 +472,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const universities = [
-    // Budapest
     { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
     { name: "Corvinus University of Budapest", city: "ブダペスト" },
     { name: "Eötvös Loránd University", city: "ブダペスト" },
@@ -472,7 +492,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "University of Veterinary Medicine Budapest", city: "ブダペスト" },
     { name: "MFA Balassi Preparatory Programme", city: "ブダペスト" },
 
-    // Regional
     { name: "University of Debrecen", city: "デブレツェン" },
     { name: "University of Szeged", city: "セゲド" },
     { name: "University of Pécs", city: "ペーチ" },
@@ -487,7 +506,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Eszterházy Károly Catholic University", city: "エゲル" },
     { name: "University of Tokaj", city: "シャーロシュパタク" },
 
-    // Small / specialized
     { name: "Apor Vilmos Catholic College", city: "ヴァーツ" },
     { name: "Episcopal Theological College of Pécs", city: "ペーチ" },
     { name: "Eötvös József College", city: "バヤ" },
@@ -508,9 +526,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pickedUniEl) pickedUniEl.textContent = pickedUniversityName || "未選択";
   }
 
-  function setClearUniVisibility(show) {
+  function setClearUniEnabled(enable) {
     if (!clearUniBtn) return;
-    clearUniBtn.style.display = show ? "inline-flex" : "none";
+    clearUniBtn.disabled = !enable;
   }
 
   function renderUniversityList(city, list) {
@@ -544,22 +562,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     uniListEl.appendChild(group);
-    setClearUniVisibility(true);
+    setClearUniEnabled(true);
   }
 
   function clearUniversityFilter() {
     setPickedUniversity("");
     if (uniListEl) uniListEl.innerHTML = "";
     if (mapHintEl) mapHintEl.style.display = "block";
-    setClearUniVisibility(false);
+    setClearUniEnabled(false);
   }
 
   if (clearUniBtn) {
-    setClearUniVisibility(false);
-
-    clearUniBtn.addEventListener("click", () => {
-      clearUniversityFilter();
-    });
+    setClearUniEnabled(false);
+    clearUniBtn.addEventListener("click", () => clearUniversityFilter());
   }
 
   if (applyMapSearchBtn) {
@@ -609,7 +624,12 @@ document.addEventListener("DOMContentLoaded", () => {
       cityCount++;
     });
 
-    if (mapStatusEl) mapStatusEl.textContent = `都市マーカー：${cityCount} / 大学：${universities.length}`;
+    // ✅ 「都市マーカー」→「都市」表記へ変更
+    if (mapCountsEl) {
+      mapCountsEl.style.display = "inline-flex";
+      mapCountsEl.textContent = `都市：${cityCount} / 大学：${universities.length}`;
+    }
+    if (mapStatusEl) mapStatusEl.textContent = "都市をクリックすると大学一覧が表示されます";
   }
 
   // ----------------------------

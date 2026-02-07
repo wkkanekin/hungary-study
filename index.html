@@ -17,39 +17,14 @@
 </head>
 
 <body>
-  <!-- Sticky Top Bar + Horizontal TOC -->
-  <header class="topBar" aria-label="固定ヘッダー">
-    <div class="topBarInner">
-      <a href="#top" class="topBrand" aria-label="トップへ戻る">
-        <span class="topBrandLogo" aria-hidden="true">HU</span>
-        <span class="topBrandText">ハンガリー留学相談</span>
-      </a>
-
-      <nav class="topNav" aria-label="横目次">
-        <a href="#service">サービス</a>
-        <a href="#flow">流れ</a>
-        <a href="#basics-cards">全体像</a>
-        <a href="#search">検索</a>
-        <a href="#mapSearch">地図</a>
-        <a href="#students">現役生</a>
-        <a href="#faq">FAQ</a>
-        <a href="#recruit">募集</a>
-        <a href="#contact">問い合わせ</a>
-        <a href="#sns">SNS</a>
-      </nav>
-    </div>
-  </header>
-
   <div class="container">
-    <!-- Header -->
+    <!-- Header / Hero -->
     <header class="card heroHeader" id="top">
       <div class="heroBg" aria-hidden="true"></div>
 
       <div class="headerRow">
-        <!-- Dummy logo -->
         <div class="logoBox" aria-label="ロゴ（ダミー）">
           <span>HU</span>
-          <!-- <img src="assets/logo.png" alt="ロゴ"> -->
         </div>
 
         <div class="headerText">
@@ -58,6 +33,29 @@
             留学・進学・現地生活について、実際に学んでいる現役生が1対1でお話しします。
           </p>
         </div>
+      </div>
+    </header>
+
+    <!-- ✅ 案A：ヒーローの下に横目次（ここから sticky で上に吸着） -->
+    <header class="topBar" aria-label="目次">
+      <div class="topBarInner">
+        <a href="#top" class="topBrand" aria-label="トップへ戻る">
+          <span class="topBrandLogo" aria-hidden="true">HU</span>
+          <span class="topBrandText">ハンガリー留学相談</span>
+        </a>
+
+        <nav class="topNav" aria-label="横目次">
+          <a href="#service">サービス</a>
+          <a href="#flow">流れ</a>
+          <a href="#basics-cards">全体像</a>
+          <a href="#search">検索</a>
+          <a href="#mapSearch">地図</a>
+          <a href="#students">現役生</a>
+          <a href="#faq">FAQ</a>
+          <a href="#recruit">募集</a>
+          <a href="#contact">問い合わせ</a>
+          <a href="#sns">SNS</a>
+        </nav>
       </div>
     </header>
 
@@ -226,7 +224,12 @@
         <div class="searchRow centerActions">
           <button class="btn primary" id="applySearch" type="button">検索</button>
           <button class="btn" id="clearSearch" type="button">条件クリア</button>
+          <button class="btn" id="showAllStudents" type="button">全学生を見る</button>
         </div>
+
+        <p class="muted searchNote">
+          ※ 初期表示はピックアップのみです。「全学生を見る」で全登録者を一覧表示できます。
+        </p>
       </div>
     </section>
 
@@ -243,13 +246,14 @@
 
           <div class="mapBar">
             <div class="mapLeft">
-              <span class="pill">都市：<span id="mapCityCount">-</span> / 大学：<span id="mapUniCount">-</span></span>
               <span id="mapStatus" class="mapStatus">読み込み中…</span>
+              <!-- ✅ 初期の「都市:- / 大学:-」は見せない。JSで値が入ったら表示 -->
+              <span id="mapCounts" class="pill" style="display:none;">都市：- / 大学：-</span>
             </div>
 
             <div class="mapRight">
               <button class="btn primary" id="applyMapSearch" type="button">検索する</button>
-              <button class="btn isHidden" id="clearUniFilter" type="button">検索条件をクリア</button>
+              <button class="btn" id="clearUniFilter" type="button" disabled>条件クリア</button>
             </div>
           </div>
         </div>
@@ -270,7 +274,7 @@
 
     <!-- Students -->
     <section class="section" id="students">
-      <h2 class="secTitle">現役生一覧</h2>
+      <h2 class="secTitle">現役生一覧 <span id="hitCount" class="hitCount"></span></h2>
 
       <div id="noResults" class="card emptyCard" style="display:none;">
         <h3 class="emptyTitle">現在、該当する現役生が見つかりませんでした。</h3>
@@ -325,7 +329,6 @@
           <button class="btn primary" id="openRecruitForm" type="button">申し込みフォームへ</button>
         </div>
 
-        <!-- Accordion form -->
         <details class="recruitAccordion" id="recruitAccordion">
           <summary class="srOnly">申し込みフォーム</summary>
 
@@ -375,7 +378,7 @@
       </div>
     </section>
 
-    <!-- Contact (Email only) -->
+    <!-- Contact -->
     <section class="section" id="contact">
       <h2 class="secTitle">お問い合わせ</h2>
 
@@ -391,16 +394,14 @@
       </div>
     </section>
 
-    <!-- SNS / Links -->
+    <!-- SNS -->
     <section class="section" id="sns">
       <h2 class="secTitle">SNS・外部リンク</h2>
 
       <div class="card simpleCard">
         <p class="muted">各アイコンをタップすると移動します。</p>
 
-        <div class="snsGrid" id="snsGrid" aria-label="SNSリンク">
-          <!-- JS renders from config.json -->
-        </div>
+        <div class="snsGrid" id="snsGrid" aria-label="SNSリンク"></div>
       </div>
     </section>
 

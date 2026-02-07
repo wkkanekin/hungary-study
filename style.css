@@ -10,21 +10,17 @@
   --shadow:0 10px 30px rgba(17,24,39,.08);
   --radius:18px;
   --max:1040px;
-
-  /* 後で差し替え：横長ヒーロー画像 */
-  --hero-image: url("https://images.unsplash.com/photo-1549877452-9c387954fbc2?auto=format&fit=crop&w=2000&q=60");
 }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background: radial-gradient(1200px 700px at 30% -10%, #e9f0ff 0%, rgba(233,240,255,0) 60%), var(--bg);
   color:var(--text);
   line-height:1.6;
 }
-a{color:inherit}
 img{max-width:100%; height:auto}
 
 .container{
@@ -35,716 +31,112 @@ img{max-width:100%; height:auto}
 section{padding: 22px 0}
 .sectionTitle{
   font-size: 22px;
-  font-weight: 950;
-  letter-spacing:.02em;
-  margin: 0 0 10px;
+  font-weight: 900;
   text-align:center;
 }
 .sectionLead{
   text-align:center;
   color:var(--muted);
-  font-weight: 800;
-  margin: 0 0 18px;
+  margin-bottom: 18px;
 }
 
-/* Sticky mini TOC */
-.miniToc{
-  position: fixed;
-  right: 18px;
-  top: 18px;
-  z-index: 999;
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-.tocBtn{
-  border:1px solid rgba(29,78,216,.15);
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
-  padding: 10px 12px;
-  border-radius: 14px;
-  box-shadow: 0 10px 20px rgba(17,24,39,.06);
-  font-weight: 950;
-  cursor:pointer;
-}
-.tocPanel{
-  width: 340px;
-  max-height: 72vh;
-  overflow:auto;
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(229,231,235,.8);
-  box-shadow: var(--shadow);
-  border-radius: 18px;
-  padding: 12px;
-  display:none;
-}
-.tocPanel.open{display:block}
-.tocPanel h4{
-  margin: 2px 0 10px;
-  font-size: 14px;
-  font-weight: 950;
-  color:#0f2a5a;
-}
-.tocPanel a{
-  display:block;
-  padding: 10px 10px;
-  border-radius: 14px;
-  text-decoration:none;
-  font-weight: 900;
-  color:#0f2a5a;
-}
-.tocPanel a:hover{background:#f2f6ff}
-
-/* Header (Hero) */
-.header{
-  padding-top: 26px;
-}
-.topNav{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  margin-bottom: 16px;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.brandBadge{
-  width: 40px; height:40px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--blue), var(--blue2));
-  box-shadow: 0 10px 18px rgba(29,78,216,.25);
-}
-.brandName{
-  font-weight: 1000;
-  letter-spacing:.02em;
-}
-.navLinks{
-  display:flex;
-  gap: 14px;
-  align-items:center;
-  font-weight: 900;
-  color:#0f2a5a;
-}
-.navLinks a{
-  text-decoration:none;
-  padding: 8px 10px;
-  border-radius: 12px;
-}
-.navLinks a:hover{background:#eef3ff}
-
-.heroCard{
-  background: rgba(255,255,255,.86);
-  border: 1px solid rgba(229,231,235,.8);
-  border-radius: 26px;
-  box-shadow: var(--shadow);
-  overflow:hidden;
-}
-.heroInner{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 18px;
-  padding: 22px;
-  align-items: stretch;
-}
-.headerTitle{
-  font-size: 34px;
-  font-weight: 1000;
-  letter-spacing:.02em;
-  margin: 0 0 10px;
-  color:#0b1b3a;
-}
-.headerLead{
-  margin: 0 0 14px;
-  color:#374151;
-  font-weight: 800;
-}
-.heroChips{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px;
-  margin: 12px 0 14px;
-}
-.chip{
-  background: var(--chip);
-  border: 1px solid rgba(29,78,216,.15);
-  color:#0f2a5a;
-  font-weight: 950;
-  padding: 8px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-}
-.heroCtas{
-  display:flex;
-  gap: 10px;
-  flex-wrap:wrap;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding: 11px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(29,78,216,.18);
-  font-weight: 1000;
-  text-decoration:none;
-  cursor:pointer;
-  user-select:none;
-}
-.btnPrimary{
-  background: linear-gradient(135deg, var(--blue), var(--blue2));
-  color:white;
-  border:none;
-  box-shadow: 0 12px 24px rgba(29,78,216,.25);
-}
-.btnGhost{
-  background: rgba(255,255,255,.9);
-  color:#0f2a5a;
-}
-.btn:hover{transform: translateY(-1px)}
-.heroArt{
-  border-radius: 22px;
-  overflow:hidden;
-  border: 1px solid rgba(229,231,235,.85);
-  background-image: var(--hero-image);
-  background-size: cover;
-  background-position: center;
-  min-height: 220px;
-}
-
-/* Trust line under hero */
-.trustLine{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px;
-  padding: 14px 18px;
-  border-top:1px solid rgba(229,231,235,.75);
-  background: rgba(255,255,255,.75);
-}
-.trustItem{
-  display:flex;
-  align-items:center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 14px;
-  border:1px solid rgba(229,231,235,.85);
-  background: rgba(255,255,255,.85);
-  font-weight: 950;
-  color:#0f2a5a;
-  font-size: 12px;
-}
-.dot{
-  width:10px;height:10px;border-radius:99px;background: #22c55e;
-  box-shadow: 0 0 0 4px rgba(34,197,94,.14);
-}
-
-/* Cards */
+/* =========================
+   共通カード
+========================= */
 .card{
-  background: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.92);
   border:1px solid rgba(229,231,235,.85);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   overflow:hidden;
 }
-.cardPad{padding: 18px}
 
+/* =========================
+   全体像（3つの入口）
+========================= */
 .grid3{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 18px;
 }
-.cardTop{
-  padding: 16px 18px 10px;
-}
-.cardKicker{
-  font-weight: 1000;
-  color:#0f2a5a;
-  font-size: 13px;
-  opacity:.85;
-}
-.cardTitle{
-  font-weight: 1000;
-  margin: 6px 0 0;
-  font-size: 18px;
-}
-.cardDesc{
-  margin: 8px 0 0;
-  color:#374151;
-  font-weight: 800;
-  font-size: 13px;
-}
-.cardMedia{
-  height: 240px;
-  background: #e5e7eb;
-}
-.cardMedia .dummy{
-  height: 100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#9ca3af;
-  font-weight: 1000;
-  font-size: 64px;
-  letter-spacing:.08em;
-}
-.cardBottom{
-  padding: 12px 18px 18px;
-}
-.smallBtn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border:1px solid rgba(229,231,235,.9);
-  background: rgba(255,255,255,.92);
-  font-weight: 1000;
-  text-decoration:none;
-}
-.smallBtn:hover{border-color: rgba(29,78,216,.25)}
 
-/* Basics cards (3 entrances) */
+/* カード本体 */
 .basicCard{
-  position: relative;
-}
-.basicCard .badgeRow{
   display:flex;
-  gap: 8px;
-  margin: 0 0 8px;
-}
-.badge{
-  font-size: 11px;
-  font-weight: 1000;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #f3f6ff;
-  border: 1px solid rgba(29,78,216,.14);
-  color:#0f2a5a;
-}
-
-/* Search */
-.searchWrap{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 18px;
-  align-items:start;
-}
-.searchBox{
-  background: rgba(255,255,255,.9);
-  border:1px solid rgba(229,231,235,.85);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  padding: 16px;
-}
-.searchRow{
-  display:flex;
-  gap: 10px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-.input{
-  flex: 1 1 220px;
-  border-radius: 14px;
-  border:1px solid rgba(229,231,235,.95);
-  padding: 12px 12px;
-  font-weight: 900;
-  outline:none;
-  background: rgba(255,255,255,.95);
-}
-.select{
-  flex: 1 1 180px;
-  border-radius: 14px;
-  border:1px solid rgba(229,231,235,.95);
-  padding: 12px 12px;
-  font-weight: 900;
-  outline:none;
-  background: rgba(255,255,255,.95);
-}
-.searchMeta{
-  margin-top: 10px;
-  color: var(--muted);
-  font-weight: 850;
-  font-size: 12px;
-}
-.resultBox{
-  margin-top: 14px;
-  display:grid;
-  gap: 10px;
-}
-.resultItem{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap: 10px;
-  padding: 12px 12px;
-  border-radius: 16px;
-  border:1px solid rgba(229,231,235,.9);
-  background: rgba(255,255,255,.95);
-}
-.resultItem strong{font-weight:1000}
-.resultItem small{display:block; color:var(--muted); font-weight:850}
-.tag{
-  font-size: 11px;
-  font-weight: 1000;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #eef3ff;
-  border: 1px solid rgba(29,78,216,.12);
-  color:#0f2a5a;
-  white-space:nowrap;
-}
-
-/* Map */
-.mapLayout{
-  display:grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 18px;
-  align-items:start;
-}
-.mapCard{
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(229,231,235,.85);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
+  flex-direction:column;
   overflow:hidden;
 }
-.mapHeader{
-  padding: 14px 16px;
-  border-bottom:1px solid rgba(229,231,235,.85);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.mapHeader h3{
-  margin:0;
-  font-size: 15px;
-  font-weight: 1000;
-}
-.mapHeader .hint{
-  color: var(--muted);
-  font-weight: 850;
-  font-size: 12px;
-}
-.huMap{
-  height: 420px;
-}
-.mapLegend{
-  padding: 14px 16px 16px;
-  display:grid;
-  gap: 10px;
-}
-.legendItem{
-  display:flex;
-  gap: 10px;
-  align-items:center;
-  padding: 12px 12px;
-  border-radius: 16px;
-  border:1px solid rgba(229,231,235,.9);
-  background: rgba(255,255,255,.95);
-}
-.legendSwatch{
-  width: 12px; height: 12px;
-  border-radius: 4px;
-  background: #3b82f6;
-}
-.legendItem b{font-weight:1000}
-.legendItem span{color:var(--muted); font-weight:850}
 
-/* Students */
-.studentGrid{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-.studentCard{
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(229,231,235,.85);
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  overflow:hidden;
-}
-.avatarRow{
+/* 画像エリア（←ここが最重要） */
+.basicCard .cardMedia{
+  height: clamp(140px, 14vw, 200px); /* PCでもここ以上伸びない */
+  background:#e5e7eb;
+
   display:flex;
   align-items:center;
-  gap: 12px;
-  padding: 16px 16px 12px;
-}
-.avatar{
-  width:44px;height:44px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #dbeafe, #eef2ff);
-  border: 1px solid rgba(229,231,235,.9);
-}
-.studentName{
-  font-weight: 1000;
-  margin:0;
-}
-.studentMeta{
-  margin:0;
-  color: var(--muted);
-  font-weight: 850;
-  font-size: 12px;
-}
-.studentBody{
-  padding: 0 16px 14px;
-  color:#374151;
-  font-weight: 850;
-  font-size: 13px;
-}
-.studentTags{
-  padding: 0 16px 14px;
-  display:flex;
-  flex-wrap:wrap;
-  gap: 8px;
-}
-.studentActions{
-  padding: 14px 16px 16px;
-  border-top:1px solid rgba(229,231,235,.85);
-  display:flex;
-  gap: 10px;
-  flex-wrap:wrap;
-}
-.linkBtn{
-  flex: 1 1 160px;
-  text-align:center;
-  padding: 11px 12px;
-  border-radius: 14px;
-  border:1px solid rgba(229,231,235,.9);
-  background: rgba(255,255,255,.95);
-  font-weight: 1000;
-  text-decoration:none;
-}
-.linkBtn.primary{
-  border:none;
-  background: linear-gradient(135deg, var(--blue), var(--blue2));
-  color:#fff;
-  box-shadow: 0 12px 24px rgba(29,78,216,.22);
+  justify-content:center;
+
+  overflow:hidden;      /* ← ダミー文字を必ず切る */
+  flex-shrink:0;
 }
 
-/* FAQ */
-.faqGrid{
-  display:grid;
-  gap: 10px;
+/* ダミー文字 */
+.basicCard .cardMedia .dummy{
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing:.06em;
+  color:#9ca3af;
+  white-space: nowrap;
+  margin:0;
+  padding: 0 16px;
 }
-.faqItem{
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(229,231,235,.85);
-  box-shadow: 0 10px 22px rgba(17,24,39,.04);
-  border-radius: 18px;
-  overflow:hidden;
+
+/* 文字エリア */
+.basicCard .cardPad{
+  background:#fff;
+  padding: 16px 18px 20px;
+  position:relative;
+  z-index:1;
+
+  margin-top:0 !important;
+  transform:none !important;
 }
-.faqQ{
-  width:100%;
-  text-align:left;
-  padding: 14px 16px;
-  border:none;
-  background: rgba(255,255,255,.94);
-  font-weight: 1000;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap: 10px;
-}
-.faqA{
-  padding: 0 16px 16px;
-  color:#374151;
-  font-weight: 850;
+
+/* 上の補足ラベルは不要なので非表示 */
+.basicCard .cardKicker{
   display:none;
 }
-.faqItem.open .faqA{display:block}
-.faqChevron{
-  width:28px;height:28px;
-  border-radius: 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#f3f6ff;
-  border:1px solid rgba(29,78,216,.14);
-}
 
-/* Recruit */
-.recruitCard{
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(229,231,235,.85);
-  box-shadow: var(--shadow);
-  border-radius: 22px;
-  overflow:hidden;
-}
-.recruitHead{
-  padding: 16px 18px;
-  border-bottom:1px solid rgba(229,231,235,.85);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.recruitHead h3{
-  margin:0;
-  font-weight: 1000;
-  font-size: 16px;
-}
-.recruitBody{padding: 14px 18px 18px}
-.twoColsRow{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.formGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 10px;
-}
-.textarea{
-  width:100%;
-  min-height: 120px;
-  border-radius: 14px;
-  border:1px solid rgba(229,231,235,.95);
-  padding: 12px 12px;
-  font-weight: 900;
-  outline:none;
-  background: rgba(255,255,255,.95);
-  resize: vertical;
-}
-.formNote{
-  color: var(--muted);
-  font-weight: 850;
-  font-size: 12px;
-  margin-top: 8px;
-}
-hr.sep{
-  border:none;
-  border-top:1px solid rgba(229,231,235,.85);
-  margin: 14px 0;
-}
-
-/* Contact */
-.contactCard{
-  background: rgba(255,255,255,.92);
-  border:1px solid rgba(229,231,235,.85);
-  box-shadow: var(--shadow);
-  border-radius: 22px;
-  overflow:hidden;
-}
-.contactInner{
-  padding: 16px 18px 18px;
-  display:grid;
-  gap: 10px;
-}
-.kvRow{
-  display:flex;
-  gap: 10px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-.kvRow b{font-weight:1000}
-.kvRow a{
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(29,78,216,.18);
-  background: rgba(255,255,255,.95);
-  font-weight: 1000;
-  text-decoration:none;
-}
-
-/* SNS */
-.snsGrid{
-  display:grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-}
-.snsBtn{
-  display:flex;
-  gap: 10px;
-  align-items:center;
-  padding: 12px 12px;
-  border-radius: 18px;
-  border:1px solid rgba(229,231,235,.92);
-  background: rgba(255,255,255,.92);
-  box-shadow: 0 10px 22px rgba(17,24,39,.05);
-  text-decoration:none;
-}
-.snsIcon{
-  width:34px;height:34px;
-  display:flex;align-items:center;justify-content:center;
-  border-radius:12px;
-  background:#f3f6ff;
-  border:1px solid rgba(29,78,216,.18);
+.cardTitle{
   font-size:18px;
-}
-.snsLabel{font-weight:950; color:#0f2a5a; font-size:12px}
-
-/* Footer */
-.footer{
-  margin-top:28px;
-  text-align:center;
-  color:#6b7280;
   font-weight:900;
+  margin:6px 0 6px;
 }
 
-/* Responsive */
+.cardDesc{
+  font-size:13px;
+  color:#374151;
+  margin-bottom:14px;
+}
+
+.smallBtn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding: 10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(229,231,235,.9);
+  background:#fff;
+  font-weight:900;
+  text-decoration:none;
+}
+
+/* =========================
+   レスポンシブ
+========================= */
 @media (max-width: 980px){
-  .grid3{grid-template-columns:1fr}
-  .mapLayout{grid-template-columns:1fr}
-  .miniToc{right:12px; top:12px}
-  .tocPanel{width: 86vw; max-width:320px}
-  .huMap{height:360px}
-  .twoColsRow{grid-template-columns:1fr}
-  .formGrid{grid-template-columns:1fr}
-  .snsGrid{grid-template-columns: repeat(3, minmax(0, 1fr));}
+  .grid3{
+    grid-template-columns:1fr;
+  }
 }
-
-/* ===== PATCH: 全体像3カードの画像が文字に被らないように調整 ===== */
-.basicCard{
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;          /* 角丸から画像がはみ出さない */
-}
-
-/* ダミー画像：文字にかからないサイズ制御 */
-.basicCard img{
-  width: 100%;
-  height: clamp(140px, 14vw, 200px); /* スマホ:約140px / PCでも最大200px */
-  object-fit: cover;
-  display: block;
-  flex-shrink: 0;
-}
-
-/* 画像の次＝本文エリアは必ず白背景で下に */
-.basicCard img + *{
-  background: #fff;
-  padding: 16px 18px 20px;
-  position: relative;
-  z-index: 1;
-  margin-top: 0 !important;
-  transform: none !important;
-}
-
-/* ===== 全体像3カード：画像エリアを抑える（本命） ===== */
-.basicCard{
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* 画像エリア（ダミー含む） */
-.basicCard .cardMedia{
-  height: clamp(140px, 14vw, 200px); /* PCでもデカくならない */
-  flex-shrink: 0;
-}
-
-/* ダミー文字の見た目調整 */
-.basicCard .cardMedia .dummy{
-  font-size: clamp(32px, 4vw, 56px); /* 文字が暴れない */
-  letter-spacing: .06em;
-}
-
-/* 文字エリアは必ず下・白背景 */
-.basicCard .cardPad{
-  background: #fff;
-  position: relative;
-  z-index: 1;
-}
-

@@ -29,6 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------------------------
+  // Recruit: 「申し込みフォームへ」ボタンでアコーディオンを開く
+  // ----------------------------
+  const openRecruitFormBtn = document.getElementById("openRecruitForm");
+  const recruitAccordionEl = document.getElementById("recruitAccordion");
+
+  if (openRecruitFormBtn && recruitAccordionEl) {
+    openRecruitFormBtn.addEventListener("click", () => {
+      recruitAccordionEl.open = true; // details を開く
+      recruitAccordionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById("rf_name")?.focus();
+    });
+  }
+
+  // ----------------------------
   // Elements
   // ----------------------------
   const keywordInput = document.getElementById("keyword");
@@ -42,19 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const noResultsEl = document.getElementById("noResults");
 
   // Contact (email only)
-  const contactEmailEl = document.getElementById("contactEmail");
-  // SNS area (separate)
+  const contactEmailLink = document.getElementById("contactEmailLink");
+  const contactEmailText = document.getElementById("contactEmailText");
+
+  // SNS area
   const snsGridEl = document.getElementById("snsGrid");
 
-  // Recruit accordion form
-  const recruitToggleBtn = document.getElementById("recruitToggleBtn");
-  const recruitFormWrap = document.getElementById("recruitFormWrap");
+  // Recruit form
   const recruitForm = document.getElementById("recruitForm");
-  const rfName = document.getElementById("rfName");
-  const rfUni = document.getElementById("rfUniversity");
-  const rfYear = document.getElementById("rfYear");
-  const rfEmail = document.getElementById("rfEmail");
-  const rfNote = document.getElementById("rfNote");
+  const rfName = document.getElementById("rf_name");
+  const rfUni = document.getElementById("rf_uni");
+  const rfYear = document.getElementById("rf_year");
+  const rfEmail = document.getElementById("rf_email");
+  const rfNote = document.getElementById("rf_note");
 
   // Map
   const mapEl = document.getElementById("huMap");
@@ -154,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("article");
       card.className = `studentCard${disabled ? " disabled" : ""}`;
 
-      // NOTE: 上部の「大学名/地域/分野」は消す（下の metaBox にまとめる）
       card.innerHTML = `
         <div class="studentTop">
           <div class="avatar" aria-label="アバター">
@@ -313,20 +326,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const cfg = await res.json();
 
     // Contact: email only
-    if (contactEmailEl) {
-      const email = cfg.email || "";
-      contactEmailEl.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
-      contactEmailEl.innerHTML = `
-        <span class="mailIcon">✉️</span>
-        <span class="mailText">${esc(email || "設定中")}</span>
-      `;
+    if (contactEmailLink && contactEmailText) {
+      const email = String(cfg.email || "").trim();
+      contactEmailLink.href = email ? `mailto:${encodeURIComponent(email)}` : "#";
+      contactEmailText.textContent = email || "設定中";
     }
 
-    // SNS area (separate section): include YouTube/Instagram/Facebook + add X/note if exists
+    // SNS
     if (snsGridEl) {
       snsGridEl.innerHTML = "";
-
       const socials = Array.isArray(cfg.socials) ? cfg.socials : [];
+
       socials.forEach((s) => {
         const a = document.createElement("a");
         a.className = "snsItem";
@@ -343,7 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Recruit mailto target
     if (recruitForm) {
-      recruitForm.dataset.mailto = cfg.email || "";
+      recruitForm.dataset.mailto = String(cfg.email || "").trim();
     }
   }
 
@@ -365,29 +375,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
 
   // ----------------------------
-  // Recruit accordion + mailto submit
+  // Recruit mailto submit
   // ----------------------------
-  function openRecruitForm() {
-    if (!recruitFormWrap) return;
-    recruitFormWrap.classList.remove("isHidden");
-    recruitFormWrap.scrollIntoView({ behavior: "smooth", block: "start" });
-    rfName?.focus();
-  }
-  function toggleRecruitForm() {
-    if (!recruitFormWrap) return;
-    const hidden = recruitFormWrap.classList.toggle("isHidden");
-    if (!hidden) openRecruitForm();
-  }
-
-  if (recruitToggleBtn) {
-    recruitToggleBtn.addEventListener("click", () => {
-      // accordion
-      if (!recruitFormWrap) return;
-      if (recruitFormWrap.classList.contains("isHidden")) openRecruitForm();
-      else recruitFormWrap.classList.add("isHidden");
-    });
-  }
-
   function buildRecruitMailto() {
     const to = (recruitForm?.dataset?.mailto || "").trim();
 
@@ -413,8 +402,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     const body = bodyLines.join("\n");
-
-    // fallback: if config email missing, just open a draft to self (no to)
     const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     return mailto;
   }
@@ -422,13 +409,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (recruitForm) {
     recruitForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      // minimal required: email field
+
       const email = rfEmail?.value?.trim() || "";
       if (!email) {
         alert("メールアドレス（折り返し連絡用）を入力してください。");
         rfEmail?.focus();
         return;
       }
+
+      // config.json に email が未設定でも下書き画面は開く（宛先空）
       window.location.href = buildRecruitMailto();
     });
   }
@@ -514,7 +503,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function setClearUniVisibility(show) {
-    // 「検索条件をクリア」= clearUniFilter は、大学一覧が出た時だけ表示
     if (!clearUniBtn) return;
     clearUniBtn.style.display = show ? "inline-flex" : "none";
   }
@@ -539,7 +527,6 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.className = "uniBtn";
       btn.textContent = u.name;
 
-      // 大学名クリック → 自動で検索して現役生へ
       btn.addEventListener("click", () => {
         setPickedUniversity(u.name);
         if (keywordInput) keywordInput.value = u.name;
@@ -551,8 +538,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     uniListEl.appendChild(group);
-
-    // clear button appears only after list shown
     setClearUniVisibility(true);
   }
 
@@ -564,7 +549,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (clearUniBtn) {
-    // initial hidden until list shown
     setClearUniVisibility(false);
 
     clearUniBtn.addEventListener("click", () => {
@@ -611,7 +595,6 @@ document.addEventListener("DOMContentLoaded", () => {
       marker.on("mouseover", () => marker.setStyle({ radius: 12, weight: 3, fillOpacity: 0.9 }));
       marker.on("mouseout", () => marker.setStyle({ radius: 8, weight: 2, fillOpacity: 0.7 }));
 
-      // スマホはタップ=clickでOK
       marker.on("click", () => {
         renderUniversityList(city, list);
         document.getElementById("mapSearch")?.scrollIntoView({ behavior: "smooth", block: "start" });

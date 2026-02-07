@@ -3,82 +3,34 @@
     "id": "stu-001",
     "enabled": true,
     "featured": true,
-
     "name": "Taro",
     "ageDecade": "30代",
-
     "university": "Eötvös Loránd University",
     "region": "ブダペスト",
     "course": "社会系",
     "major": "International Relations",
     "year": "修士課程 1年",
-
-    "language": "英語（授業） / ハンガリー語（日常）",
-    "meeting": "Zoom（40分）",
-
-    "stipendium": {
-      "has": true,
-      "name": "Stipendium Hungaricum"
-    },
-
-    "bio": "日本で10年社会人経験後、ハンガリーに留学。生活費・大学選び・社会人留学のリアルを中心にお話しできます。",
-
-    "tags": [
-      "社会人留学",
-      "奨学金",
-      "修士課程",
-      "ヨーロッパ大学"
-    ],
-
-    "avatar": "https://placehold.co/300x300/png?text=Taro",
-
-    "bookingUrl": "https://calendly.com/sample-user/40min",
-
-    "links": [
-      {
-        "label": "X",
-        "url": "https://x.com/example"
-      },
-      {
-        "label": "note",
-        "url": "https://note.com/example"
-      }
-    ]
+    "stipendium": { "has": true, "name": "Stipendium Hungaricum" },
+    "bio": "社会人経験後に進学。生活費・住まい・出願準備のリアルを共有できます。",
+    "tags": ["社会人留学", "奨学金", "修士課程"],
+    "avatar": "https://placehold.co/400x400/png?text=Taro",
+    "bookingUrl": "https://calendly.com/example/40min"
   },
-
   {
     "id": "stu-002",
     "enabled": true,
     "featured": true,
-
     "name": "Mika",
     "ageDecade": "20代",
-
     "university": "University of Szeged",
     "region": "セゲド",
     "course": "医学部",
     "major": "General Medicine",
     "year": "学士課程 3年",
-
-    "language": "英語",
-    "meeting": "Zoom（40分）",
-
-    "stipendium": {
-      "has": false
-    },
-
-    "bio": "医学部進学を目指す方向けに、入試・勉強量・現地生活の実情をお話しできます。",
-
-    "tags": [
-      "医学部",
-      "学士課程",
-      "英語医学部"
-    ],
-
-    "avatar": "https://placehold.co/300x300/png?text=Mika",
-
-    "bookingUrl": "https://calendly.com/sample-user2/40min",
-
-    "links": []
+    "stipendium": { "has": false },
+    "bio": "医学部進学志望向けに、勉強量・生活・入学準備の話ができます。",
+    "tags": ["医学部", "英語プログラム"],
+    "avatar": "https://placehold.co/400x400/png?text=Mika",
+    "bookingUrl": "https://calendly.com/example2/40min"
   }
 ]

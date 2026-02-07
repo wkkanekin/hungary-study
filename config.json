@@ -1,5 +1,5 @@
+// config.json
 {
-  "formUrl": "https://forms.gle/xxxxxxxxxx",
   "email": "contact@example.com",
   "socials": [
     {

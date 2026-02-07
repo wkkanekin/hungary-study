@@ -17,25 +17,28 @@
 </head>
 
 <body>
-  <!-- Right-top mini TOC -->
-  <div class="miniToc" aria-label="ページ目次">
-    <button class="tocBtn" id="tocToggle" type="button" aria-expanded="false">
-      ☰ <span>目次</span>
-    </button>
+  <!-- Sticky Top Bar + Horizontal TOC -->
+  <header class="topBar" aria-label="固定ヘッダー">
+    <div class="topBarInner">
+      <a href="#top" class="topBrand" aria-label="トップへ戻る">
+        <span class="topBrandLogo" aria-hidden="true">HU</span>
+        <span class="topBrandText">ハンガリー留学相談</span>
+      </a>
 
-    <nav class="tocPanel" id="tocPanel" aria-label="目次">
-      <a href="#service">サービス内容</a>
-      <a href="#flow">相談の流れ</a>
-      <a href="#basics-cards">全体像</a>
-      <a href="#search">現役生を探す</a>
-      <a href="#mapSearch">地図から探す</a>
-      <a href="#students">現役生一覧</a>
-      <a href="#faq">FAQ</a>
-      <a href="#recruit">現役生募集中</a>
-      <a href="#contact">お問い合わせ</a>
-      <a href="#sns">SNS・外部リンク</a>
-    </nav>
-  </div>
+      <nav class="topNav" aria-label="横目次">
+        <a href="#service">サービス</a>
+        <a href="#flow">流れ</a>
+        <a href="#basics-cards">全体像</a>
+        <a href="#search">検索</a>
+        <a href="#mapSearch">地図</a>
+        <a href="#students">現役生</a>
+        <a href="#faq">FAQ</a>
+        <a href="#recruit">募集</a>
+        <a href="#contact">問い合わせ</a>
+        <a href="#sns">SNS</a>
+      </nav>
+    </div>
+  </header>
 
   <div class="container">
     <!-- Header -->
@@ -267,12 +270,12 @@
 
     <!-- Students -->
     <section class="section" id="students">
-      <h2 class="secTitle">現役生一覧（順次追加予定）</h2>
+      <h2 class="secTitle">現役生一覧</h2>
 
       <div id="noResults" class="card emptyCard" style="display:none;">
         <h3 class="emptyTitle">現在、該当する現役生が見つかりませんでした。</h3>
         <p class="muted emptyText">
-          現役生は順次追加予定です。<br />
+          条件を変えて再検索してください。<br />
           現役生として参加したい方は <a href="#recruit" class="inlineLink">現役生募集中</a> をご確認ください。
         </p>
       </div>
@@ -324,7 +327,7 @@
 
         <!-- Accordion form -->
         <details class="recruitAccordion" id="recruitAccordion">
-          <summary>申し込みフォーム（開く）</summary>
+          <summary class="srOnly">申し込みフォーム</summary>
 
           <form id="recruitForm" class="recruitForm" autocomplete="on">
             <div class="formGrid">

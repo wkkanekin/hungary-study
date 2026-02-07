@@ -1,44 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------
-  // Mini TOC
-  // ----------------------------
-  const tocToggle = document.getElementById("tocToggle");
-  const tocPanel = document.getElementById("tocPanel");
-  if (tocToggle && tocPanel) {
-    tocToggle.addEventListener("click", () => {
-      const open = tocPanel.classList.toggle("open");
-      tocToggle.setAttribute("aria-expanded", String(open));
-    });
-
-    tocPanel.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
-        tocPanel.classList.remove("open");
-        tocToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      const t = e.target;
-      if (!t) return;
-      const inside = tocPanel.contains(t) || tocToggle.contains(t);
-      if (!inside) {
-        tocPanel.classList.remove("open");
-        tocToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  // ----------------------------
-  // Recruit: 「申し込みフォームへ」ボタンでアコーディオンを開く
+  // Recruit: 「申し込みフォームへ」ボタンでアコーディオンを開閉（2重情報を避ける）
   // ----------------------------
   const openRecruitFormBtn = document.getElementById("openRecruitForm");
   const recruitAccordionEl = document.getElementById("recruitAccordion");
 
   if (openRecruitFormBtn && recruitAccordionEl) {
+    openRecruitFormBtn.setAttribute("aria-expanded", String(!!recruitAccordionEl.open));
+
     openRecruitFormBtn.addEventListener("click", () => {
-      recruitAccordionEl.open = true; // details を開く
-      recruitAccordionEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      document.getElementById("rf_name")?.focus();
+      const willOpen = !recruitAccordionEl.open;
+      recruitAccordionEl.open = willOpen;
+
+      openRecruitFormBtn.textContent = willOpen ? "フォームを閉じる" : "申し込みフォームへ";
+      openRecruitFormBtn.setAttribute("aria-expanded", String(willOpen));
+
+      if (willOpen) {
+        recruitAccordionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("rf_name")?.focus();
+      }
     });
   }
 
@@ -113,6 +93,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function isEnabled(stu) {
     return !!stu.enabled;
+  }
+
+  // 初期表示を短くするため「おすすめ」を最大2件だけ出す
+  function getFeaturedStudents(max = 2) {
+    const featured = students.filter((s) => !!s.enabled && !!s.featured);
+    if (featured.length) return featured.slice(0, max);
+    return students.filter((s) => !!s.enabled).slice(0, max);
+  }
+
+  function hasAnySearchCondition() {
+    const kw = norm(keywordInput?.value);
+    const region = regionFilter?.value || "";
+    const course = courseFilter?.value || "";
+    return !!(kw || region || course || pickedUniversityName);
   }
 
   function buildSearchText(stu) {
@@ -204,6 +198,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function applyFilterAndJump() {
+    // 条件が無い場合は「おすすめ」だけ表示してLPを短く
+    if (!hasAnySearchCondition()) {
+      renderStudents(getFeaturedStudents(2));
+      scrollToStudents();
+      return;
+    }
+
     const kw = norm(keywordInput?.value);
     const region = regionFilter?.value || "";
     const course = courseFilter?.value || "";
@@ -226,8 +227,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (keywordInput) keywordInput.value = "";
     if (regionFilter) regionFilter.value = "";
     if (courseFilter) courseFilter.value = "";
+
+    pickedUniversityName = "";
+    if (pickedUniEl) pickedUniEl.textContent = "未選択";
+
     closeSuggest();
-    renderStudents(students);
+    renderStudents(getFeaturedStudents(2));
   }
 
   // ----------------------------
@@ -317,7 +322,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!Array.isArray(data)) throw new Error("students.json の形式が不正です（配列にしてください）");
     students = data;
     suggestPool = buildSuggestPool(students);
-    renderStudents(students);
+
+    // 初期表示は「おすすめ」だけ（最大2）
+    renderStudents(getFeaturedStudents(2));
   }
 
   async function loadConfig() {
@@ -417,7 +424,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // config.json に email が未設定でも下書き画面は開く（宛先空）
       window.location.href = buildRecruitMailto();
     });
   }

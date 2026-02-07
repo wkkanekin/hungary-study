@@ -688,3 +688,63 @@ details p{
   .formGrid{grid-template-columns:1fr}
   .snsGrid{grid-template-columns: repeat(3, minmax(0, 1fr));}
 }
+
+/* Sticky top header + horizontal TOC */
+.topBar{
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: rgba(244,246,251,.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(229,231,235,.85);
+}
+
+.topBarInner{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topBrand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 950;
+  color: #0f2a5a;
+  flex: 0 0 auto;
+}
+.topBrandLogo{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(29,78,216,.10);
+  border: 1px solid rgba(29,78,216,.18);
+}
+.topBrandText{ white-space: nowrap; }
+
+.topNav{
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  flex: 1 1 auto;
+  padding-bottom: 2px;
+}
+.topNav a{
+  text-decoration: none;
+  font-weight: 900;
+  color: #0f2a5a;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(229,231,235,.9);
+  background: rgba(255,255,255,.75);
+  white-space: nowrap;
+}
+.topNav a:hover{ background: #f3f6ff; }

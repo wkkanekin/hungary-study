@@ -62,12 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const applyMapSearchBtn = document.getElementById("applyMapSearch");
   const pickedUniEl = document.getElementById("pickedUni");
 
+  // Images (Hero / Basics / SNS icons)
+  const heroLogoImg = document.getElementById("heroLogo");
+  const basicImgHungary = document.getElementById("basicImg_hungary");
+  const basicImgUniversity = document.getElementById("basicImg_university");
+  const basicImgScholarship = document.getElementById("basicImg_scholarship");
+
   // ----------------------------
   // Data stores
   // ----------------------------
   let students = [];
   let suggestPool = [];
   let pickedUniversityName = "";
+
+  let imagesCfg = null;
+  let snsIconStore = {}; // label -> {type, svg, url}
 
   // ----------------------------
   // Helpers
@@ -139,9 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  function isPlaceholderUrl(url) {
-    const u = String(url ?? "").trim();
-    return !u || u === "#" || u.toLowerCase() === "todo" || u.toLowerCase() === "tbd";
+  function isLinkReady(linkObj) {
+    if (typeof linkObj?.ready === "boolean") return linkObj.ready;
+    return true;
   }
 
   function renderStudents(list) {
@@ -163,17 +172,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const tagsHtml = (stu.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
 
+      // ✅ note / YouTube などを ready:false で「準備中」表示にできる
       const linksHtml = (stu.links || [])
         .filter((l) => l && l.label)
         .map((l) => {
-          const label = String(l.label || "").trim() || "リンク";
-          const url = String(l.url || "").trim();
+          const label = String(l.label || "");
+          const ready = isLinkReady(l);
+          const url = String(l.url || "#");
 
-          if (isPlaceholderUrl(url)) {
-            // ✅ note / YouTube など未準備は「準備中」で表示
+          if (!ready) {
             return `<span class="linkPill disabled" aria-disabled="true">${esc(label)}（準備中）</span>`;
           }
-
+          if (!l.url) {
+            return `<span class="linkPill disabled" aria-disabled="true">${esc(label)}（設定中）</span>`;
+          }
           return `<a class="linkPill" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
         })
         .join("");
@@ -224,7 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Students list controls
   // ----------------------------
   function applyFilterAndJump() {
-    // 条件が無い場合は「おすすめ」だけ表示してLPを短く
     if (!hasAnySearchCondition()) {
       const featured = getFeaturedStudents(2);
       renderStudents(featured);
@@ -268,7 +279,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showAllStudents() {
-    // 「全登録者を一覧で見たい」用：検索条件に関係なく全員表示
     renderStudents(students);
     setHitLabel(`全学生：${students.length}名`);
     scrollToStudents();
@@ -351,13 +361,43 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------------------------
+  // JSON loading helpers
+  // ----------------------------
+  async function fetchText(url) {
+    const u = new URL(url, location.href).toString();
+    const res = await fetch(u, { cache: "no-store" });
+    if (!res.ok) {
+      const t = await res.text().catch(() => "");
+      throw new Error(`${url} fetch失敗: ${res.status} ${res.statusText} / body=${t.slice(0, 120)}`);
+    }
+    return await res.text();
+  }
+
+  function stripBOM(s) {
+    // UTF-8 BOM(\\uFEFF) を除去
+    if (!s) return s;
+    return s.charCodeAt(0) === 0xfeff ? s.slice(1) : s;
+  }
+
+  function safeJsonParse(text, filenameForMsg) {
+    const raw = stripBOM(String(text ?? ""));
+    try {
+      return JSON.parse(raw);
+    } catch (e) {
+      const head = raw.slice(0, 180).replaceAll("\n", "\\n");
+      throw new Error(`${filenameForMsg} JSONパース失敗: ${e?.message || e} / 先頭=${head}`);
+    }
+  }
+
+  // ----------------------------
   // Load JSON
   // ----------------------------
   async function loadStudents() {
-    const res = await fetch("students.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("students.json が読み込めません: " + res.status);
-    const data = await res.json();
-    if (!Array.isArray(data)) throw new Error("students.json の形式が不正です（配列にしてください）");
+    const txt = await fetchText("students.json");
+    const data = safeJsonParse(txt, "students.json");
+    if (!Array.isArray(data)) {
+      throw new Error(`students.json の形式が不正です（配列にしてください）。type=${typeof data}`);
+    }
 
     students = data;
     suggestPool = buildSuggestPool(students);
@@ -367,10 +407,95 @@ document.addEventListener("DOMContentLoaded", () => {
     setHitLabel(`おすすめ：${featured.length}名`);
   }
 
+  async function tryLoadImagesAny() {
+    const candidates = [
+      "images.json",
+      "Images.json",
+      "IMAGES.json",
+      "imiges.json",
+      "imiges.Json",
+      "Imiges.json",
+      "imiges.JSON",
+    ];
+    for (const filename of candidates) {
+      try {
+        const txt = await fetchText(filename);
+        const cfg = safeJsonParse(txt, filename);
+        return cfg;
+      } catch (e) {
+        // 次候補へ
+      }
+    }
+    return null;
+  }
+
+  async function loadImagesOptional() {
+    const cfg = await tryLoadImagesAny();
+    if (!cfg) {
+      console.warn("images.json（または代替名）が見つかりません。画像はデフォルトで動作します。");
+      imagesCfg = null;
+      snsIconStore = {};
+      return;
+    }
+
+    imagesCfg = cfg || null;
+
+    const snsIcons = cfg?.snsIcons && typeof cfg.snsIcons === "object" ? cfg.snsIcons : {};
+    snsIconStore = snsIcons || {};
+
+    applyImages(cfg);
+  }
+
+  function applyImages(cfg) {
+    if (!cfg || typeof cfg !== "object") return;
+
+    // Hero bg
+    const heroUrl = String(cfg?.hero?.imageUrl || "").trim();
+    if (heroUrl) {
+      document.documentElement.style.setProperty("--hero-image", `url("${heroUrl}")`);
+    }
+
+    // Hero logo
+    const logoUrl = String(cfg?.hero?.logoUrl || "").trim();
+    const logoAlt = String(cfg?.hero?.logoAlt || "HU").trim();
+    if (heroLogoImg) {
+      if (logoUrl) heroLogoImg.src = logoUrl;
+      heroLogoImg.alt = logoAlt || "HU";
+    }
+
+    // Basics cards images
+    const cards = Array.isArray(cfg?.basicsCards) ? cfg.basicsCards : [];
+    const map = new Map();
+    cards.forEach((c) => {
+      const id = String(c?.id || "").trim();
+      if (!id) return;
+      map.set(id, c);
+    });
+
+    const cHungary = map.get("hungary");
+    if (basicImgHungary && cHungary?.imageUrl) {
+      basicImgHungary.src = String(cHungary.imageUrl);
+      basicImgHungary.alt = String(cHungary.alt || basicImgHungary.alt || "ハンガリーについて");
+    }
+
+    const cUniversity = map.get("university");
+    if (basicImgUniversity && cUniversity?.imageUrl) {
+      basicImgUniversity.src = String(cUniversity.imageUrl);
+      basicImgUniversity.alt = String(cUniversity.alt || basicImgUniversity.alt || "大学の探し方");
+    }
+
+    const cScholarship = map.get("scholarship");
+    if (basicImgScholarship && cScholarship?.imageUrl) {
+      basicImgScholarship.src = String(cScholarship.imageUrl);
+      basicImgScholarship.alt = String(
+        cScholarship.alt || basicImgScholarship.alt || "奨学金（スティペンディウム・ハンガリカム）"
+      );
+    }
+  }
+
   async function loadConfig() {
-    const res = await fetch("config.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("config.json が読み込めません: " + res.status);
-    const cfg = await res.json();
+    const txt = await fetchText("config.json");
+    const cfg = safeJsonParse(txt, "config.json");
 
     if (contactEmailLink && contactEmailText) {
       const email = String(cfg.email || "").trim();
@@ -389,7 +514,7 @@ document.addEventListener("DOMContentLoaded", () => {
         a.target = "_blank";
         a.rel = "noopener";
         a.innerHTML = `
-          <div class="snsIcon">${iconSvgForLabel(s.label)}</div>
+          <div class="snsIcon">${iconForLabel(s.label)}</div>
           <div class="snsLabel">${esc(s.label || "SNS")}</div>
         `;
         snsGridEl.appendChild(a);
@@ -401,63 +526,100 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function iconSvgForLabel(label) {
-    const l = norm(label);
+  // ✅ SNSアイコン：images.json の svg/url を優先 → なければフォールバック
+  function iconForLabel(label) {
+    const rawLabel = String(label || "").trim();
+    const keyExact = rawLabel;
+    const keyLower = norm(rawLabel);
 
-    // YouTube
+    // 1) images.json の完全一致キー
+    const iconExact = snsIconStore?.[keyExact];
+    if (iconExact) return iconFromStore(iconExact);
+
+    // 2) images.json の大小無視マッチ（YouTube / youtube など）
+    if (snsIconStore && typeof snsIconStore === "object") {
+      for (const k of Object.keys(snsIconStore)) {
+        if (norm(k) === keyLower) {
+          return iconFromStore(snsIconStore[k]);
+        }
+      }
+    }
+
+    // 3) フォールバック（軽量SVG）
+    const l = keyLower;
+
     if (l.includes("youtube")) {
       return `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8z"/>
+          <path d="M10 15.5V8.5L16 12l-6 3.5z" fill="white"/>
         </svg>
       `;
     }
 
-    // Instagram（簡易カメラ）
     if (l.includes("instagram")) {
       return `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/>
-          <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-          <path d="M17.5 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+          <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" fill="white"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
         </svg>
       `;
     }
 
-    // Facebook
     if (l.includes("facebook")) {
       return `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M14 8.5V7.3c0-.8.5-1 1-1h2V3h-3c-2.5 0-4 1.6-4 4v1.5H8v3h2v9h4v-9h3l.5-3H14z"/>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.7V4.9c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.6V11H7.1v3h2.5v8h3.9z"/>
         </svg>
       `;
     }
 
-    // X（旧Twitter含む）
     if (l === "x" || l.includes("twitter")) {
       return `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-6.7L5.3 22H2l7.3-8.4L1 2h6.9l4.7 6.1L18.9 2zm-1.2 18h1.8L6.2 4H4.3l13.4 16z"/>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18.9 2H22l-6.8 7.8L23 22h-6.4l-5-6.6L5.7 22H2l7.4-8.5L1 2h6.6l4.5 5.9L18.9 2z"/>
         </svg>
       `;
     }
 
-    // note（nっぽい簡易）
     if (l.includes("note")) {
       return `
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M6 4h3.2l5.6 10.4V4H18v16h-3.2L9.2 9.6V20H6V4z"/>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 3h9l3 3v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+          <path d="M15 3v4a1 1 0 0 0 1 1h4" fill="white"/>
+          <path d="M7.5 11h9M7.5 14h9M7.5 17h6.5" stroke="white" stroke-width="1.6" stroke-linecap="round" fill="none"/>
         </svg>
       `;
     }
 
-    // default link
     return `
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.6-3.6a3 3 0 0 1 4.2 4.2l-1.6 1.6a1 1 0 1 1-1.4-1.4l1.6-1.6a1 1 0 1 0-1.4-1.4l-3.6 3.6a1 1 0 0 1-1.4 0z"/>
-        <path d="M13.4 10.6a1 1 0 0 1 0 1.4l-3.6 3.6a3 3 0 0 1-4.2-4.2l1.6-1.6a1 1 0 1 1 1.4 1.4l-1.6 1.6a1 1 0 1 0 1.4 1.4l3.6-3.6a1 1 0 0 1 1.4 0z"/>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10.6 13.4a1 1 0 0 0 1.4 0l3.6-3.6a3 3 0 1 0-4.2-4.2l-1.8 1.8 1.4 1.4 1.8-1.8a1 1 0 0 1 1.4 1.4l-3.6 3.6a1 1 0 0 1-1.4 0 1 1 0 0 1 0-1.4l.6-.6-1.4-1.4-.6.6a3 3 0 1 0 4.2 4.2z"/>
+        <path d="M13.4 10.6a1 1 0 0 0-1.4 0l-3.6 3.6a3 3 0 1 0 4.2 4.2l1.8-1.8-1.4-1.4-1.8 1.8a1 1 0 0 1-1.4-1.4l3.6-3.6a1 1 0 0 1 1.4 0 1 1 0 0 1 0 1.4l-.6.6 1.4 1.4.6-.6a3 3 0 1 0-4.2-4.2z"/>
       </svg>
     `;
+  }
+
+  function iconFromStore(iconObj) {
+    const type = String(iconObj?.type || "").trim().toLowerCase();
+
+    if (type === "svg") {
+      const svg = String(iconObj?.svg || "").trim();
+      return svg || "";
+    }
+
+    if (type === "img") {
+      const url = String(iconObj?.url || "").trim();
+      const alt = String(iconObj?.alt || "").trim() || "icon";
+      if (!url) return "";
+      return `<img src="${esc(url)}" alt="${esc(alt)}" style="width:18px;height:18px;display:block;object-fit:contain;" />`;
+    }
+
+    const svgFallback = String(iconObj?.svg || "").trim();
+    if (svgFallback) return svgFallback;
+
+    return "";
   }
 
   // ----------------------------
@@ -650,7 +812,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function initMap() {
-    if (!mapEl || !window.L) return;
+    if (!mapEl) return;
+    if (!window.L) {
+      if (mapStatusEl) mapStatusEl.textContent = "地図ライブラリの読み込みに失敗";
+      return;
+    }
 
     if (mapStatusEl) mapStatusEl.textContent = "準備中…";
 
@@ -688,7 +854,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cityCount++;
     });
 
-    // ✅ 「都市マーカー」→「都市」表記へ変更
     if (mapCountsEl) {
       mapCountsEl.style.display = "inline-flex";
       mapCountsEl.textContent = `都市：${cityCount} / 大学：${universities.length}`;
@@ -700,18 +865,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // Boot
   // ----------------------------
   (async () => {
+    // images は任意
     try {
-      await Promise.all([loadStudents(), loadConfig()]);
+      await loadImagesOptional();
+    } catch (e) {
+      console.warn("images.json 読み込みでエラー（無視して続行）:", e);
+    }
+
+    // students（ここが今落ちてる）
+    try {
+      await loadStudents();
+    } catch (e) {
+      console.error(e);
+
+      const msg = (e && e.message) ? e.message : String(e);
+
+      if (studentListEl) {
+        studentListEl.innerHTML = `<div class="card" style="padding:16px">
+          <div style="font-weight:950;color:#0f2a5a">現役生一覧の読み込みに失敗しました</div>
+          <div class="muted" style="font-weight:850; margin-top:6px">原因：</div>
+          <div style="margin-top:6px;white-space:pre-wrap;font-weight:850;color:#374151">${esc(msg)}</div>
+        </div>`;
+      }
+      setHitLabel("");
+    }
+
+    // config（多少落ちても致命傷じゃない）
+    try {
+      await loadConfig();
+    } catch (e) {
+      console.error(e);
+    }
+
+    // map
+    try {
       initMap();
     } catch (e) {
       console.error(e);
-      if (mapStatusEl) mapStatusEl.textContent = "読み込み失敗";
-      if (studentListEl) {
-        studentListEl.innerHTML = `<div class="card" style="padding:16px">
-          <div style="font-weight:950;color:#0f2a5a">読み込みに失敗しました</div>
-          <div class="muted" style="font-weight:850; margin-top:6px">students.json / config.json の配置・ファイル名を確認してください。</div>
-        </div>`;
-      }
+      if (mapStatusEl) mapStatusEl.textContent = "地図の初期化でエラー";
     }
   })();
 });

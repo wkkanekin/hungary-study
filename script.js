@@ -139,6 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  function isPlaceholderUrl(url) {
+    const u = String(url ?? "").trim();
+    return !u || u === "#" || u.toLowerCase() === "todo" || u.toLowerCase() === "tbd";
+  }
+
   function renderStudents(list) {
     if (!studentListEl) return;
     studentListEl.innerHTML = "";
@@ -159,8 +164,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const tagsHtml = (stu.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
 
       const linksHtml = (stu.links || [])
-        .filter((l) => l && l.label && l.url)
-        .map((l) => `<a class="linkPill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`)
+        .filter((l) => l && l.label)
+        .map((l) => {
+          const label = String(l.label || "").trim() || "リンク";
+          const url = String(l.url || "").trim();
+
+          if (isPlaceholderUrl(url)) {
+            // ✅ note / YouTube など未準備は「準備中」で表示
+            return `<span class="linkPill disabled" aria-disabled="true">${esc(label)}（準備中）</span>`;
+          }
+
+          return `<a class="linkPill" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
+        })
         .join("");
 
       const bookingBtn = disabled
@@ -213,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!hasAnySearchCondition()) {
       const featured = getFeaturedStudents(2);
       renderStudents(featured);
-      setHitLabel(`ピックアップ：${featured.length}名`);
+      setHitLabel(`おすすめ：${featured.length}名`);
       scrollToStudents();
       return;
     }
@@ -249,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const featured = getFeaturedStudents(2);
     renderStudents(featured);
-    setHitLabel(`ピックアップ：${featured.length}名`);
+    setHitLabel(`おすすめ：${featured.length}名`);
   }
 
   function showAllStudents() {
@@ -349,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const featured = getFeaturedStudents(2);
     renderStudents(featured);
-    setHitLabel(`ピックアップ：${featured.length}名`);
+    setHitLabel(`おすすめ：${featured.length}名`);
   }
 
   async function loadConfig() {
@@ -374,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
         a.target = "_blank";
         a.rel = "noopener";
         a.innerHTML = `
-          <div class="snsIcon">${iconForLabel(s.label)}</div>
+          <div class="snsIcon">${iconSvgForLabel(s.label)}</div>
           <div class="snsLabel">${esc(s.label || "SNS")}</div>
         `;
         snsGridEl.appendChild(a);
@@ -386,14 +401,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function iconForLabel(label) {
+  function iconSvgForLabel(label) {
     const l = norm(label);
-    if (l.includes("youtube")) return "▶️";
-    if (l.includes("instagram")) return "📷";
-    if (l.includes("facebook")) return "📘";
-    if (l === "x" || l.includes("twitter")) return "𝕏";
-    if (l.includes("note")) return "📝";
-    return "🔗";
+
+    // YouTube
+    if (l.includes("youtube")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+        </svg>
+      `;
+    }
+
+    // Instagram（簡易カメラ）
+    if (l.includes("instagram")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/>
+          <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+          <path d="M17.5 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+        </svg>
+      `;
+    }
+
+    // Facebook
+    if (l.includes("facebook")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M14 8.5V7.3c0-.8.5-1 1-1h2V3h-3c-2.5 0-4 1.6-4 4v1.5H8v3h2v9h4v-9h3l.5-3H14z"/>
+        </svg>
+      `;
+    }
+
+    // X（旧Twitter含む）
+    if (l === "x" || l.includes("twitter")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-6.7L5.3 22H2l7.3-8.4L1 2h6.9l4.7 6.1L18.9 2zm-1.2 18h1.8L6.2 4H4.3l13.4 16z"/>
+        </svg>
+      `;
+    }
+
+    // note（nっぽい簡易）
+    if (l.includes("note")) {
+      return `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 4h3.2l5.6 10.4V4H18v16h-3.2L9.2 9.6V20H6V4z"/>
+        </svg>
+      `;
+    }
+
+    // default link
+    return `
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.6-3.6a3 3 0 0 1 4.2 4.2l-1.6 1.6a1 1 0 1 1-1.4-1.4l1.6-1.6a1 1 0 1 0-1.4-1.4l-3.6 3.6a1 1 0 0 1-1.4 0z"/>
+        <path d="M13.4 10.6a1 1 0 0 1 0 1.4l-3.6 3.6a3 3 0 0 1-4.2-4.2l1.6-1.6a1 1 0 1 1 1.4 1.4l-1.6 1.6a1 1 0 1 0 1.4 1.4l3.6-3.6a1 1 0 0 1 1.4 0z"/>
+      </svg>
+    `;
   }
 
   // ----------------------------

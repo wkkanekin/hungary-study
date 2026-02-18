@@ -29,6 +29,11 @@
         "ready": true
       },
       {
+        "label": "英語C1まで上げたオンライン英会話",
+        "url": "https://example.com/affiliate-link?sid=kaneko",
+        "ready": true
+      },
+      {
         "label": "YouTube",
         "url": "https://youtube.com/xxxx",
         "ready": false
@@ -69,6 +74,11 @@
       {
         "label": "大学公式サイト",
         "url": "https://www.elte.hu/en/",
+        "ready": true
+      },
+      {
+        "label": "英語C1まで上げたオンライン英会話",
+        "url": "https://example.com/affiliate-link?sid=airi",
         "ready": true
       },
       {
@@ -115,6 +125,11 @@
         "ready": true
       },
       {
+        "label": "英語B2まで上げたオンライン英会話",
+        "url": "https://example.com/affiliate-link?sid=kenta",
+        "ready": true
+      },
+      {
         "label": "YouTube",
         "url": "https://youtube.com/xxxx",
         "ready": false
@@ -156,6 +171,11 @@
       {
         "label": "大学公式サイト",
         "url": "https://www.ibs-b.hu/en/",
+        "ready": true
+      },
+      {
+        "label": "英語C1まで上げたオンライン英会話",
+        "url": "https://example.com/affiliate-link?sid=yu",
         "ready": true
       }
     ],

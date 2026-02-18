@@ -441,6 +441,26 @@ document.addEventListener("DOMContentLoaded", () => {
       heroLogoImg.alt = logoAlt || "HU";
     }
 
+    // ============================
+    // ✅ FAVICON（images.jsonで管理）
+    // ============================
+    const faviconUrl = String(cfg?.favicon?.url || "").trim();
+    const faviconType = String(cfg?.favicon?.type || "image/png").trim();
+
+    if (faviconUrl) {
+      let link = document.getElementById("dynamicFavicon");
+
+      if (!link) {
+        link = document.createElement("link");
+        link.id = "dynamicFavicon";
+        link.rel = "icon";
+        document.head.appendChild(link);
+      }
+
+      link.type = faviconType;
+      link.href = faviconUrl;
+    }
+
     const cards = Array.isArray(cfg?.basicsCards) ? cfg.basicsCards : [];
     const map = new Map();
     cards.forEach((c) => {
@@ -895,6 +915,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const universities = [
     { name: "Budapest University of Technology and Economics", city: "ブダペスト" },
+    { name: "International Business School, Budapest", city: "ブダペスト" },
     { name: "Corvinus University of Budapest", city: "ブダペスト" },
     { name: "Eötvös Loránd University", city: "ブダペスト" },
     { name: "Semmelweis University", city: "ブダペスト" },

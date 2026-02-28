@@ -1,0 +1,272 @@
+[
+{
+"id": "kaneko",
+"enabled": true,
+"featured": true,
+"name": "カネコ（30代）",
+"region": "ブダペスト",
+"course": "観光マネジメント",
+"university": "Budapest University of Economics and Business",
+"major": "Tourism Management（修士）",
+"entryYear": "2025",
+"year": "修士1年",
+"admissionEnglish": "IELTS 7",
+"selectionFormat": "書類＋面接（オンライン）",
+"timeToPass": "英語対策4年以上＋出願準備1～2ヶ月",
+"previousEducation": "日本の国立大学（理系）卒",
+"workYears": 5,
+"language": "CEFR C1（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": true,
+"name": "スティペンディウム・ハンガリカム"
+},
+"onlineConversation": [
+{
+"label": "IELTS７まで上げたオンライン英会話",
+"url": "",
+"ready": false
+}
+],
+"studyMaterials": [
+{
+"label": "（教材例）IELTS公式問題集",
+"url": "",
+"ready": false
+}
+],
+"bio": "日本の国立大学（理系）卒業後、外資系製薬会社で10年間勤務。30歳を迎えたとき、自分の人生を見つめ直し、長年の夢だった海外大学院進学に挑戦しました。英語は英検2級から再スタートし、フルタイム勤務と両立しながら3年かけてIELTS7.0を取得。その後、英検1級も取得しています。一昨年は奨学金選考で不合格を経験しましたが、書類の構成や志望動機の打ち出し方を見直し、翌年合格。落ちた理由と合格した決定的な違いを具体的に比較しながらお話しできます。"
+"tags": [
+"#社会人留学",
+"#不合格経験"
+"#英語学習",
+"#キャリアチェンジ",
+"#生活費"
+],
+"links": [
+{
+"label": "大学公式サイト",
+"url": "https://www.bge.hu/",
+"ready": true
+}
+],
+"avatar": "images/students/kaneko.jpg",
+"bookingUrl": "https://calendly.com/hungarystudy-info/new-meeting-1"
+},
+
+{
+"id": "airi",
+"enabled": true,
+"featured": false,
+"name": "アイリ（20代）",
+"region": "ブダペスト",
+"course": "社会系",
+"university": "Eötvös Loránd University",
+"major": "Psychology（学士）",
+"entryYear": "",
+"year": "学士3年",
+"admissionEnglish": "",
+"selectionFormat": "",
+"timeToPass": "",
+"previousEducation": "日本の高校 卒",
+"workYears": 0,
+"language": "CEFR C1（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": false,
+"name": ""
+},
+"onlineConversation": [
+{
+"label": "英語学習に使ったオンライン英会話",
+"url": "",
+"ready": false
+}
+],
+"studyMaterials": [
+{
+"label": "使用教材",
+"url": "",
+"ready": false
+}
+],
+"bio": "高校卒業後すぐに単身でハンガリーへ。情報や人脈がない中で苦労した経験から、これから挑戦する人が孤立しないための情報共有を大切にしています。",
+"tags": [
+"#単身留学",
+"#ELTE",
+"#現地生活",
+"#メンタル"
+],
+"links": [
+{
+"label": "大学公式サイト",
+"url": "https://www.elte.hu/en/",
+"ready": true
+}
+],
+"avatar": "https://placehold.co/520x520/png?text=Airi",
+"bookingUrl": "#"
+},
+
+{
+"id": "kenta",
+"enabled": true,
+"featured": false,
+"name": "ケンタ（20代）",
+"region": "セゲド",
+"course": "医学部",
+"university": "University of Szeged",
+"major": "Medicine（学士/MD）",
+"entryYear": "",
+"year": "学士4年",
+"admissionEnglish": "",
+"selectionFormat": "",
+"timeToPass": "",
+"previousEducation": "日本の高校 卒",
+"workYears": 0,
+"language": "CEFR B2（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": false,
+"name": ""
+},
+"onlineConversation": [
+{
+"label": "英語学習に使ったオンライン英会話",
+"url": "",
+"ready": false
+}
+],
+"studyMaterials": [
+{
+"label": "使用教材",
+"url": "",
+"ready": false
+}
+],
+"bio": "医学部の勉強量や試験の厳しさ、日々の学習ルーティン、生活費の実態など、継続してやり切る視点でリアルを共有できます。",
+"tags": [
+"#医学部",
+"#セゲド",
+"#試験対策",
+"#生活費"
+],
+"links": [
+{
+"label": "大学公式サイト",
+"url": "https://u-szeged.hu/english",
+"ready": true
+}
+],
+"avatar": "https://placehold.co/520x520/png?text=Kenta",
+"bookingUrl": "#"
+},
+
+{
+"id": "yu",
+"enabled": true,
+"featured": true,
+"name": "ユウ（20代）",
+"region": "ブダペスト",
+"course": "経営",
+"university": "International Business School, Budapest",
+"major": "Business Management（学士）",
+"entryYear": "2023",
+"year": "学士2年",
+"admissionEnglish": "CEFR C1（英語）",
+"selectionFormat": "書類＋面接（オンライン）",
+"timeToPass": "",
+"previousEducation": "日本の高校 卒",
+"workYears": 0,
+"language": "CEFR C1（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": false,
+"name": ""
+},
+"onlineConversation": [
+{
+"label": "英語学習に使ったオンライン英会話",
+"url": "",
+"ready": false
+}
+],
+"studyMaterials": [
+{
+"label": "使用教材",
+"url": "",
+"ready": false
+}
+],
+"bio": "日本の高校卒業後、IBSへ進学。Business Managementを専攻し、University of Buckinghamとのダブルディグリー課程に在籍しています。英語が得意ではなかった状態から海外大学へ進学した経験をもとに、出願準備・英語力の伸ばし方・授業の難易度などをリアルに共有できます。",
+"tags": [
+"#IBS",
+"#ダブルディグリー",
+"#イギリス学位",
+"#高校卒業後すぐ留学"
+],
+"links": [
+{
+"label": "大学公式サイト",
+"url": "https://www.ibs-b.hu/en/",
+"ready": true
+}
+],
+"avatar": "images/students/yu.jpg",
+"bookingUrl": "https://calendly.com/hungarystudy-info/bueb-40-clone"
+},
+
+{
+"id": "ryota",
+"enabled": true,
+"featured": true,
+"name": "リョウタ（20代）",
+"region": "ジェール",
+"course": "社会系",
+"university": "Széchenyi István University",
+"major": "International Relations BA（学士）",
+"entryYear": "2023",
+"year": "学士2年",
+"admissionEnglish": "CEFR C1（英語）",
+"selectionFormat": "オンラインテスト",
+"timeToPass": "英語対策5ヶ月＋出願準備1ヶ月",
+"previousEducation": "日本の公立高校 卒",
+"workYears": 0,
+"language": "CEFR C1（英語）",
+"meeting": "Zoomのみ",
+"stipendium": {
+"has": true,
+"name": "スティペンディウム・ハンガリカム"
+},
+"onlineConversation": [
+{
+"label": "CEFR C1まで伸ばしたオンライン英会話",
+"url": "",
+"ready": false
+}
+],
+"studyMaterials": [
+{
+"label": "使用教材",
+"url": "",
+"ready": false
+}
+],
+"bio": "日本の公立高校卒業後、Széchenyi István Universityへ進学。International Relationsを専攻。奨学金受給者として、オンラインテストの内容、ジェールでの生活、地方都市留学の実態について具体的に共有できます。",
+"tags": [
+"#高校卒業後すぐ留学",
+"#ジェール生活",
+"#InternationalRelations",
+"#奨学金受給"
+],
+"links": [
+{
+"label": "大学公式サイト",
+"url": "https://uni.sze.hu/",
+"ready": true
+}
+],
+"avatar": "images/students/ryota.jpg",
+"bookingUrl": "https://calendly.com/hungarystudy-info/40-clone"
+}
+]

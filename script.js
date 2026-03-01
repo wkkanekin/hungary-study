@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
  // ----------------------------
  function applyFilterAndJump() {
  if (!hasAnySearchCondition()) {
- const featured = getFeaturedStudents(2);
+ const featured = getFeaturedStudents(3); // ★ 2→3
  renderStudents(featured);
  setHitLabel(`おすすめ：${featured.length}名`);
  scrollToStudents();
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
  closeSuggest();
 
- const featured = getFeaturedStudents(2);
+ const featured = getFeaturedStudents(3); // ★ 2→3
  renderStudents(featured);
  setHitLabel(`おすすめ：${featured.length}名`);
  }
@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
  students = data;
  suggestPool = buildSuggestPool(students);
 
- const featured = getFeaturedStudents(2);
+ const featured = getFeaturedStudents(3); // ★ 2→3
  renderStudents(featured);
  setHitLabel(`おすすめ：${featured.length}名`);
  }

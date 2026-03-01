@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
  return !!stu.enabled;
  }
 
- // 初期表示を短くするため「おすすめ」を最大2件だけ出す
- function getFeaturedStudents(max = 2) {
+ // 初期表示を短くするため「おすすめ」を最大3件だけ出す
+ function getFeaturedStudents(max = 3) {
  const featured = students.filter((s) => !!s.enabled && !!s.featured);
  if (featured.length) return featured.slice(0, max);
  return students.filter((s) => !!s.enabled).slice(0, max);

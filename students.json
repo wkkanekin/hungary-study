@@ -266,60 +266,58 @@
     "bookingUrl": "https://calendly.com/hungarystudy-info/40-clone"
   },
   {
-    "id": "okada",
-    "enabled": true,
-    "featured": true,
-    "name": "岡田（20代）",
-    "region": "デブレツェン",
-    "course": "理系",
-    "university": "University of Debrecen",
-    "major": "Computer Science（学士）",
-    "entryYear": "2025",
-    "year": "学士1年",
-    "admissionEnglish": "IELTS 6.5",
-    "selectionFormat": "書類＋オンライン面接",
-    "timeToPass": "英語対策＋出願準備 約1年",
-    "previousEducation": "日本の高校 卒",
-    "workYears": 0,
-    "language": "英語（大学授業レベル）",
-    "meeting": "Zoomのみ",
-    "stipendium": {
-      "has": true,
-      "name": "スティペンディウム・ハンガリカム"
-    },
-    "onlineConversation": [
-      {
-        "label": "IELTS対策に使用したオンライン英会話（準備中）",
-        "url": "",
-        "ready": false
-      }
-    ],
-    "studyMaterials": [
-      {
-        "label": "IELTS対策教材（準備中）",
-        "url": "",
-        "ready": false
-      }
-    ],
-    "bio": "日本の高校卒業後、ハンガリーのUniversity of Debrecenへ進学し、Computer Science（BSc）を専攻しています。出願当初は奨学金なしで大学に合格し、2025年から自費で留学を開始しました。その後、2026年にハンガリー政府奨学金「Stipendium Hungaricum」に合格し、現在は奨学金制度のもとで在学しています。出願では英語要件（IELTS）、志望理由書などの書類、オンライン面接を経験しており、実際にどのような流れで合格まで進むのかを具体的にお話しできます。また奨学金については一度不合格を経験し、その後合格した経緯があるため、なぜ落ちたのか、何を改善したのか、合格者との違いなども実体験ベースで共有できます。現在はデブレツェンで生活しているため、生活費、家探し、治安、授業や試験の難易度、学生生活など、現地でのリアルな生活についてもお話しできます。",
-    "tags": [
-      "#理系留学",
-      "#コンピューターサイエンス",
-      "#デブレツェン",
-      "#スティペンディウム",
-      "#奨学金合格",
-      "#大学生活",
-      "#生活費",
-      "#英語学習"
-    ],
-    "links": [
-      {
-        "label": "大学公式サイト",
-        "url": "https://edu.unideb.hu/",
-        "ready": true
-      }
-    ],
-    "avatar": "images/students/okada.jpg",
-    "bookingUrl": "https://calendly.com/hungarystudy-info/40-clone-clone"
-  }
+  "id": "okada",
+  "enabled": true,
+  "featured": true,
+  "name": "ユウゴ（20代）",
+  "region": "デブレツェン",
+  "course": "理系",
+  "university": "University of Debrecen",
+  "major": "Computer Science（学士）",
+  "entryYear": "2025",
+  "year": "学士1年",
+  "admissionEnglish": "IELTS 5.5",
+  "selectionFormat": "書類＋オンライン面接",
+  "timeToPass": "英語対策＋出願準備 約1年",
+  "previousEducation": "日本の高校 卒",
+  "workYears": 0,
+  "language": "英語（大学授業レベル）",
+  "meeting": "Zoomのみ",
+  "stipendium": {
+    "has": false,
+    "name": ""
+  },
+  "onlineConversation": [
+    {
+      "label": "IELTS対策に使用したオンライン英会話（準備中）",
+      "url": "",
+      "ready": false
+    }
+  ],
+  "studyMaterials": [
+    {
+      "label": "IELTS対策教材（準備中）",
+      "url": "",
+      "ready": false
+    }
+  ],
+  "bio": "日本の高校卒業後、ハンガリーのUniversity of Debrecenへ進学し、Computer Science（BSc）を専攻しています。出願では英語要件（IELTS）、志望理由書などの書類、オンライン面接を経験しており、実際にどのような流れで合格まで進むのかを具体的にお話しできます。現在はデブレツェンで生活しているため、生活費、家探し、治安、授業や試験の難易度、学生生活など、現地でのリアルな生活についてもお話しできます。大学学部内での日本人同士の縦のつながりもあるので、さまざまな角度から実態を共有できます。",
+  "tags": [
+    "#理系留学",
+    "#コンピューターサイエンス",
+    "#デブレツェン",
+    "#大学生活",
+    "#生活費",
+    "#英語学習"
+  ],
+  "links": [
+    {
+      "label": "大学公式サイト",
+      "url": "https://edu.unideb.hu/",
+      "ready": true
+    }
+  ],
+  "avatar": "images/students/okada.jpg",
+  "bookingUrl": "https://calendly.com/hungarystudy-info/40-clone-clone"
+}
 ]

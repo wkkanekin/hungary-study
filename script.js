@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
  const bookingBtn = disabled
  ? `<a class="btn" href="#" aria-disabled="true" onclick="return false;">空き枠を見る（準備中）</a>`
- : `<a class="btn primary" href="${esc(stu.bookingUrl)}" target="_blank" rel="noopener">空き枠を見る（25 USD (約25 USD (約3,800円)) / 40分）</a>`;
+ : `<a class="btn primary" href="${esc(stu.bookingUrl)}" target="_blank" rel="noopener">空き枠を見る（25 USD (約3,800円)) / 40分）</a>`;
 
  // 追加メタ行（存在するものだけ表示）
  const metaHtml = [

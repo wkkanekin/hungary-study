@@ -78,6 +78,44 @@ document.addEventListener("DOMContentLoaded", () => {
  return String(str ?? "").trim().toLowerCase();
  }
 
+ function resolveVersionedAssetUrl(url, version) {
+ const cleanUrl = String(url ?? "").trim();
+ if (!cleanUrl) return "";
+
+ const rawVersion = String(version ?? "").trim();
+ if (!rawVersion) return cleanUrl;
+
+ const hasQuery = cleanUrl.includes("?");
+ const separator = hasQuery ? "&" : "?";
+ return `${cleanUrl}${separator}v=${encodeURIComponent(rawVersion)}`;
+ }
+
+ function getVersionedImageUrl(obj, urlKeys = ["url", "imageUrl"], versionKeys = ["version", "v", "imageVersion"]) {
+ if (!obj || typeof obj !== "object") return "";
+
+ let rawUrl = "";
+ for (const key of urlKeys) {
+ const value = String(obj?.[key] ?? "").trim();
+ if (value) {
+ rawUrl = value;
+ break;
+ }
+ }
+
+ if (!rawUrl) return "";
+
+ let rawVersion = "";
+ for (const key of versionKeys) {
+ const value = String(obj?.[key] ?? "").trim();
+ if (value) {
+ rawVersion = value;
+ break;
+ }
+ }
+
+ return resolveVersionedAssetUrl(rawUrl, rawVersion);
+ }
+
  function scrollToStudents() {
  document.getElementById("students")?.scrollIntoView({ behavior: "smooth", block: "start" });
  }
@@ -542,12 +580,16 @@ document.addEventListener("DOMContentLoaded", () => {
  function applyImages(cfg) {
  if (!cfg || typeof cfg !== "object") return;
 
- const heroUrl = String(cfg?.hero?.imageUrl || "").trim();
+ const heroUrl = getVersionedImageUrl(cfg?.hero, ["imageUrl", "url"], ["imageVersion", "version", "v"]);
  if (heroUrl) {
  document.documentElement.style.setProperty("--hero-image", `url("${heroUrl}")`);
  }
 
- const logoUrl = String(cfg?.hero?.logoUrl || "").trim();
+ const logoUrl = getVersionedImageUrl(
+ cfg?.hero,
+ ["logoUrl", "url"],
+ ["logoVersion", "version", "v"]
+ );
  const logoAlt = String(cfg?.hero?.logoAlt || "HU").trim();
  if (heroLogoImg) {
  if (logoUrl) heroLogoImg.src = logoUrl;
@@ -557,7 +599,7 @@ document.addEventListener("DOMContentLoaded", () => {
  // ============================
  // FAVICON（images.jsonで管理）
  // ============================
- const faviconUrl = String(cfg?.favicon?.url || "").trim();
+ const faviconUrl = getVersionedImageUrl(cfg?.favicon, ["url", "imageUrl"], ["version", "v", "imageVersion"]);
  const faviconType = String(cfg?.favicon?.type || "image/png").trim();
 
  if (faviconUrl) {
@@ -583,23 +625,28 @@ document.addEventListener("DOMContentLoaded", () => {
  });
 
  const cHungary = map.get("hungary");
- if (basicImgHungary && cHungary?.imageUrl) {
- basicImgHungary.src = String(cHungary.imageUrl);
- basicImgHungary.alt = String(cHungary.alt || basicImgHungary.alt || "ハンガリーについて");
+ if (basicImgHungary) {
+ const url = getVersionedImageUrl(cHungary, ["imageUrl", "url"], ["version", "v", "imageVersion"]);
+ if (url) basicImgHungary.src = url;
+ if (cHungary?.alt) basicImgHungary.alt = String(cHungary.alt || basicImgHungary.alt || "ハンガリーについて");
  }
 
  const cUniversity = map.get("university");
- if (basicImgUniversity && cUniversity?.imageUrl) {
- basicImgUniversity.src = String(cUniversity.imageUrl);
- basicImgUniversity.alt = String(cUniversity.alt || basicImgUniversity.alt || "大学の探し方");
+ if (basicImgUniversity) {
+ const url = getVersionedImageUrl(cUniversity, ["imageUrl", "url"], ["version", "v", "imageVersion"]);
+ if (url) basicImgUniversity.src = url;
+ if (cUniversity?.alt) basicImgUniversity.alt = String(cUniversity.alt || basicImgUniversity.alt || "大学の探し方");
  }
 
  const cScholarship = map.get("scholarship");
- if (basicImgScholarship && cScholarship?.imageUrl) {
- basicImgScholarship.src = String(cScholarship.imageUrl);
+ if (basicImgScholarship) {
+ const url = getVersionedImageUrl(cScholarship, ["imageUrl", "url"], ["version", "v", "imageVersion"]);
+ if (url) basicImgScholarship.src = url;
+ if (cScholarship?.alt) {
  basicImgScholarship.alt = String(
  cScholarship.alt || basicImgScholarship.alt || "奨学金（スティペンディウム・ハンガリカム）"
  );
+ }
  }
  }
 

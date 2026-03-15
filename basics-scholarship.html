@@ -594,16 +594,36 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", async () => {
+    function resolveVersionedAssetUrl(url, version) {
+      const cleanUrl = String(url ?? "").trim();
+      if (!cleanUrl) return "";
+
+      const rawVersion = String(version ?? "").trim();
+      if (!rawVersion) return cleanUrl;
+
+      const hasQuery = cleanUrl.includes("?");
+      const separator = hasQuery ? "&" : "?";
+      return `${cleanUrl}${separator}v=${encodeURIComponent(rawVersion)}`;
+    }
+
+    function getVersionedImageUrl(obj) {
+      if (!obj || typeof obj !== "object") return "";
+      const url = String(obj.url ?? obj.imageUrl ?? "").trim();
+      const version = String(obj.version ?? obj.v ?? obj.imageVersion ?? "").trim();
+      return resolveVersionedAssetUrl(url, version);
+    }
+
     try {
       const res = await fetch("basics-scholarship.images.json", { cache: "no-store" });
       if (!res.ok) return;
 
       const data = await res.json();
       const images = data.images || {};
+      const heroUrl = getVersionedImageUrl(images.hero);
 
-      if (images.hero?.url) {
-        document.getElementById("imgHero").src = images.hero.url;
-        document.getElementById("imgHero").alt = images.hero.alt || "";
+      if (heroUrl) {
+        document.getElementById("imgHero").src = heroUrl;
+        document.getElementById("imgHero").alt = images.hero?.alt || "";
       }
     } catch (e) {
       console.log("画像JSONが読み込めませんでした");

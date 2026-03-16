@@ -318,7 +318,7 @@
 {
   "id": "tamami",
   "enabled": true,
-  "featured": ture,
+  "featured": true,
   "name": "タマミ（10代）",
   "region": "ペーチ",
   "course": "社会",
@@ -367,7 +367,7 @@
 {
   "id": "anna",
   "enabled": true,
-  "featured": ture,
+  "featured": true,
   "name": "アンナ（20代）",
   "region": "ブダペスト",
   "course": "経営",

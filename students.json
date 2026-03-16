@@ -1,3 +1,11 @@
+了解。
+**新規3人（anna / tamami / yuri）以外はおすすめ表示しない**ようにして、
+**その3人だけ `featured: true`** にした **students.json全文**です。
+画像はすべて **.jpg** のままです。
+
+そのまま **丸ごと上書き**してください。
+
+```json
 [
   {
     "id": "kaneko",
@@ -173,7 +181,7 @@
   {
     "id": "anna",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "アンナ（20代）",
     "region": "ブダペスト",
     "course": "経営",
@@ -206,7 +214,7 @@
   {
     "id": "tamami",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "タマミ（10代）",
     "region": "ペーチ",
     "course": "社会",
@@ -242,7 +250,7 @@
   {
     "id": "yuri",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "ユリ（20代）",
     "region": "ブダペスト",
     "course": "理系",
@@ -276,3 +284,4 @@
     "bookingUrl": "#"
   }
 ]
+```

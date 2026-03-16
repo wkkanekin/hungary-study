@@ -1,4 +1,3 @@
-
 [
   {
     "id": "kaneko",
@@ -25,7 +24,7 @@
     "onlineConversation": [],
     "studyMaterials": [],
     "bio": "日本の国立大学（理系）卒業後、外資系製薬会社で10年間勤務。30歳を迎えたとき、自分の人生を見つめ直し、海外大学院進学を決意しました。",
-    "tags": ["#社会人留学", "#英語学習", "#キャリアチェンジ"],
+    "tags": ["#社会人留学","#英語学習","#キャリアチェンジ"],
     "links": [
       {
         "label": "大学公式サイト",
@@ -58,7 +57,7 @@
     "onlineConversation": [],
     "studyMaterials": [],
     "bio": "高校卒業後すぐに単身でハンガリーへ。",
-    "tags": ["#ELTE", "#心理学"],
+    "tags": ["#ELTE","#心理学"],
     "links": [
       {
         "label": "大学公式サイト",
@@ -91,7 +90,7 @@
     "onlineConversation": [],
     "studyMaterials": [],
     "bio": "ハンガリー医学部の勉強や試験について共有できます。",
-    "tags": ["#医学部", "#セゲド"],
+    "tags": ["#医学部","#セゲド"],
     "links": [
       {
         "label": "大学公式サイト",
@@ -193,7 +192,7 @@
     "onlineConversation": [],
     "studyMaterials": [],
     "bio": "高校3年12月から海外大学受験を開始し、3ヶ月で4校合格。",
-    "tags": ["#IBS", "#短期出願"],
+    "tags": ["#IBS","#短期出願"],
     "links": [
       {
         "label": "大学公式サイト",
@@ -229,7 +228,7 @@
     "onlineConversation": [],
     "studyMaterials": [],
     "bio": "独学で海外大学出願を行いUniversity of Pécsに進学。",
-    "tags": ["#Pecs", "#独学出願"],
+    "tags": ["#Pecs","#独学出願"],
     "links": [
       {
         "label": "大学公式サイト",
@@ -265,7 +264,7 @@
     "onlineConversation": [],
     "studyMaterials": [],
     "bio": "KU LeuvenからBMEへ。物理工学専攻。",
-    "tags": ["#BME", "#理転"],
+    "tags": ["#BME","#理転"],
     "links": [
       {
         "label": "大学公式サイト",
@@ -276,4 +275,4 @@
     "avatar": "images/students/yuri.jpg",
     "bookingUrl": "#"
   }
-]S
+]

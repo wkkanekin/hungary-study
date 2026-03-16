@@ -1,11 +1,4 @@
-了解。
-**新規3人（anna / tamami / yuri）以外はおすすめ表示しない**ようにして、
-**その3人だけ `featured: true`** にした **students.json全文**です。
-画像はすべて **.jpg** のままです。
 
-そのまま **丸ごと上書き**してください。
-
-```json
 [
   {
     "id": "kaneko",
@@ -283,5 +276,4 @@
     "avatar": "images/students/yuri.jpg",
     "bookingUrl": "#"
   }
-]
-```
+]S

@@ -30,8 +30,13 @@
     ],
     "studyMaterials": [
       {
-        "label": "IELTS公式問題集",
+        "label": "IELTS公式問題集18",
         "url": "https://amzn.to/4bfNreT",
+        "ready": true
+      },
+      {
+        "label": "実践IELTS英単語3500　改訂版",
+        "url": "https://amzn.to/4711KBC",
         "ready": true
       }
     ],
@@ -53,7 +58,7 @@
     "avatar": "images/students/kaneko.jpg",
     "bookingUrl": "https://calendly.com/hungarystudy-info/kinya-40min"
   },
- 
+
   {
     "id": "yu",
     "enabled": true,
@@ -244,7 +249,18 @@
         "ready": false
       }
     ],
-    "studyMaterials": [],
+    "studyMaterials": [
+      {
+        "label": "実践IELTS英単語3500　改訂版",
+        "url": "https://amzn.to/4uBD4cM",
+        "ready": true
+      },
+      {
+        "label": "はじめて受ける人のための IELTS総合対策スピードマスター 入門編",
+        "url": "https://amzn.to/4uAJ3yG",
+        "ready": true
+      }
+    ],
     "bio": "日本の地方の国公立高校を卒業後、海外大学への進学を目指し、独学で英語学習や出願準備を進めてきました。学校や親から留学を反対される中で準備を進めた経験があり、英会話スクールや留学エージェントは利用せず、海外経験もない状態から出願を行いました。\n\nStipendium Hungaricum（ハンガリー政府奨学金）、ブダペストのCorvinus University of BudapestとEötvös Loránd University（ELTE）に合格しており、それぞれの出願プロセスや試験について実体験をもとにお話しできます。また、ハンガリーだけでなく、アメリカやオーストリアの大学、日本の奨学金財団にも応募経験があり、これまでに多くのエッセイを書いてきました。エッセイ準備や出願書類の作成についても経験ベースで共有できます。\n\nブダペストで二年間生活してきた経験をもとに、治安や生活費、住まい、大学の雰囲気など、実際に生活してみて感じたリアルな学生生活についてもお話しできます。また、ELTEやUniversity of Debrecen、University of Szegedなど他大学・他学科に在学している友人もいるため、必要であれば各大学の情報を集めることも可能です。\n\nハンガリー留学の魅力だけでなく、実際に感じた大変な点や注意すべき点など、良い面とマイナス面の両方を率直に共有できればと思います。これからハンガリー留学を検討している方にとって、リアルで役立つ情報をお伝えできれば嬉しいです。",
     "tags": [
       "#Corvinus",
@@ -263,170 +279,168 @@
     ],
     "avatar": "images/students/yui.jpg",
     "bookingUrl": "https://calendly.com/hungarystudy-info/yui-40min"
+  },
+  {
+    "id": "yuri",
+    "enabled": true,
+    "featured": true,
+    "name": "ユリ（20代）",
+    "region": "ブダペスト",
+    "course": "理系",
+    "university": "Budapest University of Technology and Economics",
+    "major": "Physicist-Engineering（学士）",
+    "entryYear": "2023",
+    "year": "学士3年",
+    "admissionEnglish": "IELTS 6.5",
+    "selectionFormat": "書類＋オンライン面接",
+    "timeToPass": "出願準備 約半年",
+    "previousEducation": "日本の高校卒",
+    "workYears": 1,
+    "language": "英語（大学授業レベル） / フランス語（簡単な読解）",
+    "meeting": "Zoomのみ",
+    "stipendium": {
+      "has": true,
+      "name": "スティペンディウム・ハンガリカム"
+    },
+    "onlineConversation": [
+      {
+        "label": "英語学習に使ったオンライン英会話",
+        "url": "",
+        "ready": false
+      }
+    ],
+    "studyMaterials": [],
+    "bio": "日本の高校で文系から理系に転向し、卒業後はエージェントを利用せずにベルギーのKU Leuvenに進学して工学を専攻していました。その後、次第に物理学に惹かれるようになり、現在はBudapest University of Technology and Economics（BME）でPhysicist-Engineering を専攻しています。このプログラムはとても柔軟性が高く、応用物理だけでなく、実験・理論物理も学ぶことができています。1年目はハンガリー政府奨学金には不採択でしたが、大学側から学費全額免除の奨学金を受給し、2年目からはスティペンディウム・ハンガリカムを受給しながら学んでいます。文系から理系へ転向した経験、大学奨学金と政府奨学金を得るまでの経緯、ヨーロッパ生活の実情、ハンガリーで物理を学ぶ魅力などについて、実体験ベースでお話しできます。",
+    "tags": [
+      "#BME",
+      "#物理工学",
+      "#理転",
+      "#奨学金",
+      "#ベルギー留学経験",
+      "#ブダペスト生活"
+    ],
+    "links": [
+      {
+        "label": "大学公式サイト",
+        "url": "https://www.bme.hu/",
+        "ready": true
+      }
+    ],
+    "avatar": "images/students/yuri.jpg",
+    "bookingUrl": "https://calendly.com/hungarystudy-info/yuri-40min"
+  },
+  {
+    "id": "tamami",
+    "enabled": true,
+    "featured": true,
+    "name": "タマミ（10代）",
+    "region": "ペーチ",
+    "course": "社会系",
+    "university": "University of Pécs",
+    "major": "Social Work（学士）",
+    "entryYear": "2025",
+    "year": "学士1年",
+    "admissionEnglish": "IELTS 6.0",
+    "selectionFormat": "書類＋オンライン面接",
+    "timeToPass": "英語対策＋エッセイ対策 約1年",
+    "previousEducation": "日本の高校卒",
+    "workYears": 0,
+    "language": "IELTS 6.0",
+    "meeting": "Zoomのみ",
+    "stipendium": {
+      "has": true,
+      "name": "スティペンディウム・ハンガリカム"
+    },
+    "onlineConversation": [
+      {
+        "label": "英語学習に使ったオンライン英会話",
+        "url": "",
+        "ready": false
+      }
+    ],
+    "studyMaterials": [],
+    "bio": "日本の高校在学中から海外大学進学を目指し、独学で英語学習や出願準備を進めてきました。英会話スクールや留学エージェントを利用せず、すべて自分で情報収集をしながら出願を行い、現在通っているUniversity of Pécs に合格しました。また、都立高校から通信制のN高校へ転校した経験があるため、通信制高校に通いながら海外大学進学を目指している方にも役立つ情報をお伝えできると思います。高校時代には倍率の高い2週間のアメリカ研修の全額奨学金を獲得した経験があり、エッセイ作成や自己分析のサポートも得意です。課外活動にも取り組んでいたため、CVの書き方や海外大学出願で評価される活動についても具体的にお話しできます。現在住んでいるペーチでの生活についても、治安、生活費、住まい、大学の雰囲気など、実際に暮らして感じたリアルな情報を共有できます。",
+    "tags": [
+      "#UniversityOfPecs",
+      "#StipendiumHungaricum",
+      "#通信制高校",
+      "#独学出願",
+      "#エッセイ対策",
+      "#ペーチ生活"
+    ],
+    "links": [
+      {
+        "label": "大学公式サイト",
+        "url": "https://international.pte.hu/",
+        "ready": true
+      }
+    ],
+    "avatar": "images/students/tamami.jpg",
+    "bookingUrl": "https://calendly.com/hungarystudy-info/tamami-40min"
+  },
+  {
+    "id": "anna",
+    "enabled": true,
+    "featured": true,
+    "name": "アンナ（10代）",
+    "region": "ブダペスト",
+    "course": "経営",
+    "university": "International Business School, Budapest",
+    "major": "Business Management（学士）",
+    "entryYear": "2025",
+    "year": "学士1年",
+    "admissionEnglish": "IELTS 6.5 / CEFR B2",
+    "selectionFormat": "IBS：当初はファンデーションを書類審査のみで合格。その後、IELTSスコアが学士課程基準を満たしていたため、学士プログラムへ変更。Pécs University Foundation：書類＋面接",
+    "timeToPass": "高校3年12月から約3ヶ月で受験準備",
+    "previousEducation": "MARCH系大学付属高校 卒",
+    "workYears": 0,
+    "language": "CEFR B2（英語）",
+    "meeting": "Zoomのみ",
+    "stipendium": {
+      "has": false,
+      "name": ""
+    },
+    "onlineConversation": [
+      {
+        "label": "英語学習に使ったオンライン英会話",
+        "url": "",
+        "ready": false
+      }
+    ],
+    "studyMaterials": [
+      {
+        "label": "IELTS 20 Practice Test Academic Student's Book with Answers with Digital Pack",
+        "url": "https://amzn.to/4dtfnxf",
+        "ready": true
+      },
+      {
+        "label": "はじめてのIELTS単語対策3600",
+        "url": "https://amzn.to/4bubIMZ",
+        "ready": true
+      },
+      {
+        "label": "英検出る順パス単 準1級",
+        "url": "https://amzn.to/4lAksWt",
+        "ready": true
+      }
+    ],
+    "bio": "MARCH系大学付属高校を卒業後、正規留学生としてInternational Business School Budapest（IBS）に入学し、BSc Business Management を専攻しています。早くから留学を目指していたわけではなく、高校3年の11月までは付属大学へ進学する予定でしたが、12月に海外大学進学を目指し始め、約3か月で受験準備を進めて4校から合格通知を受け取りました。IBSのほか、ペーチ大学のファンデーションコースやスペイン・マルタのビジネススクールも受験しています。英語学習、ハンガリーでの生活、学校生活、インターナショナルな環境での学生生活など、受験生にとって役立つ情報を実体験ベースでお話しできます。人生に大きな影響を与える留学という決断について、納得して判断できるようサポートしたいと考えています。",
+    "tags": [
+      "#IBS",
+      "#BusinessManagement",
+      "#高校卒業後すぐ留学",
+      "#短期集中出願",
+      "#英語学習",
+      "#ブダペスト生活"
+    ],
+    "links": [
+      {
+        "label": "大学公式サイト",
+        "url": "https://www.ibs-b.hu/",
+        "ready": true
+      }
+    ],
+    "avatar": "images/students/anna.jpg",
+    "bookingUrl": "https://calendly.com/hungarystudy-info/anna-40min"
   }
-
-,
-{
-  "id": "yuri",
-  "enabled": true,
-  "featured": true,
-  "name": "ユリ（20代）",
-  "region": "ブダペスト",
-  "course": "理系",
-  "university": "Budapest University of Technology and Economics",
-  "major": "Physicist-Engineering（学士）",
-  "entryYear": "2023",
-  "year": "学士3年",
-  "admissionEnglish": "IELTS 6.5",
-  "selectionFormat": "書類＋オンライン面接",
-  "timeToPass": "出願準備 約半年",
-  "previousEducation": "日本の高校卒",
-  "workYears": 1,
-  "language": "英語（大学授業レベル） / フランス語（簡単な読解）",
-  "meeting": "Zoomのみ",
-  "stipendium": {
-    "has": true,
-    "name": "スティペンディウム・ハンガリカム"
-  },
-  "onlineConversation": [
-    {
-      "label": "英語学習に使ったオンライン英会話",
-      "url": "",
-      "ready": false
-    }
-  ],
-  "studyMaterials": [],
-  "bio": "日本の高校で文系から理系に転向し、卒業後はエージェントを利用せずにベルギーのKU Leuvenに進学して工学を専攻していました。その後、次第に物理学に惹かれるようになり、現在はBudapest University of Technology and Economics（BME）でPhysicist-Engineering を専攻しています。このプログラムはとても柔軟性が高く、応用物理だけでなく、実験・理論物理も学ぶことができています。1年目はハンガリー政府奨学金には不採択でしたが、大学側から学費全額免除の奨学金を受給し、2年目からはスティペンディウム・ハンガリカムを受給しながら学んでいます。文系から理系へ転向した経験、大学奨学金と政府奨学金を得るまでの経緯、ヨーロッパ生活の実情、ハンガリーで物理を学ぶ魅力などについて、実体験ベースでお話しできます。",
-  "tags": [
-    "#BME",
-    "#物理工学",
-    "#理転",
-    "#奨学金",
-    "#ベルギー留学経験",
-    "#ブダペスト生活"
-  ],
-  "links": [
-    {
-      "label": "大学公式サイト",
-      "url": "https://www.bme.hu/",
-      "ready": true
-    }
-  ],
-  "avatar": "images/students/yuri.jpg",
-  "bookingUrl": "https://calendly.com/hungarystudy-info/yuri-40min"
-},
-{
-  "id": "tamami",
-  "enabled": true,
-  "featured": true,
-  "name": "タマミ（10代）",
-  "region": "ペーチ",
-  "course": "社会",
-  "university": "University of Pécs",
-  "major": "Social Work（学士）",
-  "entryYear": "2025",
-  "year": "学士1年",
-  "admissionEnglish": "IELTS 6.0",
-  "selectionFormat": "書類＋オンライン面接",
-  "timeToPass": "英語対策＋エッセイ対策 約1年",
-  "previousEducation": "日本の高校卒",
-  "workYears": 0,
-  "language": "IELTS 6.0",
-  "meeting": "Zoomのみ",
-  "stipendium": {
-    "has": true,
-    "name": "スティペンディウム・ハンガリカム"
-  },
-  "onlineConversation": [
-    {
-      "label": "英語学習に使ったオンライン英会話",
-      "url": "",
-      "ready": false
-    }
-  ],
-  "studyMaterials": [],
-  "bio": "日本の高校在学中から海外大学進学を目指し、独学で英語学習や出願準備を進めてきました。英会話スクールや留学エージェントを利用せず、すべて自分で情報収集をしながら出願を行い、現在通っているUniversity of Pécs に合格しました。また、都立高校から通信制のN高校へ転校した経験があるため、通信制高校に通いながら海外大学進学を目指している方にも役立つ情報をお伝えできると思います。高校時代には倍率の高い2週間のアメリカ研修の全額奨学金を獲得した経験があり、エッセイ作成や自己分析のサポートも得意です。課外活動にも取り組んでいたため、CVの書き方や海外大学出願で評価される活動についても具体的にお話しできます。現在住んでいるペーチでの生活についても、治安、生活費、住まい、大学の雰囲気など、実際に暮らして感じたリアルな情報を共有できます。",
-  "tags": [
-    "#UniversityOfPecs",
-    "#StipendiumHungaricum",
-    "#通信制高校",
-    "#独学出願",
-    "#エッセイ対策",
-    "#ペーチ生活"
-  ],
-  "links": [
-    {
-      "label": "大学公式サイト",
-      "url": "https://international.pte.hu/",
-      "ready": true
-    }
-  ],
-  "avatar": "images/students/tamami.jpg",
-  "bookingUrl": "https://calendly.com/hungarystudy-info/tamami-40min"
-},
-{
-  "id": "anna",
-  "enabled": true,
-  "featured": true,
-  "name": "アンナ（10代）",
-  "region": "ブダペスト",
-  "course": "経営",
-  "university": "International Business School, Budapest",
-  "major": "Business Management（学士）",
-  "entryYear": "2025",
-  "year": "学士1年",
-  "admissionEnglish": "IELTS 6.5 / CEFR B2",
-  "selectionFormat": "IBS：当初はファンデーションを書類審査のみで合格。その後、IELTSスコアが学士課程基準を満たしていたため、学士プログラムへ変更。Pécs University Foundation：書類＋面接",
-  "timeToPass": "高校3年12月から約3ヶ月で受験準備",
-  "previousEducation": "MARCH系大学付属高校 卒",
-  "workYears": 0,
-  "language": "CEFR B2（英語）",
-  "meeting": "Zoomのみ",
-  "stipendium": {
-    "has": false,
-    "name": ""
-  },
-  "onlineConversation": [
-    {
-      "label": "英語学習に使ったオンライン英会話",
-      "url": "",
-      "ready": false
-    }
-  ],
-  "studyMaterials": [
-    {
-      "label": "IELTS 20 Practice Test Academic Student's Book with Answers with Digital Pack",
-      "url": "",
-      "ready": false
-    },
-    {
-      "label": "はじめてのIELTS単語対策3600",
-      "url": "",
-      "ready": false
-    },
-    {
-      "label": "英検出る順パス単 準1級",
-      "url": "",
-      "ready": false
-    }
-  ],
-  "bio": "MARCH系大学付属高校を卒業後、正規留学生としてInternational Business School Budapest（IBS）に入学し、BSc Business Management を専攻しています。早くから留学を目指していたわけではなく、高校3年の11月までは付属大学へ進学する予定でしたが、12月に海外大学進学を目指し始め、約3か月で受験準備を進めて4校から合格通知を受け取りました。IBSのほか、ペーチ大学のファンデーションコースやスペイン・マルタのビジネススクールも受験しています。英語学習、ハンガリーでの生活、学校生活、インターナショナルな環境での学生生活など、受験生にとって役立つ情報を実体験ベースでお話しできます。人生に大きな影響を与える留学という決断について、納得して判断できるようサポートしたいと考えています。",
-  "tags": [
-    "#IBS",
-    "#BusinessManagement",
-    "#高校卒業後すぐ留学",
-    "#短期集中出願",
-    "#英語学習",
-    "#ブダペスト生活"
-  ],
-  "links": [
-    {
-      "label": "大学公式サイト",
-      "url": "https://www.ibs-b.hu/",
-      "ready": true
-    }
-  ],
-  "avatar": "images/students/anna.jpg",
-  "bookingUrl": "https://calendly.com/hungarystudy-info/anna-40min"
-}
 ]

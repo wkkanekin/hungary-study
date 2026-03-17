@@ -51,7 +51,7 @@
       }
     ],
     "avatar": "images/students/kaneko.jpg",
-    "bookingUrl": "https://calendly.com/hungarystudy-info/new-meeting-1"
+    "bookingUrl": "https://calendly.com/hungarystudy-info/kinya-40min"
   },
  
   {
@@ -105,7 +105,7 @@
       }
     ],
     "avatar": "images/students/yu.jpg",
-    "bookingUrl": "https://calendly.com/hungarystudy-info/bueb-40-clone"
+    "bookingUrl": "https://calendly.com/hungarystudy-info/yu-40min"
   },
   {
     "id": "ryota",
@@ -158,7 +158,7 @@
       }
     ],
     "avatar": "images/students/ryota.jpg",
-    "bookingUrl": "https://calendly.com/hungarystudy-info/40-clone"
+    "bookingUrl": "https://calendly.com/hungarystudy-info/ryota-40min"
   },
   {
     "id": "okada",
@@ -213,7 +213,7 @@
       }
     ],
     "avatar": "images/students/okada.jpg",
-    "bookingUrl": "https://calendly.com/hungarystudy-info/40-clone-clone"
+    "bookingUrl": "https://calendly.com/hungarystudy-info/yugo-40min"
   },
   {
     "id": "yui",
@@ -262,7 +262,7 @@
       }
     ],
     "avatar": "images/students/yui.jpg",
-    "bookingUrl": "https://calendly.com/hungarystudy-info/bueb-40-clone-1"
+    "bookingUrl": "https://calendly.com/hungarystudy-info/yui-40min"
   }
 
 ,
@@ -296,7 +296,7 @@
     }
   ],
   "studyMaterials": [],
-  "bio": "日本の高校で文系から理系に転向し、卒業後はエージェントを利用せずにベルギーのKU Leuvenに進学して工学を専攻していました。その後、次第に物理学に惹かれるようになり、現在はBudapest University of Technology and Economics（BME）でPhysicist-Engineering を専攻しています。1年目はハンガリー政府奨学金には不採択でしたが、大学側から学費全額免除の奨学金を受給し、2年目からはスティペンディウム・ハンガリカムを受給しながら学んでいます。文系から理系へ転向した経験、大学奨学金と政府奨学金を得るまでの経緯、ヨーロッパ生活の実情、ハンガリーで物理を学ぶ魅力などについて、実体験ベースでお話しできます。",
+  "bio": "日本の高校で文系から理系に転向し、卒業後はエージェントを利用せずにベルギーのKU Leuvenに進学して工学を専攻していました。その後、次第に物理学に惹かれるようになり、現在はBudapest University of Technology and Economics（BME）でPhysicist-Engineering を専攻しています。このプログラムはとても柔軟性が高く、応用物理だけでなく、実験・理論物理も学ぶことができています。1年目はハンガリー政府奨学金には不採択でしたが、大学側から学費全額免除の奨学金を受給し、2年目からはスティペンディウム・ハンガリカムを受給しながら学んでいます。文系から理系へ転向した経験、大学奨学金と政府奨学金を得るまでの経緯、ヨーロッパ生活の実情、ハンガリーで物理を学ぶ魅力などについて、実体験ベースでお話しできます。",
   "tags": [
     "#BME",
     "#物理工学",
@@ -313,7 +313,7 @@
     }
   ],
   "avatar": "images/students/yuri.jpg",
-  "bookingUrl": "#"
+  "bookingUrl": "https://calendly.com/hungarystudy-info/yuri-40min"
 },
 {
   "id": "tamami",
@@ -362,13 +362,13 @@
     }
   ],
   "avatar": "images/students/tamami.jpg",
-  "bookingUrl": "#"
+  "bookingUrl": "https://calendly.com/hungarystudy-info/tamami-40min"
 },
 {
   "id": "anna",
   "enabled": true,
   "featured": true,
-  "name": "アンナ（20代）",
+  "name": "アンナ（10代）",
   "region": "ブダペスト",
   "course": "経営",
   "university": "International Business School, Budapest",
@@ -427,6 +427,6 @@
     }
   ],
   "avatar": "images/students/anna.jpg",
-  "bookingUrl": "#"
+  "bookingUrl": "https://calendly.com/hungarystudy-info/anna-40min"
 }
 ]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "study-abroad-japan",
+    "enabled": true,
+    "featured": true,
+    "title": "日本人の海外留学はなぜ増えない？",
+    "description": "日本人の海外留学の現状、費用の壁、政策、奨学金の全体像を整理し、ハンガリー留学という選択肢につなげて解説します。",
+    "category": "コラム",
+    "url": "guide-study-abroad-japan.html",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "hungary-cost",
+    "enabled": true,
+    "featured": true,
+    "title": "ハンガリー留学の学費",
+    "description": "ハンガリーの主要大学の学費や、欧米主要国と比べたときの費用感、生活費の考え方をわかりやすく整理します。",
+    "category": "費用",
+    "url": "guide-hungary-cost.html",
+    "date": "2026-03-17"
+  },
+  {
+    "id": "stipendium",
+    "enabled": true,
+    "featured": false,
+    "title": "Stipendium Hungaricumとは",
+    "description": "ハンガリー政府奨学金の基本、何がカバーされるのか、応募時に何を押さえるべきかを整理します。",
+    "category": "奨学金",
+    "url": "guide-stipendium.html",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "university-ranking",
+    "enabled": true,
+    "featured": false,
+    "title": "ハンガリー大学ランキング",
+    "description": "大学を探すときの参考として、ランキングや大学比較の見方を整理します。",
+    "category": "大学",
+    "url": "guide-university-ranking.html",
+    "date": "2026-03-19"
+  },
+  {
+    "id": "hungary-life-cost",
+    "enabled": true,
+    "featured": false,
+    "title": "ハンガリーの生活費",
+    "description": "家賃、寮、食費、交通費など、学生生活のコスト感を整理します。",
+    "category": "生活情報",
+    "url": "guide-hungary-life-cost.html",
+    "date": "2026-03-20"
+  },
+  {
+    "id": "student-story-elte",
+    "enabled": true,
+    "featured": false,
+    "title": "現役生体験談：ELTEで学んでみて",
+    "description": "授業の雰囲気、生活、入学前とのギャップなどを現役生視点で紹介します。",
+    "category": "体験談",
+    "url": "guide-student-story-elte.html",
+    "date": "2026-03-21"
+  }
+]

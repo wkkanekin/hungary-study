@@ -421,7 +421,7 @@
   {
     "id": "anna",
     "enabled": true,
-    "featured": true,
+    "featured": false,
     "name": "アンナ（10代）",
     "region": "ブダペスト",
     "course": "経営",
@@ -487,5 +487,55 @@
     ],
     "avatar": "images/students/anna.jpg",
     "bookingUrl": "https://calendly.com/hungarystudy-info/anna-40min"
+  },
+  {
+    "id": "nana",
+    "enabled": true,
+    "featured": true,
+    "name": "ナナ（20代）",
+    "region": "セゲド",
+    "course": "経営",
+    "university": "University of Szeged",
+    "major": "Business Administration and Management（学士）",
+    "entryYear": "2023",
+    "year": "学士3年",
+    "admissionEnglish": "",
+    "selectionFormat": "書類＋面接",
+    "timeToPass": "",
+    "previousEducation": "",
+    "workYears": 0,
+    "language": "英語（大学授業・受験対策レベル）",
+    "meeting": "Zoomのみ",
+    "stipendium": {
+      "has": true,
+      "name": "スティペンディウム・ハンガリカム"
+    },
+    "onlineConversation": [
+      {
+        "label": "英語学習に使ったオンライン英会話",
+        "url": "",
+        "ready": false
+      }
+    ],
+    "studyMaterials": [],
+    "bio": "ハンガリー政府奨学金を受給し、University of Szegedの経済学分野でBusiness Administration and Managementを学んでいます。現在は学士3年で、海外から就職活動を進めたり、オンラインで長期インターンに取り組んだりしながら、学業と両立しています。受験時の経験をもとに、ハンガリー留学や海外大学進学の準備、英語要件、書類、面接、志望動機対策について実体験ベースでお話しできます。加えて、セゲドでの生活、生活費、家探し、治安、寮生活、授業や試験、学生生活、旅行や娯楽など、現地でのリアルな暮らしについても具体的に共有できます。気軽にご相談ください。",
+    "tags": [
+      "#UniversityOfSzeged",
+      "#BusinessAdministrationAndManagement",
+      "#セゲド生活",
+      "#奨学金",
+      "#寮生活",
+      "#就活と学業の両立"
+      "#TOEFL iBT / 英検 / 志望動機対策"
+    ],
+    "links": [
+      {
+        "label": "大学公式サイト",
+        "url": "https://u-szeged.hu/",
+        "ready": true
+      }
+    ],
+    "avatar": "images/students/nana.jpg",
+    "bookingUrl": "https://calendly.com/hungarystudy-info/nana-40min"
   }
 ]

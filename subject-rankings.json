@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-01T17:16:49.502688+00:00",
+  "updated": "2026-04-01T17:31:25.700305+00:00",
   "subjects": [
     {
       "key": "arts-humanities",
@@ -220,7 +220,7 @@
       "key": "law",
       "label_en": "Law",
       "label_ja": "法学",
-      "count": 3,
+      "count": 2,
       "universities": [
         {
           "university": "Eötvös Loránd University",
@@ -233,12 +233,6 @@
           "city": "Szeged",
           "rank": "301–400",
           "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
-        },
-        {
-          "university": "University of Miskolc",
-          "city": "Miskolc",
-          "rank": "1992",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc"
         }
       ]
     },
@@ -251,7 +245,7 @@
         {
           "university": "Budapest University of Economics and Business",
           "city": "Budapest",
-          "rank": "01",
+          "rank": "10",
           "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-business-school"
         },
         {

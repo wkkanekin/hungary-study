@@ -9,56 +9,98 @@ SUBJECTS = [
     {
         "key": "arts-humanities",
         "label_en": "Arts and Humanities",
+        "aliases": [
+            "Arts and Humanities",
+            "Arts & Humanities"
+        ],
         "label_ja": "芸術・人文科学"
     },
     {
         "key": "business-economics",
         "label_en": "Business and Economics",
+        "aliases": [
+            "Business and Economics",
+            "Business & Economics"
+        ],
         "label_ja": "ビジネス・経済"
     },
     {
         "key": "clinical-health",
         "label_en": "Clinical and Health",
+        "aliases": [
+            "Clinical and Health",
+            "Clinical & Health",
+            "Clinical",
+            "Health"
+        ],
         "label_ja": "臨床・健康"
     },
     {
         "key": "computer-science",
         "label_en": "Computer Science",
+        "aliases": [
+            "Computer Science"
+        ],
         "label_ja": "コンピューターサイエンス"
     },
     {
         "key": "education-studies",
         "label_en": "Education Studies",
+        "aliases": [
+            "Education Studies",
+            "Education"
+        ],
         "label_ja": "教育"
     },
     {
         "key": "engineering",
         "label_en": "Engineering",
+        "aliases": [
+            "Engineering"
+        ],
         "label_ja": "工学"
     },
     {
         "key": "law",
         "label_en": "Law",
+        "aliases": [
+            "Law"
+        ],
         "label_ja": "法学"
     },
     {
         "key": "life-sciences",
         "label_en": "Life Sciences",
+        "aliases": [
+            "Life Sciences",
+            "Life Science"
+        ],
         "label_ja": "生命科学"
     },
     {
         "key": "physical-sciences",
         "label_en": "Physical Sciences",
+        "aliases": [
+            "Physical Sciences",
+            "Physical Science"
+        ],
         "label_ja": "物理科学"
     },
     {
         "key": "psychology",
         "label_en": "Psychology",
+        "aliases": [
+            "Psychology"
+        ],
         "label_ja": "心理学"
     },
     {
         "key": "social-sciences",
         "label_en": "Social Sciences",
+        "aliases": [
+            "Social Sciences",
+            "Social Science"
+        ],
         "label_ja": "社会科学"
     }
 ]
@@ -293,15 +335,19 @@ def normalize_rank(value: str) -> str:
     if upper in {"N/A", "NA", "NOTRANKED", "UNRANKED"}:
         return "—"
 
+    # 01, 001 などを弾く
+    if re.fullmatch(r"0\d+", s):
+        return "—"
+
     # 1251+
-    if re.fullmatch(r"\d{2,4}\+", s):
+    if re.fullmatch(r"[1-9]\d{1,3}\+", s):
         n = int(s[:-1])
         if 1 <= n <= 3000:
             return f"{n}+"
         return "—"
 
     # 301-400
-    if re.fullmatch(r"\d{1,4}-\d{1,4}", s):
+    if re.fullmatch(r"[1-9]\d{0,3}-[1-9]\d{0,3}", s):
         left, right = s.split("-", 1)
         left_n = int(left)
         right_n = int(right)
@@ -309,15 +355,11 @@ def normalize_rank(value: str) -> str:
             return f"{left_n}–{right_n}"
         return "—"
 
-    # 単独数値は 1〜3000 の範囲だけ許可
-    if re.fullmatch(r"\d{1,4}", s):
+    # 単独数値
+    if re.fullmatch(r"[1-9]\d{0,3}", s):
         n = int(s)
 
-        # 01 みたいなのは弾く
-        if s.startswith("0") and len(s) > 1:
-            return "—"
-
-        # 年っぽい数字を弾く
+        # 年っぽい値を弾く
         if 1900 <= n <= 2100:
             return "—"
 
@@ -327,7 +369,7 @@ def normalize_rank(value: str) -> str:
         return "—"
 
     # 埋め込み range
-    m_range = re.search(r"(\d{1,4})\s*-\s*(\d{1,4})", s)
+    m_range = re.search(r"([1-9]\d{0,3})\s*-\s*([1-9]\d{0,3})", s)
     if m_range:
         left_n = int(m_range.group(1))
         right_n = int(m_range.group(2))
@@ -335,7 +377,7 @@ def normalize_rank(value: str) -> str:
             return f"{left_n}–{right_n}"
 
     # 埋め込み plus
-    m_plus = re.search(r"(\d{2,4})\s*\+", s)
+    m_plus = re.search(r"([1-9]\d{1,3})\s*\+", s)
     if m_plus:
         n = int(m_plus.group(1))
         if 1 <= n <= 3000:
@@ -351,6 +393,9 @@ def is_reasonable_rank(rank: str) -> bool:
         return False
 
     normalized = value.replace("–", "-").replace("—", "-")
+
+    if re.fullmatch(r"0\d+", normalized):
+        return False
 
     if normalized.endswith("+"):
         try:
@@ -368,7 +413,7 @@ def is_reasonable_rank(rank: str) -> bool:
         except Exception:
             return False
 
-    if re.fullmatch(r"\d{1,4}", normalized):
+    if re.fullmatch(r"[1-9]\d{0,3}", normalized):
         n = int(normalized)
         if 1900 <= n <= 2100:
             return False
@@ -442,13 +487,13 @@ def extract_overall_rank(html: str) -> str:
     return "—"
 
 
-def extract_subject_rank_from_text(text: str, label_en: str) -> str:
-    escaped = re.escape(label_en)
+def extract_subject_rank_from_text(text: str, label: str) -> str:
+    escaped = re.escape(label)
 
     patterns = [
-        rf"{escaped}\s*(?:20\d{{2}})?\s*([0-9]{{1,4}}\s*[–-]\s*[0-9]{{1,4}}|[0-9]{{2,4}}\+)",
-        rf"{escaped}[^0-9]{{0,40}}([0-9]{{1,4}}\s*[–-]\s*[0-9]{{1,4}}|[0-9]{{2,4}}\+)",
-        rf"{escaped}[^0-9]{{0,20}}([1-9][0-9]{{0,3}})",
+        rf"{escaped}\s*(?:20\d{{2}})?\s*([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
+        rf"{escaped}[^0-9]{{0,40}}([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
+        rf"{escaped}[^0-9]{{0,20}}([1-9]\d{{0,3}})",
     ]
 
     for pattern in patterns:
@@ -461,8 +506,8 @@ def extract_subject_rank_from_text(text: str, label_en: str) -> str:
     return "—"
 
 
-def extract_subject_rank_from_html(html: str, label_en: str, key: str) -> str:
-    escaped_label = re.escape(label_en)
+def extract_subject_rank_from_html(html: str, label: str, key: str) -> str:
+    escaped_label = re.escape(label)
     escaped_key = re.escape(key)
 
     patterns = [
@@ -498,15 +543,22 @@ def extract_all_subject_ranks(html: str, base_url: str) -> dict:
 
     for subject in SUBJECTS:
         key = subject["key"]
-        label_en = subject["label_en"]
+        aliases = subject.get("aliases", [subject["label_en"]])
 
-        rank = extract_subject_rank_from_html(html, label_en, key)
-        if rank == "—":
-            rank = extract_subject_rank_from_text(text, label_en)
+        found_rank = "—"
+
+        for label in aliases:
+            rank = extract_subject_rank_from_html(html, label, key)
+            if rank == "—":
+                rank = extract_subject_rank_from_text(text, label)
+
+            if is_reasonable_rank(rank):
+                found_rank = rank
+                break
 
         subjects[key] = {
-            "rank": rank if is_reasonable_rank(rank) else "—",
-            "url": base_url if is_reasonable_rank(rank) else ""
+            "rank": found_rank if is_reasonable_rank(found_rank) else "—",
+            "url": base_url if is_reasonable_rank(found_rank) else ""
         }
 
     return subjects

@@ -289,31 +289,92 @@ def normalize_rank(value: str) -> str:
     if not s:
         return "—"
 
-    if s.upper() in {"N/A", "NA", "NOTRANKED", "UNRANKED"}:
+    upper = s.upper()
+    if upper in {"N/A", "NA", "NOTRANKED", "UNRANKED"}:
         return "—"
 
-    if re.fullmatch(r"\d+\+", s):
-        return s
+    # 1251+
+    if re.fullmatch(r"\d{2,4}\+", s):
+        n = int(s[:-1])
+        if 1 <= n <= 3000:
+            return f"{n}+"
+        return "—"
 
-    if re.fullmatch(r"\d+-\d+", s):
-        return s.replace("-", "–")
+    # 301-400
+    if re.fullmatch(r"\d{1,4}-\d{1,4}", s):
+        left, right = s.split("-", 1)
+        left_n = int(left)
+        right_n = int(right)
+        if 1 <= left_n <= right_n <= 3000:
+            return f"{left_n}–{right_n}"
+        return "—"
 
-    if re.fullmatch(r"\d+", s):
-        return s
+    # 単独数値は 1〜3000 の範囲だけ許可
+    if re.fullmatch(r"\d{1,4}", s):
+        n = int(s)
 
-    m_range = re.search(r"(\d+)\s*-\s*(\d+)", s)
+        # 01 みたいなのは弾く
+        if s.startswith("0") and len(s) > 1:
+            return "—"
+
+        # 年っぽい数字を弾く
+        if 1900 <= n <= 2100:
+            return "—"
+
+        if 1 <= n <= 3000:
+            return str(n)
+
+        return "—"
+
+    # 埋め込み range
+    m_range = re.search(r"(\d{1,4})\s*-\s*(\d{1,4})", s)
     if m_range:
-        return f"{m_range.group(1)}–{m_range.group(2)}"
+        left_n = int(m_range.group(1))
+        right_n = int(m_range.group(2))
+        if 1 <= left_n <= right_n <= 3000:
+            return f"{left_n}–{right_n}"
 
-    m_plus = re.search(r"(\d+)\s*\+", s)
+    # 埋め込み plus
+    m_plus = re.search(r"(\d{2,4})\s*\+", s)
     if m_plus:
-        return f"{m_plus.group(1)}+"
-
-    m_single = re.search(r"\b(\d+)\b", s)
-    if m_single:
-        return m_single.group(1)
+        n = int(m_plus.group(1))
+        if 1 <= n <= 3000:
+            return f"{n}+"
 
     return "—"
+
+
+def is_reasonable_rank(rank: str) -> bool:
+    value = str(rank or "").strip()
+
+    if value in {"", "—", "N/A"}:
+        return False
+
+    normalized = value.replace("–", "-").replace("—", "-")
+
+    if normalized.endswith("+"):
+        try:
+            n = int(normalized[:-1])
+            return 1 <= n <= 3000
+        except Exception:
+            return False
+
+    if "-" in normalized:
+        try:
+            left, right = normalized.split("-", 1)
+            left_n = int(left)
+            right_n = int(right)
+            return 1 <= left_n <= right_n <= 3000
+        except Exception:
+            return False
+
+    if re.fullmatch(r"\d{1,4}", normalized):
+        n = int(normalized)
+        if 1900 <= n <= 2100:
+            return False
+        return 1 <= n <= 3000
+
+    return False
 
 
 def rank_sort_key_from_value(rank: str) -> tuple[int, int]:
@@ -361,7 +422,7 @@ def extract_overall_rank(html: str) -> str:
         match = re.search(pattern, html, flags=re.IGNORECASE)
         if match:
             rank = normalize_rank(match.group(1))
-            if rank != "—":
+            if is_reasonable_rank(rank):
                 return rank
 
     text = strip_html(html)
@@ -375,7 +436,7 @@ def extract_overall_rank(html: str) -> str:
         match = re.search(pattern, text, flags=re.IGNORECASE)
         if match:
             rank = normalize_rank(match.group(1))
-            if rank != "—":
+            if is_reasonable_rank(rank):
                 return rank
 
     return "—"
@@ -385,15 +446,16 @@ def extract_subject_rank_from_text(text: str, label_en: str) -> str:
     escaped = re.escape(label_en)
 
     patterns = [
-        rf"{escaped}\s*(?:20\d{{2}})?\s*([0-9]{{1,4}}(?:\s*[–-]\s*[0-9]{{1,4}}|\s*\+)?)",
-        rf"{escaped}[^0-9]{{0,80}}([0-9]{{1,4}}(?:\s*[–-]\s*[0-9]{{1,4}}|\s*\+)?)",
+        rf"{escaped}\s*(?:20\d{{2}})?\s*([0-9]{{1,4}}\s*[–-]\s*[0-9]{{1,4}}|[0-9]{{2,4}}\+)",
+        rf"{escaped}[^0-9]{{0,40}}([0-9]{{1,4}}\s*[–-]\s*[0-9]{{1,4}}|[0-9]{{2,4}}\+)",
+        rf"{escaped}[^0-9]{{0,20}}([1-9][0-9]{{0,3}})",
     ]
 
     for pattern in patterns:
         match = re.search(pattern, text, flags=re.IGNORECASE)
         if match:
             rank = normalize_rank(match.group(1))
-            if rank != "—":
+            if is_reasonable_rank(rank):
                 return rank
 
     return "—"
@@ -414,7 +476,7 @@ def extract_subject_rank_from_html(html: str, label_en: str, key: str) -> str:
         match = re.search(pattern, html, flags=re.IGNORECASE)
         if match:
             rank = normalize_rank(match.group(1))
-            if rank != "—":
+            if is_reasonable_rank(rank):
                 return rank
 
     return "—"
@@ -443,8 +505,8 @@ def extract_all_subject_ranks(html: str, base_url: str) -> dict:
             rank = extract_subject_rank_from_text(text, label_en)
 
         subjects[key] = {
-            "rank": rank,
-            "url": base_url if rank != "—" else ""
+            "rank": rank if is_reasonable_rank(rank) else "—",
+            "url": base_url if is_reasonable_rank(rank) else ""
         }
 
     return subjects
@@ -477,9 +539,9 @@ def build_results() -> list[dict]:
             results.append({
                 "university": name,
                 "city": city,
-                "rank": overall_rank if overall_rank else "—",
+                "rank": overall_rank if is_reasonable_rank(overall_rank) else "—",
                 "url": the_url,
-                "listed_in_the": overall_rank not in {"—", "N/A", ""},
+                "listed_in_the": is_reasonable_rank(overall_rank),
                 "subject_ranks": subject_ranks
             })
         except Exception:
@@ -510,7 +572,7 @@ def build_subject_rankings(results: list[dict]) -> dict:
             rank = str(subject_data.get("rank", "—")).strip()
             url = str(subject_data.get("url", "")).strip()
 
-            if rank == "—":
+            if not is_reasonable_rank(rank):
                 continue
 
             universities.append({

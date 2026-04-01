@@ -1,11 +1,428 @@
 {
-  "updated": "2026-04-01T16:47:18.167150+00:00",
-  "subjects": {
-    "medicine": [],
-    "engineering": [],
-    "business": [],
-    "computer_science": [],
-    "life_sciences": [],
-    "social_sciences": []
-  }
+  "updated": "2026-04-01T17:15:50.203130+00:00",
+  "subjects": [
+    {
+      "key": "arts-humanities",
+      "label_en": "Arts and Humanities",
+      "label_ja": "芸術・人文科学",
+      "count": 5,
+      "universities": [
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "401–500",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        }
+      ]
+    },
+    {
+      "key": "business-economics",
+      "label_en": "Business and Economics",
+      "label_ja": "ビジネス・経済",
+      "count": 7,
+      "universities": [
+        {
+          "university": "Corvinus University of Budapest",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/corvinus-university-budapest"
+        },
+        {
+          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
+          "city": "Gödöllő",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        },
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "1001+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        }
+      ]
+    },
+    {
+      "key": "clinical-health",
+      "label_en": "Clinical and Health",
+      "label_ja": "臨床・健康",
+      "count": 0,
+      "universities": []
+    },
+    {
+      "key": "computer-science",
+      "label_en": "Computer Science",
+      "label_ja": "コンピューターサイエンス",
+      "count": 5,
+      "universities": [
+        {
+          "university": "Óbuda University",
+          "city": "Budapest",
+          "rank": "501–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/obuda-university"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        },
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        }
+      ]
+    },
+    {
+      "key": "education-studies",
+      "label_en": "Education Studies",
+      "label_ja": "教育",
+      "count": 4,
+      "universities": [
+        {
+          "university": "Óbuda University",
+          "city": "Budapest",
+          "rank": "301–400",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/obuda-university"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "501–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        }
+      ]
+    },
+    {
+      "key": "engineering",
+      "label_en": "Engineering",
+      "label_ja": "工学",
+      "count": 7,
+      "universities": [
+        {
+          "university": "Óbuda University",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/obuda-university"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        },
+        {
+          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
+          "city": "Gödöllő",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "1251+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "1251+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "University of Miskolc",
+          "city": "Miskolc",
+          "rank": "1251+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc"
+        }
+      ]
+    },
+    {
+      "key": "law",
+      "label_en": "Law",
+      "label_ja": "法学",
+      "count": 3,
+      "universities": [
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "301–400",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "301–400",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "University of Miskolc",
+          "city": "Miskolc",
+          "rank": "1992",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc"
+        }
+      ]
+    },
+    {
+      "key": "life-sciences",
+      "label_en": "Life Sciences",
+      "label_ja": "生命科学",
+      "count": 7,
+      "universities": [
+        {
+          "university": "Budapest University of Economics and Business",
+          "city": "Budapest",
+          "rank": "01",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-business-school"
+        },
+        {
+          "university": "Semmelweis University",
+          "city": "Budapest",
+          "rank": "251–300",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/semmelweis-university"
+        },
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "401–500",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
+          "city": "Gödöllő",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        }
+      ]
+    },
+    {
+      "key": "physical-sciences",
+      "label_en": "Physical Sciences",
+      "label_ja": "物理科学",
+      "count": 8,
+      "universities": [
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "501–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "Óbuda University",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/obuda-university"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "1001–1250",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
+          "city": "Gödöllő",
+          "rank": "1001–1250",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        },
+        {
+          "university": "University of Miskolc",
+          "city": "Miskolc",
+          "rank": "1001–1250",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "1251+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        }
+      ]
+    },
+    {
+      "key": "psychology",
+      "label_en": "Psychology",
+      "label_ja": "心理学",
+      "count": 3,
+      "universities": [
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "301–400",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "501–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "601+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        }
+      ]
+    },
+    {
+      "key": "social-sciences",
+      "label_en": "Social Sciences",
+      "label_ja": "社会科学",
+      "count": 7,
+      "universities": [
+        {
+          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
+          "city": "Gödöllő",
+          "rank": "401–500",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        },
+        {
+          "university": "Eötvös Loránd University",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "Corvinus University of Budapest",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/corvinus-university-budapest"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        }
+      ]
+    }
+  ]
 }

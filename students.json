@@ -26,7 +26,12 @@
         "label": "IELTS7まで上げたオンライン英会話（QQ English)",
         "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6DTCAA+4HHM+5ZU29&id1=kaneko&id2=qqenglish&id3=profile",
         "ready": true
-      }
+      },
+  {
+    "label": "ネイティブキャンプ（英語学習用）",
+    "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=kaneko&id2=nativecamp&id3=profile",
+    "ready": true
+  }
     ],
     "studyMaterials": [
       {
@@ -83,8 +88,8 @@
     "onlineConversation": [
       {
         "label": "英語学習に使ったオンライン英会話",
-        "url": "",
-        "ready": false
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=yu&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [
@@ -136,8 +141,8 @@
     "onlineConversation": [
       {
         "label": "CEFR C1まで伸ばしたオンライン英会話",
-        "url": "",
-        "ready": false
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=ryota&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [
@@ -188,9 +193,9 @@
     },
     "onlineConversation": [
       {
-        "label": "IELTS対策に使用したオンライン英会話（準備中）",
-        "url": "",
-        "ready": false
+        "label": "IELTS対策に使用したオンライン英会話",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=okada&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [
@@ -253,9 +258,9 @@
     },
     "onlineConversation": [
       {
-        "label": "英語学習に使ったオンライン英会話",
-        "url": "",
-        "ready": false
+        "label": "おすすめのオンライン英会話",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=yui&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [
@@ -314,8 +319,8 @@
     "onlineConversation": [
       {
         "label": "英語学習に使ったオンライン英会話",
-        "url": "",
-        "ready": false
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=yuri&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [],
@@ -362,9 +367,9 @@
     },
     "onlineConversation": [
       {
-        "label": "英語学習に使ったオンライン英会話",
-        "url": "",
-        "ready": false
+        "label": "おすすめのオンライン英会話",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=tamami&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [
@@ -421,7 +426,7 @@
   {
     "id": "anna",
     "enabled": true,
-    "featured": true,
+    "featured": false,
     "name": "アンナ（10代）",
     "region": "ブダペスト",
     "course": "経営",
@@ -442,9 +447,9 @@
     },
     "onlineConversation": [
       {
-        "label": "英語学習に使ったオンライン英会話",
-        "url": "",
-        "ready": false
+        "label": "おすすめのオンライン英会話",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=anna&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [
@@ -513,8 +518,8 @@
     "onlineConversation": [
       {
         "label": "英語学習に使ったオンライン英会話",
-        "url": "",
-        "ready": false
+        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=nana&id2=nativecamp&id3=profile",
+        "ready": true
       }
     ],
     "studyMaterials": [],

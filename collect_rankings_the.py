@@ -29,9 +29,7 @@ SUBJECTS = [
         "label_en": "Clinical and Health",
         "aliases": [
             "Clinical and Health",
-            "Clinical & Health",
-            "Clinical",
-            "Health"
+            "Clinical & Health"
         ],
         "label_ja": "臨床・健康"
     },
@@ -47,8 +45,7 @@ SUBJECTS = [
         "key": "education-studies",
         "label_en": "Education Studies",
         "aliases": [
-            "Education Studies",
-            "Education"
+            "Education Studies"
         ],
         "label_ja": "教育"
     },
@@ -72,8 +69,7 @@ SUBJECTS = [
         "key": "life-sciences",
         "label_en": "Life Sciences",
         "aliases": [
-            "Life Sciences",
-            "Life Science"
+            "Life Sciences"
         ],
         "label_ja": "生命科学"
     },
@@ -81,8 +77,7 @@ SUBJECTS = [
         "key": "physical-sciences",
         "label_en": "Physical Sciences",
         "aliases": [
-            "Physical Sciences",
-            "Physical Science"
+            "Physical Sciences"
         ],
         "label_ja": "物理科学"
     },
@@ -98,8 +93,7 @@ SUBJECTS = [
         "key": "social-sciences",
         "label_en": "Social Sciences",
         "aliases": [
-            "Social Sciences",
-            "Social Science"
+            "Social Sciences"
         ],
         "label_ja": "社会科学"
     }
@@ -335,7 +329,6 @@ def normalize_rank(value: str) -> str:
     if upper in {"N/A", "NA", "NOTRANKED", "UNRANKED"}:
         return "—"
 
-    # 01, 001 などを弾く
     if re.fullmatch(r"0\d+", s):
         return "—"
 
@@ -368,7 +361,6 @@ def normalize_rank(value: str) -> str:
 
         return "—"
 
-    # 埋め込み range
     m_range = re.search(r"([1-9]\d{0,3})\s*-\s*([1-9]\d{0,3})", s)
     if m_range:
         left_n = int(m_range.group(1))
@@ -376,7 +368,6 @@ def normalize_rank(value: str) -> str:
         if 1 <= left_n <= right_n <= 3000:
             return f"{left_n}–{right_n}"
 
-    # 埋め込み plus
     m_plus = re.search(r"([1-9]\d{1,3})\s*\+", s)
     if m_plus:
         n = int(m_plus.group(1))
@@ -490,10 +481,10 @@ def extract_overall_rank(html: str) -> str:
 def extract_subject_rank_from_text(text: str, label: str) -> str:
     escaped = re.escape(label)
 
+    # 本文 fallback は range / plus だけ許可
     patterns = [
         rf"{escaped}\s*(?:20\d{{2}})?\s*([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
         rf"{escaped}[^0-9]{{0,40}}([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
-        rf"{escaped}[^0-9]{{0,20}}([1-9]\d{{0,3}})",
     ]
 
     for pattern in patterns:
@@ -514,7 +505,6 @@ def extract_subject_rank_from_html(html: str, label: str, key: str) -> str:
         rf'"name":"{escaped_label}"[\s\S]{{0,250}}?"rank":"([^"]+)"',
         rf'"subject":"{escaped_label}"[\s\S]{{0,250}}?"rank":"([^"]+)"',
         rf'"slug":"{escaped_key}"[\s\S]{{0,250}}?"rank":"([^"]+)"',
-        rf'"ranking":"([^"]+)"[\s\S]{{0,180}}?"name":"{escaped_label}"',
     ]
 
     for pattern in patterns:

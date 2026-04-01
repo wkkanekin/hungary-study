@@ -3,6 +3,7 @@ import re
 import urllib.request
 from datetime import datetime, timezone
 
+
 UNIVERSITIES = [
     {
         "name": "Budapest University of Technology and Economics",
@@ -297,20 +298,45 @@ def build_results() -> list[dict]:
     return results
 
 
+def build_subject_rankings() -> dict:
+    """
+    まずは空の分野別ランキングJSONを安全に出す。
+    後でここに医学・工学・経済などの抽出処理を足す。
+    """
+    return {
+        "updated": datetime.now(timezone.utc).isoformat(),
+        "subjects": {
+            "medicine": [],
+            "engineering": [],
+            "business": [],
+            "computer_science": [],
+            "life_sciences": [],
+            "social_sciences": []
+        }
+    }
+
+
 def main() -> None:
     results = build_results()
+    now_iso = datetime.now(timezone.utc).isoformat()
 
-    output = {
+    overall_output = {
         "source": "Times Higher Education",
-        "updated": datetime.now(timezone.utc).isoformat(),
+        "updated": now_iso,
         "count": len(results),
         "universities": results
     }
 
     with open("rankings.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(overall_output, f, ensure_ascii=False, indent=2)
+
+    subject_output = build_subject_rankings()
+
+    with open("subject-rankings.json", "w", encoding="utf-8") as f:
+        json.dump(subject_output, f, ensure_ascii=False, indent=2)
 
     print("rankings.json generated")
+    print("subject-rankings.json generated")
 
 
 if __name__ == "__main__":

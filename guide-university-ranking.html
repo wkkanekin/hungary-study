@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="ハンガリー主要大学の世界ランキングを一覧で整理しています。総合ランキングだけでなく、医学・工学・IT・経済など分野別ランキングの見方もまとめました。"
+    content="ハンガリー主要大学の世界ランキングを一覧で整理しています。総合ランキングだけでなく、分野別ランキングもまとめて確認できます。"
   />
 
   <link rel="canonical" href="https://hungarystudy.org/guide-university-ranking.html" />
@@ -18,10 +18,9 @@
   <meta property="og:title" content="ハンガリー大学の世界ランキング｜主要大学一覧と分野別ランキング | Guide | ハンガリー留学相談 Hungary Study" />
   <meta
     property="og:description"
-    content="ハンガリー主要大学の世界ランキングを一覧で整理しています。総合ランキングと分野別ランキングの見方をまとめました。"
+    content="ハンガリー主要大学の世界ランキングと分野別ランキングをまとめています。"
   />
   <meta property="og:url" content="https://hungarystudy.org/guide-university-ranking.html" />
-  <!-- <meta property="og:image" content="https://hungarystudy.org/images/ogp-guide.jpg" /> -->
 
   <link rel="stylesheet" href="guide-article.css" />
   <link id="dynamicFavicon" rel="icon" type="image/png" href="">
@@ -53,9 +52,9 @@
           </h1>
 
           <p class="articleLead">
-            ハンガリーの大学を比較するとき、世界ランキングは参考材料の一つになります。
+            ハンガリーの大学を比較するとき、世界ランキングは参考材料の一つです。
             ただし、順位だけで決めるのではなく、自分が学びたい分野、都市、生活費、入試方式、
-            英語要件まであわせて確認することが大切です。このページでは、総合ランキングと分野別ランキングをまとめて整理しています。
+            英語要件も合わせて確認することが大切です。このページでは、総合ランキングと分野別ランキングをまとめて整理しています。
           </p>
         </div>
       </header>
@@ -70,7 +69,7 @@
               </p>
               <p>
                 ただし、総合ランキングが高い大学でも、自分の分野で必ずしも最適とは限りません。
-                たとえば医学系なら医療分野、工学系なら工学分野、IT系ならコンピューターサイエンス分野を見る方が実態に近いことがあります。
+                だからこそ、総合ランキングと分野別ランキングの両方を見る必要があります。
               </p>
             </section>
 
@@ -122,17 +121,18 @@
               <h2>分野別ランキング</h2>
               <p>
                 総合順位だけではわからない強みを見るときは、分野別ランキングが役立ちます。
-                特に、医学・工学・IT・経済などは、大学ごとの差が見えやすいです。
+                自分の専攻に近い分野を確認してください。
               </p>
 
               <div class="infoBox">
-                <h3 class="infoBoxTitle">分野別で見るべき人</h3>
+                <h3 class="infoBoxTitle">分野別で見る意味</h3>
                 <p>
-                  医学系、理工系、IT系、経済系のように、専攻の方向性が比較的はっきりしている人は、
-                  総合ランキングよりも分野別ランキングを重視した方が判断しやすくなります。
+                  医学、工学、IT、経済だけでなく、法学、教育、心理学、芸術・人文科学なども含めて、
+                  自分の進みたい方向に近い分野で大学を比較すると、総合順位だけでは見えない違いがわかります。
                 </p>
               </div>
 
+              <div id="subjectMeta">読み込み中…</div>
               <div id="subjectTables">
                 <p>読み込み中…</p>
               </div>
@@ -238,7 +238,7 @@
             <h2 class="sideTitle">この記事の要点</h2>
             <ul class="sideList">
               <li>総合ランキングだけでなく分野別も確認する。</li>
-              <li>医学・工学・IT・経済系は分野別の重要度が高い。</li>
+              <li>自分の専攻に近い分野で比較する。</li>
               <li>最終判断は英語要件・都市・学費・入試方式まで見る。</li>
             </ul>
           </div>
@@ -276,6 +276,7 @@
       const rankingMetaEl = document.getElementById("rankingMeta");
       const overallRankingBodyEl = document.getElementById("overallRankingBody");
       const subjectTablesEl = document.getElementById("subjectTables");
+      const subjectMetaEl = document.getElementById("subjectMeta");
 
       function esc(str) {
         return String(str ?? "")
@@ -324,22 +325,11 @@
         }
       }
 
-      function subjectTitleMap() {
-        return {
-          medicine: "医学・医療",
-          engineering: "工学",
-          business: "ビジネス・経済",
-          computer_science: "コンピューターサイエンス",
-          life_sciences: "生命科学",
-          social_sciences: "社会科学"
-        };
-      }
+      function createSubjectSection(subject) {
+        const sectionTitle = subject.label_ja || subject.label_en || subject.key || "分野";
+        const rows = Array.isArray(subject.universities) ? subject.universities : [];
 
-      function createSubjectSection(subjectKey, rows) {
-        const titleMap = subjectTitleMap();
-        const sectionTitle = titleMap[subjectKey] || subjectKey;
-
-        if (!Array.isArray(rows) || rows.length === 0) {
+        if (rows.length === 0) {
           return `
             <section>
               <h3>${esc(sectionTitle)}</h3>
@@ -356,6 +346,7 @@
           return `
             <tr>
               <td>${esc(row.university || "—")}</td>
+              <td>${esc(row.city || "—")}</td>
               <td>${esc(row.rank || "—")}</td>
               <td>${detailLink}</td>
             </tr>
@@ -365,11 +356,13 @@
         return `
           <section>
             <h3>${esc(sectionTitle)}</h3>
+            <p>掲載大学数：${esc(String(subject.count ?? rows.length))}</p>
             <div class="tableWrap">
               <table>
                 <thead>
                   <tr>
                     <th>大学</th>
+                    <th>都市</th>
                     <th>分野別ランキング</th>
                     <th>詳細</th>
                   </tr>
@@ -383,26 +376,21 @@
         `;
       }
 
-      function renderSubjects(data) {
-        if (!subjectTablesEl) return;
+      function renderSubjects(subjectData) {
+        if (!subjectTablesEl || !subjectMetaEl) return;
 
-        const subjects = data?.subjects && typeof data.subjects === "object"
-          ? data.subjects
-          : {};
+        const subjects = Array.isArray(subjectData?.subjects) ? subjectData.subjects : [];
 
-        const keys = [
-          "medicine",
-          "engineering",
-          "business",
-          "computer_science",
-          "life_sciences",
-          "social_sciences"
-        ];
+        if (subjects.length === 0) {
+          subjectMetaEl.textContent = "分野別ランキングデータがありません。";
+          subjectTablesEl.innerHTML = "<p>分野別ランキングデータがありません。</p>";
+          return;
+        }
 
-        subjectTablesEl.innerHTML = keys.map((key) => {
-          const rows = Array.isArray(subjects[key]) ? subjects[key] : [];
-          return createSubjectSection(key, rows);
-        }).join("");
+        subjectMetaEl.textContent =
+          `最終更新：${formatDate(subjectData?.updated)} / 分野数：${subjects.length}`;
+
+        subjectTablesEl.innerHTML = subjects.map(createSubjectSection).join("");
       }
 
       try {
@@ -442,6 +430,10 @@
         renderSubjects(subjectData);
       } catch (error) {
         console.error(error);
+
+        if (subjectMetaEl) {
+          subjectMetaEl.textContent = "分野別ランキングの読み込みに失敗しました";
+        }
 
         if (subjectTablesEl) {
           subjectTablesEl.innerHTML = "<p>分野別ランキングの読み込みに失敗しました。</p>";

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-01T17:31:25.700305+00:00",
+  "updated": "2026-04-01T17:48:28.093113+00:00",
   "subjects": [
     {
       "key": "arts-humanities",
@@ -93,8 +93,33 @@
       "key": "clinical-health",
       "label_en": "Clinical and Health",
       "label_ja": "臨床・健康",
-      "count": 0,
-      "universities": []
+      "count": 4,
+      "universities": [
+        {
+          "university": "Semmelweis University",
+          "city": "Budapest",
+          "rank": "176–200",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/semmelweis-university"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "401–500",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
+        },
+        {
+          "university": "University of Debrecen",
+          "city": "Debrecen",
+          "rank": "501–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "University of Szeged",
+          "city": "Szeged",
+          "rank": "501–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
+        }
+      ]
     },
     {
       "key": "computer-science",
@@ -138,13 +163,49 @@
       "key": "education-studies",
       "label_en": "Education Studies",
       "label_ja": "教育",
-      "count": 4,
+      "count": 12,
       "universities": [
+        {
+          "university": "Corvinus University of Budapest",
+          "city": "Budapest",
+          "rank": "5",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/corvinus-university-budapest"
+        },
+        {
+          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
+          "city": "Gödöllő",
+          "rank": "5",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        },
+        {
+          "university": "University of Miskolc",
+          "city": "Miskolc",
+          "rank": "5",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "9",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
+        },
         {
           "university": "Óbuda University",
           "city": "Budapest",
           "rank": "301–400",
           "url": "https://www.timeshighereducation.com/world-university-rankings/obuda-university"
+        },
+        {
+          "university": "Semmelweis University",
+          "city": "Budapest",
+          "rank": "401–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/semmelweis-university"
+        },
+        {
+          "university": "University of Pécs",
+          "city": "Pécs",
+          "rank": "401–600",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs"
         },
         {
           "university": "University of Szeged",
@@ -163,6 +224,18 @@
           "city": "Debrecen",
           "rank": "601–800",
           "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen"
+        },
+        {
+          "university": "Budapest University of Economics and Business",
+          "city": "Budapest",
+          "rank": "601–800",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-business-school"
+        },
+        {
+          "university": "Budapest Metropolitan University",
+          "city": "Budapest",
+          "rank": "1501+",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-metropolitan-university"
         }
       ]
     },

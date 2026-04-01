@@ -29,7 +29,11 @@ SUBJECTS = [
         "label_en": "Clinical and Health",
         "aliases": [
             "Clinical and Health",
-            "Clinical & Health"
+            "Clinical & Health",
+            "Clinical, pre-clinical and health",
+            "Clinical, Pre-Clinical and Health",
+            "Clinical and pre-clinical and health",
+            "Health and Clinical"
         ],
         "label_ja": "臨床・健康"
     },
@@ -332,14 +336,12 @@ def normalize_rank(value: str) -> str:
     if re.fullmatch(r"0\d+", s):
         return "—"
 
-    # 1251+
     if re.fullmatch(r"[1-9]\d{1,3}\+", s):
         n = int(s[:-1])
         if 1 <= n <= 3000:
             return f"{n}+"
         return "—"
 
-    # 301-400
     if re.fullmatch(r"[1-9]\d{0,3}-[1-9]\d{0,3}", s):
         left, right = s.split("-", 1)
         left_n = int(left)
@@ -348,17 +350,12 @@ def normalize_rank(value: str) -> str:
             return f"{left_n}–{right_n}"
         return "—"
 
-    # 単独数値
     if re.fullmatch(r"[1-9]\d{0,3}", s):
         n = int(s)
-
-        # 年っぽい値を弾く
         if 1900 <= n <= 2100:
             return "—"
-
         if 1 <= n <= 3000:
             return str(n)
-
         return "—"
 
     m_range = re.search(r"([1-9]\d{0,3})\s*-\s*([1-9]\d{0,3})", s)
@@ -481,10 +478,9 @@ def extract_overall_rank(html: str) -> str:
 def extract_subject_rank_from_text(text: str, label: str) -> str:
     escaped = re.escape(label)
 
-    # 本文 fallback は range / plus だけ許可
     patterns = [
         rf"{escaped}\s*(?:20\d{{2}})?\s*([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
-        rf"{escaped}[^0-9]{{0,40}}([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
+        rf"{escaped}[^0-9]{{0,80}}([1-9]\d{{0,3}}\s*[–-]\s*[1-9]\d{{0,3}}|[1-9]\d{{1,3}}\+)",
     ]
 
     for pattern in patterns:
@@ -502,9 +498,10 @@ def extract_subject_rank_from_html(html: str, label: str, key: str) -> str:
     escaped_key = re.escape(key)
 
     patterns = [
-        rf'"name":"{escaped_label}"[\s\S]{{0,250}}?"rank":"([^"]+)"',
-        rf'"subject":"{escaped_label}"[\s\S]{{0,250}}?"rank":"([^"]+)"',
-        rf'"slug":"{escaped_key}"[\s\S]{{0,250}}?"rank":"([^"]+)"',
+        rf'"name":"{escaped_label}"[\s\S]{{0,300}}?"rank":"([^"]+)"',
+        rf'"subject":"{escaped_label}"[\s\S]{{0,300}}?"rank":"([^"]+)"',
+        rf'"slug":"{escaped_key}"[\s\S]{{0,300}}?"rank":"([^"]+)"',
+        rf'"title":"{escaped_label}"[\s\S]{{0,300}}?"rank":"([^"]+)"',
     ]
 
     for pattern in patterns:

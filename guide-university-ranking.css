@@ -33,10 +33,11 @@ a{
   color:inherit;
 }
 
+/* ===== 修正①：全体幅拡張 ===== */
 .container{
-  max-width:var(--max);
+  max-width:1440px;
   margin:0 auto;
-  padding:22px 18px 70px;
+  padding:22px 24px 70px;
 }
 
 .card{
@@ -82,15 +83,17 @@ a{
   display:block;
 }
 
+/* ===== 修正②：Hero拡張 ===== */
 .articleHero{
-  padding:28px 40px;
+  padding:32px 48px;
   overflow:hidden;
   background:
     radial-gradient(circle at top right, rgba(29,78,216,.12), transparent 26%),
     linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,255,.96));
 }
+
 .articleHeroInner{
-  max-width:100%;
+  max-width:1200px;
 }
 
 .articleMetaTop{
@@ -121,18 +124,20 @@ a{
   font-weight:950;
 }
 
+/* ===== 修正③：タイトル少し強化 ===== */
 .articleTitle{
   margin:14px 0 0;
-  font-size:40px;
-  line-height:1.2;
+  font-size:52px;
+  line-height:1.18;
   color:#0f2a5a;
   font-weight:950;
   letter-spacing:.01em;
 }
 
+/* ===== 修正④：リード幅拡張 ===== */
 .articleLead{
   margin:16px 0 0;
-  max-width:840px;
+  max-width:1080px;
   color:#475569;
   font-weight:800;
   line-height:1.9;
@@ -235,16 +240,6 @@ a{
   box-shadow:var(--shadow-soft);
 }
 
-#subjectTables > section h3{
-  margin-bottom:8px;
-}
-
-#subjectTables > section > p{
-  color:#64748b;
-  font-size:14px;
-  font-weight:900;
-}
-
 .tableWrap{
   margin-top:14px;
   overflow-x:auto;
@@ -286,73 +281,6 @@ tbody tr:hover{
   background:#f7faff;
 }
 
-td a{
-  color:#1d4ed8;
-  font-weight:900;
-  text-decoration:none;
-}
-
-td a:hover{
-  text-decoration:underline;
-}
-
-.relatedSection{
-  margin-top:4px;
-  padding-top:4px;
-}
-
-.relatedGrid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:12px;
-  margin-top:12px;
-}
-
-.relatedCard{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  padding:16px;
-  border-radius:16px;
-  background:#fff;
-  border:1px solid rgba(229,231,235,.9);
-  text-decoration:none;
-  box-shadow:0 10px 22px rgba(17,24,39,.04);
-  transition:.15s transform ease, .15s box-shadow ease;
-}
-
-.relatedCard:hover{
-  transform:translateY(-1px);
-  box-shadow:0 14px 26px rgba(17,24,39,.07);
-}
-
-.relatedCard strong{
-  color:#0f2a5a;
-  font-size:17px;
-  line-height:1.4;
-}
-
-.relatedCard p{
-  margin:0;
-  color:#475569;
-  line-height:1.75;
-  font-size:14px;
-}
-
-.relatedChip{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:fit-content;
-  padding:6px 9px;
-  border-radius:999px;
-  background:var(--chip);
-  border:1px solid rgba(29,78,216,.18);
-  color:#173a8f;
-  font-size:11px;
-  font-weight:950;
-}
-
 .articleSide{
   display:flex;
   flex-direction:column;
@@ -368,47 +296,8 @@ td a:hover{
 .sideTitle{
   margin:0 0 12px;
   font-size:18px;
-  line-height:1.4;
   color:#0f2a5a;
   font-weight:950;
-}
-
-.sideList{
-  margin:0;
-  padding-left:1.2em;
-  color:#374151;
-}
-
-.sideList li{
-  margin:8px 0;
-  line-height:1.75;
-  font-weight:850;
-}
-
-.tagRow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.tag{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:8px 10px;
-  border-radius:999px;
-  background:#f3f4f6;
-  border:1px solid rgba(229,231,235,.9);
-  color:#374151;
-  font-size:12px;
-  font-weight:900;
-}
-
-.sideText{
-  margin:0;
-  color:#475569;
-  font-weight:800;
-  line-height:1.8;
 }
 
 .sideActions{
@@ -430,8 +319,7 @@ td a:hover{
   cursor:pointer;
   text-decoration:none;
   font-weight:900;
-  transition:.15s transform ease, .15s background ease, .15s border ease, .15s box-shadow ease;
-  user-select:none;
+  transition:.15s transform ease;
 }
 
 .btn:hover{
@@ -452,55 +340,38 @@ td a:hover{
   font-weight:900;
 }
 
-.footerLink{
-  text-decoration:none;
-}
-
-.footerLink:hover{
-  text-decoration:underline;
-}
-
-@media (min-width: 1280px){
-  :root{
-    --max:1320px;
-  }
-}
+/* ===== レスポンシブ ===== */
 
 @media (max-width: 1100px){
   .articleLayout{
-    grid-template-columns:minmax(0, 1fr);
+    grid-template-columns:1fr;
   }
-
   .articleSide{
     position:static;
   }
 }
 
 @media (max-width: 900px){
-  .relatedGrid{
-    grid-template-columns:1fr;
-  }
-
   .articleTitle{
     font-size:32px;
   }
-
   .articleBody h2{
     font-size:24px;
-  }
-
-  table{
-    min-width:680px;
   }
 }
 
 @media (max-width: 640px){
+
   .container{
     padding:18px 14px 56px;
   }
 
   .articleHero{
     padding:22px 18px;
+  }
+
+  .articleHeroInner{
+    max-width:100%;
   }
 
   .articleBody{
@@ -512,6 +383,7 @@ td a:hover{
   }
 
   .articleLead{
+    max-width:100%;
     font-size:15px;
   }
 
@@ -521,10 +393,6 @@ td a:hover{
 
   .btn{
     width:100%;
-  }
-
-  .topBarInner{
-    gap:8px;
   }
 
   table{

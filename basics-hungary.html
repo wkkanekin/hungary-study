@@ -112,7 +112,7 @@
   </div>
 </section>
 
-<!-- ✅ 物価（KSH：月1更新）※追加：状態列なし -->
+<!-- ✅ 物価（KSH：月1更新） -->
 <section class="section" id="prices">
   <h2>物価（学生がよく買うもの：月1更新）</h2>
 
@@ -128,11 +128,10 @@
             <th>品目</th>
             <th>価格</th>
             <th>単位</th>
-            <th>備考</th>
           </tr>
         </thead>
         <tbody id="pricesTbody">
-          <tr><td colspan="4">読み込み中…</td></tr>
+          <tr><td colspan="3">読み込み中…</td></tr>
         </tbody>
       </table>
     </div>
@@ -222,27 +221,8 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
-  function resolveVersionedAssetUrl(url, version) {
-    const cleanUrl = String(url ?? "").trim();
-    if (!cleanUrl) return "";
-
-    const rawVersion = String(version ?? "").trim();
-    if (!rawVersion) return cleanUrl;
-
-    const hasQuery = cleanUrl.includes("?");
-    const separator = hasQuery ? "&" : "?";
-    return `${cleanUrl}${separator}v=${encodeURIComponent(rawVersion)}`;
-  }
-
-  function getVersionedImageUrl(obj) {
-    if (!obj || typeof obj !== "object") return "";
-    const url = String(obj.url ?? obj.imageUrl ?? "").trim();
-    const version = String(obj.version ?? obj.v ?? obj.imageVersion ?? "").trim();
-    return resolveVersionedAssetUrl(url, version);
-  }
-
   /* =========================
-     画像JSONから差し替え（version付きURL対応）
+     画像JSONから差し替え
   ========================== */
   const map = {
     hero: "imgHero",
@@ -257,14 +237,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!res.ok) return;
 
     const data = await res.json();
-    const images = data.images || {};
+    const images = data.images;
 
     for (const key in map) {
       const el = document.getElementById(map[key]);
       if (!el) continue;
 
-      const imageUrl = getVersionedImageUrl(images[key]);
-      if (imageUrl) el.src = imageUrl;
+      if (images[key]?.url) el.src = images[key].url;
       if (images[key]?.alt) el.alt = images[key].alt;
     }
   } catch (e) {
@@ -272,8 +251,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   /* =========================
-     物価（prices.json）読み込み＆描画（KSH）
-     ✅ 状態列は出さない（statusは一切描画しない）
+     物価（prices.json）読み込み＆描画
+     - 品目は label_ja を使う
+     - 備考列は出さない
   ========================== */
   async function loadPrices() {
     const metaEl = document.getElementById("pricesMeta");
@@ -293,34 +273,36 @@ document.addEventListener("DOMContentLoaded", async () => {
         `最終更新：${updated || "不明"} / 取得元：${source || "不明"} / 統計月：${latestMonth || "不明"}`;
 
       const items = Array.isArray(data?.items) ? data.items : [];
-      if (!items.length) {
-        tbodyEl.innerHTML = `<tr><td colspan="4">データがありません</td></tr>`;
+      const okItems = items.filter(it => it?.status === "ok");
+
+      if (!okItems.length) {
+        tbodyEl.innerHTML = `<tr><td colspan="3">データがありません</td></tr>`;
         return;
       }
 
       tbodyEl.innerHTML = "";
-      for (const it of items) {
-        const denom = String(it?.ksh_denomination || it?.label_ja || it?.name || "");
+      for (const it of okItems) {
+        const labelJa = String(it?.label_ja || "");
         const price = it?.price_huf;
-        const unit = String(it?.ksh_unit || "");
-        const note = String(it?.label_ja || it?.note || "");
+        const unit = String(it?.unit || it?.ksh_unit || "");
 
         const priceText =
-          typeof price === "number" && isFinite(price) ? formatNumber(price) : "";
+          typeof price === "number" && isFinite(price)
+            ? `${formatNumber(price)} Ft`
+            : "";
 
         const tr = document.createElement("tr");
         tr.innerHTML = `
-          <td>${escapeHtml(denom)}</td>
+          <td>${escapeHtml(labelJa)}</td>
           <td>${escapeHtml(priceText)}</td>
           <td>${escapeHtml(unit)}</td>
-          <td>${escapeHtml(note)}</td>
         `;
         tbodyEl.appendChild(tr);
       }
     } catch (err) {
       console.error(err);
-      if (metaEl) metaEl.textContent = "物価データの読み込みに失敗しました";
-      if (tbodyEl) tbodyEl.innerHTML = `<tr><td colspan="4">読み込みエラー</td></tr>`;
+      metaEl.textContent = "物価データの読み込みに失敗しました";
+      tbodyEl.innerHTML = `<tr><td colspan="3">読み込みエラー</td></tr>`;
     }
   }
 

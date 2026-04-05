@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ハンガリーの生活費｜実際いくらかかる？</title>
+  <link rel="stylesheet" href="guide.css" />
+</head>
+
+<body>
+<div class="container">
+
+<header class="section">
+  <h1>ハンガリーの生活費はいくら？</h1>
+  <p class="muted" style="text-align:center; max-width:760px; margin:12px auto 0;">
+    「結局いくら必要？」を、リアルな目安で解説します。
+  </p>
+</header>
+
+<!-- 結論 -->
+<section class="section">
+  <div class="card simpleCard">
+    <h2>結論</h2>
+    <ul style="line-height:2; padding-left:18px;">
+      <li>最低ライン：月25万Ft</li>
+      <li>ブダペスト：やや高い</li>
+      <li>地方都市：やや安い</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 家賃 -->
+<section class="section">
+  <div class="card simpleCard">
+    <h2>① 家賃</h2>
+    <ul style="line-height:2; padding-left:18px;">
+      <li>寮：30,000〜80,000 Ft</li>
+      <li>シェア：80,000〜150,000 Ft</li>
+      <li>一人暮らし：150,000〜250,000 Ft</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 生活費 -->
+<section class="section">
+  <div class="card simpleCard">
+    <h2>② 食費・交通費など</h2>
+    <ul style="line-height:2; padding-left:18px;">
+      <li>食費：40,000〜80,000 Ft</li>
+      <li>交通費：学生定期 約3,500 Ft</li>
+      <li>通信費：3,000〜6,000 Ft</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 物価テーブル -->
+<section class="section" id="prices">
+  <h2>実際の物価（毎月更新）</h2>
+
+  <div class="card simpleCard">
+    <p class="muted" id="pricesMeta">読み込み中…</p>
+
+    <div class="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th>品目</th>
+            <th>価格</th>
+            <th>単位</th>
+          </tr>
+        </thead>
+        <tbody id="pricesTbody">
+          <tr><td colspan="3">読み込み中…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="muted">
+      ※ ハンガリー中央統計局（KSH）の平均価格
+    </p>
+  </div>
+</section>
+
+<!-- 合計 -->
+<section class="section">
+  <div class="card simpleCard">
+    <h2>③ 合計のイメージ</h2>
+    <p>
+      → 多くの学生は <b>月25万〜35万Ft</b> で生活しています。
+    </p>
+  </div>
+</section>
+
+</div>
+
+<script>
+async function loadPrices() {
+  const metaEl = document.getElementById("pricesMeta");
+  const tbodyEl = document.getElementById("pricesTbody");
+
+  try {
+    const r = await fetch("prices.json?v=" + Date.now());
+    const data = await r.json();
+
+    metaEl.textContent =
+      `最終更新：${data.updated_at} / 統計月：${data.ksh_latest_month}`;
+
+    const rows = data.items
+      .filter(i => i.status === "ok")
+      .map(i => `
+        <tr>
+          <td>${i.label_ja}</td>
+          <td>${i.price_huf.toLocaleString()} Ft</td>
+          <td>${i.ksh_unit}</td>
+        </tr>
+      `).join("");
+
+    tbodyEl.innerHTML = rows;
+
+  } catch (e) {
+    metaEl.textContent = "読み込みエラー";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadPrices);
+</script>
+
+</body>
+</html>

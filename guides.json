@@ -58,5 +58,15 @@
     "category": "体験談",
     "url": "guide-student-story-elte.html",
     "date": "2026-03-21"
+  },
+  {
+    "id": "hungary-university-cost-detail",
+    "enabled": true,
+    "featured": true,
+    "title": "ハンガリー大学の学費まとめ｜主要6大学×プログラム別",
+    "description": "Corvinus・ELTE・BME・Debrecen・Szeged・Pécsの学費をプログラム単位で整理。大学選びに必要な費用感を比較しやすくまとめました。",
+    "category": "費用",
+    "url": "guide-hungary-university-cost.html",
+    "date": "2026-04-06"
   }
 ]

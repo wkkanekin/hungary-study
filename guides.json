@@ -78,5 +78,15 @@
     "category": "生活情報",
     "url": "guide-wise-hungary.html",
     "date": "2026-04-05"
+  },
+  {
+    "id": "hungary-cost",
+    "enabled": true,
+    "featured": true,
+    "title": "ハンガリーの生活費はいくら？",
+    "description": "家賃、食費、交通費に加えて、毎月更新される最新の物価データを見ながら、ハンガリー留学の生活費を整理します。",
+    "category": "生活情報",
+    "url": "guide-hungary-cost.html",
+    "date": "2026-04-05"
   }
 ]

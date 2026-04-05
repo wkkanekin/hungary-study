@@ -83,7 +83,7 @@ a{color:inherit}
 }
 
 .articleHeroInner{
-  max-width:860px;
+  max-width:100%;
 }
 
 .articleMetaTop{
@@ -116,15 +116,19 @@ a{color:inherit}
 
 .articleTitle{
   margin:14px 0 0;
-  font-size:40px;
-  line-height:1.2;
+  max-width:100%;
+  font-size:52px;
+  line-height:1.16;
   color:#0f2a5a;
   font-weight:950;
+  letter-spacing:-0.01em;
+  word-break:normal;
+  overflow-wrap:break-word;
 }
 
 .articleLead{
   margin:16px 0 0;
-  max-width:820px;
+  max-width:100%;
   color:#475569;
   font-weight:800;
   line-height:1.9;
@@ -408,6 +412,10 @@ thead th{
 
   .articleSide{
     position:static;
+  }
+
+  .articleTitle{
+    font-size:44px;
   }
 }
 

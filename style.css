@@ -179,8 +179,6 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  padding:18px 18px 16px;
  position:relative;
  overflow:hidden;
-
- /* 端末に応じてヒーロー高さを確保（PCで切れやすい問題を抑える） */
  min-height: clamp(120px, 18vw, 240px);
  display:flex;
  align-items:center;
@@ -188,15 +186,10 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .heroBg{
  position:absolute;
  inset:0;
-
- /* 読み込み完了まで無地（デフォルト画像のチラ見えを消す） */
  background-color: #0b1b3a;
  background-image: var(--hero-image);
  background-size: cover;
-
- /* 端末ごとに調整できるよう変数化 */
  background-position: var(--hero-pos);
-
  filter: saturate(1.05);
  transform: scale(1.02);
 }
@@ -388,11 +381,9 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  gap:18px;
  flex-wrap:wrap;
 }
-
 .guideLeadText{
  flex:1 1 520px;
 }
-
 .guideLeadTitle{
  margin:0 0 8px;
  font-size:22px;
@@ -400,18 +391,15 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  color:#0f2a5a;
  font-weight:950;
 }
-
 .guideLeadDesc{
  margin:0;
  color:#475569;
  font-weight:800;
  line-height:1.75;
 }
-
 .guideLeadActions{
  flex:0 0 auto;
 }
-
 .guideLeadActions .btn{
  min-width:180px;
 }
@@ -419,20 +407,24 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 /* Newsletter / Brevo */
 .newsletterSection .simpleCard{
  max-width:860px;
+ padding:14px;
 }
 
 .newsletterSection .sib-form{
+ margin:0;
  background-color:transparent !important;
 }
 
 .newsletterSection #sib-form-container{
  width:100%;
+ padding:0 !important;
 }
 
 .newsletterSection #sib-container{
- max-width:720px !important;
+ max-width:640px !important;
  width:100%;
  margin:0 auto;
+ padding:0 !important;
  border-radius:18px !important;
  border:1px solid rgba(229,231,235,.9) !important;
  box-shadow:0 10px 30px rgba(17,24,39,.08);
@@ -443,19 +435,42 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .newsletterSection .sib-form-message-panel{
  margin:0 auto 12px !important;
  width:100%;
- max-width:720px !important;
+ max-width:640px !important;
  border-radius:16px !important;
 }
 
 .newsletterSection .sib-form-block{
- padding-left:0 !important;
- padding-right:0 !important;
+ padding:0 !important;
 }
 
-.newsletterSection .sib-text-form-block p,
-.newsletterSection .sib-form-block p{
+.newsletterSection #sib-form{
+ padding:22px 22px 18px !important;
+}
+
+.newsletterSection #sib-form > div{
+ padding:0 !important;
+ margin-bottom:14px;
+}
+
+.newsletterSection #sib-form > div:last-of-type{
+ margin-bottom:0;
+}
+
+.newsletterSection .sib-form-block p,
+.newsletterSection .sib-text-form-block p{
  margin:0;
  line-height:1.7;
+}
+
+.newsletterSection .sib-form-block p{
+ font-size:16px;
+}
+
+.newsletterSection .sib-form-block:first-child p{
+ font-size:24px !important;
+ line-height:1.35 !important;
+ font-weight:950 !important;
+ color:#0f2a5a !important;
 }
 
 .newsletterSection .entry__label{
@@ -473,7 +488,7 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 
 .newsletterSection .input{
  width:100% !important;
- padding:12px 12px !important;
+ padding:12px 14px !important;
  border-radius:14px !important;
  border:1px solid rgba(229,231,235,.95) !important;
  background:#fff !important;
@@ -490,7 +505,7 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 
 .newsletterSection .entry__specification{
  display:block;
- margin-top:8px !important;
+ margin-top:6px !important;
  color:#6b7280 !important;
  font-size:12px !important;
  line-height:1.6;
@@ -504,12 +519,13 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 }
 
 .newsletterSection .sib-form-block__button{
- min-width:220px;
+ min-width:0 !important;
+ width:auto !important;
  display:inline-flex !important;
  align-items:center;
  justify-content:center;
  gap:8px;
- padding:12px 16px !important;
+ padding:12px 28px !important;
  border-radius:14px !important;
  border:1px solid rgba(29,78,216,.55) !important;
  background:linear-gradient(180deg, var(--blue) 0%, var(--blue2) 100%) !important;
@@ -998,17 +1014,14 @@ details p{
 
 /* HEROの表示最適化（PC / タブレット / スマホ） */
 @media (min-width: 1024px){
- /* PC: 横長でも切れにくいよう、少し高さを確保 */
  .heroHeader{ min-height: clamp(150px, 14vw, 260px); }
  :root{ --hero-pos: 50% 45%; }
 }
 @media (max-width: 1023px) and (min-width: 721px){
- /* タブレット: ほどよく中央寄せ */
  .heroHeader{ min-height: clamp(140px, 20vw, 240px); }
  :root{ --hero-pos: 50% 50%; }
 }
 @media (max-width: 720px){
- /* スマホ: 文字が読みやすいよう縦を少し確保（切れ方も緩和） */
  .heroHeader{ padding:16px 14px 14px; min-height: 170px; }
  .headerTitle{ font-size:22px; }
  .logoBox{ width:48px; height:48px; border-radius:14px; }
@@ -1030,17 +1043,27 @@ details p{
   width:100%;
  }
 
- .newsletterSection .sib-form-block__button{
-  width:100% !important;
-  min-width:0 !important;
+ .newsletterSection .simpleCard{
+  padding:12px;
+ }
+
+ .newsletterSection #sib-form{
+  padding:18px 16px 16px !important;
  }
 
  .newsletterSection #sib-container{
+  max-width:100% !important;
   border-radius:16px !important;
  }
 
  .newsletterSection .sib-form-message-panel{
+  max-width:100% !important;
   border-radius:14px !important;
+ }
+
+ .newsletterSection .sib-form-block__button{
+  width:100% !important;
+  min-width:0 !important;
  }
 }
 

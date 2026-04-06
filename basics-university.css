@@ -77,7 +77,6 @@ h3{
   box-shadow: 0 10px 24px rgba(29,78,216,.18);
 }
 
-/* ✅ basics画像：枠16:9固定 + cover（空白なし） */
 .heroWrap{
   overflow:hidden;
   background:#fff;
@@ -92,11 +91,68 @@ h3{
   display:block;
 }
 
+.noteBox{
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:#f7f9ff;
+  border:1px solid rgba(29,78,216,.14);
+  color:#334155;
+  font-weight:850;
+  line-height:1.75;
+}
+
+.stepList{
+  margin:0;
+  padding-left:18px;
+  line-height:1.9;
+  font-weight:850;
+}
+
+.filterBox{
+  margin:14px 0 16px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#f8fbff;
+}
+
+.filterGrid{
+  display:grid;
+  grid-template-columns: 1fr 240px;
+  gap:10px;
+}
+
+.filterLabel{
+  display:block;
+  margin:0 0 8px;
+  color:#0f2a5a;
+  font-weight:950;
+  font-size:13px;
+}
+
+.filterActions{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+
+input[type="text"], select{
+  width:100%;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid rgba(229,231,235,.95);
+  background:#fff;
+  font-weight:850;
+  outline:none;
+}
+
 .tableWrap{overflow:auto}
 table{
   width:100%;
   border-collapse:collapse;
-  min-width:560px;
+  min-width:920px;
 }
 th, td{
   text-align:left;
@@ -105,6 +161,27 @@ th, td{
   vertical-align:top;
 }
 tbody tr:last-child td{border-bottom:none}
+
+.uniNameCell{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+
+.uniNameJa{
+  font-size:15px;
+  line-height:1.5;
+  font-weight:900;
+  color:#0f172a;
+}
+
+.uniNameEn{
+  font-size:12px;
+  line-height:1.45;
+  color:#6b7280;
+  font-weight:700;
+  word-break:break-word;
+}
 
 .footer{
   margin-top:28px;
@@ -116,5 +193,14 @@ tbody tr:last-child td{border-bottom:none}
 @media (max-width: 720px){
   h1{font-size:26px}
   .heroImg{ aspect-ratio: 16 / 10; }
-  table{min-width:520px}
+  .filterGrid{grid-template-columns:1fr}
+  table{min-width:720px}
+
+  .uniNameJa{
+    font-size:14px;
+  }
+
+  .uniNameEn{
+    font-size:11px;
+  }
 }

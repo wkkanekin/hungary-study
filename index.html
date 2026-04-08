@@ -16,7 +16,11 @@
   <meta property="og:title" content="ハンガリー留学相談 Hungary Study" />
   <meta property="og:description" content="ハンガリー現役大学生に1対1で直接聞けるオンライン留学相談。実体験ベースで具体的に相談できます。" />
   <meta property="og:url" content="https://hungarystudy.org/" />
+
+  <!-- ★ここが超重要 -->
   <meta property="og:image" content="https://hungarystudy.org/images/ogp-guide.jpg?v=20260408" />
+  <meta property="og:image:secure_url" content="https://hungarystudy.org/images/ogp-guide.jpg?v=20260408" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="ハンガリー留学相談 Hungary Study" />
@@ -45,7 +49,7 @@
     crossorigin=""
   />
 
-  <!-- フォント・フォーム -->
+  <!-- フォント -->
   <style>
     @font-face {
       font-display: block;
@@ -70,12 +74,7 @@
            url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
     }
 
-    #sib-container input::placeholder {
-      text-align: left;
-      font-family: Helvetica, sans-serif;
-      color: #c0ccda;
-    }
-
+    #sib-container input::placeholder,
     #sib-container textarea::placeholder {
       text-align: left;
       font-family: Helvetica, sans-serif;
@@ -89,7 +88,8 @@
   </style>
 
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-</head><body>
+</head>
+<body>
   <div class="container">
     <header class="card heroHeader" id="top">
       <div class="heroBg" aria-hidden="true"></div>

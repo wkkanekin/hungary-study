@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-05T20:36:41.956157+00:00",
+  "updated": "2026-04-11T22:22:12.693728+00:00",
   "subjects": [
     {
       "key": "arts-humanities",
@@ -100,38 +100,8 @@
       "key": "computer-science",
       "label_en": "Computer Science",
       "label_ja": "コンピューターサイエンス",
-      "count": 10,
+      "count": 5,
       "universities": [
-        {
-          "university": "Corvinus University of Budapest",
-          "city": "Budapest",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/corvinus-university-budapest"
-        },
-        {
-          "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
-          "city": "Gödöllő",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
-        },
-        {
-          "university": "University of Miskolc",
-          "city": "Miskolc",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc"
-        },
-        {
-          "university": "Budapest Metropolitan University",
-          "city": "Budapest",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-metropolitan-university"
-        },
-        {
-          "university": "Budapest University of Economics and Business",
-          "city": "Budapest",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-business-school"
-        },
         {
           "university": "Óbuda University",
           "city": "Budapest",
@@ -200,26 +170,8 @@
       "key": "engineering",
       "label_en": "Engineering",
       "label_ja": "工学",
-      "count": 10,
+      "count": 7,
       "universities": [
-        {
-          "university": "Corvinus University of Budapest",
-          "city": "Budapest",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/corvinus-university-budapest"
-        },
-        {
-          "university": "Budapest Metropolitan University",
-          "city": "Budapest",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-metropolitan-university"
-        },
-        {
-          "university": "Budapest University of Economics and Business",
-          "city": "Budapest",
-          "rank": "2–5",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-business-school"
-        },
         {
           "university": "Óbuda University",
           "city": "Budapest",

@@ -40,15 +40,15 @@
     "date": "2026-03-19"
   },
   {
-    "id": "hungary-life-cost",
-    "enabled": true,
-    "featured": false,
-    "title": "ハンガリーの生活費",
-    "description": "家賃、寮、食費、交通費など、学生生活のコスト感を整理します。",
-    "category": "生活情報",
-    "url": "guide-hungary-life-cost.html",
-    "date": "2026-03-20"
-  },
+  "id": "budapest-districts",
+  "enabled": true,
+  "featured": true,
+  "title": "ブダペスト23区とは？留学生向けにエリア別でわかりやすく解説",
+  "description": "ブダペストの23区を、ブダ側・ペスト側・観光エリア・留学生向けエリアに分けて整理。どこに住むべきか一発でわかるように解説します。",
+  "category": "生活情報",
+  "url": "guide-budapest-districts.html",
+  "date": "2026-04-12"
+},
   {
     "id": "student-story-elte",
     "enabled": true,

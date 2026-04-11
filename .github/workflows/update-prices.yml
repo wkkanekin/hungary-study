@@ -26,21 +26,37 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      # ----------------------------
+      # KSH（ハンガリー公式物価）
+      # ----------------------------
       - name: Collect prices from KSH
         run: |
           python collect_prices_ksh.py
 
+      # ----------------------------
+      # 大学ランキング（THE）
+      # ----------------------------
       - name: Collect university rankings
         run: |
           python collect_rankings_the.py
 
+      # ----------------------------
+      # Numbeo（都市物価比較） ← NEW
+      # ----------------------------
+      - name: Collect Numbeo city cost comparison
+        run: |
+          python collect_cost_compare_numbeo.py
+
+      # ----------------------------
+      # Commit & Push
+      # ----------------------------
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add prices.json rankings.json subject-rankings.json
+          git add prices.json rankings.json subject-rankings.json cost_compare_numbeo.json
 
-          git diff --cached --quiet || git commit -m "Auto update prices and rankings"
+          git diff --cached --quiet || git commit -m "Auto update prices, rankings and cost comparison"
 
           git push

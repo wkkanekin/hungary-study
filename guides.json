@@ -10,13 +10,13 @@
     "date": "2026-03-16"
   },
   {
-    "id": "hungary-cost-tuition",
+    "id": "hungary-tuition-cost",
     "enabled": true,
     "featured": true,
     "title": "ハンガリー留学の学費",
     "description": "ハンガリーの主要大学の学費や、欧米主要国と比べたときの費用感、生活費の考え方をわかりやすく整理します。",
     "category": "費用",
-    "url": "guide-hungary-cost.html",
+    "url": "guide-hungary-tuition-cost.html",
     "date": "2026-03-17"
   },
   {
@@ -80,7 +80,7 @@
     "date": "2026-04-05"
   },
   {
-    "id": "hungary-cost-living",
+    "id": "hungary-monthly-living-cost",
     "enabled": true,
     "featured": true,
     "title": "ハンガリーの生活費はいくら？",
@@ -89,14 +89,12 @@
     "url": "guide-hungary-cost.html",
     "date": "2026-04-05"
   },
-
-  // ★ ここ追加（NEW）
   {
     "id": "hungary-cost-compare",
     "enabled": true,
     "featured": true,
     "title": "ハンガリー vs 日本｜主要都市の物価比較",
-    "description": "ブダペスト・ペーチ・セゲド・デブレツェンと東京・大阪を比較。生活費・家賃・外食の違いをグラフでわかりやすく整理しました。",
+    "description": "ブダペスト・ペーチ・デブレツェン・セゲドと東京・大阪・福岡の生活費、家賃、外食価格をグラフで比較し、都市選びでどれくらい差が出るかを整理します。",
     "category": "費用",
     "url": "guide-hungary-cost-compare.html",
     "date": "2026-04-12"

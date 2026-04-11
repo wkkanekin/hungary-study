@@ -1,0 +1,137 @@
+{
+  "source": "Numbeo",
+  "rankings_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+  "updated_at": "2026-04-11T22:40:16.615336+00:00",
+  "chart_metrics": [
+    "cost_of_living_index",
+    "rent_index",
+    "restaurant_price_index"
+  ],
+  "cities": [
+    {
+      "id": "tokyo",
+      "label_ja": "東京",
+      "city": "Tokyo",
+      "country": "Japan",
+      "lookup": "Tokyo, Japan",
+      "cost_of_living_index": 54.3,
+      "rent_index": 23.1,
+      "restaurant_price_index": 36.2,
+      "source_type": "rankings_current",
+      "source_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+      "note": "Numbeo current rankings から直接取得"
+    },
+    {
+      "id": "osaka",
+      "label_ja": "大阪",
+      "city": "Osaka",
+      "country": "Japan",
+      "lookup": "Osaka, Japan",
+      "cost_of_living_index": 43.0,
+      "rent_index": 17.5,
+      "restaurant_price_index": 29.0,
+      "source_type": "rankings_current",
+      "source_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+      "note": "Numbeo current rankings から直接取得"
+    },
+    {
+      "id": "fukuoka",
+      "label_ja": "福岡",
+      "city": "Fukuoka",
+      "country": "Japan",
+      "lookup": "Fukuoka, Japan",
+      "cost_of_living_index": null,
+      "rent_index": null,
+      "restaurant_price_index": null,
+      "source_type": "unavailable",
+      "source_url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?city1=Fukuoka&city2=Tokyo&country1=Japan&country2=Japan",
+      "note": "取得失敗: 比較ページから 'Rent Prices in Tokyo is ... than in Fukuoka' を取得できませんでした"
+    },
+    {
+      "id": "budapest",
+      "label_ja": "ブダペスト",
+      "city": "Budapest",
+      "country": "Hungary",
+      "lookup": "Budapest, Hungary",
+      "cost_of_living_index": 52.6,
+      "rent_index": 20.2,
+      "restaurant_price_index": 52.6,
+      "source_type": "rankings_current",
+      "source_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+      "note": "Numbeo current rankings から直接取得"
+    },
+    {
+      "id": "pecs",
+      "label_ja": "ペーチ",
+      "city": "Pecs",
+      "country": "Hungary",
+      "lookup": "Pecs, Hungary",
+      "cost_of_living_index": 49.4,
+      "rent_index": 12.7,
+      "restaurant_price_index": 45.5,
+      "source_type": "rankings_current",
+      "source_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+      "note": "Numbeo current rankings から直接取得"
+    },
+    {
+      "id": "debrecen",
+      "label_ja": "デブレツェン",
+      "city": "Debrecen",
+      "country": "Hungary",
+      "lookup": "Debrecen, Hungary",
+      "cost_of_living_index": 47.3,
+      "rent_index": 15.2,
+      "restaurant_price_index": 45.6,
+      "source_type": "rankings_current",
+      "source_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+      "note": "Numbeo current rankings から直接取得"
+    },
+    {
+      "id": "szeged",
+      "label_ja": "セゲド",
+      "city": "Szeged",
+      "country": "Hungary",
+      "lookup": "Szeged, Hungary",
+      "cost_of_living_index": 46.4,
+      "rent_index": 10.5,
+      "restaurant_price_index": 39.2,
+      "source_type": "rankings_current",
+      "source_url": "https://www.numbeo.com/cost-of-living/rankings_current.jsp",
+      "note": "Numbeo current rankings から直接取得"
+    },
+    {
+      "id": "gyor",
+      "label_ja": "ジェール",
+      "city": "Gyor",
+      "country": "Hungary",
+      "lookup": "Gyor, Hungary",
+      "cost_of_living_index": null,
+      "rent_index": null,
+      "restaurant_price_index": null,
+      "source_type": "unavailable",
+      "source_url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?city1=Gyor&city2=Tokyo&country1=Hungary&country2=Japan",
+      "note": "取得失敗: 比較ページから 'Rent Prices in Tokyo is ... than in Gyor' を取得できませんでした"
+    }
+  ],
+  "meta": {
+    "notes": [
+      "rankings_current にある都市は直接取得",
+      "rankings_current にない都市は compare_cities から Tokyo 基準で逆算",
+      "Győr のように compare page 側でも取得できない場合は null のまま残す"
+    ],
+    "compare_logs": [
+      {
+        "id": "fukuoka",
+        "url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?city1=Fukuoka&city2=Tokyo&country1=Japan&country2=Japan",
+        "status": "error",
+        "error": "比較ページから 'Rent Prices in Tokyo is ... than in Fukuoka' を取得できませんでした"
+      },
+      {
+        "id": "gyor",
+        "url": "https://www.numbeo.com/cost-of-living/compare_cities.jsp?city1=Gyor&city2=Tokyo&country1=Hungary&country2=Japan",
+        "status": "error",
+        "error": "比較ページから 'Rent Prices in Tokyo is ... than in Gyor' を取得できませんでした"
+      }
+    ]
+  }
+}

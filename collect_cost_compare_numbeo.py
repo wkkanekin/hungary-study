@@ -1,18 +1,14 @@
 import json
-import math
 import re
 import sys
 import html as html_lib
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
-from urllib.parse import urlencode
+from typing import Any, Dict, List, Optional
 from urllib.request import Request, urlopen
 
 
 RANKINGS_URL = "https://www.numbeo.com/cost-of-living/rankings_current.jsp"
-COMPARE_URL = "https://www.numbeo.com/cost-of-living/compare_cities.jsp"
-
 USER_AGENT = "Mozilla/5.0 (compatible; hungarystudy-bot/1.0; +https://hungarystudy.org)"
 
 
@@ -32,13 +28,7 @@ CITY_CONFIGS: List[Dict[str, str]] = [
         "country": "Japan",
         "lookup": "Osaka, Japan",
     },
-    {
-        "id": "fukuoka",
-        "label_ja": "福岡",
-        "city": "Fukuoka",
-        "country": "Japan",
-        "lookup": "Fukuoka, Japan",
-    },
+
     # ハンガリー
     {
         "id": "budapest",
@@ -67,13 +57,6 @@ CITY_CONFIGS: List[Dict[str, str]] = [
         "city": "Szeged",
         "country": "Hungary",
         "lookup": "Szeged, Hungary",
-    },
-    {
-        "id": "gyor",
-        "label_ja": "ジェール",
-        "city": "Gyor",
-        "country": "Hungary",
-        "lookup": "Gyor, Hungary",
     },
 ]
 
@@ -108,17 +91,6 @@ def html_to_text(html: str) -> str:
 
 def normalize_space(value: str) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
-
-
-def parse_float(value: str) -> Optional[float]:
-    try:
-        return float(str(value).strip())
-    except Exception:
-        return None
-
-
-def round1(value: float) -> float:
-    return float(f"{value:.1f}")
 
 
 def build_rankings_city_regex(city_lookup: str) -> re.Pattern[str]:
@@ -158,111 +130,9 @@ def extract_city_from_rankings(rankings_text: str, city_lookup: str) -> Optional
     }
 
 
-def build_compare_url(city1: str, country1: str, city2: str, country2: str) -> str:
-    query = urlencode(
-        {
-            "city1": city1,
-            "city2": city2,
-            "country1": country1,
-            "country2": country2,
-        }
-    )
-    return f"{COMPARE_URL}?{query}"
-
-
-def parse_difference_sentence(text: str, metric_label: str, base_city: str, target_city: str) -> Tuple[float, str]:
-    escaped_metric = re.escape(metric_label)
-    escaped_base = re.escape(base_city)
-    escaped_target = re.escape(target_city)
-
-    pattern = re.compile(
-        rf"{escaped_metric}\s+in\s+{escaped_base}\s+is\s+([0-9]+(?:\.[0-9]+)?)%\s+(higher|lower)\s+than\s+in\s+{escaped_target}",
-        re.IGNORECASE,
-    )
-
-    match = pattern.search(text)
-    if not match:
-        raise ValueError(
-            f"比較ページから '{metric_label} in {base_city} is ... than in {target_city}' を取得できませんでした"
-        )
-
-    percent = float(match.group(1))
-    direction = match.group(2).lower()
-    return percent, direction
-
-
-def derive_target_from_base(base_value: float, percent: float, direction: str) -> float:
-    ratio = percent / 100.0
-
-    if direction == "higher":
-        # base = target * (1 + ratio)
-        return base_value / (1.0 + ratio)
-
-    if direction == "lower":
-        # base = target * (1 - ratio)
-        if math.isclose(1.0 - ratio, 0.0):
-            raise ValueError("lower 比率が 100% に近すぎて逆算できません")
-        return base_value / (1.0 - ratio)
-
-    raise ValueError(f"未知の方向: {direction}")
-
-
-def extract_city_from_compare_page(
-    compare_text: str,
-    base_city_name: str,
-    target_city_name: str,
-    base_metrics: Dict[str, float],
-) -> Dict[str, float]:
-    cost_percent, cost_direction = parse_difference_sentence(
-        compare_text,
-        "Cost of Living",
-        base_city_name,
-        target_city_name,
-    )
-    rent_percent, rent_direction = parse_difference_sentence(
-        compare_text,
-        "Rent Prices",
-        base_city_name,
-        target_city_name,
-    )
-    restaurant_percent, restaurant_direction = parse_difference_sentence(
-        compare_text,
-        "Restaurant Prices",
-        base_city_name,
-        target_city_name,
-    )
-
-    return {
-        "cost_of_living_index": round1(
-            derive_target_from_base(
-                base_metrics["cost_of_living_index"],
-                cost_percent,
-                cost_direction,
-            )
-        ),
-        "rent_index": round1(
-            derive_target_from_base(
-                base_metrics["rent_index"],
-                rent_percent,
-                rent_direction,
-            )
-        ),
-        "restaurant_price_index": round1(
-            derive_target_from_base(
-                base_metrics["restaurant_price_index"],
-                restaurant_percent,
-                restaurant_direction,
-            )
-        ),
-        "cost_of_living_plus_rent_index": None,  # 今回はグラフ用途の3指標が主目的
-        "groceries_index": None,
-        "local_purchasing_power_index": None,
-    }
-
-
 def build_city_record(
     cfg: Dict[str, str],
-    metrics: Dict[str, Optional[float]],
+    metrics: Dict[str, float],
     source_type: str,
     source_url: str,
     note: str = "",
@@ -287,15 +157,8 @@ def build_payload() -> Dict[str, Any]:
     rankings_text = normalize_space(html_to_text(rankings_html))
 
     records: List[Dict[str, Any]] = []
-    compare_logs: List[Dict[str, Any]] = []
+    missing_cities: List[Dict[str, str]] = []
 
-    # まずランキングページから Tokyo を基準として取得
-    tokyo_cfg = next(cfg for cfg in CITY_CONFIGS if cfg["id"] == "tokyo")
-    tokyo_metrics = extract_city_from_rankings(rankings_text, tokyo_cfg["lookup"])
-    if not tokyo_metrics:
-        raise RuntimeError("Tokyo の指標が rankings_current.jsp から取得できませんでした")
-
-    # ランキングページから拾える都市はそのまま取得
     for cfg in CITY_CONFIGS:
         direct_metrics = extract_city_from_rankings(rankings_text, cfg["lookup"])
         if direct_metrics:
@@ -308,68 +171,20 @@ def build_payload() -> Dict[str, Any]:
                     note="Numbeo current rankings から直接取得",
                 )
             )
-            continue
+        else:
+            missing_cities.append(
+                {
+                    "id": cfg["id"],
+                    "lookup": cfg["lookup"],
+                }
+            )
 
-        # 直接取れない都市は Tokyo 比較で補完
-        compare_url = build_compare_url(
-            city1=cfg["city"],
-            country1=cfg["country"],
-            city2="Tokyo",
-            country2="Japan",
+    if missing_cities:
+        missing_text = ", ".join(item["lookup"] for item in missing_cities)
+        raise RuntimeError(
+            f"rankings_current.jsp から取得できない都市があります: {missing_text}"
         )
 
-        try:
-            compare_html = fetch_url(compare_url)
-            compare_text = normalize_space(html_to_text(compare_html))
-            metrics = extract_city_from_compare_page(
-                compare_text=compare_text,
-                base_city_name="Tokyo",
-                target_city_name=cfg["city"],
-                base_metrics=tokyo_metrics,
-            )
-
-            records.append(
-                build_city_record(
-                    cfg=cfg,
-                    metrics=metrics,
-                    source_type="compare_cities",
-                    source_url=compare_url,
-                    note="Numbeo compare page から Tokyo 基準で逆算",
-                )
-            )
-            compare_logs.append(
-                {
-                    "id": cfg["id"],
-                    "url": compare_url,
-                    "status": "ok",
-                }
-            )
-        except Exception as exc:
-            records.append(
-                {
-                    "id": cfg["id"],
-                    "label_ja": cfg["label_ja"],
-                    "city": cfg["city"],
-                    "country": cfg["country"],
-                    "lookup": cfg["lookup"],
-                    "cost_of_living_index": None,
-                    "rent_index": None,
-                    "restaurant_price_index": None,
-                    "source_type": "unavailable",
-                    "source_url": compare_url,
-                    "note": f"取得失敗: {exc}",
-                }
-            )
-            compare_logs.append(
-                {
-                    "id": cfg["id"],
-                    "url": compare_url,
-                    "status": "error",
-                    "error": str(exc),
-                }
-            )
-
-    # 表示順
     order = [cfg["id"] for cfg in CITY_CONFIGS]
     order_map = {city_id: idx for idx, city_id in enumerate(order)}
     records.sort(key=lambda row: order_map.get(row["id"], 9999))
@@ -378,6 +193,7 @@ def build_payload() -> Dict[str, Any]:
         "source": "Numbeo",
         "rankings_url": RANKINGS_URL,
         "updated_at": datetime.now(timezone.utc).isoformat(),
+        "index_base": "New York = 100",
         "chart_metrics": [
             "cost_of_living_index",
             "rent_index",
@@ -386,11 +202,10 @@ def build_payload() -> Dict[str, Any]:
         "cities": records,
         "meta": {
             "notes": [
-                "rankings_current にある都市は直接取得",
-                "rankings_current にない都市は compare_cities から Tokyo 基準で逆算",
-                "Győr のように compare page 側でも取得できない場合は null のまま残す",
+                "対象は東京・大阪・ブダペスト・ペーチ・デブレツェン・セゲド",
+                "すべて rankings_current.jsp から直接取得",
+                "指数の基準は New York = 100",
             ],
-            "compare_logs": compare_logs,
         },
     }
 

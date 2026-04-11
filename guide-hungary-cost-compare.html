@@ -32,7 +32,7 @@
           <div class="articleMetaTop">
             <span class="chip">費用</span>
             <span class="metaDot">•</span>
-            <time datetime="2026-04-11">2026-04-11</time>
+            <time datetime="2026-04-12">2026-04-12</time>
           </div>
 
           <h1 class="articleTitle">
@@ -63,7 +63,7 @@
                 <p>
                   下のグラフは Numbeo の指標をもとに自動更新しています。
                   数値が高いほど、相対的にコストが高いと考えてください。
-                  基準は New York = 100 です。
+                  指数の基準は <b>New York = 100</b> です。
                 </p>
               </div>
             </section>
@@ -74,24 +74,33 @@
             </section>
 
             <section>
-              <h2>生活費（Cost of Living Index）</h2>
+              <h2>生活費（Cost of Living Index / New York = 100）</h2>
               <div class="tableWrap">
                 <canvas id="costChart"></canvas>
               </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ 指数は New York = 100 を基準としています。
+              </p>
             </section>
 
             <section>
-              <h2>家賃（Rent Index）</h2>
+              <h2>家賃（Rent Index / New York = 100）</h2>
               <div class="tableWrap">
                 <canvas id="rentChart"></canvas>
               </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ 指数は New York = 100 を基準としています。
+              </p>
             </section>
 
             <section>
-              <h2>外食（Restaurant Price Index）</h2>
+              <h2>外食（Restaurant Price Index / New York = 100）</h2>
               <div class="tableWrap">
                 <canvas id="restaurantChart"></canvas>
               </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ 指数は New York = 100 を基準としています。
+              </p>
             </section>
 
             <section>
@@ -114,6 +123,9 @@
                   </tbody>
                 </table>
               </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ すべて New York = 100 を基準とした指数です。
+              </p>
             </section>
 
             <section>
@@ -159,7 +171,7 @@
             <ul class="sideList">
               <li>都市選びで費用感はかなり変わります。</li>
               <li>特に差が出やすいのは家賃です。</li>
-              <li>地方都市は留学コストを抑えやすいです。</li>
+              <li>指数の基準は New York = 100 です。</li>
             </ul>
           </div>
 
@@ -224,7 +236,7 @@
         return `${y}-${m}-${day} ${hh}:${mm}`;
       }
 
-      function createHorizontalChart(canvasId, label, labels, values) {
+      function createHorizontalChart(canvasId, datasetLabel, labels, values) {
         const ctx = document.getElementById(canvasId);
         if (!ctx) return;
 
@@ -234,7 +246,7 @@
             labels,
             datasets: [
               {
-                label,
+                label: datasetLabel,
                 data: values,
               }
             ]
@@ -246,11 +258,24 @@
             plugins: {
               legend: {
                 display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label(context) {
+                    const value = context.raw;
+                    if (value === null || value === undefined) return "データなし";
+                    return `${datasetLabel}: ${value}（New York = 100）`;
+                  }
+                }
               }
             },
             scales: {
               x: {
-                beginAtZero: true
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: "指数（New York = 100）"
+                }
               }
             }
           }
@@ -265,9 +290,10 @@
 
         const data = await res.json();
         const cities = Array.isArray(data?.cities) ? data.cities : [];
+        const indexBase = data?.index_base || "New York = 100";
 
         metaText.textContent =
-          `最終更新：${formatDate(data?.updated_at)} / 取得元：${data?.source || "不明"}`;
+          `最終更新：${formatDate(data?.updated_at)} / 取得元：${data?.source || "不明"} / 基準：${indexBase}`;
 
         if (!cities.length) {
           tableBody.innerHTML = '<tr><td colspan="5">データがありません</td></tr>';

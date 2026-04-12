@@ -42,6 +42,8 @@
           <p class="articleLead">
             ハンガリーの主要都市と日本の主要都市を、
             生活費・家賃・外食価格の3つで比較します。
+            「ハンガリーは安いのか」ではなく、
+            「どの都市を選ぶとどれくらい差が出るのか」を見やすく整理しています。
           </p>
         </div>
       </header>
@@ -51,48 +53,156 @@
           <div class="articleBody">
 
             <section>
+              <p>
+                ハンガリー留学の費用感は、国全体でまとめて考えるよりも、
+                どの都市を選ぶかで見たほうが実態に近いです。
+                特に差が出やすいのは家賃で、ブダペストと地方都市では負担感がかなり変わります。
+              </p>
+
+              <div class="infoBox">
+                <h3 class="infoBoxTitle">このページの見方</h3>
+                <p>
+                  下のグラフは Numbeo の指標をもとに自動更新しています。
+                  数値が高いほど、相対的にコストが高いと考えてください。
+                  指数の基準は <b>New York = 100</b> です。
+                </p>
+              </div>
+            </section>
+
+            <section>
               <h2>データの更新状況</h2>
               <p id="metaText">読み込み中…</p>
             </section>
 
             <section>
-              <h2>生活費（New York = 100）</h2>
-              <canvas id="costChart"></canvas>
+              <h2>生活費（Cost of Living Index / New York = 100）</h2>
+              <div class="tableWrap">
+                <canvas id="costChart"></canvas>
+              </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ 指数は New York = 100 を基準としています。
+              </p>
             </section>
 
             <section>
-              <h2>家賃（New York = 100）</h2>
-              <canvas id="rentChart"></canvas>
+              <h2>家賃（Rent Index / New York = 100）</h2>
+              <div class="tableWrap">
+                <canvas id="rentChart"></canvas>
+              </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ 指数は New York = 100 を基準としています。
+              </p>
             </section>
 
             <section>
-              <h2>外食（New York = 100）</h2>
-              <canvas id="restaurantChart"></canvas>
+              <h2>外食（Restaurant Price Index / New York = 100）</h2>
+              <div class="tableWrap">
+                <canvas id="restaurantChart"></canvas>
+              </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ 指数は New York = 100 を基準としています。
+              </p>
             </section>
 
             <section>
               <h2>一覧表</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>都市</th>
-                    <th>生活費</th>
-                    <th>家賃</th>
-                    <th>外食</th>
-                  </tr>
-                </thead>
-                <tbody id="compareTableBody">
-                  <tr>
-                    <td colspan="4">読み込み中…</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="tableWrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>都市</th>
+                      <th>生活費</th>
+                      <th>家賃</th>
+                      <th>外食</th>
+                    </tr>
+                  </thead>
+                  <tbody id="compareTableBody">
+                    <tr>
+                      <td colspan="4">読み込み中…</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="muted" style="margin-top:10px;">
+                ※ すべて New York = 100 を基準とした指数です。
+              </p>
             </section>
 
+            <section>
+              <h2>読み取り方</h2>
+              <p>
+                ブダペストは日本の大都市に比較的近い水準でも、
+                ペーチ・セゲド・デブレツェンのような地方都市は、
+                家賃を中心にコストを抑えやすい傾向があります。
+                留学費用を抑えたいなら、「ハンガリーかどうか」よりも
+                「ハンガリーのどの都市か」を先に考えるのが重要です。
+              </p>
+            </section>
+
+            <section class="relatedSection">
+              <h2>関連記事</h2>
+
+              <div class="relatedGrid">
+                <a class="relatedCard" href="guide.html">
+                  <span class="relatedChip">Guide</span>
+                  <strong>Guide一覧を見る</strong>
+                  <p>ほかのハンガリー留学記事もまとめて読めます。</p>
+                </a>
+
+                <a class="relatedCard" href="basics-hungary.html">
+                  <span class="relatedChip">基本情報</span>
+                  <strong>ハンガリーについて</strong>
+                  <p>生活感・費用感・治安・英語などの基本情報を整理しています。</p>
+                </a>
+
+                <a class="relatedCard" href="index.html#students">
+                  <span class="relatedChip">相談</span>
+                  <strong>現役生に相談する</strong>
+                  <p>実際の生活費や都市選びのリアルを直接確認できます。</p>
+                </a>
+              </div>
+            </section>
           </div>
         </main>
+
+        <aside class="articleSide">
+          <div class="sideCard card">
+            <h2 class="sideTitle">この記事の要点</h2>
+            <ul class="sideList">
+              <li>都市選びで費用感はかなり変わります。</li>
+              <li>特に差が出やすいのは家賃です。</li>
+              <li>指数の基準は New York = 100 です。</li>
+            </ul>
+          </div>
+
+          <div class="sideCard card">
+            <h2 class="sideTitle">カテゴリ</h2>
+            <div class="tagRow">
+              <span class="tag">費用</span>
+              <span class="tag">生活情報</span>
+              <span class="tag">比較</span>
+            </div>
+          </div>
+
+          <div class="sideCard card">
+            <h2 class="sideTitle">現役生に相談したい方へ</h2>
+            <p class="sideText">
+              記事で全体像をつかんだあと、
+              実際の家賃や寮、都市ごとの暮らしやすさを
+              現役生に直接聞くことができます。
+            </p>
+            <div class="sideActions">
+              <a class="btn primary" href="index.html#students">現役生を見る</a>
+              <a class="btn" href="index.html#contact">問い合わせる</a>
+            </div>
+          </div>
+        </aside>
       </div>
     </article>
+
+    <footer class="footer">
+      <a class="footerLink" href="index.html">ハンガリー留学相談 Hungary Study</a>
+    </footer>
   </div>
 
   <script>
@@ -100,63 +210,145 @@
       const metaText = document.getElementById("metaText");
       const tableBody = document.getElementById("compareTableBody");
 
+      function esc(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
       function formatNumber(value) {
-        if (typeof value !== "number") return "—";
+        if (typeof value !== "number" || !Number.isFinite(value)) return "—";
         return value.toFixed(1);
       }
 
-      function createChart(id, labels, data) {
-        new Chart(document.getElementById(id), {
+      function formatDate(value) {
+        if (!value) return "不明";
+        const d = new Date(value);
+        if (Number.isNaN(d.getTime())) return String(value);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        const hh = String(d.getHours()).padStart(2, "0");
+        const mm = String(d.getMinutes()).padStart(2, "0");
+        return `${y}-${m}-${day} ${hh}:${mm}`;
+      }
+
+      function createHorizontalChart(canvasId, datasetLabel, labels, values) {
+        const ctx = document.getElementById(canvasId);
+        if (!ctx) return;
+
+        new Chart(ctx, {
           type: "bar",
           data: {
             labels,
-            datasets: [{ data }]
+            datasets: [
+              {
+                label: datasetLabel,
+                data: values,
+              }
+            ]
           },
           options: {
+            responsive: true,
+            maintainAspectRatio: true,
             indexAxis: "y",
-            plugins: { legend: { display: false } },
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label(context) {
+                    const value = context.raw;
+                    if (value === null || value === undefined) return "データなし";
+                    return `${datasetLabel}: ${value}（New York = 100）`;
+                  }
+                }
+              }
+            },
             scales: {
-              x: { beginAtZero: true }
+              x: {
+                beginAtZero: true,
+                title: {
+                  display: true,
+                  text: "指数（New York = 100）"
+                }
+              }
             }
           }
         });
       }
 
       try {
-        const res = await fetch("cost_compare_numbeo.json");
-        const json = await res.json();
+        const res = await fetch("cost_compare_numbeo.json?v=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) {
+          throw new Error("cost_compare_numbeo.json の取得に失敗しました");
+        }
 
-        const cities = json.cities;
+        const data = await res.json();
+        const cities = Array.isArray(data?.cities) ? data.cities : [];
+        const indexBase = data?.index_base || "New York = 100";
 
-        metaText.textContent = "最終更新：" + json.updated_at;
+        metaText.textContent =
+          `最終更新：${formatDate(data?.updated_at)} / 取得元：${data?.source || "不明"} / 基準：${indexBase}`;
+
+        if (!cities.length) {
+          tableBody.innerHTML = '<tr><td colspan="4">データがありません</td></tr>';
+          return;
+        }
+
+        tableBody.innerHTML = "";
 
         const labels = [];
-        const cost = [];
-        const rent = [];
-        const food = [];
+        const costValues = [];
+        const rentValues = [];
+        const restaurantValues = [];
 
-        cities.forEach(c => {
-          labels.push(c.label_ja);
-          cost.push(c.cost_of_living_index);
-          rent.push(c.rent_index);
-          food.push(c.restaurant_price_index);
+        for (const row of cities) {
+          const cityLabel = row.label_ja || row.city || "不明";
+
+          labels.push(cityLabel);
+          costValues.push(typeof row.cost_of_living_index === "number" ? row.cost_of_living_index : null);
+          rentValues.push(typeof row.rent_index === "number" ? row.rent_index : null);
+          restaurantValues.push(typeof row.restaurant_price_index === "number" ? row.restaurant_price_index : null);
 
           const tr = document.createElement("tr");
           tr.innerHTML = `
-            <td>${c.label_ja}</td>
-            <td>${formatNumber(c.cost_of_living_index)}</td>
-            <td>${formatNumber(c.rent_index)}</td>
-            <td>${formatNumber(c.restaurant_price_index)}</td>
+            <td>${esc(cityLabel)}</td>
+            <td>${esc(formatNumber(row.cost_of_living_index))}</td>
+            <td>${esc(formatNumber(row.rent_index))}</td>
+            <td>${esc(formatNumber(row.restaurant_price_index))}</td>
           `;
           tableBody.appendChild(tr);
-        });
+        }
 
-        createChart("costChart", labels, cost);
-        createChart("rentChart", labels, rent);
-        createChart("restaurantChart", labels, food);
+        createHorizontalChart(
+          "costChart",
+          "Cost of Living Index",
+          labels,
+          costValues
+        );
 
-      } catch (e) {
-        metaText.textContent = "データ取得失敗";
+        createHorizontalChart(
+          "rentChart",
+          "Rent Index",
+          labels,
+          rentValues
+        );
+
+        createHorizontalChart(
+          "restaurantChart",
+          "Restaurant Price Index",
+          labels,
+          restaurantValues
+        );
+      } catch (error) {
+        console.error(error);
+        metaText.textContent = "データの読み込みに失敗しました";
+        tableBody.innerHTML = '<tr><td colspan="4">読み込みエラー</td></tr>';
       }
     });
   </script>

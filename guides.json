@@ -69,5 +69,15 @@
     "category": "費用",
     "url": "guide-hungary-cost-compare.html",
     "date": "2026-04-12"
-  }
+  },
+{
+  "id": "scholarship-odds",
+  "enabled": true,
+  "featured": true,
+  "title": "ハンガリー奨学金の倍率は約18倍？",
+  "description": "倍率18倍と言われる理由と実際の難易度を解説します。",
+  "category": "奨学金",
+  "url": "guide-scholarship-odds.html",
+  "date": "2026-04-12"
+}
 ]

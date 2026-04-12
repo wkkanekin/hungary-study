@@ -10,26 +10,6 @@
     "date": "2026-03-16"
   },
   {
-    "id": "hungary-tuition-cost",
-    "enabled": true,
-    "featured": true,
-    "title": "ハンガリー留学の学費",
-    "description": "ハンガリーの主要大学の学費や、欧米主要国と比べたときの費用感、生活費の考え方をわかりやすく整理します。",
-    "category": "費用",
-    "url": "guide-hungary-tuition-cost.html",
-    "date": "2026-03-17"
-  },
-  {
-    "id": "stipendium",
-    "enabled": true,
-    "featured": false,
-    "title": "Stipendium Hungaricumとは",
-    "description": "ハンガリー政府奨学金の基本、何がカバーされるのか、応募時に何を押さえるべきかを整理します。",
-    "category": "奨学金",
-    "url": "guide-stipendium.html",
-    "date": "2026-03-18"
-  },
-  {
     "id": "university-ranking",
     "enabled": true,
     "featured": false,
@@ -49,16 +29,7 @@
   "url": "guide-budapest-districts.html",
   "date": "2026-04-12"
 },
-  {
-    "id": "student-story-elte",
-    "enabled": true,
-    "featured": false,
-    "title": "現役生体験談：ELTEで学んでみて",
-    "description": "授業の雰囲気、生活、入学前とのギャップなどを現役生視点で紹介します。",
-    "category": "体験談",
-    "url": "guide-student-story-elte.html",
-    "date": "2026-03-21"
-  },
+  
   {
     "id": "hungary-university-cost-detail",
     "enabled": true,

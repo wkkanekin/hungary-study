@@ -79,5 +79,15 @@
   "category": "奨学金",
   "url": "guide-scholarship-odds.html",
   "date": "2026-04-12"
+},
+{
+  "id": "scholarship-nationality",
+  "enabled": true,
+  "featured": false,
+  "title": "ハンガリー奨学金はどの国が多い？",
+  "description": "国籍データから競争環境をわかりやすく解説。",
+  "category": "奨学金",
+  "url": "guide-scholarship-nationality.html",
+  "date": "2026-04-12"
 }
 ]

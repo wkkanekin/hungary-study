@@ -89,5 +89,16 @@
   "category": "奨学金",
   "url": "guide-scholarship-nationality.html",
   "date": "2026-04-12"
+},
+
+{
+  "id": "scholarship-university",
+  "enabled": true,
+  "featured": false,
+  "title": "ハンガリー奨学金はどの大学に多い？",
+  "description": "受け入れ大学ランキングから、奨学生がどこに集中しているのかを解説します。",
+  "category": "奨学金",
+  "url": "guide-scholarship-university.html",
+  "date": "2026-04-12"
 }
 ]

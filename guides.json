@@ -100,5 +100,15 @@
   "category": "奨学金",
   "url": "guide-scholarship-university.html",
   "date": "2026-04-12"
-}
+},
+  {
+    "id": "hungary-safety",
+    "enabled": true,
+    "featured": false,
+    "title": "日本と比べてハンガリーは安全？治安をデータで比較",
+    "description": "Global Peace IndexとNumbeoをもとに、日本とハンガリーの治安を比較し、留学前に知っておきたい安全性をわかりやすく整理します。",
+    "category": "生活情報",
+    "url": "guide-hungary-safety.html",
+    "date": "2026-04-13"
+  }
 ]

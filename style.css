@@ -1191,3 +1191,30 @@ details p{
     width:100% !important;
   }
 }
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.videoCard iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.videoTitle {
+  margin-top: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* スマホ */
+@media (max-width: 900px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}

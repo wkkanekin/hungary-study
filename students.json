@@ -119,7 +119,7 @@
   {
     "id": "ryota",
     "enabled": true,
-    "featured": false,
+    "featured":true,
     "name": "リョウタ（20代）",
     "region": "ジェール",
     "course": "社会系",
@@ -127,7 +127,7 @@
     "major": "International Relations BA（学士）",
     "entryYear": "2023",
     "year": "学士2年",
-    "admissionEnglish": "CEFR C1（英語）",
+    "admissionEnglish": "CEFR B2（英語）",
     "selectionFormat": "オンラインテスト",
     "timeToPass": "英語対策5ヶ月＋出願準備1ヶ月",
     "previousEducation": "日本の公立高校 卒",
@@ -152,7 +152,7 @@
         "ready": false
       }
     ],
-    "bio": "日本の公立高校卒業後、Széchenyi István Universityへ進学。International Relationsを専攻。奨学金受給者として、オンラインテストの内容、ジェールでの生活、地方都市留学の実態について具体的に共有できます。",
+    "bio": "日本の公立高校を卒業後、海外大学への進学を目指し、在学中からオンライン英会話やIELTS対策を通じて英語学習を進めてきました。留学エージェントは利用せず、親から経済的理由で留学を反対される中でも、自力で情報収集を行い、Stipendium Hungaricum（ハンガリー政府奨学金）を活用して留学を実現しました。Széchenyi István UniversityやCorvinus University of Budapestだけでなく、韓国のTaejae University、マレーシアのSunway Universityにも出願した経験があり、それぞれの出願プロセスやエッセイ作成について実体験をもとにお話しできます。現在はジェール（Győr）で寮生活を送っており、ブダペスト以外のハンガリーの地方都市での学生生活についても、治安や生活費、大学の雰囲気など、まだ情報の少ないリアルな暮らしの実態を共有できます。ハンガリー留学の良い面だけでなく、大変だと感じた点も含めて、これから留学を考えている方に率直で役立つ情報をお届けできればと思います。",
     "tags": [
       "#高校卒業後すぐ留学",
       "#ジェール生活",
@@ -237,7 +237,7 @@
   {
     "id": "yui",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "ユイ（20代）",
     "region": "ブダペスト",
     "course": "社会系",
@@ -297,7 +297,7 @@
   {
     "id": "yuri",
     "enabled": true,
-    "featured": true,
+    "featured": flase,
     "name": "ユリ（20代）",
     "region": "ブダペスト",
     "course": "理系",
@@ -346,7 +346,7 @@
   {
     "id": "tamami",
     "enabled": true,
-    "featured": true,
+    "featured": false,
     "name": "タマミ（10代）",
     "region": "ペーチ",
     "course": "社会系",
@@ -426,7 +426,7 @@
   {
     "id": "anna",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "アンナ（10代）",
     "region": "ブダペスト",
     "course": "経営",
@@ -496,7 +496,7 @@
   {
     "id": "nana",
     "enabled": true,
-    "featured": true,
+    "featured": flase,
     "name": "ナナ（20代）",
     "region": "セゲド",
     "course": "経営",

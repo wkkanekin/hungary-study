@@ -1,13 +1,13 @@
 {
   "hero": {
     "imageUrl": "images/hero-image.jpg",
-    "logoUrl": "images/logo-hungary-study.png",
+    "logoUrl": "images/Hu留学ラボ.jpg",
     "logoAlt": "Hungary Study",
     "imageVersion": "20260316-1",
     "logoVersion": "20260316-1"
   },
   "favicon": {
-    "url": "images/favicon.png",
+    "url": "images/Hu留学ラボ.jpg",
     "type": "image/png",
     "version": "20260316-1"
   },

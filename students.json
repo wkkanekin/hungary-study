@@ -119,7 +119,7 @@
   {
     "id": "ryota",
     "enabled": true,
-    "featured":true,
+    "featured":false,
     "name": "リョウタ（20代）",
     "region": "ジェール",
     "course": "社会系",
@@ -172,7 +172,7 @@
   {
     "id": "okada",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "ユウゴ（20代）",
     "region": "デブレツェン",
     "course": "理系",
@@ -237,7 +237,7 @@
   {
     "id": "yui",
     "enabled": true,
-    "featured": true,
+    "featured": false,
     "name": "ユイ（20代）",
     "region": "ブダペスト",
     "course": "社会系",
@@ -297,7 +297,7 @@
   {
     "id": "yuri",
     "enabled": true,
-    "featured": false,
+    "featured": true,
     "name": "ユリ（20代）",
     "region": "ブダペスト",
     "course": "理系",
@@ -426,7 +426,7 @@
   {
     "id": "anna",
     "enabled": true,
-    "featured": true,
+    "featured": false,
     "name": "アンナ（10代）",
     "region": "ブダペスト",
     "course": "経営",
@@ -542,5 +542,49 @@
     ],
     "avatar": "images/students/nana.jpg",
     "bookingUrl": "https://calendly.com/hungarystudy-info/nana-40min"
-  }
+  },
+{
+  "id": "sakurako",
+  "enabled": true,
+  "featured": true,
+  "name": "サクラコ（20代）",
+  "region": "ブダペスト",
+  "course": "経済・工学系",
+  "university": "Corvinus University of Budapest",
+  "major": "Data Science in Business BA（学士）",
+  "entryYear": "2024",
+  "year": "学士1年",
+  "admissionEnglish": "IELTS 6.5",
+  "selectionFormat": "オンラインテスト（数学）",
+  "timeToPass": "Preparatory course 半年",
+  "previousEducation": "日本の公立高校 卒",
+  "workYears": 0,
+  "language": "合格時以降英語試験未受験",
+  "meeting": "Zoomのみ",
+  "stipendium": {
+    "has": false,
+    "name": ""
+  },
+  "onlineConversation": [],
+  "studyMaterials": [],
+  "bio": "日本の公立高校を卒業後、海外大学進学を目指し、現在通っている大学の準備コースで英語を学びながら奨学金と入学試験の準備をして現在に至ります。高校は普通科で全員が国内の大学に進学するような学校だったため、日本の大学と海外大学の両方を比較した視点でアドバイスできます。また、大学の数学試験と同時にACTも受験したため、受験勉強についても具体的にお話しできます。現在は大学と同じキャンパス内の寮に住んでおり、海外での共同生活や大学の授業の難易度など、進学前に気になるリアルな情報をお伝えできます。現地で生活しているからこそ分かることを何でもお話しできるので、お気軽にご相談ください。",
+  "tags": [
+    "#Corvinus",
+    "#DataScience",
+    "#準備コース",
+    "#数学試験",
+    "#ACT",
+    "#寮生活",
+    "#高校卒業後すぐ留学"
+  ],
+  "links": [
+    {
+      "label": "大学公式サイト",
+      "url": "https://www.uni-corvinus.hu/",
+      "ready": true
+    }
+  ],
+  "avatar": "images/students/sakurako.jpg",
+  "bookingUrl": "https://calendly.com/hungarystudy-info/sakurako-40min"
+}
 ]

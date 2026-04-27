@@ -110,5 +110,15 @@
     "category": "生活情報",
     "url": "guide-hungary-safety.html",
     "date": "2026-04-13"
-  }
+  },
+{
+  "id": "stipendium-requirements",
+  "enabled": true,
+  "featured": true,
+  "title": "スティペンディウム・ハンガリカムは厳しい？継続条件と落ちる理由",
+  "description": "ハンガリー奨学金の継続条件を高校生でもわかるように解説。必要な単位数や落ちる理由、実際の難易度まで整理します。",
+  "category": "奨学金",
+  "url": "stipendium-hungaricum-requirements.html",
+  "date": "2026-04-27"
+}
 ]

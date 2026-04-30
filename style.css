@@ -9,7 +9,7 @@
  --chip:#eaf0ff;
  --shadow:0 10px 30px rgba(17,24,39,.08);
  --radius:18px;
- --max:1040px;
+ --max:1280px;
 
  /* JS(images.json)で上書きされる。読み込み完了まで「デフォルト画像を出さない」 */
  --hero-image: none;
@@ -29,16 +29,15 @@ body{
 a{color:inherit}
 code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
 
-.container{max-width:var(--max); margin:0 auto; padding:22px 18px 70px;}
+.container{max-width:var(--max); margin:0 auto; padding:24px 14px 70px;}
 .section{margin-top:26px}
 .secTitle{
- font-size:22px;
- margin:0 0 12px;
+ font-size:26px;
+ margin:0 0 18px;
  color:#0f2a5a;
  letter-spacing:.02em;
  text-align:center;
 }
-
 .card{
  background:var(--card);
  border:1px solid var(--line);
@@ -240,9 +239,8 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .grid3{
  display:grid;
  grid-template-columns: repeat(3, 1fr);
- gap:14px;
+ gap:20px; /* ← ここだけ変更 */
 }
-
 /* Service cards */
 .infoCard{
  padding:16px 16px 14px;
@@ -259,33 +257,124 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  font-weight:950;
 }
 .infoCard .big{
- font-size:20px;
+ font-size:22px;
  font-weight:950;
- margin:0 0 6px;
- color:#111827;
-}
-.infoCard .small{
+ margin:6px 0;
+ color:#0f2a5a;
+}.infoCard .small{
  margin:0;
  color:#374151;
  font-weight:800;
  line-height:1.55;
 }
 
+.infoCard{
+ padding:18px 16px 16px;
+ border-radius:20px;
+ background: rgba(255,255,255,.95);
+ border:1px solid rgba(229,231,235,.9);
+ box-shadow: 0 14px 30px rgba(17,24,39,.08);
+
+ text-align:center;
+ transition:.2s ease;
+}
+
+.infoCard:hover{
+ transform: translateY(-4px);
+ box-shadow: 0 18px 40px rgba(17,24,39,.12);
+}
+
 /* Purpose box */
 .purposeBox{
- margin-top:14px;
- padding:16px;
- border-radius:18px;
- background: rgba(255,255,255,.92);
+ margin-top:22px;
+ padding:34px 34px;
+ border-radius:24px;
+ background:
+  radial-gradient(circle at top left, rgba(29,78,216,.10), transparent 32%),
+  linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,255,.96));
  border:1px solid rgba(229,231,235,.95);
- box-shadow: 0 10px 24px rgba(17,24,39,.06);
- line-height:1.75;
+ box-shadow: 0 16px 38px rgba(17,24,39,.09);
+ max-width:900px;
+ margin-left:auto;
+ margin-right:auto;
+ text-align:left;
 }
-.badgeLine{margin-bottom:10px;}
-.purposeBox .lead{font-weight:950; color:#0f2a5a; margin:0 0 10px}
-.purposeBox .after{margin:10px 0 0; font-weight:850; color:#374151}
 
-/* Flow */
+.badgeLine{
+ margin-bottom:20px;
+ text-align:left;
+}
+
+.purposeBox .lead{
+ font-weight:950;
+ color:#0f2a5a;
+ margin:0;
+ font-size:22px;
+ line-height:1.75;
+ letter-spacing:.01em;
+}
+
+.purposeBox .highlight{
+ color:#1d4ed8;
+ font-weight:950;
+ background:linear-gradient(transparent 62%, rgba(29,78,216,.16) 62%);
+ padding:0 4px;
+}
+
+.purposeBox .after{
+ margin:22px 0 0;
+ max-width:680px;
+ font-weight:800;
+ color:#374151;
+ line-height:1.9;
+ font-size:16px;
+}
+
+.purposeBox .after b{
+ color:#0f2a5a;
+ font-weight:950;
+}
+
+.purposeNote{
+ margin:22px 0 0;
+ max-width:100%; /* ←ここ変更 */
+ padding:16px 18px;
+ border-radius:16px;
+ background:rgba(243,246,255,.9);
+ border:1px solid rgba(29,78,216,.16);
+ color:#0f2a5a;
+ font-weight:900;
+ line-height:1.8;
+}
+
+.finalPush{
+ margin:18px 0 0;
+ max-width:100%; /* ←ここ変更 */
+ padding:16px 18px;
+ border-radius:16px;
+ background:linear-gradient(180deg, rgba(29,78,216,.08), rgba(29,78,216,.04));
+ border:1px solid rgba(29,78,216,.18);
+ color:#0f2a5a;
+ font-weight:950;
+ line-height:1.8;
+}
+
+@media (max-width:720px){
+ .purposeBox{
+  padding:22px 16px;
+ }
+
+ .purposeBox .lead{
+  font-size:18px;
+  line-height:1.8;
+ }
+
+ .purposeBox .after,
+ .purposeNote,
+ .finalPush{
+  max-width:none;
+ }
+}/* Flow */
 .flowWrap{margin-top:12px}
 .stepCard{
  padding:16px;
@@ -1015,7 +1104,7 @@ details p{
 
 /* PCで全体が小さく見える問題に対応 */
 @media (min-width: 1200px){
- :root{ --max: 1320px; }
+ :root{ --max: 1280px; }
 }
 
 /* HEROの表示最適化（PC / タブレット / スマホ） */

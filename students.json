@@ -297,7 +297,7 @@
   {
     "id": "yuri",
     "enabled": true,
-    "featured": true,
+    "featured": false,
     "name": "ユリ（20代）",
     "region": "ブダペスト",
     "course": "理系",
@@ -586,5 +586,50 @@
   ],
   "avatar": "images/students/sakurako.png",
   "bookingUrl": "https://calendly.com/hungarystudy-info/sakurako-40min"
+},
+
+{
+  "id": "yukina",
+  "enabled": true,
+  "featured": true,
+  "name": "ユキナ（10代）",
+  "region": "ブダペスト",
+  "course": "コンピュータサイエンス",
+  "university": "Eötvös Loránd University",
+  "major": "Computer Science BSc（学士）",
+  "entryYear": "2025",
+  "year": "学士1年",
+  "admissionEnglish": "IELTS 6.0",
+  "selectionFormat": "書類＋面接＋オンラインテスト",
+  "timeToPass": "英語対策4年以上＋出願準備1〜2ヶ月",
+  "previousEducation": "日本の高校卒業後、マレーシアの大学のファウンデーションコース卒業（1年）",
+  "workYears": 0,
+  "language": "CEFR B2",
+  "meeting": "Zoomのみ",
+  "stipendium": {
+    "has": false,
+    "name": ""
+  },
+  "onlineConversation": [],
+  "studyMaterials": [],
+  "bio": "日本の高校を卒業後、マレーシアの大学のファウンデーションコースを経て、現在はブダペストのEötvös Loránd University（ELTE）でComputer Science BScを専攻しています。出願では書類審査、面接、オンラインテストを経験しており、ELTEのコンピュータサイエンス学部を目指す方に向けて、出願準備や試験の流れ、英語要件、入学前に準備しておくべきことなどを実体験ベースで共有できます。また、日本の高校卒業後すぐに海外進学を目指した経験に加え、マレーシアのファウンデーションコースを経由した進学経験もあるため、直接ハンガリー大学に進学する場合との違いや、海外大学進学前の準備についてもお話しできます。現在はブダペストで生活しているため、大学生活、授業の難易度、生活費、住まい、治安など、現地で感じているリアルな情報をお伝えできます。",
+  "tags": [
+    "#ELTE",
+    "#ComputerScience",
+    "#ブダペスト生活",
+    "#ファウンデーション経験",
+    "#高校卒業後すぐ留学",
+    "#理系留学",
+    "#英語学習"
+  ],
+  "links": [
+    {
+      "label": "大学公式サイト",
+      "url": "https://www.elte.hu/en/",
+      "ready": true
+    }
+  ],
+  "avatar": "images/students/yukina.jpg",
+  "bookingUrl": "https://calendly.com/hungarystudy-info/yukina-40min"
 }
 ]

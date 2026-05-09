@@ -232,6 +232,15 @@
       }
     ],
     "avatar": "images/students/okada.jpg",
+
+
+"reviews": [
+  {
+    "reviewer": "",
+    "date": "2026-05",
+    "text": "YUGOさんの受験時の GPA や数学のテストのスコアなどまで教えていただけたので、合格ラインの目安ができ大変参考になった。"
+  }
+],
     "bookingUrl": "https://calendly.com/hungarystudy-info/yugo-40min"
   },
   {
@@ -585,6 +594,15 @@
     }
   ],
   "avatar": "images/students/sakurako.png",
+
+"reviews": [
+  {
+    "reviewer": "",
+    "date": "2026-05",
+    "text": "実際にあったハプニングやその対処法を教えていただき大変役に立った。キャンパスからの参加だったためキャンパスの様子がのぞけてよかった。私が入試の内容で認識違いをしていた点があり、その場で修正いただいたおかげで受験候補となった。"
+  }
+],
+
   "bookingUrl": "https://calendly.com/hungarystudy-info/sakurako-40min"
 },
 
@@ -630,6 +648,7 @@
     }
   ],
   "avatar": "images/students/yukina.jpg",
+
   "bookingUrl": "https://calendly.com/hungarystudy-info/yukina-40min"
 }
 ]

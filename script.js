@@ -345,7 +345,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
  ${linksHtml ? `<div class="linkList" aria-label="外部リンク">${linksHtml}</div>` : ""}
 
- ${bookingBtn}
+ 
+${
+Array.isArray(stu.reviews) && stu.reviews.length
+? `
+<div class="studentReviews">
+  <button
+    type="button"
+    class="reviewToggleBtn"
+    onclick="this.nextElementSibling.hidden = !this.nextElementSibling.hidden"
+  >
+    レビューを見る（${stu.reviews.length}件）
+  </button>
+
+  <div class="studentReviewPanel" hidden>
+    ${stu.reviews.map((review) => `
+      <article class="studentReviewItem">
+        <div class="studentReviewHead">
+          <span class="studentReviewReviewer">
+            相談者レビュー
+          </span>
+
+          ${
+            review.date
+            ? `<span class="studentReviewDate">${esc(review.date)}</span>`
+            : ``
+          }
+        </div>
+
+        <p class="studentReviewText">
+          ${esc(review.text || "")}
+        </p>
+      </article>
+    `).join("")}
+  </div>
+</div>
+`
+: ""
+}
+
+
+${bookingBtn}
  `;
 
  studentListEl.appendChild(card);

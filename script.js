@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
  const showAllStudentsBtn = document.getElementById("showAllStudents");
  const suggestBox = document.getElementById("suggestBox");
 
- const studentListEl = document.getElementById("studentList");
- const noResultsEl = document.getElementById("noResults");
- const hitCountEl = document.getElementById("hitCount");
+const studentListEl = document.getElementById("studentList");
+const recentStudentListEl = document.getElementById("recentStudentList");
 
+const noResultsEl = document.getElementById("noResults");
+const hitCountEl = document.getElementById("hitCount");
  // SNS
  const snsGridEl = document.getElementById("snsGrid");
 
@@ -140,6 +141,88 @@ document.addEventListener("DOMContentLoaded", () => {
  if (featured.length) return featured.slice(0, max);
  return students.filter((s) => !!s.enabled).slice(0, max);
  }
+
+
+function getRecentStudents(max = 3) {
+ const recent = students.filter((s) => !!s.enabled && !!s.recent);
+
+ if (recent.length) {
+   return recent.slice(0, max);
+ }
+
+ return [];
+}
+
+function shortText(value, max = 92) {
+ const text = String(value ?? "").replace(/\s+/g, " ").trim();
+
+ if (text.length <= max) {
+   return text;
+ }
+
+ return `${text.slice(0, max)}…`;
+}
+
+function renderRecentStudents() {
+ if (!recentStudentListEl) return;
+
+ const list = getRecentStudents(3);
+
+ if (!list.length) {
+   recentStudentListEl.innerHTML = "";
+   return;
+ }
+
+ recentStudentListEl.innerHTML = list.map((stu) => {
+   const tags = Array.isArray(stu.tags)
+     ? stu.tags.slice(0, 3)
+     : [];
+
+   return `
+     <article class="recentStudentCard">
+
+       <div class="recentStudentTop">
+
+         <div class="recentStudentAvatar">
+           <img
+             src="${esc(stu.avatar)}"
+             alt="${esc(stu.name)} の写真"
+           />
+         </div>
+
+         <div>
+           <p class="recentStudentName">
+             ${esc(stu.name)}
+           </p>
+
+           <p class="recentStudentMeta">
+             ${esc(stu.university || "")}<br />
+             ${esc(stu.major || "")}
+           </p>
+         </div>
+
+       </div>
+
+       <div class="recentStudentTags">
+         ${tags.map((tag) => `
+           <span class="recentStudentTag">
+             ${esc(tag)}
+           </span>
+         `).join("")}
+       </div>
+
+       <p class="recentStudentBio">
+         ${esc(shortText(stu.bio, 92))}
+       </p>
+
+       <a class="btn primary" href="#students">
+         プロフィールを見る
+       </a>
+
+     </article>
+   `;
+ }).join("");
+}
 
  function hasAnySearchCondition() {
  const kw = norm(keywordInput?.value);
@@ -433,9 +516,12 @@ ${bookingBtn}
 
  closeSuggest();
 
- const featured = getFeaturedStudents(3); // ★ 2→3
- renderStudents(featured);
- setHitLabel(`おすすめ：${featured.length}名`);
+const featured = getFeaturedStudents(3);
+
+renderStudents(featured);
+renderRecentStudents();
+
+setHitLabel(`おすすめ：${featured.length}名`);
  }
 
  function showAllStudents() {
@@ -575,10 +661,13 @@ ${bookingBtn}
  students = data;
  suggestPool = buildSuggestPool(students);
 
- const featured = getFeaturedStudents(3); // ★ 2→3
- renderStudents(featured);
- setHitLabel(`おすすめ：${featured.length}名`);
- }
+const featured = getFeaturedStudents(3);
+
+renderStudents(featured);
+
+renderRecentStudents();
+
+setHitLabel(`おすすめ：${featured.length}名`); }
 
  async function tryLoadImagesAny() {
  const candidates = [

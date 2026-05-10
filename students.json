@@ -573,6 +573,7 @@
   "id": "sakurako",
   "enabled": true,
   "featured": true,
+  "recent": true
   "name": "サクラコ（20代）",
   "region": "ブダペスト",
   "course": "経済・工学系",
@@ -627,6 +628,7 @@
   "id": "yukina",
   "enabled": true,
   "featured": true,
+  "recent": true,
   "name": "ユキナ（20代）",
   "region": "ブダペスト",
   "course": "コンピュータサイエンス",

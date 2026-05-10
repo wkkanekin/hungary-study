@@ -492,175 +492,6 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .guideLeadActions .btn{
  min-width:180px;
 }
-/* =========================
-   Newsletter compact
-========================= */
-.newsletterSection{
- margin-top:20px;
-}
-
-.newsletterCard{
- max-width:760px;
- margin:0 auto;
-}
-
-.newsletterSection .sib-form{
- margin:0;
- background:transparent !important;
-}
-
-.newsletterSection #sib-form-container{
- width:100%;
- padding:0 !important;
-}
-
-.newsletterSection #sib-container{
- max-width:680px !important;
- width:100%;
- margin:0 auto;
- background:#fff !important;
- border-radius:18px !important;
- border:1px solid rgba(229,231,235,.9) !important;
- box-shadow:0 10px 22px rgba(17,24,39,.06) !important;
-}
-
-.newsletterSection .sib-form-message-panel{
- max-width:680px !important;
- margin:0 auto 10px !important;
-}
-
-.newsletterSection #sib-form{
- padding:18px 20px 16px !important;
-}
-
-.newsletterSection #sib-form > div{
- padding:0 !important;
- margin-bottom:10px;
-}
-
-.newsletterSection #sib-form > div:last-of-type{
- margin-bottom:0;
-}
-
-.newsletterSection .sib-form-block{
- padding:0 !important;
-}
-
-.newsletterSection .sib-form-block p,
-.newsletterSection .sib-text-form-block p{
- margin:0;
- line-height:1.65;
-}
-
-.newsletterSection .newsletterHeading p{
- font-size:20px !important;
- line-height:1.35 !important;
- font-weight:950 !important;
- color:#0f2a5a !important;
-}
-
-.newsletterSection .newsletterLead p{
- font-size:13px !important;
- color:#6b7280 !important;
- font-weight:800 !important;
-}
-
-.newsletterSection .entry__label{
- display:block;
- margin:0 0 6px !important;
- font-size:14px !important;
- line-height:1.5 !important;
- color:#0f2a5a !important;
- font-weight:950 !important;
-}
-
-.newsletterSection .entry__field{
- margin-top:0 !important;
-}
-
-.newsletterSection .input{
- width:100% !important;
- padding:12px 14px !important;
- min-height:auto !important;
- border-radius:14px !important;
- border:1px solid rgba(229,231,235,.95) !important;
- background:#fff !important;
- box-shadow:none !important;
- font-weight:850 !important;
-}
-
-.newsletterSection .input:focus{
- border-color:rgba(29,78,216,.45) !important;
- box-shadow:0 0 0 3px rgba(29,78,216,.10) !important;
-}
-
-.newsletterSection .entry__specification{
- margin-top:6px !important;
- font-size:12px !important;
- line-height:1.6 !important;
- color:#6b7280 !important;
-}
-
-.newsletterSection .entry__error{
- margin-top:8px !important;
- padding:8px 10px !important;
- border-radius:12px !important;
- line-height:1.5 !important;
-}
-
-.newsletterSection .sib-form-block__button{
- width:auto !important;
- min-width:0 !important;
- display:inline-flex !important;
- align-items:center;
- justify-content:center;
- padding:12px 24px !important;
- border-radius:14px !important;
- font-weight:900 !important;
- line-height:1.2 !important;
-}
-
-.newsletterSection .sib-form .entry__field,
-.newsletterSection .sib-form .form__label-row,
-.newsletterSection .sib-form .form__entry{
- text-align:left !important;
-}
-
-.newsletterSection .sib-form .form__entry{
- border:none !important;
- padding:0 !important;
- margin:0 !important;
- background:transparent !important;
-}
-
-@media (max-width:720px){
- .newsletterCard{
-  max-width:100%;
- }
-
- .newsletterSection #sib-container{
-  max-width:100% !important;
- }
-
- .newsletterSection .sib-form-message-panel{
-  max-width:100% !important;
- }
-
- .newsletterSection #sib-form{
-  padding:16px 14px 14px !important;
- }
-
- .newsletterSection .newsletterHeading p{
-  font-size:18px !important;
- }
-
- .newsletterSection .newsletterLead p{
-  font-size:12px !important;
- }
-
- .newsletterSection .sib-form-block__button{
-  width:100% !important;
- }
 }
 
 /* Search */
@@ -1138,30 +969,7 @@ details p{
   width:100%;
  }
 
- .newsletterSection .simpleCard{
-  padding:12px;
  }
-
- .newsletterSection #sib-form{
-  padding:18px 16px 16px !important;
- }
-
- .newsletterSection #sib-container{
-  max-width:100% !important;
-  border-radius:16px !important;
- }
-
- .newsletterSection .sib-form-message-panel{
-  max-width:100% !important;
-  border-radius:14px !important;
- }
-
- .newsletterSection .sib-form-block__button{
-  width:100% !important;
-  min-width:0 !important;
- }
-}
-
 /* Responsive */
 @media (max-width: 980px){
  .grid3{grid-template-columns:1fr}
@@ -1174,112 +982,6 @@ details p{
 }
 
 
-/* newsletter compact */
-.newsletterSection{
-  margin-top:22px;
-}
-
-.newsletterSection .sib-form{
-  background:transparent !important;
-}
-
-.newsletterSection #sib-form-container{
-  width:100%;
-  padding:0 !important;
-}
-
-.newsletterSection #sib-container{
-  max-width:560px !important;
-  width:100%;
-  margin:0 auto;
-  background:#fff !important;
-  border-radius:18px !important;
-  border:1px solid rgba(229,231,235,.9) !important;
-  box-shadow:0 10px 22px rgba(17,24,39,.06) !important;
-}
-
-.newsletterSection .sib-form-message-panel{
-  max-width:560px !important;
-  margin:0 auto 10px !important;
-}
-
-.newsletterSection #sib-form{
-  padding:18px 18px 16px !important;
-}
-
-.newsletterSection #sib-form > div{
-  padding:0 !important;
-  margin-bottom:10px;
-}
-
-.newsletterSection #sib-form > div:last-of-type{
-  margin-bottom:0;
-}
-
-.newsletterSection .sib-form-block{
-  padding:0 !important;
-}
-
-.newsletterSection .sib-form-block p,
-.newsletterSection .sib-text-form-block p{
-  margin:0;
-}
-
-.newsletterSection .entry__label{
-  display:block;
-  margin:0 0 6px !important;
-  font-size:15px !important;
-  line-height:1.5 !important;
-  color:#0f2a5a !important;
-  font-weight:950 !important;
-}
-
-.newsletterSection .entry__field{
-  margin-top:0 !important;
-}
-
-.newsletterSection .input{
-  width:100% !important;
-  padding:12px 14px !important;
-  min-height:auto !important;
-  border-radius:14px !important;
-  border:1px solid rgba(229,231,235,.95) !important;
-  box-shadow:none !important;
-}
-
-.newsletterSection .entry__specification{
-  margin-top:6px !important;
-  font-size:12px !important;
-  line-height:1.6 !important;
-  color:#6b7280 !important;
-}
-
-.newsletterSection .sib-form-block__button{
-  width:auto !important;
-  min-width:0 !important;
-  padding:12px 26px !important;
-  border-radius:14px !important;
-  font-weight:900 !important;
-  line-height:1.2 !important;
-}
-
-@media (max-width:720px){
-  .newsletterSection #sib-container{
-    max-width:100% !important;
-  }
-
-  .newsletterSection .sib-form-message-panel{
-    max-width:100% !important;
-  }
-
-  .newsletterSection #sib-form{
-    padding:16px 14px 14px !important;
-  }
-
-  .newsletterSection .sib-form-block__button{
-    width:100% !important;
-  }
-}
 
 .videoGrid {
   display: grid;
@@ -1384,4 +1086,117 @@ details p{
   font-weight:800;
   line-height:1.85;
   white-space:pre-wrap;
+}
+
+
+/* Recent students */
+.recentStudentsSection{
+  margin-top:28px;
+}
+
+.recentStudentsLead{
+  margin:0 auto 16px;
+  max-width:760px;
+  text-align:center;
+  color:#475569;
+  font-weight:850;
+  line-height:1.75;
+}
+
+.recentStudentGrid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  max-width:980px;
+  margin:0 auto;
+}
+
+.recentStudentCard{
+  padding:16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.95);
+  border:1px solid rgba(229,231,235,.9);
+  box-shadow:0 12px 28px rgba(17,24,39,.08);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.recentStudentTop{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.recentStudentAvatar{
+  width:64px;
+  height:64px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(229,231,235,.9);
+  background:#f3f6ff;
+  flex:0 0 auto;
+}
+
+.recentStudentAvatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.recentStudentName{
+  margin:0;
+  font-size:17px;
+  font-weight:950;
+  color:#0f2a5a;
+}
+
+.recentStudentMeta{
+  margin:3px 0 0;
+  color:#64748b;
+  font-size:13px;
+  font-weight:850;
+  line-height:1.5;
+}
+
+.recentStudentTags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.recentStudentTag{
+  padding:6px 9px;
+  border-radius:999px;
+  background:#f3f4f6;
+  border:1px solid rgba(229,231,235,.9);
+  color:#374151;
+  font-size:12px;
+  font-weight:900;
+}
+
+.recentStudentBio{
+  margin:0;
+  color:#374151;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.75;
+}
+
+.recentStudentCard .btn{
+  margin-top:auto;
+  width:100%;
+}
+
+.recentStudentsAction{
+  margin-top:16px;
+  text-align:center;
+}
+
+@media (max-width:980px){
+  .recentStudentGrid{
+    grid-template-columns:1fr;
+    max-width:640px;
+  }
 }

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
  const applySearchBtn = document.getElementById("applySearch");
  const clearSearchBtn = document.getElementById("clearSearch");
  const showAllStudentsBtn = document.getElementById("showAllStudents");
+const recentShowAllStudentsBtn = document.getElementById("recentShowAllStudents");
  const suggestBox = document.getElementById("suggestBox");
 
 const studentListEl = document.getElementById("studentList");
@@ -939,7 +940,15 @@ setHitLabel(`おすすめ：${featured.length}名`); }
  if (applySearchBtn) applySearchBtn.addEventListener("click", applyFilterAndJump);
  if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
  if (showAllStudentsBtn) showAllStudentsBtn.addEventListener("click", showAllStudents);
+if (recentShowAllStudentsBtn) {
+  recentShowAllStudentsBtn.addEventListener("click", () => {
+    renderStudents(students);
 
+    setHitLabel(`全学生：${students.length}名`);
+
+    scrollToStudents();
+  });
+}
  // ----------------------------
  // Contact Form (統合フォーム)
  // ----------------------------

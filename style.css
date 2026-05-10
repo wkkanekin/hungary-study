@@ -491,8 +491,11 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  margin:10px 0 0;
  font-weight:850;
  text-align:center;
+ color:#6b7280;
+ line-height:1.7;
+ white-space:normal;
+ word-break:keep-all;
 }
-
 input[type="text"], input[type="email"], select, textarea{
  width:100%;
  padding:12px 12px;

@@ -8,8 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
  const applySearchBtn = document.getElementById("applySearch");
  const clearSearchBtn = document.getElementById("clearSearch");
  const showAllStudentsBtn = document.getElementById("showAllStudents");
-const recentShowAllStudentsBtn = document.getElementById("recentShowAllStudents");
- const suggestBox = document.getElementById("suggestBox");
+const recentShowAllStudentsBtn =
+  document.getElementById("recentShowAllStudents") ||
+  document.querySelector(".recentStudentsAction .btn"); 
+
+const suggestBox = document.getElementById("suggestBox");
 
 const studentListEl = document.getElementById("studentList");
 const recentStudentListEl = document.getElementById("recentStudentList");
@@ -941,7 +944,9 @@ setHitLabel(`おすすめ：${featured.length}名`); }
  if (clearSearchBtn) clearSearchBtn.addEventListener("click", clearSearch);
  if (showAllStudentsBtn) showAllStudentsBtn.addEventListener("click", showAllStudents);
 if (recentShowAllStudentsBtn) {
-  recentShowAllStudentsBtn.addEventListener("click", () => {
+  recentShowAllStudentsBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
     renderStudents(students);
 
     setHitLabel(`全学生：${students.length}名`);

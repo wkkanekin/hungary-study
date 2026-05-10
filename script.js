@@ -215,14 +215,39 @@ function renderRecentStudents() {
          ${esc(shortText(stu.bio, 92))}
        </p>
 
-      <a class="btn primary" href="#student-${esc(stu.id)}">
+     <button
+  type="button"
+  class="btn primary recentProfileBtn"
+  data-student-id="${esc(stu.id)}"
+>
   プロフィールを見る
-</a>
+</button>
 
      </article>
    `;
  }).join("");
-}
+
+
+
+
+recentStudentListEl.querySelectorAll(".recentProfileBtn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const id = btn.dataset.studentId;
+
+    if (!id) return;
+
+    renderStudents(students);
+
+    setHitLabel(`全学生：${students.length}名`);
+
+    requestAnimationFrame(() => {
+      document.getElementById(`student-${id}`)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+});}
 
  function hasAnySearchCondition() {
  const kw = norm(keywordInput?.value);

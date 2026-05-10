@@ -215,9 +215,9 @@ function renderRecentStudents() {
          ${esc(shortText(stu.bio, 92))}
        </p>
 
-       <a class="btn primary" href="#students">
-         プロフィールを見る
-       </a>
+      <a class="btn primary" href="#student-${esc(stu.id)}">
+  プロフィールを見る
+</a>
 
      </article>
    `;
@@ -403,6 +403,7 @@ function renderRecentStudents() {
 
  const card = document.createElement("article");
  card.className = `studentCard${disabled ? " disabled" : ""}`;
+card.id = `student-${stu.id}`;
 
  card.innerHTML = `
  <div class="studentTop">

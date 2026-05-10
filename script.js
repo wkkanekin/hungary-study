@@ -363,7 +363,7 @@ Array.isArray(stu.reviews) && stu.reviews.length
       <article class="studentReviewItem">
         <div class="studentReviewHead">
           <span class="studentReviewReviewer">
-            相談者レビュー
+              ${esc(String(review.reviewer || "").trim() || "匿名")}
           </span>
 
           ${

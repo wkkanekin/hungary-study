@@ -1193,3 +1193,338 @@ details p{
     max-width:640px;
   }
 }
+
+
+/* =========================
+   Arrival Support
+========================= */
+
+.arrivalIntroCard{
+  max-width:980px;
+}
+
+.arrivalCatch{
+  margin:0 0 28px;
+  text-align:center;
+  font-size:34px;
+  line-height:1.6;
+  font-weight:950;
+  color:#0f2a5a;
+}
+
+.arrivalServiceList{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.arrivalServiceItem{
+  padding:22px;
+  border-radius:22px;
+  background:#fff;
+  border:1px solid rgba(229,231,235,.9);
+  box-shadow:0 10px 24px rgba(15,23,42,.05);
+}
+
+.arrivalServiceHead{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.arrivalServiceHead h3{
+  margin:0;
+  font-size:22px;
+  line-height:1.5;
+  color:#0f172a;
+}
+
+.arrivalServicePrice{
+  color:#e69a00;
+  font-size:26px;
+  font-weight:950;
+  white-space:nowrap;
+}
+
+.arrivalServiceItem p{
+  margin:14px 0 0;
+  color:#475569;
+  line-height:1.9;
+  font-weight:800;
+}
+
+.arrivalFlexible{
+  margin-top:28px;
+  text-align:center;
+  font-size:28px;
+  font-weight:950;
+  color:#0f2a5a;
+}
+
+.arrivalContact{
+  margin-top:28px;
+  text-align:center;
+}
+
+@media (max-width:900px){
+
+  .arrivalCatch{
+    font-size:26px;
+  }
+
+  .arrivalServiceList{
+    grid-template-columns:1fr;
+  }
+
+  .arrivalServiceHead{
+    flex-direction:column;
+  }
+
+  .arrivalServicePrice{
+    font-size:22px;
+  }
+
+  .arrivalFlexible{
+    font-size:22px;
+  }
+
+}
+
+
+/* =========================
+   Arrival Support Page
+========================= */
+
+.arrivalPageHero{
+  max-width:980px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.arrivalPageTitle{
+  margin:0;
+  font-size:48px;
+  line-height:1.25;
+  font-weight:950;
+  color:#0f172a;
+}
+
+.arrivalPageLead{
+  margin:24px auto 0;
+  max-width:820px;
+  font-size:22px;
+  line-height:1.9;
+  font-weight:850;
+  color:#334155;
+}
+
+.arrivalPageSub{
+  margin:18px auto 0;
+  max-width:760px;
+  color:#64748b;
+  font-weight:800;
+  line-height:1.9;
+}
+
+.arrivalBackLink{
+  margin-top:28px;
+}
+
+.arrivalPageCard{
+  max-width:980px;
+  margin:0 auto;
+}
+
+.arrivalForm{
+  margin-top:6px;
+}
+
+.formGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.field.full{
+  grid-column:1 / -1;
+}
+
+.field label{
+  color:#0f172a;
+  font-weight:900;
+  font-size:15px;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:1px solid rgba(226,232,240,.95);
+  border-radius:18px;
+  background:#fff;
+  padding:14px 16px;
+  color:#111827;
+  font:inherit;
+  font-weight:750;
+  outline:none;
+  transition:
+    border-color .18s ease,
+    box-shadow .18s ease,
+    transform .18s ease;
+}
+
+.field textarea{
+  resize:vertical;
+  min-height:140px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:rgba(29,78,216,.45);
+  box-shadow:0 0 0 4px rgba(29,78,216,.10);
+}
+
+.serviceChecks{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:6px;
+}
+
+.serviceCheck{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:18px;
+  border-radius:22px;
+  border:1px solid rgba(226,232,240,.95);
+  background:#fff;
+  cursor:pointer;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease;
+}
+
+.serviceCheck:hover{
+  transform:translateY(-2px);
+  border-color:rgba(29,78,216,.25);
+  box-shadow:0 10px 24px rgba(15,23,42,.06);
+}
+
+.serviceCheck input{
+  width:auto;
+  margin:0;
+  transform:scale(1.15);
+}
+
+.serviceCheck span{
+  flex:1;
+  color:#0f172a;
+  font-weight:900;
+  line-height:1.7;
+}
+
+.serviceCheck strong{
+  color:#e69a00;
+  font-size:22px;
+  font-weight:950;
+  white-space:nowrap;
+}
+
+.arrivalTotalPrice{
+  margin-top:20px;
+  padding:22px;
+  border-radius:24px;
+  background:#f8fbff;
+  border:1px solid rgba(29,78,216,.12);
+  text-align:center;
+  color:#0f172a;
+  font-size:24px;
+  font-weight:950;
+}
+
+#arrivalTotalAmount{
+  color:#e69a00;
+  font-size:42px;
+  font-weight:950;
+}
+
+.arrivalSubmitWrap{
+  margin-top:34px;
+  text-align:center;
+}
+
+.arrivalSubmitWrap .btn{
+  min-width:280px;
+}
+
+@media (max-width:900px){
+
+  .arrivalPageTitle{
+    font-size:36px;
+  }
+
+  .arrivalPageLead{
+    font-size:18px;
+  }
+
+  .formGrid{
+    grid-template-columns:1fr;
+  }
+
+  .serviceCheck{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .serviceCheck strong{
+    font-size:20px;
+  }
+
+  .arrivalTotalPrice{
+    font-size:20px;
+  }
+
+  #arrivalTotalAmount{
+    font-size:34px;
+  }
+
+}
+
+@media (max-width:640px){
+
+  .arrivalPageTitle{
+    font-size:30px;
+  }
+
+  .arrivalPageLead{
+    font-size:17px;
+    line-height:1.85;
+  }
+
+  .arrivalPageSub{
+    font-size:15px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea{
+    padding:13px 14px;
+  }
+
+  .arrivalSubmitWrap .btn{
+    width:100%;
+    min-width:0;
+  }
+
+}

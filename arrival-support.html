@@ -15,16 +15,11 @@
 </head>
 
 <body>
-
   <div class="container">
 
-    <section class="section">
-
+    <header class="section">
       <div class="card simpleCard arrivalPageHero">
-
-        <h1 class="arrivalPageTitle">
-          ハンガリー渡航サポート
-        </h1>
+        <h1 class="arrivalPageTitle">ハンガリー渡航サポート</h1>
 
         <p class="arrivalPageLead">
           あなたの通う大学・同じ都市に在籍する現役大学生が、
@@ -33,502 +28,257 @@
 
         <p class="arrivalPageSub">
           まずは必要なサポート内容を送ってください。
-          詳細な日時や集合場所などは、後ほどLINEで調整します。
+          詳細な日時・集合場所・担当者との調整は、後ほどLINEで行います。
         </p>
 
         <div class="arrivalBackLink">
-          <a class="btn" href="index.html">
-            トップページに戻る
-          </a>
+          <a class="btn" href="index.html">トップページに戻る</a>
         </div>
-
       </div>
-
-    </section>
+    </header>
 
     <section class="section">
-
       <div class="card arrivalPageCard">
 
         <form
-          id="arrivalForm"
           class="arrivalForm"
-          autocomplete="on"
+          action="mailto:info@hungarystudy.org"
+          method="post"
+          enctype="text/plain"
         >
 
           <div class="formGrid">
 
             <div class="field">
-
-              <label for="arrival_email">
-                メールアドレス（必須）
-              </label>
-
+              <label for="arrival_email">メールアドレス（必須）</label>
               <input
                 id="arrival_email"
-                name="email"
+                name="メールアドレス"
                 type="email"
                 required
               />
-
             </div>
 
             <div class="field">
-
-              <label for="arrival_line">
-                LINE ID（必須）
-              </label>
-
+              <label for="arrival_line">LINE ID（必須）</label>
               <input
                 id="arrival_line"
-                name="line"
+                name="LINE ID"
                 type="text"
-                placeholder="例：example_line"
+                placeholder="例：line_id_123"
                 required
               />
-
             </div>
 
             <div class="field">
-
-              <label for="arrival_university">
-                進学予定大学（必須）
-              </label>
-
+              <label for="arrival_university">進学予定大学（必須）</label>
               <input
                 id="arrival_university"
-                name="university"
+                name="進学予定大学"
                 type="text"
                 placeholder="例：ELTE / Corvinus / BME"
                 required
               />
-
             </div>
 
             <div class="field">
-
-              <label for="arrival_student">
-                依頼したい現役生（必須）
-              </label>
-
+              <label for="arrival_student">依頼したい現役生（必須）</label>
               <select
                 id="arrival_student"
-                name="student"
+                name="依頼したい現役生"
                 required
               >
-
-                <option value="">
-                  選択してください
-                </option>
-
-                <option value="運営におまかせ">
-                  運営におまかせ
-                </option>
-
-                <option value="カネコ｜Budapest University of Economics and Business">
-                  カネコ｜Budapest University of Economics and Business
-                </option>
-
-                <option value="リョウタ｜Széchenyi István University">
-                  リョウタ｜Széchenyi István University
-                </option>
-
-                <option value="ユウゴ｜University of Debrecen">
-                  ユウゴ｜University of Debrecen
-                </option>
-
-                <option value="ユイ｜Corvinus University of Budapest">
-                  ユイ｜Corvinus University of Budapest
-                </option>
-
-                <option value="ユリ｜Budapest University of Technology and Economics">
-                  ユリ｜Budapest University of Technology and Economics
-                </option>
-
-                <option value="タマミ｜University of Pécs">
-                  タマミ｜University of Pécs
-                </option>
-
-                <option value="アンナ｜International Business School, Budapest">
-                  アンナ｜International Business School, Budapest
-                </option>
-
-                <option value="ナナ｜University of Szeged">
-                  ナナ｜University of Szeged
-                </option>
-
-                <option value="サクラコ｜Corvinus University of Budapest">
-                  サクラコ｜Corvinus University of Budapest
-                </option>
-
-                <option value="ユキナ｜Eötvös Loránd University">
-                  ユキナ｜Eötvös Loránd University
-                </option>
-
+                <option value="">選択してください</option>
+                <option value="運営におまかせ">運営におまかせ</option>
+                <option value="カネコ｜Budapest University of Economics and Business">カネコ｜Budapest University of Economics and Business</option>
+                <option value="ユウ｜International Business School, Budapest">ユウ｜International Business School, Budapest</option>
+                <option value="リョウタ｜Széchenyi István University">リョウタ｜Széchenyi István University</option>
+                <option value="ユウゴ｜University of Debrecen">ユウゴ｜University of Debrecen</option>
+                <option value="ユイ｜Corvinus University of Budapest">ユイ｜Corvinus University of Budapest</option>
+                <option value="ユリ｜Budapest University of Technology and Economics">ユリ｜Budapest University of Technology and Economics</option>
+                <option value="タマミ｜University of Pécs">タマミ｜University of Pécs</option>
+                <option value="アンナ｜International Business School, Budapest">アンナ｜International Business School, Budapest</option>
+                <option value="ナナ｜University of Szeged">ナナ｜University of Szeged</option>
               </select>
-
             </div>
 
             <div class="field full">
-
-              <label>
-                依頼したいサポート内容（複数選択可）
-              </label>
+              <label>依頼したいサポート内容（複数選択可）</label>
 
               <div class="serviceChecks">
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
-                    value="渡航前LINEサポート｜10000円"
+                    name="依頼サービス"
+                    value="渡航前LINEサポート（到着前日まで）｜10000円"
                     data-price="10000"
                   />
-
-                  <span>
-                    渡航前LINEサポート
-                  </span>
-
-                  <strong>
-                    ¥10,000
-                  </strong>
-
+                  <span>渡航前LINEサポート（到着前日まで）</span>
+                  <strong>¥10,000</strong>
                 </label>
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
+                    name="依頼サービス"
                     value="空港ピックアップ＋初日案内｜25000円"
                     data-price="25000"
                   />
-
-                  <span>
-                    空港ピックアップ＋初日案内
-                  </span>
-
-                  <strong>
-                    ¥25,000
-                  </strong>
-
+                  <span>空港ピックアップ＋初日案内</span>
+                  <strong>¥25,000</strong>
                 </label>
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
+                    name="依頼サービス"
                     value="SIM・通信サポート｜8000円"
                     data-price="8000"
                   />
-
-                  <span>
-                    SIM・通信サポート
-                  </span>
-
-                  <strong>
-                    ¥8,000
-                  </strong>
-
+                  <span>SIM・通信サポート</span>
+                  <strong>¥8,000</strong>
                 </label>
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
+                    name="依頼サービス"
                     value="大学・履修案内｜12000円"
                     data-price="12000"
                   />
-
-                  <span>
-                    大学・履修案内
-                  </span>
-
-                  <strong>
-                    ¥12,000
-                  </strong>
-
+                  <span>大学・履修案内</span>
+                  <strong>¥12,000</strong>
                 </label>
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
+                    name="依頼サービス"
                     value="スーパー・生活用品案内｜8000円"
                     data-price="8000"
                   />
-
-                  <span>
-                    スーパー・生活用品案内
-                  </span>
-
-                  <strong>
-                    ¥8,000
-                  </strong>
-
+                  <span>スーパー・生活用品案内</span>
+                  <strong>¥8,000</strong>
                 </label>
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
+                    name="依頼サービス"
                     value="宿泊施設周辺案内｜10000円"
                     data-price="10000"
                   />
-
-                  <span>
-                    宿泊施設周辺案内
-                  </span>
-
-                  <strong>
-                    ¥10,000
-                  </strong>
-
+                  <span>宿泊施設周辺案内</span>
+                  <strong>¥10,000</strong>
                 </label>
 
                 <label class="serviceCheck">
-
                   <input
                     type="checkbox"
                     class="serviceOption"
+                    name="依頼サービス"
                     value="役所同行サポート｜15000円"
                     data-price="15000"
                   />
+                  <span>役所同行サポート</span>
+                  <strong>¥15,000</strong>
+                </label>
 
-                  <span>
-                    役所同行サポート
-                  </span>
 
-                  <strong>
-                    ¥15,000
-                  </strong>
-
+<label class="serviceCheck">
+                  <input
+                    type="checkbox"
+                    class="serviceOption"
+                    name="依頼サービス"
+                    value="銀行同行・口座開設サポート｜12000円"
+                    data-price="12000"
+                  />
+                  <span>銀行同行・口座開設サポート</span>
+                  <strong>¥12,000</strong>
                 </label>
 
               </div>
 
               <div class="arrivalTotalPrice">
-
                 合計金額：
-
-                <span id="arrivalTotalAmount">
-                  ¥0
-                </span>
-
+                <span id="arrivalTotalAmount">¥0</span>
               </div>
 
+              <input
+                id="arrival_total_hidden"
+                name="合計金額"
+                type="hidden"
+                value="0円"
+              />
             </div>
 
             <div class="field full">
-
-              <label for="arrival_schedule">
-                ハンガリー到着予定時期
-              </label>
-
+              <label for="arrival_schedule">ハンガリー到着予定時期</label>
               <input
                 id="arrival_schedule"
-                name="schedule"
+                name="ハンガリー到着予定時期"
                 type="text"
-                placeholder="例：2026年9月上旬ごろ / 未定"
+                placeholder="例：2026年9月上旬ごろ / まだ未定"
               />
-
             </div>
 
             <div class="field full">
-
-              <label for="arrival_message">
-                備考
-              </label>
-
+              <label for="arrival_message">備考</label>
               <textarea
                 id="arrival_message"
-                name="message"
+                name="備考"
                 rows="7"
                 placeholder="例：航空券はまだ未定です。Corvinus周辺の住まい探しと履修登録が不安です。"
               ></textarea>
-
             </div>
 
           </div>
 
           <div class="arrivalSubmitWrap">
-
             <button class="btn primary" type="submit">
               内容を送信する
             </button>
-
           </div>
 
         </form>
 
       </div>
-
     </section>
 
   </div>
 
   <script>
-
-    const arrivalForm =
-      document.getElementById("arrivalForm");
-
-    const serviceOptions =
-      document.querySelectorAll(".serviceOption");
-
-    const totalAmount =
-      document.getElementById("arrivalTotalAmount");
+    const serviceOptions = document.querySelectorAll(".serviceOption");
+    const totalAmount = document.getElementById("arrivalTotalAmount");
+    const totalHidden = document.getElementById("arrival_total_hidden");
 
     function updateArrivalTotal() {
-
       let total = 0;
 
-      serviceOptions.forEach(option => {
-
-        if(option.checked){
-          total += Number(option.dataset.price);
+      serviceOptions.forEach((option) => {
+        if (option.checked) {
+          total += Number(option.dataset.price || 0);
         }
-
       });
 
-      totalAmount.textContent =
-        "¥" + total.toLocaleString("ja-JP");
+      const totalText = "¥" + total.toLocaleString("ja-JP");
 
+      totalAmount.textContent = totalText;
+      totalHidden.value = totalText;
     }
 
-    function getSelectedServices() {
-
-      const selected = [];
-
-      serviceOptions.forEach(option => {
-
-        if(option.checked){
-          selected.push(option.value);
-        }
-
-      });
-
-      return selected;
-
-    }
-
-    arrivalForm.addEventListener("submit", (event) => {
-
-      event.preventDefault();
-
-      const email =
-        document.getElementById("arrival_email").value.trim();
-
-      const line =
-        document.getElementById("arrival_line").value.trim();
-
-      const university =
-        document.getElementById("arrival_university").value.trim();
-
-      const student =
-        document.getElementById("arrival_student").value.trim();
-
-      const schedule =
-        document.getElementById("arrival_schedule").value.trim();
-
-      const message =
-        document.getElementById("arrival_message").value.trim();
-
-      const selectedServices =
-        getSelectedServices();
-
-      if(!email || !line || !university || !student){
-
-        alert(
-          "メールアドレス、LINE ID、進学予定大学、依頼したい現役生を入力してください。"
-        );
-
-        return;
-
-      }
-
-      if(selectedServices.length === 0){
-
-        alert(
-          "依頼したいサポート内容を1つ以上選択してください。"
-        );
-
-        return;
-
-      }
-
-      const subject =
-        "【ハンガリー渡航サポート依頼】";
-
-      const body = [
-
-        "ハンガリー渡航サポート依頼",
-        "",
-
-        "メールアドレス：",
-        email,
-        "",
-
-        "LINE ID：",
-        line,
-        "",
-
-        "進学予定大学：",
-        university,
-        "",
-
-        "依頼したい現役生：",
-        student,
-        "",
-
-        "依頼したいサポート内容：",
-        selectedServices.map(
-          service => "・" + service
-        ).join("\n"),
-        "",
-
-        "合計金額：",
-        totalAmount.textContent,
-        "",
-
-        "ハンガリー到着予定時期：",
-        schedule || "未定",
-        "",
-
-        "備考：",
-        message || "なし"
-
-      ].join("\n");
-
-      const mailto =
-
-        "mailto:info@hungarystudy.org" +
-
-        "?subject=" +
-        encodeURIComponent(subject) +
-
-        "&body=" +
-        encodeURIComponent(body);
-
-      window.location.href = mailto;
-
-    });
-
-    serviceOptions.forEach(option => {
-
-      option.addEventListener(
-        "change",
-        updateArrivalTotal
-      );
-
+    serviceOptions.forEach((option) => {
+      option.addEventListener("change", updateArrivalTotal);
     });
 
     updateArrivalTotal();
-
   </script>
 
 </body>

@@ -1,5 +1,16 @@
 [
   {
+  "id": "university-bueb",
+  "enabled": true,
+  "featured": false,
+  "title": "Budapest University of Economics and Business（BUEB）",
+  "description": "BUEBの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
+  "category": "大学",
+  "url": "university-bueb.html",
+  "date": "2026-05-18"
+},
+
+{
     "id": "study-abroad-japan",
     "enabled": true,
     "featured": true,

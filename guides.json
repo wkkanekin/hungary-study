@@ -1,4 +1,17 @@
 [
+{
+  "id": "university-ibs",
+  "enabled": true,
+  "featured": true,
+  "comingSoon": false,
+  "title": "International Business School（IBS Budapest）",
+  "description": "International Business School Budapestの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+  "category": "大学",
+  "url": "university-ibs.html",
+  "date": "2026-05-19"
+},
+
+
  {
   "id": "university-szechenyi",
   "enabled": true,

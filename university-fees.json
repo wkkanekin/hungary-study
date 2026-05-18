@@ -1,0 +1,56 @@
+{
+  "updated_at": "2026-05-18",
+  "note": "学費は大学公式情報をもとに手入力で管理する想定です。年度により変更される可能性があります。",
+  "universities": [
+    {
+      "id": "bueb",
+      "name": "Budapest University of Economics and Business",
+      "summary_fee": "要確認",
+      "source_url": "https://www.bge.hu/en",
+      "fees": [
+        {
+          "program": "International Business Economics",
+          "degree": "BSc",
+          "amount": "要確認",
+          "currency": "",
+          "scholarship": "要確認"
+        },
+        {
+          "program": "Tourism and Catering",
+          "degree": "BSc",
+          "amount": "要確認",
+          "currency": "",
+          "scholarship": "要確認"
+        },
+        {
+          "program": "Business Administration and Management",
+          "degree": "BSc",
+          "amount": "要確認",
+          "currency": "",
+          "scholarship": "要確認"
+        },
+        {
+          "program": "Finance and Accounting",
+          "degree": "BSc",
+          "amount": "要確認",
+          "currency": "",
+          "scholarship": "要確認"
+        },
+        {
+          "program": "Tourism Management",
+          "degree": "MSc",
+          "amount": "要確認",
+          "currency": "",
+          "scholarship": "要確認"
+        },
+        {
+          "program": "Marketing",
+          "degree": "MSc",
+          "amount": "要確認",
+          "currency": "",
+          "scholarship": "要確認"
+        }
+      ]
+    }
+  ]
+}

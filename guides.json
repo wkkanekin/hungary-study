@@ -1,5 +1,17 @@
 [
-  {
+  
+{
+  "id": "university-debrecen",
+  "enabled": true,
+  "featured": false,
+  "title": "University of Debrecen（デブレツェン大学）",
+  "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
+  "category": "大学",
+  "url": "university-debrecen.html",
+  "date": "2026-05-18"
+},
+
+{
   "id": "university-bueb",
   "enabled": true,
   "featured": false,

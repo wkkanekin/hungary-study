@@ -6,7 +6,7 @@
 
   const URLS = {
     rankings: "rankings.json",
-    students: "Students4.txt",
+    students: "students.json",
     tuition: "university-fees.json"
   };
 

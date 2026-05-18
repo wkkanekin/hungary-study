@@ -1,5 +1,17 @@
 [
 {
+  "id": "university-bme",
+  "enabled": true,
+  "featured": true,
+  "comingSoon": false,
+  "title": "Budapest University of Technology and Economics（BME）",
+  "description": "Budapest University of Technology and Economics（BME）の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+  "category": "大学",
+  "url": "university-bme.html",
+  "date": "2026-05-19"
+},
+
+{
   "id": "university-ibs",
   "enabled": true,
   "featured": true,

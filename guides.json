@@ -1,5 +1,16 @@
 [
  {
+  "id": "university-szechenyi",
+  "enabled": true,
+  "featured": true,
+  "comingSoon": false,
+  "title": "Széchenyi István University（セーチェーニ・イシュトヴァーン大学）",
+  "description": "Széchenyi István Universityの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+  "category": "大学",
+  "url": "university-szechenyi.html",
+  "date": "2026-05-19"
+},
+{
   "id": "university-elte",
   "enabled": true,
   "featured": true,

@@ -3,6 +3,7 @@
   "id": "university-corvinus",
   "enabled": true,
   "featured": true,
+  "comingSoon": false,
   "title": "Corvinus University of Budapest（コルヴィヌス大学）",
   "description": "Corvinus University of Budapest の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
   "category": "大学",

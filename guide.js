@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const DATA_URL = "guides.json";
+  const DATA_URL = "guide.json";
 
   const CATEGORY_ORDER = [
     "費用",

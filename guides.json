@@ -224,5 +224,18 @@
   "category": "奨学金",
   "url": "stipendium-hungaricum-requirements.html",
   "date": "2026-04-27"
+},
+{
+  "id": "hungary-university-calendar",
+  "enabled": true,
+  "featured": true,
+  "comingSoon": false,
+  "title": "ハンガリー大学の長期休暇・試験期間まとめ【2026年版】",
+  "description": "ELTE、BME、BGE、Corvinus、Debrecen、Szegedなど、ハンガリー主要大学の長期休暇・試験期間・再試験期間を比較できます。",
+  "category": "大学",
+  "url": "hungary-university-calendar.html",
+  "date": "2026-05-26"
 }
+
+
 ]

@@ -16,6 +16,7 @@ const suggestBox = document.getElementById("suggestBox");
 
 const studentListEl = document.getElementById("studentList");
 const recentStudentListEl = document.getElementById("recentStudentList");
+const dailyGuideListEl = document.getElementById("dailyGuideList");
 
 const noResultsEl = document.getElementById("noResults");
 const hitCountEl = document.getElementById("hitCount");
@@ -252,6 +253,126 @@ recentStudentListEl.querySelectorAll(".recentProfileBtn").forEach((btn) => {
     });
   });
 });}
+
+
+/* =========================
+   Daily Guide
+========================= */
+
+function getDailySeed() {
+  const now = new Date();
+
+  return Number(
+    `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}`
+  );
+}
+
+function seededRandom(seed) {
+  let value = seed % 2147483647;
+
+  if (value <= 0) {
+    value += 2147483646;
+  }
+
+  return function () {
+    value = (value * 16807) % 2147483647;
+    return (value - 1) / 2147483646;
+  };
+}
+
+function getDailyGuides(guides, max = 3) {
+
+  const availableGuides = guides.filter((guide) => {
+    return (
+      guide &&
+      guide.enabled === true &&
+      guide.comingSoon !== true &&
+      String(guide.url || "").trim()
+    );
+  });
+
+  const random = seededRandom(getDailySeed());
+
+  return availableGuides
+    .map((guide) => ({
+      guide,
+      sort: random()
+    }))
+    .sort((a, b) => a.sort - b.sort)
+    .slice(0, max)
+    .map((item) => item.guide);
+}
+
+function renderDailyGuides(guides) {
+
+  if (!dailyGuideListEl) return;
+
+  const list = getDailyGuides(guides, 3);
+
+  if (!list.length) {
+    dailyGuideListEl.innerHTML = "";
+    return;
+  }
+
+  dailyGuideListEl.innerHTML = list.map((guide) => {
+
+    return `
+      <article class="dailyGuideCard">
+
+        <div class="dailyGuideCardTop">
+
+          <span class="dailyGuideCategory">
+            ${esc(guide.category || "ガイド")}
+          </span>
+
+          ${
+            guide.date
+              ? `
+                <span class="dailyGuideDate">
+                  ${esc(guide.date)}
+                </span>
+              `
+              : ""
+          }
+
+        </div>
+
+        <h4 class="dailyGuideCardTitle">
+          ${esc(guide.title)}
+        </h4>
+
+        <p class="dailyGuideCardDesc">
+          ${esc(shortText(guide.description, 96))}
+        </p>
+
+        <a
+          class="btn dailyGuideBtn"
+          href="${esc(guide.url)}"
+        >
+          記事を読む
+        </a>
+
+      </article>
+    `;
+
+  }).join("");
+}
+
+async function loadDailyGuides() {
+
+  const txt = await fetchText("guide.json");
+
+  const data = safeJsonParse(txt, "guide.json");
+
+  if (!Array.isArray(data)) {
+    throw new Error(
+      `guide.json の形式が不正です（配列にしてください）。type=${typeof data}`
+    );
+  }
+
+  renderDailyGuides(data);
+}
+
 
  function hasAnySearchCondition() {
  const kw = norm(keywordInput?.value);
@@ -1433,6 +1554,17 @@ if (recentShowAllStudentsBtn) {
  }
  setHitLabel("");
  }
+
+ try {
+   await loadDailyGuides();
+ } catch (e) {
+   console.error(e);
+
+   if (dailyGuideListEl) {
+     dailyGuideListEl.innerHTML = "";
+   }
+ }
+
 
  try {
  await loadConfig();

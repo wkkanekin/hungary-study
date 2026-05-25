@@ -1562,3 +1562,133 @@ details p{
     min-width:0;
   }
 }
+
+
+/* =========================
+   Daily Guide
+========================= */
+
+.dailyGuideBlock{
+  margin-top:26px;
+  padding:24px 20px;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at top left, rgba(29,78,216,.10), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,255,.96));
+  border:1px solid rgba(229,231,235,.95);
+  box-shadow:0 14px 30px rgba(17,24,39,.07);
+}
+
+.dailyGuideHead{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 18px;
+}
+
+.dailyGuideLabel{
+  margin:0 0 6px;
+  color:#1d4ed8;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.dailyGuideTitle{
+  margin:0;
+  color:#0f2a5a;
+  font-size:24px;
+  line-height:1.45;
+  font-weight:950;
+}
+
+.dailyGuideDesc{
+  margin:10px 0 0;
+  color:#475569;
+  font-weight:850;
+  line-height:1.75;
+}
+
+.dailyGuideGrid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  max-width:980px;
+  margin:0 auto;
+}
+
+.dailyGuideCard{
+  padding:16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(229,231,235,.9);
+  box-shadow:0 12px 28px rgba(17,24,39,.08);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-height:260px;
+}
+
+.dailyGuideCardTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.dailyGuideCategory{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#f3f6ff;
+  border:1px solid rgba(29,78,216,.16);
+  color:#173a8f;
+  font-size:12px;
+  font-weight:950;
+}
+
+.dailyGuideDate{
+  color:#64748b;
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.dailyGuideCardTitle{
+  margin:0;
+  color:#0f172a;
+  font-size:18px;
+  line-height:1.55;
+  font-weight:950;
+}
+
+.dailyGuideCardDesc{
+  margin:0;
+  color:#475569;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.75;
+}
+
+.dailyGuideBtn{
+  margin-top:auto;
+  width:100%;
+  justify-content:center;
+  font-weight:950;
+}
+
+@media (max-width:980px){
+  .dailyGuideGrid{
+    grid-template-columns:1fr;
+    max-width:640px;
+  }
+
+  .dailyGuideBlock{
+    padding:20px 16px;
+  }
+
+  .dailyGuideTitle{
+    font-size:21px;
+  }
+}

@@ -401,6 +401,260 @@ thead th{
   text-decoration:underline;
 }
 
+/* 大学別カレンダー検索 */
+
+.calendarSearchSection{
+  margin-top:34px;
+  padding:22px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+  border:1px solid rgba(29,78,216,.14);
+}
+
+.calendarModeBlock{
+  margin-top:24px;
+}
+
+.calendarModeRow{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.modeBtn{
+  appearance:none;
+  border:1px solid rgba(29,78,216,.18);
+  background:#eaf0ff;
+  color:#173a8f;
+  padding:13px 18px;
+  border-radius:14px;
+  font-weight:950;
+  cursor:pointer;
+  transition:.15s transform ease, .15s background ease, .15s box-shadow ease;
+}
+
+.modeBtn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 20px rgba(29,78,216,.08);
+}
+
+.modeBtn.active{
+  background:linear-gradient(180deg,#2563eb 0%,#1d4ed8 100%);
+  color:#fff;
+  border-color:rgba(29,78,216,.55);
+  box-shadow:0 10px 24px rgba(29,78,216,.16);
+}
+
+.universitySelector{
+  margin-top:28px;
+}
+
+.universityButtons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:12px;
+}
+
+.uniBtn{
+  appearance:none;
+  border:1px solid rgba(229,231,235,.9);
+  background:#ffffff;
+  color:#111827;
+  padding:12px 16px;
+  border-radius:14px;
+  font-weight:950;
+  cursor:pointer;
+  transition:.15s transform ease, .15s background ease, .15s border ease, .15s box-shadow ease;
+}
+
+.uniBtn:hover{
+  transform:translateY(-1px);
+  background:#f8fafc;
+  border-color:rgba(29,78,216,.25);
+  box-shadow:0 10px 20px rgba(17,24,39,.06);
+}
+
+.uniBtn.isSelected{
+  background:#eff6ff;
+  color:#173a8f;
+  border-color:rgba(29,78,216,.25);
+}
+
+.selectedUniversitiesWrap{
+  margin-top:28px;
+}
+
+#selectedUniversities{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+  min-height:42px;
+}
+
+.selectedTag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#dbeafe;
+  color:#173a8f;
+  font-weight:950;
+  border:1px solid rgba(29,78,216,.15);
+}
+
+.removeTag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
+  border-radius:999px;
+  background:#ffffff;
+  color:#173a8f;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:950;
+  line-height:1;
+}
+
+#calendarResult{
+  margin-top:30px;
+}
+
+.emptyCalendarMessage{
+  margin-top:12px;
+  padding:18px;
+  border-radius:16px;
+  background:#f8fafc;
+  border:1px dashed rgba(148,163,184,.8);
+  color:#64748b;
+  font-weight:900;
+}
+
+.calendarCards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+.calendarCard{
+  padding:18px;
+  border-radius:18px;
+  background:#ffffff;
+  border:1px solid rgba(229,231,235,.95);
+  box-shadow:0 10px 24px rgba(17,24,39,.05);
+}
+
+.calendarCardHeader{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.calendarUniversity{
+  margin:0;
+  color:#0f2a5a;
+  font-size:20px;
+  line-height:1.4;
+  font-weight:950;
+}
+
+.calendarBadge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:fit-content;
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:950;
+  background:#eef2ff;
+  color:#3730a3;
+  border:1px solid rgba(99,102,241,.18);
+}
+
+.calendarEventList{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.calendarEvent{
+  padding:14px;
+  border-radius:16px;
+  background:#f8fafc;
+  border:1px solid rgba(229,231,235,.95);
+}
+
+.calendarEventTitle{
+  margin:0;
+  color:#0f2a5a;
+  font-size:16px;
+  font-weight:950;
+  line-height:1.45;
+}
+
+.calendarEventDate{
+  margin-top:6px;
+  color:#1d4ed8;
+  font-size:14px;
+  font-weight:950;
+  line-height:1.6;
+}
+
+.calendarEventNote{
+  margin-top:6px;
+  color:#475569;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.75;
+}
+
+.calendarTimeline{
+  margin-top:10px;
+  height:14px;
+  border-radius:999px;
+  background:#e5e7eb;
+  overflow:hidden;
+  position:relative;
+}
+
+.calendarTimelineBar{
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#2563eb,#60a5fa);
+}
+
+.calendarSource{
+  margin-top:12px;
+  color:#64748b;
+  font-size:13px;
+  font-weight:850;
+  line-height:1.7;
+}
+
+.calendarNotice{
+  margin-top:18px;
+  padding:14px;
+  border-radius:16px;
+  background:#fffbeb;
+  border:1px solid rgba(245,158,11,.24);
+}
+
+.calendarNotice p{
+  color:#92400e;
+  font-size:14px;
+  line-height:1.75;
+  font-weight:850;
+}
+
 @media (min-width: 1200px){
   :root{ --max:1320px; }
 }
@@ -464,5 +718,18 @@ thead th{
 
   .topBarInner{
     gap:8px;
+  }
+
+  .calendarSearchSection{
+    padding:18px 14px;
+  }
+
+  .modeBtn,
+  .uniBtn{
+    width:100%;
+  }
+
+  .calendarCard{
+    padding:16px;
   }
 }

@@ -1,234 +1,255 @@
-const universityCalendarData = {
-  ELTE: {
-    name: "ELTE",
-    color: "#2563eb",
-    events: [
-      {
-        title: "ELTE 長期休暇",
-        category: "break",
-        start: "2026-04-01",
-        end: "2026-04-08"
-      },
-      {
-        title: "ELTE テスト期間",
-        category: "exam",
-        start: "2026-05-18",
-        end: "2026-07-04"
-      }
-    ]
-  },
+(() => {
+  "use strict";
 
-  BGE: {
-    name: "BGE",
-    color: "#16a34a",
-    events: [
-      {
-        title: "BGE 長期休暇",
-        category: "break",
-        start: "2026-04-02",
-        end: "2026-04-09"
-      }
-    ]
-  },
+  const DATA_URL = "guides.json";
 
-  BME: {
-    name: "BME",
-    color: "#dc2626",
-    events: [
-      {
-        title: "BME 長期休暇",
-        category: "break",
-        start: "2026-04-02",
-        end: "2026-04-08"
-      }
-    ]
-  },
+  const CATEGORY_ORDER = [
+    "費用",
+    "奨学金",
+    "大学",
+    "出願準備",
+    "生活情報",
+    "体験談",
+    "コラム"
+  ];
 
-  Corvinus: {
-    name: "Corvinus",
-    color: "#7c3aed",
-    events: []
-  },
+  const state = {
+    articles: [],
+    currentCategory: "すべて"
+  };
 
-  Debrecen: {
-    name: "Debrecen",
-    color: "#ea580c",
-    events: []
-  },
+  const els = {
+    featuredGrid: document.getElementById("featuredGrid"),
+    featuredEmpty: document.getElementById("featuredEmpty"),
+    categoryRow: document.getElementById("categoryRow"),
+    newGrid: document.getElementById("newGrid"),
+    newEmpty: document.getElementById("newEmpty"),
+    allGrid: document.getElementById("allGrid"),
+    allEmpty: document.getElementById("allEmpty"),
+    currentCategoryLabel: document.getElementById("currentCategoryLabel")
+  };
 
-  Szeged: {
-    name: "Szeged",
-    color: "#0891b2",
-    events: [
-      {
-        title: "Szeged 長期休暇",
-        category: "break",
-        start: "2026-04-02",
-        end: "2026-04-08"
-      }
-    ]
-  },
-
-  Pecs: {
-    name: "Pécs",
-    color: "#be123c",
-    events: []
-  },
-
-  Szechenyi: {
-    name: "Széchenyi",
-    color: "#4f46e5",
-    events: []
-  },
-
-  IBS: {
-    name: "IBS",
-    color: "#0f766e",
-    events: []
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
-};
 
-const selectedUniversities = [];
-let currentMode = "break";
-let calendar;
+  function isValidDateString(value) {
+    return /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const calendarElement = document.getElementById("calendar");
-
-  calendar = new FullCalendar.Calendar(calendarElement, {
-    initialView: "dayGridMonth",
-    initialDate: "2026-04-01",
-    locale: "ja",
-    height: "auto",
-    events: []
-  });
-
-  calendar.render();
-
-  setupModeButtons();
-  setupUniversityButtons();
-  renderSelectedUniversities();
-  renderCalendarEvents();
-});
-
-function setupModeButtons() {
-  const modeButtons = document.querySelectorAll(".modeBtn");
-
-  modeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      modeButtons.forEach((modeButton) => {
-        modeButton.classList.remove("active");
-      });
-
-      button.classList.add("active");
-      currentMode = button.dataset.mode;
-
-      renderCalendarEvents();
+  function sortByDateDesc(items) {
+    return [...items].sort((a, b) => {
+      const da = isValidDateString(a.date) ? new Date(a.date).getTime() : 0;
+      const db = isValidDateString(b.date) ? new Date(b.date).getTime() : 0;
+      return db - da;
     });
-  });
-}
+  }
 
-function setupUniversityButtons() {
-  const universityButtons = document.querySelectorAll(".uniBtn");
+  function normalizeArticle(raw) {
+    return {
+      id: String(raw.id || "").trim(),
+      enabled: Boolean(raw.enabled),
+      featured: Boolean(raw.featured),
+      title: String(raw.title || "").trim(),
+      description: String(raw.description || "").trim(),
+      category: String(raw.category || "").trim(),
+      url: String(raw.url || "").trim(),
+      date: String(raw.date || "").trim()
+    };
+  }
 
-  universityButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const university = button.dataset.university;
+  function articleIsUsable(article) {
+    return (
+      article.enabled &&
+      article.id &&
+      article.title &&
+      article.description &&
+      article.category &&
+      article.url
+    );
+  }
 
-      if (!universityCalendarData[university]) {
-        return;
-      }
+  function createFeaturedCard(article) {
+    return `
+      <article class="featuredCard card">
+        <div class="featuredBody">
+          <span class="chip">${escapeHtml(article.category)}</span>
+          <h3 class="featuredTitle">
+            <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
+          </h3>
+          <p class="featuredDesc">${escapeHtml(article.description)}</p>
+          <div class="cardMeta">
+            <span>公開日：${escapeHtml(article.date || "未設定")}</span>
+          </div>
+          <div class="cardActions">
+            <a class="btn primary" href="${escapeHtml(article.url)}">記事を読む</a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
 
-      if (selectedUniversities.includes(university)) {
-        return;
-      }
+  function createArticleCard(article) {
+    return `
+      <article class="articleCard card">
+        <div class="articleBody">
+          <span class="chip">${escapeHtml(article.category)}</span>
+          <h3 class="articleTitle">
+            <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
+          </h3>
+          <p class="articleDesc">${escapeHtml(article.description)}</p>
+          <div class="cardMeta">
+            <span>公開日：${escapeHtml(article.date || "未設定")}</span>
+          </div>
+          <div class="cardActions">
+            <a class="btn" href="${escapeHtml(article.url)}">記事を読む</a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
 
-      selectedUniversities.push(university);
+  function renderFeatured() {
+    const featuredArticles = sortByDateDesc(
+      state.articles.filter((article) => article.featured)
+    ).slice(0, 2);
 
-      updateUniversityButtons();
-      renderSelectedUniversities();
-      renderCalendarEvents();
-    });
-  });
-}
-
-function updateUniversityButtons() {
-  const universityButtons = document.querySelectorAll(".uniBtn");
-
-  universityButtons.forEach((button) => {
-    const university = button.dataset.university;
-
-    if (selectedUniversities.includes(university)) {
-      button.classList.add("isSelected");
-      button.textContent = `${universityCalendarData[university].name} 選択中`;
-    } else {
-      button.classList.remove("isSelected");
-      button.textContent = `${universityCalendarData[university].name} ＋`;
+    if (featuredArticles.length === 0) {
+      els.featuredGrid.innerHTML = "";
+      els.featuredEmpty.classList.remove("isHidden");
+      return;
     }
-  });
-}
 
-function renderSelectedUniversities() {
-  const selectedElement = document.getElementById("selectedUniversities");
+    els.featuredGrid.innerHTML = featuredArticles.map(createFeaturedCard).join("");
+    els.featuredEmpty.classList.add("isHidden");
+  }
 
-  selectedElement.innerHTML = "";
+  function collectCategories() {
+    const dataCategories = Array.from(
+      new Set(state.articles.map((article) => article.category))
+    );
 
-  if (selectedUniversities.length === 0) {
-    selectedElement.innerHTML = `
-      <div class="emptyCalendarMessage">
-        まだ大学が選択されていません。
+    const sortedKnown = CATEGORY_ORDER.filter((cat) => dataCategories.includes(cat));
+    const sortedUnknown = dataCategories
+      .filter((cat) => !CATEGORY_ORDER.includes(cat))
+      .sort((a, b) => a.localeCompare(b, "ja"));
+
+    return ["すべて", ...sortedKnown, ...sortedUnknown];
+  }
+
+  function renderCategories() {
+    const categories = collectCategories();
+
+    els.categoryRow.innerHTML = categories.map((category) => {
+      const activeClass = category === state.currentCategory ? " active" : "";
+      const categoryAttr = escapeHtml(category);
+      return `
+        <button type="button" class="categoryChip${activeClass}" data-category="${categoryAttr}">
+          ${categoryAttr}
+        </button>
+      `;
+    }).join("");
+
+    els.categoryRow.querySelectorAll("[data-category]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const nextCategory = button.getAttribute("data-category") || "すべて";
+        state.currentCategory = nextCategory;
+        renderCategories();
+        renderAllArticles();
+      });
+    });
+  }
+
+  function renderNewArticles() {
+    const newest = sortByDateDesc(state.articles).slice(0, 3);
+
+    if (newest.length === 0) {
+      els.newGrid.innerHTML = "";
+      els.newEmpty.classList.remove("isHidden");
+      return;
+    }
+
+    els.newGrid.innerHTML = newest.map(createArticleCard).join("");
+    els.newEmpty.classList.add("isHidden");
+  }
+
+  function getFilteredArticles() {
+    if (state.currentCategory === "すべて") {
+      return sortByDateDesc(state.articles);
+    }
+
+    return sortByDateDesc(
+      state.articles.filter((article) => article.category === state.currentCategory)
+    );
+  }
+
+  function renderAllArticles() {
+    const filtered = getFilteredArticles();
+
+    els.currentCategoryLabel.textContent = `表示中：${state.currentCategory}`;
+
+    if (filtered.length === 0) {
+      els.allGrid.innerHTML = "";
+      els.allEmpty.classList.remove("isHidden");
+      return;
+    }
+
+    els.allGrid.innerHTML = filtered.map(createArticleCard).join("");
+    els.allEmpty.classList.add("isHidden");
+  }
+
+  async function loadArticles() {
+    const response = await fetch(DATA_URL, { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error(`guides.json の読み込みに失敗しました: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      throw new Error("guides.json の形式が正しくありません。配列である必要があります。");
+    }
+
+    state.articles = data
+      .map(normalizeArticle)
+      .filter(articleIsUsable);
+  }
+
+  function renderError(message) {
+    const errorHtml = `
+      <div class="emptyBox card">
+        <p>${escapeHtml(message)}</p>
       </div>
     `;
-    return;
+
+    els.featuredGrid.innerHTML = errorHtml;
+    els.newGrid.innerHTML = errorHtml;
+    els.allGrid.innerHTML = errorHtml;
+    els.categoryRow.innerHTML = "";
+    els.featuredEmpty.classList.add("isHidden");
+    els.newEmpty.classList.add("isHidden");
+    els.allEmpty.classList.add("isHidden");
+    els.currentCategoryLabel.textContent = "表示中：読み込み失敗";
   }
 
-  selectedUniversities.forEach((university) => {
-    const universityData = universityCalendarData[university];
+  async function init() {
+    try {
+      await loadArticles();
+      renderFeatured();
+      renderCategories();
+      renderNewArticles();
+      renderAllArticles();
+    } catch (error) {
+      console.error(error);
+      renderError("Guide記事データの読み込みに失敗しました。guides.json を確認してください。");
+    }
+  }
 
-    const tag = document.createElement("div");
-    tag.className = "selectedTag";
-
-    tag.innerHTML = `
-      <span>${universityData.name}</span>
-      <span class="removeTag" data-university="${university}">×</span>
-    `;
-
-    selectedElement.appendChild(tag);
-  });
-
-  const removeButtons = document.querySelectorAll(".removeTag");
-
-  removeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const university = button.dataset.university;
-      const index = selectedUniversities.indexOf(university);
-
-      if (index > -1) {
-        selectedUniversities.splice(index, 1);
-      }
-
-      updateUniversityButtons();
-      renderSelectedUniversities();
-      renderCalendarEvents();
-    });
-  });
-}
-
-function renderCalendarEvents() {
-  calendar.removeAllEvents();
-
-  selectedUniversities.forEach((university) => {
-    const universityData = universityCalendarData[university];
-
-    universityData.events
-      .filter((event) => event.category === currentMode)
-      .forEach((event) => {
-        calendar.addEvent({
-          title: event.title,
-          start: event.start,
-          end: event.end,
-          color: universityData.color
-        });
-      });
-  });
-}
+  init();
+})();

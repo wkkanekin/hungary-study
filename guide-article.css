@@ -733,3 +733,227 @@ thead th{
     padding:16px;
   }
 }
+
+/* =========================
+   Year Calendar Period Bars
+========================= */
+
+.yearCalendarWrap{
+  margin-top:24px;
+}
+
+.yearCalendarHead{
+  margin-bottom:18px;
+  text-align:left;
+}
+
+.yearCalendarTitle{
+  margin:0;
+  color:#0f2a5a;
+  font-size:26px;
+  line-height:1.4;
+  font-weight:950;
+}
+
+.yearCalendarDesc{
+  margin:8px 0 0;
+  color:#475569;
+  font-size:15px;
+  font-weight:850;
+  line-height:1.75;
+}
+
+.calendarSummary{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:18px 0;
+}
+
+.calendarSummaryItem{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:12px 14px;
+  border-radius:16px;
+  background:#ffffff;
+  border:1px solid rgba(229,231,235,.95);
+  box-shadow:0 8px 18px rgba(17,24,39,.04);
+}
+
+.calendarSummaryDot{
+  width:12px;
+  height:12px;
+  border-radius:999px;
+  background:var(--event-color);
+  flex:0 0 auto;
+  margin-top:6px;
+}
+
+.calendarSummaryItem strong{
+  display:block;
+  color:#0f2a5a;
+  font-size:14px;
+  font-weight:950;
+  line-height:1.5;
+}
+
+.calendarSummaryItem span{
+  display:block;
+  margin-top:2px;
+  color:#475569;
+  font-size:13px;
+  font-weight:850;
+  line-height:1.6;
+}
+
+.yearCalendarGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:18px;
+}
+
+.monthCalendar{
+  min-width:0;
+  overflow:hidden;
+  border-radius:18px;
+  background:#ffffff;
+  border:1px solid rgba(29,78,216,.18);
+  box-shadow:0 10px 24px rgba(17,24,39,.05);
+}
+
+.monthTitle{
+  margin:0;
+  padding:10px 12px;
+  text-align:center;
+  background:#e5e7eb;
+  color:#4f6fc9;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:950;
+}
+
+.monthWeekHeader{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  background:#d9d9d9;
+  border-bottom:1px solid rgba(148,163,184,.45);
+}
+
+.monthWeekHeader div{
+  padding:6px 2px;
+  text-align:center;
+  color:#111827;
+  font-size:14px;
+  font-weight:950;
+}
+
+.monthWeeks{
+  background:#f8fafc;
+}
+
+.calendarWeek{
+  border-bottom:1px solid rgba(226,232,240,.9);
+}
+
+.calendarWeek:last-child{
+  border-bottom:none;
+}
+
+.calendarDaysRow{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+}
+
+.calendarDay{
+  min-height:34px;
+  padding:6px 2px 3px;
+  text-align:center;
+  background:#ffffff;
+  color:#111827;
+  font-size:15px;
+  line-height:1.2;
+  font-weight:900;
+  border-right:1px solid rgba(226,232,240,.75);
+}
+
+.calendarDay:last-child{
+  border-right:none;
+}
+
+.calendarDay.weekend{
+  color:#dc2626;
+}
+
+.calendarDay.otherMonth{
+  color:#9ca3af;
+  background:#f8fafc;
+}
+
+.calendarBarsRow{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  min-height:24px;
+  padding:2px 3px 5px;
+  background:#ffffff;
+  gap:2px;
+}
+
+.periodBar{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:20px;
+  padding:0 8px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--event-color),rgba(96,165,250,.88));
+  color:#ffffff;
+  font-size:11px;
+  line-height:1;
+  font-weight:950;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  box-shadow:0 5px 12px rgba(37,99,235,.18);
+}
+
+.periodBar span{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.emptyBarSpace{
+  grid-column:1 / -1;
+  min-height:18px;
+}
+
+@media (max-width:1100px){
+  .yearCalendarGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .calendarSummary{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:720px){
+  .yearCalendarGrid{
+    grid-template-columns:1fr;
+  }
+
+  .monthTitle{
+    font-size:20px;
+  }
+
+  .calendarDay{
+    font-size:14px;
+  }
+
+  .periodBar{
+    font-size:10px;
+  }
+}

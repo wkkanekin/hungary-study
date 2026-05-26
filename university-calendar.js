@@ -2,24 +2,21 @@ const universityCalendarData = {
   ELTE: {
     name: "ELTE",
     fullName: "Eötvös Loránd University",
-    breakEvents: [
+    color: "#2563eb",
+    events: [
       {
-        title: "長期休暇",
+        title: "ELTE 長期休暇",
+        category: "break",
         start: "2026-04-01",
-        end: "2026-04-07",
-        dateText: "2026年4月1日〜2026年4月7日",
-        note: "ここにELTEの長期休暇情報を入れます。現役生情報や公式カレンダー確認後に更新してください。",
-        progress: 38
-      }
-    ],
-    examEvents: [
+        end: "2026-04-08",
+        note: "ELTEの長期休暇期間です。学部により異なる場合があります。"
+      },
       {
-        title: "テスト期間",
+        title: "ELTE テスト期間",
+        category: "exam",
         start: "2026-05-18",
         end: "2026-07-03",
-        dateText: "2026年5月18日〜2026年7月3日",
-        note: "ここにELTEの試験期間・再試験期間情報を入れます。学部により異なる場合があります。",
-        progress: 72
+        note: "ここにELTEの試験期間・再試験期間情報を入れます。学部により異なる場合があります。"
       }
     ]
   },
@@ -27,24 +24,21 @@ const universityCalendarData = {
   BGE: {
     name: "BGE",
     fullName: "Budapest University of Economics and Business",
-    breakEvents: [
+    color: "#16a34a",
+    events: [
       {
-        title: "長期休暇",
+        title: "BGE 長期休暇",
+        category: "break",
+        start: "2026-04-02",
+        end: "2026-04-09",
+        note: "BGEの長期休暇期間です。"
+      },
+      {
+        title: "BGE テスト期間",
+        category: "exam",
         start: "",
         end: "",
-        dateText: "確認中",
-        note: "BGE在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "BGEの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
+        note: "BGEの試験期間・再試験期間を確認後に入力します。"
       }
     ]
   },
@@ -52,24 +46,14 @@ const universityCalendarData = {
   BME: {
     name: "BME",
     fullName: "Budapest University of Technology and Economics",
-    breakEvents: [
+    color: "#dc2626",
+    events: [
       {
-        title: "長期休暇",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "BME在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "BMEは学部や科目によって試験負担が異なるため、現役生情報も確認予定です。",
-        progress: 20
+        title: "BME 長期休暇",
+        category: "break",
+        start: "2026-04-02",
+        end: "2026-04-08",
+        note: "BMEの長期休暇期間です。"
       }
     ]
   },
@@ -77,74 +61,28 @@ const universityCalendarData = {
   Corvinus: {
     name: "Corvinus",
     fullName: "Corvinus University of Budapest",
-    breakEvents: [
-      {
-        title: "長期休暇",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "Corvinus在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "Corvinusの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
-      }
-    ]
+    color: "#7c3aed",
+    events: []
   },
 
   Debrecen: {
     name: "Debrecen",
     fullName: "University of Debrecen",
-    breakEvents: [
-      {
-        title: "長期休暇",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "University of Debrecen在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "University of Debrecenの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
-      }
-    ]
+    color: "#ea580c",
+    events: []
   },
 
   Szeged: {
     name: "Szeged",
     fullName: "University of Szeged",
-    breakEvents: [
+    color: "#0891b2",
+    events: [
       {
-        title: "長期休暇",
+        title: "Szeged 長期休暇",
+        category: "break",
         start: "2026-04-02",
-        end: "2026-04-07",
-        dateText: "2026年4月2日〜2026年4月7日",
-        note: "ここにUniversity of Szegedの長期休暇情報を入れます。年度や学部により異なる場合があります。",
-        progress: 34
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "University of Szegedの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
+        end: "2026-04-08",
+        note: "Szegedの長期休暇期間です。"
       }
     ]
   },
@@ -152,127 +90,104 @@ const universityCalendarData = {
   Pecs: {
     name: "Pécs",
     fullName: "University of Pécs",
-    breakEvents: [
-      {
-        title: "長期休暇",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "University of Pécs在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "University of Pécsの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
-      }
-    ]
+    color: "#be123c",
+    events: []
   },
 
   Szechenyi: {
     name: "Széchenyi",
     fullName: "Széchenyi István University",
-    breakEvents: [
-      {
-        title: "長期休暇",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "Széchenyi István University在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "Széchenyi István Universityの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
-      }
-    ]
+    color: "#4f46e5",
+    events: []
   },
 
   IBS: {
     name: "IBS",
-    fullName: "International Business School, Budapest",
-    breakEvents: [
-      {
-        title: "長期休暇",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "IBS在籍学生または公式カレンダーから長期休暇情報を確認後に入力します。",
-        progress: 20
-      }
-    ],
-    examEvents: [
-      {
-        title: "テスト期間",
-        start: "",
-        end: "",
-        dateText: "確認中",
-        note: "IBSの試験期間・再試験期間を確認後に入力します。",
-        progress: 20
-      }
-    ]
+    fullName: "International Business School",
+    color: "#0f766e",
+    events: []
   }
 };
 
 const selectedUniversities = [];
-
 let currentMode = "break";
 
-const selectedUniversitiesElement = document.getElementById("selectedUniversities");
-const calendarResultElement = document.getElementById("calendarResult");
-const modeButtons = document.querySelectorAll(".modeBtn");
-const universityButtons = document.querySelectorAll(".uniBtn");
+const monthNames = [
+  "1月", "2月", "3月", "4月", "5月", "6月",
+  "7月", "8月", "9月", "10月", "11月", "12月"
+];
 
-modeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    modeButtons.forEach((modeButton) => {
-      modeButton.classList.remove("active");
-    });
+const weekDays = ["月", "火", "水", "木", "金", "土", "日"];
 
-    button.classList.add("active");
-
-    currentMode = button.dataset.mode;
-
-    renderCalendar();
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  setupModeButtons();
+  setupUniversityButtons();
+  renderSelectedUniversities();
+  renderYearCalendar();
 });
 
-universityButtons.forEach((button) => {
-  button.addEventListener("click", () => {
+function setupModeButtons() {
+  const modeButtons = document.querySelectorAll(".modeBtn");
+
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modeButtons.forEach((modeButton) => {
+        modeButton.classList.remove("active");
+      });
+
+      button.classList.add("active");
+      currentMode = button.dataset.mode || "break";
+
+      renderYearCalendar();
+    });
+  });
+}
+
+function setupUniversityButtons() {
+  const universityButtons = document.querySelectorAll(".uniBtn");
+
+  universityButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const university = button.dataset.university;
+
+      if (!universityCalendarData[university]) return;
+      if (selectedUniversities.includes(university)) return;
+
+      selectedUniversities.push(university);
+
+      updateUniversityButtons();
+      renderSelectedUniversities();
+      renderYearCalendar();
+    });
+  });
+}
+
+function updateUniversityButtons() {
+  const universityButtons = document.querySelectorAll(".uniBtn");
+
+  universityButtons.forEach((button) => {
     const university = button.dataset.university;
 
-    if (!universityCalendarData[university]) {
-      return;
-    }
+    if (!universityCalendarData[university]) return;
 
     if (selectedUniversities.includes(university)) {
-      return;
+      button.classList.add("isSelected");
+      button.textContent = `${universityCalendarData[university].name} 選択中`;
+    } else {
+      button.classList.remove("isSelected");
+      button.textContent = `${universityCalendarData[university].name} ＋`;
     }
-
-    selectedUniversities.push(university);
-
-    renderSelectedUniversities();
-    updateUniversityButtonState();
-    renderCalendar();
   });
-});
+}
 
 function renderSelectedUniversities() {
-  selectedUniversitiesElement.innerHTML = "";
+  const selectedElement = document.getElementById("selectedUniversities");
+  if (!selectedElement) return;
+
+  selectedElement.innerHTML = "";
 
   if (selectedUniversities.length === 0) {
-    selectedUniversitiesElement.innerHTML = `
+    selectedElement.innerHTML = `
       <div class="emptyCalendarMessage">
         まだ大学が選択されていません。
       </div>
@@ -287,20 +202,14 @@ function renderSelectedUniversities() {
     tag.className = "selectedTag";
 
     tag.innerHTML = `
-      <span>${universityData.name}</span>
-      <span class="removeTag" data-university="${university}" aria-label="${universityData.name}を削除">×</span>
+      <span>${escapeHtml(universityData.name)}</span>
+      <span class="removeTag" data-university="${escapeHtml(university)}">×</span>
     `;
 
-    selectedUniversitiesElement.appendChild(tag);
+    selectedElement.appendChild(tag);
   });
 
-  attachRemoveEvents();
-}
-
-function attachRemoveEvents() {
-  const removeButtons = document.querySelectorAll(".removeTag");
-
-  removeButtons.forEach((button) => {
+  selectedElement.querySelectorAll(".removeTag").forEach((button) => {
     button.addEventListener("click", () => {
       const university = button.dataset.university;
       const index = selectedUniversities.indexOf(university);
@@ -309,94 +218,266 @@ function attachRemoveEvents() {
         selectedUniversities.splice(index, 1);
       }
 
+      updateUniversityButtons();
       renderSelectedUniversities();
-      updateUniversityButtonState();
-      renderCalendar();
+      renderYearCalendar();
     });
   });
 }
 
-function updateUniversityButtonState() {
-  universityButtons.forEach((button) => {
-    const university = button.dataset.university;
+function renderYearCalendar() {
+  const calendarElement = document.getElementById("calendar");
+  if (!calendarElement) return;
 
-    if (selectedUniversities.includes(university)) {
-      button.classList.add("isSelected");
-      button.textContent = `${universityCalendarData[university].name} 選択中`;
-    } else {
-      button.classList.remove("isSelected");
-      button.textContent = `${universityCalendarData[university].name} ＋`;
-    }
-  });
+  const selectedEvents = getSelectedEvents();
+
+  calendarElement.innerHTML = `
+    <div class="yearCalendarWrap">
+      <div class="yearCalendarHead">
+        <h3 class="yearCalendarTitle">2026年カレンダー</h3>
+        <p class="yearCalendarDesc">
+          選択した大学の${currentMode === "exam" ? "テスト期間" : "長期休暇"}を、カレンダー上に期間バーで表示します。
+        </p>
+      </div>
+
+      ${
+        selectedUniversities.length === 0
+          ? `
+            <div class="emptyCalendarMessage">
+              大学を選択すると、ここに年間カレンダーが表示されます。
+            </div>
+          `
+          : ""
+      }
+
+      ${
+        selectedUniversities.length > 0 && selectedEvents.length === 0
+          ? `
+            <div class="emptyCalendarMessage">
+              選択中の大学には、この項目の期間データがまだありません。
+            </div>
+          `
+          : ""
+      }
+
+      ${renderEventSummary(selectedEvents)}
+
+      <div class="yearCalendarGrid">
+        ${monthNames.map((monthName, index) => {
+          return renderMonthCalendar(2026, index + 1, monthName, selectedEvents);
+        }).join("")}
+      </div>
+    </div>
+  `;
 }
 
-function renderCalendar() {
-  if (selectedUniversities.length === 0) {
-    calendarResultElement.innerHTML = `
-      <div class="emptyCalendarMessage">
-        大学を選択すると、ここに結果が表示されます。
+function getSelectedEvents() {
+  const events = [];
+
+  selectedUniversities.forEach((universityKey) => {
+    const universityData = universityCalendarData[universityKey];
+    if (!universityData) return;
+
+    universityData.events
+      .filter((event) => event.category === currentMode)
+      .forEach((event) => {
+        if (!event.start || !event.end) return;
+
+        events.push({
+          ...event,
+          universityKey,
+          universityName: universityData.name,
+          universityFullName: universityData.fullName,
+          color: universityData.color
+        });
+      });
+  });
+
+  return events;
+}
+
+function renderEventSummary(events) {
+  if (!events.length) return "";
+
+  return `
+    <div class="calendarSummary">
+      ${events.map((event) => {
+        return `
+          <div class="calendarSummaryItem" style="--event-color:${escapeHtml(event.color)}">
+            <span class="calendarSummaryDot"></span>
+            <div>
+              <strong>${escapeHtml(event.title)}</strong>
+              <span>${formatJapaneseDate(event.start)} 〜 ${formatJapaneseDate(event.end)}</span>
+            </div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderMonthCalendar(year, month, monthName, events) {
+  const weeks = buildMonthWeeks(year, month);
+
+  return `
+    <section class="monthCalendar">
+      <h4 class="monthTitle">${escapeHtml(monthName)}</h4>
+
+      <div class="monthWeekHeader">
+        ${weekDays.map((day) => `<div>${escapeHtml(day)}</div>`).join("")}
       </div>
-    `;
-    return;
+
+      <div class="monthWeeks">
+        ${weeks.map((week) => renderWeekRow(week, events)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderWeekRow(week, events) {
+  const weekStart = week[0].date;
+  const weekEnd = week[6].date;
+
+  const segments = [];
+
+  events.forEach((event, eventIndex) => {
+    const eventStart = parseDate(event.start);
+    const eventEnd = parseDate(event.end);
+
+    if (eventEnd < weekStart || eventStart > weekEnd) return;
+
+    const segmentStart = eventStart > weekStart ? eventStart : weekStart;
+    const segmentEnd = eventEnd < weekEnd ? eventEnd : weekEnd;
+
+    const startColumn = getMondayBasedColumn(segmentStart);
+    const endColumn = getMondayBasedColumn(segmentEnd);
+
+    const isRealStart = isSameDate(segmentStart, eventStart);
+    const isRealEnd = isSameDate(segmentEnd, eventEnd);
+
+    const label = `${isRealStart ? "← " : ""}${event.title}${isRealEnd ? " →" : " →"}`;
+
+    segments.push({
+      event,
+      eventIndex,
+      startColumn,
+      endColumn,
+      label
+    });
+  });
+
+  return `
+    <div class="calendarWeek">
+      <div class="calendarDaysRow">
+        ${week.map((day) => {
+          const isCurrentMonth = day.isCurrentMonth ? "" : " otherMonth";
+          const isWeekend = day.isWeekend ? " weekend" : "";
+
+          return `
+            <div class="calendarDay${isCurrentMonth}${isWeekend}">
+              <span>${day.date.getDate()}</span>
+            </div>
+          `;
+        }).join("")}
+      </div>
+
+      <div class="calendarBarsRow">
+        ${
+          segments.length
+            ? segments.map((segment) => {
+                return `
+                  <div
+                    class="periodBar"
+                    style="
+                      grid-column:${segment.startColumn} / ${segment.endColumn + 1};
+                      --event-color:${escapeHtml(segment.event.color)};
+                    "
+                    title="${escapeHtml(segment.event.title)}：${formatJapaneseDate(segment.event.start)}〜${formatJapaneseDate(segment.event.end)}"
+                  >
+                    <span>${escapeHtml(segment.label)}</span>
+                  </div>
+                `;
+              }).join("")
+            : `<div class="emptyBarSpace"></div>`
+        }
+      </div>
+    </div>
+  `;
+}
+
+function buildMonthWeeks(year, month) {
+  const firstDate = new Date(year, month - 1, 1);
+  const lastDate = new Date(year, month, 0);
+
+  const firstMondayOffset = getMondayBasedColumn(firstDate) - 1;
+  const calendarStart = addDays(firstDate, -firstMondayOffset);
+
+  const weeks = [];
+  let current = new Date(calendarStart);
+
+  while (current <= lastDate || weeks.length < 6) {
+    const week = [];
+
+    for (let i = 0; i < 7; i++) {
+      const date = new Date(current);
+      const day = date.getDay();
+
+      week.push({
+        date,
+        isCurrentMonth: date.getMonth() === month - 1,
+        isWeekend: day === 0 || day === 6
+      });
+
+      current = addDays(current, 1);
+    }
+
+    weeks.push(week);
+
+    if (current > lastDate && weeks.length >= 5) {
+      break;
+    }
   }
 
-  const modeLabel = currentMode === "break" ? "長期休暇" : "テスト期間";
-  const eventKey = currentMode === "break" ? "breakEvents" : "examEvents";
-
-  let html = `
-    <div class="calendarCards">
-  `;
-
-  selectedUniversities.forEach((university) => {
-    const universityData = universityCalendarData[university];
-    const events = universityData[eventKey];
-
-    html += `
-      <div class="calendarCard">
-        <div class="calendarCardHeader">
-          <div>
-            <h3 class="calendarUniversity">${universityData.name}</h3>
-            <div class="calendarSource">${universityData.fullName}</div>
-          </div>
-          <span class="calendarBadge">${modeLabel}</span>
-        </div>
-
-        <div class="calendarEventList">
-    `;
-
-    events.forEach((event) => {
-      html += `
-        <div class="calendarEvent">
-          <h4 class="calendarEventTitle">${event.title}</h4>
-          <div class="calendarEventDate">${event.dateText}</div>
-          <div class="calendarTimeline">
-            <div class="calendarTimelineBar" style="width:${event.progress}%;"></div>
-          </div>
-          <div class="calendarEventNote">${event.note}</div>
-        </div>
-      `;
-    });
-
-    html += `
-        </div>
-      </div>
-    `;
-  });
-
-  html += `
-    </div>
-
-    <div class="calendarNotice">
-      <p>
-        ※大学・学部・年度によって日程が異なる場合があります。正式な日程は各大学の公式カレンダーを確認してください。
-        このページでは、公式情報と現役生情報をもとに随時更新していきます。
-      </p>
-    </div>
-  `;
-
-  calendarResultElement.innerHTML = html;
+  return weeks;
 }
 
-renderSelectedUniversities();
-updateUniversityButtonState();
-renderCalendar();
+function getMondayBasedColumn(date) {
+  const day = date.getDay();
+  return day === 0 ? 7 : day;
+}
+
+function parseDate(value) {
+  const [year, month, day] = String(value).split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
+function addDays(date, days) {
+  const next = new Date(date);
+  next.setDate(next.getDate() + days);
+  return next;
+}
+
+function isSameDate(a, b) {
+  return (
+    a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate()
+  );
+}
+
+function formatJapaneseDate(value) {
+  if (!value) return "確認中";
+
+  const date = parseDate(value);
+
+  return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}

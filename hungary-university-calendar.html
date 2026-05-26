@@ -22,8 +22,14 @@
   />
   <meta property="og:url" content="https://hungarystudy.org/hungary-university-calendar.html" />
 
-  <link rel="stylesheet" href="guide-article.css" />
-  <link id="dynamicFavicon" rel="icon" type="image/png" href="">
+ <link rel="stylesheet" href="guide-article.css" />
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+<link id="dynamicFavicon" rel="icon" type="image/png" href="">
+
 </head>
 
 <body>
@@ -145,7 +151,7 @@
                 <div id="selectedUniversities"></div>
               </div>
 
-              <div id="calendarResult"></div>
+              <div id="calendar"></div>
             </section>
 
             <section>
@@ -326,6 +332,6 @@
     </footer>
   </div>
 
-  <script src="university-calendar.js"></script>
+  <script src="university-calendar.js?v=20260526"></script>
 </body>
 </html>

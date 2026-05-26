@@ -957,3 +957,24 @@ thead th{
     font-size:10px;
   }
 }
+
+.calendarDay.holiday{
+  background:#fff1f2;
+  color:#dc2626;
+}
+
+.calendarDay.holiday span{
+  color:#dc2626;
+}
+
+.calendarDay small{
+  display:block;
+  margin-top:3px;
+  font-size:9px;
+  line-height:1.15;
+  font-weight:900;
+  color:#dc2626;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}

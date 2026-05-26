@@ -119,6 +119,20 @@ const monthNames = [
 
 const weekDays = ["月", "火", "水", "木", "金", "土", "日"];
 
+const hungaryPublicHolidays2026 = {
+  "2026-01-01": "元日",
+  "2026-03-15": "1848年革命記念日",
+  "2026-04-03": "聖金曜日",
+  "2026-04-06": "イースターマンデー",
+  "2026-05-01": "メーデー",
+  "2026-05-25": "聖霊降臨祭の月曜日",
+  "2026-08-20": "建国記念日",
+  "2026-10-23": "1956年革命記念日",
+  "2026-11-01": "諸聖人の日",
+  "2026-12-25": "クリスマス",
+  "2026-12-26": "クリスマス翌日"
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   setupModeButtons();
   setupUniversityButtons();
@@ -237,6 +251,7 @@ function renderYearCalendar() {
         <h3 class="yearCalendarTitle">2026年カレンダー</h3>
         <p class="yearCalendarDesc">
           選択した大学の${currentMode === "exam" ? "テスト期間" : "長期休暇"}を、カレンダー上に期間バーで表示します。
+          ハンガリーの祝日は赤背景で表示しています。
         </p>
       </div>
 
@@ -373,9 +388,17 @@ function renderWeekRow(week, events) {
           const isCurrentMonth = day.isCurrentMonth ? "" : " otherMonth";
           const isWeekend = day.isWeekend ? " weekend" : "";
 
+          const dateKey = formatDateKey(day.date);
+          const holidayName = hungaryPublicHolidays2026[dateKey] || "";
+          const isHoliday = holidayName ? " holiday" : "";
+
           return `
-            <div class="calendarDay${isCurrentMonth}${isWeekend}">
+            <div
+              class="calendarDay${isCurrentMonth}${isWeekend}${isHoliday}"
+              title="${escapeHtml(holidayName)}"
+            >
               <span>${day.date.getDate()}</span>
+              ${holidayName ? `<small>${escapeHtml(holidayName)}</small>` : ""}
             </div>
           `;
         }).join("")}
@@ -471,6 +494,14 @@ function formatJapaneseDate(value) {
   const date = parseDate(value);
 
   return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+}
+
+function formatDateKey(date) {
+  return [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, "0"),
+    String(date.getDate()).padStart(2, "0")
+  ].join("-");
 }
 
 function escapeHtml(value) {

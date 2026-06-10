@@ -2,7 +2,7 @@
 
 {
   "id": "university-pecs",
-  "enabled": true,
+  "enabled": false,
   "featured": true,
   "comingSoon": false,
   "title": "University of Pécs（ペーチ大学）",
@@ -14,7 +14,7 @@
 
 {
   "id": "university-szeged",
-  "enabled": true,
+  "enabled": false,
   "featured": true,
   "comingSoon": false,
   "title": "University of Szeged（セゲド大学）",
@@ -26,7 +26,7 @@
 {
   "id": "university-bme",
   "enabled": true,
-  "featured": true,
+  "featured": false,
   "comingSoon": false,
   "title": "Budapest University of Technology and Economics（BME）",
   "description": "Budapest University of Technology and Economics（BME）の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
@@ -37,7 +37,7 @@
 
 {
   "id": "university-ibs",
-  "enabled": true,
+  "enabled": false,
   "featured": true,
   "comingSoon": false,
   "title": "International Business School（IBS Budapest）",
@@ -51,7 +51,7 @@
  {
   "id": "university-szechenyi",
   "enabled": true,
-  "featured": true,
+  "featured": flase,
   "comingSoon": false,
   "title": "Széchenyi István University（セーチェーニ・イシュトヴァーン大学）",
   "description": "Széchenyi István Universityの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
@@ -62,7 +62,7 @@
 {
   "id": "university-elte",
   "enabled": true,
-  "featured": true,
+  "featured": false,
   "comingSoon": false,
   "title": "Eötvös Loránd University（ELTE）",
   "description": "ELTEの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
@@ -72,7 +72,7 @@
 },
 {
   "id": "university-corvinus",
-  "enabled": true,
+  "enabled": flase,
   "featured": true,
   "comingSoon": false,
   "title": "Corvinus University of Budapest（コルヴィヌス大学）",
@@ -83,7 +83,7 @@
 },
 {
   "id": "university-debrecen",
-  "enabled": true,
+  "enabled": flase,
   "featured": false,
   "title": "University of Debrecen（デブレツェン大学）",
   "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
@@ -146,7 +146,7 @@
   },
   {
     "id": "wise-hungary",
-    "enabled": true,
+    "enabled": flase,
     "featured": false,
     "title": "ハンガリー留学でWiseは必要？保護者・高校生向けにわかりやすく解説",
     "description": "ハンガリー留学でよく使われるWiseについて、送金、生活費、カード利用、ATMの注意点まで保護者や高校生にもわかりやすく整理しました。",
@@ -227,7 +227,7 @@
 },
 {
   "id": "hungary-university-calendar",
-  "enabled": true,
+  "enabled": flase,
   "featured": true,
   "comingSoon": false,
   "title": "ハンガリー大学の長期休暇・試験期間まとめ【2026年版】",
@@ -235,7 +235,15 @@
   "category": "大学",
   "url": "hungary-university-calendar.html",
   "date": "2026-05-26"
+},
+{
+  "id": "juminhyo-insurance",
+  "enabled": true,
+  "featured": true,
+  "title": "海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ",
+  "description": "海外大学進学時の住民票、健康保険、国民健康保険、国民年金、マイナンバーカードの手続きを高校生や保護者向けにわかりやすく解説します。",
+  "category": "生活情報",
+  "url": "guide-juminhyo-insurance.html",
+  "date": "2026-06-10"
 }
-
-
 ]

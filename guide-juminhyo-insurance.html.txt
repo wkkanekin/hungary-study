@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ | Guide | ハンガリー留学相談 Hungary Study</title>
+
+  <meta
+    name="description"
+    content="海外大学進学前に確認したい住民票、健康保険、国民健康保険、国民年金、マイナンバーカードの手続きを高校生・保護者向けにわかりやすく解説します。"
+  />
+
+  <link rel="canonical" href="https://hungarystudy.org/guide-health-insurance-study-abroad.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hungary Study" />
+  <meta property="og:title" content="海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ | Guide | ハンガリー留学相談 Hungary Study" />
+  <meta
+    property="og:description"
+    content="海外大学進学前に確認したい住民票、健康保険、国民健康保険、国民年金、マイナンバーカードの手続きをわかりやすく解説します。"
+  />
+  <meta property="og:url" content="https://hungarystudy.org/guide-health-insurance-study-abroad.html" />
+
+  <link rel="stylesheet" href="guide-article.css" />
+  <link id="dynamicFavicon" rel="icon" type="image/png" href="">
+
+  <style>
+    .pointBox{
+      margin-top:16px;
+      padding:18px;
+      border-radius:16px;
+      background:#eef6ff;
+      border:1px solid rgba(29,78,216,.2);
+    }
+
+    .pointBox ul{
+      margin:0;
+      padding-left:1.2em;
+    }
+
+    .pointBox li{
+      margin:10px 0;
+      font-weight:900;
+      line-height:1.8;
+    }
+
+    .flowChart{
+      margin-top:16px;
+      padding:18px;
+      border-radius:16px;
+      background:#f8fafc;
+      border:1px solid rgba(229,231,235,.9);
+      overflow-x:auto;
+    }
+
+    .flowChart pre{
+      margin:0;
+      font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size:14px;
+      line-height:1.8;
+      color:#1f2937;
+      white-space:pre;
+    }
+
+    .compareTable{
+      margin-top:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="topBar card">
+      <div class="topBarInner">
+        <a class="topLink" href="index.html">TOP</a>
+        <span class="topSep">/</span>
+        <a class="topLink" href="guide.html">Guide</a>
+        <span class="topSep">/</span>
+        <span class="topCurrent">住民票・健康保険</span>
+      </div>
+    </header>
+
+    <article class="articleShell">
+      <header class="articleHero card">
+        <div class="articleHeroInner">
+          <div class="articleMetaTop">
+            <span class="chip">生活情報</span>
+            <span class="metaDot">•</span>
+            <time datetime="2026-06-10">2026-06-10</time>
+          </div>
+
+          <h1 class="articleTitle">
+            海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ
+          </h1>
+
+          <p class="articleLead">
+            海外大学への進学が決まると、学費や奨学金に目が行きがちです。
+            しかし、住民票、健康保険、国民健康保険、国民年金、マイナンバーカードの手続きも重要です。
+            この記事では、高校生や保護者にもわかるように、海外大学進学前に確認しておきたい日本側の手続きを解説します。
+          </p>
+        </div>
+      </header>
+
+      <div class="articleLayout">
+        <main class="articleMain card">
+          <div class="articleBody">
+
+            <section>
+              <p>
+                海外大学への進学を考える際、多くの方は学費や奨学金について調べます。
+              </p>
+
+              <p>
+                しかし、意外と見落とされがちなのが、住民票、健康保険、国民健康保険、国民年金、マイナンバーカードなどの手続きです。
+              </p>
+
+              <p>
+                特に海外大学へ進学する場合、「住民票は抜くべき？」「親の健康保険はどうなる？」「一時帰国したらどうなる？」と疑問に思う方も少なくありません。
+              </p>
+            </section>
+
+            <section>
+              <h2>まずは結論</h2>
+
+              <p>
+                海外大学へ進学するなら、住民票や健康保険について次のポイントを覚えておきましょう。
+              </p>
+
+              <div class="pointBox">
+                <ul>
+                  <li>1年以上の留学なら住民票を抜くのが一般的</li>
+                  <li>親が会社員の場合、健康保険料は扶養家族の人数で変わらないため、子どもが留学しても保険料は基本的に変わらない</li>
+                  <li>親が自営業の場合、国民健康保険は加入人数によって保険料が決まるため、子どもが国外転出すると保険料が下がることがある</li>
+                  <li>国民健康保険は日割りではなく、月末時点の加入状況で決まる</li>
+                  <li>20歳以上は国民年金も関係する</li>
+                  <li>帰国日が1日違うだけで、国民健康保険や国民年金の負担が数万円変わることもある</li>
+                </ul>
+              </div>
+
+              <p>
+                それでは順番に見ていきましょう。
+              </p>
+            </section>
+
+            <section>
+              <h2>高校生でも住民票を抜く必要がある？</h2>
+
+              <p>
+                「高校生だから住民票はそのままでいいのでは？」と思う方もいるかもしれません。
+              </p>
+
+              <p>
+                しかし、住民票の扱いに年齢は関係ありません。
+              </p>
+
+              <div class="infoBox">
+                <h3 class="infoBoxTitle">ポイント</h3>
+                <p>
+                  一般的に、1年以上海外に滞在する予定の場合は、国外転出届を提出して住民票を抜きます。
+                </p>
+              </div>
+
+              <p>
+                つまり、高校卒業後すぐに海外大学へ正規留学する場合でも、住民票を抜くのが一般的です。
+              </p>
+            </section>
+
+            <section>
+              <h2>親が会社員？自営業？で変わる</h2>
+
+              <p>
+                親の働き方によって、健康保険料への影響は大きく異なります。
+              </p>
+
+              <div class="flowChart">
+<pre>海外大学へ進学
+↓
+住民票を抜く
+↓
+親はどちら？
+
+├─ 会社員
+│
+│  健康保険（社会保険）
+│
+│  ↓
+│
+│  扶養人数で保険料は変わらない
+│
+│  ↓
+│
+│  保険料は基本的に変わらない
+│
+└─ 自営業
+   │
+   ↓
+
+   国民健康保険
+
+   ↓
+
+   加入人数で保険料が変わる
+
+   ↓
+
+   子どもが国保から外れる
+
+   ↓
+
+   保険料が下がることがある
+   （年間数万円〜10万円以上）</pre>
+              </div>
+
+              <p>
+                親が会社員の場合は、健康保険料は扶養家族の人数で決まる仕組みではありません。
+              </p>
+
+              <p>
+                そのため、子どもが海外大学へ進学しても、健康保険料は基本的に変わりません。
+              </p>
+
+              <p>
+                一方で、親が自営業の場合は国民健康保険に加入しているケースが多く、加入人数が保険料に影響します。
+              </p>
+
+              <p>
+                そのため、子どもが国外転出して国民健康保険から外れると、保険料が下がることがあります。
+              </p>
+
+              <p>
+                国民健康保険料は自治体や世帯所得によって異なりますが、年間数万円〜10万円以上変わるケースもあります。
+              </p>
+            </section>
+
+            <section>
+              <h2>マイナンバーカードはどうなる？</h2>
+
+              <p>
+                以前は国外転出するとマイナンバーカードは失効していました。
+              </p>
+
+              <p>
+                しかし現在は、国外転出の手続きを行うことで、マイナンバーカードを継続利用できます。
+              </p>
+
+              <p>
+                海外大学へ進学する場合でも、国外転出届を提出し、マイナンバーカード継続利用の手続きを行えば、そのまま利用できます。
+              </p>
+
+              <p>
+                また、確定申告、マイナポータルの利用、帰国後の行政手続きなどで利用する機会もあります。
+              </p>
+
+              <p>
+                特に社会人経験者が会社を退職して留学する場合は、退職後に確定申告が必要になるケースもあるため、マイナンバーカードは大切に保管しておくと安心です。
+              </p>
+
+              <div class="infoBox">
+                <h3 class="infoBoxTitle">ポイント</h3>
+                <p>
+                  海外大学進学前に国外転出する場合は、マイナンバーカードを継続利用できるか、役所で確認しておきましょう。
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2>国民健康保険は「月末」で決まる</h2>
+
+              <p>
+                ここは重要なポイントです。
+              </p>
+
+              <p>
+                国民健康保険は日割りではありません。
+              </p>
+
+              <p>
+                簡単に言うと、月末時点で加入しているかどうかで、その月の保険料が決まります。
+              </p>
+
+              <div class="tableWrap compareTable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>状況</th>
+                      <th>結果</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>8月31日時点で国民健康保険に加入している</td>
+                      <td>8月分の保険料が発生</td>
+                    </tr>
+                    <tr>
+                      <td>9月末時点で国民健康保険に加入していない</td>
+                      <td>9月分の保険料は発生しない</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                そのため、出国や転出のタイミングによって、保険料が発生する月が変わることがあります。
+              </p>
+            </section>
+
+            <section>
+              <h2>一時帰国する場合は？</h2>
+
+              <p>
+                海外大学へ進学すると、夏休み、冬休み、インターンシップ、就職活動などで日本へ帰国することがあります。
+              </p>
+
+              <p>
+                このとき、「住民票は戻した方がいいの？」「国民健康保険はどうなるの？」と疑問に思う人も多いでしょう。
+              </p>
+
+              <p>
+                短期間の帰国で生活の本拠地が海外にある場合は、住民票を戻さないケースもあります。
+              </p>
+
+              <p>
+                一方で、日本で長期間生活する場合は転入手続きが必要になることがあります。
+              </p>
+            </section>
+
+            <section>
+              <h2>注意したいのは「手続きした日」ではないこと</h2>
+
+              <p>
+                国民健康保険や住民票は、役所で手続きをした日ではなく、実際の異動日を基準に処理されます。
+              </p>
+
+              <p>
+                例えば、5月25日に帰国し、6月5日に転入手続きをした場合でも、実際の帰国日が5月25日なら、5月25日に転入したものとして扱われます。
+              </p>
+
+              <div class="flowChart">
+<pre>5月25日帰国
+↓
+6月5日に役所で転入届
+↓
+役所の判断
+「5月25日に転入」
+↓
+5月分の国保対象</pre>
+              </div>
+
+              <div class="flowChart">
+<pre>重要
+
+× 手続きした日
+
+○ 実際の帰国日</pre>
+              </div>
+
+              <p>
+                つまり、「手続きをした日」ではなく「実際に帰国した日」が重要です。
+              </p>
+            </section>
+
+            <section>
+              <h2>20歳以上は国民年金にも注意</h2>
+
+              <p>
+                高校生のうちは関係ありませんが、20歳以上になると国民年金も関係してきます。
+              </p>
+
+              <p>
+                2026年度の国民年金保険料は、月額17,920円です。
+              </p>
+
+              <p>
+                国民年金も国民健康保険と同じく、日割りではなく月末基準で計算されます。
+              </p>
+
+              <p>
+                そのため、日本へ帰国して転入手続きを行うと、その月の国民年金保険料が発生する可能性があります。
+              </p>
+            </section>
+
+            <section>
+              <h2>帰国日が1日違うだけで数万円変わることも</h2>
+
+              <p>
+                例えば20歳以上の留学生が、5月31日に帰国した場合と、6月1日に帰国した場合では、負担が変わる可能性があります。
+              </p>
+
+              <div class="tableWrap compareTable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ケース</th>
+                      <th>負担</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>5月31日に帰国</td>
+                      <td>国民年金17,920円＋国民健康保険が発生する可能性</td>
+                    </tr>
+                    <tr>
+                      <td>6月1日に帰国</td>
+                      <td>5月分は発生しない</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="flowChart">
+<pre>5月31日帰国
+
+↓
+
+国民年金
+17,920円
+
+＋
+
+国民健康保険
+
+↓
+
+2万〜5万円程度の負担になる可能性</pre>
+              </div>
+
+              <div class="flowChart">
+<pre>6月1日帰国
+
+↓
+
+5月分なし
+
+↓
+
+負担なし</pre>
+              </div>
+
+              <p>
+                つまり、帰国日が1日違うだけで2万円〜5万円程度変わるケースもあります。
+              </p>
+            </section>
+
+            <section>
+              <h2>まとめ</h2>
+
+              <p>
+                海外大学へ進学するなら、大学選びや奨学金だけでなく、住民票や健康保険の手続きも確認しておきましょう。
+              </p>
+
+              <div class="pointBox">
+                <ul>
+                  <li>1年以上の留学なら住民票を抜くのが一般的</li>
+                  <li>親が会社員の場合、健康保険料は扶養家族の人数で変わらない</li>
+                  <li>親が自営業の場合、子どもが国民健康保険から外れると保険料が下がることがある</li>
+                  <li>国民健康保険は日割りではなく、月末時点の加入状況で決まる</li>
+                  <li>20歳以上は国民年金も関係する</li>
+                  <li>帰国日が1日違うだけで、国民健康保険や国民年金の負担が数万円変わることもある</li>
+                  <li>マイナンバーカードは国外転出後も継続利用できる場合がある</li>
+                </ul>
+              </div>
+
+              <p>
+                住民票、健康保険、国民年金、マイナンバーカードは、留学前に一度確認しておきたい重要な手続きです。
+              </p>
+
+              <p>
+                不安な場合は、出発前に住んでいる自治体や加入している健康保険に確認しておきましょう。
+              </p>
+            </section>
+
+            <section class="relatedSection">
+              <h2>関連記事</h2>
+
+              <div class="relatedGrid">
+                <a class="relatedCard" href="guide.html">
+                  <span class="relatedChip">Guide</span>
+                  <strong>Guide一覧を見る</strong>
+                  <p>ほかのハンガリー留学記事もまとめて読めます。</p>
+                </a>
+
+                <a class="relatedCard" href="basics-hungary.html">
+                  <span class="relatedChip">基本情報</span>
+                  <strong>ハンガリーについて</strong>
+                  <p>生活感・費用感・治安・英語などの基本情報を整理しています。</p>
+                </a>
+
+                <a class="relatedCard" href="basics-scholarship.html">
+                  <span class="relatedChip">奨学金</span>
+                  <strong>奨学金ページを見る</strong>
+                  <p>スティペンディウム・ハンガリカムの全体像を確認できます。</p>
+                </a>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <aside class="articleSide">
+          <div class="sideCard card">
+            <h2 class="sideTitle">この記事の要点</h2>
+            <ul class="sideList">
+              <li>1年以上の留学なら住民票を抜くのが一般的</li>
+              <li>会社員と自営業で保険料の扱いが異なる</li>
+              <li>国保と国民年金は月末基準</li>
+              <li>帰国日が1日違うだけで負担が変わることもある</li>
+            </ul>
+          </div>
+
+          <div class="sideCard card">
+            <h2 class="sideTitle">カテゴリ</h2>
+            <div class="tagRow">
+              <span class="tag">生活情報</span>
+              <span class="tag">住民票</span>
+              <span class="tag">健康保険</span>
+              <span class="tag">国民年金</span>
+            </div>
+          </div>
+
+          <div class="sideCard card">
+            <h2 class="sideTitle">現役生に相談したい方へ</h2>
+            <p class="sideText">
+              記事で全体像をつかんだあと、実際の準備や生活のリアルを現役生に直接聞くことができます。
+            </p>
+            <div class="sideActions">
+              <a class="btn primary" href="index.html#students">現役生を見る</a>
+              <a class="btn" href="index.html#contact">問い合わせる</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <a class="footerLink" href="index.html">ハンガリー留学相談 Hungary Study</a>
+    </footer>
+  </div>
+</body>
+</html>

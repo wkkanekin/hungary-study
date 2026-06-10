@@ -286,6 +286,7 @@ function getDailyGuides(guides, max = 3) {
     return (
       guide &&
       guide.enabled === true &&
+      guide.homePick === true &&
       guide.comingSoon !== true &&
       String(guide.url || "").trim()
     );
@@ -360,13 +361,13 @@ function renderDailyGuides(guides) {
 
 async function loadDailyGuides() {
 
-  const txt = await fetchText("guide.json");
+  const txt = await fetchText("guides.json");
 
-  const data = safeJsonParse(txt, "guide.json");
+  const data = safeJsonParse(txt, "guides.json");
 
   if (!Array.isArray(data)) {
     throw new Error(
-      `guide.json の形式が不正です（配列にしてください）。type=${typeof data}`
+      `guides.json の形式が不正です（配列にしてください）。type=${typeof data}`
     );
   }
 

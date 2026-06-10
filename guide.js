@@ -53,10 +53,8 @@
   function normalizeArticle(raw) {
     return {
       id: String(raw.id || "").trim(),
-      enabled: raw.enabled === true,
-      featured: raw.featured === true,
-      homePick: raw.homePick === true,
-      comingSoon: raw.comingSoon === true,
+      enabled: Boolean(raw.enabled),
+      featured: Boolean(raw.featured),
       title: String(raw.title || "").trim(),
       description: String(raw.description || "").trim(),
       category: String(raw.category || "").trim(),
@@ -67,65 +65,30 @@
 
   function articleIsUsable(article) {
     return (
-      article.enabled === true &&
+      article.enabled &&
       article.id &&
       article.title &&
       article.description &&
-      article.category
+      article.category &&
+      article.url
     );
-  }
-
-  function createCardActions(article, isFeatured = false) {
-    if (article.comingSoon) {
-      return `
-        <div class="cardActions">
-          <span class="btn disabled comingSoonBtn" aria-disabled="true">準備中</span>
-        </div>
-      `;
-    }
-
-    const buttonClass = isFeatured ? "btn primary" : "btn";
-    return `
-      <div class="cardActions">
-        <a class="${buttonClass}" href="${escapeHtml(article.url)}">記事を読む</a>
-      </div>
-    `;
-  }
-
-  function createTitle(article, titleClass) {
-    if (article.comingSoon || !article.url) {
-      return `
-        <h3 class="${titleClass}">
-          <span>${escapeHtml(article.title)}</span>
-        </h3>
-      `;
-    }
-
-    return `
-      <h3 class="${titleClass}">
-        <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
-      </h3>
-    `;
   }
 
   function createFeaturedCard(article) {
     return `
-      <article class="featuredCard card${article.comingSoon ? " comingSoonCard" : ""}">
+      <article class="featuredCard card">
         <div class="featuredBody">
-          <div class="cardChipRow">
-            <span class="chip">${escapeHtml(article.category)}</span>
-            ${article.comingSoon ? `<span class="comingSoonBadge">準備中</span>` : ""}
-          </div>
-
-          ${createTitle(article, "featuredTitle")}
-
+          <span class="chip">${escapeHtml(article.category)}</span>
+          <h3 class="featuredTitle">
+            <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
+          </h3>
           <p class="featuredDesc">${escapeHtml(article.description)}</p>
-
           <div class="cardMeta">
             <span>公開日：${escapeHtml(article.date || "未設定")}</span>
           </div>
-
-          ${createCardActions(article, true)}
+          <div class="cardActions">
+            <a class="btn primary" href="${escapeHtml(article.url)}">記事を読む</a>
+          </div>
         </div>
       </article>
     `;
@@ -133,32 +96,27 @@
 
   function createArticleCard(article) {
     return `
-      <article class="articleCard card${article.comingSoon ? " comingSoonCard" : ""}">
+      <article class="articleCard card">
         <div class="articleBody">
-          <div class="cardChipRow">
-            <span class="chip">${escapeHtml(article.category)}</span>
-            ${article.comingSoon ? `<span class="comingSoonBadge">準備中</span>` : ""}
-          </div>
-
-          ${createTitle(article, "articleTitle")}
-
+          <span class="chip">${escapeHtml(article.category)}</span>
+          <h3 class="articleTitle">
+            <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
+          </h3>
           <p class="articleDesc">${escapeHtml(article.description)}</p>
-
           <div class="cardMeta">
             <span>公開日：${escapeHtml(article.date || "未設定")}</span>
           </div>
-
-          ${createCardActions(article, false)}
+          <div class="cardActions">
+            <a class="btn" href="${escapeHtml(article.url)}">記事を読む</a>
+          </div>
         </div>
       </article>
     `;
   }
 
   function renderFeatured() {
-    if (!els.featuredGrid || !els.featuredEmpty) return;
-
     const featuredArticles = sortByDateDesc(
-      state.articles.filter((article) => article.featured === true)
+      state.articles.filter((article) => article.featured)
     ).slice(0, 2);
 
     if (featuredArticles.length === 0) {
@@ -185,14 +143,11 @@
   }
 
   function renderCategories() {
-    if (!els.categoryRow) return;
-
     const categories = collectCategories();
 
     els.categoryRow.innerHTML = categories.map((category) => {
       const activeClass = category === state.currentCategory ? " active" : "";
       const categoryAttr = escapeHtml(category);
-
       return `
         <button type="button" class="categoryChip${activeClass}" data-category="${categoryAttr}">
           ${categoryAttr}
@@ -211,8 +166,6 @@
   }
 
   function renderNewArticles() {
-    if (!els.newGrid || !els.newEmpty) return;
-
     const newest = sortByDateDesc(state.articles).slice(0, 3);
 
     if (newest.length === 0) {
@@ -236,13 +189,9 @@
   }
 
   function renderAllArticles() {
-    if (!els.allGrid || !els.allEmpty) return;
-
     const filtered = getFilteredArticles();
 
-    if (els.currentCategoryLabel) {
-      els.currentCategoryLabel.textContent = `表示中：${state.currentCategory}`;
-    }
+    els.currentCategoryLabel.textContent = `表示中：${state.currentCategory}`;
 
     if (filtered.length === 0) {
       els.allGrid.innerHTML = "";
@@ -279,18 +228,14 @@
       </div>
     `;
 
-    if (els.featuredGrid) els.featuredGrid.innerHTML = errorHtml;
-    if (els.newGrid) els.newGrid.innerHTML = errorHtml;
-    if (els.allGrid) els.allGrid.innerHTML = errorHtml;
-    if (els.categoryRow) els.categoryRow.innerHTML = "";
-
-    if (els.featuredEmpty) els.featuredEmpty.classList.add("isHidden");
-    if (els.newEmpty) els.newEmpty.classList.add("isHidden");
-    if (els.allEmpty) els.allEmpty.classList.add("isHidden");
-
-    if (els.currentCategoryLabel) {
-      els.currentCategoryLabel.textContent = "表示中：読み込み失敗";
-    }
+    els.featuredGrid.innerHTML = errorHtml;
+    els.newGrid.innerHTML = errorHtml;
+    els.allGrid.innerHTML = errorHtml;
+    els.categoryRow.innerHTML = "";
+    els.featuredEmpty.classList.add("isHidden");
+    els.newEmpty.classList.add("isHidden");
+    els.allEmpty.classList.add("isHidden");
+    els.currentCategoryLabel.textContent = "表示中：読み込み失敗";
   }
 
   async function init() {

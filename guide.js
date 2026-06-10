@@ -53,8 +53,9 @@
   function normalizeArticle(raw) {
     return {
       id: String(raw.id || "").trim(),
-      enabled: Boolean(raw.enabled),
-      featured: Boolean(raw.featured),
+      enabled: raw.enabled === true,
+      featured: raw.featured === true,
+      comingSoon: raw.comingSoon === true,
       title: String(raw.title || "").trim(),
       description: String(raw.description || "").trim(),
       category: String(raw.category || "").trim(),
@@ -65,7 +66,7 @@
 
   function articleIsUsable(article) {
     return (
-      article.enabled &&
+      article.enabled === true &&
       article.id &&
       article.title &&
       article.description &&
@@ -115,8 +116,10 @@
   }
 
   function renderFeatured() {
+    if (!els.featuredGrid || !els.featuredEmpty) return;
+
     const featuredArticles = sortByDateDesc(
-      state.articles.filter((article) => article.featured)
+      state.articles.filter((article) => article.enabled === true && article.featured === true)
     ).slice(0, 2);
 
     if (featuredArticles.length === 0) {
@@ -131,7 +134,11 @@
 
   function collectCategories() {
     const dataCategories = Array.from(
-      new Set(state.articles.map((article) => article.category))
+      new Set(
+        state.articles
+          .filter((article) => article.enabled === true)
+          .map((article) => article.category)
+      )
     );
 
     const sortedKnown = CATEGORY_ORDER.filter((cat) => dataCategories.includes(cat));
@@ -143,11 +150,14 @@
   }
 
   function renderCategories() {
+    if (!els.categoryRow) return;
+
     const categories = collectCategories();
 
     els.categoryRow.innerHTML = categories.map((category) => {
       const activeClass = category === state.currentCategory ? " active" : "";
       const categoryAttr = escapeHtml(category);
+
       return `
         <button type="button" class="categoryChip${activeClass}" data-category="${categoryAttr}">
           ${categoryAttr}
@@ -166,7 +176,11 @@
   }
 
   function renderNewArticles() {
-    const newest = sortByDateDesc(state.articles).slice(0, 3);
+    if (!els.newGrid || !els.newEmpty) return;
+
+    const newest = sortByDateDesc(
+      state.articles.filter((article) => article.enabled === true)
+    ).slice(0, 3);
 
     if (newest.length === 0) {
       els.newGrid.innerHTML = "";
@@ -179,19 +193,25 @@
   }
 
   function getFilteredArticles() {
+    const enabledArticles = state.articles.filter((article) => article.enabled === true);
+
     if (state.currentCategory === "すべて") {
-      return sortByDateDesc(state.articles);
+      return sortByDateDesc(enabledArticles);
     }
 
     return sortByDateDesc(
-      state.articles.filter((article) => article.category === state.currentCategory)
+      enabledArticles.filter((article) => article.category === state.currentCategory)
     );
   }
 
   function renderAllArticles() {
+    if (!els.allGrid || !els.allEmpty) return;
+
     const filtered = getFilteredArticles();
 
-    els.currentCategoryLabel.textContent = `表示中：${state.currentCategory}`;
+    if (els.currentCategoryLabel) {
+      els.currentCategoryLabel.textContent = `表示中：${state.currentCategory}`;
+    }
 
     if (filtered.length === 0) {
       els.allGrid.innerHTML = "";
@@ -228,14 +248,18 @@
       </div>
     `;
 
-    els.featuredGrid.innerHTML = errorHtml;
-    els.newGrid.innerHTML = errorHtml;
-    els.allGrid.innerHTML = errorHtml;
-    els.categoryRow.innerHTML = "";
-    els.featuredEmpty.classList.add("isHidden");
-    els.newEmpty.classList.add("isHidden");
-    els.allEmpty.classList.add("isHidden");
-    els.currentCategoryLabel.textContent = "表示中：読み込み失敗";
+    if (els.featuredGrid) els.featuredGrid.innerHTML = errorHtml;
+    if (els.newGrid) els.newGrid.innerHTML = errorHtml;
+    if (els.allGrid) els.allGrid.innerHTML = errorHtml;
+    if (els.categoryRow) els.categoryRow.innerHTML = "";
+
+    if (els.featuredEmpty) els.featuredEmpty.classList.add("isHidden");
+    if (els.newEmpty) els.newEmpty.classList.add("isHidden");
+    if (els.allEmpty) els.allEmpty.classList.add("isHidden");
+
+    if (els.currentCategoryLabel) {
+      els.currentCategoryLabel.textContent = "表示中：読み込み失敗";
+    }
   }
 
   async function init() {

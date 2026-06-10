@@ -1,112 +1,118 @@
 [
-
-{
-  "id": "university-pecs",
-  "enabled": false,
-  "featured": true,
-  "comingSoon": false,
-  "title": "University of Pécs（ペーチ大学）",
-  "description": "University of Pécsの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-pecs.html",
-  "date": "2026-05-19"
-},
-
-{
-  "id": "university-szeged",
-  "enabled": false,
-  "featured": true,
-  "comingSoon": false,
-  "title": "University of Szeged（セゲド大学）",
-  "description": "University of Szegedの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-szeged.html",
-  "date": "2026-05-19"
-},
-{
-  "id": "university-bme",
-  "enabled": false,
-  "featured": true,
-  "comingSoon": false,
-  "title": "Budapest University of Technology and Economics（BME）",
-  "description": "Budapest University of Technology and Economics（BME）の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-bme.html",
-  "date": "2026-05-19"
-},
-
-{
-  "id": "university-ibs",
-  "enabled": false,
-  "featured": true,
-  "comingSoon": false,
-  "title": "International Business School（IBS Budapest）",
-  "description": "International Business School Budapestの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-ibs.html",
-  "date": "2026-05-19"
-},
-
-
- {
-  "id": "university-szechenyi",
-  "enabled": false,
-  "featured": false,
-  "comingSoon": false,
-  "title": "Széchenyi István University（セーチェーニ・イシュトヴァーン大学）",
-  "description": "Széchenyi István Universityの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-szechenyi.html",
-  "date": "2026-05-19"
-},
-{
-  "id": "university-elte",
-  "enabled": false,
-  "featured": false,
-  "comingSoon": false,
-  "title": "Eötvös Loránd University（ELTE）",
-  "description": "ELTEの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-elte.html",
-  "date": "2026-05-18"
-},
-{
-  "id": "university-corvinus",
-  "enabled": false,
-  "featured": true,
-  "comingSoon": false,
-  "title": "Corvinus University of Budapest（コルヴィヌス大学）",
-  "description": "Corvinus University of Budapest の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
-  "category": "大学",
-  "url": "university-corvinus.html",
-  "date": "2026-05-18"
-},
-{
-  "id": "university-debrecen",
-  "enabled": false,
-  "featured": true,
-  "title": "University of Debrecen（デブレツェン大学）",
-  "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
-  "category": "大学",
-  "url": "university-debrecen.html",
-  "date": "2026-05-18"
-},
-
-{
-  "id": "university-bueb",
-  "enabled": true,
-  "featured": false,
-  "title": "Budapest University of Economics and Business（BUEB）",
-  "description": "BUEBの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
-  "category": "大学",
-  "url": "university-bueb.html",
-  "date": "2026-05-18"
-},
-
-{
+  {
+    "id": "university-pecs",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "University of Pécs（ペーチ大学）",
+    "description": "University of Pécsの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-pecs.html",
+    "date": "2026-05-19"
+  },
+  {
+    "id": "university-szeged",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "University of Szeged（セゲド大学）",
+    "description": "University of Szegedの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-szeged.html",
+    "date": "2026-05-19"
+  },
+  {
+    "id": "university-bme",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "Budapest University of Technology and Economics（BME）",
+    "description": "Budapest University of Technology and Economics（BME）の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-bme.html",
+    "date": "2026-05-19"
+  },
+  {
+    "id": "university-ibs",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "International Business School（IBS Budapest）",
+    "description": "International Business School Budapestの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-ibs.html",
+    "date": "2026-05-19"
+  },
+  {
+    "id": "university-szechenyi",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "Széchenyi István University（セーチェーニ・イシュトヴァーン大学）",
+    "description": "Széchenyi István Universityの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-szechenyi.html",
+    "date": "2026-05-19"
+  },
+  {
+    "id": "university-elte",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "Eötvös Loránd University（ELTE）",
+    "description": "ELTEの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-elte.html",
+    "date": "2026-05-18"
+  },
+  {
+    "id": "university-corvinus",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "Corvinus University of Budapest（コルヴィヌス大学）",
+    "description": "Corvinus University of Budapest の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "category": "大学",
+    "url": "university-corvinus.html",
+    "date": "2026-05-18"
+  },
+  {
+    "id": "university-debrecen",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "University of Debrecen（デブレツェン大学）",
+    "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
+    "category": "大学",
+    "url": "university-debrecen.html",
+    "date": "2026-05-18"
+  },
+  {
+    "id": "university-bueb",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "Budapest University of Economics and Business（BUEB）",
+    "description": "BUEBの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
+    "category": "大学",
+    "url": "university-bueb.html",
+    "date": "2026-05-18"
+  },
+  {
     "id": "study-abroad-japan",
     "enabled": true,
     "featured": true,
+    "homePick": true,
+    "comingSoon": false,
     "title": "日本人の海外留学はなぜ増えない？",
     "description": "日本人の海外留学の現状、費用の壁、政策、奨学金の全体像を整理し、ハンガリー留学という選択肢につなげて解説します。",
     "category": "コラム",
@@ -117,6 +123,8 @@
     "id": "university-ranking",
     "enabled": true,
     "featured": false,
+    "homePick": true,
+    "comingSoon": false,
     "title": "ハンガリー大学ランキング",
     "description": "大学を探すときの参考として、ランキングや大学比較の見方を整理します。",
     "category": "大学",
@@ -124,20 +132,23 @@
     "date": "2026-03-19"
   },
   {
-  "id": "budapest-districts",
-  "enabled": true,
-  "featured": true,
-  "title": "ブダペスト23区とは？留学生向けにエリア別でわかりやすく解説",
-  "description": "ブダペストの23区を、ブダ側・ペスト側・観光エリア・留学生向けエリアに分けて整理。どこに住むべきか一発でわかるように解説します。",
-  "category": "生活情報",
-  "url": "guide-budapest-districts.html",
-  "date": "2026-04-12"
-},
-  
+    "id": "budapest-districts",
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "ブダペスト23区とは？留学生向けにエリア別でわかりやすく解説",
+    "description": "ブダペストの23区を、ブダ側・ペスト側・観光エリア・留学生向けエリアに分けて整理。どこに住むべきか一発でわかるように解説します。",
+    "category": "生活情報",
+    "url": "guide-budapest-districts.html",
+    "date": "2026-04-12"
+  },
   {
     "id": "hungary-university-cost-detail",
     "enabled": true,
     "featured": true,
+    "homePick": true,
+    "comingSoon": false,
     "title": "ハンガリー大学の学費まとめ｜主要6大学×プログラム別",
     "description": "Corvinus・ELTE・BME・Debrecen・Szeged・Pécsの学費をプログラム単位で整理。大学選びに必要な費用感を比較しやすくまとめました。",
     "category": "費用",
@@ -148,6 +159,8 @@
     "id": "wise-hungary",
     "enabled": false,
     "featured": false,
+    "homePick": false,
+    "comingSoon": false,
     "title": "ハンガリー留学でWiseは必要？保護者・高校生向けにわかりやすく解説",
     "description": "ハンガリー留学でよく使われるWiseについて、送金、生活費、カード利用、ATMの注意点まで保護者や高校生にもわかりやすく整理しました。",
     "category": "生活情報",
@@ -158,6 +171,8 @@
     "id": "hungary-monthly-living-cost",
     "enabled": true,
     "featured": true,
+    "homePick": true,
+    "comingSoon": false,
     "title": "ハンガリーの生活費はいくら？",
     "description": "家賃、食費、交通費に加えて、毎月更新される最新の物価データを見ながら、ハンガリー留学の生活費を整理します。",
     "category": "生活情報",
@@ -168,82 +183,96 @@
     "id": "hungary-cost-compare",
     "enabled": true,
     "featured": true,
+    "homePick": true,
+    "comingSoon": false,
     "title": "ハンガリー vs 日本｜主要都市の物価比較",
     "description": "ブダペスト・ペーチ・デブレツェン・セゲドと東京・大阪・福岡の生活費、家賃、外食価格をグラフで比較し、都市選びでどれくらい差が出るかを整理します。",
     "category": "費用",
     "url": "guide-hungary-cost-compare.html",
     "date": "2026-04-12"
   },
-{
-  "id": "scholarship-odds",
-  "enabled": true,
-  "featured": true,
-  "title": "ハンガリー奨学金の倍率は約18倍？",
-  "description": "倍率18倍と言われる理由と実際の難易度を解説します。",
-  "category": "奨学金",
-  "url": "guide-scholarship-odds.html",
-  "date": "2026-04-12"
-},
-{
-  "id": "scholarship-nationality",
-  "enabled": true,
-  "featured": false,
-  "title": "ハンガリー奨学金はどの国が多い？",
-  "description": "国籍データから競争環境をわかりやすく解説。",
-  "category": "奨学金",
-  "url": "guide-scholarship-nationality.html",
-  "date": "2026-04-12"
-},
-
-{
-  "id": "scholarship-university",
-  "enabled": true,
-  "featured": false,
-  "title": "ハンガリー奨学金はどの大学に多い？",
-  "description": "受け入れ大学ランキングから、奨学生がどこに集中しているのかを解説します。",
-  "category": "奨学金",
-  "url": "guide-scholarship-university.html",
-  "date": "2026-04-12"
-},
+  {
+    "id": "scholarship-odds",
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "ハンガリー奨学金の倍率は約18倍？",
+    "description": "倍率18倍と言われる理由と実際の難易度を解説します。",
+    "category": "奨学金",
+    "url": "guide-scholarship-odds.html",
+    "date": "2026-04-12"
+  },
+  {
+    "id": "scholarship-nationality",
+    "enabled": true,
+    "featured": false,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "ハンガリー奨学金はどの国が多い？",
+    "description": "国籍データから競争環境をわかりやすく解説。",
+    "category": "奨学金",
+    "url": "guide-scholarship-nationality.html",
+    "date": "2026-04-12"
+  },
+  {
+    "id": "scholarship-university",
+    "enabled": true,
+    "featured": false,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "ハンガリー奨学金はどの大学に多い？",
+    "description": "受け入れ大学ランキングから、奨学生がどこに集中しているのかを解説します。",
+    "category": "奨学金",
+    "url": "guide-scholarship-university.html",
+    "date": "2026-04-12"
+  },
   {
     "id": "hungary-safety",
     "enabled": true,
     "featured": false,
+    "homePick": true,
+    "comingSoon": false,
     "title": "日本と比べてハンガリーは安全？治安をデータで比較",
     "description": "Global Peace IndexとNumbeoをもとに、日本とハンガリーの治安を比較し、留学前に知っておきたい安全性をわかりやすく整理します。",
     "category": "生活情報",
     "url": "guide-hungary-safety.html",
     "date": "2026-04-13"
   },
-{
-  "id": "stipendium-requirements",
-  "enabled": true,
-  "featured": true,
-  "title": "スティペンディウム・ハンガリカムは厳しい？継続条件と落ちる理由",
-  "description": "ハンガリー奨学金の継続条件を高校生でもわかるように解説。必要な単位数や落ちる理由、実際の難易度まで整理します。",
-  "category": "奨学金",
-  "url": "stipendium-hungaricum-requirements.html",
-  "date": "2026-04-27"
-},
-{
-  "id": "hungary-university-calendar",
-  "enabled": false,
-  "featured": true,
-  "comingSoon": false,
-  "title": "ハンガリー大学の長期休暇・試験期間まとめ【2026年版】",
-  "description": "ELTE、BME、BGE、Corvinus、Debrecen、Szegedなど、ハンガリー主要大学の長期休暇・試験期間・再試験期間を比較できます。",
-  "category": "大学",
-  "url": "hungary-university-calendar.html",
-  "date": "2026-05-26"
-},
-{
-  "id": "juminhyo-insurance",
-  "enabled": true,
-  "featured": true,
-  "title": "海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ",
-  "description": "海外大学進学時の住民票、健康保険、国民健康保険、国民年金、マイナンバーカードの手続きを高校生や保護者向けにわかりやすく解説します。",
-  "category": "生活情報",
-  "url": "guide-juminhyo-insurance.html",
-  "date": "2026-06-10"
-}
+  {
+    "id": "stipendium-requirements",
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "スティペンディウム・ハンガリカムは厳しい？継続条件と落ちる理由",
+    "description": "ハンガリー奨学金の継続条件を高校生でもわかるように解説。必要な単位数や落ちる理由、実際の難易度まで整理します。",
+    "category": "奨学金",
+    "url": "stipendium-hungaricum-requirements.html",
+    "date": "2026-04-27"
+  },
+  {
+    "id": "hungary-university-calendar",
+    "enabled": false,
+    "featured": false,
+    "homePick": false,
+    "comingSoon": false,
+    "title": "ハンガリー大学の長期休暇・試験期間まとめ【2026年版】",
+    "description": "ELTE、BME、BGE、Corvinus、Debrecen、Szegedなど、ハンガリー主要大学の長期休暇・試験期間・再試験期間を比較できます。",
+    "category": "大学",
+    "url": "hungary-university-calendar.html",
+    "date": "2026-05-26"
+  },
+  {
+    "id": "juminhyo-insurance",
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ",
+    "description": "海外大学進学時の住民票、健康保険、国民健康保険、国民年金、マイナンバーカードの手続きを高校生や保護者向けにわかりやすく解説します。",
+    "category": "生活情報",
+    "url": "guide-juminhyo-insurance.html",
+    "date": "2026-06-10"
+  }
 ]

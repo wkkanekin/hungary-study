@@ -51,7 +51,7 @@
  {
   "id": "university-szechenyi",
   "enabled": true,
-  "featured": flase,
+  "featured": false,
   "comingSoon": false,
   "title": "Széchenyi István University（セーチェーニ・イシュトヴァーン大学）",
   "description": "Széchenyi István Universityの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
@@ -72,7 +72,7 @@
 },
 {
   "id": "university-corvinus",
-  "enabled": flase,
+  "enabled": false,
   "featured": true,
   "comingSoon": false,
   "title": "Corvinus University of Budapest（コルヴィヌス大学）",
@@ -83,7 +83,7 @@
 },
 {
   "id": "university-debrecen",
-  "enabled": flase,
+  "enabled": false,
   "featured": false,
   "title": "University of Debrecen（デブレツェン大学）",
   "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
@@ -146,7 +146,7 @@
   },
   {
     "id": "wise-hungary",
-    "enabled": flase,
+    "enabled": false,
     "featured": false,
     "title": "ハンガリー留学でWiseは必要？保護者・高校生向けにわかりやすく解説",
     "description": "ハンガリー留学でよく使われるWiseについて、送金、生活費、カード利用、ATMの注意点まで保護者や高校生にもわかりやすく整理しました。",
@@ -227,7 +227,7 @@
 },
 {
   "id": "hungary-university-calendar",
-  "enabled": flase,
+  "enabled": false,
   "featured": true,
   "comingSoon": false,
   "title": "ハンガリー大学の長期休暇・試験期間まとめ【2026年版】",

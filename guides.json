@@ -25,8 +25,8 @@
 },
 {
   "id": "university-bme",
-  "enabled": true,
-  "featured": false,
+  "enabled": false,
+  "featured": ture,
   "comingSoon": false,
   "title": "Budapest University of Technology and Economics（BME）",
   "description": "Budapest University of Technology and Economics（BME）の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
@@ -50,7 +50,7 @@
 
  {
   "id": "university-szechenyi",
-  "enabled": true,
+  "enabled": false,
   "featured": false,
   "comingSoon": false,
   "title": "Széchenyi István University（セーチェーニ・イシュトヴァーン大学）",
@@ -61,7 +61,7 @@
 },
 {
   "id": "university-elte",
-  "enabled": true,
+  "enabled": false,
   "featured": false,
   "comingSoon": false,
   "title": "Eötvös Loránd University（ELTE）",
@@ -84,7 +84,7 @@
 {
   "id": "university-debrecen",
   "enabled": false,
-  "featured": false,
+  "featured": true,
   "title": "University of Debrecen（デブレツェン大学）",
   "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
   "category": "大学",

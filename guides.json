@@ -155,18 +155,7 @@
     "url": "guide-hungary-university-cost.html",
     "date": "2026-04-06"
   },
-  {
-    "id": "wise-hungary",
-    "enabled": false,
-    "featured": false,
-    "homePick": false,
-    "comingSoon": false,
-    "title": "ハンガリー留学でWiseは必要？保護者・高校生向けにわかりやすく解説",
-    "description": "ハンガリー留学でよく使われるWiseについて、送金、生活費、カード利用、ATMの注意点まで保護者や高校生にもわかりやすく整理しました。",
-    "category": "生活情報",
-    "url": "guide-wise-hungary.html",
-    "date": "2026-04-05"
-  },
+  
   {
     "id": "hungary-monthly-living-cost",
     "enabled": true,

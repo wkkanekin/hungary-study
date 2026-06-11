@@ -1727,3 +1727,33 @@ details p{
     flex-wrap:wrap;
   }
 }
+
+.contactAccordionBtn{
+  width:100%;
+  border:none;
+  cursor:pointer;
+
+  padding:20px;
+  border-radius:20px;
+
+  background:#fff;
+
+  font-size:28px;
+  font-weight:950;
+  color:#0f2a5a;
+
+  box-shadow:0 12px 28px rgba(17,24,39,.08);
+}
+
+.contactAccordionBtn:hover{
+  background:#f8fbff;
+}
+
+.contactAccordionBody{
+  display:none;
+  margin-top:16px;
+}
+
+.contactAccordionBody.open{
+  display:block;
+}

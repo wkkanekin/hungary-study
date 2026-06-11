@@ -388,6 +388,7 @@
         <div class="searchRow centerActions">
           <button class="btn primary" id="applySearch" type="button">検索</button>
           <button class="btn" id="clearSearch" type="button">条件クリア</button>
+          
         </div>
 
         
@@ -431,33 +432,34 @@
       </div>
     </section>
 
-    <section class="section" id="students">
-      <div class="studentListHeader">
-        <h2 class="secTitle studentListTitle">現役生一覧</h2>
+   <section class="section" id="students">
 
-        <div class="studentListActions">
-          <span id="hitCount" class="hitCount">おすすめ：3名</span>
+  <div class="studentListHeader">
 
-          <button
-            type="button"
-            class="btn"
-            id="showAllStudents"
-          >
-            全現役生を見る
-          </button>
-        </div>
-      </div>
+    <h2 class="secTitle">
+      現役生一覧
+    </h2>
 
-      <div id="noResults" class="card emptyCard" style="display:none;">
-        <h3 class="emptyTitle">現在、該当する現役生が見つかりませんでした。</h3>
-        <p class="muted emptyText">
-          条件を変えて再検索してください。<br />
-          現役生として参加したい方は <a href="#contact" class="inlineLink">お問い合わせ（現役生登録）</a> をご確認ください。
-        </p>
-      </div>
+    <div class="studentListActions">
 
-      <div id="studentList" class="studentList" aria-label="現役生一覧"></div>
-    </section>
+     <span id="hitCount" class="badge">
+  おすすめ：3名
+</span>
+
+     <button
+  type="button"
+  class="btn primary"
+  id="showAllStudents"
+>
+  全12名を見る
+</button>
+    </div>
+
+  </div>
+
+  <div id="studentList" class="studentList"></div>
+
+</section>
 
 
 <section class="section" id="arrivalSupport">

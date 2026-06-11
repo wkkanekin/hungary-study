@@ -241,9 +241,12 @@ recentStudentListEl.querySelectorAll(".recentProfileBtn").forEach((btn) => {
 
     if (!id) return;
 
-    renderStudents(students);
+    const enabledStudents =
+  students.filter((s) => s.enabled);
 
-    setHitLabel(`全学生：${students.length}名`);
+renderStudents(enabledStudents);
+
+setHitLabel(`全学生：${enabledStudents.length}名`);
 
     requestAnimationFrame(() => {
       document.getElementById(`student-${id}`)?.scrollIntoView({
@@ -677,10 +680,16 @@ setHitLabel(`おすすめ：${featured.length}名`);
  }
 
  function showAllStudents() {
- renderStudents(students);
- setHitLabel(`全学生：${students.length}名`);
+
+ const enabledStudents =
+   students.filter((s) => s.enabled);
+
+ renderStudents(enabledStudents);
+
+ setHitLabel(`全学生：${enabledStudents.length}名`);
+
  scrollToStudents();
- }
+}
 
  // ----------------------------
  // Suggest (dropdown)
@@ -811,7 +820,15 @@ setHitLabel(`おすすめ：${featured.length}名`);
  }
 
  students = data;
- suggestPool = buildSuggestPool(students);
+suggestPool = buildSuggestPool(students);
+
+const enabledCount =
+  students.filter((s) => s.enabled).length;
+
+if (showAllStudentsBtn) {
+  showAllStudentsBtn.textContent =
+    `全${enabledCount}名を見る`;
+}
 
 const featured = getFeaturedStudents(3);
 
@@ -819,9 +836,12 @@ renderStudents(featured);
 
 renderRecentStudents();
 
-setHitLabel(`おすすめ：${featured.length}名`); }
 
- async function tryLoadImagesAny() {
+setHitLabel(`おすすめ：${featured.length}名`);
+}
+
+async function tryLoadImagesAny() {
+
  const candidates = [
  "images.json",
  "Images.json",
@@ -1069,9 +1089,12 @@ if (recentShowAllStudentsBtn) {
   recentShowAllStudentsBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    renderStudents(students);
+    const enabledStudents =
+  students.filter((s) => s.enabled);
 
-    setHitLabel(`全学生：${students.length}名`);
+renderStudents(enabledStudents);
+
+setHitLabel(`全学生：${enabledStudents.length}名`);
 
     scrollToStudents();
   });

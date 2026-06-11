@@ -1692,3 +1692,36 @@ details p{
     font-size:21px;
   }
 }
+
+.studentListHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+
+.studentListActions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.studentListActions .btn{
+  margin:0;
+}
+
+@media (max-width:768px){
+
+  .studentListHeader{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .studentListActions{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+}

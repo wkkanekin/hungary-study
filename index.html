@@ -388,7 +388,6 @@
         <div class="searchRow centerActions">
           <button class="btn primary" id="applySearch" type="button">検索</button>
           <button class="btn" id="clearSearch" type="button">条件クリア</button>
-          <button class="btn" id="showAllStudents" type="button">全現役生を見る</button>
         </div>
 
         
@@ -433,7 +432,21 @@
     </section>
 
     <section class="section" id="students">
-      <h2 class="secTitle">現役生一覧 <span id="hitCount" class="hitCount"></span></h2>
+      <div class="studentListHeader">
+        <h2 class="secTitle studentListTitle">現役生一覧</h2>
+
+        <div class="studentListActions">
+          <span id="hitCount" class="hitCount">おすすめ：3名</span>
+
+          <button
+            type="button"
+            class="btn"
+            id="showAllStudents"
+          >
+            全現役生を見る
+          </button>
+        </div>
+      </div>
 
       <div id="noResults" class="card emptyCard" style="display:none;">
         <h3 class="emptyTitle">現在、該当する現役生が見つかりませんでした。</h3>

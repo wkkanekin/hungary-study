@@ -1628,5 +1628,26 @@ if (
   });
 }
 
+// ======================
+// FAQ蛇腹
+// ======================
+
+const faqAccordionBtn =
+  document.getElementById("faqAccordionBtn");
+
+const faqAccordionBody =
+  document.getElementById("faqAccordionBody");
+
+if (
+  faqAccordionBtn &&
+  faqAccordionBody
+) {
+  faqAccordionBtn.addEventListener("click", () => {
+    faqAccordionBody.classList.toggle("open");
+  });
+}
+
+
+
  })();
 });

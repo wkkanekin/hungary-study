@@ -1757,3 +1757,33 @@ details p{
 .contactAccordionBody.open{
   display:block;
 }
+
+.faqAccordionBtn{
+  width:100%;
+  border:none;
+  cursor:pointer;
+
+  padding:20px;
+  border-radius:20px;
+
+  background:#fff;
+
+  font-size:28px;
+  font-weight:950;
+  color:#0f2a5a;
+
+  box-shadow:0 12px 28px rgba(17,24,39,.08);
+}
+
+.faqAccordionBtn:hover{
+  background:#f8fbff;
+}
+
+.faqAccordionBody{
+  display:none;
+  margin-top:16px;
+}
+
+.faqAccordionBody.open{
+  display:block;
+}

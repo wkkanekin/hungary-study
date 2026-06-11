@@ -1694,18 +1694,20 @@ details p{
 }
 
 .studentListHeader{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  flex-wrap:wrap;
+  text-align:center;
   margin-bottom:24px;
+}
+
+.studentListHeader .secTitle{
+  margin-bottom:16px;
 }
 
 .studentListActions{
   display:flex;
+  justify-content:center;
   align-items:center;
   gap:12px;
+  flex-wrap:wrap;
 }
 
 .studentListActions .btn{

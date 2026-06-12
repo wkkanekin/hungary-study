@@ -1787,3 +1787,100 @@ details p{
 .faqAccordionBody.open{
   display:block;
 }
+
+.linePlanBox{
+  margin-bottom:32px;
+}
+
+.linePlanGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin:18px 0 20px;
+}
+
+.linePlanItem{
+  padding:20px;
+  border-radius:22px;
+  background:#fff;
+  border:1px solid rgba(226,232,240,.95);
+  box-shadow:0 10px 24px rgba(15,23,42,.06);
+  text-align:center;
+}
+
+.linePlanItem.recommended{
+  border-color:rgba(29,78,216,.32);
+  background:#f8fbff;
+}
+
+.linePlanItem h3{
+  margin:0;
+  color:#0f2a5a;
+  font-size:20px;
+  font-weight:950;
+}
+
+.linePlanPrice{
+  margin:10px 0;
+  color:#e69a00;
+  font-size:34px;
+  font-weight:950;
+}
+
+.linePlanItem p{
+  margin:0;
+  color:#475569;
+  font-weight:850;
+  line-height:1.7;
+}
+
+.studentSelectChecks .serviceCheck{
+  grid-template-columns:auto 1fr;
+}
+
+.arrivalNoticeBox{
+  margin-top:24px;
+  padding:22px;
+  border-radius:22px;
+  background:#f8fbff;
+  border:1px solid rgba(29,78,216,.14);
+}
+
+.arrivalNoticeBox h3{
+  margin:0 0 12px;
+  color:#0f2a5a;
+  font-weight:950;
+}
+
+.arrivalNoticeBox ul{
+  margin:0;
+  padding-left:1.3em;
+  color:#475569;
+  font-weight:850;
+  line-height:1.9;
+}
+
+#arrivalSelectedSummary{
+  margin-bottom:10px;
+  color:#0f2a5a;
+  font-size:16px;
+  font-weight:900;
+  line-height:1.8;
+}
+
+@media (max-width:900px){
+  .linePlanGrid{
+    grid-template-columns:1fr;
+  }
+}
+
+.lineConsultBtn{
+  background:#06c755;
+  color:#fff;
+  border-color:rgba(6,199,85,.55);
+  box-shadow:0 10px 24px rgba(6,199,85,.18);
+}
+
+.lineConsultBtn:hover{
+  background:#05b84f;
+}

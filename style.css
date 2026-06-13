@@ -1884,3 +1884,23 @@ details p{
 .lineConsultBtn:hover{
   background:#05b84f;
 }
+
+/* Zoom */
+.zoomCard{
+  background:#f8fbff;
+  border:2px solid rgba(37,99,235,.25);
+}
+
+.zoomCard h3{
+  color:#2563eb;
+}
+
+/* LINE */
+.lineCard{
+  background:#f8fffb;
+  border:2px solid rgba(6,199,85,.25);
+}
+
+.lineCard h3{
+  color:#06c755;
+}

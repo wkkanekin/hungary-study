@@ -26,7 +26,7 @@
 
         <p class="arrivalPageLead">
           同じ大学・同じ都市に在籍する現役大学生に、
-          LINEで30日間相談できます。
+          LINEで10日間または30日間相談できます。
         </p>
 
         <p class="arrivalPageSub">
@@ -46,34 +46,56 @@
     <section class="section">
       <div class="card arrivalPageCard">
 
-        <div class="linePlanBox">
-          <h2 class="secTitle">現役生LINE相談（30日）</h2>
+       <div class="linePlanBox">
+  <h2 class="secTitle">現役生LINE相談</h2>
 
-          <div class="linePlanGrid">
-            <div class="linePlanItem">
-              <h3>1名選択</h3>
-              <p class="linePlanPrice">¥15,000</p>
-              <p>現役生1名と30日間LINE相談</p>
-            </div>
+  <h3 class="secTitle" style="font-size:22px;">お試し10日間</h3>
+  <div class="linePlanGrid">
+    <div class="linePlanItem recommended">
+      <h3>1名選択</h3>
+      <p class="linePlanPrice">¥5,000</p>
+      <p>現役生1名と10日間LINE相談</p>
+    </div>
 
-            <div class="linePlanItem recommended">
-              <h3>2名選択</h3>
-              <p class="linePlanPrice">¥27,000</p>
-              <p>通常¥30,000 → 10%OFF</p>
-            </div>
+    <div class="linePlanItem">
+      <h3>2名選択</h3>
+      <p class="linePlanPrice">¥9,000</p>
+      <p>通常¥10,000 → 10%OFF</p>
+    </div>
 
-            <div class="linePlanItem">
-              <h3>3名選択</h3>
-              <p class="linePlanPrice">¥36,000</p>
-              <p>通常¥45,000 → 20%OFF</p>
-            </div>
-          </div>
+    <div class="linePlanItem">
+      <h3>3名選択</h3>
+      <p class="linePlanPrice">¥12,000</p>
+      <p>通常¥15,000 → 20%OFF</p>
+    </div>
+  </div>
 
-          <p class="arrivalPageSub">
-            ※現役生LINE相談を希望する場合は、下の「依頼したい現役生」で人数を選択してください。
-            選択人数に応じて料金が自動計算されます。
-          </p>
-        </div>
+  <h3 class="secTitle" style="font-size:22px; margin-top:28px;">通常30日間</h3>
+  <div class="linePlanGrid">
+    <div class="linePlanItem">
+      <h3>1名選択</h3>
+      <p class="linePlanPrice">¥15,000</p>
+      <p>現役生1名と30日間LINE相談</p>
+    </div>
+
+    <div class="linePlanItem">
+      <h3>2名選択</h3>
+      <p class="linePlanPrice">¥27,000</p>
+      <p>通常¥30,000 → 10%OFF</p>
+    </div>
+
+    <div class="linePlanItem">
+      <h3>3名選択</h3>
+      <p class="linePlanPrice">¥36,000</p>
+      <p>通常¥45,000 → 20%OFF</p>
+    </div>
+  </div>
+
+  <p class="arrivalPageSub">
+    ※現役生LINE相談を希望する場合は、下の「相談プラン」と「依頼したい現役生」を選択してください。
+    選択内容に応じて料金が自動計算されます。
+  </p>
+</div>
 
         <form id="arrivalForm" class="arrivalForm" autocomplete="on">
 
@@ -104,6 +126,36 @@
                 required
               />
             </div>
+
+<div class="field full">
+  <label>相談プラン</label>
+
+  <div class="serviceChecks">
+    <label class="serviceCheck">
+      <input
+        type="radio"
+        name="linePlan"
+        value="お試し10日間"
+        data-plan="trial"
+        checked
+      />
+      <span>お試し10日間</span>
+      <strong>¥5,000〜</strong>
+    </label>
+
+    <label class="serviceCheck">
+      <input
+        type="radio"
+        name="linePlan"
+        value="通常30日間"
+        data-plan="standard"
+      />
+      <span>通常30日間</span>
+      <strong>¥15,000〜</strong>
+    </label>
+  </div>
+</div>
+
 
             <div class="field full">
               <label>依頼したい現役生（LINE相談を希望する場合・最大3名）</label>
@@ -223,7 +275,7 @@
           <div class="arrivalNoticeBox">
             <h3>注意事項</h3>
             <ul>
-              <li>現役生LINE相談の期間は30日間です。</li>
+              <li>現役生LINE相談は、お試し10日間プランまたは通常30日間プランから選択できます。</li>
               <li>現役生は原則48時間以内の返信を目安に対応します。</li>
               <li>24時間対応・即時返信を保証するサービスではありません。</li>
               <li>合格・奨学金採用を保証するものではありません。</li>
@@ -251,22 +303,41 @@
 
   <script>
     const form = document.getElementById("arrivalForm");
-    const studentChecks = Array.from(document.querySelectorAll('input[name="students"]'));
-    const pickupRadios = Array.from(document.querySelectorAll('input[name="pickup"]'));
-    const totalAmountEl = document.getElementById("arrivalTotalAmount");
-    const summaryEl = document.getElementById("arrivalSelectedSummary");
+const studentChecks = Array.from(document.querySelectorAll('input[name="students"]'));
+const linePlanRadios = Array.from(document.querySelectorAll('input[name="linePlan"]'));
+const pickupRadios = Array.from(document.querySelectorAll('input[name="pickup"]'));
+const totalAmountEl = document.getElementById("arrivalTotalAmount");
+const summaryEl = document.getElementById("arrivalSelectedSummary");
 
     function formatYen(amount) {
       return `¥${Number(amount || 0).toLocaleString("ja-JP")}`;
     }
 
-    function getLinePrice(count) {
-      if (count === 1) return 15000;
-      if (count === 2) return 27000;
-      if (count === 3) return 36000;
-      return 0;
-    }
+   function getSelectedLinePlan() {
+  const selected = linePlanRadios.find((radio) => radio.checked);
+  return selected?.dataset.plan || "trial";
+}
 
+function getSelectedLinePlanLabel() {
+  const selected = linePlanRadios.find((radio) => radio.checked);
+  return selected?.value || "お試し10日間";
+}
+
+function getLinePrice(count) {
+  const plan = getSelectedLinePlan();
+
+  if (plan === "trial") {
+    if (count === 1) return 5000;
+    if (count === 2) return 9000;
+    if (count === 3) return 12000;
+    return 0;
+  }
+
+  if (count === 1) return 15000;
+  if (count === 2) return 27000;
+  if (count === 3) return 36000;
+  return 0;
+}
     function updateTotal() {
       const selectedStudents = studentChecks.filter((check) => check.checked);
 
@@ -305,6 +376,10 @@
         ? `選択中：${summaryParts.join(" / ")}`
         : "選択中：なし";
     }
+
+linePlanRadios.forEach((radio) => {
+  radio.addEventListener("change", updateTotal);
+});
 
     studentChecks.forEach((check) => {
       check.addEventListener("change", updateTotal);
@@ -352,8 +427,9 @@
         "",
         `空港ピックアップ：${pickupName}`,
         "",
-        `LINE相談料金：${formatYen(linePrice)}`,
-        `空港ピックアップ料金：${formatYen(pickupPrice)}`,
+        `LINE相談プラン：${selectedStudents.length ? getSelectedLinePlanLabel() : "希望なし"}`,
+`LINE相談料金：${formatYen(linePrice)}`,
+`空港ピックアップ料金：${formatYen(pickupPrice)}`,
         `合計金額：${formatYen(total)}`,
         "",
         "相談・依頼したい内容：",

@@ -112,9 +112,20 @@
             </div>
 
             <div class="field">
-              <label for="arrival_line">LINE表示名（任意）</label>
+              <label for="arrival_line">LINE表示名（必須）</label>
               <input id="arrival_line" name="lineName" type="text" placeholder="例：Kaneko" />
             </div>
+
+<div class="field">
+  <label for="arrival_lineid">LINE ID（必須）</label>
+  <input
+    id="arrival_lineid"
+    name="lineId"
+    type="text"
+    placeholder="例：Yamada123"
+    required
+  />
+</div>
 
             <div class="field">
               <label for="arrival_university">進学予定大学・志望大学（任意）</label>
@@ -123,7 +134,7 @@
                 name="university"
                 type="text"
                 placeholder="例：ELTE / Corvinus / BME"
-                required
+                
               />
             </div>
 
@@ -134,7 +145,7 @@
     name="major"
     type="text"
     placeholder="例：Computer Science / International Relations / 経営系 / 理系 / 社会科学系 / まだ未定"
-    required
+ 
   />
 </div>
 
@@ -444,6 +455,7 @@
       const name = document.getElementById("arrival_name").value.trim();
       const email = document.getElementById("arrival_email").value.trim();
       const lineName = document.getElementById("arrival_line").value.trim();
+const lineId = document.getElementById("arrival_lineid").value.trim();
      const university = document.getElementById("arrival_university").value.trim();
 const major = document.getElementById("arrival_major").value.trim();
 const message = document.getElementById("arrival_message").value.trim();
@@ -468,7 +480,8 @@ const message = document.getElementById("arrival_message").value.trim();
         "",
         `お名前：${name}`,
         `メール：${email}`,
-        `LINE表示名：${lineName || "未入力"}`,
+        `LINE表示名：${lineName}`,
+`LINE ID：${lineId}`,
         `進学予定大学・志望大学：${university}`,
 `志望学部・専攻・分野：${major}`,
         "",

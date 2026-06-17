@@ -197,8 +197,8 @@
     "language": "英語（大学授業レベル）",
     "meeting": "Zoomのみ",
     "stipendium": {
-      "has": false,
-      "name": ""
+      "has": true,
+      "name": "スティペンディウム・ハンガリカム"
     },
     "onlineConversation": [
       {

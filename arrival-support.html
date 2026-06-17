@@ -12,6 +12,39 @@
   />
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .formHelp{
+      margin-top:8px;
+      font-size:14px;
+      line-height:1.6;
+      color:#64748b;
+      font-weight:800;
+    }
+
+    .flowSteps{
+      background:#f8fafc;
+      border-radius:16px;
+      padding:20px;
+      margin-top:12px;
+    }
+
+    .flowSteps ol{
+      margin:0;
+      padding-left:24px;
+    }
+
+    .flowSteps li{
+      margin-bottom:12px;
+      line-height:1.8;
+    }
+
+    .arrivalNoticeBox p{
+      margin-top:16px;
+      line-height:1.8;
+      font-weight:850;
+    }
+  </style>
 </head>
 
 <body>
@@ -113,19 +146,29 @@
 
             <div class="field">
               <label for="arrival_line">LINE表示名（必須）</label>
-              <input id="arrival_line" name="lineName" type="text" placeholder="例：Kaneko" />
+              <input
+                id="arrival_line"
+                name="lineName"
+                type="text"
+                placeholder="例：Yamada Taro"
+                required
+              />
             </div>
 
-<div class="field">
-  <label for="arrival_lineid">LINE ID（必須）</label>
-  <input
-    id="arrival_lineid"
-    name="lineId"
-    type="text"
-    placeholder="例：Yamada123"
-    required
-  />
-</div>
+            <div class="field">
+              <label for="arrival_lineid">LINE ID（必須）</label>
+              <input
+                id="arrival_lineid"
+                name="lineId"
+                type="text"
+                placeholder="例：Yamada123"
+                required
+              />
+
+              <p class="formHelp">
+                LINEグループ招待時に利用します。LINEの「IDによる友だち追加を許可」をONにした状態でご入力ください。
+              </p>
+            </div>
 
             <div class="field">
               <label for="arrival_university">進学予定大学・志望大学（任意）</label>
@@ -134,23 +177,18 @@
                 name="university"
                 type="text"
                 placeholder="例：ELTE / Corvinus / BME"
-                
               />
             </div>
 
-<div class="field">
-  <label for="arrival_major">志望学部・専攻・分野（任意）</label>
-  <input
-    id="arrival_major"
-    name="major"
-    type="text"
-    placeholder="例：Computer Science / International Relations / 経営系 / 理系 / 社会科学系 / まだ未定"
- 
-  />
-</div>
-
-
-
+            <div class="field">
+              <label for="arrival_major">志望学部・専攻・分野（任意）</label>
+              <input
+                id="arrival_major"
+                name="major"
+                type="text"
+                placeholder="例：CS / International Relations / 文系 / 理系 / 未定"
+              />
+            </div>
 
             <div class="field full">
               <label>相談プラン</label>
@@ -309,14 +347,18 @@
 
           <div class="arrivalNoticeBox">
             <h3>ご利用開始までの流れ</h3>
-            <ol>
-              <li>申込みフォームを送信</li>
-              <li>運営より振込先をご案内</li>
-              <li>ご入金</li>
-              <li>ご入金確認後、原則24時間以内にLINEグループへご招待</li>
-              <li>運営よりグループ内でご挨拶</li>
-              <li>サービス開始（お試し10日間 または 通常30日間）</li>
-            </ol>
+
+            <div class="flowSteps">
+              <ol>
+                <li>申込みフォームを送信</li>
+                <li>運営より振込先をご案内</li>
+                <li>ご入金</li>
+                <li>ご入金確認後、原則24時間以内にLINEグループへご招待</li>
+                <li>運営よりグループ内でご挨拶</li>
+                <li>サービス開始（お試し10日間 または 通常30日間）</li>
+              </ol>
+            </div>
+
             <p>
               ※サービス期間は、運営がLINEグループ内で開始のご案内をした時点から開始します。
             </p>
@@ -455,10 +497,11 @@
       const name = document.getElementById("arrival_name").value.trim();
       const email = document.getElementById("arrival_email").value.trim();
       const lineName = document.getElementById("arrival_line").value.trim();
-const lineId = document.getElementById("arrival_lineid").value.trim();
-     const university = document.getElementById("arrival_university").value.trim();
-const major = document.getElementById("arrival_major").value.trim();
-const message = document.getElementById("arrival_message").value.trim();
+      const lineId = document.getElementById("arrival_lineid").value.trim();
+      const university = document.getElementById("arrival_university").value.trim();
+      const major = document.getElementById("arrival_major").value.trim();
+      const message = document.getElementById("arrival_message").value.trim();
+
       const selectedStudents = studentChecks
         .filter((check) => check.checked)
         .map((check) => check.value);
@@ -481,9 +524,9 @@ const message = document.getElementById("arrival_message").value.trim();
         `お名前：${name}`,
         `メール：${email}`,
         `LINE表示名：${lineName}`,
-`LINE ID：${lineId}`,
-        `進学予定大学・志望大学：${university}`,
-`志望学部・専攻・分野：${major}`,
+        `LINE ID：${lineId}`,
+        `進学予定大学・志望大学：${university || "未定・未入力"}`,
+        `志望学部・専攻・分野：${major || "未定・未入力"}`,
         "",
         "依頼したい現役生：",
         selectedStudents.length ? selectedStudents.map((s) => `・${s}`).join("\n") : "希望なし",

@@ -2006,11 +2006,12 @@ details p{
 
 .heroBg{
   background-color:#fff !important;
-  background-size:cover !important;
+  background-size:contain !important;
   background-repeat:no-repeat !important;
   background-position:center center !important;
   transform:none !important;
 }
+
 .heroBg::after{
   display:none !important;
 }
@@ -2019,6 +2020,19 @@ details p{
   display:none !important;
 }
 
+/* PC */
+@media (min-width:1024px){
+  .heroHeader{
+    min-height:540px !important;
+  }
+
+  .heroBg{
+    background-size:contain !important;
+    background-repeat:no-repeat !important;
+    background-position:center center !important;
+    background-color:#fff !important;
+  }
+}
 
 /* スマホ */
 @media (max-width:720px){

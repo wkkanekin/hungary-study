@@ -2000,28 +2000,36 @@ details p{
 ========================= */
 
 .heroHeader{
-  min-height:360px;
-  padding:0;
+  min-height:360px !important;
+  padding:0 !important;
 }
 
 .heroBg{
-  background-color:#fff;
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
-  transform:none;
+  background-color:#fff !important;
+  background-size:contain !important;
+  background-repeat:no-repeat !important;
+  background-position:center center !important;
+  transform:none !important;
 }
 
 .heroBg::after{
-  display:none;
+  display:none !important;
 }
 
 .headerRow{
-  display:none;
+  display:none !important;
 }
 
+/* PC */
+@media (min-width:1024px){
+  .heroHeader{
+    min-height:500px !important;
+  }
+}
+
+/* スマホ */
 @media (max-width:720px){
   .heroHeader{
-    min-height:220px;
+    min-height:220px !important;
   }
 }

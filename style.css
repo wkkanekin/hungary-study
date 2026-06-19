@@ -1994,3 +1994,34 @@ details p{
     padding: 20px;
   }
 }
+
+/* =========================
+   New Hero Image
+========================= */
+
+.heroHeader{
+  min-height:360px;
+  padding:0;
+}
+
+.heroBg{
+  background-color:#fff;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  transform:none;
+}
+
+.heroBg::after{
+  display:none;
+}
+
+.headerRow{
+  display:none;
+}
+
+@media (max-width:720px){
+  .heroHeader{
+    min-height:220px;
+  }
+}

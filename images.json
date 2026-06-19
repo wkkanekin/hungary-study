@@ -1,13 +1,17 @@
 {
   "hero": {
-    "imageUrl": "images/hero-image.jpg",
-    "logoUrl": "images/Hu留学ラボ.jpg",
-    "logoAlt": "Hungary Study",
-    "imageVersion": "20260316-1",
-    "logoVersion": "20260316-1"
-  },
+  "imageUrl": "images/hero-image.jpg",
+  "pcImageUrl": "images/ogp-guide-new.png",
+  "mobileImageUrl": "images/hero-image.jpg",
+  "logoUrl": "images/Hu留学ラボ.jpg",
+  "logoAlt": "Hungary Study",
+  "imageVersion": "20260619-1",
+  "pcImageVersion": "20260619-1",
+  "mobileImageVersion": "20260619-1",
+  "logoVersion": "20260316-1"
+},
   "favicon": {
-    "url": "images/Hu留学ラボ.jpg",
+    "url": "images/favicon.png",
     "type": "image/png",
     "version": "20260316-1"
   },

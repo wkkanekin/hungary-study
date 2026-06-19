@@ -896,10 +896,28 @@ async function tryLoadImagesAny() {
  function applyImages(cfg) {
  if (!cfg || typeof cfg !== "object") return;
 
- const heroUrl = getVersionedImageUrl(cfg?.hero, ["imageUrl", "url"], ["imageVersion", "version", "v"]);
- if (heroUrl) {
- document.documentElement.style.setProperty("--hero-image", `url("${heroUrl}")`);
- }
+let heroUrl = "";
+
+if (window.innerWidth <= 768) {
+  heroUrl = getVersionedImageUrl(
+    cfg?.hero,
+    ["mobileImageUrl", "imageUrl", "url"],
+    ["mobileImageVersion", "imageVersion", "version", "v"]
+  );
+} else {
+  heroUrl = getVersionedImageUrl(
+    cfg?.hero,
+    ["pcImageUrl", "imageUrl", "url"],
+    ["pcImageVersion", "imageVersion", "version", "v"]
+  );
+}
+
+if (heroUrl) {
+  document.documentElement.style.setProperty(
+    "--hero-image",
+    `url("${heroUrl}")`
+  );
+}
 
  const logoUrl = getVersionedImageUrl(
  cfg?.hero,

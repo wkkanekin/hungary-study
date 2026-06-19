@@ -2088,3 +2088,26 @@ details p{
     display:none !important;
   }
 }
+
+/* PCヒーロー画像を全部表示 */
+@media (min-width:1024px){
+  .heroHeader{
+    min-height:320px !important;
+    padding:0 !important;
+  }
+
+  .heroBg{
+    background-size:contain !important;
+    background-repeat:no-repeat !important;
+    background-position:center center !important;
+    transform:none !important;
+  }
+
+  .heroBg::after{
+    display:none !important;
+  }
+
+  .headerRow{
+    display:none !important;
+  }
+}

@@ -2023,7 +2023,12 @@ details p{
 /* PC */
 @media (min-width:1024px){
   .heroHeader{
-    min-height:500px !important;
+    min-height:360px !important;
+  }
+
+  .heroBg{
+    background-size:cover !important;
+    background-position:center center !important;
   }
 }
 

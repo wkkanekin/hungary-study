@@ -74,7 +74,7 @@
   },
   {
     "id": "yu",
-    "enabled": true,
+    "enabled": false,
     "featured": false,
     "name": "ユウ（20代）",
     "region": "ブダペスト",
@@ -127,7 +127,7 @@
   },
   {
     "id": "ryota",
-    "enabled": true,
+    "enabled": false,
     "featured":false,
     "name": "リョウタ（20代）",
     "region": "ジェール",
@@ -262,7 +262,7 @@
   },
   {
     "id": "yui",
-    "enabled": true,
+    "enabled": false,
     "featured": false,
     "name": "ユイ（20代）",
     "region": "ブダペスト",
@@ -451,7 +451,7 @@
   },
   {
     "id": "anna",
-    "enabled": true,
+    "enabled": false,
     "featured": false,
     "name": "アンナ（10代）",
     "region": "ブダペスト",

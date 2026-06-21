@@ -323,11 +323,23 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  margin-top:22px;
  padding:34px 34px;
  border-radius:24px;
+
  background:
-  radial-gradient(circle at top left, rgba(29,78,216,.10), transparent 32%),
-  linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,255,.96));
- border:1px solid rgba(229,231,235,.95);
- box-shadow: 0 16px 38px rgba(17,24,39,.09);
+  radial-gradient(
+   circle at top left,
+   rgba(107,142,35,.08),
+   transparent 35%
+  ),
+  linear-gradient(
+   180deg,
+   #fffef8,
+   #f5efe1
+  );
+
+ border:1px solid #e7dcc5;
+
+ box-shadow:0 16px 38px rgba(17,24,39,.09);
+
  max-width:900px;
  margin-left:auto;
  margin-right:auto;

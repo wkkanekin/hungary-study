@@ -911,15 +911,21 @@ details p{
  fill: currentColor;
 }
 .snsLabel{font-weight:950; color:#0f2a5a; font-size:12px}
-
-/* Philosophy（理念）：白枠（カード） */
+/* Philosophy（理念）：暖色カード */
 .philosophyCard{
  max-width: 860px;
  margin: 0 auto;
  padding: 16px;
  border-radius: 18px;
- background: rgba(255,255,255,.92);
- border: 1px solid rgba(229,231,235,.9);
+
+ background:
+  linear-gradient(
+   180deg,
+   #fffef8,
+   #f5efe1
+  );
+
+ border: 1px solid #e7dcc5;
  box-shadow: 0 10px 22px rgba(17,24,39,.05);
  text-align:center;
 }
@@ -2061,7 +2067,7 @@ details p{
 
 .comparisonTable th:nth-child(3),
 .comparisonTable td:nth-child(3){
-  background:#f8fbff;
+  background:#faf5e9;
   color:#0f2a5a;
   font-weight:950;
 }
@@ -2070,10 +2076,15 @@ details p{
   margin-top:20px;
   padding:20px;
   border-radius:20px;
+
   background:
-    radial-gradient(circle at top left, rgba(29,78,216,.10), transparent 34%),
-    linear-gradient(180deg, #ffffff, #f8fbff);
-  border:1px solid rgba(29,78,216,.14);
+   linear-gradient(
+    180deg,
+    #fffef8,
+    #f5efe1
+   );
+
+  border:1px solid #e7dcc5;
   text-align:center;
 }
 

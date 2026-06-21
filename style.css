@@ -1994,3 +1994,125 @@ details p{
     padding: 20px;
   }
 }
+
+/* =========================
+   Comparison
+========================= */
+
+.comparisonCard{
+  max-width:980px;
+  padding:24px;
+}
+
+.comparisonLead{
+  margin:0 0 20px;
+  text-align:center;
+  color:#0f2a5a;
+  font-size:22px;
+  line-height:1.7;
+  font-weight:950;
+}
+
+.comparisonTableWrap{
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+.comparisonTable{
+  width:100%;
+  min-width:720px;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(229,231,235,.95);
+  background:#fff;
+}
+
+.comparisonTable th{
+  padding:14px 12px;
+  background:#f3f6ff;
+  color:#0f2a5a;
+  font-weight:950;
+  text-align:left;
+  border-bottom:1px solid rgba(229,231,235,.95);
+}
+
+.comparisonTable td{
+  padding:14px 12px;
+  color:#374151;
+  font-weight:850;
+  line-height:1.7;
+  border-bottom:1px solid rgba(229,231,235,.85);
+  vertical-align:top;
+}
+
+.comparisonTable tr:last-child td{
+  border-bottom:none;
+}
+
+.comparisonTable th:first-child,
+.comparisonTable td:first-child{
+  width:24%;
+  color:#0f2a5a;
+  font-weight:950;
+}
+
+.comparisonTable th:nth-child(3),
+.comparisonTable td:nth-child(3){
+  background:#f8fbff;
+  color:#0f2a5a;
+  font-weight:950;
+}
+
+.comparisonMessage{
+  margin-top:20px;
+  padding:20px;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at top left, rgba(29,78,216,.10), transparent 34%),
+    linear-gradient(180deg, #ffffff, #f8fbff);
+  border:1px solid rgba(29,78,216,.14);
+  text-align:center;
+}
+
+.comparisonMessage h3{
+  margin:0;
+  color:#0f2a5a;
+  font-size:22px;
+  line-height:1.6;
+  font-weight:950;
+}
+
+.comparisonMessage p{
+  margin:10px 0 0;
+  color:#374151;
+  font-weight:850;
+  line-height:1.8;
+}
+
+@media (max-width:720px){
+  .comparisonCard{
+    padding:18px 14px;
+  }
+
+  .comparisonLead{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .comparisonTable{
+    min-width:680px;
+  }
+
+  .comparisonTable th,
+  .comparisonTable td{
+    padding:12px 10px;
+    font-size:14px;
+  }
+
+  .comparisonMessage h3{
+    font-size:18px;
+  }
+}

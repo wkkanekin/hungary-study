@@ -2119,3 +2119,20 @@ details p{
     font-size:18px;
   }
 }
+
+.comparisonSub{
+  margin:0 0 20px;
+  text-align:center;
+  color:#0f2a5a;
+  font-size:18px;
+  line-height:1.8;
+  font-weight:900;
+}
+
+.comparisonTable th:nth-child(3),
+.comparisonTable td:nth-child(3){
+  background:#fff7df;
+  color:#0f2a5a;
+  font-weight:950;
+  border-left:2px solid rgba(230,154,0,.28);
+}

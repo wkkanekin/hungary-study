@@ -1,0 +1,29 @@
+[
+  {
+    "id": "yugo-scholarship",
+    "enabled": true,
+
+    "title": "在学中にハンガリー政府奨学金を獲得した話",
+
+    "author": "ユウゴ",
+    "authorId": "okada",
+
+    "university": "University of Debrecen",
+
+    "date": "2026-06-24",
+
+    "thumbnail": "images/students/okada.jpg",
+
+    "summary": "University of Debrecen在学中にスティペンディウム・ハンガリカムを獲得した体験談。",
+
+    "tags": [
+      "奨学金",
+      "デブレツェン",
+      "Computer Science"
+    ],
+
+    "readingTime": "5分",
+
+    "url": "column-yugo-scholarship.html"
+  }
+]

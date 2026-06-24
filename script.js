@@ -18,6 +18,8 @@ const studentListEl = document.getElementById("studentList");
 const recentStudentListEl = document.getElementById("recentStudentList");
 const dailyGuideListEl = document.getElementById("dailyGuideList");
 
+const latestColumnListEl = document.getElementById("latestColumnList");
+
 const noResultsEl = document.getElementById("noResults");
 const hitCountEl = document.getElementById("hitCount");
  // SNS
@@ -375,6 +377,82 @@ async function loadDailyGuides() {
   }
 
   renderDailyGuides(data);
+}
+
+/* =========================
+   Columns
+========================= */
+
+function renderLatestColumns(columns) {
+  if (!latestColumnListEl) return;
+
+  const list = columns
+    .filter((column) => {
+      return (
+        column &&
+        column.enabled === true &&
+        String(column.url || "").trim()
+      );
+    })
+    .sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    })
+    .slice(0, 3);
+
+  if (!list.length) {
+    latestColumnListEl.innerHTML = "";
+    return;
+  }
+
+  latestColumnListEl.innerHTML = list.map((column) => {
+    return `
+      <article class="columnCard">
+
+        <img
+          class="columnImg"
+          src="${esc(column.thumbnail || "images/students/okada.jpg")}"
+          alt="${esc(column.title || "現役生コラム")}"
+        />
+
+        <div class="columnBody">
+
+          <div class="columnMeta">
+            ${esc(column.author || "現役生")}｜${esc(column.university || "")}｜${esc(column.date || "")}
+          </div>
+
+          <h3 class="columnTitle">
+            ${esc(column.title || "")}
+          </h3>
+
+          <p class="columnDesc">
+            ${esc(shortText(column.summary || "", 90))}
+          </p>
+
+          <a
+            class="btn primary"
+            href="${esc(column.url)}"
+          >
+            記事を読む
+          </a>
+
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+async function loadColumns() {
+  const txt = await fetchText("columns.json");
+
+  const data = safeJsonParse(txt, "columns.json");
+
+  if (!Array.isArray(data)) {
+    throw new Error(
+      `columns.json の形式が不正です（配列にしてください）。type=${typeof data}`
+    );
+  }
+
+  renderLatestColumns(data);
 }
 
 
@@ -896,10 +974,41 @@ async function tryLoadImagesAny() {
  function applyImages(cfg) {
  if (!cfg || typeof cfg !== "object") return;
 
- const heroUrl = getVersionedImageUrl(cfg?.hero, ["imageUrl", "url"], ["imageVersion", "version", "v"]);
- if (heroUrl) {
- document.documentElement.style.setProperty("--hero-image", `url("${heroUrl}")`);
- }
+ const heroPcUrl = resolveVersionedAssetUrl(
+  cfg?.hero?.pcImageUrl,
+  cfg?.hero?.imageVersion
+);
+
+const heroTabUrl = resolveVersionedAssetUrl(
+  cfg?.hero?.tabImageUrl,
+  cfg?.hero?.imageVersion
+);
+
+const heroSpUrl = resolveVersionedAssetUrl(
+  cfg?.hero?.spImageUrl,
+  cfg?.hero?.imageVersion
+);
+
+if (heroPcUrl) {
+  document.documentElement.style.setProperty(
+    "--hero-image-pc",
+    `url("${heroPcUrl}")`
+  );
+}
+
+if (heroTabUrl) {
+  document.documentElement.style.setProperty(
+    "--hero-image-tab",
+    `url("${heroTabUrl}")`
+  );
+}
+
+if (heroSpUrl) {
+  document.documentElement.style.setProperty(
+    "--hero-image-sp",
+    `url("${heroSpUrl}")`
+  );
+}
 
  const logoUrl = getVersionedImageUrl(
  cfg?.hero,
@@ -1604,6 +1713,15 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
    }
  }
 
+try {
+  await loadColumns();
+} catch (e) {
+  console.error(e);
+
+  if (latestColumnListEl) {
+    latestColumnListEl.innerHTML = "";
+  }
+}
 
  try {
  await loadConfig();

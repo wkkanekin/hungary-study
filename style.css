@@ -12,7 +12,9 @@
  --max:1280px;
 
  /* JS(images.json)で上書きされる。読み込み完了まで「デフォルト画像を出さない」 */
- --hero-image: none;
+--hero-image-pc:none;
+--hero-image-tab:none;
+--hero-image-sp:none;
 
  /* HEROの見え方調整（端末別に上書き可能） */
  --hero-pos: 50% 50%;
@@ -212,12 +214,24 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .heroBg{
  position:absolute;
  inset:0;
- background-color: #0b1b3a;
- background-image: var(--hero-image);
- background-size: cover;
- background-position: var(--hero-pos);
- filter: saturate(1.05);
- transform: scale(1.02);
+ background-color:#0b1b3a;
+ background-image:var(--hero-image-pc);
+ background-size:cover;
+ background-position:var(--hero-pos);
+ filter:saturate(1.05);
+ transform:scale(1.02);
+}
+
+@media (max-width:1023px){
+ .heroBg{
+  background-image:var(--hero-image-tab);
+ }
+}
+
+@media (max-width:720px){
+ .heroBg{
+  background-image:var(--hero-image-sp);
+ }
 }
 .heroBg::after{
  content:"";

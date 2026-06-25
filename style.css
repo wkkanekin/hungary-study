@@ -230,7 +230,7 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  content:"";
  position:absolute;
  inset:0;
- background: linear-gradient(120deg, rgba(8,18,44,.74), rgba(8,18,44,.35), rgba(255,255,255,0));
+ background: linear-gradient(120deg, rgba(8,18,44,.45), rgba(8,18,44,.15), rgba(255,255,255,0));
 }
 
 

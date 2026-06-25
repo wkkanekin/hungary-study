@@ -2,50 +2,38 @@
   {
     "id": "yugo-scholarship",
     "enabled": true,
-
     "title": "在学中にハンガリー政府奨学金を獲得した話",
-
     "author": "ユウゴ",
     "authorId": "okada",
-
     "university": "University of Debrecen",
-
     "date": "2026-06-24",
-
-    "thumbnail": "images/students/okada.jpg",
-
+    "thumbnail": "images/columns/yugo-scholarship.JPG",
     "summary": "University of Debrecen在学中にスティペンディウム・ハンガリカムを獲得した体験談。",
-
     "tags": [
       "奨学金",
       "デブレツェン",
       "Computer Science"
     ],
-
     "readingTime": "5分",
-
     "url": "column-yugo-scholarship.html"
   },
-
-{
-  "id": "yugo-english",
-  "enabled": true,
-  "title": "ハンガリーでの英語について",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-06-25",
-  "thumbnail": "images/students/okada.jpg",
-  "summary": "IELTS5.5でハンガリーへ進学したユウゴが、大学・友達・日常生活で実際にどれくらい英語を使うのかを体験ベースで紹介します。",
-  "tags": [
-    "英語",
-    "IELTS",
-    "デブレツェン",
-    "大学生活"
-  ],
-  "readingTime": "5分",
-  "url": "column-yugo-english.html"
-}
-
-
+  {
+    "id": "yugo-english",
+    "enabled": true,
+    "title": "ハンガリーでの英語について",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-06-25",
+    "thumbnail": "images/columns/yugo-english.jpg",
+    "summary": "IELTS5.5でハンガリーへ進学したユウゴが、大学・友達・日常生活で実際にどれくらい英語を使うのかを体験ベースで紹介します。",
+    "tags": [
+      "英語",
+      "IELTS",
+      "デブレツェン",
+      "大学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-english.html"
+  }
 ]

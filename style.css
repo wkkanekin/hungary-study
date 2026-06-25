@@ -12,7 +12,9 @@
  --max:1280px;
 
  /* JS(images.json)で上書きされる。読み込み完了まで「デフォルト画像を出さない」 */
- --hero-image: none;
+--hero-image-pc:none;
+--hero-image-tab:none;
+--hero-image-sp:none;
 
  /* HEROの見え方調整（端末別に上書き可能） */
  --hero-pos: 50% 50%;
@@ -205,18 +207,31 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  padding:18px 18px 16px;
  position:relative;
  overflow:hidden;
- min-height:450px;
+ min-height: clamp(120px, 18vw, 240px);
  display:flex;
  align-items:center;
-}.heroBg{
+}
+.heroBg{
  position:absolute;
  inset:0;
- background-color: #0b1b3a;
- background-image: var(--hero-image);
- background-size: cover;
- background-position: var(--hero-pos);
- filter: saturate(1.05);
- transform: scale(1.02);
+ background-color:#0b1b3a;
+ background-image:var(--hero-image-pc);
+ background-size:cover;
+ background-position:var(--hero-pos);
+ filter:saturate(1.05);
+ transform:scale(1);
+}
+
+@media (max-width:1023px){
+ .heroBg{
+  background-image:var(--hero-image-tab);
+ }
+}
+
+@media (max-width:720px){
+ .heroBg{
+  background-image:var(--hero-image-sp);
+ }
 }
 .heroBg::after{
  content:"";
@@ -955,17 +970,22 @@ details p{
 }
 
 /* HEROの表示最適化（PC / タブレット / スマホ） */
-
-@media (max-width: 1023px) and (min-width: 721px){
- .heroHeader{ min-height: clamp(140px, 20vw, 240px); }
+@media (min-width: 1024px){
+ .heroHeader{ min-height: clamp(300px, 28vw, 520px); }
  :root{ --hero-pos: 50% 50%; }
 }
+
+@media (max-width: 1023px) and (min-width: 721px){
+ .heroHeader{ min-height: clamp(300px, 60vw, 760px); }
+ :root{ --hero-pos: 50% 50%; }
+}
+
 @media (max-width: 720px){
- .heroHeader{ padding:16px 14px 14px; min-height: 170px; }
+ .heroHeader{ padding:16px 14px 14px; min-height: 92vw; }
  .headerTitle{ font-size:22px; }
  .logoBox{ width:48px; height:48px; border-radius:14px; }
- :root{ --hero-pos: 55% 40%; }
-
+ :root{ --hero-pos: 50% 50%; }
+}
  .guideLeadBox{
   padding:18px 16px;
  }
@@ -2195,14 +2215,4 @@ details p{
 }
 #columns .simpleCard{
   padding:32px;
-}
-
-.heroHeader{
- padding:18px 18px 16px;
- position:relative;
- overflow:hidden;
- min-height:450px !important;
- display:flex;
- align-items:center;
- border:5px solid red;
 }

@@ -25,5 +25,27 @@
     "readingTime": "5分",
 
     "url": "column-yugo-scholarship.html"
-  }
+  },
+
+{
+  "id": "yugo-english",
+  "enabled": true,
+  "title": "ハンガリーでの英語について",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-06-25",
+  "thumbnail": "images/students/okada.jpg",
+  "summary": "IELTS5.5でハンガリーへ進学したユウゴが、大学・友達・日常生活で実際にどれくらい英語を使うのかを体験ベースで紹介します。",
+  "tags": [
+    "英語",
+    "IELTS",
+    "デブレツェン",
+    "大学生活"
+  ],
+  "readingTime": "5分",
+  "url": "column-yugo-english.html"
+}
+
+
 ]

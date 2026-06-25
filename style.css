@@ -971,10 +971,14 @@ details p{
 
 /* HEROの表示最適化（PC / タブレット / スマホ） */
 @media (min-width: 1024px){
- .heroHeader{ min-height: clamp(300px, 28vw, 520px); }
- :root{ --hero-pos: 50% 50%; }
-}
+ .heroHeader{
+  min-height: 620px;
+ }
 
+ :root{
+  --hero-pos: 50% 50%;
+ }
+}
 @media (max-width: 1023px) and (min-width: 721px){
  .heroHeader{ min-height: clamp(300px, 60vw, 760px); }
  :root{ --hero-pos: 50% 50%; }

@@ -955,10 +955,7 @@ details p{
 }
 
 /* HEROの表示最適化（PC / タブレット / スマホ） */
-@media (min-width: 1024px){
- .heroHeader{ min-height: clamp(150px, 14vw, 260px); }
- :root{ --hero-pos: 50% 45%; }
-}
+
 @media (max-width: 1023px) and (min-width: 721px){
  .heroHeader{ min-height: clamp(140px, 20vw, 240px); }
  :root{ --hero-pos: 50% 50%; }

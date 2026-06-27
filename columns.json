@@ -35,5 +35,24 @@
     ],
     "readingTime": "5分",
     "url": "column-yugo-english.html"
-  }
+  },
+{
+  "id": "yugo-second-semester",
+  "enabled": true,
+  "title": "2学期やる気なくなる問題",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-06-27",
+  "thumbnail": "images/columns/yugo-second-semester.jpg",
+  "summary": "留学生活2学期でモチベーションが下がってしまった実体験と、その乗り越え方について紹介します。",
+  "tags": [
+    "大学生活",
+    "モチベーション",
+    "デブレツェン",
+    "留学生活"
+  ],
+  "readingTime": "5分",
+  "url": "column-yugo-second-semester.html"
+}
 ]

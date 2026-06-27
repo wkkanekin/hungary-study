@@ -97,9 +97,9 @@
   },
   {
     "id": "university-bueb",
-    "enabled": false,
-    "featured": false,
-    "homePick": false,
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
     "comingSoon": false,
     "title": "Budapest University of Economics and Business（BUEB）",
     "description": "BUEBの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
@@ -263,5 +263,17 @@
     "category": "生活情報",
     "url": "guide-juminhyo-insurance.html",
     "date": "2026-06-10"
-  }
+  },
+{
+  "id": "japan-vs-hungary-university-exam",
+  "enabled": true,
+  "featured": true,
+  "homePick": true,
+  "comingSoon": false,
+  "title": "日本の大学受験が苦手でも海外大学という選択肢がある",
+  "description": "日本とハンガリーの大学入試を比較。必要な試験科目や英語力、面接、モチベーションレター、返済不要の奨学金まで現役大学院生がわかりやすく解説します。",
+  "category": "出願準備",
+  "url": "guide-japan-vs-hungary-university-exam.html",
+  "date": "2026-06-27"
+}
 ]

@@ -2,50 +2,57 @@
   {
     "id": "yugo-scholarship",
     "enabled": true,
-
     "title": "在学中にハンガリー政府奨学金を獲得した話",
-
     "author": "ユウゴ",
     "authorId": "okada",
-
     "university": "University of Debrecen",
-
     "date": "2026-06-24",
-
-    "thumbnail": "images/students/okada.jpg",
-
+    "thumbnail": "images/columns/yugo-scholarship.JPG",
     "summary": "University of Debrecen在学中にスティペンディウム・ハンガリカムを獲得した体験談。",
-
     "tags": [
       "奨学金",
       "デブレツェン",
       "Computer Science"
     ],
-
     "readingTime": "5分",
-
     "url": "column-yugo-scholarship.html"
   },
-
+  {
+    "id": "yugo-english",
+    "enabled": true,
+    "title": "ハンガリーでの英語について",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-06-25",
+    "thumbnail": "images/columns/yugo-english.jpg",
+    "summary": "IELTS5.5でハンガリーへ進学したユウゴが、大学・友達・日常生活で実際にどれくらい英語を使うのかを体験ベースで紹介します。",
+    "tags": [
+      "英語",
+      "IELTS",
+      "デブレツェン",
+      "大学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-english.html"
+  },
 {
-  "id": "yugo-english",
+  "id": "yugo-second-semester",
   "enabled": true,
-  "title": "ハンガリーでの英語について",
+  "title": "2学期やる気なくなる問題",
   "author": "ユウゴ",
   "authorId": "okada",
   "university": "University of Debrecen",
-  "date": "2026-06-25",
-  "thumbnail": "images/students/okada.jpg",
-  "summary": "IELTS5.5でハンガリーへ進学したユウゴが、大学・友達・日常生活で実際にどれくらい英語を使うのかを体験ベースで紹介します。",
+  "date": "2026-06-27",
+  "thumbnail": "images/columns/yugo-second-semester.jpg",
+  "summary": "留学生活2学期でモチベーションが下がってしまった実体験と、その乗り越え方について紹介します。",
   "tags": [
-    "英語",
-    "IELTS",
+    "大学生活",
+    "モチベーション",
     "デブレツェン",
-    "大学生活"
+    "留学生活"
   ],
   "readingTime": "5分",
-  "url": "column-yugo-english.html"
+  "url": "column-yugo-second-semester.html"
 }
-
-
 ]

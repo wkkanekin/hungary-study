@@ -54,5 +54,24 @@
   ],
   "readingTime": "5分",
   "url": "column-yugo-second-semester.html"
+},
+{
+  "id": "yugo-homesick",
+  "enabled": true,
+  "title": "結構しんどい！ホームシックについて",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-06-28",
+  "thumbnail": "images/columns/yugo-homesick.jpg",
+  "summary": "ハンガリー留学中に感じたホームシックの実体験と、時間経過・日々の過ごし方・思い出の品などを通じた乗り越え方を紹介します。",
+  "tags": [
+    "ホームシック",
+    "留学生活",
+    "メンタル",
+    "デブレツェン"
+  ],
+  "readingTime": "6分",
+  "url": "column-yugo-homesick.html"
 }
 ]

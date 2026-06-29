@@ -2137,8 +2137,8 @@ details p{
 .columnGrid{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:16px;
-  max-width:980px;
+  gap:24px;
+  max-width:1280px;
   margin:0 auto;
 }
 
@@ -2152,7 +2152,7 @@ details p{
 
 .columnImg{
   width:100%;
-  height:180px;
+  height:220px;
   object-fit:cover;
   display:block;
 }
@@ -2189,5 +2189,6 @@ details p{
   }
 }
 #columns .simpleCard{
-  padding:32px;
+  max-width:1280px;
+  padding:20px 16px;
 }

@@ -2192,3 +2192,14 @@ details p{
   max-width:1280px;
   padding:20px 16px;
 }
+
+/* スマホだけ料金表示を1行に収める */
+@media (max-width:720px){
+
+  .infoCard .big{
+    font-size:52px;
+    line-height:1.1;
+    white-space:nowrap;
+  }
+
+}

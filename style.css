@@ -1630,6 +1630,7 @@ details p{
   margin:0 auto;
 }
 
+
 .dailyGuideCard{
   padding:16px;
   border-radius:20px;
@@ -1639,7 +1640,16 @@ details p{
   display:flex;
   flex-direction:column;
   gap:12px;
-  min-height:260px;
+  min-height:430px;
+}
+
+.dailyGuideImg{
+  width:calc(100% + 32px);
+  height:190px;
+  margin:-16px -16px 0;
+  object-fit:cover;
+  display:block;
+  border-radius:20px 20px 0 0;
 }
 
 .dailyGuideCardTop{

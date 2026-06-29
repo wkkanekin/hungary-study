@@ -323,47 +323,53 @@ function renderDailyGuides(guides) {
   dailyGuideListEl.innerHTML = list.map((guide) => {
 
     return `
-      <article class="dailyGuideCard">
+  <article class="dailyGuideCard">
 
-        <div class="dailyGuideCardTop">
+    <img
+      class="dailyGuideImg"
+      src="${esc(guide.thumbnail || "images/guides/guide-default.jpg")}"
+      alt="${esc(guide.title || "ガイド記事")}"
+      loading="lazy"
+    />
 
-          <span class="dailyGuideCategory">
-            ${esc(guide.category || "ガイド")}
-          </span>
+    <div class="dailyGuideCardTop">
 
-          ${
-            guide.date
-              ? `
-                <span class="dailyGuideDate">
-                  ${esc(guide.date)}
-                </span>
-              `
-              : ""
-          }
+      <span class="dailyGuideCategory">
+        ${esc(guide.category || "ガイド")}
+      </span>
 
-        </div>
+      ${
+        guide.date
+          ? `
+            <span class="dailyGuideDate">
+              ${esc(guide.date)}
+            </span>
+          `
+          : ""
+      }
 
-        <h4 class="dailyGuideCardTitle">
-          ${esc(guide.title)}
-        </h4>
+    </div>
 
-        <p class="dailyGuideCardDesc">
-          ${esc(shortText(guide.description, 96))}
-        </p>
+    <h4 class="dailyGuideCardTitle">
+      ${esc(guide.title)}
+    </h4>
 
-        <a
-          class="btn dailyGuideBtn"
-          href="${esc(guide.url)}"
-        >
-          記事を読む
-        </a>
+    <p class="dailyGuideCardDesc">
+      ${esc(shortText(guide.description, 96))}
+    </p>
 
-      </article>
-    `;
+    <a
+      class="btn dailyGuideBtn"
+      href="${esc(guide.url)}"
+    >
+      記事を読む
+    </a>
 
-  }).join("");
+  </article>
+`;
+
+}).join("");
 }
-
 async function loadDailyGuides() {
 
   const txt = await fetchText("guides.json");

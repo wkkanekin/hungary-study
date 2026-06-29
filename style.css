@@ -2203,12 +2203,12 @@ details p{
   padding:20px 16px;
 }
 
-/* スマホだけ料金表示を1行に収める */
+/* スマホだけ料金表示 */
 @media (max-width:720px){
 
   .infoCard .big{
-    font-size:52px;
-    line-height:1.1;
+    font-size:28px;
+    line-height:1.15;
     white-space:nowrap;
   }
 

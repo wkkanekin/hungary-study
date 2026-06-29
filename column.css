@@ -10,7 +10,7 @@ a{
 }
 
 .columnPage{
-  max-width:1080px;
+  max-width:1280px;
   margin:0 auto;
   padding:34px 16px 70px;
 }
@@ -56,7 +56,7 @@ a{
   margin-top:28px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:18px;
+  gap:22px;
 }
 
 .columnListCard{
@@ -79,7 +79,7 @@ a{
 }
 
 .columnCardImageWrap{
-  height:210px;
+  height:240px;
   background:#eaf1ff;
   overflow:hidden;
 }

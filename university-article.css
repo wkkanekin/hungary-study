@@ -93,9 +93,7 @@ a{
 
 .heroImage{
   width:100%;
-  height:300px;
-  object-fit:cover;
-  object-position:center;
+  height:auto;
   display:block;
 }
 
@@ -583,7 +581,7 @@ thead th{
 
 @media (max-width: 860px){
   .heroImage{
-    height:240px;
+    height:auto;
   }
 
   .universityTitle{
@@ -608,7 +606,7 @@ thead th{
   }
 
   .heroImage{
-    height:190px;
+    height:auto;
   }
 
   .heroBody{

@@ -59,7 +59,8 @@
       description: String(raw.description || "").trim(),
       category: String(raw.category || "").trim(),
       url: String(raw.url || "").trim(),
-      date: String(raw.date || "").trim()
+      date: String(raw.date || "").trim(),
+      thumbnail: String(raw.thumbnail || "").trim()
     };
   }
 
@@ -77,15 +78,28 @@
   function createFeaturedCard(article) {
     return `
       <article class="featuredCard card">
+        <a href="${escapeHtml(article.url)}">
+          <img
+            class="articleImg"
+            src="${escapeHtml(article.thumbnail)}"
+            alt="${escapeHtml(article.title)}"
+            loading="lazy"
+          >
+        </a>
+
         <div class="featuredBody">
           <span class="chip">${escapeHtml(article.category)}</span>
+
           <h3 class="featuredTitle">
             <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
           </h3>
+
           <p class="featuredDesc">${escapeHtml(article.description)}</p>
+
           <div class="cardMeta">
             <span>公開日：${escapeHtml(article.date || "未設定")}</span>
           </div>
+
           <div class="cardActions">
             <a class="btn primary" href="${escapeHtml(article.url)}">記事を読む</a>
           </div>
@@ -97,15 +111,28 @@
   function createArticleCard(article) {
     return `
       <article class="articleCard card">
+        <a href="${escapeHtml(article.url)}">
+          <img
+            class="articleImg"
+            src="${escapeHtml(article.thumbnail)}"
+            alt="${escapeHtml(article.title)}"
+            loading="lazy"
+          >
+        </a>
+
         <div class="articleBody">
           <span class="chip">${escapeHtml(article.category)}</span>
+
           <h3 class="articleTitle">
             <a href="${escapeHtml(article.url)}">${escapeHtml(article.title)}</a>
           </h3>
+
           <p class="articleDesc">${escapeHtml(article.description)}</p>
+
           <div class="cardMeta">
             <span>公開日：${escapeHtml(article.date || "未設定")}</span>
           </div>
+
           <div class="cardActions">
             <a class="btn" href="${escapeHtml(article.url)}">記事を読む</a>
           </div>
@@ -148,6 +175,7 @@
     els.categoryRow.innerHTML = categories.map((category) => {
       const activeClass = category === state.currentCategory ? " active" : "";
       const categoryAttr = escapeHtml(category);
+
       return `
         <button type="button" class="categoryChip${activeClass}" data-category="${categoryAttr}">
           ${categoryAttr}

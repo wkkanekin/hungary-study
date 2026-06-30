@@ -73,5 +73,33 @@
   ],
   "readingTime": "6分",
   "url": "column-yugo-homesick.html"
+},
+{
+  "id": "kaneko-room-search",
+  "enabled": true,
+
+  "title": "大学に寮がない！？ハンガリーで部屋探しに苦労した話",
+
+  "author": "カネコ",
+  "authorId": "kaneko",
+
+  "university": "Budapest University of Economics and Business",
+
+  "date": "2026-07-01",
+
+  "thumbnail": "images/columns/room-search-hero.jpg",
+
+  "summary": "BUEB入学後、大学に寮がないことを知り、約1か月間ホステル生活を送りながら部屋探しをした実体験。FacebookやIngatlanでの探し方や、留学前に知っておきたい注意点を紹介します。",
+
+  "tags": [
+    "ブダペスト",
+    "物件探し",
+    "住まい"
+  ],
+
+  "readingTime": "7分",
+
+  "url": "column-kaneko-budapest-room.html"
 }
+
 ]

@@ -452,3 +452,9 @@ a{color:inherit}
   display:block;
   border-radius:20px 20px 0 0;
 }
+
+.featuredCard .articleImg{
+  height:200px;
+  object-fit:cover;
+  object-position:center;
+}

@@ -92,9 +92,9 @@
   },
   {
     "id": "university-debrecen",
-    "enabled": false,
-    "featured": false,
-    "homePick": false,
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
     "comingSoon": false,
     "title": "University of Debrecen（デブレツェン大学）",
     "description": "University of Debrecenの特徴、学部、学費、キャンパス、現役生情報をまとめています。",

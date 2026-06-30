@@ -448,13 +448,16 @@ a{color:inherit}
 .articleImg{
   width:100%;
   height:180px;
-  object-fit:cover;
+  object-fit:contain;
+  object-position:center;
   display:block;
+  background:#f8fbff;
   border-radius:20px 20px 0 0;
 }
 
 .featuredCard .articleImg{
-  height:200px;
-  object-fit:cover;
+  height:220px;
+  object-fit:contain;
   object-position:center;
+  background:#f8fbff;
 }

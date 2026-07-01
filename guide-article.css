@@ -659,9 +659,3 @@ thead th{
   }
 }
 
-@media (min-width:901px){
-  .heroFigure .articleImage{
-    max-height:300px;
-    object-fit:contain;
-  }
-}

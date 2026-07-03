@@ -100,6 +100,35 @@
   "readingTime": "7分",
 
   "url": "column-kaneko-budapest-room.html"
+},
+
+{
+  "id": "yugo-daily-life",
+  "enabled": true,
+
+  "title": "デブレツェン大学生の日常（1年前期編）",
+
+  "author": "ユウゴ",
+  "authorId": "okada",
+
+  "university": "University of Debrecen",
+
+  "date": "2026-07-03",
+
+  "thumbnail": "images/columns/yugo-debrecen-daily-hero.jpg",
+
+  "summary": "Computer Science1年前期の時間割や授業内容、図書館での勉強、三連休の過ごし方まで、デブレツェン大学でのリアルな1週間を紹介します。",
+
+  "tags": [
+    "大学生活",
+    "デブレツェン",
+    "Computer Science",
+    "授業"
+  ],
+
+  "readingTime": "7分",
+
+  "url": "column-yugo-daily-life.html"
 }
 
 ]

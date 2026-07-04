@@ -659,3 +659,10 @@ thead th{
   }
 }
 
+.imageCaption{
+  margin:0 0 20px;
+  text-align:center;
+  font-size:.92rem;
+  color:var(--muted);
+  line-height:1.6;
+}

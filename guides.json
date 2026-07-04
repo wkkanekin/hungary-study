@@ -297,5 +297,18 @@
     "url": "guide-japan-vs-hungary-university-exam.html",
     "date": "2026-06-27",
     "thumbnail": "images/guides/japan-vs-hungary-university-exam.jpg"
-  }
+  },
+{
+  "id": "hungary-d-visa",
+  "enabled": true,
+  "featured": true,
+  "homePick": true,
+  "comingSoon": false,
+  "title": "Dビザとは？ハンガリー留学前に知っておきたいビザ・滞在許可を解説",
+  "description": "ハンガリー留学に必要なDビザとは何か、日本人は取得する必要があるのか、滞在許可証との違い、実際の申請体験をわかりやすく解説します。",
+  "category": "出願準備",
+  "url": "guide-hungary-d-visa.html",
+  "date": "2026-07-04",
+  "thumbnail": "images/guides/guide-hungary-d-visa-hero.jpg"
+}
 ]

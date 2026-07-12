@@ -1,77 +1,75 @@
-[
-  {
-    "id": "kaneko",
-    "enabled": true,
-    "featured": false,
-    "name": "カネコ（30代）",
-    "region": "ブダペスト",
-    "course": "経営",
-    "university": "Budapest University of Economics and Business",
-    "major": "Tourism Management（修士）",
-    "entryYear": "2025",
-    "year": "修士1年",
-    "admissionEnglish": "IELTS 7",
-    "selectionFormat": "書類＋面接（オンライン）",
-    "timeToPass": "英語対策4年以上＋出願準備1～2ヶ月",
-    "previousEducation": "日本の国立大学（理系）卒",
-    "workYears": 10,
-    "language": "CEFR C1（英語）",
-    "meeting": "Zoomのみ",
-    "stipendium": {
-      "has": true,
-      "name": "スティペンディウム・ハンガリカム"
-    },
-    "onlineConversation": [
-      {
-        "label": "IELTS7まで上げたオンライン英会話（QQ English)",
-        "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6DTCAA+4HHM+5ZU29&id1=kaneko&id2=qqenglish&id3=profile",
-        "ready": true
-      },
-  {
-    "label": "ネイティブキャンプ（英語学習用）",
-    "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=kaneko&id2=nativecamp&id3=profile",
-    "ready": true
-  }
-    ],
-    "studyMaterials": [
-      {
-        "label": "IELTS公式問題集18",
-        "url": "https://amzn.to/4bfNreT",
-        "ready": true
-      },
-      {
-        "label": "実践IELTS英単語3500　改訂版",
-        "url": "https://amzn.to/4711KBC",
-        "ready": true
-      }
-    ],
-    "bio": "日本の国立大学（理系）卒業後、外資系製薬会社で約10年間勤務。もともと「20代のうちに海外大学院で学びたい」と考えていましたが、多忙な仕事を言い訳にいつしかそのような目標もあきらめていました。しかし、30歳を迎えたタイミングで、ふと海外ドラマ『SUITS』を見て、こんなふうに国際的に活躍できるビジネスパーソンになりたいという思いが再び強くなり、長年の夢だった海外大学院進学に本気で挑戦しました。 英語は英検2級レベルからの再スタートでしたが、フルタイム勤務と両立しながら3年かけてIELTS 7.0を取得し、その後英検1級も取得しました。IELTSはほぼ毎月受験していたため、苦労や試行錯誤もかなり経験しています。 出願では、ハンガリーの大学院だけでなく、イギリスの大学院やドイツの応用科学大学院にも合格しました。一方で、資金面の問題から留学を断念した進学先もあり、合格後の現実まで含めて進学計画を立てる大切さも実感しています。 また、2024年には奨学金選考で不合格を経験しましたが、書類構成や志望動機の見せ方を見直し、翌年に合格。社会人留学、英語学習、奨学金対策、理系から文系への進路変更などについて、実体験をもとに具体的にお話しできます。",
-    "tags": [
-      "#社会人留学",
-      "#不合格経験",
-      "#英語学習",
-      "#キャリアチェンジ",
-      "#生活費"
-    ],
-    "links": [
-      {
-        "label": "大学公式サイト",
-        "url": "https://www.bge.hu/",
-        "ready": true
-      }
-    ],
-    "avatar": "images/students/kaneko.jpg",
-
-"reviews": [
-  {
-    "reviewer": "soyaさん",
-    "date": "2026-03",
-    "text": "海外大学院に進学された方から、海外生活のリアルな話や進学までの具体的な準備について、近い距離感で聞くことができました。業者の方からの説明だけでは分からない、実際に現地で生活しているからこそ分かる雰囲気や大変なこと、進学前にやっておくべきことなどを知ることができ、とても参考になりました。海外大学院に少しでも興味がある方や、進学するかどうか迷っている方は、まず気軽に話を聞いてみるだけでも大きなヒントになると思います。"
-  }
-],
-
-    "bookingUrl": "https://calendly.com/hungarystudy-info/kinya-40min"
+[{
+  "id": "kaneko",
+  "enabled": true,
+  "featured": false,
+  "name": "カネコ（30代）",
+  "region": "ブダペスト",
+  "course": "経営",
+  "university": "Budapest University of Economics and Business",
+  "major": "Tourism Management（修士）",
+  "entryYear": "2025",
+  "year": "修士1年",
+  "admissionEnglish": "IELTS 7",
+  "selectionFormat": "書類＋面接（オンライン）",
+  "timeToPass": "英語対策4年以上＋出願準備1～2ヶ月",
+  "previousEducation": "日本の大学 卒",
+  "workYears": 10,
+  "language": "CEFR C1（英語）",
+  "meeting": "Zoomのみ",
+  "stipendium": {
+    "has": true,
+    "name": "スティペンディウム・ハンガリカム"
   },
+  "onlineConversation": [
+    {
+      "label": "IELTS 7.0まで上げたオンライン英会話（QQ English）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6DTCAA+4HHM+5ZU29&id1=kaneko&id2=qqenglish&id3=profile",
+      "ready": true
+    },
+    {
+      "label": "ネイティブキャンプ（英語学習用）",
+      "url": "https://px.a8.net/svt/ejp?a8mat=4AZE01+6S3QSY+35VG+64JTE&id1=kaneko&id2=nativecamp&id3=profile",
+      "ready": true
+    }
+  ],
+  "studyMaterials": [
+    {
+      "label": "IELTS公式問題集18",
+      "url": "https://amzn.to/4bfNreT",
+      "ready": true
+    },
+    {
+      "label": "実践IELTS英単語3500 改訂版",
+      "url": "https://amzn.to/4711KBC",
+      "ready": true
+    }
+  ],
+  "bio": "日本の大学を卒業後、外資系製薬会社に約8年間勤務しました。その後、軽井沢のホテルでコンシェルジュ、フィリピンで語学学校マネージャーを経験し、現在はBudapest University of Economics and Businessの修士課程でTourism Managementを専攻しています。もともと20代のうちに海外大学院で学びたいと考えていましたが、仕事に追われる中で、その目標を少しずつ後回しにしていました。しかし、30歳を迎えた頃から、このまま挑戦しないまま終われば後悔するという気持ちが強くなり、長年の目標だった海外大学院進学に本格的に挑戦しました。英語は英検2級レベルからの再スタートでしたが、仕事と両立しながら学習を続け、IELTS 7.0と英検1級を取得しました。IELTSは何度も受験しており、スコアが思うように伸びない時期や、勉強方法を試行錯誤した経験もあります。出願では、ハンガリーの大学院だけでなく、イギリスの大学院やドイツの応用科学大学院にも合格しました。一方で、資金面の問題から進学を断念した大学もあり、合格後の学費や生活費まで含めて進学計画を立てる重要性も実感しています。また、2024年にはハンガリー政府奨学金の選考で不採用となりましたが、書類構成や志望動機を見直して翌年に再挑戦し、Stipendium Hungaricumに採用されました。社会人留学、英語学習、IELTS対策、海外大学院出願、奨学金対策、ハンガリーでの生活について、実体験をもとに具体的にお話しできます。",
+  "tags": [
+    "#社会人留学",
+    "#不合格経験",
+    "#英語学習",
+    "#海外大学院",
+    "#奨学金",
+    "#生活費"
+  ],
+  "links": [
+    {
+      "label": "大学公式サイト",
+      "url": "https://www.bge.hu/",
+      "ready": true
+    }
+  ],
+  "avatar": "images/students/kaneko.jpg",
+  "reviews": [
+    {
+      "reviewer": "soyaさん",
+      "date": "2026-03",
+      "text": "海外大学院に進学された方から、海外生活のリアルな話や進学までの具体的な準備について、近い距離感で聞くことができました。業者の方からの説明だけでは分からない、実際に現地で生活しているからこそ分かる雰囲気や大変なこと、進学前にやっておくべきことなどを知ることができ、とても参考になりました。海外大学院に少しでも興味がある方や、進学するかどうか迷っている方は、まず気軽に話を聞いてみるだけでも大きなヒントになると思います。"
+    }
+  ],
+  "bookingUrl": "https://calendly.com/hungarystudy-info/kinya-40min"
+},
   {
     "id": "yu",
     "enabled": false,

@@ -310,5 +310,19 @@
   "url": "guide-hungary-d-visa.html",
   "date": "2026-07-04",
   "thumbnail": "images/guides/guide-hungary-d-visa-hero.jpg"
+},
+
+{
+  "id": "elte-bme-concentration",
+  "enabled": true,
+  "featured": true,
+  "homePick": true,
+  "comingSoon": false,
+  "title": "【考察】ELTE・BMEへの集中で、日本人同士が共倒れしている？",
+  "description": "Stipendium Hungaricumでは応募先は2校まで。ELTEやBMEへの応募集中が日本人同士の競争を激しくしている可能性や、大学選びの考え方について解説します。",
+  "category": "出願準備",
+  "url": "guide-elte-bme-concentration.html",
+  "date": "2026-07-12",
+  "thumbnail": "images/guides/guide-elte-bme-concentration.jpg"
 }
 ]

@@ -1,8 +1,18 @@
 body{
   margin:0;
-  background:#f5f7fb;
+
+  background:linear-gradient(
+    180deg,
+    #faf7f1 0%,
+    #f6f1e7 100%
+  );
+
   color:#1f2937;
-  font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;
+
+  font-family:
+    "Noto Sans JP",
+    system-ui,
+    sans-serif;
 }
 
 a{

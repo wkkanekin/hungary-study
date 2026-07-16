@@ -1748,24 +1748,7 @@ try {
  if (mapStatusEl) mapStatusEl.textContent = "地図の初期化でエラー";
  }
 
-// ======================
-// 問い合わせフォーム蛇腹
-// ======================
 
-const contactAccordionBtn =
-  document.getElementById("contactAccordionBtn");
-
-const contactAccordionBody =
-  document.getElementById("contactAccordionBody");
-
-if (
-  contactAccordionBtn &&
-  contactAccordionBody
-) {
-  contactAccordionBtn.addEventListener("click", () => {
-    contactAccordionBody.classList.toggle("open");
-  });
-}
 
 // ======================
 // FAQ蛇腹

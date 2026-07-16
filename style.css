@@ -150,59 +150,86 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
  margin-top: 12px;
 }
 .topBarInner{
- max-width: var(--max);
- margin: 0 auto;
- padding: 10px 14px;
- display: flex;
- align-items: center;
- gap: 14px;
- position: relative;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:12px 14px;
+
+  display:flex;
+  align-items:stretch;
+  gap:14px;
+
+  position:relative;
 }
 
-/* スマホで横スクロールできるように */
+/* =========================
+   上部ナビゲーション
+========================= */
+
+/* PC：6列×2段で全項目を表示 */
 .topNav{
- display: flex;
- gap: 10px;
- overflow-x: auto;
- -webkit-overflow-scrolling: touch;
- flex: 1 1 auto;
- padding-bottom: 2px;
- position: relative;
- white-space: nowrap;
+  display:grid;
+  grid-template-columns:repeat(6, minmax(0, 1fr));
+  gap:10px;
+  width:100%;
+  flex:1 1 auto;
+  position:relative;
 }
-.topNav a{
- text-decoration: none;
- font-weight: 900;
- color: #0f2a5a;
- padding: 8px 10px;
- border-radius: 999px;
- border: 1px solid rgba(229,231,235,.9);
- background: rgba(255,255,255,.75);
- white-space: nowrap;
-}
-.topNav a:hover{ background: #f3f6ff; }
 
-/* 左右フェード */
+.topNav a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:44px;
+  padding:8px 10px;
+
+  border-radius:999px;
+  border:1px solid rgba(229,231,235,.9);
+  background:rgba(255,255,255,.75);
+
+  color:#0f2a5a;
+  text-decoration:none;
+  text-align:center;
+  font-size:14px;
+  line-height:1.35;
+  font-weight:900;
+
+  white-space:normal;
+}
+
+.topNav a:hover{
+  background:#f3f6ff;
+  transform:translateY(-1px);
+}
+
+/* PCでは横スクロール用のフェードを表示しない */
 .topNav::before,
 .topNav::after{
- content:"";
- position: sticky;
- top: 0;
- width: 18px;
- height: 100%;
- pointer-events: none;
- z-index: 2;
-}
-.topNav::before{
- left: 0;
- background: linear-gradient(90deg, rgba(244,246,251,1), rgba(244,246,251,0));
-}
-.topNav::after{
- right: 0;
- background: linear-gradient(270deg, rgba(244,246,251,1), rgba(244,246,251,0));
+  display:none;
 }
 
-/* Header / Hero */
+/* タブレット・スマホ：従来どおり横スクロール */
+@media (max-width:980px){
+
+  .topNav{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:4px;
+    white-space:nowrap;
+  }
+
+  .topNav a{
+    flex:0 0 auto;
+    min-height:auto;
+    padding:8px 10px;
+    font-size:14px;
+    white-space:nowrap;
+  }
+
+}/* Header / Hero */
 
 .heroBg{
  position:absolute;

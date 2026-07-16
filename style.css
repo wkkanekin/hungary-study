@@ -25,11 +25,10 @@ html{scroll-behavior:smooth}
 
 body{
  margin:0;
- font-family: ui-sans-serif, system-ui, -apple-system,
- "Segoe UI", "Noto Sans JP",
- "Hiragino Kaku Gothic ProN",
- Meiryo, Arial, sans-serif;
-
+ font-family:
+  "Noto Sans JP",
+  system-ui,
+  sans-serif;
  background: linear-gradient(
    180deg,
    #faf7f1 0%,

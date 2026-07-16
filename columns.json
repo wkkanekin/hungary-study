@@ -158,6 +158,35 @@
   "readingTime": "6分",
 
   "url": "column-yugo-pre-departure-cost.html"
+},
+{
+  "id": "yugo-humanities-cs",
+
+  "enabled": true,
+
+  "title": "文系でもCS留学できる？",
+
+  "author": "ユウゴ",
+  "authorId": "okada",
+
+  "university": "University of Debrecen",
+
+  "date": "2026-07-17",
+
+  "thumbnail": "images/columns/yugo-humanities-cs.jpg",
+
+  "summary": "文系出身でもComputer Scienceへ進学できるのか。数学・物理・プログラミングの難易度を実体験をもとに紹介します。",
+
+  "tags": [
+    "Computer Science",
+    "文系",
+    "デブレツェン",
+    "大学生活"
+  ],
+
+  "readingTime": "6分",
+
+  "url": "column-yugo-humanities-cs.html"
 }
 
 ]

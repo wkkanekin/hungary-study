@@ -129,6 +129,35 @@
   "readingTime": "7分",
 
   "url": "column-yugo-first-semester.html"
+},
+{
+  "id": "yugo-pre-departure-cost",
+
+  "enabled": true,
+
+  "title": "意外と知らない？留学するまでにかかるお金！",
+
+  "author": "ユウゴ",
+  "authorId": "okada",
+
+  "university": "University of Debrecen",
+
+  "date": "2026-07-16",
+
+  "thumbnail": "images/columns/yugo-pre-departure-cost.jpg",
+
+  "summary": "留学前に必要だった健康診断、家賃、残高証明、航空券など、実際にかかった費用を体験ベースで紹介します。",
+
+  "tags": [
+    "留学費用",
+    "デブレツェン",
+    "渡航準備",
+    "大学生活"
+  ],
+
+  "readingTime": "6分",
+
+  "url": "column-yugo-pre-departure-cost.html"
 }
 
 ]

@@ -1,5 +1,5 @@
 :root{
-  --bg:#f4f6fb;
+  --bg:#f6f1e7;
   --card:#ffffff;
   --text:#111827;
   --muted:#6b7280;
@@ -18,8 +18,18 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
-  background:linear-gradient(180deg,#eef3ff 0%, var(--bg) 28%, var(--bg) 100%);
+
+  font-family:
+    "Noto Sans JP",
+    system-ui,
+    sans-serif;
+
+  background:linear-gradient(
+    180deg,
+    #faf7f1 0%,
+    #f6f1e7 100%
+  );
+
   color:var(--text);
 }
 

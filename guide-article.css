@@ -730,3 +730,118 @@ thead th{
     padding:16px;
   }
 }
+
+/* ==========================================
+   Guide article images
+========================================== */
+
+/* 記事内の画像が画面幅を超えないようにする */
+.articleBody img,
+.articleHero img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ヒーロー画像 */
+.articleHeroImage {
+  width: 100%;
+  margin-top: 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+}
+
+.articleHeroImage img {
+  width: 100%;
+  max-height: 620px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 本文内の挿絵 */
+.articleFigure {
+  width: 100%;
+  margin: 24px 0 8px;
+}
+
+.articleFigure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  background: #fff;
+}
+
+.articleFigure figcaption {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 計算ボックス */
+.calcBox {
+  margin: 18px 0;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #eef4ff;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  color: #173a8f;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 950;
+  text-align: center;
+}
+
+/* 注意ボックス */
+.warningBox {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+  line-height: 1.8;
+  font-weight: 800;
+}
+
+/* 小さな注意書き */
+.smallNote {
+  margin-top: 12px !important;
+  color: #64748b !important;
+  font-size: 13px;
+  line-height: 1.75 !important;
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+  .articleHeroImage {
+    margin-top: 18px;
+    border-radius: 12px;
+  }
+
+  .articleHeroImage img {
+    max-height: none;
+  }
+
+  .articleFigure {
+    margin: 20px 0 8px;
+  }
+
+  .articleFigure img {
+    border-radius: 10px;
+  }
+
+  .calcBox {
+    padding: 15px 12px;
+    font-size: 18px;
+  }
+}

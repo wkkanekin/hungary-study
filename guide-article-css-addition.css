@@ -1,0 +1,53 @@
+/* ==========================================
+   Student Debt Guide
+   guide-article.css の末尾に追加
+========================================== */
+
+.articleFigure{
+  margin:26px 0;
+}
+
+.articleFigure img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  border:1px solid rgba(229,231,235,.92);
+  box-shadow:0 12px 28px rgba(17,24,39,.09);
+}
+
+.articleFigureHero{
+  margin-top:0;
+}
+
+.sourceSection{
+  margin-top:34px !important;
+  padding:20px;
+  border-radius:16px;
+  background:#fff8e8;
+  border:1px solid rgba(180,83,9,.2);
+}
+
+.sourceSection h2{
+  color:#92400e;
+  font-size:23px;
+}
+
+.sourceSection p,
+.sourceSection li{
+  color:#78350f;
+}
+
+@media (max-width:640px){
+  .articleFigure{
+    margin:20px 0;
+  }
+
+  .articleFigure img{
+    border-radius:13px;
+  }
+
+  .sourceSection{
+    padding:16px;
+  }
+}

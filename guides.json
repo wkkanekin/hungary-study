@@ -337,5 +337,18 @@
   "url": "guide-student-debt-overseas-scholarship.html",
   "date": "2026-07-19",
   "thumbnail": "images/guides/guide-student-debt-hero.png"
+},
+{
+  "id": "scholarship-odds",
+  "enabled": true,
+  "featured": true,
+  "category": "奨学金",
+  "title": "ハンガリー政府奨学金の倍率は高い？応募者数と本当の競争率を解説",
+  "description": "Stipendium Hungaricumの応募数は11万件超。約18倍・約25倍という数字の意味と、日本人が実際に直面する競争環境を解説します。",
+  "url": "guide-scholarship-odds.html",
+  "image": "images/guide-scholarship-odds-hero.jpg",
+  "date": "2026-07-19",
+  "tags": ["奨学金", "Stipendium Hungaricum", "倍率", "出願", "大学選び"]
 }
+
 ]

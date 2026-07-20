@@ -1,5 +1,5 @@
 :root{
-  --bg:#f6f1e7;
+  --bg:#f4f6fb;
   --card:#ffffff;
   --text:#111827;
   --muted:#6b7280;
@@ -18,18 +18,8 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-
-  font-family:
-    "Noto Sans JP",
-    system-ui,
-    sans-serif;
-
-  background:linear-gradient(
-    180deg,
-    #faf7f1 0%,
-    #f6f1e7 100%
-  );
-
+  font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+  background:linear-gradient(180deg,#eef3ff 0%, var(--bg) 28%, var(--bg) 100%);
   color:var(--text);
 }
 
@@ -669,240 +659,82 @@ thead th{
   }
 }
 
-.imageCaption{
-  margin:0 0 20px;
-  text-align:center;
-  font-size:.92rem;
-  color:var(--muted);
-  line-height:1.6;
+
+/* article-specific additions */
+.articleHeroImage{
+  margin-top:20px;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid rgba(229,231,235,.9);
+  background:#fff;
 }
-
-/* ==========================================
-   Student Debt Guide
-   guide-article.css の末尾に追加
-========================================== */
-
-.articleFigure{
-  margin:26px 0;
-}
-
+.articleHeroImage img,
 .articleFigure img{
   display:block;
   width:100%;
   height:auto;
-  border-radius:18px;
-  border:1px solid rgba(229,231,235,.92);
-  box-shadow:0 12px 28px rgba(17,24,39,.09);
 }
-
-.articleFigureHero{
-  margin-top:0;
+.articleFigure{
+  margin:20px 0 6px;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid rgba(229,231,235,.9);
+  background:#fff;
 }
-
-.sourceSection{
-  margin-top:34px !important;
-  padding:20px;
+.articleFigure figcaption{
+  padding:10px 12px 12px;
+  color:#64748b;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.7;
+}
+.warningBox{
+  margin-top:16px;
+  padding:16px;
   border-radius:16px;
   background:#fff8e8;
-  border:1px solid rgba(180,83,9,.2);
+  border:1px solid rgba(217,119,6,.25);
 }
-
-.sourceSection h2{
-  color:#92400e;
-  font-size:23px;
-}
-
-.sourceSection p,
-.sourceSection li{
-  color:#78350f;
-}
-
-@media (max-width:640px){
-  .articleFigure{
-    margin:20px 0;
-  }
-
-  .articleFigure img{
-    border-radius:13px;
-  }
-
-  .sourceSection{
-    padding:16px;
-  }
-}
-
-/* ==========================================
-   Guide article images
-========================================== */
-
-/* 記事内の画像が画面幅を超えないようにする */
-.articleBody img,
-.articleHero img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-/* ヒーロー画像 */
-.articleHeroImage {
-  width: 100%;
-  margin-top: 24px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #f8fafc;
-  border: 1px solid rgba(229, 231, 235, 0.9);
-}
-
-.articleHeroImage img {
-  width: 100%;
-  max-height: 620px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* 本文内の挿絵 */
-.articleFigure {
-  width: 100%;
-  margin: 24px 0 8px;
-}
-
-.articleFigure img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 14px;
-  border: 1px solid rgba(229, 231, 235, 0.9);
-  background: #fff;
-}
-
-.articleFigure figcaption {
-  margin-top: 10px;
-  color: #64748b;
-  font-size: 13px;
-  line-height: 1.7;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* 計算ボックス */
-.calcBox {
-  margin: 18px 0;
-  padding: 18px 20px;
-  border-radius: 14px;
-  background: #eef4ff;
-  border: 1px solid rgba(29, 78, 216, 0.2);
-  color: #173a8f;
-  font-size: 22px;
-  line-height: 1.5;
-  font-weight: 950;
-  text-align: center;
-}
-
-/* 注意ボックス */
-.warningBox {
-  margin: 18px 0;
-  padding: 16px 18px;
-  border-radius: 14px;
-  background: #fff7ed;
-  border: 1px solid #fed7aa;
-  color: #9a3412;
-  line-height: 1.8;
-  font-weight: 800;
-}
-
-/* 小さな注意書き */
-.smallNote {
-  margin-top: 12px !important;
-  color: #64748b !important;
-  font-size: 13px;
-  line-height: 1.75 !important;
-}
-
-/* スマホ */
-@media (max-width: 640px) {
-  .articleHeroImage {
-    margin-top: 18px;
-    border-radius: 12px;
-  }
-
-  .articleHeroImage img {
-    max-height: none;
-  }
-
-  .articleFigure {
-    margin: 20px 0 8px;
-  }
-
-  .articleFigure img {
-    border-radius: 10px;
-  }
-
-  .calcBox {
-    padding: 15px 12px;
-    font-size: 18px;
-  }
-}
-
-/* ==========================================
-   Article CTA
-========================================== */
-
-.article-cta{
-  margin:40px 0;
-  padding:28px;
-  border-radius:18px;
-  background:linear-gradient(180deg,#eef4ff 0%,#ffffff 100%);
-  border:1px solid rgba(29,78,216,.18);
+.warningBox strong{color:#92400e}
+.calcBox{
+  margin-top:14px;
+  padding:16px;
+  border-radius:16px;
+  background:#f8fafc;
+  border:1px solid rgba(148,163,184,.35);
   text-align:center;
-}
-
-.article-cta__title{
-  margin:0 0 14px;
-  font-size:30px;
-  font-weight:900;
   color:#0f2a5a;
+  font-size:20px;
+  font-weight:950;
+  line-height:1.7;
+}
+.sourceList li{word-break:break-word}
+.sourceList a{color:#1d4ed8}
+.smallNote{font-size:13px!important;color:#64748b!important}
+@media (max-width: 720px){
+  .articleHeroImage,.articleFigure{border-radius:12px}
+  .calcBox{font-size:17px}
 }
 
-.article-cta p{
-  margin:0 auto 22px;
-  max-width:760px;
-  line-height:1.9;
-  color:#374151;
+/* 見出し同士の間隔を広げる */
+.articleBody section > h3{
+  margin-top:38px;
+  margin-bottom:14px;
 }
 
-.article-cta__button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 28px;
-  border-radius:14px;
-  background:linear-gradient(180deg,#1d4ed8 0%,#0b3aa6 100%);
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  font-size:16px;
-  box-shadow:0 10px 24px rgba(29,78,216,.18);
-  transition:.15s ease;
+/* 各章の間隔を広げる */
+.articleBody section + section{
+  margin-top:44px;
 }
 
-.article-cta__button:hover{
-  transform:translateY(-2px);
-  box-shadow:0 14px 28px rgba(29,78,216,.28);
-}
-
+/* スマホでは少しだけ間隔を狭くする */
 @media (max-width:640px){
-  .article-cta{
-    padding:20px 16px;
+  .articleBody section > h3{
+    margin-top:32px;
+    margin-bottom:12px;
   }
 
-  .article-cta__title{
-    font-size:24px;
-  }
-
-  .article-cta__button{
-    width:100%;
+  .articleBody section + section{
+    margin-top:38px;
   }
 }

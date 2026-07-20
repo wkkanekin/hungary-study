@@ -845,3 +845,64 @@ thead th{
     font-size: 18px;
   }
 }
+
+/* ==========================================
+   Article CTA
+========================================== */
+
+.article-cta{
+  margin:40px 0;
+  padding:28px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#eef4ff 0%,#ffffff 100%);
+  border:1px solid rgba(29,78,216,.18);
+  text-align:center;
+}
+
+.article-cta__title{
+  margin:0 0 14px;
+  font-size:30px;
+  font-weight:900;
+  color:#0f2a5a;
+}
+
+.article-cta p{
+  margin:0 auto 22px;
+  max-width:760px;
+  line-height:1.9;
+  color:#374151;
+}
+
+.article-cta__button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 28px;
+  border-radius:14px;
+  background:linear-gradient(180deg,#1d4ed8 0%,#0b3aa6 100%);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  font-size:16px;
+  box-shadow:0 10px 24px rgba(29,78,216,.18);
+  transition:.15s ease;
+}
+
+.article-cta__button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(29,78,216,.28);
+}
+
+@media (max-width:640px){
+  .article-cta{
+    padding:20px 16px;
+  }
+
+  .article-cta__title{
+    font-size:24px;
+  }
+
+  .article-cta__button{
+    width:100%;
+  }
+}

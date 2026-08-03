@@ -225,5 +225,24 @@
   ],
   "readingTime": "6分",
   "url": "column-yugo-money.html"
+},
+{
+  "id": "yugo-second-semester-daily",
+  "enabled": true,
+  "title": "デブレツェン大生の日常（1年後期編）",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-08-03",
+  "thumbnail": "images/columns/yugo-second-semester-daily.jpg",
+  "summary": "Computer Science1年後期の時間割や授業内容、昼食、体育、週末の過ごし方まで、デブレツェン大学でのリアルな1週間を紹介します。",
+  "tags": [
+    "大学生活",
+    "デブレツェン",
+    "Computer Science",
+    "授業"
+  ],
+  "readingTime": "9分",
+  "url": "column-yugo-second-semester-daily.html"
 }
 ]

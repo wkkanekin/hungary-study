@@ -187,6 +187,24 @@
   "readingTime": "6分",
 
   "url": "column-yugo-humanities-cs.html"
+},
+{
+  "id": "yugo-career",
+  "enabled": true,
+  "title": "ハンガリーの大学卒でも就職できるの？",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-08-03",
+  "thumbnail": "images/columns/yugo-career.jpg",
+  "summary": "ハンガリーの大学卒業後の就職活動、キャリアフォーラム、オンライン就活、デブレツェン大学CS卒業生の進路について紹介します。",
+  "tags": [
+    "就職活動",
+    "キャリア",
+    "デブレツェン",
+    "Computer Science"
+  ],
+  "readingTime": "6分",
+  "url": "column-yugo-career.html"
 }
-
 ]

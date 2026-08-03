@@ -206,5 +206,24 @@
   ],
   "readingTime": "6分",
   "url": "column-yugo-career.html"
+},
+{
+  "id": "yugo-money",
+  "enabled": true,
+  "title": "現地でのお金事情！",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-08-03",
+  "thumbnail": "images/columns/yugo-money.jpg",
+  "summary": "ハンガリーでの現金・カード決済、Wise、海外送金、学費の支払い、ヨーロッパ旅行中の決済について紹介します。",
+  "tags": [
+    "お金",
+    "Wise",
+    "海外送金",
+    "デブレツェン"
+  ],
+  "readingTime": "6分",
+  "url": "column-yugo-money.html"
 }
 ]

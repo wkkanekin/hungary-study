@@ -265,4 +265,23 @@
   "readingTime": "10分",
   "url": "column-kaneko-career-change.html"
 }
+,{
+  "id": "kaneko-why-hungary-bueb",
+  "enabled": true,
+  "title": "なぜ私はハンガリーの大学院を選んだのか",
+  "author": "カネコ",
+  "authorId": "kaneko",
+  "university": "Budapest University of Economics and Business",
+  "date": "2026-08-08",
+  "thumbnail": "images/columns/kaneko-bueb-hero.jpg",
+  "summary": "イギリスやドイツも検討する中で、費用、スティペンディウム・ハンガリカム、BUEBの教育内容、ヨーロッパで学べる環境からハンガリーを選んだ理由を紹介します。",
+  "tags": [
+    "BUEB",
+    "大学院",
+    "奨学金",
+    "観光学"
+  ],
+  "readingTime": "9分",
+  "url": "column-kaneko-why-hungary-bueb.html"
+}
 ]

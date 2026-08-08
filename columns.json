@@ -244,5 +244,25 @@
   ],
   "readingTime": "9分",
   "url": "column-yugo-second-semester-daily.html"
+},
+
+{
+  "id": "kaneko-career-change",
+  "enabled": true,
+  "title": "なぜ34歳で仕事を辞め、ハンガリーの大学院へ進学したのか",
+  "author": "カネコ",
+  "authorId": "kaneko",
+  "university": "Budapest University of Economics and Business",
+  "date": "2026-08-08",
+  "thumbnail": "images/columns/kaneko-career-change.jpg",
+  "summary": "製薬会社、軽井沢のホテル、英語塾での経験を経て、34歳で観光学を学ぶことにした経緯を紹介します。",
+  "tags": [
+    "社会人留学",
+    "観光学",
+    "ホスピタリティ",
+    "キャリア"
+  ],
+  "readingTime": "10分",
+  "url": "column-kaneko-career-change.html"
 }
 ]

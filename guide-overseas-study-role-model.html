@@ -23,6 +23,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="guide-article.css" />
+
+  <style>
+    .shLogoBlock{
+      margin:28px 0 34px;
+      padding:24px 26px;
+      border:1px solid #e3e8ef;
+      border-radius:18px;
+      background:#fff;
+      box-shadow:0 8px 24px rgba(15,23,42,.06);
+    }
+    .shLogoLink{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      width:max-content;
+      max-width:100%;
+      color:#12233f;
+      text-decoration:none;
+    }
+    .shMark{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-width:86px;
+      height:68px;
+      font-weight:900;
+      font-size:46px;
+      line-height:1;
+      letter-spacing:-10px;
+    }
+    .shTenOne{color:#d92d32; z-index:2;}
+    .shTenZero{color:#55a447; margin-left:2px;}
+    .shLogoText{display:flex; flex-direction:column; gap:5px;}
+    .shLogoText strong{
+      font-size:22px;
+      line-height:1.02;
+      letter-spacing:.05em;
+      color:#172033;
+    }
+    .shLogoText span{font-size:12px; color:#687386;}
+    .shLogoCaption{
+      margin:16px 0 0 !important;
+      padding-top:14px;
+      border-top:1px solid #edf0f4;
+      font-size:14px !important;
+      line-height:1.8 !important;
+      color:#536071;
+    }
+    @media (max-width:640px){
+      .shLogoBlock{padding:20px 18px;}
+      .shMark{min-width:70px;font-size:40px;}
+      .shLogoText strong{font-size:18px;}
+    }
+  </style>
+
 </head>
 
 <body>
@@ -184,7 +240,7 @@
 
               <figure class="articleFigure">
                 <img src="images/guides/guide-role-model-tuition-comparison.png" alt="主要国の年間授業料の目安" loading="lazy" />
-                <figcaption>※授業料のみの比較。生活費・渡航費・保険・ビザ等は含みません。日本円換算は2026年8月時点の概算です。</figcaption>
+                <figcaption>※授業料のみの比較。生活費・渡航費・保険・ビザ等は含みません。ELTEはInternational Relations BAの非EU/EEA学生（€2,700／学期）を年2学期として計算。日本円換算は2026年8月10日（1€＝約182.95円）の概算です。</figcaption>
               </figure>
 
               <p>日本の私立大学の平均授業料（年間約97万円・初年度納付金平均約151万円）と比較しても、国や大学を適切に選べば、学費の面で「海外だからすべてが高額で無理」とは限りません。</p>
@@ -194,6 +250,19 @@
               <h2>制度を「知る」から「自分が使える確信」へ</h2>
               <p>さらに費用面では、返済不要の給付型奨学金という選択肢もあります。<br>
               例えばハンガリー政府の奨学金制度「Stipendium Hungaricum（スティペンディウム・ハンガリカム）」<strong>では、選考に通過すれば</strong>授業料全額免除に加え、<strong>毎月の生活費手当、住居補助、現地での医療保険</strong>が支給されます。</p>
+
+              <div class="shLogoBlock" aria-label="Stipendium Hungaricum">
+                <a href="https://stipendiumhungaricum.hu/" target="_blank" rel="noopener noreferrer" class="shLogoLink">
+                  <div class="shMark" aria-hidden="true">
+                    <span class="shTenOne">1</span><span class="shTenZero">0</span>
+                  </div>
+                  <div class="shLogoText">
+                    <strong>STIPENDIUM<br>HUNGARICUM</strong>
+                    <span>Hungarian Government Scholarship</span>
+                  </div>
+                </a>
+                <p class="shLogoCaption">ハンガリー政府の給付型奨学金制度。授業料免除に加え、生活費・住居・医療面の支援があります。</p>
+              </div>
 
               <p>しかし、募集要項に「学費全額免除」と書いてあるのを見るだけでは、高校生や保護者の方は本当の意味でイメージが湧きにくいものです。</p>
               <ul>
@@ -276,7 +345,7 @@
                 <li><a href="https://www.mext.go.jp/a_menu/koutou/ryugaku/1412692_00003.htm" target="_blank" rel="noopener noreferrer">文部科学省「日本人学生の海外留学状況」及び「外国人留学生の在籍状況調査」について</a></li>
                 <li><a href="https://www.mext.go.jp/a_menu/koutou/ryugaku/koukousei/1323946.htm" target="_blank" rel="noopener noreferrer">文部科学省「高等学校等における国際交流等の状況」</a></li>
                 <li><a href="https://research.collegeboard.org/trends/college-pricing/highlights" target="_blank" rel="noopener noreferrer">College Board, Trends in College Pricing 2025</a></li>
-                <li><a href="https://uni-bge.hu/en/tuition-fee" target="_blank" rel="noopener noreferrer">Budapest University of Economics and Business, Tuition Fee</a></li>
+                <li><a href="https://www.elte.hu/en/international-relations-ba" target="_blank" rel="noopener noreferrer">Eötvös Loránd University (ELTE), International Relations BA</a></li>
                 <li><a href="https://stipendiumhungaricum.hu/about/" target="_blank" rel="noopener noreferrer">Stipendium Hungaricum 公式サイト</a></li>
               </ul>
             </section>

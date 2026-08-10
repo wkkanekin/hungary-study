@@ -326,30 +326,17 @@
   "thumbnail": "images/guides/guide-elte-bme-concentration.jpg"
 },
 {
-  "id": "student-debt-overseas-scholarship",
+  "id": "overseas-study-role-model",
   "enabled": true,
   "featured": true,
   "homePick": true,
   "comingSoon": false,
-  "title": "日本の大学進学か、海外か。奨学金と卒業後の自由を考える",
-  "description": "日本の貸与型奨学金の返済、金利上昇、長期ローンが卒業後の仕事や人生に与える影響を整理し、返済不要のハンガリー政府奨学金という選択肢を紹介します。",
-  "category": "奨学金",
-  "url": "guide-student-debt-overseas-scholarship.html",
-  "date": "2026-07-19",
-  "thumbnail": "images/guides/guide-student-debt-hero.png"
-},
-{
-  "id": "scholarship-odds",
-  "enabled": true,
-  "featured": true,
-  "homePick": true,
-  "comingSoon": false,
-  "title": "ハンガリー政府奨学金の倍率は高い？応募者数と本当の競争率を解説",
-  "description": "Stipendium Hungaricumの応募数は11万件超。約18倍・約25倍という数字の意味と、日本人が実際に直面する競争環境を解説します。",
-  "category": "奨学金",
-  "url": "guide-scholarship-odds.html",
-  "date": "2026-07-19",
-  "thumbnail": "images/guides/guide-scholarship-odds-hero.jpg"
+  "title": "海外留学を考えるきっかけ1位は「身近な人の話」――海外進学にロールモデルが必要な理由",
+  "description": "日本の若者の留学意欲、海外進学者数、費用や就職への不安をデータで整理し、海外進学を現実的な選択肢に変える「身近なロールモデル」との接点について考えます。",
+  "category": "コラム",
+  "url": "guide-overseas-study-role-model.html",
+  "date": "2026-08-10",
+  "thumbnail": "images/guides/guide-overseas-study-role-model-hero.png"
 }
 
 ]

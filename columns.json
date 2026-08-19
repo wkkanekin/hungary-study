@@ -284,4 +284,23 @@
   "readingTime": "9分",
   "url": "column-kaneko-why-hungary-bueb.html"
 }
+,{
+    "id": "kaneko-rental-trouble",
+    "enabled": true,
+    "title": "突然、鍵が変えられていた。ハンガリーで大家と大トラブルになった話",
+    "author": "カネコ",
+    "authorId": "kaneko",
+    "university": "Budapest University of Economics and Business",
+    "date": "2026-08-19",
+    "thumbnail": "images/columns/rental-trouble-broken-door.jpg",
+    "summary": "ハンガリー留学中、個人大家との賃貸トラブルで突然部屋の鍵を変えられ、デポジットや荷物も戻らなくなった実体験。消費者保護への相談や、個人契約で学んだ注意点を紹介します。",
+    "tags": [
+      "ブダペスト",
+      "賃貸トラブル",
+      "住まい"
+    ],
+    "readingTime": "9分",
+    "url": "column-kaneko-rental-trouble.html"
+  }
+
 ]

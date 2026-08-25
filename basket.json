@@ -5,82 +5,120 @@
     {
       "id": "milk",
       "label_ja": "牛乳（ESL 2.8%）",
-      "ksh_match_contains": ["milk", "2.8"]
+      "ksh_match_contains": [
+        "milk",
+        "2.8"
+      ]
     },
     {
       "id": "eggs_10",
       "label_ja": "卵 10個",
-      "ksh_match_contains": ["eggs", "10 pieces"]
+      "ksh_match_contains": [
+        "eggs",
+        "10 pieces"
+      ]
     },
     {
       "id": "chicken",
       "label_ja": "鶏肉（フィレ/胸系）",
-      "ksh_match_contains": ["chicken", "fillet"]
+      "ksh_match_contains": [
+        "chicken",
+        "fillet"
+      ]
     },
     {
       "id": "pasta",
       "label_ja": "パスタ（卵入りスパゲッティ）",
-      "ksh_match_contains": ["spaghetti"]
+      "ksh_match_contains": [
+        "spaghetti"
+      ]
     },
     {
       "id": "bread",
       "label_ja": "パン（白パン）",
-      "ksh_match_contains": ["white bread"]
+      "ksh_match_contains": [
+        "white bread"
+      ]
     },
     {
       "id": "tomato",
       "label_ja": "トマト",
-      "ksh_match_contains": ["tomatoes"]
+      "ksh_match_contains": [
+        "tomatoes"
+      ]
     },
     {
       "id": "banana",
       "label_ja": "バナナ",
-      "ksh_match_contains": ["bananas"]
+      "ksh_match_contains": [
+        "bananas"
+      ]
     },
     {
       "id": "cheese",
       "label_ja": "チーズ（トラピスト系）",
-      "ksh_match_contains": ["trappist"]
+      "ksh_match_contains": [
+        "trappist"
+      ]
     },
     {
       "id": "yoghurt",
       "label_ja": "ヨーグルト（125–150g）",
-      "ksh_match_contains": ["yoghurt", "125"]
+      "ksh_match_contains": [
+        "yoghurt",
+        "125"
+      ]
     },
     {
       "id": "onion",
       "label_ja": "玉ねぎ（赤玉）",
-      "ksh_match_contains": ["red onions"]
+      "ksh_match_contains": [
+        "red onions"
+      ]
     },
     {
       "id": "potato",
       "label_ja": "じゃがいも（old）",
-      "ksh_match_contains": ["potatoes", "old"]
+      "ksh_match_contains": [
+        "potatoes",
+        "old"
+      ]
     },
     {
       "id": "cucumber",
       "label_ja": "きゅうり",
-      "ksh_match_contains": ["cucumbers"]
+      "ksh_match_contains": [
+        "cucumbers"
+      ]
     },
     {
       "id": "apple",
       "label_ja": "りんご",
-      "ksh_match_contains": ["apples"]
+      "ksh_match_contains": [
+        "apples"
+      ]
     },
     {
       "id": "oil",
       "label_ja": "食用油（ひまわり）",
-      "ksh_match_contains": ["cooking oil", "sunflower"]
+      "ksh_match_contains": [
+        "cooking oil",
+        "sunflower"
+      ]
     },
     {
       "id": "flour",
       "label_ja": "小麦粉（plain）",
-      "ksh_match_contains": ["plain flour"]
+      "ksh_match_contains": [
+        "plain flour"
+      ]
     },
     {
       "id": "rice",
       "label_ja": "米（KSH表記に合わせる）",
-      "ksh_match_contains": ["rice"]
+      "ksh_match_contains": [
+        "rice"
+      ]
     }
   ]
 }

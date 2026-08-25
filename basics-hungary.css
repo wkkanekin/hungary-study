@@ -3,65 +3,135 @@
   --card:#ffffff;
   --text:#111827;
   --muted:#6b7280;
-  --line: rgba(229,231,235,.85);
+  --line:rgba(229,231,235,.92);
   --blue:#1d4ed8;
   --blue2:#0b3aa6;
+  --navy:#0f2a5a;
+  --soft-blue:#eff6ff;
+  --soft-yellow:#fffbeb;
+  --soft-green:#ecfdf5;
+  --soft-red:#fef2f2;
   --shadow:0 10px 30px rgba(17,24,39,.08);
   --radius:18px;
   --max:980px;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
-
   font-family:
     "Noto Sans JP",
     system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
-
-  background: linear-gradient(
-  180deg,
-  #faf7f1 0%,
-  #f6f1e7 100%
-);
+  background:
+    linear-gradient(
+      180deg,
+      #faf7f1 0%,
+      #f6f1e7 100%
+    );
   color:var(--text);
+  line-height:1.85;
 }
 
-a{color:inherit}
-.container{max-width:var(--max); margin:0 auto; padding:22px 18px 70px;}
-.section{margin-top:26px}
+a{
+  color:inherit;
+}
+
+.container{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:22px 18px 70px;
+}
+
+.section{
+  margin-top:30px;
+}
+
+.pageHeader{
+  margin-top:8px;
+  text-align:center;
+}
 
 .card{
   background:var(--card);
   border:1px solid var(--line);
   border-radius:var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow:var(--shadow);
 }
-.simpleCard{padding:16px}
-.muted{color:var(--muted); font-weight:850; line-height:1.7}
+
+.simpleCard{
+  padding:22px;
+}
+
+.muted{
+  color:var(--muted);
+  font-weight:700;
+  line-height:1.8;
+}
+
+.intro{
+  max-width:850px;
+  margin:12px auto 0;
+}
+
+.lead{
+  margin:8px 0 0;
+  font-weight:900;
+  color:#41516b;
+  text-align:center;
+}
 
 h1{
   margin:0;
   font-size:32px;
+  line-height:1.35;
   font-weight:950;
-  color:#0f2a5a;
+  color:var(--navy);
   text-align:center;
 }
+
 h2{
-  margin:0 0 12px;
-  font-size:22px;
+  margin:0 0 14px;
+  font-size:23px;
+  line-height:1.45;
   font-weight:950;
-  color:#0f2a5a;
+  color:var(--navy);
   text-align:center;
 }
+
 h3{
-  margin:18px 0 8px;
-  font-size:16px;
+  margin:26px 0 9px;
+  font-size:18px;
+  line-height:1.55;
   font-weight:950;
-  color:#0f2a5a;
+  color:var(--navy);
+}
+
+h4{
+  margin:20px 0 6px;
+  font-size:16px;
+  line-height:1.55;
+  font-weight:950;
+  color:#18396c;
+}
+
+p{
+  margin:11px 0;
+}
+
+strong,
+b{
+  font-weight:900;
 }
 
 .btn{
@@ -69,25 +139,37 @@ h3{
   align-items:center;
   justify-content:center;
   gap:8px;
-  padding:12px 16px;
+  padding:12px 18px;
   border-radius:14px;
-  border:1px solid rgba(229,231,235,.9);
+  border:1px solid rgba(229,231,235,.95);
   background:#fff;
   cursor:pointer;
   text-decoration:none;
   font-weight:900;
-  transition:.15s transform ease, .15s background ease, .15s border ease, .15s box-shadow ease;
+  transition:
+    .15s transform ease,
+    .15s background ease,
+    .15s border ease,
+    .15s box-shadow ease;
   user-select:none;
 }
-.btn:hover{transform:translateY(-1px)}
-.btn.primary{
-  background: linear-gradient(180deg, var(--blue) 0%, var(--blue2) 100%);
-  color:#fff;
-  border-color: rgba(29,78,216,.55);
-  box-shadow: 0 10px 24px rgba(29,78,216,.18);
+
+.btn:hover{
+  transform:translateY(-1px);
 }
 
-/* ✅ basics画像：枠16:9固定 + cover（空白なし） */
+.btn.primary{
+  background:
+    linear-gradient(
+      180deg,
+      var(--blue) 0%,
+      var(--blue2) 100%
+    );
+  color:#fff;
+  border-color:rgba(29,78,216,.55);
+  box-shadow:0 10px 24px rgba(29,78,216,.18);
+}
+
 .heroWrap{
   overflow:hidden;
   background:#fff;
@@ -96,36 +178,321 @@ h3{
 
 .heroImg{
   width:100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio:16 / 9;
   height:auto;
   object-fit:cover;
   display:block;
 }
 
-.tableWrap{overflow:auto}
+.tableWrap{
+  overflow:auto;
+  margin:16px 0;
+  border:1px solid var(--line);
+  border-radius:14px;
+}
+
 table{
   width:100%;
   border-collapse:collapse;
   min-width:560px;
+  background:#fff;
 }
-th, td{
+
+th,
+td{
   text-align:left;
-  padding:10px;
+  padding:12px;
   border-bottom:1px solid var(--line);
   vertical-align:top;
 }
-tbody tr:last-child td{border-bottom:none}
+
+th{
+  background:#f8fafc;
+  color:#22324d;
+  font-weight:950;
+}
+
+tbody tr:last-child td{
+  border-bottom:none;
+}
+
+.noteBox,
+.warningBox,
+.triviaBox,
+.keyPoint{
+  margin:16px 0;
+  padding:15px 16px;
+  border-radius:14px;
+  line-height:1.85;
+}
+
+.noteBox{
+  background:var(--soft-blue);
+  border:1px solid #bfdbfe;
+}
+
+.warningBox{
+  background:var(--soft-yellow);
+  border:1px solid #fde68a;
+}
+
+.triviaBox{
+  background:var(--soft-green);
+  border:1px solid #a7f3d0;
+}
+
+.triviaBox h3{
+  margin-top:0;
+}
+
+.keyPoint{
+  background:#f8fafc;
+  border:2px solid #dbeafe;
+  color:var(--navy);
+  text-align:center;
+  font-size:18px;
+  font-weight:900;
+}
+
+.choiceBox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:18px 0;
+}
+
+.choiceBox > div{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding:15px;
+  border-radius:14px;
+  background:#f8fafc;
+  border:1px solid var(--line);
+}
+
+.choiceBox span{
+  color:var(--blue2);
+  font-weight:950;
+  font-size:18px;
+}
+
+.purchaseWays,
+.searchTerms{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:16px 0;
+}
+
+.purchaseWays span,
+.searchTerms span{
+  display:inline-flex;
+  padding:9px 12px;
+  border-radius:999px;
+  background:#f8fafc;
+  border:1px solid var(--line);
+  font-weight:850;
+}
+
+.routeList{
+  display:grid;
+  gap:9px;
+  margin:16px 0;
+}
+
+.routeList > div{
+  padding:11px 13px;
+  background:#f8fafc;
+  border-left:4px solid #93c5fd;
+  border-radius:9px;
+  font-weight:800;
+}
+
+.cleanList,
+.compactList{
+  padding-left:1.3em;
+}
+
+.cleanList{
+  line-height:1.95;
+}
+
+.compactList{
+  margin:8px 0 0;
+  line-height:1.8;
+}
+
+.questionBox{
+  display:grid;
+  gap:8px;
+  margin:16px 0;
+}
+
+.questionBox > div{
+  padding:11px 13px;
+  border-radius:11px;
+  background:#f8fafc;
+  border:1px solid var(--line);
+  font-weight:850;
+}
+
+.bookBox{
+  margin:15px 0;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fafafa;
+}
+
+.bookTitle{
+  margin-top:0;
+  font-weight:950;
+  color:#172554;
+}
+
+.codeLike{
+  display:inline-block;
+  margin:8px 0;
+  padding:10px 13px;
+  border-radius:9px;
+  background:#111827;
+  color:#fff;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  font-weight:800;
+  letter-spacing:.01em;
+}
+
+.mythList{
+  display:grid;
+  gap:8px;
+  margin:14px 0;
+}
+
+.mythList > div{
+  padding:10px 13px;
+  background:var(--soft-red);
+  border:1px solid #fecaca;
+  border-radius:10px;
+  font-weight:850;
+}
+
+.softRule{
+  border:0;
+  border-top:1px solid var(--line);
+  margin:24px 0;
+}
+
+.linkCenter{
+  margin-top:18px;
+  text-align:center;
+}
+
+.ctaCard{
+  text-align:center;
+}
+
+.ctaCard p{
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.secondaryAction{
+  margin-top:10px;
+}
 
 .footer{
-  margin-top:28px;
+  margin-top:30px;
   text-align:center;
   color:#6b7280;
   font-weight:900;
 }
 
-@media (max-width: 720px){
-  h1{font-size:26px}
-  /* スマホで少し縦長に見せたいならここだけ変更可 */
-  .heroImg{ aspect-ratio: 16 / 10; }
-  table{min-width:520px}
+@media (max-width:720px){
+  .container{
+    padding:16px 14px 56px;
+  }
+
+  h1{
+    font-size:27px;
+  }
+
+  h2{
+    font-size:21px;
+  }
+
+  h3{
+    font-size:17px;
+  }
+
+  .simpleCard{
+    padding:17px;
+  }
+
+  .heroImg{
+    aspect-ratio:16 / 10;
+  }
+
+  table{
+    min-width:520px;
+  }
+
+  .choiceBox{
+    grid-template-columns:1fr;
+  }
+
+  .keyPoint{
+    font-size:17px;
+  }
 }
+
+.transportImageGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+@media (max-width:720px){
+  .transportImageGrid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+}
+
+.inlineSectionImage{
+  margin:12px 0 18px;
+}
+
+.outletImageGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:16px;
+}
+
+@media (max-width:720px){
+  .outletImageGrid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+}
+
+.infographicWrap{
+  background:#fff;
+}
+
+.infographicImg{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  background:#fff;
+}
+

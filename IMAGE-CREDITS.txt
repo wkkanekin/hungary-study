@@ -1,0 +1,85 @@
+ハンガリー基本ガイド 画像ソース一覧
+更新日: 2026-08-24
+
+【今回新規で用意した画像】
+
+1. budapest-23-districts.jpg
+用途: 「3. ブダペストは23区に分かれている」
+原典: Wikimedia Commons
+File: Hungary budapest districts-an.svg
+作者: Themightyquill（派生元: Norway.today / User:Tgr）
+ライセンス: CC BY-SA 3.0
+Source page:
+https://commons.wikimedia.org/wiki/File:Hungary_budapest_districts-an.svg
+加工: 16:9の白背景キャンバスに収めてJPEG化
+
+2. budapest-tram.jpg
+用途: 「4. ブダペストの公共交通」トラム
+原典: Wikimedia Commons
+File: Yellow trams in Budapest (2).jpg
+作者: MOs810
+ライセンス: CC BY 4.0
+Source page:
+https://commons.wikimedia.org/wiki/File:Yellow_trams_in_Budapest_(2).jpg
+加工: 16:9にトリミング・縮小
+
+3. budapest-metro.jpg
+用途: 「4. ブダペストの公共交通」地下鉄
+原典: Wikimedia Commons
+File: Budapest, M2 metró, Kossuth Lajos tér.jpg
+作者: Random photos 1989
+ライセンス: CC BY-SA 4.0
+Source page:
+https://commons.wikimedia.org/wiki/File:Budapest,_M2_metr%C3%B3,_Kossuth_Lajos_t%C3%A9r.jpg
+加工: 16:9にトリミング・縮小
+
+4. budapest-ticket-inspector.jpg
+用途: 「改札がなくてもチケットチェックには注意」
+原典: Wikimedia Commons / Fortepan
+File: BKV ticket inspectors, 1972 Budapest. Fortepan 87796.jpg
+作者表記: FOTO:FORTEPAN / Urbán Tamás
+ライセンス: CC BY-SA 3.0
+Source page:
+https://commons.wikimedia.org/wiki/File:BKV_ticket_inspectors,_1972_Budapest._Fortepan_87796.jpg
+注意: 1972年撮影の歴史写真。現在のBKK係員の制服を示す写真ではありません。
+加工: 16:9にトリミング・縮小
+
+5. budapest-100e-airport-shuttle.jpg
+用途: 「5. 空港からブダペスト中心部へ」
+原典: Wikimedia Commons
+File: 100E steht am Budapester Flughafen.jpg
+Source page:
+https://commons.wikimedia.org/wiki/File:100E_steht_am_Budapester_Flughafen.jpg
+加工: 16:9にトリミング・縮小
+※公開時は原典ページ記載の作者名・ライセンス条件も確認してください。
+
+6. hungary-outlet.jpg
+用途: 「10. コンセントは日本と違う」
+原典: Wikimedia Commons
+File: Schuko socket.JPG
+作者: Dmitry G
+ライセンス: Public Domain
+Source page:
+https://commons.wikimedia.org/wiki/File:Schuko_socket.JPG
+加工: 16:9白背景に配置・縮小
+
+7. europe-plug-adapter.jpg
+用途: 「10. コンセントは日本と違う」変換プラグ
+原典: Wikimedia Commons
+File: AC Converter Adapter USA-EU.jpg
+作者: Fructibus
+ライセンス: CC0 1.0
+Source page:
+https://commons.wikimedia.org/wiki/File:AC_Converter_Adapter_USA-EU.jpg
+加工: 16:9白背景に配置・縮小
+
+【既存プロジェクト画像】
+以下は今回の作業前からプロジェクト内に存在していた画像です。
+- hungary-map.jpg
+- area.jpg
+- safety.jpg
+- apartment.jpg
+- scholarship.jpg
+- classroom.jpg
+
+公開サイトで第三者画像を利用する場合は、各ライセンスのクレジット表記・ShareAlike条件等を確認してください。

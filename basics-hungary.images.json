@@ -1,34 +1,94 @@
 {
   "hero": {
-    "imageUrl": "images/hungary.jpg",
-    "alt": "Budapest city",
-    "imageVersion": "20260316-1"
+    "imageUrl": "images/hungary-map.jpg",
+    "alt": "ハンガリーの位置と周辺国",
+    "imageVersion": "20260824-1"
   },
   "images": {
     "hero": {
-      "url": "images/hungary.jpg",
-      "alt": "ブダペストの街並み",
-      "version": "20260316-1"
+      "url": "images/hungary-map.jpg",
+      "alt": "ハンガリーの基本情報と位置を示したガイド",
+      "version": "20260825-pro2"
+    },
+    "cities": {
+      "url": "images/hungary-major-cities-tourism-map.png",
+      "alt": "ハンガリーの主要大学都市マップ",
+      "version": "20260825-pro2"
     },
     "safety": {
       "url": "images/safety.jpg",
-      "alt": "ブダペストの街の様子",
-      "version": "20260316-1"
+      "alt": "ブダペストで注意したい治安上のポイント",
+      "version": "20260825-pro2"
     },
     "costs": {
       "url": "images/apartment.jpg",
-      "alt": "ハンガリーの住まい",
-      "version": "20260316-1"
+      "alt": "大学寮と民間賃貸の部屋探しガイド",
+      "version": "20260825-pro2"
     },
     "scholarship": {
-      "url": "images/scholarship.jpg",
-      "alt": "奨学金のイメージ",
-      "version": "20260316-1"
+      "url": "images/stipendium-hungaricum-support-guide.jpg",
+      "alt": "Stipendium Hungaricumの支援内容",
+      "version": "20260825-pro2"
     },
     "english": {
       "url": "images/classroom.jpg",
-      "alt": "大学の授業風景",
-      "version": "20260316-1"
+      "alt": "英語とハンガリー語が必要になる場面の違い",
+      "version": "20260825-pro2"
+    },
+    "districts": {
+      "url": "images/budapest-23-districts-guide-map.png",
+      "alt": "ブダペスト23区留学生活ガイドマップ",
+      "version": "20260825-pro2"
+    },
+    "tram": {
+      "url": "images/budapest-tram.jpg",
+      "alt": "ブダペストを走るトラム",
+      "version": "20260824-3"
+    },
+    "metro": {
+      "url": "images/budapest-metro.jpg",
+      "alt": "ブダペストの地下鉄",
+      "version": "20260824-3"
+    },
+    "airportShuttle": {
+      "url": "images/airport-to-budapest-guide.png",
+      "alt": "空港からブダペスト市内への移動ガイド",
+      "version": "20260825-pro2"
+    },
+    "ticketInspector": {
+      "url": "images/budapest-ticket-inspector.jpg",
+      "alt": "ブダペストの公共交通でチケットを確認する係員",
+      "version": "20260824-5"
+    },
+    "hungaryOutlet": {
+      "url": "images/hungary-outlet.jpg",
+      "alt": "ハンガリーのCタイプ・Fタイプのコンセント",
+      "version": "20260825-pro2"
+    },
+    "plugAdapter": {
+      "url": "images/europe-plug-adapter.jpg",
+      "alt": "日本のAタイプからヨーロッパ用へ変換するプラグ",
+      "version": "20260825-pro2"
+    },
+    "budapestGoGuide": {
+      "url": "images/budapestgo-guide.png",
+      "alt": "BudapestGOの使い方ガイド",
+      "version": "20260825-pro2"
+    },
+    "railwayMap": {
+      "url": "images/hungary-railway-map.png",
+      "alt": "ハンガリー主要鉄道路線マップ",
+      "version": "20260825-pro2"
+    },
+    "climate": {
+      "url": "images/hungary-climate-guide.jpg",
+      "alt": "ハンガリーの四季と気候",
+      "version": "20260825-pro2"
+    },
+    "neptun": {
+      "url": "images/neptun-guide.jpg",
+      "alt": "Neptunの使い方と履修登録の流れ",
+      "version": "20260825-pro2"
     }
   }
 }

@@ -93,7 +93,7 @@ h3{
   box-shadow: 0 10px 24px rgba(29,78,216,.18);
 }
 
-/* ✅ basics画像：枠16:9固定 + cover（空白なし） */
+/* basics画像：PC・スマホともに画像全体を表示 */
 .heroWrap{
   overflow:hidden;
   background:#fff;
@@ -101,11 +101,14 @@ h3{
 }
 
 .heroImg{
-  width:100%;
-  aspect-ratio: 16 / 9;
-  height:auto;
-  object-fit:cover;
   display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
 }
 
 .tableWrap{overflow:auto}
@@ -131,8 +134,12 @@ tbody tr:last-child td{border-bottom:none}
 
 @media (max-width: 720px){
   h1{font-size:26px}
-  /* スマホで少し縦長に見せたいならここだけ変更可 */
-  .heroImg{ aspect-ratio: 16 / 10; }
+  .heroImg{
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+  }
   table{min-width:520px}
 }
 
@@ -146,4 +153,14 @@ tbody tr:last-child td{border-bottom:none}
 }
 .affiliateTextLink:hover{
   color:#1d4ed8;
+}
+
+
+.infographicImg{
+  width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
 }

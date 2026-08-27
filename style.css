@@ -205,16 +205,25 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 
 
 .topNavComingSoon{
-  display:inline-flex;
+  display:flex;
   align-items:center;
+  justify-content:center;
   gap:6px;
+
+  min-height:44px;
   padding:8px 10px;
+
   border-radius:999px;
   border:1px solid rgba(229,231,235,.9);
   background:rgba(255,255,255,.55);
+
   color:#64748b;
+  text-align:center;
+  font-size:14px;
+  line-height:1.35;
   font-weight:900;
-  white-space:nowrap;
+
+  white-space:normal;
   cursor:default;
   user-select:none;
 }
@@ -223,23 +232,25 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  flex:0 0 auto;
+
   padding:3px 6px;
   border-radius:999px;
+
   background:#f1f5f9;
   border:1px solid rgba(148,163,184,.25);
   color:#64748b;
+
   font-size:10px;
   line-height:1;
   font-weight:900;
 }
-
 /* PCでは横スクロール用のフェードを表示しない */
 .topNav::before,
 .topNav::after{
   display:none;
 }
 
-/* タブレット・スマホ：従来どおり横スクロール */
 @media (max-width:980px){
 
   .topNav{
@@ -252,7 +263,8 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
     white-space:nowrap;
   }
 
-  .topNav a{
+  .topNav a,
+  .topNavComingSoon{
     flex:0 0 auto;
     min-height:auto;
     padding:8px 10px;
@@ -260,7 +272,9 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
     white-space:nowrap;
   }
 
-}/* Header / Hero */
+}
+
+/* Header / Hero */
 
 .heroBg{
  position:absolute;

@@ -201,6 +201,38 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   transform:translateY(-1px);
 }
 
+
+
+
+.topNavComingSoon{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(229,231,235,.9);
+  background:rgba(255,255,255,.55);
+  color:#64748b;
+  font-weight:900;
+  white-space:nowrap;
+  cursor:default;
+  user-select:none;
+}
+
+.topNavComingSoon small{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:3px 6px;
+  border-radius:999px;
+  background:#f1f5f9;
+  border:1px solid rgba(148,163,184,.25);
+  color:#64748b;
+  font-size:10px;
+  line-height:1;
+  font-weight:900;
+}
+
 /* PCでは横スクロール用のフェードを表示しない */
 .topNav::before,
 .topNav::after{

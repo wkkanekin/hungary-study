@@ -301,6 +301,25 @@
     ],
     "readingTime": "9分",
     "url": "column-kaneko-rental-trouble.html"
+  },
+  {
+    "id": "yugo-exam-period",
+    "enabled": true,
+    "title": "ハンガリーの大学のテスト期間（Exam Period）って実際どうなの？【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-09-30",
+    "thumbnail": "images/columns/yugo-exam-period-hero.jpg",
+    "summary": "デブレツェン大学CS専攻の現役生が、ハンガリーの大学のテスト期間、Final Exam、口頭試問、再試験制度、試験勉強のリアルを紹介します。",
+    "tags": [
+      "テスト",
+      "Exam Period",
+      "デブレツェン",
+      "Computer Science"
+    ],
+    "readingTime": "7分",
+    "url": "column-yugo-exam-period.html"
   }
 
 ]

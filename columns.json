@@ -322,17 +322,22 @@
     "url": "column-yugo-exam-period.html"
   },
 {
-  "id": "hungary-friendship-debrecen",
+  "id": "yugo-friendship",
   "enabled": true,
-  "featured": true,
-  "comingSoon": false,
-  "title": "ハンガリー留学での友達作りと人間関係｜国籍バランスからリアルな付き合い方まで",
-  "description": "デブレツェン大学CS専攻の現役生が、多国籍な同級生、日本人コミュニティ、最初の友達ができたきっかけ、英語への不安と文化の違いを紹介します。",
-  "category": "体験談",
-  "url": "guide-hungary-friendship-debrecen.html",
+  "title": "ハンガリー留学での友達作りと人間関係！国籍バランスからリアルな付き合い方まで解説【デブレツェン大学CS専攻】",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
   "date": "2026-09-30",
-  "image": "images/hungary-friendship-debrecen.png",
-  "imageAlt": "ハンガリーの大学キャンパスで交流する多国籍の学生たち"
+  "thumbnail": "images/columns/yugo-friendship-hero.png",
+  "summary": "デブレツェン大学CS専攻の現役生が、多国籍な同級生、日本人コミュニティ、最初の友達ができたきっかけ、英語への不安と文化の違いを紹介します。",
+  "tags": [
+    "友達作り",
+    "デブレツェン",
+    "Computer Science",
+    "留学生活"
+  ],
+  "readingTime": "7分",
+  "url": "column-yugo-friendship.html"
 }
-
 ]

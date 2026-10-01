@@ -358,5 +358,25 @@
   ],
   "readingTime": "5分",
   "url": "column-yugo-food-life.html"
+},
+{
+  "id": "yugo-packing",
+  "enabled": true,
+  "title": "ハンガリー渡航時に「日本から持ってきて本気で良かったもの／いらなかったもの」リアルなパッキング事情【デブレツェン大学CS専攻】",
+  "author": "ユウゴ",
+  "authorId": "okada",
+  "university": "University of Debrecen",
+  "date": "2026-10-01",
+  "thumbnail": "images/columns/yugo-packing-hero.jpg",
+  "summary": "デブレツェン大学CS専攻のユウゴが、日本から持参して良かった食品・タンブラー・ガジェット、現地調達できたもの、重量管理などパッキングのコツを紹介します。",
+  "tags": [
+    "持ち物",
+    "渡航準備",
+    "デブレツェン",
+    "留学生活"
+  ],
+  "readingTime": "5分",
+  "url": "column-yugo-packing.html"
 }
 ]
+

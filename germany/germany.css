@@ -15,7 +15,7 @@ body{font-size:16px;line-height:1.7}
 .heroTopics span:last-child{border:0}
 .heroActions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 .heroFoot{margin:0;padding:16px 22px;background:#081f50;color:#fff;font-family:'Yu Mincho',serif;font-size:18px;letter-spacing:.04em;border-top:3px solid #c89b36}
-.topNav{grid-template-columns:repeat(5,minmax(0,1fr))}
+.topNav{grid-template-columns:repeat(6,minmax(0,1fr))}
 .topNavComingSoon small{font-size:12px}
 .recentStudentGrid{max-width:1100px}
 .recentStudentCard{gap:14px}
@@ -71,3 +71,24 @@ body{font-size:16px;line-height:1.7}
 @media(max-width:720px){.container{padding:12px 12px 30px}.germanyHero{min-height:0}.heroContent{padding:28px 16px}.brandLine{gap:12px;margin:18px 0}.brandMark{width:72px;height:72px}.germanyHero h1{font-size:clamp(30px,7.6vw,48px);letter-spacing:.06em}.heroSubtitle{font-size:19px}.heroLead{font-size:16px}.heroTopics{display:grid;grid-template-columns:1fr 1fr;row-gap:12px}.heroTopics span{font-size:16px;padding:0 12px}.heroTopics span:nth-child(2){border:0}.heroFoot{font-size:16px;padding:14px}.heroActions .btn{width:100%}.secTitle{font-size:23px}.simpleCard{padding:20px 16px}.section{margin-top:28px;scroll-margin-top:90px}.memberGrid .studentCard{scroll-margin-top:90px}.recentStudentAvatar{width:68px;height:68px}.recentStudentTop{align-items:flex-start}.metaRow{grid-template-columns:82px minmax(0,1fr)}.heroEyebrow{letter-spacing:.1em}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 @media(max-width:720px){#service .pricingGrid{grid-template-columns:minmax(0,1fr)}.pricingGrid .infoCard{padding:22px 16px}.pricingGrid .infoCard h3{font-size:19px}.pricingGrid .lineCard .big{font-size:clamp(24px,7vw,30px)}.priceNote{text-align:left}.memberStudy .profileUniversity{font-size:14px}.profileDetails .metaBox{padding:10px 8px}}
+/* Germany university map: shared Hungary map/card styles with local additions. */
+[hidden]{display:none!important}
+.mapToolbar{display:grid;grid-template-columns:1fr 1fr 1.3fr auto;gap:12px;align-items:end;margin:24px 0 14px}
+.mapToolbar>div{min-width:0}.mapToolbar label{display:block;font-size:13px;font-weight:800;color:#17345d;margin-bottom:6px}
+.mapToolbar select,.mapToolbar input{box-sizing:border-box;width:100%;min-width:0;min-height:44px;border:1px solid #d5deeb;border-radius:10px;background:white;padding:10px;color:#17345d;font:inherit;font-size:14px}
+.mapToolbar .btn{min-height:44px;white-space:nowrap}
+#germanyMap{height:590px;background:#f2f6fa;z-index:0}
+.cityMarker{background:#294e83;border:2px solid white;border-radius:50%;box-shadow:0 1px 4px #16315d60}
+.cityMarker.hasStudents{background:#d9a441;width:19px!important;height:19px!important;margin-top:-9px!important;margin-left:-9px!important;z-index:999!important}
+.cityMarker:focus{outline:3px solid #152f60;outline-offset:3px}
+.mapLegend{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:#48617f;padding:8px;margin:0}
+.legendDot{width:10px;height:10px;background:#294e83;display:inline-block;border-radius:50%}.studentDot{background:#d9a441;margin-left:8px}
+.mapResults{max-height:640px;overflow:auto}.mapHint{font-size:14px;color:#60718a;line-height:1.8;margin:20px 0}
+.universityRow{border-bottom:1px solid #e3e9f2;padding:12px 0}.uniBtn{border:0!important;border-radius:8px;width:100%;font:inherit;padding:10px!important;cursor:pointer;text-align:left}
+.uniName{display:block;font-size:14px;font-weight:800;line-height:1.6}.uniMeta{display:block;font-size:12px;color:#64758d;margin-top:5px}
+.uniBtn[aria-pressed="true"]{background:#eaf1ff;box-shadow:inset 3px 0 #335d9a}.officialSource{display:inline-block;font-size:12px;margin:4px 10px;color:#335d9a}
+.mapScope,.mapSourceNote{font-size:12px;line-height:1.8;color:#62738a;margin:10px 0}.mapSourceNote a{color:inherit}
+.studentFilterBar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0}.studentFilterBar p{font-size:14px;color:#456183;margin:0;line-height:1.7}
+.leaflet-container{font-family:inherit}.leaflet-control-attribution{font-size:10px!important}.leaflet-tooltip{font-family:inherit;color:#17345d;font-weight:700}
+@media(max-width:1050px){.mapToolbar{grid-template-columns:1fr 1fr}.mapToolbar .btn{justify-self:start}}
+@media(max-width:720px){#germanyMap{height:490px}.mapResults{max-height:420px}.studentFilterBar{align-items:flex-start;flex-direction:column}.mapToolbar{grid-template-columns:1fr}.mapToolbar .btn{width:100%}.mapScope,.mapSourceNote{font-size:11px}}

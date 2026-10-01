@@ -1,11 +1,3 @@
-/* Native anchors and <details> work even without JavaScript. */
+/* Page navigation and profile accordions use native HTML.
+   Keep this entry point for future TOP-only enhancements. */
 'use strict';
-document.querySelectorAll('a[data-profile-link]').forEach(link => {
-  link.addEventListener('click', () => {
-    const card = document.getElementById(link.getAttribute('href').slice(1));
-    if (!card) return;
-    const details = card.querySelector('details');
-    if (details) details.open = true;
-    card.focus({ preventScroll: true });
-  });
-});

@@ -1,0 +1,1 @@
+window.GERMANY_COLUMNS = [];

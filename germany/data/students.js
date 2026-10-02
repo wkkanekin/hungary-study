@@ -1,0 +1,126 @@
+window.GERMANY_STUDENTS = [
+  {
+    "id": "riko-asahi",
+    "name": "朝日理子",
+    "photo": "riko-asahi.jpg",
+    "university": "IU | University of Applied Sciences for International Students",
+    "major": "Soziale Arbeit (B.A.)／社会福祉・社会教育 デュアル学士",
+    "region": "ミュンヘン",
+    "entry": "2025年",
+    "language": "ドイツ語",
+    "admission": "TestDaF all 4",
+    "selection": "書類＋オンライン面談＋インターンシップ先探し",
+    "education": "日本の大学・経済学部経営学科卒業",
+    "work": "日本のIT系企業で約3年半",
+    "scholarship": "Deutschland Stipendium",
+    "tags": [
+      "大学選び",
+      "ドイツ語対策",
+      "生活費",
+      "大学生活",
+      "学生ビザ",
+      "第二キャリア",
+      "語学学校選び",
+      "フランクフルト",
+      "ミュンヘン"
+    ],
+    "bio": "日本の大学卒業後、IT系企業に約3年半勤務して渡独。ドイツ語をゼロから学び、現在はミュンヘンで大学に通いながら働き、児童養護施設でインターンシップをしています。",
+    "message": "前職や年齢に関係なく、新しい場所で新しい道を選ぶことはできます。「道は歩いたあとにできる」。大学進学に限らず、ワーキングホリデー、現地の語学学校、生活費や学費など、私自身が実際に経験したことをお伝えします。",
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.iu.de/duales-studium/"
+      ]
+    ],
+    "sources": [
+      "朝日さん.txt",
+      "現役生登録_朝日さん(1).txt"
+    ],
+    "enabled": true,
+    "motivation": "東京で、支援を必要とする子どもたちの学習支援にボランティアとして関わったことから、社会問題や若者の教育への関心が深まりました。ドイツで語学を学びながら進学という選択肢を見つけ、社会福祉・社会教育の分野に進みました。",
+    "preparation": "ドイツ語学習約1年＋出願準備約6か月（本人資料）"
+  },
+  {
+    "id": "megumi-yamada",
+    "name": "山田恵",
+    "photo": "megumi-yamada.jpg",
+    "university": "オスナブリュック大学",
+    "major": "Conflict Studies and Peacebuilding 修士課程",
+    "entry": "2023年10月",
+    "language": "英語",
+    "admission": "IELTS 6.5 / ドイツ語 A2",
+    "selection": "書類審査",
+    "education": "中央大学法学部政治学科卒業（2023年3月）",
+    "tags": [
+      "大学出願",
+      "英語・ドイツ語対策",
+      "ビザ申請・延長",
+      "住居探し",
+      "大学生活",
+      "インターンシップ",
+      "社会学系の授業"
+    ],
+    "bio": "平和学を学ぶ修士課程の学生。ベルリンの難民・移民支援団体と、ボンの国連事務局でインターンシップを経験。note「留学するならドイツ」を執筆しています。",
+    "message": "書類出願や住居関係、ビザ申請・延長で困難が生じた経験を、少しでも共有できれば幸いです。大学生活やインターンシップについても、私自身の経験をお伝えします。",
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.uni-osnabrueck.de/en/studying/our-study-programs/study-programs-from-a-z/conflict-studies-and-peacebuilding-master-of-arts"
+      ],
+      [
+        "note",
+        "https://note.com/bratsche_viola"
+      ]
+    ],
+    "sources": [
+      "山田さん.txt",
+      "山田恵_ドイツ留学仮登録.docx"
+    ],
+    "enabled": true,
+    "region": "オスナブリュック",
+    "motivation": "学部時代から戦争と平和を進路のテーマにしていました。英国での短期留学で出会う人々の背景について考え、経済的ゆとりや国籍に関わらず学問と留学が開かれていること、グローバルサウスを含むさまざまな国の人と学ぶことを大切にして、ドイツ留学を決めました。",
+    "preparation": "4月に出願準備を開始、8月に合格通知（本人資料）"
+  },
+  {
+    "id": "airi-kawakita",
+    "name": "河北彩里",
+    "reading": "かわきた あいり",
+    "photo": "airi-kawakita.jpg",
+    "university": "Technical University of Hamburg",
+    "major": "B.Sc. Engineering Science",
+    "region": "ハンブルク",
+    "entry": "2025年10月",
+    "language": "英語（次のセメスターからドイツ語の講義も必修／資料記載時点）",
+    "admission": "IELTS 7.0 / Goethe A2",
+    "selection": "書類審査",
+    "education": "日本の高校卒業・IB取得",
+    "tags": [
+      "大学生活",
+      "生活費",
+      "住居探し",
+      "出願（一部に限る）"
+    ],
+    "bio": "日本の高校でIBを取得し、卒業後にドイツの工科大学へ進学。大学生活・生活費・住居探し・一部の出願について、自身の経験をお伝えします。",
+    "message": "日本の高校を卒業してからの出願や住居探しには苦戦しましたが、現在はドイツの工科大学で学んでいます。留学を迷っている、興味のある方の一歩を後押しできれば幸いです。",
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.tuhh.de/tuhh/startseite"
+      ],
+      [
+        "note",
+        "https://note.com/akunigermany"
+      ],
+      [
+        "Instagram",
+        "https://www.instagram.com/ak.unigermany/"
+      ]
+    ],
+    "sources": [
+      "河北さん.txt"
+    ],
+    "enabled": true,
+    "motivation": "小学5年生の時に父の仕事の関係でドイツに暮らし、帰国後もドイツに戻りたいと思っていました。高校生の時に、エンジニアリングを英語で学ぶことを決めました。",
+    "preparation": "高校卒業後の3月〜7月（本人資料）"
+  }
+];

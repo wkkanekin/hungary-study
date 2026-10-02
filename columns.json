@@ -36,255 +36,215 @@
     "readingTime": "5分",
     "url": "column-yugo-english.html"
   },
-{
-  "id": "yugo-second-semester",
-  "enabled": true,
-  "title": "2学期やる気なくなる問題",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-06-27",
-  "thumbnail": "images/columns/yugo-second-semester.JPG",
-  "summary": "留学生活2学期でモチベーションが下がってしまった実体験と、その乗り越え方について紹介します。",
-  "tags": [
-    "大学生活",
-    "モチベーション",
-    "デブレツェン",
-    "留学生活"
-  ],
-  "readingTime": "5分",
-  "url": "column-yugo-second-semester.html"
-},
-{
-  "id": "yugo-homesick",
-  "enabled": true,
-  "title": "結構しんどい！ホームシックについて",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-06-28",
-  "thumbnail": "images/columns/yugo-homesick.jpg",
-  "summary": "ハンガリー留学中に感じたホームシックの実体験と、時間経過・日々の過ごし方・思い出の品などを通じた乗り越え方を紹介します。",
-  "tags": [
-    "ホームシック",
-    "留学生活",
-    "メンタル",
-    "デブレツェン"
-  ],
-  "readingTime": "6分",
-  "url": "column-yugo-homesick.html"
-},
-{
-  "id": "kaneko-room-search",
-  "enabled": true,
-
-  "title": "大学に寮がない！？ハンガリーで部屋探しに苦労した話",
-
-  "author": "カネコ",
-  "authorId": "kaneko",
-
-  "university": "Budapest University of Economics and Business",
-
-  "date": "2026-07-01",
-
-  "thumbnail": "images/columns/room-search-hero.jpg",
-
-  "summary": "BUEB入学後、大学に寮がないことを知り、約1か月間ホステル生活を送りながら部屋探しをした実体験。FacebookやIngatlanでの探し方や、留学前に知っておきたい注意点を紹介します。",
-
-  "tags": [
-    "ブダペスト",
-    "物件探し",
-    "住まい"
-  ],
-
-  "readingTime": "7分",
-
-  "url": "column-kaneko-budapest-room.html"
-},
-
-{
-  "id": "yugo-daily-life",
-  "enabled": true,
-
-  "title": "デブレツェン大学生の日常（1年前期編）",
-
-  "author": "ユウゴ",
-  "authorId": "okada",
-
-  "university": "University of Debrecen",
-
-  "date": "2026-07-03",
-
-  "thumbnail": "images/columns/yugo-debrecen-daily-hero.jpg",
-
-  "summary": "Computer Science1年前期の時間割や授業内容、図書館での勉強、三連休の過ごし方まで、デブレツェン大学でのリアルな1週間を紹介します。",
-
-  "tags": [
-    "大学生活",
-    "デブレツェン",
-    "Computer Science",
-    "授業"
-  ],
-
-  "readingTime": "7分",
-
-  "url": "column-yugo-first-semester.html"
-},
-{
-  "id": "yugo-pre-departure-cost",
-
-  "enabled": true,
-
-  "title": "意外と知らない？留学するまでにかかるお金！",
-
-  "author": "ユウゴ",
-  "authorId": "okada",
-
-  "university": "University of Debrecen",
-
-  "date": "2026-07-16",
-
-  "thumbnail": "images/columns/yugo-pre-departure-cost.jpg",
-
-  "summary": "留学前に必要だった健康診断、家賃、残高証明、航空券など、実際にかかった費用を体験ベースで紹介します。",
-
-  "tags": [
-    "留学費用",
-    "デブレツェン",
-    "渡航準備",
-    "大学生活"
-  ],
-
-  "readingTime": "6分",
-
-  "url": "column-yugo-pre-departure-cost.html"
-},
-{
-  "id": "yugo-humanities-cs",
-
-  "enabled": true,
-
-  "title": "文系でもCS留学できる？",
-
-  "author": "ユウゴ",
-  "authorId": "okada",
-
-  "university": "University of Debrecen",
-
-  "date": "2026-07-17",
-
-  "thumbnail": "images/columns/yugo-humanities-cs.jpg",
-
-  "summary": "文系出身でもComputer Scienceへ進学できるのか。数学・物理・プログラミングの難易度を実体験をもとに紹介します。",
-
-  "tags": [
-    "Computer Science",
-    "文系",
-    "デブレツェン",
-    "大学生活"
-  ],
-
-  "readingTime": "6分",
-
-  "url": "column-yugo-humanities-cs.html"
-},
-{
-  "id": "yugo-career",
-  "enabled": true,
-  "title": "ハンガリーの大学卒でも就職できるの？",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-08-03",
-  "thumbnail": "images/columns/yugo-career.jpg",
-  "summary": "ハンガリーの大学卒業後の就職活動、キャリアフォーラム、オンライン就活、デブレツェン大学CS卒業生の進路について紹介します。",
-  "tags": [
-    "就職活動",
-    "キャリア",
-    "デブレツェン",
-    "Computer Science"
-  ],
-  "readingTime": "6分",
-  "url": "column-yugo-career.html"
-},
-{
-  "id": "yugo-money",
-  "enabled": true,
-  "title": "現地でのお金事情！",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-08-03",
-  "thumbnail": "images/columns/yugo-money.jpg",
-  "summary": "ハンガリーでの現金・カード決済、Wise、海外送金、学費の支払い、ヨーロッパ旅行中の決済について紹介します。",
-  "tags": [
-    "お金",
-    "Wise",
-    "海外送金",
-    "デブレツェン"
-  ],
-  "readingTime": "6分",
-  "url": "column-yugo-money.html"
-},
-{
-  "id": "yugo-second-semester-daily",
-  "enabled": true,
-  "title": "デブレツェン大生の日常（1年後期編）",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-08-03",
-  "thumbnail": "images/columns/yugo-second-semester-daily.jpg",
-  "summary": "Computer Science1年後期の時間割や授業内容、昼食、体育、週末の過ごし方まで、デブレツェン大学でのリアルな1週間を紹介します。",
-  "tags": [
-    "大学生活",
-    "デブレツェン",
-    "Computer Science",
-    "授業"
-  ],
-  "readingTime": "9分",
-  "url": "column-yugo-second-semester-daily.html"
-},
-
-{
-  "id": "kaneko-career-change",
-  "enabled": true,
-  "title": "なぜ34歳で仕事を辞め、ハンガリーの大学院へ進学したのか",
-  "author": "カネコ",
-  "authorId": "kaneko",
-  "university": "Budapest University of Economics and Business",
-  "date": "2026-08-08",
-  "thumbnail": "images/columns/kaneko-career-change.jpg",
-  "summary": "製薬会社、軽井沢のホテル、英語塾での経験を経て、34歳で観光学を学ぶことにした経緯を紹介します。",
-  "tags": [
-    "社会人留学",
-    "観光学",
-    "ホスピタリティ",
-    "キャリア"
-  ],
-  "readingTime": "10分",
-  "url": "column-kaneko-career-change.html"
-}
-,{
-  "id": "kaneko-why-hungary-bueb",
-  "enabled": true,
-  "title": "なぜ私はハンガリーの大学院を選んだのか",
-  "author": "カネコ",
-  "authorId": "kaneko",
-  "university": "Budapest University of Economics and Business",
-  "date": "2026-08-08",
-  "thumbnail": "images/columns/kaneko-bueb-hero.jpg",
-  "summary": "イギリスやドイツも検討する中で、費用、スティペンディウム・ハンガリカム、BUEBの教育内容、ヨーロッパで学べる環境からハンガリーを選んだ理由を紹介します。",
-  "tags": [
-    "BUEB",
-    "大学院",
-    "奨学金",
-    "観光学"
-  ],
-  "readingTime": "9分",
-  "url": "column-kaneko-why-hungary-bueb.html"
-}
-,{
+  {
+    "id": "yugo-second-semester",
+    "enabled": true,
+    "title": "2学期やる気なくなる問題",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-06-27",
+    "thumbnail": "images/columns/yugo-second-semester.JPG",
+    "summary": "留学生活2学期でモチベーションが下がってしまった実体験と、その乗り越え方について紹介します。",
+    "tags": [
+      "大学生活",
+      "モチベーション",
+      "デブレツェン",
+      "留学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-second-semester.html"
+  },
+  {
+    "id": "yugo-homesick",
+    "enabled": true,
+    "title": "結構しんどい！ホームシックについて",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-06-28",
+    "thumbnail": "images/columns/yugo-homesick.jpg",
+    "summary": "ハンガリー留学中に感じたホームシックの実体験と、時間経過・日々の過ごし方・思い出の品などを通じた乗り越え方を紹介します。",
+    "tags": [
+      "ホームシック",
+      "留学生活",
+      "メンタル",
+      "デブレツェン"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-homesick.html"
+  },
+  {
+    "id": "kaneko-room-search",
+    "enabled": true,
+    "title": "大学に寮がない！？ハンガリーで部屋探しに苦労した話",
+    "author": "カネコ",
+    "authorId": "kaneko",
+    "university": "Budapest University of Economics and Business",
+    "date": "2026-07-01",
+    "thumbnail": "images/columns/room-search-hero.jpg",
+    "summary": "BUEB入学後、大学に寮がないことを知り、約1か月間ホステル生活を送りながら部屋探しをした実体験。FacebookやIngatlanでの探し方や、留学前に知っておきたい注意点を紹介します。",
+    "tags": [
+      "ブダペスト",
+      "物件探し",
+      "住まい"
+    ],
+    "readingTime": "7分",
+    "url": "column-kaneko-budapest-room.html"
+  },
+  {
+    "id": "yugo-daily-life",
+    "enabled": true,
+    "title": "デブレツェン大学生の日常（1年前期編）",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-07-03",
+    "thumbnail": "images/columns/yugo-debrecen-daily-hero.jpg",
+    "summary": "Computer Science1年前期の時間割や授業内容、図書館での勉強、三連休の過ごし方まで、デブレツェン大学でのリアルな1週間を紹介します。",
+    "tags": [
+      "大学生活",
+      "デブレツェン",
+      "Computer Science",
+      "授業"
+    ],
+    "readingTime": "7分",
+    "url": "column-yugo-first-semester.html"
+  },
+  {
+    "id": "yugo-pre-departure-cost",
+    "enabled": true,
+    "title": "意外と知らない？留学するまでにかかるお金！",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-07-16",
+    "thumbnail": "images/columns/yugo-pre-departure-cost.jpg",
+    "summary": "留学前に必要だった健康診断、家賃、残高証明、航空券など、実際にかかった費用を体験ベースで紹介します。",
+    "tags": [
+      "留学費用",
+      "デブレツェン",
+      "渡航準備",
+      "大学生活"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-pre-departure-cost.html"
+  },
+  {
+    "id": "yugo-humanities-cs",
+    "enabled": true,
+    "title": "文系でもCS留学できる？",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-07-17",
+    "thumbnail": "images/columns/yugo-humanities-cs.jpg",
+    "summary": "文系出身でもComputer Scienceへ進学できるのか。数学・物理・プログラミングの難易度を実体験をもとに紹介します。",
+    "tags": [
+      "Computer Science",
+      "文系",
+      "デブレツェン",
+      "大学生活"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-humanities-cs.html"
+  },
+  {
+    "id": "yugo-career",
+    "enabled": true,
+    "title": "ハンガリーの大学卒でも就職できるの？",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-08-03",
+    "thumbnail": "images/columns/yugo-career.jpg",
+    "summary": "ハンガリーの大学卒業後の就職活動、キャリアフォーラム、オンライン就活、デブレツェン大学CS卒業生の進路について紹介します。",
+    "tags": [
+      "就職活動",
+      "キャリア",
+      "デブレツェン",
+      "Computer Science"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-career.html"
+  },
+  {
+    "id": "yugo-money",
+    "enabled": true,
+    "title": "現地でのお金事情！",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-08-03",
+    "thumbnail": "images/columns/yugo-money.jpg",
+    "summary": "ハンガリーでの現金・カード決済、Wise、海外送金、学費の支払い、ヨーロッパ旅行中の決済について紹介します。",
+    "tags": [
+      "お金",
+      "Wise",
+      "海外送金",
+      "デブレツェン"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-money.html"
+  },
+  {
+    "id": "yugo-second-semester-daily",
+    "enabled": true,
+    "title": "デブレツェン大生の日常（1年後期編）",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-08-03",
+    "thumbnail": "images/columns/yugo-second-semester-daily.jpg",
+    "summary": "Computer Science1年後期の時間割や授業内容、昼食、体育、週末の過ごし方まで、デブレツェン大学でのリアルな1週間を紹介します。",
+    "tags": [
+      "大学生活",
+      "デブレツェン",
+      "Computer Science",
+      "授業"
+    ],
+    "readingTime": "9分",
+    "url": "column-yugo-second-semester-daily.html"
+  },
+  {
+    "id": "kaneko-career-change",
+    "enabled": true,
+    "title": "なぜ34歳で仕事を辞め、ハンガリーの大学院へ進学したのか",
+    "author": "カネコ",
+    "authorId": "kaneko",
+    "university": "Budapest University of Economics and Business",
+    "date": "2026-08-08",
+    "thumbnail": "images/columns/kaneko-career-change.jpg",
+    "summary": "製薬会社、軽井沢のホテル、英語塾での経験を経て、34歳で観光学を学ぶことにした経緯を紹介します。",
+    "tags": [
+      "社会人留学",
+      "観光学",
+      "ホスピタリティ",
+      "キャリア"
+    ],
+    "readingTime": "10分",
+    "url": "column-kaneko-career-change.html"
+  },
+  {
+    "id": "kaneko-why-hungary-bueb",
+    "enabled": true,
+    "title": "なぜ私はハンガリーの大学院を選んだのか",
+    "author": "カネコ",
+    "authorId": "kaneko",
+    "university": "Budapest University of Economics and Business",
+    "date": "2026-08-08",
+    "thumbnail": "images/columns/kaneko-bueb-hero.jpg",
+    "summary": "イギリスやドイツも検討する中で、費用、スティペンディウム・ハンガリカム、BUEBの教育内容、ヨーロッパで学べる環境からハンガリーを選んだ理由を紹介します。",
+    "tags": [
+      "BUEB",
+      "大学院",
+      "奨学金",
+      "観光学"
+    ],
+    "readingTime": "9分",
+    "url": "column-kaneko-why-hungary-bueb.html"
+  },
+  {
     "id": "kaneko-rental-trouble",
     "enabled": true,
     "title": "突然、鍵が変えられていた。ハンガリーで大家と大トラブルになった話",
@@ -321,62 +281,80 @@
     "readingTime": "7分",
     "url": "column-yugo-exam-period.html"
   },
-{
-  "id": "yugo-friendship",
-  "enabled": true,
-  "title": "ハンガリー留学での友達作りと人間関係！国籍バランスからリアルな付き合い方まで解説【デブレツェン大学CS専攻】",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-09-30",
-  "thumbnail": "images/columns/yugo-friendship-hero.png",
-  "summary": "デブレツェン大学CS専攻の現役生が、多国籍な同級生、日本人コミュニティ、最初の友達ができたきっかけ、英語への不安と文化の違いを紹介します。",
-  "tags": [
-    "友達作り",
-    "デブレツェン",
-    "Computer Science",
-    "留学生活"
-  ],
-  "readingTime": "7分",
-  "url": "column-yugo-friendship.html"
-},
-{
-  "id": "yugo-food-life",
-  "enabled": true,
-  "title": "デブレツェンでの食生活リアル！自炊・スーパー事情から外食・食費まで徹底解説【デブレツェン大学CS専攻】",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-10-01",
-  "thumbnail": "images/columns/yugo-food-life-hero.jpg",
-  "summary": "デブレツェン大学CS専攻のユウゴが、1ヶ月の食費、自炊メニュー、Coop・Sparの使い分け、日本食が恋しい時の工夫を紹介します。",
-  "tags": [
-    "食生活",
-    "自炊",
-    "デブレツェン",
-    "留学費用"
-  ],
-  "readingTime": "5分",
-  "url": "column-yugo-food-life.html"
-},
-{
-  "id": "yugo-packing",
-  "enabled": true,
-  "title": "ハンガリー渡航時に「日本から持ってきて本気で良かったもの／いらなかったもの」リアルなパッキング事情【デブレツェン大学CS専攻】",
-  "author": "ユウゴ",
-  "authorId": "okada",
-  "university": "University of Debrecen",
-  "date": "2026-10-01",
-  "thumbnail": "images/columns/yugo-packing-hero.jpg",
-  "summary": "デブレツェン大学CS専攻のユウゴが、日本から持参して良かった食品・タンブラー・ガジェット、現地調達できたもの、重量管理などパッキングのコツを紹介します。",
-  "tags": [
-    "持ち物",
-    "渡航準備",
-    "デブレツェン",
-    "留学生活"
-  ],
-  "readingTime": "5分",
-  "url": "column-yugo-packing.html"
-}
+  {
+    "id": "yugo-friendship",
+    "enabled": true,
+    "title": "ハンガリー留学での友達作りと人間関係！国籍バランスからリアルな付き合い方まで解説【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-09-30",
+    "thumbnail": "images/columns/yugo-friendship-hero.png",
+    "summary": "デブレツェン大学CS専攻の現役生が、多国籍な同級生、日本人コミュニティ、最初の友達ができたきっかけ、英語への不安と文化の違いを紹介します。",
+    "tags": [
+      "友達作り",
+      "デブレツェン",
+      "Computer Science",
+      "留学生活"
+    ],
+    "readingTime": "7分",
+    "url": "column-yugo-friendship.html"
+  },
+  {
+    "id": "yugo-food-life",
+    "enabled": true,
+    "title": "デブレツェンでの食生活リアル！自炊・スーパー事情から外食・食費まで徹底解説【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-10-01",
+    "thumbnail": "images/columns/yugo-food-life-hero.jpg",
+    "summary": "デブレツェン大学CS専攻のユウゴが、1ヶ月の食費、自炊メニュー、Coop・Sparの使い分け、日本食が恋しい時の工夫を紹介します。",
+    "tags": [
+      "食生活",
+      "自炊",
+      "デブレツェン",
+      "留学費用"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-food-life.html"
+  },
+  {
+    "id": "yugo-packing",
+    "enabled": true,
+    "title": "ハンガリー渡航時に「日本から持ってきて本気で良かったもの／いらなかったもの」リアルなパッキング事情【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-10-01",
+    "thumbnail": "images/columns/yugo-packing-hero.jpg",
+    "summary": "デブレツェン大学CS専攻のユウゴが、日本から持参して良かった食品・タンブラー・ガジェット、現地調達できたもの、重量管理などパッキングのコツを紹介します。",
+    "tags": [
+      "持ち物",
+      "渡航準備",
+      "デブレツェン",
+      "留学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-packing.html"
+  },
+  {
+    "id": "kaneko-japan-return",
+    "enabled": true,
+    "title": "35歳、修士2年。ハンガリーに戻る前に、日本での時間を振り返る",
+    "author": "カネコ",
+    "authorId": "kaneko",
+    "university": "Budapest University of Economics and Business",
+    "date": "2026-10-02",
+    "thumbnail": "images/columns/kaneko-japan-return-hero.jpg",
+    "summary": "35歳・修士2年のカネコが、一時帰国中のビジコン挑戦、イベントの裏方、英語学習と、ハンガリーに戻る前の正直な気持ちを振り返ります。",
+    "tags": [
+      "一時帰国",
+      "社会人留学",
+      "観光経営学",
+      "英語学習"
+    ],
+    "readingTime": "8分",
+    "url": "column-kaneko-japan-return.html"
+  }
 ]
-

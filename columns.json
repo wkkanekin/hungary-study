@@ -356,5 +356,24 @@
     ],
     "readingTime": "8分",
     "url": "column-kaneko-japan-return.html"
+  },
+  {
+    "id": "yugo-holidays",
+    "enabled": true,
+    "title": "海外大の夏休み・冬休みってどのくらい長いの？一時帰国や航空券事情まで解説【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-10-02",
+    "thumbnail": "images/columns/yugo-holidays-hero.jpg",
+    "summary": "デブレツェン大学CS専攻のユウゴが、夏休み・冬休みの長さ、試験日程との関係、日本への一時帰国や航空券の費用について実体験を紹介します。",
+    "tags": [
+      "大学生活",
+      "長期休み",
+      "一時帰国",
+      "デブレツェン"
+    ],
+    "readingTime": "4分",
+    "url": "column-yugo-holidays.html"
   }
 ]

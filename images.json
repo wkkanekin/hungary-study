@@ -9,9 +9,9 @@
   "logoVersion": "20260316-1"
 },
   "favicon": {
-    "url": "images/favicon.png",
+    "url": "/images/favicon-32x32.png",
     "type": "image/png",
-    "version": "20260316-1"
+    "version": "20261004-1"
   },
   "basicsCards": [
     {

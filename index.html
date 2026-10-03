@@ -45,6 +45,7 @@
  
  <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="student-reviews.css" />
+<link rel="stylesheet" href="updates.css" />
 
   <!-- Leaflet -->
   <link
@@ -167,6 +168,7 @@
       <div class="topBarInner">
        
  <nav class="topNav" aria-label="横目次">
+          <a href="#updates">更新情報</a>
           <a href="#recent-students">最近参加した現役生</a>
           <a href="#service">サービス内容</a>
           <a href="#comparison">留学エージェントとの違い</a>
@@ -181,10 +183,10 @@
   <small>準備中</small>
 </span>
 
-<span class="topNavComingSoon">
+<a class="topNavComingSoon topNavCountryLink" href="https://hungarystudy.org/germany/">
     ドイツ留学ラボ
     <small>準備中</small>
-  </span>
+  </a>
 
   <span class="topNavComingSoon">
     オランダ留学ラボ
@@ -199,6 +201,15 @@
       </div>
     </header>
 
+
+<section class="section updatesSection" id="updates" aria-labelledby="updates-title">
+  <h2 class="secTitle" id="updates-title">更新情報</h2>
+  <div class="card updatesCard">
+    <ul class="updatesList" id="updates-list" aria-label="最新の更新情報"></ul>
+    <p class="updatesStatus" id="updates-status" role="status">更新情報を読み込み中です。</p>
+    <noscript><p class="updatesStatus">更新情報の表示にはJavaScriptが必要です。<a href="guide.html">ガイド</a>・<a href="column.html">コラム</a>もご覧ください。</p></noscript>
+  </div>
+</section>
 
 <section class="section recentStudentsSection" id="recent-students">
   <h2 class="secTitle">最近参加した現役生</h2>
@@ -1052,6 +1063,7 @@
   ></script>
 
   <script src="script.js"></script>
+  <script src="updates.js" defer></script>
 
   <script src="student-reviews.js"></script>
 

@@ -1,0 +1,27 @@
+/* 更新情報専用。既存カード・地図・プロフィールのスタイルには干渉しません。 */
+.updatesCard { overflow: hidden; }
+.updatesList { list-style: none; margin: 0; padding: 0; }
+.updatesList > li + li { border-top: 1px solid var(--line, #e5e7eb); }
+.updatesLink {
+  display: grid; grid-template-columns: 100px 82px minmax(0, 1fr) 42px;
+  align-items: start; gap: 14px; padding: 18px 24px;
+  color: var(--text, #111827); text-decoration: none; line-height: 1.7;
+}
+.updatesLink:hover { background: #f3f6ff; }
+.updatesLink:focus-visible, .topNavCountryLink:focus-visible {
+  outline: 3px solid var(--blue, #1d4ed8); outline-offset: -3px;
+}
+.updatesDate { color: #526177; font-size: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.updatesType { border-radius: 6px; background: var(--chip, #eaf0ff); color: #0f2a5a; padding: 1px 6px; text-align: center; font-size: 12px; font-weight: 700; }
+.updatesTitle { font-size: 15px; font-weight: 650; overflow-wrap: anywhere; min-width: 0; }
+.updatesNew { border-radius: 4px; background: #1d4ed8; color: #fff; padding: 2px 5px; font-size: 10px; font-weight: 800; text-align: center; }
+.updatesExternal { font-size: 12px; margin-left: 5px; color: #526177; }
+.updatesStatus { padding: 16px 24px; margin: 0; color: #526177; font-size: 14px; }
+.updatesStatus[hidden] { display: none; }
+.topNav a.topNavCountryLink { cursor: pointer; }
+@media (max-width: 600px) {
+  .updatesLink { grid-template-columns: 95px max-content 1fr; gap: 8px 10px; padding: 15px 16px; }
+  .updatesTitle { grid-column: 1 / -1; grid-row: 2; font-size: 14px; }
+  .updatesNew { grid-column: 3; grid-row: 1; justify-self: end; }
+  .updatesStatus { padding: 15px 16px; }
+}

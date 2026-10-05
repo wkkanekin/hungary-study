@@ -7,6 +7,7 @@
     { url: 'guides.json', type: 'ガイド' },
     { url: 'columns.json', type: 'コラム' },
     { url: 'youtube.json', type: 'YouTube' },
+    { url: 'official-news.json', type: 'お知らせ', customType: true },
     { url: 'announcements.json', type: 'お知らせ', customType: true }
   ];
   const TYPES = new Set(['ガイド', 'コラム', 'YouTube', 'サービス', 'お知らせ']);

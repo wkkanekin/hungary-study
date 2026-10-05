@@ -461,3 +461,41 @@ a{color:inherit}
   display:block;
   border-radius:20px 20px 0 0;
 }
+
+/* Keep the reading action inside every Guide card, including long content. */
+.featuredCard,
+.articleCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.featuredCard > a,
+.articleCard > a {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.featuredBody,
+.articleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+}
+
+.cardActions {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.cardActions .btn {
+  min-height: 44px;
+}
+
+.cardActions .btn:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+

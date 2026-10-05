@@ -101,7 +101,7 @@
           </div>
 
           <div class="cardActions">
-            <a class="btn primary" href="${escapeHtml(article.url)}">記事を読む</a>
+            <a class="btn primary" href="${escapeHtml(article.url)}" aria-label="${escapeHtml(article.title)}：記事を読む">記事を読む</a>
           </div>
         </div>
       </article>
@@ -134,7 +134,7 @@
           </div>
 
           <div class="cardActions">
-            <a class="btn" href="${escapeHtml(article.url)}">記事を読む</a>
+            <a class="btn primary" href="${escapeHtml(article.url)}" aria-label="${escapeHtml(article.title)}：記事を読む">記事を読む</a>
           </div>
         </div>
       </article>

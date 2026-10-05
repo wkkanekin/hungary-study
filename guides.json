@@ -1,42 +1,42 @@
 [
   {
     "id": "university-pecs",
-    "enabled": false,
+    "enabled": true,
     "featured": false,
     "homePick": false,
     "comingSoon": false,
     "title": "University of Pécs（ペーチ大学）",
-    "description": "University of Pécsの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "description": "ペーチ大学の英語学位課程、学費、出願、学生生活とQS・THEランキングを、公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-pecs.html",
-    "date": "2026-05-19",
-    "thumbnail": "images/guides/university-pecs.jpg"
+    "date": "2026-10-05",
+    "thumbnail": "images/guides/pecs-guide-20261005.jpg"
   },
   {
     "id": "university-szeged",
-    "enabled": false,
+    "enabled": true,
     "featured": false,
     "homePick": false,
     "comingSoon": false,
     "title": "University of Szeged（セゲド大学）",
-    "description": "University of Szegedの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "description": "セゲド大学の英語学位課程、学費、出願、学生生活とQS・THEランキングを、公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-szeged.html",
-    "date": "2026-05-19",
-    "thumbnail": "images/guides/university-szeged.jpg"
+    "date": "2026-10-05",
+    "thumbnail": "images/guides/szeged-guide-20261005.jpg"
   },
   {
     "id": "university-bme",
-    "enabled": false,
+    "enabled": true,
     "featured": false,
     "homePick": false,
     "comingSoon": false,
     "title": "Budapest University of Technology and Economics（BME）",
-    "description": "Budapest University of Technology and Economics（BME）の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "description": "ブダペスト工科経済大学（BME）の英語学位課程、学費、出願、学生生活とQS・THEランキングを、公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-bme.html",
-    "date": "2026-05-19",
-    "thumbnail": "images/guides/university-bme.jpg"
+    "date": "2026-10-05",
+    "thumbnail": "images/guides/bme-guide-20261005.jpg"
   },
   {
     "id": "university-ibs",
@@ -66,29 +66,29 @@
   },
   {
     "id": "university-elte",
-    "enabled": false,
+    "enabled": true,
     "featured": false,
     "homePick": false,
     "comingSoon": false,
     "title": "Eötvös Loránd University（ELTE）",
-    "description": "ELTEの特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "description": "エトヴェシュ・ロラーンド大学（ELTE）の英語学位課程、学費、出願、学生生活とQS・THEランキングを、公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-elte.html",
-    "date": "2026-05-18",
-    "thumbnail": "images/guides/university-elte.jpg"
+    "date": "2026-10-05",
+    "thumbnail": "images/guides/elte-guide-20261005.jpg"
   },
   {
     "id": "university-corvinus",
-    "enabled": false,
+    "enabled": true,
     "featured": false,
     "homePick": false,
     "comingSoon": false,
     "title": "Corvinus University of Budapest（コルヴィヌス大学）",
-    "description": "Corvinus University of Budapest の特徴、学部、学費、キャンパス、現役生情報をまとめています。現役生への相談も可能です。",
+    "description": "ブダペスト・コルヴィヌス大学の英語学位課程、学費、出願、学生生活とQS・THEランキングを、公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-corvinus.html",
-    "date": "2026-05-18",
-    "thumbnail": "images/guides/university-corvinus.jpg"
+    "date": "2026-10-05",
+    "thumbnail": "images/guides/corvinus-guide-20261005.jpg"
   },
   {
     "id": "university-debrecen",
@@ -97,7 +97,7 @@
     "homePick": true,
     "comingSoon": false,
     "title": "University of Debrecen（デブレツェン大学）",
-    "description": "デブレツェン大学の英語学位課程、学費、出願、寮と学生生活を、大学パンフレットの写真・キャンパス地図と公式情報で紹介します。",
+    "description": "デブレツェン大学の英語課程、学費、出願、寮と学生生活、QS・THEランキングを大学公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-debrecen.html",
     "date": "2026-10-05",
@@ -110,11 +110,11 @@
     "homePick": true,
     "comingSoon": false,
     "title": "Budapest University of Economics and Business（BUEB）",
-    "description": "BUEBの特徴、学部、学費、キャンパス、現役生情報をまとめています。",
+    "description": "ブダペスト経済商科大学（BUEB）の英語学位課程、学費、出願、学生生活とQS・THEランキングを、公式資料の写真とともに紹介します。",
     "category": "大学",
     "url": "university-bueb.html",
-    "date": "2026-05-18",
-    "thumbnail": "images/guides/university-bueb.jpg"
+    "date": "2026-10-05",
+    "thumbnail": "images/guides/bueb-guide-20261005.jpg"
   },
   {
     "id": "study-abroad-japan",

@@ -1,0 +1,95 @@
+/* Shared comparison components; isolated from other university pages. */
+.rk-component{color:#24334a;line-height:1.65;font-size:14px;min-width:0}
+.rk-component [hidden]{display:none!important}
+.rk-meta{font-size:13px;color:#59687a;margin:14px 0 8px!important}
+.rk-note{font-size:13px;font-weight:400!important;color:#526176!important;line-height:1.8!important;margin:12px 0!important}
+.rk-controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:20px 0 12px;padding:16px;background:#f4f6f8;border:1px solid #e1e5e9;border-radius:10px}
+.rk-controls label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;flex:1 1 180px;min-width:0}
+.rk-controls input,.rk-controls select{width:100%;min-width:0;padding:11px 12px;font:inherit;font-size:14px;font-weight:400;color:#1d304d;background:#fff;border:1px solid #aebbc9;border-radius:6px;min-height:44px}
+.rk-controls label:first-child{flex-grow:1.4}
+.rk-button{min-height:44px;padding:10px 12px;background:white;border:1px solid #aebbc9;border-radius:6px;color:#24334a;font:inherit;font-size:13px;cursor:pointer}
+.rk-component :focus-visible,.rk-jump a:focus-visible{outline:3px solid #195acb;outline-offset:3px}
+.rk-result{font-size:13px;font-weight:600!important;margin:10px 0!important}
+.rk-scroll-hint{font-size:12px;color:#526176!important;font-weight:400!important;line-height:1.7!important}
+.rk-table-wrap{position:relative;overflow-x:auto;border:1px solid #dce3eb;border-radius:9px;margin:12px 0;max-width:100%;background:#fff}
+.rk-table{width:100%;min-width:770px;border:0;border-collapse:separate;border-spacing:0;border-radius:0;overflow:visible;background:#fff}
+.rk-table th,.rk-table td{padding:15px 13px;border:0;border-bottom:1px solid #e2e7ed;vertical-align:top;text-align:left;font-size:13px;font-weight:400;line-height:1.6}
+.rk-table thead th{background:#ecf1f7;color:#163456;font-weight:700;white-space:normal}
+.rk-table thead span{display:block;font-size:10px;line-height:1.4;font-weight:400;margin-top:4px;max-width:160px}
+.rk-overall th:first-child{width:32%;min-width:210px}
+.rk-table tbody th{background:#fff;color:#203653}
+.rk-table tbody td{background:#fff}
+.rk-table tbody tr:nth-child(even) td,.rk-table tbody tr:nth-child(even) th{background:#f8fafc}
+.rk-table tbody tr:last-child th,.rk-table tbody tr:last-child td{border-bottom:0}
+.rk-table tbody tr:hover td,.rk-table tbody tr:hover th{background:#f2f6fc}
+.rk-table strong{font-weight:650}
+.rk-en,.rk-city,.rk-year,.rk-checked{display:block;font-weight:400}
+.rk-en{font-size:11px;color:#58687b;line-height:1.45;margin:4px 0;max-width:250px}
+.rk-city{font-size:11px;color:#536377;margin-top:5px}
+.rk-year{font-size:11px;color:#536377;margin-bottom:3px}
+.rk-rank{display:block;font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap;color:#153858;line-height:1.4;font-weight:650}
+.rk-rank small{font-size:10px;margin-left:4px;font-weight:400}
+.rk-source{display:block;color:#1b55a0;text-decoration:underline;text-underline-offset:3px;font-size:11px;margin-top:6px;width:fit-content}
+.rk-source:hover{color:#0b3268}
+.rk-checked{font-size:10px;color:#637083;margin-top:5px;white-space:nowrap}
+.rk-old{display:block;font-size:10px;color:#895312}
+.rk-status{display:block;font-size:14px;color:#637083;margin-top:8px}
+.rk-subject{min-width:880px}
+.rk-subject th:first-child{min-width:170px;width:24%}
+.rk-subject td:nth-child(2){min-width:190px}
+.rk-subject td:nth-child(3){min-width:115px}
+.rk-official{max-width:260px;color:#33455c;font-size:12px}
+.rk-legend{padding:12px 0;border-bottom:1px solid #e2e7ed;font-size:12px}
+.rk-legend summary{cursor:pointer;font-weight:600;line-height:1.7}
+.rk-legend dl{display:grid;grid-template-columns:130px 1fr;gap:10px;margin:14px 0 0}
+.rk-legend dt{font-weight:700}.rk-legend dd{margin:0;color:#536377}
+.rk-empty{padding:20px;border-left:3px solid #a17a43;background:#faf6ee;margin:16px 0;line-height:1.8;font-size:14px}
+.rk-empty p{font-weight:400!important;font-size:13px;line-height:1.8!important;margin-top:8px!important}
+.rk-intro{border-left:3px solid #254d74;background:#f1f5f9;padding:16px 18px;margin-bottom:22px;font-size:14px;line-height:1.8}
+.rk-intro p{font-size:14px;font-weight:400!important;line-height:1.8!important;margin:7px 0 0!important}
+.rk-eyebrow{display:block;font-size:11px;letter-spacing:.12em;color:#55708e;font-weight:650;margin-bottom:8px}
+.rk-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.rk-actions .btn{font-size:13px;font-weight:600;border-radius:8px;box-shadow:none}
+.rk-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.rk-methods>div{border-top:3px solid #d7e1ed;padding-top:12px}
+.rk-methods p{font-size:13px}.rk-methods a{font-size:12px;color:#1b55a0;display:inline-block;margin-top:10px}
+.rk-checklist{padding-left:22px!important}
+.rk-checklist li{font-weight:400!important}
+.rk-consult{background:#f1f5f9;padding:24px;border-radius:10px}
+.rk-consult .btn{margin-top:16px;border-radius:8px;font-size:14px}
+.rk-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ranking-guide{background:#f6f3ed}
+.ranking-guide .container{max-width:1320px}
+.ranking-guide .card{box-shadow:0 3px 16px #182a4010;border-radius:12px}
+.ranking-guide .articleHero{background:#fff;padding:36px}
+.ranking-guide .articleTitle{font-size:36px;line-height:1.5;font-weight:750;letter-spacing:0}
+.rk-title-sub{font-size:24px;font-weight:500;display:block}
+.ranking-guide .articleLead{font-weight:400;font-size:15px}
+.ranking-guide .articleLayout{grid-template-columns:minmax(0,1fr) 235px;gap:20px}
+.ranking-guide .articleBody{padding:28px}
+.ranking-guide .articleBody h2{font-size:25px;font-weight:700;line-height:1.5}
+.ranking-guide .articleBody h3{font-size:20px;font-weight:650}
+.ranking-guide .articleBody p,.ranking-guide .articleBody li{font-weight:400}
+.ranking-guide .articleBody section+section{margin-top:42px}
+.ranking-guide .sideText,.ranking-guide .sideList{font-size:13px;line-height:1.8}
+.ranking-guide .sideTitle{font-size:16px}.ranking-guide .sideActions .btn{font-size:13px;padding:11px;font-weight:600}
+.rk-jump{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:24px;padding-top:18px;border-top:1px solid #e1e5e9}
+.rk-jump a{font-size:13px;font-weight:600;color:#224a75;text-underline-offset:4px}
+@media(max-width:1100px){.ranking-guide .articleLayout{grid-template-columns:1fr}.ranking-guide .articleSide{position:static}}
+@media(max-width:640px){
+.ranking-guide .container{padding:14px 12px 40px}.ranking-guide .articleHero{padding:24px 18px}
+.ranking-guide .articleTitle{font-size:26px}.rk-title-sub{font-size:18px;margin-top:8px}
+.ranking-guide .articleBody{padding:22px 14px}.ranking-guide .articleBody h2{font-size:22px}
+.rk-controls{padding:12px;gap:10px}.rk-controls label{flex-basis:100%}.rk-button{width:100%}
+.rk-table th,.rk-table td{padding:12px 10px}.rk-table{min-width:720px}
+.rk-overall th:first-child{min-width:180px;width:180px;max-width:180px}
+.rk-overall tr>th:first-child{position:sticky;left:0;z-index:1;box-shadow:1px 0 0 #dce3eb}
+.rk-subject{min-width:820px}.rk-rank{font-size:19px}.rk-legend dl{grid-template-columns:1fr;gap:4px}.rk-legend dd{margin-bottom:8px}
+.rk-methods{grid-template-columns:1fr;gap:18px}.rk-consult{padding:18px}.rk-actions{flex-direction:column}.rk-actions .btn{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none!important}}
+.rk-pagination{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1rem 0}
+.rk-pagination[hidden]{display:none}
+.rk-button:disabled{opacity:.4;cursor:default}
+[data-subject-table]{max-height:680px}
+[data-subject-table] thead th{position:sticky;top:0;z-index:2;background:#eff5fa}

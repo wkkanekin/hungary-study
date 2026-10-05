@@ -1,0 +1,3553 @@
+{
+  "schema_version": 1,
+  "page_updated": "2026-10-05",
+  "target_editions": {
+    "QS": 2027,
+    "THE": 2027,
+    "ARWU": 2026
+  },
+  "subject_target_year": 2026,
+  "categories": [
+    {
+      "id": "medicine",
+      "label": "医学・歯学・薬学"
+    },
+    {
+      "id": "it",
+      "label": "IT・工学"
+    },
+    {
+      "id": "business",
+      "label": "経済・経営"
+    },
+    {
+      "id": "politics",
+      "label": "政治・国際関係"
+    },
+    {
+      "id": "psychology",
+      "label": "心理・教育"
+    },
+    {
+      "id": "tourism",
+      "label": "観光・ホスピタリティ"
+    },
+    {
+      "id": "arts",
+      "label": "芸術・人文"
+    },
+    {
+      "id": "science",
+      "label": "自然・生命科学"
+    },
+    {
+      "id": "law",
+      "label": "法学"
+    },
+    {
+      "id": "social",
+      "label": "社会科学"
+    }
+  ],
+  "universities": [
+    {
+      "id": "elte",
+      "name": "Eötvös Loránd University",
+      "name_ja": "エトヴェシュ・ロラーンド大学（ELTE）",
+      "city": "Budapest",
+      "detail_url": "university-elte.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "=595",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-eotvos-lorand-university"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "801-1000",
+          "checked_at": "2026-10-04",
+          "source_id": "the-2"
+        },
+        "ARWU": {
+          "status": "ranked",
+          "year": 2026,
+          "rank": "501-600",
+          "checked_at": "2026-10-04",
+          "source_id": "sh-eotvos-lorand-university"
+        }
+      },
+      "registry_id": "FI80798",
+      "registry_name": "Eötvös Loránd University",
+      "abbreviation": "ELTE",
+      "institution_type": "university",
+      "official_url": "http://www.elte.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "debrecen",
+      "name": "University of Debrecen",
+      "name_ja": "デブレツェン大学",
+      "city": "Debrecen",
+      "detail_url": "university-debrecen.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "=600",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-university-debrecen"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "801-1000",
+          "checked_at": "2026-10-04",
+          "source_id": "the-3"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI17198",
+      "registry_name": "University of Debrecen",
+      "abbreviation": "DE",
+      "institution_type": "university",
+      "official_url": "https://www.unideb.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "szeged",
+      "name": "University of Szeged",
+      "name_ja": "セゲド大学",
+      "city": "Szeged",
+      "detail_url": "university-szeged.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "633",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-university-szeged"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "the-4"
+        },
+        "ARWU": {
+          "status": "ranked",
+          "year": 2026,
+          "rank": "501-600",
+          "checked_at": "2026-10-04",
+          "source_id": "sh-university-of-szeged"
+        }
+      },
+      "registry_id": "FI62198",
+      "registry_name": "University of Szeged",
+      "abbreviation": "SZTE",
+      "institution_type": "university",
+      "official_url": "http://www.u-szeged.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "semmelweis",
+      "name": "Semmelweis University",
+      "name_ja": "センメルワイス大学",
+      "city": "Budapest",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "qs-semmelweis"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "=247",
+          "checked_at": "2026-10-04",
+          "source_id": "the-0"
+        },
+        "ARWU": {
+          "status": "ranked",
+          "year": 2026,
+          "rank": "701-800",
+          "checked_at": "2026-10-04",
+          "source_id": "sh-semmelweis-university"
+        }
+      },
+      "registry_id": "FI62576",
+      "registry_name": "Semmelweis University",
+      "abbreviation": "SE",
+      "institution_type": "university",
+      "official_url": "http://www.semmelweis.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "bme",
+      "name": "Budapest University of Technology and Economics",
+      "name_ja": "ブダペスト工科経済大学（BME）",
+      "city": "Budapest",
+      "detail_url": "university-bme.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "751-760",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-budapest-university-technology-economics"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1401-1600",
+          "checked_at": "2026-10-04",
+          "source_id": "the-6"
+        },
+        "ARWU": {
+          "status": "ranked",
+          "year": 2026,
+          "rank": "901-1000",
+          "checked_at": "2026-10-04",
+          "source_id": "sh-budapest-university-of-technology-and-economics"
+        }
+      },
+      "registry_id": "FI23344",
+      "registry_name": "Budapest University of Technology and Economics (BME)",
+      "abbreviation": "BME",
+      "institution_type": "university",
+      "official_url": "https://www.bme.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "pecs",
+      "name": "University of Pécs",
+      "name_ja": "ペーチ大学",
+      "city": "Pécs",
+      "detail_url": "university-pecs.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "791-800",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-university-pecs"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "the-5"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI58544",
+      "registry_name": "University of Pécs",
+      "abbreviation": "PTE",
+      "institution_type": "university",
+      "official_url": "http://www.pte.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "obuda",
+      "name": "Óbuda University",
+      "name_ja": "オーブダ大学",
+      "city": "Budapest",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-obuda-university"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "701-800",
+          "checked_at": "2026-10-04",
+          "source_id": "the-1"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI12904",
+      "registry_name": "Obuda University",
+      "abbreviation": "OE",
+      "institution_type": "university",
+      "official_url": "http://www.uni-obuda.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "corvinus",
+      "name": "Corvinus University of Budapest",
+      "name_ja": "コルヴィヌス大学",
+      "city": "Budapest",
+      "detail_url": "university-corvinus.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2025,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-corvinus-university-budapest"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "the-7"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI43814",
+      "registry_name": "Corvinus University of Budapest",
+      "abbreviation": "CORVINUS",
+      "institution_type": "university",
+      "official_url": "http://www.uni-corvinus.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "mate",
+      "name": "Hungarian University of Agriculture and Life Sciences (MATE)",
+      "name_ja": "ハンガリー農業生命科学大学（MATE）",
+      "city": "Gödöllő",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2026,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-mate-hungarian-university-agriculture-life-sciences"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1201-1400",
+          "checked_at": "2026-10-04",
+          "source_id": "the-8"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI51129",
+      "registry_name": "Hungarian University of Agriculture and Life Sciences",
+      "abbreviation": "MATE",
+      "institution_type": "university",
+      "official_url": "https://uni-mate.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "miskolc",
+      "name": "University of Miskolc",
+      "name_ja": "ミシュコルツ大学",
+      "city": "Miskolc",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1401+",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-university-miskolc"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1801-2000",
+          "checked_at": "2026-10-04",
+          "source_id": "the-9"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI87515",
+      "registry_name": "University of Miskolc",
+      "abbreviation": "ME",
+      "institution_type": "university",
+      "official_url": "http://www.uni-miskolc.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "szechenyi",
+      "name": "Széchenyi István University",
+      "name_ja": "セーチェーニ・イシュトヴァーン大学（SZE）",
+      "city": "Győr",
+      "detail_url": "university-szechenyi.html",
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-04",
+          "source_id": "qs-szechenyi-istvan-university-university-gyor"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1601-1800",
+          "checked_at": "2026-10-04",
+          "source_id": "the-szechenyi"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI38696",
+      "registry_name": "Széchenyi István University",
+      "abbreviation": "SZE",
+      "institution_type": "university",
+      "official_url": "http://www.sze.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "bueb",
+      "name": "Budapest University of Economics and Business",
+      "name_ja": "ブダペスト経済ビジネス大学（BUEB）",
+      "city": "Budapest",
+      "detail_url": "university-bueb.html",
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "qs-bueb"
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "the-21",
+          "note": "公式プロフィールから対象版の総合順位を確認できていません。"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI82314",
+      "registry_name": "Budapest University of Economics and Business",
+      "abbreviation": "BGE",
+      "institution_type": "university",
+      "official_url": "http://www.uni-bge.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi63573",
+      "name": "Adventist Theological College",
+      "name_ja": "アドベンティスト神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI63573",
+      "registry_name": "Adventist Theological College",
+      "abbreviation": "ATF",
+      "institution_type": "college",
+      "city": "Pécel",
+      "official_url": "http://atf.adventista.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi65852",
+      "name": "Andrássy Gyula German Speaking University Budapest",
+      "name_ja": "アンドラーシ・ジュラ・ドイツ語大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI65852",
+      "registry_name": "Andrássy Gyula German Speaking University Budapest",
+      "abbreviation": "ANNYE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "https://aub.eu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi21962",
+      "name": "Apor Vilmos Catholic College",
+      "name_ja": "アポル・ヴィルモシュ・カトリック・カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI21962",
+      "registry_name": "Apor Vilmos Catholic College",
+      "abbreviation": "AVKF",
+      "institution_type": "college",
+      "city": "Vác",
+      "official_url": "https://www.avkf.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi34533",
+      "name": "Archiepiscopal College of Veszprém",
+      "name_ja": "ヴェスプレーム大司教カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI34533",
+      "registry_name": "Archiepiscopal College of Veszprém",
+      "abbreviation": "VÉF",
+      "institution_type": "college",
+      "city": "Veszprém",
+      "official_url": "https://ersekifoiskola.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi46994",
+      "name": "Baptist Theological Academy",
+      "name_ja": "バプテスト神学アカデミー",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI46994",
+      "registry_name": "Baptist Theological Academy",
+      "abbreviation": "BTA",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "https://www.bta.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi21010",
+      "name": "Bhaktivedanta College",
+      "name_ja": "バクティヴェーダーンタ・カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI21010",
+      "registry_name": "Bhaktivedanta College",
+      "abbreviation": "BHF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.bhf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi83335",
+      "name": "Brenner János Theological College",
+      "name_ja": "ブレンネル・ヤーノシュ神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI83335",
+      "registry_name": "Brenner János Theological College",
+      "abbreviation": "BJHF",
+      "institution_type": "college",
+      "city": "Győr",
+      "official_url": "https://www.bjhf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi73150",
+      "name": "Budapest Circus Arts and Contemporary Dance Collage",
+      "name_ja": "ブダペスト・サーカス芸術・現代舞踊カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI73150",
+      "registry_name": "Budapest Circus Arts and Contemporary Dance Collage",
+      "abbreviation": "BCKF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "https://bcdc.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi33842",
+      "name": "Budapest Metropolitan University",
+      "name_ja": "ブダペスト・メトロポリタン大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "the-fi33842"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI33842",
+      "registry_name": "Budapest Metropolitan University",
+      "abbreviation": "METU",
+      "institution_type": "university of applied sciences",
+      "city": "Budapest",
+      "official_url": "http://www.metropolitan.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi27861",
+      "name": "Central European University (Budapest)",
+      "name_ja": "中央ヨーロッパ大学（ブダペスト登録校）",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI27861",
+      "registry_name": "Central European University (Budapest)",
+      "abbreviation": "KEE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "https://www.ceu.hu/",
+      "registry_checked_at": "2026-10-04",
+      "note": "教育庁のブダペスト登録校。ウィーンのCEUの順位・募集課程と同一視せず、授業の実施国と学位授与機関を確認してください。"
+    },
+    {
+      "id": "fi12746",
+      "name": "Debrecen Reformed Theological University",
+      "name_ja": "デブレツェン改革派神学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI12746",
+      "registry_name": "Debrecen Reformed Theological University",
+      "abbreviation": "DRHE",
+      "institution_type": "university",
+      "city": "Debrecen",
+      "official_url": "http://www.drhe.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi54333",
+      "name": "Dennis Gabor University of Applied Sciences",
+      "name_ja": "ガーボル・デーネシュ応用科学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI54333",
+      "registry_name": "Dennis Gabor University of Applied Sciences",
+      "abbreviation": "GDE",
+      "institution_type": "university of applied sciences",
+      "city": "Budapest",
+      "official_url": "https://www.gde.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi62370",
+      "name": "Dharma Gate Buddhist College",
+      "name_ja": "ダルマ・ゲート仏教カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI62370",
+      "registry_name": "Dharma Gate Buddhist College",
+      "abbreviation": "TKBF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "https://www.tkbf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi83139",
+      "name": "Edutus University",
+      "name_ja": "エドゥトゥシュ大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI83139",
+      "registry_name": "Edutus University",
+      "abbreviation": "EDUTUS",
+      "institution_type": "university of applied sciences",
+      "city": "Tatabánya",
+      "official_url": "http://www.edutus.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi63810",
+      "name": "Episcopal Theological College of Pécs",
+      "name_ja": "ペーチ司教神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI63810",
+      "registry_name": "Episcopal Theological College of Pécs",
+      "abbreviation": "PPHF",
+      "institution_type": "college",
+      "city": "Pécs",
+      "official_url": "http://www.pphf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi10955",
+      "name": "Eszterházy Károly Catholic University",
+      "name_ja": "エステルハージ・カーロイ・カトリック大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "the-fi10955"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI10955",
+      "registry_name": "Eszterházy Károly Catholic University",
+      "abbreviation": "EKKE",
+      "institution_type": "university",
+      "city": "Eger",
+      "official_url": "http://uni-eszterhazy.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi51105",
+      "name": "Eötvös József College",
+      "name_ja": "エトヴェシュ・ヨージェフ・カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI51105",
+      "registry_name": "Eötvös József College",
+      "abbreviation": "EJF",
+      "institution_type": "college",
+      "city": "Baja",
+      "official_url": "http://www.ejf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi18580",
+      "name": "Gál Ferenc University",
+      "name_ja": "ガール・フェレンツ大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI18580",
+      "registry_name": "Gál Ferenc University",
+      "abbreviation": "GFE",
+      "institution_type": "university of applied sciences",
+      "city": "Szeged",
+      "official_url": "http://www.gfe.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi41559",
+      "name": "Hungarian Dance University",
+      "name_ja": "ハンガリー舞踊大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI41559",
+      "registry_name": "Hungarian Dance University",
+      "abbreviation": "MTE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.mte.eu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi27524",
+      "name": "Hungarian University of Fine Arts",
+      "name_ja": "ハンガリー美術大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI27524",
+      "registry_name": "Hungarian University of Fine Arts",
+      "abbreviation": "MKE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.mke.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi89399",
+      "name": "Hungarian University of Sports Science",
+      "name_ja": "ハンガリー体育科学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI89399",
+      "registry_name": "Hungarian University of Sports Science",
+      "abbreviation": "TF",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.tf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi35200",
+      "name": "International Business School",
+      "name_ja": "インターナショナル・ビジネス・スクール（IBS）",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI35200",
+      "registry_name": "International Business School",
+      "abbreviation": "IBS",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.ibs-b.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi17624",
+      "name": "Jewish Theological Seminary - University of Jewish Studies Hungary",
+      "name_ja": "ハンガリー・ユダヤ神学校・ユダヤ学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI17624",
+      "registry_name": "Jewish Theological Seminary - University of Jewish Studies Hungary",
+      "abbreviation": "OR-ZSE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.or-zse.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi62930",
+      "name": "John Wesley Theological College",
+      "name_ja": "ジョン・ウェスレー神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI62930",
+      "registry_name": "John Wesley Theological College",
+      "abbreviation": "WJLF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.wesley.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi96377",
+      "name": "John von Neumann University",
+      "name_ja": "ジョン・フォン・ノイマン大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "the-fi96377"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI96377",
+      "registry_name": "John von Neumann University",
+      "abbreviation": "NJE",
+      "institution_type": "university of applied sciences",
+      "city": "Kecskemét",
+      "official_url": "https://www.nje.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi29432",
+      "name": "Kodolányi János University of Applied Sciences",
+      "name_ja": "コドラー二・ヤーノシュ応用科学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI29432",
+      "registry_name": "Kodolányi János University of Applied Sciences",
+      "abbreviation": "KJE",
+      "institution_type": "university of applied sciences",
+      "city": "Székesfehérvár",
+      "official_url": "http://www.kodolanyi.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi44189",
+      "name": "Károli Gáspár University of the Reformed Church in Hungary",
+      "name_ja": "カーロリ・ガーシュパール改革派大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI44189",
+      "registry_name": "Károli Gáspár University of the Reformed Church in Hungary",
+      "abbreviation": "KRE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.kre.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi26840",
+      "name": "Liszt Ferenc Academy of Music (University)",
+      "name_ja": "リスト音楽院",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI26840",
+      "registry_name": "Liszt Ferenc Academy of Music (University)",
+      "abbreviation": "LFZE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "https://www.lfze.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi99859",
+      "name": "Ludovika University of Public Service",
+      "name_ja": "ルドヴィカ公共サービス大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI99859",
+      "registry_name": "Ludovika University of Public Service",
+      "abbreviation": "NKE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "https://www.uni-nke.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi83342",
+      "name": "Lutheran Theological University",
+      "name_ja": "ルター派神学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI83342",
+      "registry_name": "Lutheran Theological University",
+      "abbreviation": "EHE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://uni.lutheran.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi83995",
+      "name": "Milton Friedman University",
+      "name_ja": "ミルトン・フリードマン大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI83995",
+      "registry_name": "Milton Friedman University",
+      "abbreviation": "MILTON",
+      "institution_type": "university of applied sciences",
+      "city": "Budapest",
+      "official_url": "http://www.uni-milton.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi73435",
+      "name": "Moholy-Nagy University of Art and Design, Budapest",
+      "name_ja": "モホイ＝ナジ芸術デザイン大学（MOME）",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI73435",
+      "registry_name": "Moholy-Nagy University of Art and Design, Budapest",
+      "abbreviation": "MOME",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.mome.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi22732",
+      "name": "Pentecostal Theological College",
+      "name_ja": "ペンテコステ神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI22732",
+      "registry_name": "Pentecostal Theological College",
+      "abbreviation": "PTF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.ptf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi27751",
+      "name": "Pápa Reformed Theological Seminary",
+      "name_ja": "パーパ改革派神学校",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI27751",
+      "registry_name": "Pápa Reformed Theological Seminary",
+      "abbreviation": "PRTA",
+      "institution_type": "college",
+      "city": "Pápa",
+      "official_url": "https://www.prta.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi79633",
+      "name": "Pázmány Péter Catholic University",
+      "name_ja": "パーズマーニ・ペーテル・カトリック大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "qs-fi79633"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1801-2000",
+          "checked_at": "2026-10-05",
+          "source_id": "the-fi79633"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI79633",
+      "registry_name": "Pázmány Péter Catholic University",
+      "abbreviation": "PPKE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.ppke.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi67069",
+      "name": "Saint Paul Academy",
+      "name_ja": "聖パウロ・アカデミー",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI67069",
+      "registry_name": "Saint Paul Academy",
+      "abbreviation": "SZPA",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.szpa.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi47939",
+      "name": "Sapientia College of Theology of Religious Orders",
+      "name_ja": "サピエンティア修道会神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI47939",
+      "registry_name": "Sapientia College of Theology of Religious Orders",
+      "abbreviation": "SSZHF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.sapientia.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi70788",
+      "name": "Sola Scriptura College of Theology",
+      "name_ja": "ソラ・スクリプトゥラ神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI70788",
+      "registry_name": "Sola Scriptura College of Theology",
+      "abbreviation": "SSTF",
+      "institution_type": "college",
+      "city": "Biatorbágy",
+      "official_url": "http://www.sola.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi35925",
+      "name": "St Athanasius Greek-Catholic Theological Institute",
+      "name_ja": "聖アタナシウス・ギリシャ・カトリック神学院",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI35925",
+      "registry_name": "St Athanasius Greek-Catholic Theological Institute",
+      "abbreviation": "SZAGKHF",
+      "institution_type": "college",
+      "city": "Nyíregyháza",
+      "official_url": "http://www.szentatanaz.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi35860",
+      "name": "Szent Bernát Theological College",
+      "name_ja": "聖ベルナート神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI35860",
+      "registry_name": "Szent Bernát Theological College",
+      "abbreviation": "SZBHF",
+      "institution_type": "college",
+      "city": "Zirc",
+      "official_url": null,
+      "registry_checked_at": "2026-10-04",
+      "note": "教育庁名簿に公式サイトの記載がありません。募集状況は別途確認が必要です。"
+    },
+    {
+      "id": "fi32388",
+      "name": "Sárospatak Reformed Theological University",
+      "name_ja": "シャーロシュパタク改革派神学大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI32388",
+      "registry_name": "Sárospatak Reformed Theological University",
+      "abbreviation": "SRHE",
+      "institution_type": "university of applied sciences",
+      "city": "Sárospatak",
+      "official_url": "http://www.srhe.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi88165",
+      "name": "Theological College of Eger",
+      "name_ja": "エゲル神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI88165",
+      "registry_name": "Theological College of Eger",
+      "abbreviation": "EGHF",
+      "institution_type": "college",
+      "city": "Eger",
+      "official_url": "http://www.eghf.hu/",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi23234",
+      "name": "Theological College of Esztergom",
+      "name_ja": "エステルゴム神学カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI23234",
+      "registry_name": "Theological College of Esztergom",
+      "abbreviation": "ESZHF",
+      "institution_type": "college",
+      "city": "Esztergom",
+      "official_url": "http://www.eszhf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi44196",
+      "name": "Tomori Pál College",
+      "name_ja": "トモリ・パール・カレッジ",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI44196",
+      "registry_name": "Tomori Pál College",
+      "abbreviation": "TPF",
+      "institution_type": "college",
+      "city": "Budapest",
+      "official_url": "http://www.tpfk.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi60345",
+      "name": "University of Dunaújváros",
+      "name_ja": "ドゥナウーイヴァーロシュ大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI60345",
+      "registry_name": "University of Dunaújváros",
+      "abbreviation": "DUE",
+      "institution_type": "university of applied sciences",
+      "city": "Dunaújváros",
+      "official_url": "http://www.uniduna.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi74250",
+      "name": "University of Nyíregyháza",
+      "name_ja": "ニーレジハーザ大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI74250",
+      "registry_name": "University of Nyíregyháza",
+      "abbreviation": "NYE",
+      "institution_type": "university of applied sciences",
+      "city": "Nyíregyháza",
+      "official_url": "http://www.nyf.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi80554",
+      "name": "University of Pannonia",
+      "name_ja": "パンノニア大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1001-1200",
+          "checked_at": "2026-10-05",
+          "source_id": "qs-fi80554"
+        },
+        "THE": {
+          "status": "ranked",
+          "year": 2027,
+          "rank": "1601-1800",
+          "checked_at": "2026-10-05",
+          "source_id": "the-fi80554"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI80554",
+      "registry_name": "University of Pannonia",
+      "abbreviation": "PE",
+      "institution_type": "university",
+      "city": "Veszprém",
+      "official_url": "http://www.uni-pannon.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi21120",
+      "name": "University of Sopron",
+      "name_ja": "ショプロン大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "qs-fi21120"
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": "the-fi21120"
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI21120",
+      "registry_name": "University of Sopron",
+      "abbreviation": "SOE",
+      "institution_type": "university",
+      "city": "Sopron",
+      "official_url": "http://www.uni-sopron.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi54876",
+      "name": "University of Theatre and Film Arts",
+      "name_ja": "演劇映画芸術大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI54876",
+      "registry_name": "University of Theatre and Film Arts",
+      "abbreviation": "SZFE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.szfe.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi30164",
+      "name": "University of Tokaj",
+      "name_ja": "トカイ大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI30164",
+      "registry_name": "University of Tokaj",
+      "abbreviation": "THE",
+      "institution_type": "university of applied sciences",
+      "city": "Sárospatak",
+      "official_url": "https://www.unithe.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi21261",
+      "name": "University of Veterinary Medicine Budapest",
+      "name_ja": "ブダペスト獣医大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI21261",
+      "registry_name": "University of Veterinary Medicine Budapest",
+      "abbreviation": "ATE",
+      "institution_type": "university",
+      "city": "Budapest",
+      "official_url": "http://www.univet.hu",
+      "registry_checked_at": "2026-10-04"
+    },
+    {
+      "id": "fi50782",
+      "name": "Wekerle International University",
+      "name_ja": "ヴェケルレ国際大学",
+      "detail_url": null,
+      "overall": {
+        "QS": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "THE": {
+          "status": "unconfirmed",
+          "year": 2027,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        },
+        "ARWU": {
+          "status": "unconfirmed",
+          "year": 2026,
+          "rank": null,
+          "checked_at": null,
+          "source_id": null
+        }
+      },
+      "registry_id": "FI50782",
+      "registry_name": "Wekerle International University",
+      "abbreviation": "WSNE",
+      "institution_type": "university of applied sciences",
+      "city": "Budapest",
+      "official_url": "https://www.wsne.hu",
+      "registry_checked_at": "2026-10-04"
+    }
+  ],
+  "subjects": [
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "arts",
+      "official_subject": "Arts and Humanities",
+      "subject_ja": "芸術・人文学",
+      "year": 2026,
+      "rank": "401-500",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Computer Science",
+      "subject_ja": "コンピューターサイエンス",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Education Studies",
+      "subject_ja": "教育学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "law",
+      "official_subject": "Law",
+      "subject_ja": "法学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Life Sciences",
+      "subject_ja": "生命科学",
+      "year": 2026,
+      "rank": "401-500",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Psychology",
+      "subject_ja": "心理学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "THE",
+      "category": "social",
+      "official_subject": "Social Sciences",
+      "subject_ja": "社会科学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-2"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Physics",
+      "subject_ja": "物理学",
+      "year": 2026,
+      "rank": "151-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Veterinary Sciences",
+      "subject_ja": "獣医学",
+      "year": 2026,
+      "rank": "151-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "social",
+      "official_subject": "Communication",
+      "subject_ja": "コミュニケーション学",
+      "year": 2026,
+      "rank": "151-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "politics",
+      "official_subject": "Political Sciences",
+      "subject_ja": "政治学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "social",
+      "official_subject": "Sociology",
+      "subject_ja": "社会学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "psychology",
+      "official_subject": "Education",
+      "subject_ja": "教育学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "psychology",
+      "official_subject": "Psychology",
+      "subject_ja": "心理学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Mathematics",
+      "subject_ja": "数学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "elte",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Biological Sciences",
+      "subject_ja": "生物科学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-eotvos-lorand-university"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "arts",
+      "official_subject": "Arts and Humanities",
+      "subject_ja": "芸術・人文学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "medicine",
+      "official_subject": "Medical and Health",
+      "subject_ja": "医療・健康",
+      "year": 2026,
+      "rank": "501-600",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Computer Science",
+      "subject_ja": "コンピューターサイエンス",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Education Studies",
+      "subject_ja": "教育学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "1251+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Life Sciences",
+      "subject_ja": "生命科学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "debrecen",
+      "provider": "THE",
+      "category": "social",
+      "official_subject": "Social Sciences",
+      "subject_ja": "社会科学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-3"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "arts",
+      "official_subject": "Arts and Humanities",
+      "subject_ja": "芸術・人文学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "medicine",
+      "official_subject": "Medical and Health",
+      "subject_ja": "医療・健康",
+      "year": 2026,
+      "rank": "501-600",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Computer Science",
+      "subject_ja": "コンピューターサイエンス",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Education Studies",
+      "subject_ja": "教育学",
+      "year": 2026,
+      "rank": "501-600",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "law",
+      "official_subject": "Law",
+      "subject_ja": "法学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Life Sciences",
+      "subject_ja": "生命科学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "1001-1250",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Psychology",
+      "subject_ja": "心理学",
+      "year": 2026,
+      "rank": "601+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "THE",
+      "category": "social",
+      "official_subject": "Social Sciences",
+      "subject_ja": "社会科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-4"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Human Biological Sciences",
+      "subject_ja": "人体生物科学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-university-of-szeged"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Clinical Medicine",
+      "subject_ja": "臨床医学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-university-of-szeged"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Dentistry & Oral Sciences",
+      "subject_ja": "歯学・口腔科学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-university-of-szeged"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Pharmacy & Pharmaceutical Sciences",
+      "subject_ja": "薬学・薬科学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-university-of-szeged"
+    },
+    {
+      "university_id": "szeged",
+      "provider": "ARWU",
+      "category": "psychology",
+      "official_subject": "Education",
+      "subject_ja": "教育学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-university-of-szeged"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "THE",
+      "category": "medicine",
+      "official_subject": "Medical and Health",
+      "subject_ja": "医療・健康",
+      "year": 2026,
+      "rank": "176-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-0"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Pharmacy & Pharmaceutical Sciences",
+      "subject_ja": "薬学・薬科学",
+      "year": 2026,
+      "rank": "44",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Clinical Medicine",
+      "subject_ja": "臨床医学",
+      "year": 2026,
+      "rank": "151-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Dentistry & Oral Sciences",
+      "subject_ja": "歯学・口腔科学",
+      "year": 2026,
+      "rank": "151-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Medical Technology",
+      "subject_ja": "医療技術",
+      "year": 2026,
+      "rank": "151-200",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Biological Sciences",
+      "subject_ja": "生物科学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Human Biological Sciences",
+      "subject_ja": "人体生物科学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "semmelweis",
+      "provider": "ARWU",
+      "category": "medicine",
+      "official_subject": "Public Health",
+      "subject_ja": "公衆衛生",
+      "year": 2026,
+      "rank": "401-500",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-semmelweis-university"
+    },
+    {
+      "university_id": "bme",
+      "provider": "THE",
+      "category": "arts",
+      "official_subject": "Arts and Humanities",
+      "subject_ja": "芸術・人文学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-6"
+    },
+    {
+      "university_id": "bme",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "1001+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-6"
+    },
+    {
+      "university_id": "bme",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Computer Science",
+      "subject_ja": "コンピューターサイエンス",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-6"
+    },
+    {
+      "university_id": "bme",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-6"
+    },
+    {
+      "university_id": "bme",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-6"
+    },
+    {
+      "university_id": "bme",
+      "provider": "THE",
+      "category": "social",
+      "official_subject": "Social Sciences",
+      "subject_ja": "社会科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-6"
+    },
+    {
+      "university_id": "bme",
+      "provider": "ARWU",
+      "category": "it",
+      "official_subject": "Civil Engineering",
+      "subject_ja": "土木工学",
+      "year": 2026,
+      "rank": "101-150",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-budapest-university-of-technology-and-economics"
+    },
+    {
+      "university_id": "bme",
+      "provider": "ARWU",
+      "category": "science",
+      "official_subject": "Chemistry",
+      "subject_ja": "化学",
+      "year": 2026,
+      "rank": "201-300",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "sh-budapest-university-of-technology-and-economics"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "arts",
+      "official_subject": "Arts and Humanities",
+      "subject_ja": "芸術・人文学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "medicine",
+      "official_subject": "Medical and Health",
+      "subject_ja": "医療・健康",
+      "year": 2026,
+      "rank": "401-500",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "1251+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Life Sciences",
+      "subject_ja": "生命科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "1251+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Psychology",
+      "subject_ja": "心理学",
+      "year": 2026,
+      "rank": "501-600",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "pecs",
+      "provider": "THE",
+      "category": "social",
+      "official_subject": "Social Sciences",
+      "subject_ja": "社会科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-5"
+    },
+    {
+      "university_id": "obuda",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Computer Science",
+      "subject_ja": "コンピューターサイエンス",
+      "year": 2026,
+      "rank": "501-600",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-1"
+    },
+    {
+      "university_id": "obuda",
+      "provider": "THE",
+      "category": "psychology",
+      "official_subject": "Education Studies",
+      "subject_ja": "教育学",
+      "year": 2026,
+      "rank": "301-400",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-1"
+    },
+    {
+      "university_id": "obuda",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-1"
+    },
+    {
+      "university_id": "obuda",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-1"
+    },
+    {
+      "university_id": "mate",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-8"
+    },
+    {
+      "university_id": "mate",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-8"
+    },
+    {
+      "university_id": "mate",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Life Sciences",
+      "subject_ja": "生命科学",
+      "year": 2026,
+      "rank": "801-1000",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-8"
+    },
+    {
+      "university_id": "mate",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "1001-1250",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-8"
+    },
+    {
+      "university_id": "mate",
+      "provider": "THE",
+      "category": "social",
+      "official_subject": "Social Sciences",
+      "subject_ja": "社会科学",
+      "year": 2026,
+      "rank": "401-500",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-8"
+    },
+    {
+      "university_id": "miskolc",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "1251+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-9"
+    },
+    {
+      "university_id": "miskolc",
+      "provider": "THE",
+      "category": "science",
+      "official_subject": "Physical Sciences",
+      "subject_ja": "物理科学",
+      "year": 2026,
+      "rank": "1001-1250",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-9"
+    },
+    {
+      "university_id": "szechenyi",
+      "provider": "THE",
+      "category": "business",
+      "official_subject": "Business and Economics",
+      "subject_ja": "ビジネス・経済",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-szechenyi"
+    },
+    {
+      "university_id": "szechenyi",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "1251+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-szechenyi"
+    },
+    {
+      "university_id": "szechenyi",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Computer Science",
+      "subject_ja": "コンピューターサイエンス",
+      "year": 2026,
+      "rank": "1001+",
+      "status": "ranked",
+      "checked_at": "2026-10-04",
+      "source_id": "the-szechenyi"
+    },
+    {
+      "university_id": "fi80554",
+      "provider": "THE",
+      "category": "it",
+      "official_subject": "Engineering",
+      "subject_ja": "工学",
+      "year": 2026,
+      "rank": "1001-1250",
+      "status": "ranked",
+      "checked_at": "2026-10-05",
+      "source_id": "the-fi80554"
+    },
+    {
+      "university_id": "fi79633",
+      "provider": "THE",
+      "category": "arts",
+      "official_subject": "Arts and Humanities",
+      "subject_ja": "芸術・人文学",
+      "year": 2026,
+      "rank": "601-800",
+      "status": "ranked",
+      "checked_at": "2026-10-05",
+      "source_id": "the-fi79633"
+    },
+    {
+      "university_id": "fi79633",
+      "provider": "THE",
+      "category": "law",
+      "official_subject": "Law",
+      "subject_ja": "法学",
+      "year": 2026,
+      "rank": "401+",
+      "status": "ranked",
+      "checked_at": "2026-10-05",
+      "source_id": "the-fi79633"
+    }
+  ],
+  "sources": {
+    "qs-eotvos-lorand-university": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/eotvos-lorand-university",
+      "institution_title": "Eötvös Loránd University"
+    },
+    "the-2": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/eotvos-lorand-university",
+      "institution_title": "Eötvös Loránd University"
+    },
+    "sh-eotvos-lorand-university": {
+      "provider": "ARWU",
+      "url": "https://www.shanghairanking.com/universities/eotvos-lorand-university",
+      "institution_title": "Eotvos Lorand University Get verified"
+    },
+    "qs-university-debrecen": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/university-debrecen",
+      "institution_title": "University of Debrecen"
+    },
+    "the-3": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/university-debrecen",
+      "institution_title": "University of Debrecen"
+    },
+    "qs-university-szeged": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/university-szeged",
+      "institution_title": "University of Szeged"
+    },
+    "the-4": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged",
+      "institution_title": "University of Szeged"
+    },
+    "sh-university-of-szeged": {
+      "provider": "ARWU",
+      "url": "https://www.shanghairanking.com/universities/university-of-szeged",
+      "institution_title": "University of Szeged Get verified"
+    },
+    "the-0": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/semmelweis-university",
+      "institution_title": "Semmelweis University"
+    },
+    "sh-semmelweis-university": {
+      "provider": "ARWU",
+      "url": "https://www.shanghairanking.com/universities/semmelweis-university",
+      "institution_title": "Semmelweis University Get verified"
+    },
+    "qs-budapest-university-technology-economics": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/budapest-university-technology-economics",
+      "institution_title": "Budapest University of Technology and Economics"
+    },
+    "the-6": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics",
+      "institution_title": "Budapest University of Technology and Economics"
+    },
+    "sh-budapest-university-of-technology-and-economics": {
+      "provider": "ARWU",
+      "url": "https://www.shanghairanking.com/universities/budapest-university-of-technology-and-economics",
+      "institution_title": "Budapest University of Technology and Economics Get verified"
+    },
+    "qs-university-pecs": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/university-pecs",
+      "institution_title": "University of Pecs"
+    },
+    "the-5": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/university-pecs",
+      "institution_title": "University of Pécs"
+    },
+    "qs-obuda-university": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/obuda-university",
+      "institution_title": "Obuda University"
+    },
+    "the-1": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/obuda-university",
+      "institution_title": "Obuda University"
+    },
+    "qs-corvinus-university-budapest": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/corvinus-university-budapest",
+      "institution_title": "Corvinus University of Budapest"
+    },
+    "the-7": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/corvinus-university-budapest",
+      "institution_title": "Corvinus University of Budapest"
+    },
+    "qs-mate-hungarian-university-agriculture-life-sciences": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/mate-hungarian-university-agriculture-life-sciences",
+      "institution_title": "MATE Hungarian University of Agriculture and Life Sciences"
+    },
+    "the-8": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences",
+      "institution_title": "Hungarian University of Agriculture and Life Sciences"
+    },
+    "qs-university-miskolc": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/university-miskolc",
+      "institution_title": "University of Miskolc"
+    },
+    "the-9": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/university-miskolc",
+      "institution_title": "University of Miskolc"
+    },
+    "qs-szechenyi-istvan-university-university-gyor": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/szechenyi-istvan-university-university-gyor",
+      "institution_title": "Széchenyi István University (University of Győr)"
+    },
+    "the-21": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-business-school",
+      "institution_title": "Budapest Business School"
+    },
+    "the-szechenyi": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/szechenyi-istvan-university",
+      "institution_title": "Széchenyi István University"
+    },
+    "qs-semmelweis": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/semmelweis-university",
+      "institution_title": "Semmelweis University"
+    },
+    "qs-bueb": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/budapest-university-economics-business",
+      "institution_title": "Budapest University of Economics and Business"
+    },
+    "the-fi80554": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/university-pannonia",
+      "institution_title": "University of Pannonia"
+    },
+    "the-fi21120": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/university-sopron",
+      "institution_title": "University of Sopron"
+    },
+    "the-fi96377": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/john-von-neumann-university",
+      "institution_title": "John von Neumann University"
+    },
+    "the-fi10955": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/eszterhazy-karoly-catholic-university",
+      "institution_title": "Eszterházy Károly Catholic University"
+    },
+    "the-fi33842": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-metropolitan-university",
+      "institution_title": "Budapest Metropolitan University"
+    },
+    "qs-fi80554": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/university-pannonia",
+      "institution_title": "University of Pannonia"
+    },
+    "qs-fi21120": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/university-sopron",
+      "institution_title": "University of Sopron"
+    },
+    "qs-fi79633": {
+      "provider": "QS",
+      "url": "https://www.topuniversities.com/universities/pazmany-peter-catholic-university",
+      "institution_title": "Pázmány Péter Catholic University"
+    },
+    "the-fi79633": {
+      "provider": "THE",
+      "url": "https://www.timeshighereducation.com/world-university-rankings/pazmany-peter-catholic-university",
+      "institution_title": "Pázmány Péter Catholic University"
+    }
+  },
+  "registry": {
+    "authority": "Oktatási Hivatal / FIRGráf",
+    "url": "https://firgraf.oh.gov.hu/tematikus-lista/hungarian-higher-education-institutions/html",
+    "checked_at": "2026-10-04",
+    "count": 64,
+    "scope": "State-recognised Hungarian higher education institutions; universities, universities of applied sciences and colleges. Foreign branch campuses are outside this register."
+  }
+}

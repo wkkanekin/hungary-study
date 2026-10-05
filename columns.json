@@ -375,5 +375,24 @@
     ],
     "readingTime": "4分",
     "url": "column-yugo-holidays.html"
+  },
+  {
+    "id": "yugo-apartment",
+    "enabled": true,
+    "title": "ハンガリーでの家探し・アパート契約のリアル！後悔しない部屋選びのポイント【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-10-05",
+    "thumbnail": "images/columns/yugo-apartment-hero.jpg",
+    "summary": "デブレツェン大学CS専攻のユウゴが、渡航前のアパート契約、譲れない部屋の条件、家賃の送金、安さだけで選んだ失敗談を実体験から紹介します。",
+    "tags": [
+      "家探し",
+      "住まい",
+      "デブレツェン",
+      "留学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-apartment.html"
   }
 ]

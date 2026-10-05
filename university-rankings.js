@@ -40,6 +40,10 @@
     const year=root.querySelector('[data-subject-year-filter]');
     const search=root.querySelector('[data-subject-search]');
     const rows=Array.from(root.querySelectorAll('[data-subject-row]'));
+    const requestedUniversity = new URLSearchParams(window.location.search).get('university');
+    if (requestedUniversity && Array.from(university.options).some(option => option.value === requestedUniversity)) {
+      university.value = requestedUniversity;
+    }
     const apply=()=>{
       let count=0;const query=normalize(search.value);
       rows.forEach(row=>{
@@ -57,3 +61,4 @@
     root.querySelector('[data-controls]').hidden=false;apply();
   });
 })();
+

@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-05",
+  "sourcesSuccessful": 8,
+  "sourcesTotal": 9,
+  "publishedItems": 4,
+  "errors": [
+    "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
+  ],
+  "dryRun": false
+}

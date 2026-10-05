@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "enabled": true,
+    "type": "お知らせ",
+    "publishedAt": "2026-10-01",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～（詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/550.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～",
+    "sourcePublishedAt": "2026-10-01",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-05",
+    "dateBasis": "official",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
+    "publishedAt": "2026-10-01",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学等教職員向け】2027年度（第19期）【大学生等対象】に関する情報（詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/437.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【大学等教職員向け】2027年度（第19期）【大学生等対象】に関する情報",
+    "sourcePublishedAt": "2026-10-01",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-05",
+    "dateBasis": "official",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
+    "publishedAt": "2026-10-01",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】第19期オンライン応募申請システムについて（詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/412.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【大学生等対象】第19期オンライン応募申請システムについて",
+    "sourcePublishedAt": "2026-10-01",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-05",
+    "dateBasis": "official",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
+    "publishedAt": "2026-10-01",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】よくあるご質問（FAQ）トビタテ！留学JAPAN 新・日本代表プログラム 第19期募集（詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/401.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【大学生等対象】よくあるご質問（FAQ）トビタテ！留学JAPAN 新・日本代表プログラム 第19期募集",
+    "sourcePublishedAt": "2026-10-01",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-05",
+    "dateBasis": "official",
+    "priority": 1
+  }
+]

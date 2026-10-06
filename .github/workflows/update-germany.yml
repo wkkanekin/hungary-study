@@ -1,0 +1,56 @@
+name: Update Germany Study Lab
+on:
+  workflow_dispatch:
+    inputs:
+      rankings:
+        description: 'Refresh official ranking pages (may be blocked by publisher)'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '20 5 * * *'
+  push:
+    paths:
+      - 'germany/students.json'
+      - 'germany/columns.json'
+      - 'germany/updates.json'
+      - 'germany/data/guides.json'
+      - 'tools/build-guides.py'
+      - 'tools/templates/university-guide.html'
+permissions:
+  contents: write
+concurrency:
+  group: germany-data-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r scripts/germany/requirements.txt
+      - name: Verify update guards
+        run: python -m unittest discover -s scripts/germany -p 'test_*.py'
+      - name: Refresh official data
+        env:
+          REFRESH_RANKINGS: ${{ inputs.rankings }}
+        run: |
+          if [ "$REFRESH_RANKINGS" = "true" ] || [ "$(date -u +%u)" = "1" ]; then
+            python scripts/germany/refresh.py --rankings
+          else
+            python scripts/germany/refresh.py
+          fi
+      - run: python tools/update-data.py
+      - name: Validate local references
+        run: python scripts/germany/validate.py
+      - name: Save Germany files only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add germany/data germany/index.html germany/universities.html germany/guide-*.html docs/university-research-ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update Germany official data and student content'
+            git push
+          fi

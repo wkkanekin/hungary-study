@@ -16,7 +16,7 @@
   $('mapScope').textContent = `16州・${universities.length}校・${cities.size}都市を収録（2026年10月1日確認）。全大学・全キャンパスの一覧ではありません。`;
   function resetStudents() {
     selectedUniversity='';cards.forEach(c => c.hidden=false);
-    status.textContent='共同運営者・現役学生3名を表示しています。';
+    status.textContent=`現役学生${cards.length}名を表示しています。`;
     $('clearStudentFilter').hidden=true;
     list.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed','false'));
   }
@@ -44,7 +44,7 @@
       const meta=document.createElement('span');meta.className='uniMeta';meta.textContent=`${cities.get(u.cityId).name} · 登録学生${u.studentIds.length}名`;
       b.append(title,meta);b.addEventListener('click',()=>filterStudents(u));
       const source=document.createElement('a');source.className='officialSource';source.href=u.sourceUrl;source.target='_blank';source.rel='noopener noreferrer';source.textContent=`公式出典 ↗`;source.setAttribute('aria-label',`${u.name}の公式出典（新しいタブで開く）`);
-      row.append(b,source);list.append(row);
+      row.append(b,source);if(u.guideUrl){const guide=document.createElement('a');guide.className='officialSource';guide.href=u.guideUrl;guide.textContent='大学ガイドを読む';row.append(guide);}list.append(row);
     });
   }
   function updateCityOptions() {

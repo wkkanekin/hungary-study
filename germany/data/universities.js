@@ -1,4 +1,3 @@
-/* Official sources only. City centres: BKG GN250; see docs/university-sources.md. */
 window.GERMANY_UNIVERSITIES = {
   "checkedOn": "2026-10-01",
   "scope": "16州の公式情報から確認した大学・所在地の一部。全大学・全キャンパスを網羅するものではありません。",
@@ -869,7 +868,9 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
       "sourceLabel": "州政府の大学一覧",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [],
+      "guideUrl": "guide-heidelberg.html",
+      "officialUrl": "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees/tuition-fees-for-international-students"
     },
     {
       "id": "u3",
@@ -959,7 +960,11 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
       "sourceLabel": "州政府の大学一覧",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [
+        "aina"
+      ],
+      "guideUrl": "guide-bayreuth.html",
+      "officialUrl": "https://www.uni-bayreuth.de/en"
     },
     {
       "id": "u13",
@@ -977,7 +982,8 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
       "sourceLabel": "州政府の大学一覧",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [],
+      "guideUrl": "guide-lmu.html"
     },
     {
       "id": "u15",
@@ -986,7 +992,9 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
       "sourceLabel": "州政府の大学一覧",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [],
+      "guideUrl": "guide-tum.html",
+      "officialUrl": "https://www.tum.de/en/studies/fees/tuition"
     },
     {
       "id": "u16",
@@ -1175,7 +1183,8 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/universitaeten/",
       "sourceLabel": "州政府の大学一覧",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [],
+      "guideUrl": "guide-fu-berlin.html"
     },
     {
       "id": "u37",
@@ -1375,7 +1384,9 @@ window.GERMANY_UNIVERSITIES = {
       "checkedOn": "2026-10-01",
       "studentIds": [
         "airi-kawakita"
-      ]
+      ],
+      "guideUrl": "guide-tuhh.html",
+      "officialUrl": "https://www.tuhh.de/tuhh/en/studying/before-studying/degree-courses/bachelors-programs/engineering-science"
     },
     {
       "id": "u59",
@@ -1728,7 +1739,9 @@ window.GERMANY_UNIVERSITIES = {
       "checkedOn": "2026-10-01",
       "studentIds": [
         "megumi-yamada"
-      ]
+      ],
+      "guideUrl": "guide-osnabrueck.html",
+      "officialUrl": "https://www.uni-osnabrueck.de/en/studying/our-study-programs/study-programs-from-a-z/conflict-studies-and-peacebuilding-master-of-arts"
     },
     {
       "id": "u98",
@@ -1791,7 +1804,8 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
       "sourceLabel": "州政府の大学一覧（2025年度以降の対象校）",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [],
+      "guideUrl": "guide-rwth.html"
     },
     {
       "id": "u105",
@@ -1818,7 +1832,9 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
       "sourceLabel": "州政府の大学一覧（2025年度以降の対象校）",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [],
+      "guideUrl": "guide-bonn.html",
+      "officialUrl": "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students"
     },
     {
       "id": "u108",
@@ -2414,7 +2430,9 @@ window.GERMANY_UNIVERSITIES = {
       "checkedOn": "2026-10-01",
       "studentIds": [
         "riko-asahi"
-      ]
+      ],
+      "guideUrl": "guide-iu.html",
+      "officialUrl": "https://www.iu.de/studienformen/"
     }
   ]
 };

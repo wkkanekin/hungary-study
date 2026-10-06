@@ -1,0 +1,401 @@
+window.GERMANY_GUIDES = [
+  {
+    "id": "bayreuth",
+    "match": "Universität Bayreuth",
+    "title": "バイロイト大学",
+    "name": "University of Bayreuth",
+    "city": "Bayreuth／Global Food, Nutrition and HealthはKulmbach",
+    "intro": "食品・栄養・健康を学ぶ英語修士課程の一例として、Global Food, Nutrition and Healthを確認します。",
+    "sections": [
+      [
+        "課程とキャンパス",
+        "M.Sc. Global Food, Nutrition and Healthは4学期・冬学期開始の英語課程です。学ぶ場所はKulmbachです。大学名のBayreuthと実際のキャンパスを区別して、住居と通学を検討してください。"
+      ],
+      [
+        "出願条件",
+        "現行の公式案内には、関連分野の学士、ドイツ基準の成績2.5以上、英語C1、ドイツ語A1が示されています。語学証明をいつ提出するか、評価点と面接の扱いは最新の規則を確認してください。Ainaさんの2025年の経験は、現在の募集条件と分けて読んでください。"
+      ],
+      [
+        "学費・生活",
+        "この課程の公式案内では授業料なし、学期納付金は必要とされています。生活費・保険・住居は別です。キャンパス所在地のKulmbachを基準に住居情報を探します。"
+      ]
+    ],
+    "links": [
+      [
+        "大学公式",
+        "https://www.uni-bayreuth.de/en"
+      ],
+      [
+        "課程・出願・公式資料",
+        "https://www.uni-bayreuth.de/en/master/global-food-nutrition-and-health"
+      ]
+    ],
+    "student": "aina",
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "tum",
+    "match": "Technische Universität München",
+    "title": "ミュンヘン工科大学（TUM）",
+    "name": "Technical University of Munich",
+    "city": "Münchenほか・課程別にキャンパスを確認",
+    "intro": "非EU学生向けの授業料とキャンパス別生活費を、出願前に確認したい大学です。",
+    "sections": [
+      [
+        "課程選び",
+        "工学系という名称だけで判断せず、志望課程のカリキュラム、授業言語、関連する学士の科目・単位条件を確認します。複数キャンパスがあるため所在地も確認してください。"
+      ],
+      [
+        "学費",
+        "非EU・EEAから新たに入学する学生への授業料は、一般に学士で学期2,000または3,000ユーロ、修士で4,000または6,000ユーロです。課程、適用開始、免除・経過措置を公式一覧で確認します。学期納付金は別です。"
+      ],
+      [
+        "生活費",
+        "大学はミュンヘンで月1,300〜2,000ユーロ程度の生活費を案内しています。これは目安で、授業料とは別です。家賃・初期費用を含む自分の予算を作りましょう。"
+      ]
+    ],
+    "links": [
+      [
+        "授業料",
+        "https://www.tum.de/en/studies/fees/tuition"
+      ],
+      [
+        "費用・生活費",
+        "https://www.tum.de/en/studies/fees"
+      ],
+      [
+        "大学公式",
+        "https://www.tum.de/en/"
+      ]
+    ],
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "heidelberg",
+    "match": "Universität Heidelberg",
+    "title": "ハイデルベルク大学",
+    "name": "Universität Heidelberg",
+    "city": "Heidelbergほか・課程別に確認",
+    "intro": "授業料と学期納付金を分け、留学生向けの公式入学案内で準備を進めましょう。",
+    "sections": [
+      [
+        "学費",
+        "EU・EEA外の国籍で、外国の入学資格を持つ学生には原則として学期1,500ユーロの授業料が課されます。免除条件があります。学期納付金は別で、額は在籍学期の公式案内を確認してください。"
+      ],
+      [
+        "出願と学習",
+        "学士・修士で出願要件が異なります。語学条件、課程の募集枠、入学資格、出願システムを大学の公式案内から確認します。"
+      ],
+      [
+        "留学準備",
+        "大学のStudy Financingと新入生向け案内を使い、住居・保険・入学手続き・生活費を整理します。写真は大学が再配布を認める広報素材を使用しています。"
+      ]
+    ],
+    "links": [
+      [
+        "外国人学生の授業料",
+        "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees/tuition-fees-for-international-students"
+      ],
+      [
+        "学期納付金",
+        "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees"
+      ],
+      [
+        "留学生の資金計画",
+        "https://www.uni-heidelberg.de/en/study-financing-for-international-students"
+      ],
+      [
+        "大学公式",
+        "https://www.uni-heidelberg.de/en"
+      ]
+    ],
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "tuhh",
+    "match": "Technische Universität Hamburg",
+    "title": "ハンブルク工科大学（TUHH）",
+    "name": "Hamburg University of Technology",
+    "city": "Hamburg",
+    "intro": "Engineering Scienceなど、課程ごとの言語要件と履修内容を確認します。",
+    "sections": [
+      [
+        "課程と授業言語",
+        "Engineering Scienceの学士課程は、公式の課程ページで構成・専門の選択肢・言語条件を確認できます。英語で学ぶ部分があっても、ドイツ語が不要と判断しないでください。"
+      ],
+      [
+        "学費",
+        "一般的な学位課程では授業料を課しないと案内されていますが、例外の課程があります。学期納付金、保険、住居、生活費は別です。"
+      ],
+      [
+        "出願",
+        "外国の学歴を持つ学士志願者は、入学資格と提出書類を専用のFAQで確認します。河北さんの出願経験と最新の募集条件は区別してください。"
+      ]
+    ],
+    "links": [
+      [
+        "Engineering Science",
+        "https://www.tuhh.de/tuhh/en/studying/before-studying/degree-courses/bachelors-programs/engineering-science"
+      ],
+      [
+        "資金計画",
+        "https://www.tuhh.de/tuhh/en/education/students/organisational-details-about-your-studies/financing-your-studies"
+      ],
+      [
+        "学士出願FAQ",
+        "https://www.tuhh.de/tuhh/en/studying/before-studying/application/faqs/faqs-bachelor"
+      ]
+    ],
+    "student": "airi-kawakita",
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "iu",
+    "match": "IU Internationale Hochschule",
+    "title": "IU Internationale Hochschule",
+    "name": "IU International University",
+    "city": "Münchenほか・学習形態で異なる",
+    "intro": "デュアル、オンライン等の学習形態と契約条件を分けて検討する私立大学です。",
+    "sections": [
+      [
+        "学び方",
+        "学習形態によって課程、企業での実務、通学場所、言語、契約が異なります。自分が希望する形態の公式ページから確認してください。"
+      ],
+      [
+        "授業料と企業契約",
+        "デュアル課程では提携企業が授業料を負担する仕組みが案内されています。これをIUの全課程が無料という意味に広げないでください。報酬、解約、返還条件等は実際の企業契約と大学契約を確認します。"
+      ],
+      [
+        "準備",
+        "大学の入学資格と企業の採用条件をそれぞれ確認します。住居や生活費の負担は企業によって異なるため、報酬だけで予算を決めないようにしましょう。"
+      ]
+    ],
+    "links": [
+      [
+        "学習形態",
+        "https://www.iu.de/studienformen/"
+      ],
+      [
+        "費用",
+        "https://www.iu.de/finanzielles/kosten/"
+      ],
+      [
+        "資金計画",
+        "https://www.iu.de/finanzielles/finanzierung/"
+      ]
+    ],
+    "student": "riko-asahi",
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "osnabrueck",
+    "match": "Universität Osnabrück",
+    "title": "オスナブリュック大学",
+    "name": "Universität Osnabrück",
+    "city": "Osnabrück",
+    "intro": "修士課程は専攻との関連、言語、選考を課程単位で確認しましょう。",
+    "sections": [
+      [
+        "修士課程を探す",
+        "Conflict Studies and Peacebuildingの公式課程ページから、学位・内容・出願条件を確認できます。山田さんの経験だけを根拠に、大学全体の特色や全課程の条件を決めていません。"
+      ],
+      [
+        "費用と住居",
+        "授業料の有無、学期納付金、長期在学や継続教育課程の追加費用は課程と在籍状況で確認が必要です。今回、志望課程の現行の確定額は掲載していません。"
+      ],
+      [
+        "相談との使い分け",
+        "個別の入学資格は大学に確認し、書類準備・生活・住居探しの経験は現役生に相談できます。"
+      ]
+    ],
+    "links": [
+      [
+        "Conflict Studies and Peacebuilding",
+        "https://www.uni-osnabrueck.de/en/studying/our-study-programs/study-programs-from-a-z/conflict-studies-and-peacebuilding-master-of-arts"
+      ],
+      [
+        "大学公式",
+        "https://www.uni-osnabrueck.de/en/"
+      ]
+    ],
+    "student": "megumi-yamada",
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "bonn",
+    "match": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+    "title": "ボン大学",
+    "name": "University of Bonn",
+    "city": "Bonn",
+    "intro": "留学生向けの資金計画と出願案内から、正規留学の条件を確認します。",
+    "sections": [
+      [
+        "学費と予算",
+        "大学は一般的な授業料を課さず、学期納付金が必要と案内しています。生活費、住居、健康保険の予算も準備します。個別課程の例外は確認してください。"
+      ],
+      [
+        "出願",
+        "外国の学歴を持つ志願者向けの案内で、学士・修士の手続きを確認します。修士では関連分野の学位や履修内容等を課程ごとに確認してください。"
+      ]
+    ],
+    "links": [
+      [
+        "留学生の費用",
+        "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students"
+      ],
+      [
+        "留学生の出願",
+        "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/applications-from-international-students"
+      ]
+    ],
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "dhbw",
+    "match": "Duale Hochschule Baden-Württemberg",
+    "title": "DHBW（バーデン＝ヴュルテンベルク州立デュアル大学）",
+    "name": "Duale Hochschule Baden-Württemberg",
+    "city": "州内複数拠点・契約先と課程を確認",
+    "intro": "企業等との契約と大学の入学資格を組み合わせて進学するデュアル課程です。",
+    "sections": [
+      [
+        "企業と大学への準備",
+        "入学には大学の資格要件に加えてデュアルパートナーとの契約が必要です。企業選考の時期、勤務地、実務と授業の期間、言語条件を調べます。"
+      ],
+      [
+        "学費と報酬",
+        "非EU学生には原則として学期1,500ユーロの授業料が生じる案内があり、免除等の条件を確認します。企業からの報酬と、授業料・生活費の負担は契約内容で確かめてください。"
+      ]
+    ],
+    "links": [
+      [
+        "公式出願・入学案内",
+        "https://www.dhbw.de/english/application-admission"
+      ],
+      [
+        "志願者向け",
+        "https://www.dhbw.de/english/home/prospective-students"
+      ]
+    ],
+    "checkedOn": "2026-10-05"
+  },
+  {
+    "id": "lmu",
+    "match": "Ludwig-Maximilians-Universität München",
+    "title": "ミュンヘン大学（LMU）",
+    "name": "Ludwig-Maximilians-Universität München",
+    "city": "München（Bayern）",
+    "intro": "幅広い専攻と英語修士課程を持つ大学。出願先窓口と専攻の選考を分けて確認します。",
+    "sections": [
+      [
+        "課程・授業言語",
+        "公式課程一覧では幅広い分野を扱い、英語で学べる修士課程も案内しています。英語修士の存在を、学士課程や全課程でドイツ語が不要という意味に広げないでください。志望課程の言語と必要な科目・単位を確認します。"
+      ],
+      [
+        "授業料・学期納付金",
+        "一般的な授業料は徴収していませんが、一部の特別な大学院課程・専門課程には別料金があります。Studierendenwerk向けの学期納付金は別途必要です。同じミュンヘンのTUMの非EU学生向け授業料を、そのままLMUに当てはめないでください。"
+      ],
+      [
+        "出願窓口・期限",
+        "外国籍の志願者は一般にInternational Officeへ出願しますが、国籍・学位・専攻で窓口が異なります。同窓口の標準締切は夏学期1月15日、冬学期7月15日です。専攻側の適性審査などは別申請・別締切となる場合があり、一部修士は指定オンライン窓口を利用します。"
+      ],
+      [
+        "必要書類・修士の手続き",
+        "学歴証明、成績証明、必要な翻訳・認証、語学証明を準備します。修士では専攻側の受入許可の確認も必要です。英語で行われる修士等にはドイツ語証明の例外がありますが、英語条件や学術要件は課程ごとに確認してください。"
+      ]
+    ],
+    "links": [
+      [
+        "課程・英語修士一覧",
+        "https://www.lmu.de/en/study/all-degrees-and-programs/"
+      ],
+      [
+        "授業料・納付金",
+        "https://www.lmu.de/en/workspace-for-students/abc-study-guide/fees-and-tuition-fees/index.html"
+      ],
+      [
+        "外国人の出願・必要書類",
+        "https://www.lmu.de/en/study/degree-students/applications-for-admission/"
+      ]
+    ],
+    "checkedOn": "2026-10-06"
+  },
+  {
+    "id": "fu-berlin",
+    "match": "Freie Universität Berlin",
+    "title": "ベルリン自由大学",
+    "name": "Freie Universität Berlin",
+    "city": "Berlin",
+    "intro": "外国の学位で修士へ出願する場合は、VPDの取得と大学への申請の両方を準備します。",
+    "sections": [
+      [
+        "授業料と学期納付金",
+        "継続教育課程を除いて授業料を徴収しないと案内しています。行政費、学生支援・自治組織への負担、対象者の交通券などの学期納付金は別です。金額と免除条件は入学・再登録する学期の公式費用表で確認します。"
+      ],
+      [
+        "外国の学位で修士へ出願",
+        "原則としてuni-assistでベルリン自由大学向けのVPD（事前審査書類）を取得し、有効なVPDを添えて大学の出願ポータルから申請します。uni-assistに申し込むだけでは大学への出願は完了しません。免除対象は公式FAQで確認してください。"
+      ],
+      [
+        "準備の時期",
+        "VPD処理は通常4〜6週間、繁忙期にはさらにかかると案内されています。締切までに大学側へ必要書類一式を届ける必要があるため、早めに申請します。修士の募集枠・課程ごとに締切を確認してください。"
+      ],
+      [
+        "語学・専攻の条件",
+        "VPDは志望修士の語学要件・履修要件への合格を保証するものではありません。学位、成績、関連分野の単位と、課程ごとの語学証明を確認して準備します。"
+      ]
+    ],
+    "links": [
+      [
+        "学期の費用",
+        "https://www.fu-berlin.de/en/studium/studieren/studienorganisation/gebuehren/index.html"
+      ],
+      [
+        "外国の学位での修士出願",
+        "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/uni-assist/index.html"
+      ],
+      [
+        "修士出願の基本",
+        "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/allgemeine-information/index.html"
+      ]
+    ],
+    "checkedOn": "2026-10-06"
+  },
+  {
+    "id": "rwth",
+    "match": "RWTH Aachen",
+    "title": "アーヘン工科大学（RWTH）",
+    "name": "RWTH Aachen University",
+    "city": "Aachen（Nordrhein-Westfalen）",
+    "intro": "通常の学位課程とInternational Academyの有料修士を区別して、費用と入学条件を確認します。",
+    "sections": [
+      [
+        "授業料・学期納付金",
+        "大学の学生自治組織AStAは、授業料とは別に毎学期の学期納付金が必要であると説明しています。一方、RWTH International Academyが扱う修士には授業料があり、学期納付金も別途必要です。「RWTHならすべて無料」とは判断せず、課程の運営と費用表を確認してください。"
+      ],
+      [
+        "英語修士の一例",
+        "International Academyの案内する修士は英語で行われ、入学・登録時にドイツ語を必要としないとされています。これは同Academyの課程の説明であり、RWTH全体の学士・修士の条件ではありません。英語証明、専門の学士、職歴等の要件を課程別に確認します。"
+      ],
+      [
+        "履修条件・生活予算",
+        "大学院では前の学位の内容を審査し、不足科目の追加履修を条件とする場合があります。授業料に加え、住居・保険・食費・交通と学期納付金を予算化します。奨学金の有無・金額・採用条件も個別に確認してください。"
+      ]
+    ],
+    "links": [
+      [
+        "AStA：学期納付金の説明",
+        "https://www.asta.rwth-aachen.de/en/how-is-the-semester-contribution-made-up/"
+      ],
+      [
+        "AStA：現在の学期納付金",
+        "https://www.asta.rwth-aachen.de/en/semester-contribution/"
+      ],
+      [
+        "International Academy：修士の出願・費用",
+        "https://www.academy.rwth-aachen.de/en/programs/masters-degree-programs/your-way-to-us/"
+      ]
+    ],
+    "checkedOn": "2026-10-06"
+  }
+];

@@ -38,7 +38,8 @@ window.GERMANY_STUDENTS = [
     ],
     "enabled": true,
     "motivation": "東京で、支援を必要とする子どもたちの学習支援にボランティアとして関わったことから、社会問題や若者の教育への関心が深まりました。ドイツで語学を学びながら進学という選択肢を見つけ、社会福祉・社会教育の分野に進みました。",
-    "preparation": "ドイツ語学習約1年＋出願準備約6か月（本人資料）"
+    "preparation": "ドイツ語学習約1年＋出願準備約6か月（本人資料）",
+    "role": "共同運営者・現役学生"
   },
   {
     "id": "megumi-yamada",
@@ -79,7 +80,8 @@ window.GERMANY_STUDENTS = [
     "enabled": true,
     "region": "オスナブリュック",
     "motivation": "学部時代から戦争と平和を進路のテーマにしていました。英国での短期留学で出会う人々の背景について考え、経済的ゆとりや国籍に関わらず学問と留学が開かれていること、グローバルサウスを含むさまざまな国の人と学ぶことを大切にして、ドイツ留学を決めました。",
-    "preparation": "4月に出願準備を開始、8月に合格通知（本人資料）"
+    "preparation": "4月に出願準備を開始、8月に合格通知（本人資料）",
+    "role": "共同運営者・現役学生"
   },
   {
     "id": "airi-kawakita",
@@ -121,6 +123,55 @@ window.GERMANY_STUDENTS = [
     ],
     "enabled": true,
     "motivation": "小学5年生の時に父の仕事の関係でドイツに暮らし、帰国後もドイツに戻りたいと思っていました。高校生の時に、エンジニアリングを英語で学ぶことを決めました。",
-    "preparation": "高校卒業後の3月〜7月（本人資料）"
+    "preparation": "高校卒業後の3月〜7月（本人資料）",
+    "role": "共同運営者・現役学生"
+  },
+  {
+    "id": "aina",
+    "name": "Aina",
+    "role": "現役学生",
+    "photo": "aina.jpg",
+    "university": "University of Bayreuth（バイロイト大学）",
+    "major": "M.Sc. Global Food, Nutrition and Health",
+    "entry": "2025年",
+    "year": "修士2年（2026年10月提供）",
+    "type": "Universität",
+    "language": "英語",
+    "admission": "TOEFL iBT 97／出願時はドイツ語資格なし",
+    "currentLanguage": "英語 C1／ドイツ語 B1（telc Deutsch B1）",
+    "selection": "書類審査の評価点が基準を満たす場合は直接入学許可、満たさない場合は面接選考。本人は書類審査のみで合格。",
+    "preparation": "約半年",
+    "education": "大阪大学 医学部保健学科 看護学専攻 卒業。大阪大学大学院医学系研究科 保健学専攻に進学後、ドイツ留学のため休学。",
+    "scholarship": "なし",
+    "learning": "mikan、TOEFLのオンライン練習問題サイト、Anki（主にドイツ語）、YouTube。オンライン英会話・語学学習サービスの利用は特になし。",
+    "bio": "日本の大阪大学で看護学や公衆衛生を学び、現在はドイツのUniversity of BayreuthでGlobal Food, Nutrition and Healthの修士課程に在籍しています。大学探し、必要書類の準備、TOEFL対策など、約半年かけて出願準備を進めました。渡独後はドイツ語の学習を続け、telc Deutsch B1を取得。住居探し、Anmeldung、ビザ・滞在許可、銀行口座、保険などの手続きも経験しています。",
+    "motivation": "以前から海外で学んでみたいという気持ちがあり、日本の大学院への進学後、ドイツの英語修士課程への進学に挑戦しました。",
+    "message": "留学前は私自身も、大学選びや出願、英語力、現地での生活など分からないことがたくさんありました。そのため、これから留学を考えている方が気軽に相談できるような存在になれればと思っています。",
+    "tags": [
+      "英語修士課程への出願",
+      "大学・大学院選び",
+      "日本の大学からドイツ大学院への進学",
+      "TOEFL対策",
+      "ドイツ語学習",
+      "住居探し",
+      "ビザ・滞在許可などの手続き",
+      "生活費・日常生活",
+      "大学生活・授業",
+      "看護・公衆衛生・栄養系からの海外大学院進学"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.uni-bayreuth.de/en"
+      ],
+      [
+        "専攻公式サイト",
+        "https://www.uni-bayreuth.de/en/master/global-food-nutrition-and-health"
+      ]
+    ],
+    "enabled": true,
+    "sources": [
+      "2026-10-05 ユーザー提供プロフィール"
+    ]
   }
 ];

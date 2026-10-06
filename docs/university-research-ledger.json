@@ -1,0 +1,2030 @@
+{
+  "scope": "既存の掲載大学・拠点のみ。全国の大学台帳は未完成。",
+  "records": [
+    {
+      "id": "u1",
+      "name": "Universität Freiburg",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u2",
+      "name": "Universität Heidelberg",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-heidelberg.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "外国人学生の授業料",
+          "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees/tuition-fees-for-international-students"
+        ],
+        [
+          "学期納付金",
+          "https://www.uni-heidelberg.de/en/study/management-of-studies/semester-fees"
+        ],
+        [
+          "留学生の資金計画",
+          "https://www.uni-heidelberg.de/en/study-financing-for-international-students"
+        ],
+        [
+          "大学公式",
+          "https://www.uni-heidelberg.de/en"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u3",
+      "name": "Universität Hohenheim",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u4",
+      "name": "Karlsruher Institut für Technologie (KIT)",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u5",
+      "name": "Universität Konstanz",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u6",
+      "name": "Universität Mannheim",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u7",
+      "name": "Universität Stuttgart",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u8",
+      "name": "Universität Tübingen",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u9",
+      "name": "Universität Ulm",
+      "locationSource": "https://mwk.baden-wuerttemberg.de/de/hochschulen-studium/hochschullandschaft/hochschularten/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u10",
+      "name": "Universität Augsburg",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u11",
+      "name": "Otto-Friedrich-Universität Bamberg",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u12",
+      "name": "Universität Bayreuth",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-bayreuth.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "大学公式",
+          "https://www.uni-bayreuth.de/en"
+        ],
+        [
+          "課程・出願・公式資料",
+          "https://www.uni-bayreuth.de/en/master/global-food-nutrition-and-health"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u13",
+      "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u14",
+      "name": "Ludwig-Maximilians-Universität München",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-lmu.html",
+      "guideCheckedOn": "2026-10-06",
+      "guideSources": [
+        [
+          "課程・英語修士一覧",
+          "https://www.lmu.de/en/study/all-degrees-and-programs/"
+        ],
+        [
+          "授業料・納付金",
+          "https://www.lmu.de/en/workspace-for-students/abc-study-guide/fees-and-tuition-fees/index.html"
+        ],
+        [
+          "外国人の出願・必要書類",
+          "https://www.lmu.de/en/study/degree-students/applications-for-admission/"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u15",
+      "name": "Technische Universität München",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-tum.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "授業料",
+          "https://www.tum.de/en/studies/fees/tuition"
+        ],
+        [
+          "費用・生活費",
+          "https://www.tum.de/en/studies/fees"
+        ],
+        [
+          "大学公式",
+          "https://www.tum.de/en/"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u16",
+      "name": "Universität Passau",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u17",
+      "name": "Universität Regensburg",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u18",
+      "name": "Julius-Maximilians-Universität Würzburg",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u19",
+      "name": "Technische Universität Nürnberg",
+      "locationSource": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u20",
+      "name": "Ostbayerische Technische Hochschule Amberg-Weiden",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u21",
+      "name": "Hochschule Ansbach",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u22",
+      "name": "Technische Hochschule Aschaffenburg",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u23",
+      "name": "Technische Hochschule Augsburg",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u24",
+      "name": "Hochschule Coburg",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u25",
+      "name": "Technische Hochschule Deggendorf",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u26",
+      "name": "Hochschule Hof",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u27",
+      "name": "Technische Hochschule Ingolstadt",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u28",
+      "name": "Hochschule Kempten",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u29",
+      "name": "Hochschule Landshut",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u30",
+      "name": "Hochschule München",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u31",
+      "name": "Hochschule Neu-Ulm",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u32",
+      "name": "Technische Hochschule Nürnberg Georg Simon Ohm",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u33",
+      "name": "Ostbayerische Technische Hochschule Regensburg",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u34",
+      "name": "Technische Hochschule Rosenheim",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u35",
+      "name": "Technische Hochschule Würzburg-Schweinfurt",
+      "locationSource": "https://stmwk.bayern.de/wissenschaftler/hochschulen/hochschulen-fuer-angewandte-wissenschaften.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u36",
+      "name": "Freie Universität Berlin",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-fu-berlin.html",
+      "guideCheckedOn": "2026-10-06",
+      "guideSources": [
+        [
+          "学期の費用",
+          "https://www.fu-berlin.de/en/studium/studieren/studienorganisation/gebuehren/index.html"
+        ],
+        [
+          "外国の学位での修士出願",
+          "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/uni-assist/index.html"
+        ],
+        [
+          "修士出願の基本",
+          "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/allgemeine-information/index.html"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u37",
+      "name": "Humboldt-Universität zu Berlin",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u38",
+      "name": "Technische Universität Berlin",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u39",
+      "name": "Berliner Hochschule für Technik",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/hochschulen-fuer-angewandte-wissenschaften/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u40",
+      "name": "Hochschule für Technik und Wirtschaft Berlin",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/hochschulen-fuer-angewandte-wissenschaften/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u41",
+      "name": "Hochschule für Wirtschaft und Recht Berlin",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/hochschulen-fuer-angewandte-wissenschaften/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u42",
+      "name": "Alice Salomon Hochschule Berlin",
+      "locationSource": "https://www.berlin.de/sen/wissenschaft/einrichtungen/hochschulen/hochschulen-fuer-angewandte-wissenschaften/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u43",
+      "name": "Universität Potsdam",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u44",
+      "name": "Brandenburgische Technische Universität Cottbus-Senftenberg",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u45",
+      "name": "Europa-Universität Viadrina",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u46",
+      "name": "Filmuniversität Babelsberg Konrad Wolf",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/universitaeten/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u47",
+      "name": "Fachhochschule Potsdam",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/fachhochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u48",
+      "name": "Hochschule für nachhaltige Entwicklung Eberswalde",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/fachhochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u49",
+      "name": "Technische Hochschule Brandenburg",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/fachhochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u50",
+      "name": "Technische Hochschule Wildau",
+      "locationSource": "https://mwfk.brandenburg.de/mwfk/de/wissenschaft/hochschulen/fachhochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u51",
+      "name": "Universität Bremen",
+      "locationSource": "https://www.bremen.de/bildung-und-beruf/studium/universitaeten-und-hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u52",
+      "name": "Hochschule Bremen",
+      "locationSource": "https://www.bremen.de/bildung-und-beruf/studium/universitaeten-und-hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u53",
+      "name": "Hochschule Bremerhaven",
+      "locationSource": "https://www.bremen.de/bildung-und-beruf/studium/universitaeten-und-hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u54",
+      "name": "Hochschule für Künste Bremen",
+      "locationSource": "https://www.bremen.de/bildung-und-beruf/studium/universitaeten-und-hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u55",
+      "name": "Constructor University",
+      "locationSource": "https://www.bremen.de/bildung-und-beruf/studium/universitaeten-und-hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u56",
+      "name": "APOLLON Hochschule der Gesundheitswirtschaft",
+      "locationSource": "https://www.bremen.de/bildung-und-beruf/studium/universitaeten-und-hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u57",
+      "name": "Universität Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "tuhh",
+      "name": "Technische Universität Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-tuhh.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "Engineering Science",
+          "https://www.tuhh.de/tuhh/en/studying/before-studying/degree-courses/bachelors-programs/engineering-science"
+        ],
+        [
+          "資金計画",
+          "https://www.tuhh.de/tuhh/en/education/students/organisational-details-about-your-studies/financing-your-studies"
+        ],
+        [
+          "学士出願FAQ",
+          "https://www.tuhh.de/tuhh/en/studying/before-studying/application/faqs/faqs-bachelor"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u59",
+      "name": "HafenCity Universität Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u60",
+      "name": "Hochschule für Angewandte Wissenschaften Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u61",
+      "name": "Hochschule für bildende Künste Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u62",
+      "name": "Hochschule für Musik und Theater Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u63",
+      "name": "Helmut-Schmidt-Universität / Universität der Bundeswehr Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u64",
+      "name": "Bucerius Law School",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u65",
+      "name": "Europäische Fernhochschule Hamburg",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u66",
+      "name": "Hamburg School of Business Administration (HSBA)",
+      "locationSource": "https://www.hamburg.de/politik-und-verwaltung/behoerden/bwfg/unsere-themen/hochschulen-und-studium/hochschullandschaft-hamburg",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u67",
+      "name": "Technische Universität Darmstadt",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u68",
+      "name": "Goethe-Universität Frankfurt am Main",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u69",
+      "name": "Justus-Liebig-Universität Gießen",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u70",
+      "name": "Universität Kassel",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u71",
+      "name": "Philipps-Universität Marburg",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u72",
+      "name": "Hochschule Darmstadt",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u73",
+      "name": "Frankfurt University of Applied Sciences",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u74",
+      "name": "Hochschule Fulda",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u75",
+      "name": "Technische Hochschule Mittelhessen",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u76",
+      "name": "Hochschule RheinMain",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u77",
+      "name": "Hochschule für Gestaltung Offenbach am Main",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u78",
+      "name": "Hochschule für Musik und Darstellende Kunst Frankfurt am Main",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u79",
+      "name": "Hochschule für Bildende Künste – Städelschule",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u80",
+      "name": "Hochschule Geisenheim University",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u81",
+      "name": "Archivschule Marburg",
+      "locationSource": "https://wissenschaft.hessen.de/Studieren/Hochschulen-in-Hessen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u82",
+      "name": "Universität Rostock",
+      "locationSource": "https://www.regierung-mv.de/Landesregierung/wm/Technologie/Hochschulen-in-MV/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u83",
+      "name": "Universität Greifswald",
+      "locationSource": "https://www.regierung-mv.de/Landesregierung/wm/Technologie/Hochschulen-in-MV/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u84",
+      "name": "Hochschule Neubrandenburg",
+      "locationSource": "https://www.regierung-mv.de/Landesregierung/wm/Technologie/Hochschulen-in-MV/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u85",
+      "name": "Hochschule Stralsund",
+      "locationSource": "https://www.regierung-mv.de/Landesregierung/wm/Technologie/Hochschulen-in-MV/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u86",
+      "name": "Hochschule Wismar",
+      "locationSource": "https://www.regierung-mv.de/Landesregierung/wm/Technologie/Hochschulen-in-MV/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u87",
+      "name": "Hochschule für Musik und Theater Rostock",
+      "locationSource": "https://www.regierung-mv.de/Landesregierung/wm/Technologie/Hochschulen-in-MV/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u88",
+      "name": "Technische Universität Braunschweig",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u89",
+      "name": "Technische Universität Clausthal",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u90",
+      "name": "Georg-August-Universität Göttingen",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u91",
+      "name": "Leibniz Universität Hannover",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u92",
+      "name": "Medizinische Hochschule Hannover",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u93",
+      "name": "Stiftung Tierärztliche Hochschule Hannover",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u94",
+      "name": "Universität Hildesheim",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u95",
+      "name": "Leuphana Universität Lüneburg",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u96",
+      "name": "Carl von Ossietzky Universität Oldenburg",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "uni-osnabrueck",
+      "name": "Universität Osnabrück",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-osnabrueck.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "Conflict Studies and Peacebuilding",
+          "https://www.uni-osnabrueck.de/en/studying/our-study-programs/study-programs-from-a-z/conflict-studies-and-peacebuilding-master-of-arts"
+        ],
+        [
+          "大学公式",
+          "https://www.uni-osnabrueck.de/en/"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u98",
+      "name": "Universität Vechta",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u99",
+      "name": "Hochschule für Bildende Künste Braunschweig",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u100",
+      "name": "Hochschule für Musik, Theater und Medien Hannover",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u101",
+      "name": "Hochschule Hannover",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u102",
+      "name": "Hochschule Osnabrück",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u103",
+      "name": "Hochschule Emden/Leer",
+      "locationSource": "https://www.mwk.niedersachsen.de/startseite/hochschulen/hochschulen_und_berufsakademien/hochschulen-berufsakademien-19117.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u104",
+      "name": "RWTH Aachen",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-rwth.html",
+      "guideCheckedOn": "2026-10-06",
+      "guideSources": [
+        [
+          "AStA：学期納付金の説明",
+          "https://www.asta.rwth-aachen.de/en/how-is-the-semester-contribution-made-up/"
+        ],
+        [
+          "AStA：現在の学期納付金",
+          "https://www.asta.rwth-aachen.de/en/semester-contribution/"
+        ],
+        [
+          "International Academy：修士の出願・費用",
+          "https://www.academy.rwth-aachen.de/en/programs/masters-degree-programs/your-way-to-us/"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u105",
+      "name": "Universität Bielefeld",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u106",
+      "name": "Ruhr-Universität Bochum",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u107",
+      "name": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-bonn.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "留学生の費用",
+          "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students"
+        ],
+        [
+          "留学生の出願",
+          "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/applications-from-international-students"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u108",
+      "name": "Technische Universität Dortmund",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u109",
+      "name": "Heinrich-Heine-Universität Düsseldorf",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u110",
+      "name": "Universität Duisburg-Essen",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u111",
+      "name": "FernUniversität in Hagen",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u112",
+      "name": "Universität zu Köln",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u113",
+      "name": "Universität Münster",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u114",
+      "name": "Universität Paderborn",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u115",
+      "name": "Universität Siegen",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u116",
+      "name": "Bergische Universität Wuppertal",
+      "locationSource": "https://www.mkw.nrw/system/files/media/document/file/anlage_1_liste_der_antragsberechtigten_hochschulen_ab_2025.pdf",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u117",
+      "name": "Johannes Gutenberg-Universität Mainz",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u118",
+      "name": "Rheinland-Pfälzische Technische Universität",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u119",
+      "name": "Universität Koblenz",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u120",
+      "name": "Universität Trier",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u121",
+      "name": "Deutsche Universität für Verwaltungswissenschaften Speyer",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u122",
+      "name": "Technische Hochschule Bingen",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u123",
+      "name": "Hochschule Kaiserslautern",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u124",
+      "name": "Hochschule Koblenz",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u125",
+      "name": "Hochschule für Wirtschaft und Gesellschaft Ludwigshafen",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u126",
+      "name": "Hochschule Mainz",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u127",
+      "name": "Hochschule Trier",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u128",
+      "name": "Hochschule Worms",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u129",
+      "name": "Katholische Hochschule Mainz",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u130",
+      "name": "Theologische Fakultät Trier",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u131",
+      "name": "Vinzenz Pallotti University",
+      "locationSource": "https://mwwg.rlp.de/themen/wissenschaft/hochschulen/hochschulen-in-rheinland-pfalz",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u132",
+      "name": "Universität des Saarlandes",
+      "locationSource": "https://www.saarbruecken.de/bildung/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u133",
+      "name": "Hochschule für Technik und Wirtschaft des Saarlandes",
+      "locationSource": "https://www.saarbruecken.de/bildung/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u134",
+      "name": "Hochschule der Bildenden Künste Saar",
+      "locationSource": "https://www.saarbruecken.de/bildung/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u135",
+      "name": "Hochschule für Musik Saar",
+      "locationSource": "https://www.saarbruecken.de/bildung/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u136",
+      "name": "Deutsche Hochschule für Prävention und Gesundheitsmanagement",
+      "locationSource": "https://www.saarbruecken.de/bildung/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u137",
+      "name": "Technische Universität Dresden",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u138",
+      "name": "Universität Leipzig",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u139",
+      "name": "Technische Universität Chemnitz",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u140",
+      "name": "Technische Universität Bergakademie Freiberg",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u141",
+      "name": "Hochschule für Technik und Wirtschaft Dresden",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u142",
+      "name": "Hochschule für Technik, Wirtschaft und Kultur Leipzig",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u143",
+      "name": "Hochschule Mittweida",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u144",
+      "name": "Hochschule Zittau/Görlitz",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u145",
+      "name": "Westsächsische Hochschule Zwickau",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u146",
+      "name": "Hochschule für Bildende Künste Dresden",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u147",
+      "name": "Hochschule für Musik Carl Maria von Weber Dresden",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u148",
+      "name": "Palucca Hochschule für Tanz Dresden",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u149",
+      "name": "Hochschule für Grafik und Buchkunst Leipzig",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u150",
+      "name": "Hochschule für Musik und Theater Felix Mendelssohn Bartholdy Leipzig",
+      "locationSource": "https://www.studieren.sachsen.de/universitaten-kunsthochschulen-hochschulen-fur-angewandte-wissenschaften-und-die-berufsakademie-3909.html",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u151",
+      "name": "Otto-von-Guericke-Universität Magdeburg",
+      "locationSource": "https://www.ovgu.de/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u152",
+      "name": "Martin-Luther-Universität Halle-Wittenberg",
+      "locationSource": "https://www.uni-halle.de/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u153",
+      "name": "Christian-Albrechts-Universität zu Kiel",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u154",
+      "name": "Europa-Universität Flensburg",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u155",
+      "name": "Universität zu Lübeck",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u156",
+      "name": "Musikhochschule Lübeck",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u157",
+      "name": "Muthesius Kunsthochschule",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u158",
+      "name": "Hochschule Flensburg",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u159",
+      "name": "Hochschule für Angewandte Wissenschaften Kiel",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u160",
+      "name": "Fachhochschule Westküste",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u161",
+      "name": "Technische Hochschule Lübeck",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u162",
+      "name": "Fachhochschule Wedel",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u163",
+      "name": "Nordakademie",
+      "locationSource": "https://www.schleswig-holstein.de/DE/landesregierung/themen/bildung-hochschulen/hochschule_allgemein/hochschulen",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u164",
+      "name": "Bauhaus-Universität Weimar",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u165",
+      "name": "Hochschule für Musik FRANZ LISZT Weimar",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u166",
+      "name": "Universität Erfurt",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u167",
+      "name": "Fachhochschule Erfurt",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u168",
+      "name": "Technische Universität Ilmenau",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u169",
+      "name": "Hochschule Schmalkalden",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u170",
+      "name": "Hochschule Nordhausen",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u171",
+      "name": "Friedrich-Schiller-Universität Jena",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "u172",
+      "name": "Ernst-Abbe-Hochschule Jena",
+      "locationSource": "https://study-in-thuringia.de/de/hochschulen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "not_reviewed",
+      "guideUrl": null,
+      "guideCheckedOn": null,
+      "guideSources": [],
+      "brochureStatus": "not_reviewed"
+    },
+    {
+      "id": "iu-muenchen",
+      "name": "IU Internationale Hochschule – Campus München",
+      "locationSource": "https://www.iu.de/campus/muenchen/",
+      "locationCheckedOn": "2026-10-01",
+      "guideStatus": "official_web_reviewed",
+      "guideUrl": "guide-iu.html",
+      "guideCheckedOn": "2026-10-05",
+      "guideSources": [
+        [
+          "学習形態",
+          "https://www.iu.de/studienformen/"
+        ],
+        [
+          "費用",
+          "https://www.iu.de/finanzielles/kosten/"
+        ],
+        [
+          "資金計画",
+          "https://www.iu.de/finanzielles/finanzierung/"
+        ]
+      ],
+      "brochureStatus": "not_reviewed"
+    }
+  ]
+}

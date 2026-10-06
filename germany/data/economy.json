@@ -13,9 +13,9 @@
     {
       "id": "eurjpy",
       "label": "1ユーロの円参考レート",
-      "value": 177.28,
+      "value": 178.15,
       "unit": "JPY",
-      "period": "2026-10-05",
+      "period": "2026-10-06",
       "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
       "checkedOn": "2026-10-06",
       "note": "ECB参考レート。送金時の適用レートや手数料とは異なります。"

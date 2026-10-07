@@ -1,1 +1,1 @@
-window.GERMANY_UPDATE_STATUS = {"attemptedOn": "2026-10-06", "errors": ["news: 403 Client Error: Forbidden for url: https://www.daad.jp/ja/news/"], "message": "取得失敗時は直前の確認済みデータを維持します。"};
+window.GERMANY_UPDATE_STATUS = {"attemptedOn": "2026-10-07", "errors": [], "message": "取得失敗時は直前の確認済みデータを維持します。"};

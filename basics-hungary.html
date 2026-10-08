@@ -24,7 +24,7 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="basics-hungary.css" />
+  <link rel="stylesheet" href="basics-hungary.css?v=20261008-food-icons" />
 
 
 
@@ -1438,6 +1438,32 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("画像JSON読み込み失敗", e);
   }
 
+  // SVG illustrations are local and independent of the price update workflow.
+  const foodIcons = {
+    "milk": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#edf5fa\" d=\"M12 9h20v33H12z\"/><path fill=\"#adcddd\" d=\"m12 9 6-5h10l4 5z\"/><path fill=\"#d5e8f1\" d=\"m28 4 4 5v33h-7V9z\"/><path fill=\"#b3d6e7\" d=\"M14 20h11v12H14z\"/></svg>",
+    "eggs_10": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#c9b99b\" d=\"M5 31h38l-3 11H8z\"/><ellipse fill=\"#fff1d7\" cx=\"14\" cy=\"25\" rx=\"7\" ry=\"10\"/><ellipse fill=\"#f7e1b8\" cx=\"25\" cy=\"24\" rx=\"7\" ry=\"11\"/><ellipse fill=\"#fff3de\" cx=\"35\" cy=\"26\" rx=\"6\" ry=\"9\"/><path fill=\"#dbcbb0\" d=\"M5 33h38v4H5z\"/></svg>",
+    "chicken": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#f1c7bb\" d=\"M9 31c-5-9 5-21 17-19 10 2 17 12 13 20-4 8-25 7-30-1z\"/><path d=\"M16 27c3-5 9-8 16-7M20 33c4-5 8-6 14-5\" fill=\"none\" stroke=\"#d89483\"/></svg>",
+    "pasta": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#f4dc9b\" d=\"M12 5h24v38H12z\"/><path fill=\"#ddad63\" d=\"M12 5h24v5H12zM12 37h24v6H12z\"/><path fill=\"#fff6dc\" d=\"M16 16h16v17H16z\"/><path d=\"M20 19v11m4-11v11m4-11v11\" fill=\"none\" stroke=\"#e1b350\"/></svg>",
+    "bread": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#e2ad6e\" d=\"M6 25c-2-14 12-19 20-14 9-4 17 4 16 14v13H6z\"/><path fill=\"#f5d49e\" d=\"M10 25c-1-9 9-13 16-9 7-3 13 2 12 9v9H10z\"/><path d=\"m16 18 2 6m6-7 2 7m6-6 2 6\" stroke=\"#bd8248\" fill=\"none\"/></svg>",
+    "tomato": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#e98776\" d=\"M7 27c0-10 9-15 17-11 8-4 17 1 17 11 0 20-34 20-34 0z\"/><path fill=\"#76a07e\" d=\"m24 17-9-5 7 1 2-7 3 8 7-1-7 5z\"/><path d=\"M13 25c0-3 2-5 4-6\" stroke=\"#f8b7a8\" fill=\"none\"/></svg>",
+    "banana": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#f1d271\" d=\"M8 13c1 18 15 27 31 15-7 19-34 12-34-6z\"/><path d=\"M9 19c3 16 18 20 28 13\" stroke=\"#d5ad4f\" fill=\"none\"/><path stroke=\"#9d8052\" d=\"m8 13 2-4m28 19 3-2\"/></svg>",
+    "cheese": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#f2d083\" d=\"m7 24 22-14 12 14v15H7z\"/><path fill=\"#ffe5a7\" d=\"m7 24 22-14 12 14z\"/><circle fill=\"#d4ac56\" cx=\"16\" cy=\"31\" r=\"3\"/><circle fill=\"#d4ac56\" cx=\"31\" cy=\"32\" r=\"4\"/><circle fill=\"#e4bd6b\" cx=\"28\" cy=\"19\" r=\"2\"/></svg>",
+    "yoghurt": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#f5ecec\" d=\"M10 15h28l-4 26H14z\"/><path fill=\"#c6afcd\" d=\"M9 12h30v5H9zM13 26h22l-1 9H14z\"/><path fill=\"#dcb9c9\" d=\"M20 21c-5-4-8 4 4 10 12-6 9-14 4-10l-4 2z\"/></svg>",
+    "onion": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#cda4bb\" d=\"M24 10c-3 9-17 10-17 23 0 13 34 13 34 0 0-13-14-14-17-23z\"/><path d=\"M24 12c-9 12-14 27-5 30m5-30c9 12 14 27 5 30m-5-30v31\" stroke=\"#a77d96\" fill=\"none\"/><path d=\"m22 10-2-5m4 5 3-6\" stroke=\"#ac9e73\"/></svg>",
+    "potato": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#cfb48b\" d=\"M8 17c6-8 16-8 25-3 8 4 12 15 7 21-6 9-30 9-35-1-3-6 0-12 3-17z\"/><path d=\"m13 21 2 1m14-4 2 1m1 13 2 1m-16 2 2 1\" stroke=\"#a58962\"/></svg>",
+    "cucumber": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#8ab28a\" d=\"M8 37c-5-6 0-13 13-25 7-6 14-8 18-4 6 6 0 13-12 25-9 9-15 10-19 4z\"/><path d=\"m13 33 20-20m-17 14 2 1m6-7 2 1m2-7 2 1\" stroke=\"#5f915f\" fill=\"none\"/></svg>",
+    "apple": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#e28c83\" d=\"M24 17c-21-12-25 13-12 24 5 4 9 1 12 1s7 3 12-1c13-11 9-36-12-24z\"/><path d=\"M24 17c0-5 1-8 3-11\" stroke=\"#917558\" fill=\"none\"/><path fill=\"#8fab7d\" d=\"M25 11c2-8 10-9 14-6-1 7-7 9-14 6z\"/><path d=\"M12 26c0-3 1-5 3-6\" stroke=\"#f5b6ae\" fill=\"none\"/></svg>",
+    "oil": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#efd795\" d=\"M17 14h14l5 8v21H12V22z\"/><path fill=\"#b9ad84\" d=\"M17 5h14v8H17z\"/><path fill=\"#fff1c0\" d=\"M15 26h18v11H15z\"/><circle fill=\"#d4aa4e\" cx=\"24\" cy=\"31\" r=\"4\"/></svg>",
+    "flour": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#ede0c5\" d=\"M13 7h22l-2 9 5 26H10l5-26z\"/><path fill=\"#cfba91\" d=\"M13 7h22v5H13z\"/><path d=\"M24 21v15m0-7-5-4m5 0 5-4m-5 12-5-4m5 0 5-4\" stroke=\"#b09565\" fill=\"none\"/></svg>",
+    "rice": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#d5e0cc\" d=\"M13 6h22l-2 10 5 27H10l5-27z\"/><path fill=\"#adc0a1\" d=\"M13 6h22v5H13z\"/><ellipse fill=\"#faf7ed\" cx=\"24\" cy=\"29\" rx=\"9\" ry=\"10\"/><path d=\"m21 24 1 3m5-1 1 3m-7 3 1 3m5-2 1 3\" stroke=\"#c6b998\" fill=\"none\"/></svg>",
+    "generic": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 48 48\" class=\"foodIcon\" width=\"28\" height=\"28\" aria-hidden=\"true\" focusable=\"false\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path fill=\"#d6dfca\" d=\"M8 19h32l-4 22H12z\"/><path d=\"m16 19 8-13 8 13\" stroke=\"#93a27f\" fill=\"none\"/><path d=\"M18 25v10m6-10v10m6-10v10\" stroke=\"#a4b58e\"/></svg>"
+};
+
+  function foodIconFor(item) {
+    const id = String(item?.id || "");
+    return Object.hasOwn(foodIcons, id) ? foodIcons[id] : foodIcons.generic;
+  }
+
   async function loadPrices() {
     const metaEl = document.getElementById("pricesMeta");
     const tbodyEl = document.getElementById("pricesTbody");
@@ -1497,7 +1523,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const tr = document.createElement("tr");
 
         tr.innerHTML = `
-          <td>${escapeHtml(itemName)}</td>
+          <td><span class="foodItem">${foodIconFor(it)}<span class="foodItemName">${escapeHtml(itemName)}</span></span></td>
           <td>${escapeHtml(price)}</td>
           <td>${escapeHtml(unit)}</td>
           <td>${escapeHtml(note)}</td>
@@ -1532,3 +1558,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 </body>
 </html>
+

@@ -12,6 +12,7 @@
     const points = JSON.parse(target.dataset.locations);
     const primary = points.find(p => p.primary) || points[0];
     const map = L.map(target, {scrollWheelZoom:false, tap:false});
+    const markerPane=map.createPane('guideMarkers'); markerPane.style.zIndex='450';
     const countryBounds = window.GERMANY_MAP?.bounds || [[46.55,4.8],[55.35,16.3]];
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom:19,
@@ -21,7 +22,7 @@
     window.GERMANY_MAP?.addContext(map);
     for (const p of points) {
       const marker = L.circleMarker([p.lat,p.lon], {
-        radius:p.primary ? 10 : 7, color:'#173b68', weight:3,
+        pane:'guideMarkers', radius:p.primary ? 10 : 7, color:'#173b68', weight:3,
         fillColor:p.primary ? '#f7bd42' : '#ffffff', fillOpacity:1
       }).addTo(map);
       const label = document.createElement('span');

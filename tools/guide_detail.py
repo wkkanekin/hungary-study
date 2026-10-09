@@ -20,7 +20,7 @@ def render(g):
  body+=section('このガイドで紹介する課程',d['scope'])
  body+='<section id="admission"><h2>入学条件・入試の内容</h2><h3>必要な資格・語学</h3><p>'+e(d['requirements'])+'</p><h3>試験・面接・書類選考</h3><p>'+e(d['exam'])+'</p><h3>出願の時期</h3><p>'+e(d['deadline'])+'</p></section>'
  body+='<section id="application-flow"><h2>いつ何を準備する？ 出願から入学まで</h2><p>'+e(d['scheduleNote'])+'</p>'+table(['時期','準備・手続き'],d['schedule'],'準備の開始時期と出願・選考・入学の時期')+sources(d['scheduleSources'])+'<ol class="guideAdmissionFlow">'+''.join('<li><strong class="guideStepTime">'+e(t)+'</strong>'+e(s)+'</li>' for t,s in zip(d['stepTiming'],d['steps']))+'</ol><p class="guideNote">合格通知だけでは入学登録は完了しません。通知にある登録期限・追加書類・支払い条件まで確認します。</p></section>'
- body+='<section id="fees"><h2>授業料・学期納付金</h2>'+table(['費用の種類','金額・目安','対象・確認事項'],d['fees'],'授業料とその他の納付金を分けて確認')+'<p class="guideNote">円の目安は1ユーロ＝177.34円（ECB・2026年10月9日）で計算し、10円または100円単位に丸めています。実際の決済・送金額は為替や手数料で変わります。免除・課程・入学年度で費用も異なります。生活費・出願審査費・入居初期費用も含めた予算を作ります。</p></section>'
+ body+='<section id="fees"><h2>授業料・学期納付金</h2>'+table(['費用の種類','金額・目安','対象・確認事項'],d['fees'],'授業料とその他の納付金を分けて確認')+'<p class="guideNote" id="currency-reference">円の目安は1ユーロ＝177.34円（ECB・2026年10月9日）で計算し、10円または100円単位に丸めています。実際の決済・送金額は為替や手数料で変わります。免除・課程・入学年度で費用も異なります。生活費・出願審査費・入居初期費用も含めた予算を作ります。</p></section>'
  body+='<section id="living-costs"><h2>その地域の生活費・家賃</h2><p>'+e(convert(d['monthly']))+'</p>'
  if d['rent']:
   r=d['rent'];rows=[[str(year)+'年版','€'+str(flat),'€'+str(wg),('↑ 上昇 +' if change>0 else '↓ 下落 ')+str(change)+'％'] for year,flat,wg,change in r['rows']]

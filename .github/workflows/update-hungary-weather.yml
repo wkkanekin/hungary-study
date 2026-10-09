@@ -1,0 +1,35 @@
+name: Update Hungary weather
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hungary-weather
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch weather and climate
+        id: weather
+        continue-on-error: true
+        run: python scripts/update_hungary_weather.py
+      - name: Save successful updates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/hungary-weather-current.json data/hungary-climate.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update Hungary weather data'
+            git push
+          fi
+      - name: Report incomplete refresh
+        if: steps.weather.outcome == 'failure'
+        run: exit 1

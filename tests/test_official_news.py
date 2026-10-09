@@ -25,6 +25,18 @@ def article(day="2026-10-05", words="Scholarship application details are on this
 
 
 class NewsTests(unittest.TestCase):
+    def test_jasso_destination_and_degree_filters(self):
+        for country, course, expected in [
+            ("限定なし", "大学学部", True), ("ハンガリー", "大学院修士", True),
+            ("米国", "大学学部", False), ("限定なし", "高校", False),
+            ("", "博士", False),
+        ]:
+            with self.subTest(country=country, course=course):
+                page = BeautifulSoup(
+                    f"<table><tr><th>国・地域</th><td>{country}</td></tr>"
+                    f"<tr><th>留学先校の課程</th><td>{course}</td></tr></table>", "html.parser")
+                self.assertEqual(news.eligible_jasso_scholarship(page), expected)
+
     def collect(self, page=None, state=None, items=None, blocked=None, listing_page=None):
         with patch.object(news, "fetch", side_effect=[listing_page or listing(), page or article()]):
             return news.collect_source(SOURCE, date(2026, 10, 5), state or {}, items or {}, blocked or set())
@@ -98,3 +110,4 @@ class NewsTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

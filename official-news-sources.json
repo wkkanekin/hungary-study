@@ -4,7 +4,9 @@
     {
       "name": "Stipendium Hungaricum公式",
       "url": "https://stipendiumhungaricum.hu/news/",
-      "hosts": ["stipendiumhungaricum.hu"],
+      "hosts": [
+        "stipendiumhungaricum.hu"
+      ],
       "selector": ".card--stories, .col-12:has(> .block-subtitle)",
       "title_selector": ".card-title, .block-subtitle",
       "link_selector": "a[href]",
@@ -13,7 +15,10 @@
     {
       "name": "Study in Hungary（Tempus）",
       "url": "https://studyinhungary.hu/blog/page/1",
-      "hosts": ["studyinhungary.hu", "www.studyinhungary.hu"],
+      "hosts": [
+        "studyinhungary.hu",
+        "www.studyinhungary.hu"
+      ],
       "selector": ".blog-item",
       "title_selector": ".title",
       "link_selector": ".title a",
@@ -22,7 +27,13 @@
     {
       "name": "Tempus Public Foundation",
       "url": "https://tpf.hu/",
-      "hosts": ["tpf.hu", "www.tpf.hu", "tka.hu", "www.tka.hu", "tempus.hu"],
+      "hosts": [
+        "tpf.hu",
+        "www.tpf.hu",
+        "tka.hu",
+        "www.tka.hu",
+        "tempus.hu"
+      ],
       "selector": "a:has(h2)",
       "title_selector": "h2",
       "link_selector": null
@@ -30,7 +41,9 @@
     {
       "name": "在日ハンガリー大使館",
       "url": "https://tokio.mfa.gov.hu/ja",
-      "hosts": ["tokio.mfa.gov.hu"],
+      "hosts": [
+        "tokio.mfa.gov.hu"
+      ],
       "selector": ".flex.flex-col:has(> h2 a[href*='/articles/'])",
       "title_selector": "h2",
       "link_selector": "h2 a",
@@ -39,14 +52,18 @@
     {
       "name": "在ハンガリー日本国大使館",
       "url": "https://www.hu.emb-japan.go.jp/itprtop_ja/index.html",
-      "hosts": ["www.hu.emb-japan.go.jp"],
+      "hosts": [
+        "www.hu.emb-japan.go.jp"
+      ],
       "selector": "dl.linklist_date",
       "kind": "mofa"
     },
     {
       "name": "トビタテ！留学JAPAN（文部科学省・JASSO）",
       "url": "https://tobitate-mext.jasso.go.jp/news/",
-      "hosts": ["tobitate-mext.jasso.go.jp"],
+      "hosts": [
+        "tobitate-mext.jasso.go.jp"
+      ],
       "selector": "article.p-news-list__post",
       "title_selector": ".title",
       "link_selector": "a.wide_link",
@@ -56,7 +73,9 @@
     {
       "name": "JASSO",
       "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/",
-      "hosts": ["www.jasso.go.jp"],
+      "hosts": [
+        "www.jasso.go.jp"
+      ],
       "kind": "watch",
       "title": "海外留学支援制度（大学院学位取得型）公式ページの更新",
       "expected_heading": "大学院学位取得"
@@ -64,7 +83,9 @@
     {
       "name": "JASSO",
       "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/gakubu/",
-      "hosts": ["www.jasso.go.jp"],
+      "hosts": [
+        "www.jasso.go.jp"
+      ],
       "kind": "watch",
       "title": "海外留学支援制度（学部学位取得型）公式ページの更新",
       "expected_heading": "学部学位取得"
@@ -72,10 +93,24 @@
     {
       "name": "Tempus Public Foundation",
       "url": "https://en.tka.hu/stipendium-hungaricum-scholarship-programmes-data-facts-and-statistics",
-      "hosts": ["en.tka.hu"],
+      "hosts": [
+        "en.tka.hu"
+      ],
       "kind": "watch",
       "title": "ハンガリー留学・SHの統計資料ページの更新",
       "expected_heading": "statistics|statisztik|data.*facts"
+    },
+    {
+      "name": "JASSO（海外留学情報サイト）",
+      "url": "https://ryugaku.jasso.go.jp/news/scholarship_{year}.html",
+      "hosts": [
+        "ryugaku.jasso.go.jp"
+      ],
+      "selector": "#news article.tmp3_article",
+      "title_selector": "h4.st",
+      "link_selector": "a[href]",
+      "link_pattern": "/scholarship/search/data_\\d+\\.html$",
+      "kind": "jasso_scholarships"
     }
   ]
 }

@@ -2,6 +2,20 @@
   {
     "enabled": true,
     "type": "お知らせ",
+    "publishedAt": "2026-10-08",
+    "title": "【北陸3県の高校在籍・卒業者向け】三谷進一育英会：海外大学への正規留学奨学金（年間上限1,400万円・詳細は公式へ）",
+    "url": "https://ryugaku.jasso.go.jp/scholarship/search/data_00271.html",
+    "source": "JASSO（海外留学情報サイト）",
+    "sourceTitle": "一般財団法人三谷進一育英会 海外奨学金プログラム（大学留学） 奨学金情報を更新しました",
+    "sourcePublishedAt": "2026-10-08",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-09",
+    "dateBasis": "official",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
     "publishedAt": "2026-10-01",
     "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～（詳細は公式へ）",
     "url": "https://tobitate-mext.jasso.go.jp/news/550.html",

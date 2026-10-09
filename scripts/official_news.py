@@ -169,7 +169,9 @@ def article_info(soup):
 
 def display_title(source, title, updated=False):
     title = clean(title)
-    if source.get("supplement") and "学位取得" not in title:
+    if source.get("kind") == "jasso_scholarships":
+        prefix = "【海外大学・大学院向け奨学金】"
+    elif source.get("supplement") and "学位取得" not in title:
         prefix = "【日本の大学等に在籍する方向け】"
     elif STATS.search(title):
         prefix = "【留学・奨学金の統計】"
@@ -180,8 +182,23 @@ def display_title(source, title, updated=False):
     return f"{prefix}{source['name']}：{title[:180]}{suffix}"
 
 
+def eligible_jasso_scholarship(soup):
+    """Only explicitly Hungary-compatible undergraduate/graduate listings."""
+    fields = {}
+    for row in soup.select("tr"):
+        cells = row.find_all(["th", "td"], recursive=False)
+        if len(cells) >= 2:
+            fields[clean(cells[0].get_text(" ", strip=True))] = clean(cells[1].get_text(" ", strip=True))
+    country = fields.get("国・地域", "")
+    course = fields.get("留学先校の課程", "")
+    return bool(re.search(r"ハンガリー|Hungary|限定なし|制限なし|全世界", country, re.I)
+                and re.search(r"大学学部|大学院|修士|博士", course))
+
+
 def collect_source(source, today, old_state, old_items, blocked, dry_run=False):
     changes, new_state, errors = [], {}, []
+    if source.get("kind") == "jasso_scholarships":
+        source = dict(source, url=source["url"].replace("{year}", str(today.year)))
     soup = fetch(source["url"], source["hosts"])
     if source.get("kind") == "watch":
         heading = soup.select_one("h1") or soup.select_one("h2") or soup.title
@@ -204,6 +221,8 @@ def collect_source(source, today, old_state, old_items, blocked, dry_run=False):
             continue
         try:
             page = soup if source.get("kind") == "watch" else fetch(url, source["hosts"])
+            if source.get("kind") == "jasso_scholarships" and not eligible_jasso_scholarship(page):
+                continue
             published, modified, body, digest = article_info(page)
             published = published or listing_date
             event_date = modified if modified and (not published or modified >= published) else published
@@ -306,3 +325,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     today = args.today or datetime.now(timezone(timedelta(hours=9))).date()
     sys.exit(run(args.root, today, args.dry_run))
+

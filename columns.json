@@ -1,24 +1,5 @@
 [
   {
-    "id": "neptun-bueb",
-    "enabled": true,
-    "title": "Neptunで何をする？｜BUEBの画面で見る学期・履修登録",
-    "author": "ハンガリー留学ラボ",
-    "authorId": "kaneko",
-    "university": "Budapest University of Economics and Business",
-    "date": "2026-10-09",
-    "thumbnail": "images/basics/neptun-login.png",
-    "summary": "学期の有効化、履修登録、試験登録をBUEBの画面例で紹介。個人情報は非表示にしています。",
-    "tags": [
-      "Neptun",
-      "大学生活",
-      "履修登録",
-      "BUEB"
-    ],
-    "readingTime": "5分",
-    "url": "column-neptun-bueb.html"
-  },
-  {
     "id": "yugo-scholarship",
     "enabled": true,
     "title": "在学中にハンガリー政府奨学金を獲得した話",

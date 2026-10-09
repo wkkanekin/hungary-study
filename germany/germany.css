@@ -93,3 +93,5 @@ body{font-size:16px;line-height:1.7}
 .leaflet-container{font-family:inherit}.leaflet-control-attribution{font-size:10px!important}.leaflet-tooltip{font-family:inherit;color:#17345d;font-weight:700}
 @media(max-width:1050px){.mapToolbar{grid-template-columns:1fr 1fr}.mapToolbar .btn{justify-self:start}}
 @media(max-width:720px){#germanyMap{height:490px}.mapResults{max-height:420px}.studentFilterBar{align-items:flex-start;flex-direction:column}.mapToolbar{grid-template-columns:1fr}.mapToolbar .btn{width:100%}.mapScope,.mapSourceNote{font-size:11px}}
+
+body{font-weight:800}body .container :is(p,li,dd,span,small,time,td,input,select,textarea){font-weight:800}

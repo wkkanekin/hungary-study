@@ -1,0 +1,25 @@
+name: Collect university campus photo candidates
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/collect-campus-photos.yml
+permissions:
+  contents: read
+concurrency:
+  group: collect-campus-photos
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect public image metadata for review
+        run: python scripts/germany/collect_campus_photos.py
+      - name: Preserve public photo metadata as a review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: university-campus-photo-candidates
+          path: germany/data/campus-photo-candidates.json
+          retention-days: 7

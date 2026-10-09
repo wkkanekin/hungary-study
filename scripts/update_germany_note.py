@@ -44,7 +44,7 @@ def sync_author(a):
             if not title: continue
             desc=plain(p.get("description") or p.get("body") or "")[:180]
             posts.append({"authorId":a["id"],"author":a["name"],"title":title,"date":str(date)[:10],"summary":desc,"image":img,"url":article_url})
-        if not new or len(items)<10: break
+        if not new: break
         time.sleep(.25)
     return posts
 

@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'social/approved/*.json'
+      - '.github/workflows/x-post-approved.yml'
   workflow_dispatch:
     inputs:
       check_only:
@@ -61,6 +62,11 @@ jobs:
               text=True).splitlines()
           candidates = [p for p in changed if p.startswith('social/approved/') and p.endswith('.json')]
           if len(candidates) != 1:
+              if os.environ.get('GITHUB_REF') == 'refs/heads/main' and os.environ.get('GITHUB_EVENT_NAME') == 'push' and os.environ.get('AFTER_SHA'):
+                  print('No newly approved post in this commit; skipping publication.')
+                  with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as out:
+                      out.write('SKIP_PUBLISH=true\n')
+                  sys.exit(0)
               sys.exit('One newly approved JSON file per commit is required.')
           with open(candidates[0], encoding='utf-8') as f:
               post = json.load(f)
@@ -74,6 +80,7 @@ jobs:
                   out.write(f'{key}<<{delimiter}\n{value}\n{delimiter}\n')
           PY
       - name: Publish approved post to X
+        if: ${{ env.SKIP_PUBLISH != 'true' }}
         env:
           CHECK_ONLY: ${{ github.event_name == 'push' && 'false' || inputs.check_only }}
           POST_TEXT_INPUT: ${{ inputs.post_text }}

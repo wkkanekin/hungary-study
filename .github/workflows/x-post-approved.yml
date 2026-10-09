@@ -4,11 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       post_text:
-        description: "確認済みの投稿文を入力してください"
+        description: "確認済みの投稿文"
         required: true
         type: string
+      image_url:
+        description: "画像のHTTPS URL（任意）"
+        required: false
+        type: string
       approved:
-        description: "投稿文を確認し、今すぐXへ投稿する場合だけチェック"
+        description: "本文と画像を確認し、今すぐXへ投稿する場合だけチェック"
         required: true
         default: false
         type: boolean
@@ -16,39 +20,100 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: x-approved-publishing
+  cancel-in-progress: false
+
 jobs:
   post:
     if: ${{ inputs.approved == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTTP client
+        run: python -m pip install requests==2.32.5
       - name: Publish approved post to X
         env:
           POST_TEXT: ${{ inputs.post_text }}
-          X_USER_ACCESS_TOKEN: ${{ secrets.X_USER_ACCESS_TOKEN }}
+          IMAGE_URL: ${{ inputs.image_url }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_OAUTH2_CLIENT_ID: ${{ secrets.X_OAUTH2_CLIENT_ID }}
+          X_OAUTH2_CLIENT_SECRET: ${{ secrets.X_OAUTH2_CLIENT_SECRET }}
         run: |
           python - <<'PY'
+          import base64
           import os
           import sys
+          from urllib.parse import urlparse
           import requests
 
+          def checked(response, label):
+              if not response.ok:
+                  sys.exit(f"{label}: HTTP {response.status_code}。Xの権限・クレジット・設定を確認してください。")
+              return response.json()
+
           text = os.environ.get("POST_TEXT", "").strip()
-          token = os.environ.get("X_USER_ACCESS_TOKEN", "")
           if not text:
               sys.exit("投稿文が空です。")
-          if not token:
-              sys.exit("GitHub SecretsにX_USER_ACCESS_TOKENが登録されていません。")
+          names = ["X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET",
+                   "X_OAUTH2_CLIENT_ID", "X_OAUTH2_CLIENT_SECRET"]
+          missing = [name for name in names if not os.environ.get(name)]
+          if missing:
+              sys.exit("GitHub Secretsに追加してください: " + ", ".join(missing))
 
-          response = requests.post(
+          image_url = os.environ.get("IMAGE_URL", "").strip()
+          image_data = None
+          if image_url:
+              parsed = urlparse(image_url)
+              if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+                  sys.exit("画像にはHTTPS URLを指定してください。")
+              with requests.get(image_url, timeout=30, stream=True, allow_redirects=False) as response:
+                  if response.status_code != 200:
+                      sys.exit("画像を取得できません。画像ファイルへの直接URLを指定してください。")
+                  if response.headers.get("Content-Type", "").split(";")[0].lower() not in [
+                      "image/jpeg", "image/png", "image/webp", "image/gif"
+                  ]:
+                      sys.exit("画像URLはJPEG・PNG・WEBP・GIFファイルを指定してください。")
+                  data = bytearray()
+                  for chunk in response.iter_content(65536):
+                      data.extend(chunk)
+                      if len(data) > 5 * 1024 * 1024:
+                          sys.exit("画像は5MB以下にしてください。")
+                  if not data:
+                      sys.exit("画像が空です。")
+                  image_data = bytes(data)
+
+          token_result = checked(requests.post(
+              "https://api.x.com/2/oauth2/token",
+              auth=(os.environ["X_OAUTH2_CLIENT_ID"], os.environ["X_OAUTH2_CLIENT_SECRET"]),
+              data={
+                  "grant_type": "urn:ietf:params:oauth:grant-type:token-exchange",
+                  "subject_token": os.environ["X_ACCESS_TOKEN"],
+                  "subject_token_type": "urn:x:params:oauth:token-type:oauth1_token",
+                  "oauth_token_secret": os.environ["X_ACCESS_TOKEN_SECRET"],
+              }, timeout=30
+          ), "認証")
+          token = token_result["access_token"]
+          print("::add-mask::" + token)
+          headers = {"Authorization": "Bearer " + token}
+          payload = {"text": text}
+          if image_data is not None:
+              uploaded = checked(requests.post(
+                  "https://api.x.com/2/media/upload",
+                  headers=headers,
+                  json={"media": base64.b64encode(image_data).decode("ascii"),
+                        "media_category": "tweet_image"},
+                  timeout=60,
+              ), "画像アップロード")
+              payload["media"] = {"media_ids": [uploaded["data"]["id"]]}
+
+          result = checked(requests.post(
               "https://api.x.com/2/tweets",
-              headers={"Authorization": f"Bearer {token}"},
-              json={"text": text},
-              timeout=30,
-          )
-          if not response.ok:
-              print(f"X API error ({response.status_code}): {response.text}")
-              response.raise_for_status()
-
-          post_id = response.json()["data"]["id"]
-          print("投稿しました: https://x.com/i/status/" + post_id)
+              headers=headers, json=payload, timeout=30,
+          ), "投稿")
+          print("投稿しました: https://x.com/i/status/" + result["data"]["id"])
           PY

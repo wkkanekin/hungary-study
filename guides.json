@@ -362,31 +362,5 @@
     "url": "guide-hungary-food-prices.html",
     "date": "2026-10-08",
     "thumbnail": "images/guides/hungary-food-prices.svg"
-  },
-  {
-    "id": "budapest-airport-access",
-    "enabled": true,
-    "featured": false,
-    "homePick": false,
-    "comingSoon": false,
-    "title": "ブダペスト空港から市内へ｜100E・200Eとチケット購入",
-    "description": "バス乗り場、車内カード決済、券売機、節約ルートを写真付きで紹介。",
-    "category": "生活情報",
-    "url": "guide-budapest-airport-access.html",
-    "date": "2026-10-09",
-    "thumbnail": "images/basics/airport-100e-stop.jpg"
-  },
-  {
-    "id": "hungary-places",
-    "enabled": true,
-    "featured": false,
-    "homePick": false,
-    "comingSoon": false,
-    "title": "ハンガリーの主要観光地｜留学中の休日の行き先",
-    "description": "ブダペスト、ドナウベンド、バラトン湖などの観光地を紹介。",
-    "category": "生活情報",
-    "url": "guide-hungary-places.html",
-    "date": "2026-10-09",
-    "thumbnail": "images/hungary-major-cities-tourism-map.png"
   }
 ]

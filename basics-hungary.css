@@ -253,3 +253,6 @@ h4{font-size:17px;color:#0f2a5a;margin:24px 0 8px;font-weight:900}
 .climateChart svg{display:block;width:100%;height:auto}.climateLegend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px}.climateLegend span{border-left:12px solid;padding-left:6px}
 .climateTable{min-width:650px;font-size:13px}.climateTable caption{text-align:left;margin:12px 0;font-weight:900}
 @media(max-width:600px){.transportImageGrid{grid-template-columns:1fr}.transportImageGrid .heroImg{height:auto;max-height:280px}.regionPhoto{float:none;width:100%;max-width:300px;margin:12px auto}.regionPhoto img{height:170px}.districtPair{gap:8px}h2{font-size:22px}.simpleCard{padding:16px}.weatherTemperature{font-size:30px}}
+
+/* Keep the yen estimate beside each national average food price. */
+#prices .yenPrice{display:block;color:#0f2a5a;font-size:14px;font-weight:800;white-space:nowrap}

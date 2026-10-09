@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;display=swap" rel="stylesheet"/>
-<link href="basics-hungary.css?v=20261009" rel="stylesheet"/>
+<link href="basics-hungary.css?v=20261010-yen" rel="stylesheet"/>
 <link href="/images/favicon-32x32.png?v=20261004-1" id="dynamicFavicon" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/images/favicon-16x16.png?v=20261004-1" rel="icon" sizes="16x16" type="image/png"/>
 <link href="/images/apple-touch-icon.png?v=20261004-1" rel="apple-touch-icon" sizes="180x180"/>
@@ -94,7 +94,7 @@
         最初は値段の感覚がつかみにくいと思います。
       </p>
 <p>
-        為替レートは毎日変動しますが、現在の水準なら、
+        為替レートは毎日変動しますが、値段の感覚をつかむための概算として、
         現地でざっくり日本円に換算するときは、
       </p>
 <div class="keyPoint">
@@ -204,7 +204,7 @@
 <thead>
 <tr>
 <th>品目</th>
-<th>価格</th>
+<th>価格（Ft・円の目安）</th>
 <th>単位</th>
 <th>備考</th>
 </tr>
@@ -217,7 +217,7 @@
 </table>
 </div>
 <p class="muted">
-        ※実際の価格は、店舗、地域、ブランド、セールなどによって異なります。
+        ※円の目安は1 Ft＝0.5円（フォリントの金額÷2）で計算し、1円単位に丸めています。最新の為替レートではなく、値段の感覚をつかむための概算です。実際の価格・円の支払額は、店舗、地域、ブランド、セール、為替レートや手数料によって異なります。
       </p>
 </div>
 </section><section class="section">
@@ -710,6 +710,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       tbodyEl.innerHTML = "";
 
+      // Use the same rough conversion explained above: Ft divided by two.
+      const yenPerForint = 0.5;
+
       for (const it of items) {
         const itemName =
           String(
@@ -718,10 +721,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             ""
           );
 
-        const price =
-          typeof it?.price_huf === "number"
-            ? `${it.price_huf.toLocaleString("en-US")} Ft`
-            : "—";
+        const hasPrice = typeof it?.price_huf === "number" &&
+          Number.isFinite(it.price_huf) && it.price_huf >= 0;
+        const price = hasPrice
+          ? `${it.price_huf.toLocaleString("en-US")} Ft`
+          : "—";
+        const yenEstimate = hasPrice
+          ? `（約${Math.round(it.price_huf * yenPerForint).toLocaleString("ja-JP")}円）`
+          : "";
 
         const unit =
           String(it?.ksh_unit || "");
@@ -733,7 +740,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         tr.innerHTML = `
           <td><span class="foodItem">${foodIconFor(it)}<span class="foodItemName">${escapeHtml(itemName)}</span></span></td>
-          <td>${escapeHtml(price)}</td>
+          <td>${escapeHtml(price)}${yenEstimate ? `<span class="yenPrice">${escapeHtml(yenEstimate)}</span>` : ""}</td>
           <td>${escapeHtml(unit)}</td>
           <td>${escapeHtml(note)}</td>
         `;

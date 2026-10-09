@@ -150,14 +150,8 @@ const hitCountEl = document.getElementById("hitCount");
  }
 
 
-function getRecentStudents(max = 3) {
- const recent = students.filter((s) => !!s.enabled && !!s.recent);
-
- if (recent.length) {
-   return recent.slice(0, max);
- }
-
- return [];
+function getRecentStudents() {
+ return students.filter((s) => !!s.enabled);
 }
 
 function shortText(value, max = 92) {
@@ -173,7 +167,7 @@ function shortText(value, max = 92) {
 function renderRecentStudents() {
  if (!recentStudentListEl) return;
 
- const list = getRecentStudents(3);
+ const list = getRecentStudents();
 
  if (!list.length) {
    recentStudentListEl.innerHTML = "";

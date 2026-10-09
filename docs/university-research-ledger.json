@@ -19,7 +19,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-heidelberg.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "外国人学生の授業料",
@@ -36,6 +36,34 @@
         [
           "大学公式",
           "https://www.uni-heidelberg.de/en"
+        ],
+        [
+          "heiCOでの出願手順",
+          "https://www.uni-heidelberg.de/en/study/application-enrolment/guide-to-the-online-application"
+        ],
+        [
+          "課程別の入学試験・選考",
+          "https://www.uni-heidelberg.de/en/study/application-enrolment/starting-the-first-academic-semester-of-your-degree-programme/entrance-examination-procedure/entrance-examination-procedure"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "州統計局：2023年の物価",
+          "https://www.statistik-bw.de/fileadmin/user_upload/Service/Veroeff/Faltbl%C3%A4tter/803824006.pdf"
+        ],
+        [
+          "州統計局：2024年の物価",
+          "https://www.statistik-bw.de/fileadmin/user_upload/Service/Veroeff/Sonderver%C3%B6fffentlichungen/803625001.pdf"
+        ],
+        [
+          "州統計局：2025年の物価",
+          "https://www.statistik-bw.de/volkswirtschaft-und-branchen/preise/verbraucherpreise/"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -146,7 +174,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-bayreuth.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "大学公式",
@@ -155,6 +183,42 @@
         [
           "課程・出願・公式資料",
           "https://www.uni-bayreuth.de/en/master/global-food-nutrition-and-health"
+        ],
+        [
+          "GFNH：出願・選考基準",
+          "https://www.globalfood.uni-bayreuth.de/en/application/index.html"
+        ],
+        [
+          "2026/27冬学期の学期納付金",
+          "https://www.studierendenkanzlei.uni-bayreuth.de/de/studierende/semesterbeitrag/index.html"
+        ],
+        [
+          "留学生の生活費・住居費",
+          "https://www.international-office.uni-bayreuth.de/en/come-to-bayreuth/welcome-services/International-Students/index.html"
+        ],
+        [
+          "Kulmbachの生活・住居案内",
+          "https://www.f7.uni-bayreuth.de/en/study/student-life/living-costs/index.html"
+        ],
+        [
+          "Bayreuth市：2022年版家賃",
+          "https://www.bayreuth.de/erster-qualifizierter-mietspiegel-fuer-die-stadt-bayreuth/"
+        ],
+        [
+          "Bayreuth市：2026年版と2024年版の家賃",
+          "https://www.bayreuth.de/neuer-qualifizierter-mietspiegel-fuer-bayreuth-2/"
+        ],
+        [
+          "州統計局：2024年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2025/pm002/index.html"
+        ],
+        [
+          "州統計局：2025年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2026/pm006/index.html"
+        ],
+        [
+          "州統計局：2023年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -177,7 +241,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-lmu.html",
-      "guideCheckedOn": "2026-10-06",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "課程・英語修士一覧",
@@ -190,6 +254,30 @@
         [
           "外国人の出願・必要書類",
           "https://www.lmu.de/en/study/degree-students/applications-for-admission/"
+        ],
+        [
+          "München地域の生活費参考（TUM）",
+          "https://www.tum.de/en/studies/fees"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "州統計局：2024年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2025/pm002/index.html"
+        ],
+        [
+          "州統計局：2025年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2026/pm006/index.html"
+        ],
+        [
+          "州統計局：2023年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -201,7 +289,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-tum.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "授業料",
@@ -214,6 +302,38 @@
         [
           "大学公式",
           "https://www.tum.de/en/"
+        ],
+        [
+          "出願・適性評価の方法",
+          "https://www.tum.de/en/studies/application/application-info-portal/admission-procedures"
+        ],
+        [
+          "Mathematics修士の選考例",
+          "https://www.cit.tum.de/en/cit/studies/degree-programs/master-mathematics/"
+        ],
+        [
+          "VPDとTUMへの別出願",
+          "https://www.tum.de/en/studies/application/application-info-portal/uni-assist"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "州統計局：2024年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2025/pm002/index.html"
+        ],
+        [
+          "州統計局：2025年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2026/pm006/index.html"
+        ],
+        [
+          "州統計局：2023年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -445,7 +565,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-fu-berlin.html",
-      "guideCheckedOn": "2026-10-06",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "学期の費用",
@@ -458,6 +578,22 @@
         [
           "修士出願の基本",
           "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/allgemeine-information/index.html"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "州統計局：2023・2024年の物価",
+          "https://www.statistik-berlin-brandenburg.de/002-2025/"
+        ],
+        [
+          "州統計局：2025年の物価",
+          "https://www.statistik-berlin-brandenburg.de/presse/2026/02-Verbraucherpreise-2025-Berlin-Brandenburg/"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -700,7 +836,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-tuhh.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "Engineering Science",
@@ -713,6 +849,22 @@
         [
           "学士出願FAQ",
           "https://www.tuhh.de/tuhh/en/studying/before-studying/application/faqs/faqs-bachelor"
+        ],
+        [
+          "TUHHの生活費案内",
+          "https://www.tuhh.de/tuhh/en/education/students/organisational-details-about-your-studies/financing-your-studies/costs/savings-hints/costs-of-living"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "Statistik Nord：2023〜2025年の物価（表2・5ページ）",
+          "https://www.statistik-nord.de/fileadmin/Dokumente/M_I_2_m_2512_HH.pdf"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -1142,7 +1294,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-osnabrueck.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "Conflict Studies and Peacebuilding",
@@ -1151,6 +1303,22 @@
         [
           "大学公式",
           "https://www.uni-osnabrueck.de/en/"
+        ],
+        [
+          "Osnabrück市：2025/26年版家賃と推移",
+          "https://bauen.osnabrueck.de/de/aktuelles/osnabruecker-mietspiegel-2025-2026-liegt-vor/"
+        ],
+        [
+          "学生支援分の2026/27・2027/28改定",
+          "https://www.studentenwerk-osnabrueck.de/de/nachrichten/artikel-details/anhebung-des-studierendenwerksbeitrags.html"
+        ],
+        [
+          "州統計局：2023・2024年の物価",
+          "https://www.statistik.niedersachsen.de/presse/die-inflationsrate-in-niedersachsen-lag-im-jahr-2024-bei-2-1-238479.html"
+        ],
+        [
+          "州統計局：2025年の物価・実質賃金",
+          "https://www.statistik.niedersachsen.de/presse/reallohne-stiegen-im-jahr-2025-in-niedersachsen-um-1-7-248988.html"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -1228,7 +1396,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-rwth.html",
-      "guideCheckedOn": "2026-10-06",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "AStA：学期納付金の説明",
@@ -1241,6 +1409,34 @@
         [
           "International Academy：修士の出願・費用",
           "https://www.academy.rwth-aachen.de/en/programs/masters-degree-programs/your-way-to-us/"
+        ],
+        [
+          "一般修士TCR：資格・ポートフォリオ・英語・費用",
+          "https://tcr.rwth-aachen.de/programme-and-application/"
+        ],
+        [
+          "2026/27冬学期の学期納付金",
+          "https://www.asta.rwth-aachen.de/en/about-us/finance/#semesterbeitrag"
+        ],
+        [
+          "2026/27受入案内：Aachenの生活費",
+          "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaabsuidar"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "IT.NRW：2023・2024年の物価",
+          "https://statistik.nrw/service/veroeffentlichungen/themenschwerpunkte/Inflation"
+        ],
+        [
+          "IT.NRW：2025年の物価",
+          "https://statistik.nrw/wirtschaft-und-umwelt/preise/verbraucherpreise"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -1274,7 +1470,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-bonn.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "留学生の費用",
@@ -1283,6 +1479,22 @@
         [
           "留学生の出願",
           "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/applications-from-international-students"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "IT.NRW：2023・2024年の物価",
+          "https://statistik.nrw/service/veroeffentlichungen/themenschwerpunkte/Inflation"
+        ],
+        [
+          "IT.NRW：2025年の物価",
+          "https://statistik.nrw/wirtschaft-und-umwelt/preise/verbraucherpreise"
         ]
       ],
       "brochureStatus": "not_reviewed"
@@ -2009,7 +2221,7 @@
       "locationCheckedOn": "2026-10-01",
       "guideStatus": "official_web_reviewed",
       "guideUrl": "guide-iu.html",
-      "guideCheckedOn": "2026-10-05",
+      "guideCheckedOn": "2026-10-09",
       "guideSources": [
         [
           "学習形態",
@@ -2022,6 +2234,38 @@
         [
           "資金計画",
           "https://www.iu.de/finanzielles/finanzierung/"
+        ],
+        [
+          "IU：外国の資格・語学・テスト",
+          "https://www.iu.de/en/admission/requirements/"
+        ],
+        [
+          "IU：出願手順",
+          "https://www.iu.de/bewerbung/ablauf/"
+        ],
+        [
+          "München地域の生活費参考（TUM）",
+          "https://www.tum.de/en/studies/fees"
+        ],
+        [
+          "学生住宅レポート2025：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2025/mlp-studentenwohnreport-2025/"
+        ],
+        [
+          "学生住宅レポート2026：家賃と前年比",
+          "https://mlp-se.de/presse/pressemitteilungen/2026/mlp-studentenwohnreport-2026/index.html"
+        ],
+        [
+          "州統計局：2024年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2025/pm002/index.html"
+        ],
+        [
+          "州統計局：2025年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2026/pm006/index.html"
+        ],
+        [
+          "州統計局：2023年の物価",
+          "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
         ]
       ],
       "brochureStatus": "not_reviewed"

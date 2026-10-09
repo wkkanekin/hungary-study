@@ -5,6 +5,7 @@ from html import escape
 from datetime import date
 from urllib.parse import urlsplit
 import json,re
+from guide_detail import render
 ROOT=Path(__file__).resolve().parents[1]
 G=ROOT/'germany';D=G/'data'
 e=lambda s:escape(str(s),quote=True)
@@ -27,11 +28,7 @@ for g in guides:
  for u in matches:
   assert u['id'] not in matched,'Ambiguous guide match: '+u['id']
   matched[u['id']]=g
- body='<dl class="guideFacts"><dt>大学</dt><dd>'+e(g['name'])+'</dd><dt>地域</dt><dd>'+e(g['city'])+'</dd></dl>'
- body+=''.join(section(t,p) for t,p in g['sections'])
- body+=section('公式資料で最終確認','課程ごとの最新の募集要項・費用表を優先してください。公開パンフレットの確認状況は調査台帳で管理しています。すべての課程・条件を掲載したものではありません。')
- if g.get('student'):body+='<a class="btn primary" href="index.html#student-'+e(g['student'])+'">この大学の現役生を見る</a>'
- body+='<section class="sourceList"><h2>情報源</h2><ul>'+''.join('<li>'+link(url,label)+'</li>' for label,url in g['links'])+'</ul><p>確認日：'+e(g['checkedOn'])+'。出願年度・課程・国籍に応じて公式案内を確認してください。</p></section><div class="sectionActions"><a class="btn whiteBtn" href="universities.html">大学一覧へ</a><a class="btn primary" href="index.html#students">現役生に相談する</a></div>'
+ body=render(g)
  pages['guide-'+g['id']+'.html']=template.replace('{{TITLE}}',e(g['title'])).replace('{{LEAD}}',e(g['intro'])).replace('{{BODY}}',body)
  updates.append({'title':g['title']+'のガイド','date':g.get('publishedOn',g['checkedOn']),'url':'guide-'+g['id']+'.html','category':'大学ガイド','enabled':True})
 # All input validation finishes before modifying generated files.

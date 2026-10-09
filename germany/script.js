@@ -56,6 +56,7 @@
     if (!map) return;
     markers.forEach((m,id)=>{ const c=cities.get(id);if(!stateSelect.value || c.state===stateSelect.value)m.addTo(map);else m.remove(); });
     const visible=[...cities.values()].filter(c=>!stateSelect.value || c.state===stateSelect.value);
+    if (!stateSelect.value) {map.fitBounds([[45.5,2.5],[57,19]],{padding:[12,12]});return;}
     if (visible.length>1)map.fitBounds(visible.map(c=>[c.lat,c.lon]),{padding:[28,28],maxZoom:7});
     else if(visible.length)map.setView([visible[0].lat,visible[0].lon],8);
   }
@@ -69,14 +70,15 @@
   $('clearStudentFilter').addEventListener('click',resetStudents);
   $('resetMap').addEventListener('click',()=>{stateSelect.value='';selectedCity='';search.value='';resetStudents();updateCityOptions();updateMarkers();renderList();});
   if (window.L) {
-    map=L.map('germanyMap',{scrollWheelZoom:false,minZoom:4,maxZoom:9});
-    L.imageOverlay('images/germany-states-bkg.png',[[47,5.4],[55.3,15.6]],{alt:'BKG公式のドイツ州境界地図'}).addTo(map);
+    map=L.map('germanyMap',{scrollWheelZoom:false,minZoom:3,maxZoom:12});
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
     map.attributionControl.setPrefix('<a href="https://leafletjs.com/">Leaflet</a>');
-    map.attributionControl.addAttribution('© <a href="https://www.bkg.bund.de">BKG</a> 2026 · <a href="https://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>');
     cities.forEach(c=>{
-      const hasStudents=universities.some(u=>u.cityId===c.id && u.studentIds.length);
-      const m=L.marker([c.lat,c.lon],{title:`${c.name} の大学一覧`,alt:`${c.name} の大学一覧`,icon:L.divIcon({className:'cityMarker'+(hasStudents?' hasStudents':''),html:'',iconSize:[15,15],iconAnchor:[7,7]})});
-      m.bindTooltip(c.name,{direction:'top'});m.on('click',()=>selectCity(c.id));markers.set(c.id,m);
+      const studentCount=new Set(universities.filter(u=>u.cityId===c.id).flatMap(u=>u.studentIds)).size;
+      const hasStudents=studentCount>0;
+      const label=c.name+(hasStudents?` · 登録学生${studentCount}名`:'');
+      const m=L.marker([c.lat,c.lon],{title:label,alt:label,zIndexOffset:hasStudents?1000:0,icon:L.divIcon({className:'cityMarker'+(hasStudents?' hasStudents':''),html:hasStudents?'<span aria-hidden="true">'+studentCount+'</span>':'',iconSize:hasStudents?[24,24]:[10,10],iconAnchor:hasStudents?[12,12]:[5,5]})});
+      m.bindTooltip(label,{direction:'top',permanent:hasStudents,offset:[0,-12],className:hasStudents?'studentCityLabel':''});m.on('click',()=>selectCity(c.id));markers.set(c.id,m);
     });
     updateMarkers();
   } else $('germanyMap').textContent='地図を読み込めませんでした。都市メニューから大学を選べます。';

@@ -92,7 +92,7 @@ jobs:
 
           def checked(response, label):
               if not response.ok:
-                  sys.exit(f"{label}: HTTP {response.status_code}。Xの権限・クレジット・設定を確認してください。")
+                  sys.exit(f"{label}: HTTP {response.status_code}; details: {response.text[:800]}")
               return response.json()
 
           text = (os.environ.get("POST_TEXT") or os.environ.get("POST_TEXT_INPUT") or "").strip()
@@ -149,14 +149,34 @@ jobs:
               sys.exit(0)
           payload = {"text": text}
           if image_data is not None:
-              uploaded = checked(requests.post(
-                  "https://api.x.com/2/media/upload",
-                  headers=headers,
-                  json={"media": base64.b64encode(image_data).decode("ascii"),
-                        "media_category": "tweet_image"},
-                  timeout=60,
-              ), "画像アップロード")
-              payload["media"] = {"media_ids": [uploaded["data"]["id"]]}
+              from mimetypes import guess_type
+              media_type = guess_type(urlparse(image_url).path)[0] or "image/jpeg"
+              if media_type not in ("image/jpeg", "image/png", "image/webp", "image/gif"):
+                  sys.exit("画像形式が未対応です。")
+              base = "https://api.x.com/2/media/upload"
+              initiated = checked(requests.post(
+                  base + "/initialize", headers=headers,
+                  json={"media_type": media_type, "total_bytes": len(image_data),
+                        "media_category": "tweet_image"}, timeout=30,
+              ), "画像アップロード開始")
+              media_id = initiated["data"]["id"]
+              for i in range(0, len(image_data), 4 * 1024 * 1024):
+                  response = requests.post(
+                      base + "/" + str(media_id) + "/append",
+                      headers=headers,
+                      data={"segment_index": i // (4 * 1024 * 1024)},
+                      files={"media": ("image", image_data[i:i + 4 * 1024 * 1024], media_type)},
+                      timeout=60,
+                  )
+                  if not response.ok:
+                      sys.exit(f"画像転送: HTTP {response.status_code}")
+              finalized = checked(requests.post(
+                  base + "/" + str(media_id) + "/finalize",
+                  headers=headers, timeout=30,
+              ), "画像アップロード確定")
+              if finalized.get("data", {}).get("processing_info", {}).get("state") in ("pending", "in_progress"):
+                  sys.exit("画像処理が未完了のため投稿を中止しました。")
+              payload["media"] = {"media_ids": [str(media_id)]}
 
           result = checked(requests.post(
               "https://api.x.com/2/tweets",

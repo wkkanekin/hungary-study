@@ -102,3 +102,4 @@ for u in universities:
 out = ROOT / 'germany/data/campus-photo-candidates.json'
 out.write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n')
 print(json.dumps({'universities':len(results),'withCandidates':sum(bool(x['candidates']) for x in results),'missing':[x['name'] for x in results if not x['candidates']]},ensure_ascii=False),flush=True)
+print('CAMPUS_PHOTO_CANDIDATES=' + json.dumps(results, ensure_ascii=False, separators=(',', ':')), flush=True)

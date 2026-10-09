@@ -22,62 +22,33 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install OAuth signing library
-        run: python -m pip install requests-oauthlib==2.0.0
-
       - name: Publish approved post to X
         env:
           POST_TEXT: ${{ inputs.post_text }}
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_USER_ACCESS_TOKEN: ${{ secrets.X_USER_ACCESS_TOKEN }}
         run: |
           python - <<'PY'
           import os
           import sys
           import requests
-          from requests_oauthlib import OAuth1
 
           text = os.environ.get("POST_TEXT", "").strip()
+          token = os.environ.get("X_USER_ACCESS_TOKEN", "")
           if not text:
               sys.exit("投稿文が空です。")
-          required = (
-              "X_API_KEY",
-              "X_API_SECRET",
-              "X_ACCESS_TOKEN",
-              "X_ACCESS_TOKEN_SECRET",
-          )
-          missing = [name for name in required if not os.environ.get(name)]
-          if missing:
-              sys.exit("GitHub Secretsが不足しています: " + ", ".join(missing))
+          if not token:
+              sys.exit("GitHub SecretsにX_USER_ACCESS_TOKENが登録されていません。")
 
-          auth = OAuth1(
-              os.environ["X_API_KEY"],
-              os.environ["X_API_SECRET"],
-              os.environ["X_ACCESS_TOKEN"],
-              os.environ["X_ACCESS_TOKEN_SECRET"],
-          )
           response = requests.post(
               "https://api.x.com/2/tweets",
-              auth=auth,
+              headers={"Authorization": f"Bearer {token}"},
               json={"text": text},
               timeout=30,
           )
           if not response.ok:
-              # 応答本文だけを表示し、認証情報は出力しません。
               print(f"X API error ({response.status_code}): {response.text}")
               response.raise_for_status()
 
           post_id = response.json()["data"]["id"]
           print("投稿しました: https://x.com/i/status/" + post_id)
           PY
-
-      - name: Explain skipped post
-        if: ${{ inputs.approved != true }}
-        run: echo "承認チェックがないため、Xへの投稿は行いませんでした。"

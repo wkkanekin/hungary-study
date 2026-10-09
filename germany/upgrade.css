@@ -27,3 +27,26 @@ body .container :is(h1,h2,h3,h4,strong,dt,th,label,summary,.btn){font-weight:900
 @media(max-width:760px){#directoryList{grid-template-columns:1fr;gap:16px}}
 
 .directoryItem .universityLogo{object-fit:contain;background:#fff;padding:30px;border:1px solid #e2e9f0}
+
+/* Purpose-specific illustrations, familiar prices and contact forms. */
+[hidden]{display:none!important}
+.basicImgWrap .basicImg{object-fit:contain;background:#edf4fb}
+.flowIllustration{width:100%;height:160px;object-fit:contain;display:block;border-radius:12px}
+.consultFlow li{position:relative;padding-top:18px}.consultFlow li:before{position:absolute;left:26px;top:26px;background:#173b68;color:#fff;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-size:18px}
+.consultFlow span{line-height:1.9}
+.everydayPriceGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.everydayPriceCard{display:grid;grid-template-columns:90px minmax(0,1fr);gap:16px;background:#fff;border:1px solid #d5e0eb;border-radius:16px;padding:18px;align-items:start}
+.priceIllustration{width:90px;height:90px;object-fit:contain;border-radius:12px}
+.everydayPriceCard h3{font-size:17px;margin:0!important;line-height:1.6}
+.everydayPriceCard p{margin:6px 0!important;line-height:1.7}
+.priceQuantity,.priceSource{font-size:12px;color:#48617f}.priceSource{display:block;line-height:1.7;margin-top:12px}
+.everydayAmount{font-size:18px;color:#173b68}.priceItemNote{font-size:12px;color:#526173}
+.studentRecruitment{padding:24px;border:2px solid #d5aa45;background:#fff9e9;border-radius:16px;max-width:960px;margin:18px auto 24px}
+.studentRecruitment h3{font-size:23px;color:#173b68;margin:0 0 14px}.studentRecruitment p{line-height:1.9}.studentRecruitment .btn{margin-top:10px}
+.contactCard{max-width:960px;margin:auto;padding:28px}.studentContactFields,.contactMessage{margin-top:20px}
+.currencyReference{font-size:12px;line-height:1.8;padding:18px;max-width:960px;margin:24px auto;color:#48617f;border-top:1px solid #d5e0eb}
+.legendCountry{display:inline-block;width:22px;height:12px;border:3px solid #173b68;background:#f9e7bd;vertical-align:middle;margin-right:6px}
+.countryLabel{background:transparent;border:0;white-space:nowrap;text-align:center;pointer-events:none}
+.countryLabel span{display:inline-block;color:#173b68;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:900!important;background:rgba(255,255,255,.8);padding:2px 4px;border-radius:4px}
+.countryGermany span{font-size:21px;background:#fff9e9;border:2px solid #173b68;padding:2px 12px;box-shadow:0 2px 8px #173b6826}
+@media(max-width:600px){.everydayPriceGrid{grid-template-columns:1fr}.everydayPriceCard{grid-template-columns:80px minmax(0,1fr);padding:16px;gap:12px}.priceIllustration{width:80px;height:80px}.contactCard{padding:20px 16px}.studentRecruitment{padding:20px 16px}.studentRecruitment .btn{width:100%}.flowIllustration{height:180px}.countryLabel span{font-size:10px}.countryGermany span{font-size:18px}}

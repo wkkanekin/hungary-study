@@ -12,12 +12,13 @@
     const points = JSON.parse(target.dataset.locations);
     const primary = points.find(p => p.primary) || points[0];
     const map = L.map(target, {scrollWheelZoom:false, tap:false});
-    const countryBounds = [[45.5, 2.5], [57, 19]];
+    const countryBounds = window.GERMANY_MAP?.bounds || [[46.55,4.8],[55.35,16.3]];
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom:19,
       attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     map.attributionControl.setPrefix('<a href="https://leafletjs.com/">Leaflet</a>');
+    window.GERMANY_MAP?.addContext(map);
     for (const p of points) {
       const marker = L.circleMarker([p.lat,p.lon], {
         radius:p.primary ? 10 : 7, color:'#173b68', weight:3,

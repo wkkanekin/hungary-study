@@ -56,6 +56,14 @@
       [
         "州統計局：2023年の物価",
         "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
+      ],
+      [
+        "GFNH：2027/28冬学期の募集日程",
+        "https://www.globalfood.uni-bayreuth.de/en/"
+      ],
+      [
+        "uni-assist：処理時間と早めの準備",
+        "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/"
       ]
     ],
     "student": "aina",
@@ -87,7 +95,7 @@
       "scope": "M.Sc. Global Food, Nutrition and Health（GFNH）を例に紹介します。英語で学ぶ4学期の修士、冬学期開始です。",
       "requirements": "関連分野の学士と履修内容、ドイツ基準で2.5以下（数字が小さいほど良い）の成績、英語C1が必要です。ドイツ語A1は入学後1年以内の提出も認められています。学士未修了で出願する場合は135 ECTS以上などの条件があります。",
       "exam": "書類では志望動機・履歴書と関連する履修科目を評価します。第1段階で50点以上は直接合格、40〜49点は英語面接、40点未満は不合格。面接は約10〜20分で、志望理由と食・栄養・健康の課題について議論します。面接対象者は最終評価60点以上が合格条件です。",
-      "deadline": "公式ページの通常締切は6月15日。2026/27冬学期の出願は終了しています。次年度の日程は募集開始時に確認します。外国の学士によるVPD申請は締切の6〜8週間前までに進めます。",
+      "deadline": "GFNHの2027/28冬学期は2027年3月1日〜6月15日と公式に告知されています。2026/27冬学期の募集は終了。日本等の非EUの外国学位による出願は、先にVPDを申請し、CAMPUSonlineへの大学出願も期限内に完了します。",
       "steps": [
         "関連学位・成績・語学とGFNHの募集年度を確認",
         "外国の学位はuni-assistでBayreuth向けVPDを申請",
@@ -195,7 +203,47 @@
           ]
         ]
       },
-      "rent": null
+      "rent": null,
+      "schedule": [
+        [
+          "前年秋〜年明け【準備目安】",
+          "学位・必要単位と英語C1を確認。語学の受験・再受験と成績証明・翻訳・志望動機を準備。"
+        ],
+        [
+          "2027年3月1日〜6月15日【公式】",
+          "GFNHの2027/28冬学期へCAMPUSonlineで出願。次のVPD準備も先行して行う。"
+        ],
+        [
+          "締切の8週間以上前【準備目安】",
+          "4月中旬より前を目標にVPDを申請。処理・不足書類の修正に余裕を確保する。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "書類評価。面接対象者は指定された英語面接を受け、合否を確認する。"
+        ],
+        [
+          "合格後〜入学前【通知に従う】",
+          "登録期限までに最終学位・保険・学期納付金を提出。Kulmbachの住居を確保し、冬学期の開始案内を確認する。"
+        ]
+      ],
+      "stepTiming": [
+        "前年秋〜年明け（準備目安）",
+        "大学締切の8週間以上前（準備目安）",
+        "2027年3月1日〜6月15日（公式）",
+        "出願後・面接通知の日程",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "GFNH：2027/28冬学期の募集日程",
+          "https://www.globalfood.uni-bayreuth.de/en/"
+        ],
+        [
+          "uni-assist：処理時間と早めの準備",
+          "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。GFNHの2027/28日程は正式に告知済みです。"
     }
   },
   {
@@ -255,6 +303,18 @@
       [
         "州統計局：2023年の物価",
         "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
+      ],
+      [
+        "数学系修士の募集日程（MSE）",
+        "https://www.cit.tum.de/cit/studium/studiengaenge/master-mathematics-science-engineering/"
+      ],
+      [
+        "TUM：VPDの申請",
+        "https://www.tum.de/en/studies/application/application-info-portal/uni-assist"
+      ],
+      [
+        "uni-assist：処理時間と早めの準備",
+        "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -303,7 +363,7 @@
       "scope": "学士・修士とも志望課程の選考規則を確認します。修士の適性評価を中心に説明します。",
       "requirements": "修士では認められた学士、志望分野に対応する履修内容・単位、指定の語学証明が必要です。外国の学歴では原則VPDを準備し、大学側にも別途出願します。",
       "exam": "修士の適性評価は、成績・履修内容・志望書等の第1段階と、必要な場合の第2段階で行われます。例：Mathematics修士は評価点により直接合格・不合格・面接に分岐。課程によっては面接の代わりに筆記試験やエッセイ評価があり、全修士が同じ試験ではありません。",
-      "deadline": "申請期間は学位・課程・開始学期ごとに異なります。課程ページのApplication Periodで確認し、VPDの処理時間も含めて準備します。",
+      "deadline": "課程ごとに異なります。数学系のMathematics in Science and Engineering修士の通常募集は、冬学期2月1日〜5月31日、夏学期10月1日〜11月30日。学士など他課程にこの日程を当てはめず、TUMonlineと課程の年度別募集を確認します。",
       "steps": [
         "課程・キャンパス・語学・必要単位と申請期間を確認",
         "対象者はuni-assistでTUM向けVPDを申請",
@@ -402,7 +462,51 @@
           ]
         ],
         "summary": "学生向け募集家賃は、2025年・2026年とも前年比で上昇しています。WGでも高額になるため、住居を決めてから総予算を見直します。"
-      }
+      },
+      "schedule": [
+        [
+          "開始の12〜6か月前【準備目安】",
+          "専攻・必要単位・英語／ドイツ語証明を確認し、試験の再受験も含めて準備。"
+        ],
+        [
+          "大学締切の8週間以上前【準備目安】",
+          "対象者はTUM用VPDを申請。VPD未発行時の仮提出の扱いも大学の公式手順で確認する。"
+        ],
+        [
+          "冬：2月1日〜5月31日／夏：10月1日〜11月30日【課程例】",
+          "Mathematics in Science and Engineering修士の募集期間。TUMonlineへ別途出願。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "書類評価、課程指定の面接・試験等。通知の返信期限と追加提出期限を確認。"
+        ],
+        [
+          "合格後〜学期開始【通知に従う】",
+          "入学承諾・保険・登録書類・授業料等を整える。冬は秋、夏は春の学期開始に合わせて渡航・住居を準備。"
+        ]
+      ],
+      "stepTiming": [
+        "開始の12〜6か月前（準備目安）",
+        "締切の8週間以上前（準備目安）",
+        "志望課程の募集期間内",
+        "出願後・選考通知の日程",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "数学系修士の募集日程（MSE）",
+          "https://www.cit.tum.de/cit/studium/studiengaenge/master-mathematics-science-engineering/"
+        ],
+        [
+          "TUM：VPDの申請",
+          "https://www.tum.de/en/studies/application/application-info-portal/uni-assist"
+        ],
+        [
+          "uni-assist：処理時間と早めの準備",
+          "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -462,6 +566,10 @@
       [
         "州統計局：2025年の物価",
         "https://www.statistik-bw.de/volkswirtschaft-und-branchen/preise/verbraucherpreise/"
+      ],
+      [
+        "学士第1学期の募集期間",
+        "https://www.uni-heidelberg.de/en/study/management-of-studies/key-dates-deadlines/application-deadlines-for-the-1st-semester-of-undergraduate-degree-programmes"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -486,7 +594,7 @@
       "scope": "学士・修士で選考方法が異なります。外国の入学資格を持つ志願者の基本手順です。",
       "requirements": "学士には認められた大学入学資格と指定の語学力、修士には関連する学士・単位と課程別の言語条件が必要です。ドイツ語課程と英語修士の条件を分けて確認します。",
       "exam": "課程により定員選考、成績・履修内容の審査、試験・面接を行います。試験内容と日時は専攻の選考規則を確認。Studienkollegが必要な場合の入学試験・最終試験は、学位課程の選考とは別の手続きです。",
-      "deadline": "heiCOと志望課程の募集ページで、自分の国籍・入学資格・開始学期に対応する期限を確認します。試験・面接の通知が短期間で届く場合もあります。",
+      "deadline": "日本など非EU/EEAの国籍で外国の大学入学資格を持つ学士志願者は、通常、冬学期6月1日〜7月15日が出願期間です。修士・Studienkolleg等は別日程。heiCOで自分の課程・年度を確認します。",
       "steps": [
         "志望課程の資格・語学・選考方式を確認",
         "heiCOにアカウントを作り、学歴・成績・語学書類等を提出",
@@ -581,7 +689,43 @@
           ]
         ],
         "summary": "学生向け募集家賃は2年続けて上昇しています。学生寮と民間住宅では価格差が大きく、寮への早めの申請が重要です。"
-      }
+      },
+      "schedule": [
+        [
+          "前年秋〜春【準備目安】",
+          "外国の入学資格とドイツ語／英語条件を確認。語学試験、成績証明、認証・翻訳を準備。"
+        ],
+        [
+          "4〜5月【準備目安】",
+          "heiCOと専攻ページで、その年度の募集期間・試験の有無・必要書類を確定。"
+        ],
+        [
+          "通常6月1日〜7月15日【学士・非EU/EEA】",
+          "外国の入学資格による冬学期の学士出願。修士などの期限は課程別。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "書類審査・対象者の試験や面接を受ける。大学の連絡とheiCOを確認。"
+        ],
+        [
+          "合格後〜冬学期開始【通知に従う】",
+          "通知の登録期限までに入学登録・保険・授業料／納付金を整え、秋の渡航と住居を準備。"
+        ]
+      ],
+      "stepTiming": [
+        "前年秋〜春（準備目安）",
+        "4〜5月（準備目安）",
+        "通常6月1日〜7月15日（対象の学士）",
+        "出願後・選考通知の日程",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "学士第1学期の募集期間",
+          "https://www.uni-heidelberg.de/en/study/management-of-studies/key-dates-deadlines/application-deadlines-for-the-1st-semester-of-undergraduate-degree-programmes"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -625,6 +769,14 @@
       [
         "Statistik Nord：2023〜2025年の物価（表2・5ページ）",
         "https://www.statistik-nord.de/fileadmin/Dokumente/M_I_2_m_2512_HH.pdf"
+      ],
+      [
+        "Engineering Science：募集期間",
+        "https://www.tuhh.de/tuhh/en/studying/before-studying/degree-courses/bachelors-programs/engineering-science"
+      ],
+      [
+        "TUHH：学士出願と10月開始",
+        "https://www.tuhh.de/tuhh/en/studying/before-studying/application/bachelor"
       ]
     ],
     "student": "airi-kawakita",
@@ -725,7 +877,47 @@
           ]
         ],
         "summary": "学生向け募集家賃は2年続けて上昇しています。2026年版の3年間の平均上昇率は年5.8％。市全体の指標なので、Harburgの個別物件の金額とは区別してください。"
-      }
+      },
+      "schedule": [
+        [
+          "前年秋〜春【準備目安】",
+          "外国の入学資格、Engineering Scienceの英語・ドイツ語条件を確認。語学受験・翻訳等を準備。"
+        ],
+        [
+          "4〜5月【準備目安】",
+          "必要書類とオンライン申請窓口を確認。卒業見込み・最終証明書の提出条件を確かめる。"
+        ],
+        [
+          "通常6月1日〜7月15日【公式】",
+          "Engineering Science学士の冬学期出願。期間内にオンライン申請を完了。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "書類審査・不足書類の連絡・合格通知を確認。登録期限を記録。"
+        ],
+        [
+          "合格後〜10月【入学準備】",
+          "保険・納付金・登録書類を整える。10月開始の冬学期に向け住居・オリエンテーションを確認。"
+        ]
+      ],
+      "stepTiming": [
+        "前年秋〜春（準備目安）",
+        "4〜5月（準備目安）",
+        "通常6月1日〜7月15日",
+        "出願後・合格通知の確認",
+        "合格後〜10月の開始前"
+      ],
+      "scheduleSources": [
+        [
+          "Engineering Science：募集期間",
+          "https://www.tuhh.de/tuhh/en/studying/before-studying/degree-courses/bachelors-programs/engineering-science"
+        ],
+        [
+          "TUHH：学士出願と10月開始",
+          "https://www.tuhh.de/tuhh/en/studying/before-studying/application/bachelor"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -785,6 +977,10 @@
       [
         "州統計局：2023年の物価",
         "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
+      ],
+      [
+        "IU：出願期限と開始日",
+        "https://www.iu.de/bewerbung/ablauf/"
       ]
     ],
     "student": "riko-asahi",
@@ -810,7 +1006,7 @@
       "scope": "私立大学IUのデュアル課程を中心に紹介します。通信・英語課程等では料金も入学条件も変わります。",
       "requirements": "外国の学歴はドイツの大学入学資格との同等性を確認します。大学の外国人向け一般案内はドイツ語B2（心理系の一部はC1）と学内入学テストを求めています。英語課程の例はIELTS 6以上・TOEFL 80以上等。選ぶ形態の適用条件を確認してください。",
       "exam": "IUはNC（成績による定員制限）なしと案内しますが、入学資格の確認は必要です。学内テストの対象・内容は志望課程に問い合わせます。デュアル課程では大学への出願と別に企業の採用選考・面接があり、企業契約が必要です。",
-      "deadline": "学習形態・開始日・実習先企業によって異なります。オンライン申込み後、企業選考と大学の登録が開始日までに完了するよう進めます。",
+      "deadline": "大学全体で一律の出願締切は設けていません。IUの一般案内ではデュアル課程は課程により1月1日・4月1日・10月1日の開始日があり、通信課程は随時開始。実習先企業の採用期間と希望課程の開始日を確認します。",
       "steps": [
         "デュアル／通信／英語課程とMünchenの受講場所を選ぶ",
         "外国の資格・語学・テストの対象条件を大学に確認しオンライン申込み",
@@ -909,7 +1105,43 @@
           ]
         ],
         "summary": "学生向け募集家賃は、2025年・2026年とも前年比で上昇しています。WGでも高額になるため、住居を決めてから総予算を見直します。"
-      }
+      },
+      "schedule": [
+        [
+          "希望開始の12〜6か月前【準備目安】",
+          "学習形態、外国の資格、必要なドイツ語／英語を確認し、企業候補を探す。"
+        ],
+        [
+          "希望開始の6〜3か月前【準備目安】",
+          "大学にオンライン申込み。デュアルでは実習先企業の募集・採用選考を先行して進める。"
+        ],
+        [
+          "希望開始前【大学・企業と調整】",
+          "必要資格・語学・企業契約を完了。一律締切がなくても企業採用が終わらないと開始できない場合がある。"
+        ],
+        [
+          "開始前【契約確認】",
+          "授業料の企業負担、報酬、勤務・授業の曜日、大学と企業の各契約を確認。"
+        ],
+        [
+          "課程指定の開始日【公式】",
+          "一般案内はデュアルで1月1日・4月1日・10月1日等、通信は随時。希望課程の実際の日程で登録・住居を整える。"
+        ]
+      ],
+      "stepTiming": [
+        "希望開始の12〜6か月前（準備目安）",
+        "希望開始の6〜3か月前（準備目安）",
+        "企業の募集期間内・開始前",
+        "開始前・契約締結時",
+        "課程指定の開始日まで"
+      ],
+      "scheduleSources": [
+        [
+          "IU：出願期限と開始日",
+          "https://www.iu.de/bewerbung/ablauf/"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -949,6 +1181,18 @@
       [
         "州統計局：2025年の物価・実質賃金",
         "https://www.statistik.niedersachsen.de/presse/reallohne-stiegen-im-jahr-2025-in-niedersachsen-um-1-7-248988.html"
+      ],
+      [
+        "DAAD：CSP修士の出願期間・窓口",
+        "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/7689/"
+      ],
+      [
+        "DAAD：学期日程",
+        "https://www.daad.de/en/studying-in-germany/universities/all-degree-programmes/detail/university-of-osnabrueck-conflict-studies-and-peacebuilding-w64870/?hec-id=w64870"
+      ],
+      [
+        "uni-assist：処理時間と早めの準備",
+        "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/"
       ]
     ],
     "student": "megumi-yamada",
@@ -974,7 +1218,7 @@
       "scope": "現役生の専攻に対応するConflict Studies and Peacebuilding修士を例に紹介します。",
       "requirements": "社会科学・政治学または同等の関連学士と英語B2が必要です。他の関連分野の学士でも、社会科学・政治学の基礎を証明できれば対象になります。",
       "exam": "定員のある修士で、資格・履修内容・語学証明を確認した上で選抜されます。課程の入学規則と選考手順を確認。現在の課程ページには一律の筆記試験科目は示されていないため、試験や面接の有無を募集年度の規則で確かめます。",
-      "deadline": "外国の学歴を持つ志願者は、国内の学歴による申請と条件・締切が異なる場合があります。留学生向け窓口で、提出先と対象学期の締切を先に確認します。",
+      "deadline": "Conflict Studies and Peacebuilding修士は冬学期開始。DAADの課程掲載では外国の学位による出願は4月1日〜6月15日（uni-assist）、ドイツの学位は5月15日〜7月15日です。次年度は大学の留学生向け告知を確認し、国内学位用の締切と混同しないようにします。",
       "steps": [
         "関連学士・履修内容と英語B2の証明を準備",
         "外国の学歴用の申請窓口・締切・必要書類を確認",
@@ -1054,7 +1298,51 @@
           ]
         ]
       },
-      "rent": null
+      "rent": null,
+      "schedule": [
+        [
+          "前年秋〜3月【準備目安】",
+          "関連学士・必要単位・英語B2証明を準備。成績・学位証明・必要な翻訳を揃える。"
+        ],
+        [
+          "通常4月1日〜6月15日【外国の学位】",
+          "CSP修士の出願をuni-assistで行う。VPDだけを申請する方式と混同せず、大学の指定手順を確認。"
+        ],
+        [
+          "締切の8週間以上前【準備目安】",
+          "4月中旬以前を目標に書類・支払いを進め、不足書類の連絡に対応できる余裕を確保。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "資格審査・定員選考、合否と入学登録期限を確認。"
+        ],
+        [
+          "合格後〜秋【入学準備】",
+          "保険・納付金・登録書類を整えて冬学期へ。2026/27の授業期間は10月12日開始。次年度は学年暦を確認。"
+        ]
+      ],
+      "stepTiming": [
+        "前年秋〜3月（準備目安）",
+        "4月より前（募集窓口を確認）",
+        "通常4月1日〜6月15日（外国学位）",
+        "出願後・合格通知の確認",
+        "合格後・冬学期開始前"
+      ],
+      "scheduleSources": [
+        [
+          "DAAD：CSP修士の出願期間・窓口",
+          "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/detail/7689/"
+        ],
+        [
+          "DAAD：学期日程",
+          "https://www.daad.de/en/studying-in-germany/universities/all-degree-programmes/detail/university-of-osnabrueck-conflict-studies-and-peacebuilding-w64870/?hec-id=w64870"
+        ],
+        [
+          "uni-assist：処理時間と早めの準備",
+          "https://www.uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time/"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -1094,6 +1382,14 @@
       [
         "IT.NRW：2025年の物価",
         "https://statistik.nrw/wirtschaft-und-umwelt/preise/verbraucherpreise"
+      ],
+      [
+        "Bonn：非EU/EEA志願者の出願期間",
+        "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/special-application-matters/applicants-from-non-eu-eec-countries"
+      ],
+      [
+        "Bonn：出願期限",
+        "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/application-deadlines"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -1118,7 +1414,7 @@
       "scope": "外国の入学資格による学士・修士出願の基本案内です。",
       "requirements": "学士は認められた大学入学資格とドイツ語DSH2・C1相当が基本。修士は関連する学士に加えて、専攻が定める単位・成績・語学条件を満たします。英語修士の条件は個別に確認します。",
       "exam": "一部の課程には適性試験があります。その他も入学資格・語学や定員に応じた選抜があり、学士・修士の全員に同じ筆記試験が課されるわけではありません。志望課程の選考規則を確認します。",
-      "deadline": "課程・国籍・入学資格によって締切と窓口が変わります。修士は各課程の募集期間を確認し、国内志願者の締切をそのまま使わないようにします。",
+      "deadline": "日本など非EU/EEAの外国入学資格による学士は、通常、冬学期6月初め〜7月15日、夏学期12月初め〜1月15日。修士は課程ごとに別期間・早期審査があるため、この日程を一律に使用しません。",
       "steps": [
         "学士は入学資格とドイツ語、修士は関連学士・必要単位を確認",
         "留学生向け案内で提出先・締切を確認",
@@ -1197,7 +1493,47 @@
           ]
         ],
         "summary": "調整済みの学生向け募集家賃は上昇し、2026年の上昇率は前年より大きくなっています。モデルWGの金額が下がっていても、市場全体の家賃が下がったという意味ではありません。"
-      }
+      },
+      "schedule": [
+        [
+          "開始の12〜6か月前【準備目安】",
+          "学士の入学資格・ドイツ語、修士の関連学位・必要単位を確認。語学受験・翻訳を準備。"
+        ],
+        [
+          "募集開始の1〜2か月前【準備目安】",
+          "非EU/EEA用の窓口、学士／修士の期限と追加選考の有無を確定。"
+        ],
+        [
+          "冬：6月初め〜7月15日／夏：12月初め〜1月15日【対象の学士】",
+          "外国入学資格・非EU/EEAの学士の標準日程。修士は課程ページの期間内に出願。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "資格審査・対象課程の選考、合否・登録期限を確認。"
+        ],
+        [
+          "合格後〜開始前【入学準備】",
+          "登録・保険・納付金・住居を整える。冬は秋、夏は春の学期開始に合わせて準備。"
+        ]
+      ],
+      "stepTiming": [
+        "開始の12〜6か月前（準備目安）",
+        "募集開始の1〜2か月前（準備目安）",
+        "国籍・課程に対応する募集期間内",
+        "出願後・選考通知の日程",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "Bonn：非EU/EEA志願者の出願期間",
+          "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/special-application-matters/applicants-from-non-eu-eec-countries"
+        ],
+        [
+          "Bonn：出願期限",
+          "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/application-deadlines"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -1241,6 +1577,14 @@
       [
         "州統計局：2025年の物価",
         "https://www.statistik-bw.de/volkswirtschaft-und-branchen/preise/verbraucherpreise/"
+      ],
+      [
+        "DHBW Heilbronn：企業応募の時期",
+        "https://www.heilbronn.dhbw.de/studium/bewerbung-und-zulassung/bewerbungsstrategien/"
+      ],
+      [
+        "DHBW：外国学歴の確認と出願",
+        "https://www.dhbw.de/die-dhbw/international/internationale-studieninteressierte"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -1277,7 +1621,7 @@
       "scope": "企業での実習と大学の学習を組み合わせるデュアル学士の案内です。",
       "requirements": "外国の入学資格の同等性確認、指定の語学力、デュアルパートナー企業との契約が必要です。外国の資格はDHBWの担当窓口に認証済み書類を郵送し、通常2〜3週間で審査されます。",
       "exam": "大学の資格審査と企業の採用選考は別です。ドイツ語の証明例はDSH2、TestDaF合計16点以上・各科目3以上、telc C1 Hochschule等。英語のみの課程には例外があります。企業の面接・適性試験の内容は企業ごとに確認します。",
-      "deadline": "学期は通常10月1日開始。企業選考は先に行う必要があるため、希望企業の採用日程と各DHBW拠点の登録期限を確認します。",
+      "deadline": "学士の開始は通常10月1日。企業は開始の1年前、分野によっては1〜1年半前に採用するため、大学登録より前に企業応募を進めます。各企業の募集日程とDHBW拠点の登録期限を確認します。",
       "steps": [
         "希望専攻・DHBW拠点・実習先企業を選ぶ",
         "外国の入学資格の同等性確認と語学証明を進める",
@@ -1364,7 +1708,47 @@
           ]
         ],
         "summary": "マンハイムの学生向け募集家賃は2年続けて上昇しています。DHBWの他都市に同じ金額を当てはめず、大学と実習先それぞれの住居費・交通費を見積もります。"
-      }
+      },
+      "schedule": [
+        [
+          "開始の18〜12か月前【公式の早期準備案内】",
+          "DHBW拠点・専攻・提携企業を選び、企業の採用募集に応募する。"
+        ],
+        [
+          "企業応募前【資格・語学】",
+          "外国の入学資格の同等性確認と語学証明を準備。資格確認は大学案内で2〜3週間程度でも、追加書類に備えて余裕を確保。"
+        ],
+        [
+          "企業の募集・面接日程【企業別】",
+          "採用選考を受け、デュアル学習の企業契約を確保する。"
+        ],
+        [
+          "契約後〜開始前【拠点の登録期限】",
+          "DHBWへ入学登録。授業料の適用・免除、保険、納付金、企業報酬を確認。"
+        ],
+        [
+          "通常10月1日【公式】",
+          "学士開始。授業期と実習期の都市・住居・移動費を確認する。"
+        ]
+      ],
+      "stepTiming": [
+        "開始の18〜12か月前",
+        "企業応募前・語学は早めに",
+        "企業の募集・面接日程",
+        "企業契約後・登録期限まで",
+        "10月1日の開始前"
+      ],
+      "scheduleSources": [
+        [
+          "DHBW Heilbronn：企業応募の時期",
+          "https://www.heilbronn.dhbw.de/studium/bewerbung-und-zulassung/bewerbungsstrategien/"
+        ],
+        [
+          "DHBW：外国学歴の確認と出願",
+          "https://www.dhbw.de/die-dhbw/international/internationale-studieninteressierte"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -1416,6 +1800,14 @@
       [
         "州統計局：2023年の物価",
         "https://www.statistik.bayern.de/presse/mitteilungen/2024/pm002/index.html"
+      ],
+      [
+        "LMU：留学生の受付期間",
+        "https://www.lmu.de/en/study/degree-students/applications-for-admission/guidelines-and-faqs/"
+      ],
+      [
+        "LMU：別途必要な専攻審査",
+        "https://www.lmu.de/en/study/admissions/applications-admissions-and-registration/degree-programs-with-aptitude-procedures/non-eu-citizens.html"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -1440,7 +1832,7 @@
       "scope": "一般の学位課程の入学手順です。修士や適性審査のある課程は専攻側の申請も確認します。",
       "requirements": "学士は認められた大学入学資格、修士は関連する学士・履修内容と専攻側の受入条件を満たす必要があります。ドイツ語課程と英語修士では必要な言語証明が異なります。",
       "exam": "成績・入学資格による選考に加え、専攻により適性審査・試験・面接等があります。専攻側の審査への申込みはInternational Officeへの出願とは別で、締切も異なる場合があります。",
-      "deadline": "International Officeの標準締切は冬学期7月15日・夏学期1月15日。専攻側の適性審査や修士のオンライン申請には別の窓口・期限があるため、両方を確認します。",
+      "deadline": "International Officeの通常受付は冬学期5月〜7月15日、夏学期11月〜1月15日。専攻の適性審査や修士は別の出願・期限があるため、大学側と専攻側の両方を確認します。",
       "steps": [
         "国籍・学位・課程に応じた出願窓口を確認",
         "学歴・成績・語学証明、必要な認証・翻訳を準備",
@@ -1531,7 +1923,47 @@
           ]
         ],
         "summary": "学生向け募集家賃は、2025年・2026年とも前年比で上昇しています。WGでも高額になるため、住居を決めてから総予算を見直します。"
-      }
+      },
+      "schedule": [
+        [
+          "開始の12〜6か月前【準備目安】",
+          "入学資格・語学・専攻の適性審査を確認。認証・翻訳・語学試験を準備。"
+        ],
+        [
+          "冬は4月まで／夏は10月まで【準備目安】",
+          "専攻側の別申込みと期限を確認し、大学提出用の書類を揃える。"
+        ],
+        [
+          "冬：5月〜7月15日／夏：11月〜1月15日【通常】",
+          "International Officeの受付期間。専攻側の手続きは別途、その期限内に行う。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "専攻の適性審査・受入許可と大学の合格通知を確認。"
+        ],
+        [
+          "合格後〜開始前【通知に従う】",
+          "通知の登録期限内に登録・保険・納付金を完了し、ミュンヘンの住居を確保。"
+        ]
+      ],
+      "stepTiming": [
+        "開始の12〜6か月前（準備目安）",
+        "冬は4月まで／夏は10月まで（準備目安）",
+        "通常、冬5月〜7月15日／夏11月〜1月15日",
+        "専攻と大学の選考通知の日程",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "LMU：留学生の受付期間",
+          "https://www.lmu.de/en/study/degree-students/applications-for-admission/guidelines-and-faqs/"
+        ],
+        [
+          "LMU：別途必要な専攻審査",
+          "https://www.lmu.de/en/study/admissions/applications-admissions-and-registration/degree-programs-with-aptitude-procedures/non-eu-citizens.html"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -1575,6 +2007,14 @@
       [
         "州統計局：2025年の物価",
         "https://www.statistik-berlin-brandenburg.de/presse/2026/02-Verbraucherpreise-2025-Berlin-Brandenburg/"
+      ],
+      [
+        "FU：修士のVPD・8週間の処理",
+        "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/uni-assist/index.html"
+      ],
+      [
+        "FU：募集期間の一覧",
+        "https://www.fu-berlin.de/en/studium/bewerbung/bewerbungsfristen/index.html"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -1678,7 +2118,47 @@
           ]
         ],
         "summary": "調整済みの学生向け募集家賃は直近2年で下落しています。ただしモデル住宅の金額は上がっており、入居しやすくなった、すべての物件が安くなったとは判断できません。"
-      }
+      },
+      "schedule": [
+        [
+          "前年秋〜年明け【準備目安】",
+          "志望修士の必要単位・語学・募集年度と定員を確認し、語学・成績書類を準備。"
+        ],
+        [
+          "定員制は3月以前／制限なしは6月以前【準備目安】",
+          "5月31日または8月15日の大学締切より8週間以上早くVPDを申請。再提出にも余裕を確保。"
+        ],
+        [
+          "通常、定員制5月31日／制限なし8月15日まで【冬の修士】",
+          "有効なVPDを添え、FUポータルから別途出願。開始日・課程例外は年度別募集表で確認。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "専攻審査と選抜。合否・受入承諾・登録期限を確認。"
+        ],
+        [
+          "合格後〜秋【入学準備】",
+          "保険・納付金・登録書類・住居を整える。授業開始日とオリエンテーションは学年暦で確認。"
+        ]
+      ],
+      "stepTiming": [
+        "前年秋〜年明け（準備目安）",
+        "大学締切の8週間以上前",
+        "通常5月31日／8月15日まで（対象修士）",
+        "出願後・合格通知の確認",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "FU：修士のVPD・8週間の処理",
+          "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/uni-assist/index.html"
+        ],
+        [
+          "FU：募集期間の一覧",
+          "https://www.fu-berlin.de/en/studium/bewerbung/bewerbungsfristen/index.html"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   },
   {
@@ -1734,6 +2214,18 @@
       [
         "IT.NRW：2025年の物価",
         "https://statistik.nrw/wirtschaft-und-umwelt/preise/verbraucherpreise"
+      ],
+      [
+        "RWTH International Academy：国籍別の募集期間",
+        "https://www.academy.rwth-aachen.de/en/programs/masters-degree-programs/your-way-to-us/"
+      ],
+      [
+        "TCR：冬開始と正式期限への案内",
+        "https://tcr.rwth-aachen.de/programme-and-application/"
+      ],
+      [
+        "RWTH：冬学期の出願・登録期限表",
+        "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaacjbkfq"
       ]
     ],
     "checkedOn": "2026-10-09",
@@ -1758,7 +2250,7 @@
       "scope": "一般の学位課程と、RWTH International Academyが運営する有料課程を分けて説明します。一般修士の例はTransforming City Regions（TCR）です。",
       "requirements": "TCRは認められた学士と専攻規則に合う履修内容、英語証明が必要です。例はTOEFL iBT 90以上またはIELTS 6.0以上。Academy修士は関連学士・英語に加え、職歴が必要な課程があります。",
       "exam": "TCRは学歴・履修書類に加え、空間に関する経験を示す英語のポートフォリオ（20ページ以内）を提出します。サイトのSelf-Assessmentは適性を考える準備用ツールです。Academyは成績・志望書・推薦状・職歴等を総合評価し、全課程共通の筆記試験ではありません。",
-      "deadline": "開始学期・定員・国籍等で期限が異なります。RWTHonlineと志望課程の募集案内で確認します。Academyの割引申込期限と、大学の正式出願期限は区別してください。",
+      "deadline": "TCRは冬学期開始。RWTHの冬学期期限表では、外国の学位を持つ非EU志願者の定員制限なし修士は12月1日〜3月1日です。国籍・学歴・在籍状況による例外と課程の区分を確認します。有料のInternational Academyの現行案内は、非EU/EEA志願者12月2日〜3月1日、EU/EEA等の対象者12月2日〜7月15日です。日本からのAcademy出願を7月まで待たないよう注意。早期申込割引の期限と正式締切は別です。",
       "steps": [
         "一般課程／Academyと授業言語・必要科目・提出期限を確認",
         "学位・成績・語学証明と課程指定の書類を準備",
@@ -1849,7 +2341,55 @@
           ]
         ],
         "summary": "学生向け募集家賃は2年続けて上昇し、2026年の上昇率は前年より大きくなっています。住居費に余裕を持たせ、入居時の敷金も別に用意します。"
-      }
+      },
+      "schedule": [
+        [
+          "前年秋より前〜11月【準備目安】",
+          "一般課程／Academy、語学・関連科目を確認。TCRのポートフォリオ、Academyの課程指定テスト等を準備。"
+        ],
+        [
+          "前年12月1日〜3月1日【一般の修士・対象の非EU】",
+          "RWTH冬学期期限表の定員制限なし修士・外国学位による非EUの区分。TCRの課程区分・自分の例外条件を正式窓口で確認。"
+        ],
+        [
+          "前年12月2日〜3月1日【Academy・非EU/EEA】",
+          "現行の正式募集期間。対象課程・年度を確認し、RWTHonlineへ提出。TCRは別の正式期限を確認。"
+        ],
+        [
+          "12月2日〜7月15日【Academy・EU/EEA等】",
+          "EU/EEA国籍、RWTH在籍者、ドイツの大学学位保持者等の対象区分。日本国籍だけでこの期限になるわけではない。"
+        ],
+        [
+          "出願後【通知に従う】",
+          "資格・専攻審査、追加条件・合否・登録期限を確認する。結果が出る月を一律には保証できない。"
+        ],
+        [
+          "合格後〜冬学期開始【通知に従う】",
+          "登録・保険・最終学位・納付金、Academy対象者は授業料を整え、秋の住居・渡航を準備。"
+        ]
+      ],
+      "stepTiming": [
+        "前年秋より前〜11月（準備目安）",
+        "大学・課程の募集開始前",
+        "一般修士の対象非EU：12月1日〜3月1日／Academy：12月2日〜3月1日",
+        "出願後・合格通知の確認",
+        "合格後・登録期限まで"
+      ],
+      "scheduleSources": [
+        [
+          "RWTH：冬学期の出願・登録期限表",
+          "https://www.rwth-aachen.de/global/show_document.asp?id=aaaaaaaaacjbkfq"
+        ],
+        [
+          "RWTH International Academy：国籍別の募集期間",
+          "https://www.academy.rwth-aachen.de/en/programs/masters-degree-programs/your-way-to-us/"
+        ],
+        [
+          "TCR：冬開始と正式期限への案内",
+          "https://tcr.rwth-aachen.de/programme-and-application/"
+        ]
+      ],
+      "scheduleNote": "「公式」「通常」は確認した募集案内の時期、「準備目安」は当サイトの逆算例です。語学・学歴によって必要な期間は変わります。合否や登録日は通知を優先してください。2026/27冬学期の主な出願期間は終了しています。次年度の受付日は年度別告知で再確認してください。"
     }
   }
 ]

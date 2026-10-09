@@ -19,6 +19,38 @@
     p.textContent = available ? '現役学生のプロフィールから、Zoom・LINEそれぞれの予約・申込方法をご確認ください。' : '予約受付は準備中です。現役学生のプロフィールから、Zoom・LINEそれぞれの相談内容をご確認いただけます。';
   });
   const id = new URLSearchParams(location.search).get('student');
+  const contact = document.getElementById('contactForm');
+  if (contact) {
+    const type = document.getElementById('inquiryType'), uni = document.getElementById('cf_uni'), year = document.getElementById('cf_year');
+    const address = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/;
+    const recipient = address.test(config.contactEmail || '') ? config.contactEmail : address.test(config.contactFallbackEmail || '') ? config.contactFallbackEmail : '';
+    const recipientText = document.getElementById('contactRecipient');
+    recipientText.textContent = recipient ? '送信先：' + recipient + (config.contactEmail ? '' : '（現在は留学ラボの共通運営窓口で受け付けています）') : 'お問い合わせの受付準備中です。';
+    document.getElementById('contactSubmit').disabled = !recipient;
+    function updateType() {
+      const student = type.value === 'student';
+      document.getElementById('studentContactFields').hidden = !student;
+      uni.required = year.required = student;
+      document.getElementById('contactResult').hidden = true;
+      document.getElementById('contactNote').textContent = student ? '大学・課程・相談できるテーマをお知らせください。登録条件や掲載内容は運営と確認します。' : 'サービスや運営へのお問い合わせ用です。相談の予約・申込は各サービスの案内からお願いします。';
+    }
+    type.addEventListener('change',updateType); updateType();
+    document.querySelectorAll('[data-contact-student]').forEach(a=>a.addEventListener('click',()=>{
+      type.value = 'student'; updateType();
+      if (a.closest('#studentRecruitment')) uni.value = document.getElementById('studentRecruitment').dataset.university || '';
+    }));
+    contact.addEventListener('submit',event=>{
+      event.preventDefault(); if (!recipient || !contact.reportValidity()) return;
+      const values = new FormData(contact);
+      const purpose = type.options[type.selectedIndex].text;
+      const body = ['ドイツ留学ラボ お問い合わせ','用件：'+purpose,'お名前：'+values.get('name'),'メール：'+values.get('email'),
+        ...(type.value==='student'?['大学：'+values.get('university'),'学年・課程：'+values.get('year')]:[]),'本文：\n'+values.get('message')].join('\n');
+      document.getElementById('contactPreview').value = body;
+      document.getElementById('contactMailDraft').href = 'mailto:'+recipient+'?subject='+encodeURIComponent('【ドイツ留学ラボ】'+purpose)+'&body='+encodeURIComponent(body);
+      document.getElementById('contactResult').hidden = false;
+      document.getElementById('contactResult').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});
+    });
+  }
   const bookingPanel = document.getElementById('bookingPanel');
   if (bookingPanel) {
     const select = document.getElementById('bookingStudent');
@@ -96,3 +128,7 @@
     if (list.children.length) document.querySelectorAll('[data-column-empty]').forEach(e => e.hidden = true);
   });
 })();
+
+
+// Currency display is shared by all public pages.
+{ const script=document.createElement('script');script.src='currency.js?v=20261009-yen';script.defer=true;document.head.append(script); }

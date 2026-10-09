@@ -113,6 +113,11 @@ jobs:
               sys.exit("GitHub Secretsに追加してください: " + ", ".join(missing))
 
           image_url = (os.environ.get("IMAGE_URL") or os.environ.get("IMAGE_URL_INPUT") or "").strip()
+          if image_url.startswith('https://upload.wikimedia.org/wikipedia/commons/'):
+              from urllib.parse import unquote, quote
+              filename = unquote(image_url.rsplit('/', 1)[-1])
+              image_url = 'https://commons.wikimedia.org/wiki/Special:Redirect/file/' + quote(filename)
+              print('Wikimedia file resolved via official redirect endpoint.')
           image_data = None
           if image_url and not check_only:
               parsed = urlparse(image_url)

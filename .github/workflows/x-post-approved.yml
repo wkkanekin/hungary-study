@@ -27,7 +27,7 @@ on:
         type: boolean
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: x-approved-publishing
@@ -37,14 +37,16 @@ jobs:
   post:
     if: ${{ github.event_name == 'push' || inputs.check_only == true || inputs.approved == true }}
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install HTTP client
-        run: python -m pip install requests==2.32.5
+        run: |
+          python -m pip install requests==2.32.5 pillow==11.3.0
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
       - name: Load approved post on push
         if: ${{ github.event_name == 'push' }}
         env:
@@ -63,13 +65,30 @@ jobs:
               post = json.load(f)
           if post.get('approved') is not True:
               sys.exit('Approval is missing.')
-          if not post.get('text', '').strip() or not post.get('image_url', '').startswith('https://'):
-              sys.exit('Text and HTTPS image URL are required. No post was published.')
+          if not post.get('text', '').strip():
+              sys.exit('Text is required. No post was published.')
           with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as out:
-              for key, value in [('POST_TEXT', post['text']), ('IMAGE_URL', post['image_url']), ('CHECK_ONLY', 'false')]:
+              for key, value in [('POST_TEXT', post['text']), ('IMAGE_URL', post.get('image_url', '')), ('APPROVED_FILE', candidates[0]), ('CHECK_ONLY', 'false')]:
                   delimiter = 'EOF_SOCIAL_' + key
                   out.write(f'{key}<<{delimiter}\n{value}\n{delimiter}\n')
           PY
+      - name: Automatically generate and save image for approved post
+        if: ${{ github.event_name == 'push' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [ -z "${IMAGE_URL:-}" ]; then
+            image_path="social/images/$(basename "$APPROVED_FILE" .json).png"
+            python social/render_post.py "$APPROVED_FILE" "$image_path"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$image_path"
+            git commit -m "Save generated social image for $(basename "$APPROVED_FILE")"
+            git push
+            echo "LOCAL_IMAGE_PATH=$image_path" >> "$GITHUB_ENV"
+            echo "Image saved to repository: $image_path"
+          fi
       - name: Publish approved post to X
         env:
           CHECK_ONLY: ${{ github.event_name == 'push' && 'false' || inputs.check_only }}
@@ -104,6 +123,9 @@ jobs:
 
           image_url = (os.environ.get("IMAGE_URL") or os.environ.get("IMAGE_URL_INPUT") or "").strip()
           image_data = None
+          local_image_path = os.environ.get("LOCAL_IMAGE_PATH", "").strip()
+          if local_image_path and not check_only:
+              image_data = open(local_image_path, "rb").read()
           if image_url and not check_only:
               parsed = urlparse(image_url)
               if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:

@@ -31,7 +31,15 @@ window.GERMANY_GUIDES = [
       ]
     ],
     "student": "aina",
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Campus-bayreuth-1.jpg",
+      "caption": "バイロイト大学・メインキャンパス（Bayreuth）",
+      "author": "Christian Wißler, Hochschulmarketing",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "source": "https://commons.wikimedia.org/wiki/File:Campus-bayreuth-1.jpg"
+    }
   },
   {
     "id": "tum",
@@ -68,7 +76,15 @@ window.GERMANY_GUIDES = [
         "https://www.tum.de/en/"
       ]
     ],
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Universit%C3%A4tsbibliothek_der_Technischen_Universit%C3%A4t_M%C3%BCnchen.jpg/1280px-Universit%C3%A4tsbibliothek_der_Technischen_Universit%C3%A4t_M%C3%BCnchen.jpg",
+      "caption": "TUM・ミュンヘン中心部キャンパスの大学図書館",
+      "author": "MaxEmanuel",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Universit%C3%A4tsbibliothek_der_Technischen_Universit%C3%A4t_M%C3%BCnchen.jpg"
+    }
   },
   {
     "id": "heidelberg",
@@ -109,7 +125,15 @@ window.GERMANY_GUIDES = [
         "https://www.uni-heidelberg.de/en"
       ]
     ],
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "images/basic-old-university.jpg",
+      "caption": "ハイデルベルク大学・旧大学校舎",
+      "author": "Universität Heidelberg",
+      "license": "大学提供広報写真",
+      "licenseUrl": "https://www.uni-heidelberg.de/universitaet/presse/fotos.html",
+      "source": "https://www.uni-heidelberg.de/universitaet/presse/fotos.html"
+    }
   },
   {
     "id": "tuhh",
@@ -147,7 +171,15 @@ window.GERMANY_GUIDES = [
       ]
     ],
     "student": "airi-kawakita",
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Blick_%C3%BCber_den_TUHH_Campus.jpg/1280px-Blick_%C3%BCber_den_TUHH_Campus.jpg",
+      "caption": "ハンブルク工科大学・キャンパス",
+      "author": "Denis Sasinska",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Blick_%C3%BCber_den_TUHH_Campus.jpg"
+    }
   },
   {
     "id": "iu",
@@ -185,7 +217,15 @@ window.GERMANY_GUIDES = [
       ]
     ],
     "student": "riko-asahi",
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2e/IU_Internationale_Hochschule_Cologne.jpg",
+      "caption": "IU・ケルンキャンパス入口（拠点の一例）",
+      "author": "Czalex",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:IU_Internationale_Hochschule_Cologne.jpg"
+    }
   },
   {
     "id": "osnabrueck",
@@ -219,7 +259,15 @@ window.GERMANY_GUIDES = [
       ]
     ],
     "student": "megumi-yamada",
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Schloss_Osnabr%C3%BCck_R%C3%BCckansicht_vom_Schlosspark._Universit%C3%A4t_Osnabr%C3%BCck._UOS._Foto_Clemens_Ratte-Polle._2015.08.30.DSC07575.JPG",
+      "caption": "オスナブリュック大学・城館キャンパス",
+      "author": "Clemens.Ratte-Polle",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Schloss_Osnabr%C3%BCck_R%C3%BCckansicht_vom_Schlosspark._Universit%C3%A4t_Osnabr%C3%BCck._UOS._Foto_Clemens_Ratte-Polle._2015.08.30.DSC07575.JPG"
+    }
   },
   {
     "id": "bonn",
@@ -248,7 +296,15 @@ window.GERMANY_GUIDES = [
         "https://www.uni-bonn.de/en/studying/application-admission-and-enrollment/applications-from-international-students"
       ]
     ],
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/12/Universit%C3%A4t_Bonn.jpg",
+      "caption": "ボン大学・本館とHofgarten",
+      "author": "Thomas Wolf",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Universit%C3%A4t_Bonn.jpg"
+    }
   },
   {
     "id": "dhbw",
@@ -277,7 +333,15 @@ window.GERMANY_GUIDES = [
         "https://www.dhbw.de/english/home/prospective-students"
       ]
     ],
-    "checkedOn": "2026-10-05"
+    "checkedOn": "2026-10-05",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/3e/090321_DHBW_MA_Infotag2.JPG",
+      "caption": "DHBW・マンハイムキャンパス（拠点の一例）",
+      "author": "DHBW Mannheim",
+      "license": "Copyrighted free use",
+      "licenseUrl": "",
+      "source": "https://commons.wikimedia.org/wiki/File:090321_DHBW_MA_Infotag2.JPG"
+    }
   },
   {
     "id": "lmu",
@@ -318,7 +382,15 @@ window.GERMANY_GUIDES = [
         "https://www.lmu.de/en/study/degree-students/applications-for-admission/"
       ]
     ],
-    "checkedOn": "2026-10-06"
+    "checkedOn": "2026-10-06",
+    "photo": {
+      "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Hauptgeb%C3%A4ude_LMU_Eingangsfassade.jpg/1280px-Hauptgeb%C3%A4ude_LMU_Eingangsfassade.jpg",
+      "caption": "ミュンヘン大学（LMU）・本館",
+      "author": "A.Schnurrenberger",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Hauptgeb%C3%A4ude_LMU_Eingangsfassade.jpg"
+    }
   },
   {
     "id": "fu-berlin",
@@ -359,7 +431,15 @@ window.GERMANY_GUIDES = [
         "https://www.fu-berlin.de/en/studium/bewerbung/master/konsekutive-masterstudiengaenge/allgemeine-information/index.html"
       ]
     ],
-    "checkedOn": "2026-10-06"
+    "checkedOn": "2026-10-06",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/FU-Campus_FU_WiWi-u-JurFak.jpg",
+      "caption": "ベルリン自由大学・ダーレムキャンパス",
+      "author": "Miriam Guterland",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:FU-Campus_FU_WiWi-u-JurFak.jpg"
+    }
   },
   {
     "id": "rwth",
@@ -396,6 +476,14 @@ window.GERMANY_GUIDES = [
         "https://www.academy.rwth-aachen.de/en/programs/masters-degree-programs/your-way-to-us/"
       ]
     ],
-    "checkedOn": "2026-10-06"
+    "checkedOn": "2026-10-06",
+    "photo": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5a/RWTH_Aachen_Hauptgeb%C3%A4ude.jpg",
+      "caption": "アーヘン工科大学（RWTH）・本館",
+      "author": "א (Aleph)",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "source": "https://commons.wikimedia.org/wiki/File:RWTH_Aachen_Hauptgeb%C3%A4ude.jpg"
+    }
   }
 ];

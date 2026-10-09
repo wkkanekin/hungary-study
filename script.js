@@ -142,16 +142,20 @@ const hitCountEl = document.getElementById("hitCount");
  return !!stu.enabled;
  }
 
- // 初期表示を短くするため「おすすめ」を最大3件だけ出す
- function getFeaturedStudents(max = 3) {
- const featured = students.filter((s) => !!s.enabled && !!s.featured);
- if (featured.length) return featured.slice(0, max);
- return students.filter((s) => !!s.enabled).slice(0, max);
+ // Show every active profile in the lower student list until filters are applied.
+ function getDefaultStudents() {
+ return students.filter(isEnabled);
  }
 
 
-function getRecentStudents() {
- return students.filter((s) => !!s.enabled);
+function getRecentStudents(max = 3) {
+ const recent = students.filter((s) => !!s.enabled && !!s.recent);
+
+ if (recent.length) {
+   return recent.slice(0, max);
+ }
+
+ return [];
 }
 
 function shortText(value, max = 92) {
@@ -167,7 +171,7 @@ function shortText(value, max = 92) {
 function renderRecentStudents() {
  if (!recentStudentListEl) return;
 
- const list = getRecentStudents();
+ const list = getRecentStudents(3);
 
  if (!list.length) {
    recentStudentListEl.innerHTML = "";
@@ -728,9 +732,9 @@ ${bookingBtn}
  // ----------------------------
  function applyFilterAndJump() {
  if (!hasAnySearchCondition()) {
- const featured = getFeaturedStudents(3); // ★ 2→3
+ const featured = getDefaultStudents();
  renderStudents(featured);
- setHitLabel(`おすすめ：${featured.length}名`);
+ setHitLabel(`全学生：${featured.length}名`);
  scrollToStudents();
  return;
  }
@@ -764,12 +768,12 @@ ${bookingBtn}
 
  closeSuggest();
 
-const featured = getFeaturedStudents(3);
+const featured = getDefaultStudents();
 
 renderStudents(featured);
 renderRecentStudents();
 
-setHitLabel(`おすすめ：${featured.length}名`);
+setHitLabel(`全学生：${featured.length}名`);
  }
 
  function showAllStudents() {
@@ -923,14 +927,14 @@ if (showAllStudentsBtn) {
     `全${enabledCount}名を見る`;
 }
 
-const featured = getFeaturedStudents(3);
+const featured = getDefaultStudents();
 
 renderStudents(featured);
 
 renderRecentStudents();
 
 
-setHitLabel(`おすすめ：${featured.length}名`);
+setHitLabel(`全学生：${featured.length}名`);
 }
 
 async function tryLoadImagesAny() {

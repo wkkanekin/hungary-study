@@ -226,3 +226,30 @@ tbody tr:last-child td{border-bottom:none}
   }
   .transportImageGrid .heroImg{max-height:260px;}
 }
+
+/* 2026-10-09: basic-information layout and text weight */
+body{font-weight:800;line-height:1.85}
+p,li,td,th,label,select,figcaption{font-weight:800}
+.section>h2,.section>h3{max-width:860px;margin-left:auto;margin-right:auto}
+.pageHeader{max-width:860px;margin:auto}
+.section>.heroWrap,.section>.simpleCard,.transportImageGrid{width:100%;max-width:860px;margin-left:auto;margin-right:auto}
+.heroImg{max-height:440px;object-fit:contain}
+.transportImageGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px}
+.transportImageGrid .heroImg{height:250px;max-height:250px;object-fit:contain}
+.regionCard{padding:22px 0;border-bottom:1px solid var(--line);display:flow-root}
+.regionCard h3{margin-top:0}.regionLocation{font-size:13px;color:#64748b;margin:4px 0 12px}
+.regionPhoto{float:right;width:240px;max-width:42%;margin:0 0 12px 20px}
+.regionPhoto img{display:block;width:100%;height:145px;object-fit:contain;border-radius:12px;background:#f1f5f9}
+figcaption,.sourceNote{font-size:12px;line-height:1.7;color:#64748b}
+.regionPhoto figcaption{margin-top:6px}
+.universityLinks{clear:both;display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.universityLinks .btn{font-size:13px;padding:9px 12px}
+.districtMini{margin:8px 0 12px;max-width:300px}.districtMini img,.districtPair img{width:100%;display:block;height:auto}
+.districtPair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px;gap:16px}.districtPair figure{margin:0}
+h4{font-size:17px;color:#0f2a5a;margin:24px 0 8px;font-weight:900}
+.sourceNote a{text-decoration:underline}.sourceNote{overflow-wrap:anywhere}
+.weatherLabel{display:block;margin-top:12px}.weatherSelect{width:100%;max-width:340px;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:white}
+.weatherNow{border-radius:16px;padding:18px;margin-top:16px;background:#edf3ff;color:#0f2a5a}.weatherTemperature{font-size:36px;margin:4px 0;font-weight:900}
+.weatherStats{display:flex;flex-wrap:wrap;gap:16px}.weatherNow p{margin:6px 0}
+.climateChart svg{display:block;width:100%;height:auto}.climateLegend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px}.climateLegend span{border-left:12px solid;padding-left:6px}
+.climateTable{min-width:650px;font-size:13px}.climateTable caption{text-align:left;margin:12px 0;font-weight:900}
+@media(max-width:600px){.transportImageGrid{grid-template-columns:1fr}.transportImageGrid .heroImg{height:auto;max-height:280px}.regionPhoto{float:none;width:100%;max-width:300px;margin:12px auto}.regionPhoto img{height:170px}.districtPair{gap:8px}h2{font-size:22px}.simpleCard{padding:16px}.weatherTemperature{font-size:30px}}

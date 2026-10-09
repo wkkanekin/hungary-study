@@ -1,6 +1,10 @@
 name: X approved post
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'social/approved/*.json'
   workflow_dispatch:
     inputs:
       check_only:
@@ -31,20 +35,46 @@ concurrency:
 
 jobs:
   post:
-    if: ${{ inputs.check_only == true || inputs.approved == true }}
+    if: ${{ github.event_name == 'push' || inputs.check_only == true || inputs.approved == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install HTTP client
         run: python -m pip install requests==2.32.5
+      - name: Load approved post on push
+        if: ${{ github.event_name == 'push' }}
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, sys
+          changed = subprocess.check_output(
+              ['git', 'diff', '--name-only', '--diff-filter=A', os.environ['BEFORE_SHA'], os.environ['AFTER_SHA']],
+              text=True).splitlines()
+          candidates = [p for p in changed if p.startswith('social/approved/') and p.endswith('.json')]
+          if len(candidates) != 1:
+              sys.exit('One newly approved JSON file per commit is required.')
+          with open(candidates[0], encoding='utf-8') as f:
+              post = json.load(f)
+          if post.get('approved') is not True:
+              sys.exit('Approval is missing.')
+          if not post.get('text', '').strip() or not post.get('image_url', '').startswith('https://'):
+              sys.exit('Text and HTTPS image URL are required. No post was published.')
+          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as out:
+              for key, value in [('POST_TEXT', post['text']), ('IMAGE_URL', post['image_url']), ('CHECK_ONLY', 'false')]:
+                  delimiter = 'EOF_SOCIAL_' + key
+                  out.write(f'{key}<<{delimiter}\n{value}\n{delimiter}\n')
+          PY
       - name: Publish approved post to X
         env:
-          CHECK_ONLY: ${{ inputs.check_only }}
-          POST_TEXT: ${{ inputs.post_text }}
-          IMAGE_URL: ${{ inputs.image_url }}
+          CHECK_ONLY: ${{ github.event_name == 'push' && 'false' || inputs.check_only }}
+          POST_TEXT_INPUT: ${{ inputs.post_text }}
+          IMAGE_URL_INPUT: ${{ inputs.image_url }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_OAUTH2_CLIENT_ID: ${{ secrets.X_OAUTH2_CLIENT_ID }}
@@ -62,7 +92,7 @@ jobs:
                   sys.exit(f"{label}: HTTP {response.status_code}。Xの権限・クレジット・設定を確認してください。")
               return response.json()
 
-          text = os.environ.get("POST_TEXT", "").strip()
+          text = (os.environ.get("POST_TEXT") or os.environ.get("POST_TEXT_INPUT") or "").strip()
           check_only = os.environ.get("CHECK_ONLY") == "true"
           if not text and not check_only:
               sys.exit("投稿文が空です。")
@@ -72,7 +102,7 @@ jobs:
           if missing:
               sys.exit("GitHub Secretsに追加してください: " + ", ".join(missing))
 
-          image_url = os.environ.get("IMAGE_URL", "").strip()
+          image_url = (os.environ.get("IMAGE_URL") or os.environ.get("IMAGE_URL_INPUT") or "").strip()
           image_data = None
           if image_url and not check_only:
               parsed = urlparse(image_url)

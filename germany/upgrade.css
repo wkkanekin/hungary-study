@@ -18,3 +18,12 @@ body .container :is(h1,h2,h3,h4,strong,dt,th,label,summary,.btn){font-weight:900
 .comparisonPart{margin-bottom:14px}.comparisonPart h4{font-size:16px;color:#17345d;margin:0 0 6px}.comparisonPart ul{margin:0;padding-left:1.3em;line-height:1.8;font-size:14px}.comparisonPart li{margin:6px 0}.comparisonNote{font-size:12px;line-height:1.7;color:#48617f}
 .comparisonConclusion{background:#eef8f1;border-left:4px solid #2d8957;padding:18px;font-size:17px;line-height:1.8;color:#17345d}
 @media(min-width:1150px){.supportComparison{grid-template-columns:repeat(4,minmax(0,1fr))}.supportComparison .infoCard{padding:16px}.supportComparison h3{font-size:16px}}
+
+/* Photo directory: one verified image per listed university record. */
+#directoryList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#directoryList .directoryItem{min-width:0;margin:0;padding:18px;overflow:hidden}
+.directoryPhoto{margin:0 0 16px}.directoryItem .campusThumb{max-width:none;width:100%;aspect-ratio:16/10;margin:0 0 8px;background:#edf3f8}
+.directoryPhoto figcaption{font-size:12px;line-height:1.6;margin-bottom:6px}.directoryPhoto .campusCardCredit{display:block;overflow-wrap:anywhere}.directoryItem h3{overflow-wrap:anywhere;line-height:1.5}
+@media(max-width:760px){#directoryList{grid-template-columns:1fr;gap:16px}}
+
+.directoryItem .universityLogo{object-fit:contain;background:#fff;padding:30px;border:1px solid #e2e9f0}

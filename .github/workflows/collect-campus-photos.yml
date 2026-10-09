@@ -15,8 +15,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Collect public image metadata for review
-        run: python scripts/germany/collect_supplemental_photos.py
+      - name: Check directory image URLs
+        run: python scripts/germany/validate_campus_photos.py
       - name: Preserve public photo metadata as a review artifact
         uses: actions/upload-artifact@v4
         with:

@@ -3,9 +3,14 @@ name: X approved post
 on:
   workflow_dispatch:
     inputs:
+      check_only:
+        description: "接続確認だけ実行（Xには公開しません）"
+        required: true
+        default: true
+        type: boolean
       post_text:
         description: "確認済みの投稿文"
-        required: true
+        required: false
         type: string
       image_url:
         description: "画像のHTTPS URL（任意）"
@@ -26,7 +31,7 @@ concurrency:
 
 jobs:
   post:
-    if: ${{ inputs.approved == true }}
+    if: ${{ inputs.check_only == true || inputs.approved == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -37,6 +42,7 @@ jobs:
         run: python -m pip install requests==2.32.5
       - name: Publish approved post to X
         env:
+          CHECK_ONLY: ${{ inputs.check_only }}
           POST_TEXT: ${{ inputs.post_text }}
           IMAGE_URL: ${{ inputs.image_url }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
@@ -57,7 +63,8 @@ jobs:
               return response.json()
 
           text = os.environ.get("POST_TEXT", "").strip()
-          if not text:
+          check_only = os.environ.get("CHECK_ONLY") == "true"
+          if not text and not check_only:
               sys.exit("投稿文が空です。")
           names = ["X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET",
                    "X_OAUTH2_CLIENT_ID", "X_OAUTH2_CLIENT_SECRET"]
@@ -67,7 +74,7 @@ jobs:
 
           image_url = os.environ.get("IMAGE_URL", "").strip()
           image_data = None
-          if image_url:
+          if image_url and not check_only:
               parsed = urlparse(image_url)
               if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
                   sys.exit("画像にはHTTPS URLを指定してください。")
@@ -100,6 +107,13 @@ jobs:
           token = token_result["access_token"]
           print("::add-mask::" + token)
           headers = {"Authorization": "Bearer " + token}
+          if check_only:
+              scopes = set(token_result.get("scope", "").split())
+              required = {"tweet.write", "media.write"}
+              if not required.issubset(scopes):
+                  sys.exit("認証成功。ただし投稿・画像の権限不足: " + ", ".join(sorted(required - scopes)))
+              print("接続確認成功: 認証と投稿・画像の権限を確認しました。Xには公開していません。")
+              sys.exit(0)
           payload = {"text": text}
           if image_data is not None:
               uploaded = checked(requests.post(

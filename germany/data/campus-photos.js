@@ -20,7 +20,7 @@ window.GERMANY_CAMPUS_PHOTOS = {
   "u3": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/SchlossHohenheim_pan-pjt1.jpg/1280px-SchlossHohenheim_pan-pjt1.jpg",
     "caption": "Universität Hohenheim：校舎・キャンパス",
-    "author": "pjt56 --- If you use the picture outside Wikipedia I would appreciate a short e-mail to pjt56@gmx.net",
+    "author": "pjt56",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:SchlossHohenheim_pan-pjt1.jpg"
@@ -52,7 +52,7 @@ window.GERMANY_CAMPUS_PHOTOS = {
   "u7": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/ARENA2036-pjt.jpg/1280px-ARENA2036-pjt.jpg",
     "caption": "Universität Stuttgart：校舎・キャンパス",
-    "author": "Pjt56 --- If you use the picture outside Wikipedia I would appreciate a short e-mail to pjt56@gmx.net or a message on my discussion page",
+    "author": "Pjt56",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:ARENA2036-pjt.jpg"
@@ -272,7 +272,8 @@ window.GERMANY_CAMPUS_PHOTOS = {
     "author": "HK-THRO",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Campus_Burghausen_Aussenansicht_neue_Fassade_c,b-Bau_Frederik_Emmer.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Campus_Burghausen_Aussenansicht_neue_Fassade_c,b-Bau_Frederik_Emmer.jpg",
+    "displayCaption": "TH Rosenheim：Burghausenキャンパス"
   },
   "u35": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Fh-sw-n1.jpg",
@@ -280,7 +281,8 @@ window.GERMANY_CAMPUS_PHOTOS = {
     "author": "Thenktor",
     "license": "Public domain",
     "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-author",
-    "source": "https://commons.wikimedia.org/wiki/File:Fh-sw-n1.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Fh-sw-n1.jpg",
+    "displayCaption": "TH Würzburg-Schweinfurt：Schweinfurtの講義棟"
   },
   "u36": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/FU-Campus_FU_WiWi-u-JurFak.jpg",
@@ -687,7 +689,7 @@ window.GERMANY_CAMPUS_PHOTOS = {
   "u86": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/1/17/Hochschule_Wismar.jpg",
     "caption": "Hochschule Wismar：校舎・キャンパス",
-    "author": "Thomas Kohler from Waren (M�ritz), Deutschland",
+    "author": "Thomas Kohler",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "source": "https://commons.wikimedia.org/wiki/File:Hochschule_Wismar.jpg"
@@ -791,7 +793,7 @@ window.GERMANY_CAMPUS_PHOTOS = {
   "u99": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Hbk_braunschweig_bibliothek.jpg/1280px-Hbk_braunschweig_bibliothek.jpg",
     "caption": "Hochschule für Bildende Künste Braunschweig：校舎・キャンパス",
-    "author": "No machine-readable author provided. Mprinke assumed (based on copyright claims).",
+    "author": "Matthias Prinke (Mprinke)",
     "license": "CC BY-SA 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
     "source": "https://commons.wikimedia.org/wiki/File:Hbk_braunschweig_bibliothek.jpg"
@@ -986,7 +988,8 @@ window.GERMANY_CAMPUS_PHOTOS = {
     "author": "TeKaBe",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Hochschule_KL_Campus_ZW_Geb%C3%A4ude_H.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Hochschule_KL_Campus_ZW_Geb%C3%A4ude_H.jpg",
+    "displayCaption": "Hochschule Kaiserslautern：Zweibrückenキャンパス"
   },
   "u124": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Au%C3%9Fenbereich_RheinMoselCampus.jpg/1280px-Au%C3%9Fenbereich_RheinMoselCampus.jpg",
@@ -1155,7 +1158,8 @@ window.GERMANY_CAMPUS_PHOTOS = {
     "author": "Südstädter",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Hauptgeb%C3%A4ude_Rothenburger_Versicherung_G%C3%B6rlitz.JPG"
+    "source": "https://commons.wikimedia.org/wiki/File:Hauptgeb%C3%A4ude_Rothenburger_Versicherung_G%C3%B6rlitz.JPG",
+    "displayCaption": "Hochschule Zittau/Görlitz：Görlitzキャンパス"
   },
   "u145": {
     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Wests%C3%A4chsische_Hochschule_Zwickau%2C_Campus_Innenstadt.jpg/1280px-Wests%C3%A4chsische_Hochschule_Zwickau%2C_Campus_Innenstadt.jpg",
@@ -1240,7 +1244,7 @@ window.GERMANY_CAMPUS_PHOTOS = {
   "u155": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Koenigstrasse45.JPG",
     "caption": "Universität zu Lübeck：校舎・キャンパス",
-    "author": "No machine-readable author provided. Tic-hl~commonswiki assumed (based on copyright claims).",
+    "author": "Tic-hl~commonswiki",
     "license": "Public domain",
     "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-author",
     "source": "https://commons.wikimedia.org/wiki/File:Koenigstrasse45.JPG"

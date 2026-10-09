@@ -111,9 +111,11 @@ jobs:
               parsed = urlparse(image_url)
               if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
                   sys.exit("画像にはHTTPS URLを指定してください。")
-              with requests.get(image_url, timeout=30, stream=True, allow_redirects=False) as response:
+              with requests.get(image_url, timeout=30, stream=True, allow_redirects=True,
+                                headers={"User-Agent": "HungaryStudyLabSocial/1.0 (https://hungarystudy.org/; contact via website)",
+                                         "Accept": "image/avif,image/webp,image/png,image/jpeg,image/*;q=0.8"}) as response:
                   if response.status_code != 200:
-                      sys.exit("画像を取得できません。画像ファイルへの直接URLを指定してください。")
+                      sys.exit(f"画像取得失敗: HTTP {response.status_code} URL={response.url}")
                   if response.headers.get("Content-Type", "").split(";")[0].lower() not in [
                       "image/jpeg", "image/png", "image/webp", "image/gif"
                   ]:

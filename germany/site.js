@@ -46,7 +46,7 @@
       const body = ['ドイツ留学ラボ お問い合わせ','用件：'+purpose,'お名前：'+values.get('name'),'メール：'+values.get('email'),
         ...(type.value==='student'?['大学：'+values.get('university'),'学年・課程：'+values.get('year')]:[]),'本文：\n'+values.get('message')].join('\n');
       document.getElementById('contactPreview').value = body;
-      document.getElementById('contactMailDraft').href = 'mailto:'+recipient+'?subject='+encodeURIComponent('【ドイツ留学ラボ】'+purpose)+'&body='+encodeURIComponent(body);
+      document.getElementById('contactMailDraft').href = 'https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent('【ドイツ留学ラボ】'+purpose)+'&body='+encodeURIComponent(body);
       document.getElementById('contactResult').hidden = false;
       document.getElementById('contactResult').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});
     });

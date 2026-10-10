@@ -983,11 +983,12 @@
           </div>
 
           <div class="ctaRow">
-            <button class="btn primary" type="submit">メールアプリで開く</button>
+            <button class="btn primary" type="submit" data-mail-client="gmail">Gmailで開く</button>
+            <button class="btn" type="submit" data-mail-client="app">メールアプリで開く</button>
           </div>
 
           <div class="formHelp">
-            ※ 入力後、「メールアプリで開く」を押すと、端末に設定されたメールアプリの作成画面が開きます。内容を確認し、ご自身で送信してください。自動送信はされません。<br />
+            ※ PCでGmailをお使いの方は「Gmailで開く」を選んでください（Googleへのログインが必要です）。「メールアプリで開く」は、端末にメールアプリが設定されている場合に利用できます。開いた画面で内容を確認し、ご自身で送信してください。自動送信はされません。<br />
             ※ 返信が必要な内容に限りご連絡します。<br />
             ※ 返信が届かない場合は迷惑メールフォルダをご確認のうえ、info@hungarystudy.org からのメールを受信できるよう設定してください。
           </div>
@@ -1037,7 +1038,7 @@
     crossorigin=""
   ></script>
 
-  <script src="script.js?v=20261010-mailapp"></script>
+  <script src="script.js?v=20261010-mailchoice"></script>
   <script src="updates.js" defer></script>
 
   <script src="student-reviews.js"></script>

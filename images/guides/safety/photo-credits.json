@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-10-11",
+  "usage": "Article illustrations only; no endorsement, crime evidence or current safety claim. Resize/compression only.",
+  "assets": [
+    {
+      "path": "images/guides/safety/city-photo.webp",
+      "section": 1,
+      "photographer": "Benjamin Grull",
+      "source": "https://unsplash.com/photos/two-yellow-trams-next-to-road-UnBAJK5Llx4",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "caption": "ブダペストの交通・街並み。写真は2018年撮影で、現在の安全性を示すものではありません。"
+    },
+    {
+      "path": "images/guides/safety/compare-photo.webp",
+      "section": 2,
+      "photographer": "alleksana",
+      "source": "https://www.pexels.com/photo/laptop-and-notebook-on-a-desk-7670739/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "caption": "比較する前に、指標の対象年・地域・算出方法を確認しましょう（情報確認のイメージ写真）。"
+    },
+    {
+      "path": "images/guides/safety/belongings-photo.webp",
+      "section": 3,
+      "photographer": "Richard Cascaes Figueiredo",
+      "source": "https://www.pexels.com/photo/a-person-putting-smartphone-in-the-bag-9871631/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "caption": "手荷物を管理する場面イメージ。撮影地はブラジルで、犯罪被害の写真ではありません。"
+    },
+    {
+      "path": "images/guides/safety/housing-photo.webp",
+      "section": 4,
+      "photographer": "Atlantic Ambience",
+      "source": "https://www.pexels.com/photo/wooden-house-moder-keys-and-contract-on-table-12955837/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "caption": "住居契約を確認する場面イメージ。写真の契約書はハンガリーの契約書を示すものではありません。"
+    },
+    {
+      "path": "images/guides/safety/night-photo.webp",
+      "section": 4,
+      "photographer": "Richard Stachmann",
+      "source": "https://unsplash.com/photos/a-city-street-at-night-with-buildings-lit-up-b8lCiWNPN4U",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "caption": "夜のブダペストの街並み（2023年公開）。撮影場所が危険という意味ではありません。"
+    },
+    {
+      "path": "images/guides/safety/emergency-photo.webp",
+      "section": 5,
+      "photographer": "KATRIN BOLOVTSOVA",
+      "source": "https://www.pexels.com/photo/a-person-holding-a-smartphone-with-blank-screen-6373161/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "caption": "連絡手段を準備する場面イメージ。緊急時の番号は112です。"
+    },
+    {
+      "path": "images/guides/safety/summary-photo.webp",
+      "section": 6,
+      "photographer": "Erik Mclean",
+      "source": "https://www.pexels.com/photo/laptop-and-smartphone-on-a-bag-9379075/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "caption": "渡航前に持ち物と連絡手段を確認する場面イメージ。"
+    },
+    {
+      "path": "images/guides/safety/next-photo.webp",
+      "section": 7,
+      "photographer": "Lisa Fotios",
+      "source": "https://www.pexels.com/photo/laptop-computer-on-brown-wooden-desk-1263558/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "caption": "住居・通学・生活情報を調べる場面イメージ。"
+    }
+  ]
+}

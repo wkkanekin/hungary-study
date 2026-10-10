@@ -942,29 +942,13 @@
 
         <form id="contactForm" class="contactForm" autocomplete="on">
           <div class="field full">
-            <div class="contactLabel">用件（必須）</div>
-
-            <div class="radioGrid" role="radiogroup" aria-label="用件">
-              <label class="radioItem">
-                <input type="radio" name="inquiryType" value="pre" checked />
-                <span>志願者：相談前の質問</span>
-              </label>
-
-              <label class="radioItem">
-                <input type="radio" name="inquiryType" value="post" />
-                <span>志願者：相談後の連絡</span>
-              </label>
-
-              <label class="radioItem">
-                <input type="radio" name="inquiryType" value="student" />
-                <span>現役生：登録したい</span>
-              </label>
-
-              <label class="radioItem">
-                <input type="radio" name="inquiryType" value="partner" />
-                <span>提携・取材・運営</span>
-              </label>
-            </div>
+            <label for="inquiryType">用件（必須）</label>
+            <select id="inquiryType" name="inquiryType" required>
+              <option value="pre">志願者：相談前の質問</option>
+              <option value="post">志願者：相談後の連絡</option>
+              <option value="student">現役生：登録したい</option>
+              <option value="partner">提携・取材・運営</option>
+            </select>
           </div>
 
           <div class="formGrid">
@@ -999,15 +983,26 @@
           </div>
 
           <div class="ctaRow">
-            <button class="btn primary" type="submit">送信（メール下書きを作成）</button>
+            <button class="btn primary" type="submit">メール下書きの内容を確認する</button>
           </div>
 
           <div class="formHelp">
-            ※ 入力後、「送信」を押すとメールアプリが開き、下書きが作成されます。<br />
+            ※ 入力内容を確認してGmailの作成画面を開き、ご自身で送信してください。自動送信はされません。<br />
             ※ 返信が必要な内容に限りご連絡します。<br />
             ※ 返信が届かない場合は迷惑メールフォルダをご確認のうえ、info@hungarystudy.org からのメールを受信できるよう設定してください。
           </div>
         </form>
+        <div id="contactResult" class="contactNote" hidden>
+          <h3>メールの内容を確認してください</h3>
+          <p id="contactRecipient">送信先：info@hungarystudy.org</p>
+          <p id="contactSubject"></p>
+          <textarea id="contactPreview" rows="10" readonly aria-label="お問い合わせメールの内容"></textarea>
+          <div class="ctaRow">
+            <a id="contactMailDraft" class="btn primary" target="_blank" rel="noopener noreferrer">Gmailで下書きを開く</a>
+            <a id="contactMailApp" class="btn">メールアプリで開く</a>
+          </div>
+          <p class="formHelp">Gmailを利用するにはログインが必要です。開かない場合は、メールアプリで開くか、上記の宛先・件名・本文をコピーして送信してください。</p>
+        </div>
 
  </div>
       </div>
@@ -1052,7 +1047,7 @@
     crossorigin=""
   ></script>
 
-  <script src="script.js?v=20261010-lower-list-all"></script>
+  <script src="script.js?v=20261010-contact2"></script>
   <script src="updates.js" defer></script>
 
   <script src="student-reviews.js"></script>

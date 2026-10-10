@@ -1232,7 +1232,7 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  // ----------------------------
  function getInquiryType() {
  if (!contactForm) return "pre";
- const el = contactForm.querySelector('input[name="inquiryType"]:checked');
+ const el = contactForm.querySelector('select[name="inquiryType"]');
  return String(el?.value || "pre");
  }
 
@@ -1388,7 +1388,7 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  }
  }
 
- function buildContactMailto() {
+ function buildContactDraft() {
  const to = (contactForm?.dataset?.mailto || contactToEmail || "").trim();
 
  const type = getInquiryType();
@@ -1417,7 +1417,7 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  `用件：${typeLabel}`,
  "",
  `お名前：${name}`,
- `メール：${email}`,
+ `返信先メールアドレス：${email}`,
  ...(type === "student" ? [`大学名：${uni}`, `学年・課程：${year}`] : []),
  "",
  "本文：",
@@ -1427,20 +1427,22 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  ];
 
  const body = bodyLines.join("\n");
- return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+ return { to, subject, body };
  }
 
  function initContactForm() {
  if (!contactForm) return;
 
- const radios = Array.from(contactForm.querySelectorAll('input[name="inquiryType"]'));
- radios.forEach((r) => {
+ const inquiryControls = Array.from(contactForm.querySelectorAll('select[name="inquiryType"]'));
+ inquiryControls.forEach((r) => {
  r.addEventListener("change", () => {
  const type = getInquiryType();
  applyContactUiByType(type, false);
  });
  });
 
+ contactForm.addEventListener("input", () => { document.getElementById("contactResult").hidden = true; });
+ contactForm.addEventListener("change", () => { document.getElementById("contactResult").hidden = true; });
  applyContactUiByType(getInquiryType(), true);
 
  contactForm.addEventListener("submit", (e) => {
@@ -1489,7 +1491,16 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  return;
  }
 
- window.location.href = buildContactMailto();
+ const draft = buildContactDraft();
+ const query = `view=cm&fs=1&tf=1&to=${encodeURIComponent(draft.to)}&su=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
+ document.getElementById("contactPreview").value = draft.body;
+ document.getElementById("contactRecipient").textContent = `送信先：${draft.to}`;
+ document.getElementById("contactSubject").textContent = `件名：${draft.subject}`;
+ document.getElementById("contactMailDraft").href = `https://mail.google.com/mail/u/0/?${query}`;
+ document.getElementById("contactMailApp").href = `mailto:${draft.to}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
+ const result = document.getElementById("contactResult");
+ result.hidden = false;
+ result.scrollIntoView({ behavior: "smooth", block: "center" });
  });
  }
 

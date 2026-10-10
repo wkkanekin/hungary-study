@@ -47,6 +47,11 @@ jobs:
         run: |
           python collect_cost_compare_numbeo.py
 
+      - name: Rebuild readable cost comparison table
+        run: |
+          python scripts/build_cost_compare.py
+          python scripts/build_cost_compare.py --check
+
       # ----------------------------
       # Commit & Push
       # ----------------------------
@@ -55,7 +60,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add prices.json rankings.json subject-rankings.json cost_compare_numbeo.json
+          git add prices.json rankings.json subject-rankings.json cost_compare_numbeo.json guide-hungary-cost-compare.html
 
           git diff --cached --quiet || git commit -m "Auto update prices, rankings and cost comparison"
 

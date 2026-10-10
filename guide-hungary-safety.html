@@ -4,19 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>日本と比べてハンガリーは安全？治安をデータで比較 | Guide | ハンガリー留学ラボ</title>
+  <title>ハンガリーの治安｜日本との比較と留学生が注意したいこと</title>
 
-  <meta
-    name="description"
-    content="ハンガリーの治安は安全なのか？日本・世界平均と比較しながら、犯罪データとランキングでわかりやすく解説します。"
-  />
+  <meta name="description" content="ハンガリー・ブダペストの治安を公的な安全情報で確認。スリ・置引き・住居契約の注意点、日本との比較に使う指標の限界、緊急時の連絡先を紹介します。" />
 
   <link rel="stylesheet" href="guide-article.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <link id="dynamicFavicon" rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=20261004-1">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=20261004-1">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=20261004-1">
+<meta property="og:title" content="ハンガリーの治安｜日本との比較と留学生が注意したいこと" />
+<meta property="og:description" content="ハンガリー・ブダペストの治安を公的な安全情報で確認。スリ・置引き・住居契約の注意点、日本との比較に使う指標の限界、緊急時の連絡先を紹介します。" />
+<meta property="og:site_name" content="ハンガリー留学ラボ" />
+<meta property="og:url" content="https://hungarystudy.org/guide-hungary-safety.html" />
+<meta name="twitter:title" content="ハンガリーの治安｜日本との比較と留学生が注意したいこと" />
+<meta name="twitter:description" content="ハンガリー・ブダペストの治安を公的な安全情報で確認。スリ・置引き・住居契約の注意点、日本との比較に使う指標の限界、緊急時の連絡先を紹介します。" />
+<link rel="canonical" href="https://hungarystudy.org/guide-hungary-safety.html" />
+<link rel="stylesheet" href="seo-navigation.css?v=20261011" />
 </head>
 
 <body>
@@ -42,15 +47,9 @@
             <time datetime="2026-04-14">2026-04-14</time>
           </div>
 
-          <h1 class="articleTitle">
-            日本と比べてハンガリーは安全？治安をデータで比較
-          </h1>
+          <h1 class="articleTitle">ハンガリーの治安と留学生活の注意点</h1>
 
-          <p class="articleLead">
-            ハンガリー留学を考える際に気になるのが治安です。
-            本記事では、日本・ハンガリー・世界平均を比較し、
-            客観的なデータをもとに実際の安全性をわかりやすく解説します。
-          </p>
+          <p class="articleLead">公的な安全情報をもとに、窃盗・住居契約・夜間移動の注意点を整理します。国の平和指数と街の犯罪指標の違い、緊急時の連絡先も確認できます。</p><p class="seo-data-note">記事更新：2026年10月11日</p>
         </div>
       </header>
 
@@ -59,136 +58,22 @@
         <!-- 本文 -->
         <main class="articleMain card">
           <div class="articleBody">
-
-            <section>
-              <p>
-                結論から言うと、ハンガリーは日本ほど安全ではありませんが、
-                世界的に見れば十分に安全な国です。
-              </p>
-
-              <div class="infoBox">
-                <h3 class="infoBoxTitle">結論</h3>
-                <p>
-                  ハンガリーは「日本ほど無防備には歩けない」が、
-                  「危険な国ではない」。世界平均より明らかに安全な位置にあります。
-                </p>
-              </div>
-            </section>
-
-            <!-- GPI -->
-            <section>
-              <h2>① 国としての安全性（世界ランキング）</h2>
-
-              <p>
-                Global Peace Indexでは、日本とハンガリーはいずれも上位に位置しています。
-              </p>
-
-              <canvas id="gpiChart"></canvas>
-
-              <p>
-                世界平均と比較すると、日本とハンガリーはどちらも安全な側に位置しており、
-                ハンガリーは「世界的には安全な国」であることが分かります。
-              </p>
-            </section>
-
-            <!-- Crime -->
-            <section>
-              <h2>② 都市レベルの犯罪（東京 vs ブダペスト）</h2>
-
-              <canvas id="crimeChart"></canvas>
-
-              <p>
-                東京は世界でもトップクラスに安全ですが、
-                ブダペストも世界平均より低く、安全な都市に分類されます。
-              </p>
-            </section>
-
-            <!-- Safety -->
-            <section>
-              <h2>③ 体感的な安全性（Safety Index）</h2>
-
-              <canvas id="safetyChart"></canvas>
-
-              <p>
-                Safety Indexでも、ハンガリーは世界平均より高く、
-                日常生活において安心できる水準です。
-              </p>
-            </section>
-
-            <!-- 違い -->
-            <section>
-              <h2>④ 日本との違い</h2>
-
-              <ul>
-                <li>日本：スリはほぼ存在しない</li>
-                <li>ハンガリー：観光地でスリに注意</li>
-              </ul>
-
-              <p>
-                つまり「危険」ではなく、
-                <strong>日本より少し注意が必要なだけ</strong>です。
-              </p>
-            </section>
-
-            <!-- ホームレス -->
-            <section>
-              <h2>⑤ ホームレスが多く見える理由</h2>
-
-              <p>
-                ハンガリーではホームレスの方が街中で見えることがありますが、
-                これは欧州では路上にいるケースが多いためです。
-              </p>
-
-              <p>
-                日本では見えにくいだけであり、（実際にはネットフェなど）
-                治安の悪さとは直接関係ありません。
-              </p>
-            </section>
-
-            <!-- 対策 -->
-            <section>
-              <h2>⑥ 実際に気をつけること</h2>
-
-              <ul>
-                <li>バッグは前に持つ</li>
-                <li>スマホを出しっぱなしにしない</li>
-                <li>混雑した場所で注意する</li>
-              </ul>
-
-              <p>
-                基本的な対策をすれば、問題なく生活できます。
-              </p>
-            </section>
-
-            <!-- まとめ -->
-            <section>
-              <h2>まとめ</h2>
-
-              <ul>
-                <li>ハンガリーは世界的に安全な国</li>
-                <li>日本は特別に安全</li>
-                <li>世界平均よりハンガリーは明らかに安全</li>
-              </ul>
-
-              <p>
-                <strong>
-                  ハンガリーは「世界基準ではかなり安全な留学先」
-                </strong>
-              </p>
-            </section>
-
-          </div>
-        </main>
+<details class="seo-toc"><summary>この記事の目次</summary><nav aria-label="この記事の目次"><ol><li><a href="#seo-section-1">ハンガリーの治安を判断する前に</a></li><li><a href="#seo-section-2">日本との比較｜平和指数と犯罪指標の違い</a></li><li><a href="#seo-section-3">スリ・置引きで気をつけたい場面</a></li><li><a href="#seo-section-4">住居契約・夜間移動の確認ポイント</a></li><li><a href="#seo-section-5">緊急時の連絡先と最新情報</a></li><li><a href="#seo-section-6">まとめ</a></li><li><a href="#seo-section-7">次に読みたい留学ガイド</a></li></ol></nav></details>
+<img src="images/guides/hungary-safety.jpg" alt="ハンガリーの街並み" class="seo-hero-image" loading="lazy" />
+<section><h2 id="seo-section-1">ハンガリーの治安を判断する前に</h2><p>国全体の順位だけでは、通学経路や住居周辺の安全性は判断できません。留学生は、公的な安全情報と実際に生活する場所の状況を合わせて確認しましょう。</p><div class="infoBox"><p>外務省のハンガリー安全対策基礎データでは、日本国大使館への犯罪被害連絡は窃盗被害が中心と説明されています。スリ・置引き、住居契約など、身近な場面への備えが必要です。</p><p><a href="https://www.anzen.mofa.go.jp/info/pcsafetymeasure_168.html" target="_blank" rel="noopener">外務省：ハンガリーの安全対策基礎データ</a>（確認：2026年10月11日）</p></div></section>
+<section><h2 id="seo-section-2">日本との比較｜平和指数と犯罪指標の違い</h2><p>Global Peace Index（世界平和指数）は、社会の安全、紛争、軍事化などを評価する指標です。スリの発生件数や、個別の街区の安全性を直接示すものではありません。<a href="https://www.visionofhumanity.org/maps/">Global Peace Indexの公式情報</a>で対象年と評価内容を確認してください。</p><div class="tableWrap"><table><caption>Global Peace Index 2026の日本・ハンガリー比較</caption><thead><tr><th scope="col">国</th><th scope="col">総合順位</th><th scope="col">スコア</th></tr></thead><tbody><tr><th scope="row">日本</th><td>10位</td><td>1.489</td></tr><tr><th scope="row">ハンガリー</th><td>15位</td><td>1.538</td></tr></tbody></table></div><p class="seo-data-note">スコアは小さいほど平和度が高い指標です。両国の順位は国全体の比較で、窃盗の発生率や特定の場所の安全性を示しません。出典：<a href="https://www.visionofhumanity.org/wp-content/uploads/2026/06/Global-Peace-Index-2026-A3-map-poster.pdf">IEP公式・Global Peace Index 2026順位表（PDF）</a>。確認：2026年10月11日。</p><p>NumbeoのCrime Index・Safety Indexは利用者の回答に基づく指標で、公的な犯罪発生率とは異なります。<a href="https://www.numbeo.com/crime/indices_explained.jsp">Numbeoの算出方法</a>も確認し、国と都市、年次、指標の意味をそろえて比較する必要があります。</p><p>国の指標と個別の場所の安全性は別です。住居周辺や通学経路の情報も合わせて判断しましょう。</p></section>
+<section><h2 id="seo-section-3">スリ・置引きで気をつけたい場面</h2><p>外務省は公共交通機関、駅、観光地などでのスリや置引きへの注意を案内しています。財布・旅券・スマートフォンを一か所にまとめず、荷物から目を離さないようにしましょう。</p><ul><li>混雑した車内や乗降時は、バッグの口と貴重品を確認する。</li><li>レストランやカフェでは、椅子の背や床に置いたバッグを放置しない。</li><li>知らない人に声をかけられたときも、手荷物と周囲に注意する。</li></ul><p>対策をしても被害を完全には防げません。旅券やカードを失った場合の連絡先も、渡航前に確認してください。</p></section>
+<section><h2 id="seo-section-4">住居契約・夜間移動の確認ポイント</h2><p>外務省は、SNSの物件情報を見て相手や実物を確認せず送金した後、連絡が取れなくなる契約詐欺も紹介しています。契約相手・物件・契約条件を確認してから支払いを検討しましょう。</p><p>住居を選ぶときは区番号だけで決めず、大学までの通学経路、夜の交通、建物の入口、周辺の様子を確認します。<a href="guide-budapest-districts.html">ブダペスト23区の地図と住むエリアの選び方</a>、<a href="column-kaneko-rental-trouble.html">筆者の住居トラブル体験</a>も判断材料にしてください。体験談は一例で、地域全体の傾向を示す統計ではありません。</p></section>
+<section><h2 id="seo-section-5">緊急時の連絡先と最新情報</h2><p>犯罪・事故・火災など緊急の助けが必要なときは<strong>112</strong>へ。ハンガリー警察も、緊急事案はメールではなく112への通報などを案内しています。<a href="https://www.police.hu/en/ugyintezes/mit-tegyek" target="_blank" rel="noopener">ハンガリー警察：緊急時の案内</a></p><p>大使館の連絡先と安全情報は、<a href="https://www.hu.emb-japan.go.jp/itprtop_ja/index.html" target="_blank" rel="noopener">在ハンガリー日本国大使館</a>、<a href="https://www.anzen.mofa.go.jp/info/pcsafetymeasure_168.html">外務省の安全対策基礎データ</a>で確認してください。</p></section>
+<section><h2 id="seo-section-6">まとめ</h2><p>ハンガリー留学の治安は、国全体の順位だけで判断せず、公的情報と生活する地域の状況を確認しましょう。窃盗や契約トラブルへの備えと、緊急連絡先の確認が大切です。</p></section><section class="seo-related"><h2 id="seo-section-7">次に読みたい留学ガイド</h2><ul><li><a href="basics-hungary.html">ハンガリーの物価・交通・英語・住居の基本情報</a></li><li><a href="guide-budapest-districts.html">ブダペストの地区と通学を比較する</a></li></ul></section>
+</div>
+</main>
 
         <!-- サイド -->
         <aside class="articleSide">
           <div class="sideCard card">
             <h2 class="sideTitle">この記事の要点</h2>
-            <ul class="sideList">
-              <li>ハンガリーは世界平均より安全</li>
-              <li>日本より少し注意が必要</li>
-              <li>主なリスクはスリ</li>
-            </ul>
+            <ul class="sideList"><li>公的な安全情報を確認する</li><li>スリ・置引き・契約詐欺に備える</li><li>緊急通報は112</li></ul>
           </div>
 
           <div class="sideCard card">
@@ -205,43 +90,7 @@
 
   </div>
 
-<script>
-// GPI
-new Chart(document.getElementById("gpiChart"), {
-  type: "bar",
-  data: {
-    labels: ["日本", "ハンガリー", "世界平均"],
-    datasets: [{
-      label: "GPIスコア（低いほど安全）",
-      data: [1.44, 1.50, 2.3]
-    }]
-  }
-});
 
-// Crime
-new Chart(document.getElementById("crimeChart"), {
-  type: "bar",
-  data: {
-    labels: ["東京", "ブダペスト", "世界平均"],
-    datasets: [{
-      label: "Crime Index",
-      data: [25.1, 33.9, 47]
-    }]
-  }
-});
-
-// Safety
-new Chart(document.getElementById("safetyChart"), {
-  type: "bar",
-  data: {
-    labels: ["東京", "ブダペスト", "世界平均"],
-    datasets: [{
-      label: "Safety Index",
-      data: [74.9, 66.1, 53]
-    }]
-  }
-});
-</script>
 
 </body>
 </html>

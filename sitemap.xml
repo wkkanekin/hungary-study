@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://hungarystudy.org/</loc>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://hungarystudy.org/guide-university-ranking.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/basics-hungary.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/basics-scholarship.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/basics-university.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/guide-hungary-cost-compare.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/guide-hungary-safety.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/guide-hungary-d-visa.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/guide-budapest-districts.html</loc><lastmod>2026-10-11</lastmod></url>
+  <url><loc>https://hungarystudy.org/guide-study-abroad-japan.html</loc><lastmod>2026-10-11</lastmod></url>
 </urlset>

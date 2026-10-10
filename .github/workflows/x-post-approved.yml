@@ -72,8 +72,10 @@ jobs:
               post = json.load(f)
           if post.get('approved') is not True:
               sys.exit('Approval is missing.')
-          if not post.get('text', '').strip() or not post.get('image_url', '').startswith('https://'):
-              sys.exit('Text and licensed HTTPS image URL are required. No post was published.')
+          if not post.get('text', '').strip():
+              sys.exit('Text is required. No post was published.')
+          if post.get('image_url') and not post['image_url'].startswith('https://'):
+              sys.exit('Image URL must be HTTPS.')
           with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as out:
               for key, value in [('POST_TEXT', post['text']), ('IMAGE_URL', post.get('image_url', '')), ('APPROVED_FILE', candidates[0]), ('CHECK_ONLY', 'false')]:
                   delimiter = 'EOF_SOCIAL_' + key

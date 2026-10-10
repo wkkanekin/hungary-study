@@ -1490,12 +1490,8 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  }
 
  const draft = buildContactDraft();
- if (e.submitter?.dataset.mailClient === "app") {
- window.location.href = `mailto:${draft.to}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
- } else {
  const gmailUrl = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${encodeURIComponent(draft.to)}&su=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
  window.location.href = `https://accounts.google.com/AccountChooser?service=mail&continue=${encodeURIComponent(gmailUrl)}`;
- }
  });
  }
 

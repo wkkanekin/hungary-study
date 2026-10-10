@@ -45,12 +45,8 @@
       const body = ['ドイツ留学ラボ お問い合わせ','用件：'+purpose,'お名前：'+values.get('name'),'返信先メールアドレス：'+values.get('email'),
         ...(type.value==='student'?['大学：'+values.get('university'),'学年・課程：'+values.get('year')]:[]),'本文：\n'+values.get('message')].join('\n');
       const subject = '【ドイツ留学ラボ】'+purpose;
-      if (event.submitter?.dataset.mailClient === 'app') {
-        window.location.href = 'mailto:'+recipient+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      } else {
         const gmailUrl = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
         window.location.href = 'https://accounts.google.com/AccountChooser?service=mail&continue='+encodeURIComponent(gmailUrl);
-      }
     });
   }
   const bookingPanel = document.getElementById('bookingPanel');

@@ -50,7 +50,8 @@
       document.getElementById('contactPreview').value = body;
       const subject = '【ドイツ留学ラボ】'+purpose;
       document.getElementById('contactSubject').textContent = '件名：'+subject;
-      document.getElementById('contactMailDraft').href = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      const gmailUrl = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      document.getElementById('contactMailDraft').href = 'https://accounts.google.com/AccountChooser?service=mail&continue='+encodeURIComponent(gmailUrl);
       document.getElementById('contactMailApp').href = 'mailto:'+recipient+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
       document.getElementById('contactResult').hidden = false;
       document.getElementById('contactResult').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});

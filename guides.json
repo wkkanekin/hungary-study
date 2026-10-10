@@ -169,26 +169,13 @@
     "thumbnail": "images/guides/hungary-university-cost-detail.jpg"
   },
   {
-    "id": "hungary-monthly-living-cost",
-    "enabled": true,
-    "featured": true,
-    "homePick": true,
-    "comingSoon": false,
-    "title": "ハンガリー留学の生活費｜家賃・都市比較・交通費",
-    "description": "家賃・都市による違い・食費・学生の交通費を整理。円の目安と月額予算の計算例から、留学費用を考えます。",
-    "category": "生活情報",
-    "url": "guide-hungary-cost.html",
-    "date": "2026-04-05",
-    "thumbnail": "images/guides/hungary-monthly-living-cost.jpg"
-  },
-  {
     "id": "hungary-cost-compare",
     "enabled": true,
     "featured": true,
     "homePick": true,
     "comingSoon": false,
     "title": "ハンガリー vs 日本｜主要都市の物価比較",
-    "description": "ブダペスト・ペーチ・デブレツェン・セゲドと東京・大阪・福岡の生活費、家賃、外食価格をグラフで比較し、都市選びでどれくらい差が出るかを整理します。",
+    "description": "ブダペスト・ペーチ・デブレツェン・セゲドと東京・大阪の生活費・家賃・外食の価格指数を比較。取得日と指数の読み方も確認できます。",
     "category": "費用",
     "url": "guide-hungary-cost-compare.html",
     "date": "2026-04-12",

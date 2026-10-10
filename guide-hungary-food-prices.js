@@ -5,6 +5,8 @@
   const labels = {"milk": ["牛乳（ESL・脂肪分2.8%）", "1 L"], "eggs_10": ["卵", "10個"], "chicken": ["鶏胸肉（フィレ）", "1 kg"], "pasta": ["卵入りスパゲッティ", "400–500 g"], "bread": ["白パン", "1 kg"], "tomato": ["トマト", "1 kg"], "banana": ["バナナ", "1 kg"], "cheese": ["トラピスト系チーズ", "1 kg"], "yoghurt": ["フルーツヨーグルト", "125–150 g"], "onion": ["玉ねぎ（データ表記：red onions）", "1 kg"], "potato": ["じゃがいも（新じゃがを除く区分）", "1 kg"], "cucumber": ["きゅうり", "1 kg"], "apple": ["りんご", "1 kg"], "oil": ["ひまわり油", "1 L"], "flour": ["小麦粉", "1 kg"], "rice": ["米（データ表記：unpolished）", "1 kg"]};
   const expectedUnits = Object.fromEntries(fallback.items.map(item => [item.id,item.ksh_unit]));
   const el = id => document.getElementById(id);
+  // ECB reference rates, 2026-10-09: 1 EUR = 177.34 JPY / 365.08 HUF.
+  const jpyPerHuf = 177.34 / 365.08;
   const nf = new Intl.NumberFormat("ja-JP", {maximumFractionDigits:0});
   const isPrice = item => item && item.status === "ok" && typeof item.price_huf === "number" && Number.isFinite(item.price_huf) && item.price_huf > 0;
   function monthText(value) {
@@ -33,7 +35,13 @@
       const unitKnown=expectedUnits[item.id] === item.ksh_unit;
       span.append(cell("span",unitKnown ? labels[item.id]?.[0] || item.label_ja || item.id : item.label_ja || item.id)); th.append(span); tr.append(th);
       tr.append(cell("td", unitKnown ? labels[item.id]?.[1] || item.ksh_unit : item.ksh_unit || "単位不明"));
-      const price=cell("td",isPrice(item) ? `${nf.format(item.price_huf)} Ft` : "取得できません"); price.className="pg-number"; tr.append(price); tbody.append(tr);
+      const price=cell("td",isPrice(item) ? `${nf.format(item.price_huf)} Ft` : "取得できません"); price.className="pg-number";
+      if (isPrice(item)) {
+        const yen = Math.round(item.price_huf * jpyPerHuf / 10) * 10;
+        const yenLabel = cell("span", `（約${nf.format(yen)}円）`);
+        yenLabel.className = "pg-jpy"; price.append(yenLabel);
+      }
+      tr.append(price); tbody.append(tr);
     }
     const fetched=String(data.updated_at || "").slice(0,10);
     el("pg-meta").textContent=`統計対象：${monthText(data.ksh_latest_month)} ／ データ取得：${fetched || "不明"} ／ KSH全国平均`;

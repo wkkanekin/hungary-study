@@ -115,7 +115,7 @@ def replace_block(text,name,content):
 def selection_summary(data):
     entries=[u for u in data['universities'] if u.get('detail_url')]
     rows=''.join(f'<tr><th scope="row"><a href="{esc(u["detail_url"])}">{esc(u["name_ja"])}の大学紹介・出願条件</a></th><td>{esc(u["city"])}</td></tr>' for u in entries)
-    return f'<div class="rk-component"><p>大学紹介のある主な大学です。英語課程・入試・学費は大学紹介と公式のプログラム情報で確認してください。この一覧は大学の優劣や入試難易度を示すものではありません。</p><div class="rk-table-wrap"><table class="rk-table"><caption>大学紹介と所在地</caption><thead><tr><th scope="col">大学紹介・出願条件</th><th scope="col">都市</th></tr></thead><tbody>{rows}</tbody></table></div><p><a href="guide-university-ranking.html">国家認定高等教育機関の一覧とQS・THE・ARWUの総合・分野別ランキングを見る</a></p></div>'
+    return f'<div class="rk-component uni-selection"><p>大学紹介のある主な大学です。英語課程・入試・学費は大学紹介と公式のプログラム情報で確認してください。この一覧は大学の優劣や入試難易度を示すものではありません。</p><div class="rk-table-wrap"><table class="rk-table"><caption>大学紹介と所在地</caption><thead><tr><th scope="col">大学紹介・出願条件</th><th scope="col">都市</th></tr></thead><tbody>{rows}</tbody></table></div><p><a href="guide-university-ranking.html">国家認定高等教育機関の一覧とQS・THE・ARWUの総合・分野別ランキングを見る</a></p></div>'
 
 def build(data,check=False):
     validate(data);outputs={}

@@ -31,12 +31,9 @@
       const student = type.value === 'student';
       document.getElementById('studentContactFields').hidden = !student;
       uni.required = year.required = student;
-      document.getElementById('contactResult').hidden = true;
       document.getElementById('contactNote').textContent = student ? '大学・課程・相談できるテーマをお知らせください。登録条件や掲載内容は運営と確認します。' : 'サービスや運営へのお問い合わせ用です。相談の予約・申込は各サービスの案内からお願いします。';
     }
     type.addEventListener('change',updateType); updateType();
-    contact.addEventListener('input',()=>{document.getElementById('contactResult').hidden = true;});
-    contact.addEventListener('change',()=>{document.getElementById('contactResult').hidden = true;});
     document.querySelectorAll('[data-contact-student]').forEach(a=>a.addEventListener('click',()=>{
       type.value = 'student'; updateType();
       if (a.closest('#studentRecruitment')) uni.value = document.getElementById('studentRecruitment').dataset.university || '';
@@ -47,14 +44,8 @@
       const purpose = type.options[type.selectedIndex].text;
       const body = ['ドイツ留学ラボ お問い合わせ','用件：'+purpose,'お名前：'+values.get('name'),'返信先メールアドレス：'+values.get('email'),
         ...(type.value==='student'?['大学：'+values.get('university'),'学年・課程：'+values.get('year')]:[]),'本文：\n'+values.get('message')].join('\n');
-      document.getElementById('contactPreview').value = body;
       const subject = '【ドイツ留学ラボ】'+purpose;
-      document.getElementById('contactSubject').textContent = '件名：'+subject;
-      const gmailUrl = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      document.getElementById('contactMailDraft').href = 'https://accounts.google.com/AccountChooser?service=mail&continue='+encodeURIComponent(gmailUrl);
-      document.getElementById('contactMailApp').href = 'mailto:'+recipient+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      document.getElementById('contactResult').hidden = false;
-      document.getElementById('contactResult').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});
+      window.location.href = 'mailto:'+recipient+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     });
   }
   const bookingPanel = document.getElementById('bookingPanel');

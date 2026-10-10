@@ -983,26 +983,16 @@
           </div>
 
           <div class="ctaRow">
-            <button class="btn primary" type="submit">メール下書きの内容を確認する</button>
+            <button class="btn primary" type="submit">メールアプリで開く</button>
           </div>
 
           <div class="formHelp">
-            ※ 入力内容を確認してGmailの作成画面を開き、ご自身で送信してください。自動送信はされません。<br />
+            ※ 入力後、「メールアプリで開く」を押すと、端末に設定されたメールアプリの作成画面が開きます。内容を確認し、ご自身で送信してください。自動送信はされません。<br />
             ※ 返信が必要な内容に限りご連絡します。<br />
             ※ 返信が届かない場合は迷惑メールフォルダをご確認のうえ、info@hungarystudy.org からのメールを受信できるよう設定してください。
           </div>
         </form>
-        <div id="contactResult" class="contactNote" hidden>
-          <h3>メールの内容を確認してください</h3>
-          <p id="contactRecipient">送信先：info@hungarystudy.org</p>
-          <p id="contactSubject"></p>
-          <textarea id="contactPreview" rows="10" readonly aria-label="お問い合わせメールの内容"></textarea>
-          <div class="ctaRow">
-            <a id="contactMailDraft" class="btn primary" target="_blank" rel="noopener noreferrer">Gmailで下書きを開く</a>
-            <a id="contactMailApp" class="btn">メールアプリで開く</a>
-          </div>
-          <p class="formHelp">Gmailを利用するにはログインが必要です。開かない場合は、メールアプリで開くか、上記の宛先・件名・本文をコピーして送信してください。</p>
-        </div>
+
 
  </div>
       </div>
@@ -1047,7 +1037,7 @@
     crossorigin=""
   ></script>
 
-  <script src="script.js?v=20261010-contact3"></script>
+  <script src="script.js?v=20261010-mailapp"></script>
   <script src="updates.js" defer></script>
 
   <script src="student-reviews.js"></script>

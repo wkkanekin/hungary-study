@@ -1441,8 +1441,6 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  });
  });
 
- contactForm.addEventListener("input", () => { document.getElementById("contactResult").hidden = true; });
- contactForm.addEventListener("change", () => { document.getElementById("contactResult").hidden = true; });
  applyContactUiByType(getInquiryType(), true);
 
  contactForm.addEventListener("submit", (e) => {
@@ -1492,16 +1490,7 @@ setHitLabel(`全学生：${enabledStudents.length}名`);
  }
 
  const draft = buildContactDraft();
- const query = `view=cm&fs=1&tf=1&to=${encodeURIComponent(draft.to)}&su=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
- document.getElementById("contactPreview").value = draft.body;
- document.getElementById("contactRecipient").textContent = `送信先：${draft.to}`;
- document.getElementById("contactSubject").textContent = `件名：${draft.subject}`;
- const gmailUrl = `https://mail.google.com/mail/u/0/?${query}`;
- document.getElementById("contactMailDraft").href = `https://accounts.google.com/AccountChooser?service=mail&continue=${encodeURIComponent(gmailUrl)}`;
- document.getElementById("contactMailApp").href = `mailto:${draft.to}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
- const result = document.getElementById("contactResult");
- result.hidden = false;
- result.scrollIntoView({ behavior: "smooth", block: "center" });
+ window.location.href = `mailto:${draft.to}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
  });
  }
 

@@ -1,7 +1,5 @@
 {
-  "attemptedOn": "2026-10-09",
-  "errors": [
-    "news: 403 Client Error: Forbidden for url: https://www.daad.jp/ja/news/"
-  ],
+  "attemptedOn": "2026-10-10",
+  "errors": [],
   "message": "取得失敗時は直前の確認済みデータを維持します。"
 }

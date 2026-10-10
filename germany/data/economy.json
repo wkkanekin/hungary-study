@@ -7,7 +7,7 @@
       "unit": "EUR/年",
       "period": "2024",
       "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_fte?geo=DE&unit=EUR&sinceTimePeriod=2022&lang=EN",
-      "checkedOn": "2026-10-09",
+      "checkedOn": "2026-10-10",
       "note": "Eurostat。学生アルバイトの時給や手取りではありません。"
     },
     {
@@ -17,7 +17,7 @@
       "unit": "JPY",
       "period": "2026-10-09",
       "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
-      "checkedOn": "2026-10-09",
+      "checkedOn": "2026-10-10",
       "note": "ECB参考レート。送金時の適用レートや手数料とは異なります。"
     },
     {
@@ -37,7 +37,7 @@
       "unit": "%",
       "period": "2026-09",
       "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?geo=DE&unit=RCH_A&coicop18=TOTAL&sinceTimePeriod=2025-01&lang=EN",
-      "checkedOn": "2026-10-09",
+      "checkedOn": "2026-10-10",
       "note": "Eurostat HICP。総合指数の前年同月比。 速報・推計値を含みます。"
     },
     {
@@ -47,9 +47,9 @@
       "unit": "EUR/月",
       "period": "2026-S2",
       "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?geo=DE&currency=EUR&sinceTimePeriod=2025-S1&lang=EN",
-      "checkedOn": "2026-10-09",
+      "checkedOn": "2026-10-10",
       "note": "Eurostatによる月額換算。ドイツの法定時給そのものとは別の指標です。"
     }
   ],
-  "lastAttempt": "2026-10-09"
+  "lastAttempt": "2026-10-10"
 }

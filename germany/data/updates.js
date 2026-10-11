@@ -50,7 +50,7 @@ window.GERMANY_UPDATES = [
   },
   {
     "title": "オスナブリュック大学のガイド",
-    "date": "2026-10-09",
+    "date": "2026-10-11",
     "url": "guide-osnabrueck.html",
     "category": "大学ガイド",
     "enabled": true

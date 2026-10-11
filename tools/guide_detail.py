@@ -10,7 +10,7 @@ def table(headers,rows,caption):
  return '<div class="guideTableWrap" role="region" aria-label="'+e(caption)+'" tabindex="0"><table class="guideTable"><caption>'+e(caption)+'</caption><thead><tr>'+''.join('<th scope="col">'+e(h)+'</th>' for h in headers)+'</tr></thead><tbody>'+''.join('<tr>'+''.join(('<th scope="row">' if i==0 else '<td>')+e(v)+('</th>' if i==0 else '</td>') for i,v in enumerate(row))+'</tr>' for row in rows)+'</tbody></table></div>'
 def sources(items):return '<p class="guideSources">出典：'+ ' / '.join(link(url,label) for label,url in items)+'</p>'
 def photo(p):
- return '<figure class="campusPhoto"><img src="'+e(p['src'])+'" alt="'+e(p['caption'])+'" width="1200" height="800" decoding="async"/><figcaption>'+e(p['caption'])+'<br/>写真：'+e(p['author'])+' / '+link(p['source'],'画像の出典')+' / '+(link(p['licenseUrl'],p['license']) if p.get('licenseUrl') else e(p['license']))+'</figcaption></figure>'
+ return '<figure class="campusPhoto"><img src="'+e(p['src'])+'" alt="'+e(p['caption'])+'" width="1200" height="800" decoding="async"/><figcaption>'+e(p['caption'])+'</figcaption></figure>'
 def render(g):
  d=g['detail'];locations=d['locations'];assert locations and sum(bool(p['primary']) for p in locations)==1
  for p in locations:assert 45<p['lat']<56 and 5<p['lon']<16

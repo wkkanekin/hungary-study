@@ -1,9 +1,9 @@
 {
   "images": {
     "hero": {
-      "url": "images/basics/university/hero-photo.webp",
-      "alt": "図書館でパソコンを使って学ぶ学生",
-      "version": "20261011-photos"
+      "url": "images/basics/university/hero-user-photo.jpg",
+      "alt": "青空と緑に囲まれた大学の建物",
+      "version": "20261011-user-hero"
     },
     "search": {
       "url": "images/basics/university/search-photo.webp",

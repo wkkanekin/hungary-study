@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "title": "ドイツ留学ラボのサービスが開始しました。",
+    "type": "サービス",
+    "date": "2026-10-11",
+    "url": "https://hungarystudy.org/germany/",
+    "enabled": true,
+    "pinnedUntil": "2026-11-12"
+  }
+]

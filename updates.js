@@ -62,11 +62,12 @@
         const type = group.customType && TYPES.has(raw.type) ? raw.type : group.type;
         const date = new Date(time + JST).toISOString().slice(0, 10);
         items.push({ title, type, time, date, ...link,
+          isPinned: group.customType === true && now < parseDate(raw.pinnedUntil),
           isNew: dayKey(now) - dayKey(time) >= 0 && dayKey(now) - dayKey(time) < 7 });
       }
     }
     // Stable tie order follows source order and then the original JSON order.
-    items.sort((a, b) => b.time - a.time);
+    items.sort((a, b) => Number(b.isPinned) - Number(a.isPinned) || b.time - a.time);
     const seen = new Set();
     return items.filter(item => {
       if (seen.has(item.key)) return false;

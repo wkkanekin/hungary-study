@@ -11,6 +11,7 @@ OUT = ROOT / "germany" / "data" / "note-posts.json"
 AUTHORS = [
     {"id":"megumi-yamada","name":"山田恵","username":"bratsche_viola"},
     {"id":"airi-kawakita","name":"河北彩里","username":"akunigermany"},
+    {"id":"aina","name":"Aina","username":"_poppo_germany_"},
 ]
 def get_json(url):
     req = urllib.request.Request(url, headers={"User-Agent":"Mozilla/5.0 (compatible; GermanyStudyLab/1.0)","Accept":"application/json"})

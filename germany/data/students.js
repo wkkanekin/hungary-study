@@ -37,7 +37,7 @@ window.GERMANY_STUDENTS = [
     ],
     "enabled": true,
     "preparation": "ドイツ語準備1年＋出願準備約半年",
-    "role": "運営者・現役学生",
+    "role": "代表運営者・現役学生",
     "type": "Hochschule",
     "learning": "現地の語学学校／Aspekte、Fit fur den TestDaF"
   },
@@ -79,7 +79,7 @@ window.GERMANY_STUDENTS = [
     "enabled": true,
     "region": "オスナブリュック",
     "preparation": "4月〜8月",
-    "role": "代表運営者・現役学生",
+    "role": "運営者・現役学生",
     "type": "Universität"
   },
   {

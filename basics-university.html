@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="basics-university.css?v=20261011-type" />
+<link rel="stylesheet" href="basics-university.css?v=20261011-photos" />
 <link rel="stylesheet" href="university-rankings.css?v=20261005" />
 <meta name="description" content="ハンガリーの大学・英語課程を探す手順を解説。専攻、学位、英語要件、学費、入試方式、出願締切を比較し、自分に合う候補を絞り込めます。" />
 <link rel="canonical" href="https://hungarystudy.org/basics-university.html" />
@@ -52,9 +52,7 @@
 
 <!-- Hero -->
 <section class="section">
-<div class="card heroWrap">
-<img id="imgHero" class="heroImg" src="images/university-campus.jpg" alt="大学キャンパス" />
-</div>
+<figure class="card heroWrap university-photo"><img id="imgHero" class="heroImg" src="images/basics/university/hero-photo.webp" alt="図書館でパソコンを使って学ぶ学生" width="1200" height="800" decoding="async"><figcaption>大学での学習環境のイメージ。 写真は特定のハンガリーの大学を示すものではありません。<br>写真：<a href="https://www.pexels.com/photo/college-students-studying-in-a-library-7777713/" target="_blank" rel="noopener">Mikhail Nilov / Pexels</a> ｜ <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">利用ライセンス</a></figcaption></figure>
 </section>
 
 <!-- 30秒まとめ -->
@@ -79,9 +77,7 @@
 <section class="section">
 <h2 id="seo-section-2">① 学位・専攻を決めて英語課程を探す</h2>
 
-<div class="card heroWrap" style="margin-bottom:12px;">
-<img id="imgSearch" class="heroImg" src="images/university-search.jpg" alt="大学・プログラムを探すイメージ" />
-</div>
+<figure class="card heroWrap university-photo"><img id="imgSearch" class="heroImg" src="images/basics/university/search-photo.webp" alt="図書館でパソコンと書籍を使って調べる学生" width="1200" height="800" loading="lazy" decoding="async"><figcaption>学位・専攻・英語課程を調べる場面のイメージ。 写真は特定のハンガリーの大学を示すものではありません。<br>写真：<a href="https://www.pexels.com/photo/student-using-laptop-in-library-8199257/" target="_blank" rel="noopener">Yan Krukau / Pexels</a> ｜ <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">利用ライセンス</a></figcaption></figure>
 
 <div class="card simpleCard">
 <h3 style="margin-top:0;">ステップ</h3>
@@ -116,9 +112,7 @@ Study Finder で探す
 <section class="section">
 <h2 id="seo-section-3">② 英語要件・入試・必要書類を確認する</h2>
 
-<div class="card heroWrap" style="margin-bottom:12px;">
-<img id="imgRequirements" class="heroImg" src="images/university-requirements.jpg" alt="出願要件を確認するイメージ" />
-</div>
+<figure class="card heroWrap university-photo"><img id="imgRequirements" class="heroImg" src="images/basics/university/requirements-photo.webp" alt="パソコンの横で書類に記入する人" width="1200" height="801" loading="lazy" decoding="async"><figcaption>出願書類を確認・準備する場面のイメージ。 写真は特定のハンガリーの大学を示すものではありません。<br>写真：<a href="https://www.pexels.com/photo/woman-writing-on-a-document-8036881/" target="_blank" rel="noopener">Kampus Production / Pexels</a> ｜ <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">利用ライセンス</a></figcaption></figure>
 
 <div class="card simpleCard">
 <h3 style="margin-top:0;">確認すべきポイント</h3>
@@ -252,9 +246,7 @@ Study Finder で探す
 <section class="section">
 <h2 id="seo-section-6">⑤ 専攻別の傾向</h2>
 
-<div class="card heroWrap" style="margin-bottom:12px;">
-<img id="imgPatterns" class="heroImg" src="images/university-patterns.jpg" alt="専攻別の選考傾向のイメージ" />
-</div>
+<figure class="card heroWrap university-photo"><img id="imgPatterns" class="heroImg" src="images/basics/university/patterns-photo.webp" alt="実験装置を使って物理の実習に取り組む学生" width="1200" height="800" loading="lazy" decoding="async"><figcaption>理工系の実習のイメージ。選考方法は専攻・プログラムごとに異なります。 写真は特定のハンガリーの大学を示すものではありません。<br>写真：<a href="https://www.pexels.com/photo/students-inside-a-science-laboratory-6208709/" target="_blank" rel="noopener">cottonbro studio / Pexels</a> ｜ <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">利用ライセンス</a></figcaption></figure>
 
 <div class="card simpleCard">
 
@@ -348,7 +340,7 @@ Study Finder で探す
 document.addEventListener('DOMContentLoaded', async () => {
   const map = {hero:'imgHero',search:'imgSearch',requirements:'imgRequirements',patterns:'imgPatterns'};
   try {
-    const response = await fetch('basics-university.images.json');
+    const response = await fetch('basics-university.images.json?v=20261011-photos');
     if (!response.ok) return;
     const data = await response.json();
     for (const [key,id] of Object.entries(map)) {

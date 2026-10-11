@@ -1,24 +1,24 @@
 {
   "images": {
     "hero": {
-      "url": "images/university-campus.jpg",
-      "alt": "大学キャンパスのイメージ",
-      "version": "20260316-1"
+      "url": "images/basics/university/hero-photo.webp",
+      "alt": "図書館でパソコンを使って学ぶ学生",
+      "version": "20261011-photos"
     },
     "search": {
-      "url": "images/university-search.jpg",
-      "alt": "大学を調べるイメージ",
-      "version": "20260316-1"
+      "url": "images/basics/university/search-photo.webp",
+      "alt": "図書館でパソコンと書籍を使って調べる学生",
+      "version": "20261011-photos"
     },
     "requirements": {
-      "url": "images/university-requirements.jpg",
-      "alt": "出願要件の確認イメージ",
-      "version": "20260316-1"
+      "url": "images/basics/university/requirements-photo.webp",
+      "alt": "パソコンの横で書類に記入する人",
+      "version": "20261011-photos"
     },
     "patterns": {
-      "url": "images/university-patterns.jpg",
-      "alt": "専攻別の選考イメージ",
-      "version": "20260316-1"
+      "url": "images/basics/university/patterns-photo.webp",
+      "alt": "実験装置を使って物理の実習に取り組む学生",
+      "version": "20261011-photos"
     }
   }
 }

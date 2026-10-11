@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-11",
+  "usage": "Editorial illustrations; not specific Hungarian universities or admissions evidence. Resize/compression only.",
+  "assets": [
+    {
+      "path": "images/basics/university/hero-photo.webp",
+      "photographer": "Mikhail Nilov",
+      "source": "https://www.pexels.com/photo/college-students-studying-in-a-library-7777713/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "図書館でパソコンを使って学ぶ学生",
+      "caption": "大学での学習環境のイメージ。"
+    },
+    {
+      "path": "images/basics/university/search-photo.webp",
+      "photographer": "Yan Krukau",
+      "source": "https://www.pexels.com/photo/student-using-laptop-in-library-8199257/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "図書館でパソコンと書籍を使って調べる学生",
+      "caption": "学位・専攻・英語課程を調べる場面のイメージ。"
+    },
+    {
+      "path": "images/basics/university/requirements-photo.webp",
+      "photographer": "Kampus Production",
+      "source": "https://www.pexels.com/photo/woman-writing-on-a-document-8036881/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "パソコンの横で書類に記入する人",
+      "caption": "出願書類を確認・準備する場面のイメージ。"
+    },
+    {
+      "path": "images/basics/university/patterns-photo.webp",
+      "photographer": "cottonbro studio",
+      "source": "https://www.pexels.com/photo/students-inside-a-science-laboratory-6208709/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "alt": "実験装置を使って物理の実習に取り組む学生",
+      "caption": "理工系の実習のイメージ。選考方法は専攻・プログラムごとに異なります。"
+    }
+  ]
+}

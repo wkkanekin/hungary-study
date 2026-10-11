@@ -4,7 +4,7 @@ window.GERMANY_CONFIG = {
   contactFallbackEmail: "info@hungarystudy.org", // 当面はハンガリー留学ラボの共通運営窓口
   currency: {rate:177.34, date:"2026-10-09", source:"https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"},
   calendly: {
-    "riko-asahi": "https://calendly.com/hungarystudy-info/iu-40",       // 朝日理子さんのCalendly予約URL
+    "riko-asahi": "https://calendly.com/hungarystudy-info/iu-40",       // あさひさんのCalendly予約URL
     "megumi-yamada": "https://calendly.com/hungarystudy-info/osn-40",    // 山田恵さんのCalendly予約URL
     "aina": "https://calendly.com/hungarystudy-info/bay-40",             // AinaさんのCalendly予約URL
     "airi-kawakita": "https://calendly.com/hungarystudy-info/tuhh-40"     // 河北彩里さんのCalendly予約URL

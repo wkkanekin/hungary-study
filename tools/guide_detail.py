@@ -31,4 +31,11 @@ def render(g):
  v=d['inflation'];body+='<section id="price-trend"><h2>物価は上がっている？ 下がっている？</h2><p>'+e(v['name'])+'の消費者物価指数（VPI）の年間平均・前年比です。家賃を含む一般世帯の物価の動きを示します。</p>'+table(['年','物価の前年比','価格水準の動き'],[[str(2023+i)+'年','+'+str(rate)+'％','↑ 上昇'] for i,rate in enumerate(v['rates'])],v['name']+'の物価推移（2023〜2025年）')+'<div class="guidePriceBars" aria-hidden="true">'+''.join('<div><span>'+str(2023+i)+'</span><i style="width:'+str(rate/7*65)+'%"></i><b>+'+str(rate)+'%</b></div>' for i,rate in enumerate(v['rates']))+'</div><p class="guideTrendSummary">物価水準は3年とも上昇しています。上昇率が小さくなる年も、価格が下がったという意味ではありません。</p><p class="guideNote">都市単独の統計ではなく、所在する州の指標です。2026年は通年の結果が未確定なので、この表には混ぜていません。学生個人の支出や個別商品の値上がりとは異なります。</p>'+sources(v['sources'])+'</section>'
  if g.get('student'):body+='<a class="btn primary" href="index.html#student-'+e(g['student'])+'">この大学の現役生を見る</a>'
  body+='<section class="sourceList"><h2>公式情報・統計の出典</h2><ul>'+''.join('<li>'+link(url,label)+'</li>' for label,url in g['links'])+'</ul><p>確認日：'+e(g['checkedOn'])+'。上記は全課程の条件ではありません。出願する年度・課程・国籍に対応する最新の募集要項と費用表を確認してください。</p></section><div class="sectionActions"><a class="btn whiteBtn" href="universities.html">大学一覧へ</a><a class="btn primary" href="index.html#students">現役生に相談する</a></div>'
+ if d.get('currencyNote'):
+  import re
+  body=re.sub(r'(<p class="guideNote" id="currency-reference">).*?(</p>)',lambda m:m[1]+e(d['currencyNote'])+m[2],body)
+ if d.get('budgetNote'):
+  body=body.replace('<h3>自分の月額予算に入れるもの</h3><p>家賃・光熱費、食費、健康保険、交通費、通信費、教材と日用品。生活費目安に含まれる項目を再度足さないようにし、授業料と学期納付金は別に整理します。敷金・家具・渡航費は毎月の支出と分けて確保します。</p>','<h3>家賃以外の固定費</h3><p>'+e(convert(d['budgetNote']))+'</p>')
+ if g.get('studentExperienceSource'):
+  body=body.replace('<section class="sourceList">','<p class="guideNote">学期納付金・寮費・固定費の実例：'+e(g['studentExperienceSource'])+'。</p><section class="sourceList">')
  return body

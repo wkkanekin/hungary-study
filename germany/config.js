@@ -7,7 +7,7 @@ window.GERMANY_CONFIG = {
     "riko-asahi": "https://calendly.com/hungarystudy-info/iu-40",       // 朝日理子さんのCalendly予約URL
     "megumi-yamada": "https://calendly.com/hungarystudy-info/osn-40",    // 山田恵さんのCalendly予約URL
     "aina": "https://calendly.com/hungarystudy-info/bay-40",             // AinaさんのCalendly予約URL
-    "airi-kawakita": ""     // 河北彩里さんのCalendly予約URL
+    "airi-kawakita": "https://calendly.com/hungarystudy-info/tuhh-40"     // 河北彩里さんのCalendly予約URL
   },
   lineApplicationEmail: "", // ドイツ版の申込受付メールアドレス（mailto方式）
   lineApplicationUrl: "",   // 外部申込フォームを使う場合のHTTPS URL（任意）

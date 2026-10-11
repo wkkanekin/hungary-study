@@ -107,9 +107,28 @@
   const columns = (window.GERMANY_COLUMNS || []).filter(c => c.enabled === true);
   document.querySelectorAll('[data-column-list]').forEach(list => {
     const max = list.dataset.columnList === 'recent' ? 3 : columns.length;
-    columns.slice().sort((a,b) => b.date.localeCompare(a.date)).slice(0,max).forEach(c => {
+    const items = columns.slice();
+    if (list.dataset.columnList === 'recent') {
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+    } else items.sort((a,b) => b.date.localeCompare(a.date));
+    list.replaceChildren();
+    items.slice(0,max).forEach(c => {
       const local = value => typeof value === 'string' && /^(?:images\/)?[a-zA-Z0-9_./-]+$/.test(value) && !value.includes('..');
       if (!local(c.url) || !local(c.thumbnail) || !byId.has(c.authorId)) return;
+      if (list.dataset.columnList === 'recent') {
+        const a = document.createElement('a'); a.className = 'topNoteCard'; a.href = c.url;
+        const img = document.createElement('img'); img.src = c.thumbnail; img.alt = c.title; img.loading = 'lazy';
+        const body = document.createElement('div'); body.className = 'topNoteCardBody';
+        const meta = document.createElement('span'); meta.className = 'topNoteCardMeta'; meta.textContent = byId.get(c.authorId).name + ' · ' + c.date;
+        const h = document.createElement('h3'); h.className = 'topNoteCardTitle'; h.textContent = c.title;
+        const p = document.createElement('p'); p.className = 'topNoteCardSummary'; p.textContent = c.summary;
+        const read = document.createElement('span'); read.textContent = '記事を読む →';
+        body.append(meta,h,p,read); a.append(img,body); list.append(a);
+        return;
+      }
       const article = document.createElement('article'); article.className = 'columnListCard';
       const a = document.createElement('a'); a.className = 'columnCardLink'; a.href = c.url;
       const wrap = document.createElement('div'); wrap.className = 'columnCardImageWrap';

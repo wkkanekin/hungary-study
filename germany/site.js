@@ -117,12 +117,13 @@
     list.replaceChildren();
     items.slice(0,max).forEach(c => {
       const local = value => typeof value === 'string' && /^(?:images\/)?[a-zA-Z0-9_./-]+$/.test(value) && !value.includes('..');
-      if (!local(c.url) || !local(c.thumbnail) || !byId.has(c.authorId)) return;
+      const author = byId.get(c.authorId) || (c.authorName && c.authorUniversity ? {name: c.authorName, university: c.authorUniversity} : null);
+      if (!local(c.url) || !local(c.thumbnail) || !author) return;
       if (list.dataset.columnList === 'recent') {
         const a = document.createElement('a'); a.className = 'topNoteCard'; a.href = c.url;
         const img = document.createElement('img'); img.src = c.thumbnail; img.alt = c.title; img.loading = 'lazy';
         const body = document.createElement('div'); body.className = 'topNoteCardBody';
-        const meta = document.createElement('span'); meta.className = 'topNoteCardMeta'; meta.textContent = byId.get(c.authorId).name + ' · ' + c.date;
+        const meta = document.createElement('span'); meta.className = 'topNoteCardMeta'; meta.textContent = author.name + ' · ' + c.date;
         const h = document.createElement('h3'); h.className = 'topNoteCardTitle'; h.textContent = c.title;
         const p = document.createElement('p'); p.className = 'topNoteCardSummary'; p.textContent = c.summary;
         const read = document.createElement('span'); read.textContent = '記事を読む →';
@@ -134,7 +135,7 @@
       const wrap = document.createElement('div'); wrap.className = 'columnCardImageWrap';
       const img = document.createElement('img'); img.className = 'columnCardImage'; img.src = c.thumbnail; img.alt = c.title; img.loading = 'lazy'; wrap.append(img);
       const body = document.createElement('div'); body.className = 'columnCardBody';
-      const meta = document.createElement('div'); meta.className = 'columnCardMeta'; meta.textContent = byId.get(c.authorId).name + ' · ' + byId.get(c.authorId).university + ' · ' + c.date + (c.readingTime ? ' · ' + c.readingTime : '');
+      const meta = document.createElement('div'); meta.className = 'columnCardMeta'; meta.textContent = author.name + ' · ' + author.university + ' · ' + c.date + (c.readingTime ? ' · ' + c.readingTime : '');
       const h = document.createElement('h3'); h.textContent = c.title;
       const p = document.createElement('p'); p.textContent = c.summary;
       const tags = document.createElement('div'); tags.className = 'columnTags';

@@ -27,7 +27,9 @@ assert len({c['id'] for c in columns}) == len(columns), 'Column IDs must be uniq
 for c in columns:
     if c.get('enabled') is not True:
         continue
-    assert c['authorId'] in {s['id'] for s in students}, 'Unknown column authorId'
+    student_author = c['authorId'] in {s['id'] for s in students}
+    guest_author = all(isinstance(c.get(key), str) and c[key].strip() for key in ('authorName', 'authorUniversity'))
+    assert student_author or guest_author, 'Unknown column authorId requires authorName and authorUniversity'
     assert re.fullmatch(r'\d{4}-\d{2}-\d{2}', c['date']), 'Use YYYY-MM-DD for column dates'
     for key in ('url','thumbnail'):
         assert re.fullmatch(r'[a-zA-Z0-9_./-]+',c[key]) and '..' not in c[key], 'Use local relative paths'

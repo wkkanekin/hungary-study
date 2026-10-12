@@ -1,5 +1,10 @@
 {
-  "attemptedOn": "2026-10-11",
-  "errors": [],
+  "attemptedOn": "2026-10-12",
+  "errors": [
+    "news: 403 Client Error: Forbidden for url: https://www.daad.jp/ja/news/",
+    "ranking Technical University of Munich QS: 403 Client Error: Forbidden for url: https://www.topuniversities.com/universities/technical-university-munich",
+    "ranking LMU Munich QS: 403 Client Error: Forbidden for url: https://www.topuniversities.com/universities/ludwig-maximilians-universitat-munchen",
+    "ranking Universität Heidelberg QS: 403 Client Error: Forbidden for url: https://www.topuniversities.com/universities/universitat-heidelberg"
+  ],
   "message": "取得失敗時は直前の確認済みデータを維持します。"
 }

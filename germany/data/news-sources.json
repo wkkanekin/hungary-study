@@ -1,0 +1,96 @@
+{
+  "sources": [
+    {
+      "name": "DAAD日本",
+      "url": "https://www.daad.jp/ja/news/",
+      "hosts": [
+        "www.daad.jp"
+      ],
+      "kind": "daad",
+      "alternatives": [
+        "https://www.daad.jp/ja/feed/",
+        "https://www.daad.jp/ja/"
+      ]
+    },
+    {
+      "name": "JASSO",
+      "url": "https://ryugaku.jasso.go.jp/news/scholarship_{year}.html",
+      "hosts": [
+        "ryugaku.jasso.go.jp"
+      ],
+      "kind": "jasso",
+      "selector": "#news article.tmp3_article",
+      "title_selector": "h4.st",
+      "link_selector": "a[href]"
+    },
+    {
+      "name": "JASSO",
+      "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/",
+      "hosts": [
+        "www.jasso.go.jp"
+      ],
+      "kind": "watch",
+      "title": "海外留学支援制度（大学院学位取得型）の公式情報が更新されました",
+      "expected_heading": "大学院学位取得"
+    },
+    {
+      "name": "JASSO",
+      "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/gakubu/",
+      "hosts": [
+        "www.jasso.go.jp"
+      ],
+      "kind": "watch",
+      "title": "海外留学支援制度（学部学位取得型）の公式情報が更新されました",
+      "expected_heading": "学部学位取得"
+    },
+    {
+      "name": "在日ドイツ大使館",
+      "url": "https://japan.diplo.de/ja-ja/service/study-908722",
+      "hosts": [
+        "japan.diplo.de"
+      ],
+      "kind": "watch",
+      "title": "ドイツ留学のビザ・滞在手続きの公式情報が更新されました",
+      "expected_heading": "Study in Germany"
+    },
+    {
+      "name": "在ドイツ日本国大使館",
+      "url": "https://www.de.emb-japan.go.jp/itprtop_ja/index.html",
+      "hosts": [
+        "www.de.emb-japan.go.jp"
+      ],
+      "kind": "mofa",
+      "selector": "dl.linklist_date"
+    },
+    {
+      "name": "ミュンヘン工科大学（TUM）",
+      "url": "https://www.tum.de/en/studies/fees-and-financial-aid/scholarships",
+      "hosts": [
+        "www.tum.de"
+      ],
+      "kind": "watch",
+      "title": "TUMの奨学金・学費支援の公式情報が更新されました",
+      "expected_heading": "Scholarships"
+    },
+    {
+      "name": "ボン大学",
+      "url": "https://www.uni-bonn.de/en/studying/consultation-and-service/financing-and-support/the-deutschlandstipendium/application",
+      "hosts": [
+        "www.uni-bonn.de"
+      ],
+      "kind": "watch",
+      "title": "ボン大学Deutschlandstipendiumの応募情報が更新されました",
+      "expected_heading": "Deutschlandstipendium"
+    },
+    {
+      "name": "ボン大学",
+      "url": "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students/costs-and-financing-for-international-students",
+      "hosts": [
+        "www.uni-bonn.de"
+      ],
+      "kind": "watch",
+      "title": "ボン大学の留学生向け奨学金・資金支援情報が更新されました",
+      "expected_heading": "Costs and Financing"
+    }
+  ]
+}

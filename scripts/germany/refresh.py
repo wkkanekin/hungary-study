@@ -75,24 +75,9 @@ def rankings():
  old['coverage']=f"THE総合{sum(r['provider']=='THE' and r['subject']=='総合' for r in records)}大学、THE分野別{sum(r['provider']=='THE' and r['subject']!='総合' for r in records)}件、QS総合{sum(r['provider']=='QS' and r['subject']=='総合' for r in records)}大学。全国全大学・全分野を網羅していません。"
  old['lastAttempt']=TODAY;old['records']=records;save('rankings',old)
 def news():
- old=load('news',{'items':[]})
- try:
-  url='https://www.daad.jp/ja/news/';s=BeautifulSoup(fetch(url),'html.parser');items=[]
-  for a in s.select('a[href]'):
-   u=a['href'];m=re.fullmatch(r'https://www.daad.jp/ja/(20\d{2})/(\d{2})/(\d{2})/[^/?#]+/',u)
-   if not m:continue
-   parent=a.find_parent(class_='c-list-teaser__item-content--news');heading=parent.find('h2') if parent else None
-   if not heading:continue
-   date='-'.join(m.groups());datetime.date.fromisoformat(date)
-   if date>TODAY:continue
-   title=heading.get_text(' ',strip=True)
-   if len(title)>200:raise ValueError('Unexpected headline length')
-   items.append({'title':title,'date':date,'url':u,'category':'DAAD公式ニュース'})
-  assert 1<=len(items)<=100,'News selector mismatch'
-  # Only headlines and source links, no copied article bodies.
-  dedup={i['url']:i for i in old['items']+items};old={'items':sorted(dedup.values(),key=lambda x:x['date'],reverse=True)[:30],'checkedOn':TODAY}
- except Exception as exc:errors.append('news: '+str(exc))
- old['lastAttempt']=TODAY;save('news',old)
+ from official_news import refresh_news
+ report=refresh_news(DATA, fetch, TODAY)
+ errors.extend(report['errors'])
 if __name__=='__main__':
  economy();news()
  if '--rankings' in sys.argv:rankings()

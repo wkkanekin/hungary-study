@@ -1,10 +1,28 @@
 {
   "items": [
     {
+      "title": "一般財団法人三谷進一育英会 海外奨学金プログラム（大学留学） 奨学金情報を更新しました",
+      "url": "https://ryugaku.jasso.go.jp/scholarship/search/data_00271.html",
+      "date": "2026-10-08",
+      "category": "JASSO公式ニュース"
+    },
+    {
       "title": "【1/22(金)締切】2027年度フィリップ・フランツ・フォン・シーボルト賞の候補者募集",
       "date": "2026-10-05",
       "url": "https://www.daad.jp/ja/2026/10/05/sieboldpreis2027/",
       "category": "DAAD公式ニュース"
+    },
+    {
+      "title": "②那須塩原市貸与型奨学資金（海外留学） 奨学金情報を更新しました",
+      "url": "https://ryugaku.jasso.go.jp/scholarship/search/data_00123.html",
+      "date": "2026-09-15",
+      "category": "JASSO公式ニュース"
+    },
+    {
+      "title": "①那須塩原市給付型奨学資金（海外留学） 奨学金情報を更新しました",
+      "url": "https://ryugaku.jasso.go.jp/scholarship/search/data_00122.html",
+      "date": "2026-09-15",
+      "category": "JASSO公式ニュース"
     },
     {
       "title": "夏期講座奨学金（HSK）応募受付中！",
@@ -61,6 +79,6 @@
       "category": "DAAD公式ニュース"
     }
   ],
-  "checkedOn": "2026-10-11",
+  "checkedOn": "2026-10-12",
   "lastAttempt": "2026-10-12"
 }

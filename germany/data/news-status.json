@@ -28,8 +28,7 @@
     },
     {
       "name": "在ドイツ日本国大使館",
-      "checkedOn": "2026-10-12",
-      "endpoint": "https://www.de.emb-japan.go.jp/itprtop_ja/index.html"
+      "error": "403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html"
     },
     {
       "name": "ミュンヘン工科大学（TUM）",
@@ -47,5 +46,7 @@
       "endpoint": "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students/costs-and-financing-for-international-students"
     }
   ],
-  "errors": []
+  "errors": [
+    "在ドイツ日本国大使館: 403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html"
+  ]
 }

@@ -77,7 +77,7 @@ jobs:
           if post.get('image_url') and not post['image_url'].startswith('https://'):
               sys.exit('Image URL must be HTTPS.')
           with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as out:
-              for key, value in [('POST_TEXT', post['text']), ('IMAGE_URL', post.get('image_url', '')), ('APPROVED_FILE', candidates[0]), ('CHECK_ONLY', 'false')]:
+              for key, value in [('POST_TEXT', post['text']), ('IMAGE_URL', post.get('image_url', '')), ('REPLY_TO', str(post.get('reply_to', ''))), ('APPROVED_FILE', candidates[0]), ('CHECK_ONLY', 'false')]:
                   delimiter = 'EOF_SOCIAL_' + key
                   out.write(f'{key}<<{delimiter}\n{value}\n{delimiter}\n')
           PY
@@ -164,6 +164,11 @@ jobs:
               print("接続確認成功: 認証と投稿・画像の権限を確認しました。Xには公開していません。")
               sys.exit(0)
           payload = {"text": text}
+          reply_to = os.environ.get("REPLY_TO", "").strip()
+          if reply_to:
+              if not reply_to.isdigit():
+                  sys.exit("返信先の投稿IDが不正です。")
+              payload["reply"] = {"in_reply_to_tweet_id": reply_to}
           if image_data is not None:
               from mimetypes import guess_type
               media_type = guess_type(urlparse(image_url).path)[0] or "image/jpeg"

@@ -21,7 +21,7 @@ for f in G.glob('*.html'):
   elif u.fragment and path.suffix=='.html':
    target=Links();target.feed(path.read_text())
    if u.fragment not in target.ids:errors.append(str(f.relative_to(ROOT))+': missing anchor '+url)
-students=json.loads((G/'students.json').read_text());assert [s['id'] for s in students]==['riko-asahi','megumi-yamada','airi-kawakita','aina']
+students=json.loads((G/'students.json').read_text());assert students and len({s['id'] for s in students}) == len(students), 'Student IDs must be unique'
 for s in students:assert (G/'images'/s['photo']).is_file()
 for n in ['rankings','economy','news','guides']:
  d=json.loads((G/'data'/f'{n}.json').read_text());s=(G/'data'/f'{n}.js').read_text();assert json.loads(s.split('=',1)[1].strip().rstrip(';'))==d

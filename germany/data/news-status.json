@@ -1,29 +1,29 @@
 {
-  "attemptedOn": "2026-10-12",
+  "attemptedOn": "2026-10-13",
   "sources": [
     {
       "name": "DAAD日本",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://www.daad.jp/ja/news/"
     },
     {
       "name": "JASSO",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://ryugaku.jasso.go.jp/news/scholarship_2026.html"
     },
     {
       "name": "JASSO",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/"
     },
     {
       "name": "JASSO",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://www.jasso.go.jp/ryugaku/scholarship_a/gakubu/"
     },
     {
       "name": "在日ドイツ大使館",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://japan.diplo.de/ja-ja/service/study-908722"
     },
     {
@@ -32,17 +32,17 @@
     },
     {
       "name": "ミュンヘン工科大学（TUM）",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://www.tum.de/en/studies/fees-and-financial-aid/scholarships"
     },
     {
       "name": "ボン大学",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://www.uni-bonn.de/en/studying/consultation-and-service/financing-and-support/the-deutschlandstipendium/application"
     },
     {
       "name": "ボン大学",
-      "checkedOn": "2026-10-12",
+      "checkedOn": "2026-10-13",
       "endpoint": "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students/costs-and-financing-for-international-students"
     }
   ],

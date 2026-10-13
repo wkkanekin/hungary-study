@@ -177,5 +177,46 @@ window.GERMANY_STUDENTS = [
     "sources": [
       "2026-10-05 ユーザー提供プロフィール"
     ]
+  },
+  {
+    "id": "mizu",
+    "name": "Mizu",
+    "photo": "mizu.jpg",
+    "role": "現役学生",
+    "university": "Ostfalia Hochschule für angewandte Wissenschaften",
+    "major": "Informatik im Praxisverbund（Bachelor of Science）",
+    "entry": "2023年8月 Duales Studium開始／2024年3月 大学生活開始",
+    "year": "第7セメスター（最終学期／2026年10月提供）",
+    "language": "ドイツ語",
+    "type": "Hochschule",
+    "scholarship": "なし",
+    "admission": "ドイツ語 C1（Goethe Zertifikat C1）",
+    "selection": "企業への出願、採用試験、プレゼン、面談。企業に採用された後、指定された大学・学部で学ぶDuales Studium。",
+    "preparation": "1〜3か月",
+    "education": "日本の4年制私立大学 英文学科卒業",
+    "learning": "VHSでドイツ語A1〜C1修了。語学学校指定の教材、YouTube、Anki、Deutsche Welle（DW）などのニュース記事。",
+    "bio": "日本で私立大学の英文学科を卒業した後、日本の航空会社で国際線CAとして勤務。\n結婚を機にドイツへ移住し、ドイツ語を学び始めました。ドイツ語C1を取得した後に就職活動を開始。\n採用試験や面談などを経て、大手アパレル企業のIT部門にDuales Studium生として採用され、現在は大学生兼会社員です。",
+    "tags": [
+      "ドイツ語学習",
+      "Duales Studium（採用・給与・働き方）",
+      "大学生活（学部生）",
+      "キャリアチェンジ",
+      "住居探し"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.ostfalia.de/"
+      ],
+      [
+        "note",
+        "https://note.com/mizulog_de"
+      ]
+    ],
+    "sources": [
+      "Mizuho／登録に必要なもの.txt（2026-10-13）"
+    ],
+    "enabled": true,
+    "message": ""
   }
 ];

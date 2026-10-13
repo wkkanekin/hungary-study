@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "germany" / "data" / "note-posts.json"
 AUTHORS = [
+    {"id":"mizu","name":"Mizu","username":"mizulog_de"},
     {"id":"megumi-yamada","name":"山田恵","username":"bratsche_viola"},
     {"id":"airi-kawakita","name":"河北彩里","username":"akunigermany"},
     {"id":"aina","name":"Aina","username":"_poppo_germany_"},

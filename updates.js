@@ -55,13 +55,16 @@
       for (const raw of group.data) {
         if (!raw || raw.enabled !== true || raw.draft === true || raw.published === false || raw.comingSoon === true) continue;
         if (raw.status != null && raw.status !== 'published') continue;
-        const time = parseDate(raw.publishedAt ?? raw.date);
+        // 動画の公開はdate、更新はupdatedAtに日付を記録すると新着情報に反映されます。
+        const updatedTime = group.type === 'YouTube' ? parseDate(raw.updatedAt) : NaN;
+        const isUpdate = Number.isFinite(updatedTime);
+        const time = isUpdate ? updatedTime : parseDate(raw.publishedAt ?? raw.date);
         const link = normalizeURL(raw.url, base);
         const title = typeof raw.title === 'string' ? raw.title.trim() : '';
         if (!Number.isFinite(time) || time > now || !link || !title) continue;
         const type = group.customType && TYPES.has(raw.type) ? raw.type : group.type;
         const date = new Date(time + JST).toISOString().slice(0, 10);
-        items.push({ title, type, time, date, ...link,
+        items.push({ title, type, time, date, isUpdate, ...link,
           isPinned: group.customType === true && now < parseDate(raw.pinnedUntil),
           isNew: dayKey(now) - dayKey(time) >= 0 && dayKey(now) - dayKey(time) < 7 });
       }
@@ -105,7 +108,7 @@
         type.className = 'updatesType'; type.textContent = item.type;
         const title = document.createElement('span');
         title.className = 'updatesTitle';
-        title.textContent = ['ガイド', 'コラム', 'YouTube'].includes(item.type) ? `「${item.title}」を公開しました` : item.title;
+        title.textContent = ['ガイド', 'コラム', 'YouTube'].includes(item.type) ? `「${item.title}」を${item.isUpdate ? '更新' : '公開'}しました` : item.title;
         if (item.external) {
           const external = document.createElement('span');
           external.className = 'updatesExternal'; external.textContent = '↗';

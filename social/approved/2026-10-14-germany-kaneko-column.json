@@ -1,0 +1,20 @@
+{
+  "approved": true,
+  "status": "approved_by_user",
+  "platforms": [
+    "X"
+  ],
+  "date": "2026-10-14",
+  "campaign": "Germany Study Lab Kaneko column (one-day user-requested exception)",
+  "text": "「留学を、一部の人の特権にしない。」\n\n30代で英語を学び直したカネコが、ドイツ留学を目指した経験と、現役生の声が誰かの背中を押す理由を綴りました。\n\nドイツ留学ラボ運営コラム：\nhttps://hungarystudy.org/germany/column-kaneko-study-for-everyone.html\n\n写真：Rufus46 / CC BY-SA 3.0（WebP変換）\n#ドイツ留学",
+  "source_url": "https://hungarystudy.org/germany/column-kaneko-study-for-everyone.html",
+  "image_url": "https://hungarystudy.org/germany/images/column-kaneko-study-for-everyone-munich-campus.webp",
+  "image_credit": "Rufus46 / Wikimedia Commons / CC BY-SA 3.0 (original JPEG converted to WebP)",
+  "image_rights": "Confirmed on Wikimedia Commons source: CC BY-SA 3.0. Reuse requires author attribution, license link, changes noted, and ShareAlike for adaptation.",
+  "image_source_url": "https://commons.wikimedia.org/wiki/File:Lothstr._34_Muenchen-1.jpg",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "image_alt_text": "ミュンヘン応用科学大学 Lothstraße 34校舎。撮影：Rufus46。CC BY-SA 3.0。WebP形式に変換。原画像 https://commons.wikimedia.org/wiki/File:Lothstr._34_Muenchen-1.jpg ／ライセンス https://creativecommons.org/licenses/by-sa/3.0/",
+  "post_weighted_length_estimate": 155,
+  "notes": "User explicitly approved on 2026-10-14. GitHub X workflow will attempt posting. Threads requires separate publishing integration.",
+  "approved_at": "2026-10-14"
+}

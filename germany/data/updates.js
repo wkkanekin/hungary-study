@@ -1,5 +1,12 @@
 window.GERMANY_UPDATES = [
   {
+  "title": "ドイツ留学ラボの使い方動画を公開しました｜Zoom・LINEの料金と申し込み方法",
+  "date": "2026-10-14",
+  "url": "index.html#youtube",
+  "category": "動画更新",
+  "enabled": true
+},
+  {
     "title": "OstfaliaでITを学ぶMizuさんが現役生として新しく参加しました",
     "date": "2026-10-13",
     "url": "index.html#student-mizu",

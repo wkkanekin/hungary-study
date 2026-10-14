@@ -96,6 +96,7 @@
       const values = new FormData(form);
       const body = ['ドイツ留学ラボ LINE相談申込', document.getElementById('lineSummary').textContent,
         'お名前：' + values.get('name'), 'メール：' + values.get('email'), 'LINE表示名：' + values.get('lineName'),
+        'LINE ID：' + (values.get('lineId') || '未設定・ID検索不可（別の追加方法の案内を希望）'),
         '相談内容：\n' + values.get('message'), '\n料金・開始日・支払方法・キャンセル条件の案内を希望します。'].join('\n');
       const mailto = 'mailto:' + email + '?subject=' + encodeURIComponent('ドイツ留学ラボ LINE相談申込') + '&body=' + encodeURIComponent(body);
       document.getElementById('mailPreview').value = body;

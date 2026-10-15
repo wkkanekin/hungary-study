@@ -2,66 +2,98 @@ name: update-prices
 
 on:
   schedule:
-    - cron: "0 5 1 * *"
+    # Weekly on Monday, 05:00 UTC (07:00 CEST / 06:00 CET).
+    - cron: "0 5 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: update-prices-main
+  cancel-in-progress: false
+
 jobs:
-  run:
+  update:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      # ----------------------------
-      # KSH（ハンガリー公式物価）
-      # ----------------------------
-      - name: Collect prices from KSH
-        run: |
-          python collect_prices_ksh.py
-
-      # ----------------------------
-      # 大学ランキング（THE）
-      # ----------------------------
-      - name: Collect university rankings
-        run: |
-          python collect_rankings_the.py
-
-      # ----------------------------
-      # Numbeo（都市物価比較） ← NEW
-      # ----------------------------
-      - name: Collect Numbeo city cost comparison
-        run: |
-          python collect_cost_compare_numbeo.py
-
-      - name: Rebuild readable cost comparison table
-        run: |
-          python scripts/build_cost_compare.py
-          python scripts/build_cost_compare.py --check
-
-      # ----------------------------
-      # Commit & Push
-      # ----------------------------
-      - name: Commit and push if changed
+      - name: Configure Git
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add prices.json rankings.json subject-rankings.json cost_compare_numbeo.json guide-hungary-cost-compare.html
+      # Save KSH independently: a Numbeo failure must not block this commit.
+      - name: Collect KSH food prices
+        id: ksh
+        continue-on-error: true
+        run: python collect_prices_ksh.py
+      - name: Save KSH results
+        if: steps.ksh.outcome == 'success'
+        run: |
+          git add prices.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto update KSH food prices"
+            git push
+          fi
 
-          git diff --cached --quiet || git commit -m "Auto update prices, rankings and cost comparison"
+      # Do not overwrite the previous snapshot if the source is unavailable.
+      - name: Collect Numbeo city indexes
+        id: numbeo
+        continue-on-error: true
+        run: python collect_cost_compare_numbeo.py
+      - name: Rebuild Numbeo comparison page
+        id: numbeo_page
+        if: steps.numbeo.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python scripts/build_cost_compare.py
+          python scripts/build_cost_compare.py --check
+      - name: Save Numbeo results
+        if: steps.numbeo.outcome == 'success' && steps.numbeo_page.outcome == 'success'
+        run: |
+          git add cost_compare_numbeo.json guide-hungary-cost-compare.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto update Numbeo city cost comparison"
+            git push
+          fi
 
-          git push
+      # Keep university ranking refresh independent of price sources.
+      - name: Collect university rankings
+        id: rankings
+        continue-on-error: true
+        run: python collect_rankings_the.py
+      - name: Save rankings
+        if: steps.rankings.outcome == 'success'
+        run: |
+          git add rankings.json subject-rankings.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto update university rankings"
+            git push
+          fi
+
+      - name: Report failed sources
+        if: always()
+        env:
+          KSH: ${{ steps.ksh.outcome }}
+          NUMBEO: ${{ steps.numbeo.outcome }}
+          NUMBEO_PAGE: ${{ steps.numbeo_page.outcome }}
+          RANKINGS: ${{ steps.rankings.outcome }}
+        run: |
+          echo "KSH: $KSH"
+          echo "Numbeo: $NUMBEO"
+          echo "Numbeo page: $NUMBEO_PAGE"
+          echo "Rankings: $RANKINGS"
+          if [ "$KSH" != "success" ] || [ "$NUMBEO" != "success" ] || [ "$NUMBEO_PAGE" != "success" ] || [ "$RANKINGS" != "success" ]; then
+            echo "::error::One or more sources failed; successful sources were committed independently."
+            exit 1
+          fi

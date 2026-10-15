@@ -1,0 +1,18 @@
+{
+  "approved": false,
+  "status": "awaiting_user_approval",
+  "date": "2026-10-15",
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "title": "ハンガリーの食料品はいくら？16品目の価格と単位",
+  "text": "ハンガリーの食料品、いくらかかる？🇭🇺\n\n牛乳・卵・パン・野菜など16品目の価格を、2026年4月のKSH全国平均データで紹介。「1kg」「1L」「10個」など単位の違いも解説しています。\n\nhttps://hungarystudy.org/guide-hungary-food-prices.html\n\n#ハンガリー留学 #留学準備",
+  "source_url": "https://hungarystudy.org/guide-hungary-food-prices.html",
+  "source_data_period": "2026-04",
+  "image_url": "https://hungarystudy.org/images/guides/hungary-food-prices.svg",
+  "image_repo_path": "images/guides/hungary-food-prices.svg",
+  "image_rights": "未確認。GitHub上に画像は存在するが、ファイル内の著作者・ライセンス表示とリポジトリのライセンスは確認できなかった。公開投稿への添付は権利確認後に行う。",
+  "image_format_note": "SVG画像。X/Threadsへ直接アップロードする前にPNG変換と表示確認が必要。",
+  "notes": "No publication without user approval. Not a duplicate of listed social/drafts and social/approved entries. The article reports KSH national average prices for April 2026, not current store prices."
+}

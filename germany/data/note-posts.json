@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-10-14T00:21:43.120412+00:00",
+  "updatedAt": "2026-10-15T23:42:31.913179+00:00",
   "posts": [
+    {
+      "authorId": "mizu",
+      "author": "Mizu",
+      "title": "5年日記、はじめます",
+      "date": "2026-10-15",
+      "summary": "先日、引っ越しの荷ほどきと共に2021年と2023年のスケジュール手帳が発掘され、ふと読み返してみました。 すると、 「あ、この日はあの人と会ったんだっけ」 「あ、この日は入籍の準備してたんだっけ」 「あ、この日はバイトだったのか～、ドイツ語できなくて大変だったな」 みたいに、当時のことを思い出すきっかけがたくさんあって、これが意外と面白かったんです。 細か",
+      "image": "https://assets.st-note.com/production/uploads/images/324331009/rectangle_large_type_2_7d32ca8cb126be09185a8b24623cfa22.png?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/mizulog_de/n/n501bcc7f5300"
+    },
     {
       "authorId": "mizu",
       "author": "Mizu",

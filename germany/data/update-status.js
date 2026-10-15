@@ -1,1 +1,1 @@
-window.GERMANY_UPDATE_STATUS = {"attemptedOn": "2026-10-14", "errors": ["在ドイツ日本国大使館: 403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html"], "message": "取得失敗時は直前の確認済みデータを維持します。"};
+window.GERMANY_UPDATE_STATUS = {"attemptedOn": "2026-10-15", "errors": ["在ドイツ日本国大使館: 403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html"], "message": "取得失敗時は直前の確認済みデータを維持します。"};

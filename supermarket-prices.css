@@ -1,0 +1,38 @@
+
+#hsl-everyday{--ep-bg:light-dark(#f6f1e7,#17202c);--ep-panel:light-dark(#fff,#202c3b);--ep-ink:light-dark(#0f2a5a,#dfebff);--ep-copy:light-dark(#475569,#c1ccdb);--ep-line:light-dark(#e0e5ed,#3a485c);--ep-blue:light-dark(#1d4ed8,#a7c4ff);--ep-soft:light-dark(#eaf0ff,#293b56);font-family:system-ui,sans-serif;background:var(--ep-bg);color:var(--ep-ink);padding:22px;border-radius:16px;line-height:1.65}
+#hsl-everyday *{box-sizing:border-box}
+#hsl-everyday header{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid var(--ep-line);padding-bottom:12px;font-weight:700;font-size:14px}
+#hsl-everyday header small{font-size:12px;color:var(--ep-copy);font-weight:400}
+#hsl-everyday .ep-kicker{color:var(--ep-blue);font-size:12px;letter-spacing:.1em;margin:24px 0 6px}
+#hsl-everyday h1{font-size:clamp(25px,4.2vw,36px);line-height:1.4;margin:0 0 12px}
+#hsl-everyday p{font-size:14px;color:var(--ep-copy);margin:10px 0}
+#hsl-everyday .ep-scope{padding:12px 15px;border-left:3px solid var(--ep-blue);background:var(--ep-panel);font-size:13px;margin:16px 0}
+#hsl-everyday .ep-stores{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0 15px}
+#hsl-everyday button{font:inherit;min-height:44px;border:1px solid var(--ep-line);border-radius:8px;background:var(--ep-panel);color:var(--ep-ink);padding:7px 13px;font-size:13px}
+#hsl-everyday button[aria-pressed=true],#hsl-everyday button[aria-selected=true]{background:var(--ep-ink);color:var(--ep-panel);border-color:var(--ep-ink)}
+#hsl-everyday .ep-tabs{display:flex;gap:7px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--ep-line)}
+#hsl-everyday .ep-tabs button{border-radius:999px}
+#hsl-everyday .ep-count{font-size:12px;color:var(--ep-copy);margin:12px 0}
+#hsl-everyday .ep-products{background:var(--ep-panel);border-radius:14px;overflow:hidden}
+#hsl-everyday .ep-row{padding:16px;display:grid;grid-template-columns:68px minmax(0,1fr) 113px;align-items:center;gap:15px;border-bottom:1px solid var(--ep-line)}
+#hsl-everyday .ep-row:last-child{border-bottom:0}
+#hsl-everyday .ep-photo{width:68px;height:76px;object-fit:contain;background:white;border-radius:4px}
+#hsl-everyday .ep-missing{font-size:11px;text-align:center;color:var(--ep-copy)}
+#hsl-everyday .ep-store{font-size:11px;background:var(--ep-soft);border-radius:4px;padding:2px 6px;display:inline-block;margin-bottom:4px}
+#hsl-everyday .ep-name{font-size:15px;font-weight:700;overflow-wrap:anywhere}
+#hsl-everyday .ep-detail{font-size:12px;color:var(--ep-copy);margin-top:3px;overflow-wrap:anywhere}
+#hsl-everyday .ep-original{font-size:11px;color:var(--ep-copy);margin-top:3px;line-height:1.4;overflow-wrap:anywhere}
+#hsl-everyday .ep-price{text-align:right;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+#hsl-everyday .ep-price small{font-size:12px;font-weight:400}
+#hsl-everyday a{font-size:12px;color:var(--ep-blue);text-underline-offset:3px}
+#hsl-everyday .ep-price a{display:block;font-weight:400;margin-top:4px}
+#hsl-everyday .ep-unit{font-size:11px;font-weight:400;color:var(--ep-copy);margin-top:3px}
+#hsl-everyday footer{margin-top:22px;border-top:1px solid var(--ep-line);padding-top:12px}
+#hsl-everyday footer p{font-size:12px}
+#hsl-everyday [hidden]{display:none!important}
+@media(max-width:480px){#hsl-everyday{padding:15px 12px}#hsl-everyday .ep-row{padding:13px 10px;grid-template-columns:45px minmax(0,1fr) 84px;gap:9px}#hsl-everyday .ep-photo{width:45px;height:63px}#hsl-everyday .ep-name{font-size:13px}#hsl-everyday .ep-price{font-size:17px}#hsl-everyday .ep-stores button{padding:7px 10px}}
+
+#hsl-everyday .ep-yen{display:block;font-size:14px;font-weight:500;color:var(--ep-copy);margin:3px 0 7px}#hsl-everyday .ep-price{overflow-wrap:anywhere} 
+#hsl-everyday .ep-row{align-items:center}#hsl-everyday .ep-price{font-variant-numeric:tabular-nums}#hsl-everyday details{margin-top:20px;font-size:12px;color:var(--ep-copy)}#hsl-everyday summary{min-height:44px;align-content:center}#hsl-everyday .ep-name{font-size:16px}
+
+#hsl-everyday{background:transparent;padding:0;border-radius:0}#hsl-everyday .ep-stores{margin-top:12px}#hsl-everyday .ep-yen{white-space:normal}@media(max-width:480px){#hsl-everyday .ep-name{font-size:13px}}

@@ -1,5 +1,18 @@
 [
   {
+    "id": "erasmus-mundus",
+    "enabled": true,
+    "featured": true,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "Erasmus Mundus奨学金｜日本人の応募条件・倍率・2027年募集",
+    "description": "共同修士の月額給付、選考実績、日本からの採用統計、SHとの併用と参加課程を公式資料で確認。",
+    "category": "奨学金",
+    "url": "guide-erasmus-mundus.html",
+    "date": "2026-10-17",
+    "thumbnail": "images/erasmus-mundus/ppke-campus.webp"
+  },
+  {
     "id": "university-pecs",
     "enabled": true,
     "featured": false,

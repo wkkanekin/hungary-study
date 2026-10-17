@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-10-17",
+  "assets": [
+    {
+      "path": "images/erasmus-mundus/elte-campus.webp",
+      "photographer": "Misibacsi",
+      "source": "https://commons.wikimedia.org/wiki/File:Budapest_ELTE_Univ_central_building.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "alt": "エトヴェシュ・ロラーンド大学（ELTE）人文学部・Múzeum körútの校舎",
+      "caption": "エトヴェシュ・ロラーンド大学（ELTE）人文学部・Múzeum körútの校舎",
+      "photographed_at": "2007-07-23",
+      "changes": "EXIF orientation applied where applicable; resized to max 1400 px; WebP compression. No crop in stored file.",
+      "commercial_use_and_modification": "Permitted under stated license; attribution, source and license links required. CC BY-SA adaptations retain same license.",
+      "verified_at": "2026-10-17"
+    },
+    {
+      "path": "images/erasmus-mundus/ppke-campus.webp",
+      "photographer": "Sir Morosus",
+      "source": "https://commons.wikimedia.org/wiki/File:PPCU_Faculty_of_Information_Technology_and_Bionics_(d)_(2).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "alt": "パーズマーニ・ペーテル・カトリック大学（PPKE）情報技術・バイオニクス学部（Budapest, Práter utca 50/a）",
+      "caption": "パーズマーニ・ペーテル・カトリック大学（PPKE）情報技術・バイオニクス学部（Budapest, Práter utca 50/a）",
+      "photographed_at": "2022-04-26",
+      "changes": "EXIF orientation applied where applicable; resized to max 1400 px; WebP compression. No crop in stored file.",
+      "commercial_use_and_modification": "Permitted under stated license; attribution, source and license links required. CC BY-SA adaptations retain same license.",
+      "verified_at": "2026-10-17"
+    },
+    {
+      "path": "images/erasmus-mundus/oldenburg-campus.webp",
+      "photographer": "Jacobs Duong",
+      "source": "https://commons.wikimedia.org/wiki/File:University_of_Oldenburg,_Main_Campus.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "alt": "オルデンブルク大学・Haarentorキャンパスの講義棟",
+      "caption": "オルデンブルク大学・Haarentorキャンパスの講義棟",
+      "photographed_at": "2014-04-28",
+      "changes": "EXIF orientation applied where applicable; resized to max 1400 px; WebP compression. No crop in stored file.",
+      "commercial_use_and_modification": "Permitted under stated license; attribution, source and license links required. CC BY-SA adaptations retain same license.",
+      "verified_at": "2026-10-17"
+    },
+    {
+      "path": "images/erasmus-mundus/goettingen-campus.webp",
+      "photographer": "Christoph Alexander Martsch",
+      "source": "https://commons.wikimedia.org/wiki/File:Campus_Göttingen_Frühling.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "alt": "春のゲッティンゲン大学中央キャンパス",
+      "caption": "春のゲッティンゲン大学中央キャンパス",
+      "photographed_at": "2009-04-01",
+      "changes": "EXIF orientation applied where applicable; resized to max 1400 px; WebP compression. No crop in stored file.",
+      "commercial_use_and_modification": "Permitted under stated license; attribution, source and license links required. CC BY-SA adaptations retain same license.",
+      "verified_at": "2026-10-17"
+    }
+  ],
+  "map": {
+    "source": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "dataset": "Natural Earth 1:110m admin-0 countries",
+    "license": "Public domain",
+    "changes": "Equirectangular SVG, Europe viewport, selected learning-country highlights, university city pins"
+  }
+}

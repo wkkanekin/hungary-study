@@ -1,0 +1,295 @@
+{
+  "checked_at": "2026-10-17",
+  "sources": {
+    "guide": {
+      "title": "Erasmus+ Programme Guide 2026：EMJM",
+      "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/erasmus-mundus"
+    },
+    "students": {
+      "title": "欧州委員会：学生向けEMJM案内",
+      "url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters"
+    },
+    "catalogue": {
+      "title": "EACEA：Erasmus Mundus Catalogue",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+    },
+    "japan": {
+      "title": "EU Japan 2025 factsheet（2026年3月掲載）p.2",
+      "url": "https://erasmus-networks.ec.europa.eu/system/files/2026-03/Japan%202025%20factsheet%20Erasmus%2B.pdf"
+    },
+    "oldjapan": {
+      "title": "EU Japan 2024 factsheet（旧集計）p.2",
+      "url": "https://erasmus-networks.ec.europa.eu/system/files/2025-07/japan_erasmusplus_2024.pdf"
+    },
+    "fx": {
+      "title": "ECB：円参考為替（2026年10月16日）",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-jpy.en.html"
+    },
+    "sh": {
+      "title": "SH Operational Regulations（2026年8月31日施行）",
+      "url": "https://stipendiumhungaricum.hu/documents/stipendium_hungaricum/OR/SH_OR.pdf"
+    },
+    "shcall": {
+      "title": "SH 2026/27募集要項",
+      "url": "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+    },
+    "daad": {
+      "title": "DAAD：奨学金FAQ A13",
+      "url": "https://www.daad.de/en/studying-in-germany/scholarships/information-for-scholarship-applicants/"
+    },
+    "jasso": {
+      "title": "JASSO：大学院学位取得型・併給条件",
+      "url": "https://ryugaku.jasso.go.jp/scholarship/search/data_00113.html"
+    },
+    "jasso27": {
+      "title": "JASSO：2027年度大学院学位取得型募集",
+      "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/2027.html"
+    },
+    "cwaj": {
+      "title": "CWAJ：2027 SA募集条件",
+      "url": "https://cwaj.org/2027-sa-application-requirements/"
+    },
+    "mapp": {
+      "title": "Mundus MAPP：資金援助・併給・費用",
+      "url": "https://www.mundusmapp.org/financial-aid/"
+    },
+    "marihe": {
+      "title": "MARIHE：2027選考日程",
+      "url": "https://www.marihe.eu/how-to-apply/application-process-and-timetable/"
+    },
+    "marihequal": {
+      "title": "MARIHE：入学・英語要件",
+      "url": "https://www.marihe.eu/admission-requirements/"
+    },
+    "marihescoring": {
+      "title": "MARIHE：現行評価基準",
+      "url": "https://www.marihe.eu/assessment-criteria/"
+    },
+    "marihepartners": {
+      "title": "MARIHE：2025–28参加大学",
+      "url": "https://www.marihe.eu/consortium/"
+    },
+    "ipcv": {
+      "title": "IPCVai：2027出願期間・条件",
+      "url": "https://ipcv.eu/application-and-selection/application/"
+    },
+    "ipcvroute": {
+      "title": "IPCVai：学期別の学修先",
+      "url": "https://ipcv.eu/about-ipcv-program-2/detailed-program-2/"
+    },
+    "ipcvfees": {
+      "title": "IPCVai：費用と奨学金",
+      "url": "https://ipcv.eu/about-ipcv-program-2/costs-and-funding-2/"
+    },
+    "dafm": {
+      "title": "DAFM：公式募集日程・実績",
+      "url": "https://agrifoodmaster.eu/scheduled-timeline.html"
+    },
+    "dafmmate": {
+      "title": "MATE：Danube AgriFood Master",
+      "url": "https://en.uni-mate.hu/danube-agrifood-master-dafm"
+    },
+    "emmir": {
+      "title": "EMMIR：2027出願・書類・締切",
+      "url": "https://www.emmir.org/application-procedures"
+    },
+    "emmirqual": {
+      "title": "EMMIR：学歴・語学要件",
+      "url": "https://www.emmir.org/requirements"
+    },
+    "euroculture": {
+      "title": "Euroculture：2027出願・語学条件",
+      "url": "https://www.euroculturemaster.eu/application-procedure"
+    },
+    "emerald": {
+      "title": "EMerald：2027出願・選考",
+      "url": "https://www.emerald.uliege.be/apply-3/apply/"
+    },
+    "cartography": {
+      "title": "Cartography：出願・適性選考",
+      "url": "https://cartographymaster.eu/how-to-apply/"
+    },
+    "cartopartners": {
+      "title": "Cartography：課程と大学",
+      "url": "https://cartographymaster.eu/about/"
+    },
+    "flood": {
+      "title": "Flood Risk Management：出願・助成条件",
+      "url": "https://www.floodriskmaster.org/howtoapply"
+    },
+    "ediss": {
+      "title": "EDISS：2027–29の3募集区分",
+      "url": "https://www.master-ediss.eu/upcoming-application-rounds-ediss-intake-7/"
+    },
+    "secclo": {
+      "title": "SECCLO：年度別選考結果",
+      "url": "https://www.secclo.eu/admission/selection-results/"
+    },
+    "imim": {
+      "title": "IMIM：2025奨学金採用結果",
+      "url": "https://www.innovativemedicine.eu/news/selection-results-are-in-20-scholarships-awarded-and-9-self-funded-students-welcomed"
+    },
+    "sufonama": {
+      "title": "SUFONAMA：2025入学統計",
+      "url": "https://sufonama-em.eu/application/"
+    }
+  },
+  "japan_statistics": {
+    "definition": "EM scholarship winners from Japan; not explicitly nationality; not current recipients",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "japan": [
+      9,
+      5,
+      3,
+      6,
+      5
+    ],
+    "worldwide": [
+      2413,
+      3038,
+      2869,
+      2805,
+      2399
+    ],
+    "old_release_2021_revised_from": 10
+  },
+  "unconfirmed": [
+    "2026 Japan scholarship awards",
+    "Japan applicant numbers/adoption rates",
+    "current Japanese scholarship holders",
+    "2027 DAFM/Cartography final call and scholarship status",
+    "complete latest Japanese programme-level awards"
+  ],
+  "supplementary_sources": [
+    "https://www.emmir.org/partners",
+    "https://www.emmir.org/qualifications-and-learning-outcome",
+    "https://ipcv.eu/about-ipcv-program-2/",
+    "https://cartographymaster.eu/entry-requirements/",
+    "https://agrifoodmaster.eu/how-to-apply.html",
+    "https://www.floodriskmaster.org/scholarships",
+    "https://www.un-ihe.org/education/english-language-requirements",
+    "https://www.euroculturemaster.eu/partners"
+  ],
+  "notes": [
+    "Programme tuples preserve initial research; final verified additions and corrections are in published HTML plus supplementary sources.",
+    "DAFM how-to-apply has older self-funded-only cohort and differs from timeline; no 2027 scholarship claim.",
+    "Flood country category on current page is nationality, not residence.",
+    "SH overseas funding clause is III.1.8, not III.2.8."
+  ],
+  "published_programmes": {
+    "program-marihe": {
+      "title": "MARIHE｜高等教育・研究・イノベーション",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／修士（学位構成は専門経路と契約で確認）",
+        "参加大学・国": "University for Continuing Education Krems（AT）、Tampere University（FI）、Osnabrück University of Applied Sciences（DE）、ELTE（HU）、University of Aveiro（PT）、Beijing Normal University（CN）、Thapar Institute of Engineering and Technology（IN）",
+        "学歴・英語": "学士180 ECTS相当、専攻不問。IELTS6.5／各5.5。職歴必須ではない。",
+        "2027募集": "2027奨学金選考あり。第1段階2026/9/21終了。次の動画締切は新規募集ではありません。"
+      },
+      "sources": [
+        "https://www.marihe.eu/how-to-apply/application-process-and-timetable/",
+        "https://www.marihe.eu/admission-requirements/"
+      ]
+    },
+    "program-ipcv": {
+      "title": "IPCVai｜AI・画像処理・コンピュータービジョン",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／3大学によるTriple Master degree（3つの修士学位）",
+        "参加大学・国": "Pázmány Péter Catholic University（HU）、Universidad Autónoma de Madrid（ES）、University of Bordeaux（FR）",
+        "学歴・英語": "CS・工学・数学・物理の学士、Good以上の成績。IELTS6.5／TOEFL90、全英語学士の証明で代替できる場合あり。",
+        "2027募集": "2027新EM募集：2026/11/1〜2027/2/2正午Paris。"
+      },
+      "sources": [
+        "https://ipcv.eu/application-and-selection/application/",
+        "https://ipcv.eu/about-ipcv-program-2/detailed-program-2/",
+        "https://ipcv.eu/about-ipcv-program-2/"
+      ]
+    },
+    "program-dafm": {
+      "title": "DAFM｜持続可能な農業・食料システム",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／共同MSc “Sustainability in Agriculture, Food Production and Food Technology in the Danube Region”",
+        "参加大学・国": "MATE（HU）、Czech University of Life Sciences Prague（CZ）、BOKU University（AT）、Slovak University of Agriculture in Nitra（SK）、University of Zagreb（HR）、University of Novi Sad（RS）、University of Life Sciences “King Mihai I” from Timișoara（RO）",
+        "学歴・英語": "公開済みの旧要件は農業関連学士180 ECTS・GPA75％以上、IELTS6.0／TOEFL iBT90–91／TOEIC785（BOKUには追加条件）。2027条件としての適用は未確認。",
+        "2027募集": "日程ページは2026/2/15締切、募集方法ページはIntake5（2025/26）自費のみと記載し、更新年度が一致していません。2027募集・奨学金枠・締切は未確認。現在の奨学金募集としては扱いません。"
+      },
+      "sources": [
+        "https://agrifoodmaster.eu/scheduled-timeline.html",
+        "https://en.uni-mate.hu/danube-agrifood-master-dafm",
+        "https://agrifoodmaster.eu/how-to-apply.html"
+      ]
+    },
+    "program-emmir": {
+      "title": "EMMIR｜移民・異文化関係",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／7大学が共同授与するMigration and Intercultural Relationsの修士共同学位",
+        "参加大学・国": "University of Oldenburg（DE）、University of Stavanger（NO）、University of Ghana（GH）、Mbarara University of Science and Technology（UG）、University of Nova Gorica（SI）、Charles University（CZ）、University of the Witwatersrand（ZA）、Mahanirban Calcutta Research Group（IN）。研究機関1を含む8機関、学位授与は7大学。",
+        "学歴・英語": "関連学士、C+相当以上。現行要件ページの語学表はIELTS6.5／TOEFL iBT88（旧尺度）。表には2022年表記があるため、2027に適用される証明・尺度は事務局へ再確認。既修士は再進学理由の説明が必要。",
+        "2027募集": "2027–29受付中。奨学金・授業料不要自費枠：2026/12/20 23:59 CET。奨学金候補は締切までに学士課程修了。"
+      },
+      "sources": [
+        "https://www.emmir.org/application-procedures",
+        "https://www.emmir.org/requirements",
+        "https://www.emmir.org/partners"
+      ]
+    },
+    "program-euroculture": {
+      "title": "Euroculture｜欧州の社会・政治・文化",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／修士。授与形態は経路別",
+        "参加大学・国": "Göttingen（DE）、Groningen（NL）、Udine（IT）、Strasbourg（FR）、Palacký University Olomouc（CZ）、Jagiellonian University Kraków（PL）、Uppsala（SE）。研究滞在等の追加提携先とは区別。",
+        "学歴・英語": "人文・社会系学士。IELTS6.5／全技能6.5。奨学金希望者は締切時の卒業条件を確認。",
+        "2027募集": "2027奨学金：2026/10/15〜2027/1/15。結果は2027年3月末予定。"
+      },
+      "sources": [
+        "https://www.euroculturemaster.eu/application-procedure"
+      ]
+    },
+    "program-emerald": {
+      "title": "EMerald｜地質資源工学",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／修士。複数学位の詳細は経路別",
+        "参加大学・国": "University of Liège（BE）、University of Lorraine（FR）、Luleå University of Technology（SE）、TU Bergakademie Freiberg（DE）",
+        "学歴・英語": "地球科学・鉱業・工学等の関連学士。IELTS6.5／TOEFL87（受験日・新尺度は再確認）。",
+        "2027募集": "2027奨学金：2026/11/3〜2027/2/28。上位40人面接、最終決定2027/4/16予定。"
+      },
+      "sources": [
+        "https://www.emerald.uliege.be/apply-3/apply/"
+      ]
+    },
+    "program-cartography": {
+      "title": "Cartography｜地図・地理情報",
+      "facts": {
+        "期間・学位": "4学期／4大学の共同学位MSc in Cartography",
+        "参加大学・国": "Technical University of Munich・TU Dresden（DE）、TU Wien（AT）、University of Twente（NL）",
+        "学歴・英語": "関連学士。日本の学士はuni-assist VPDの案内も確認。現行入学要件はIELTS Academic6.5／TOEFL iBT88（旧尺度）／PTE65、英語教授言語証明で免除可。2027の奨学金要項・新TOEFL尺度対応は最新公募で再確認。",
+        "2027募集": "2026募集終了。2027の確定出願期間・奨学金募集は今回未確認。"
+      },
+      "sources": [
+        "https://cartographymaster.eu/how-to-apply/",
+        "https://cartographymaster.eu/about/",
+        "https://cartographymaster.eu/entry-requirements/"
+      ]
+    },
+    "program-flood": {
+      "title": "Flood Risk Management｜洪水リスク管理",
+      "facts": {
+        "期間・学位": "2年・120 ECTS／水・水工学・洪水リスク管理のMSc（複数学位、詳細は公式学位一覧）。単一のDiploma Supplement",
+        "参加大学・国": "TU Dresden（DE）、IHE Delft Institute for Water Education（NL）、Universitat Politècnica de Catalunya（ES）、University of Ljubljana（SI）",
+        "学歴・英語": "土木・水・環境等の関連学士。リンク先IHE Delftのjoint MSc基準はIELTS6.0（Writing6.0）／TOEFL iBT80（Writing17、旧尺度）。2027の提出期限・尺度は事務局へ確認（公式ページに旧年表記が混在）。",
+        "2027募集": "2027：Partner Countries 1/3 23:59 CET、Programme Countries 2/7。約14のEM奨学金予定はEC承認条件付き。公式の国籍区分を確認。"
+      },
+      "sources": [
+        "https://www.floodriskmaster.org/howtoapply",
+        "https://www.un-ihe.org/education/english-language-requirements",
+        "https://www.floodriskmaster.org/scholarships"
+      ]
+    }
+  },
+  "old_statistics_url_status": "HTTP 404 on direct check; search index still provides official older table. No broken clickable URL retained in articles."
+}

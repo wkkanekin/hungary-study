@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+"""Render the Germany ranking page from edition-bound, reviewed source records."""
+import json,html
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+D=json.loads((ROOT/'germany/data/ranking-catalog.json').read_text())
+e=lambda s:html.escape(str(s),quote=True)
+SUBJECTS={
+'Engineering & Technology':('engineering','工学・技術'),'Engineering':('engineering','工学'),
+'Computer Science & Information Systems':('computing','コンピューター科学・情報システム'),'Computer Science':('computing','コンピューター科学'), 'Data Science & Artificial Intelligence':('computing','データサイエンス・AI'),
+'Economics & Econometrics':('business','経済学・計量経済学'),'Business & Management Studies':('business','経営学'),'Business and Economics':('business','経営・経済'),
+'Medicine':('medicine','医学'),'Medical and Health':('medicine','医学・医療'),
+'Natural Sciences':('science','自然科学'),'Physical Sciences':('science','物理科学'),'Life Sciences':('science','生命科学'),
+'Arts & Humanities':('humanities','芸術・人文科学'),'Arts and Humanities':('humanities','芸術・人文科学'),
+'Social Sciences & Management':('social','社会科学・経営'),'Social Sciences':('social','社会科学'),
+'Architecture & Built Environment':('architecture','建築学・建造環境'),'Environmental Sciences':('environment','環境科学'),
+'Law & Legal Studies':('law','法学'),'Law':('law','法学'),'Psychology':('psychology','心理学'),'Education Studies':('education','教育学'),'Agriculture & Forestry':('agriculture','農学・林学')}
+CATEGORIES={'engineering':'工学・技術','computing':'コンピューターサイエンス・AI','business':'経済学・経営学','medicine':'医学・医療','science':'自然・生命科学','humanities':'人文科学','social':'社会科学','architecture':'建築学','environment':'環境科学','law':'法学','psychology':'心理学','education':'教育学','agriculture':'農学・林学'}
+by={u['id']:u for u in D['universities']}
+assert len(by)==len(D['universities'])
+keys=set()
+for r in D['records']:
+ key=(r['university'],r['provider'],r['subject'],r['year']);assert key not in keys;keys.add(key)
+ assert r['university'] in by
+ if r['subject']!='総合':assert r['subject'] in SUBJECTS
+
+def university(u):
+ label=f'<strong>{e(u["name_ja"])}</strong><span class="rk-en">{e(u["name"])}</span>'
+ return f'<a class="universityLink" href="{e(u["guide"])}">{label}<span class="guideLabel">大学ガイドを読む →</span></a>' if u['guide'] else label
+
+def source(r):
+ return f'<a href="{e(r["source"])}" target="_blank" rel="noopener noreferrer">公式出典 ↗</a><small>確認 {e(r["checkedOn"])}</small>'
+def rank(r):
+ if r['status']=='ranked':return f'<strong class="rankValue">{e(r["rank"])}</strong>'+source(r)
+ return '<span class="rankStatus">'+{'not_listed':'未掲載','out_of_range':'圏外','unverified':'未確認'}[r['status']]+'</span>'+source(r)
+def attrs(u):
+ cats=' '.join(sorted({SUBJECTS[r['subject']][0] for r in D['records'] if r['university']==u['id'] and r['subject']!='総合'}))
+ return f'data-university="{e(u["id"])}" data-search="{e(" ".join([u["name_ja"],u["name"],*u["aliases"]]))}" data-state="{e(u["state"])}" data-city="{e(u["city"])}" data-categories="{cats}"'
+def key(r):return int(__import__('re').search(r'\d+',r['rank'])[0]) if r['status']=='ranked' else 999999
+rows=[]
+for u in sorted(by.values(),key=lambda u:(key(u['overall']['QS']),u['name'])):
+ ranks=''.join(f'<td data-provider="{p}" data-rank="{key(u["overall"][p])}">{rank(u["overall"][p])}</td>' for p in ['QS','THE','ARWU'])
+ note=u.get('identity_note','')
+ rows.append(f'<tr {attrs(u)}><th scope="row">{university(u)}'+(f'<small>{e(note)}</small>' if note else '')+f'</th><td><strong>{e(u["city"])}</strong><small>{e(u["state"])}</small><small>{e(u["location_note"])}</small></td>{ranks}</tr>')
+subjectrows=[]
+for r in sorted([r for r in D['records'] if r['subject']!='総合'],key=lambda r:(r['subject'],r['provider'],key(r),by[r['university']]['name'])):
+ u=by[r['university']];category,label=SUBJECTS[r['subject']]
+ subjectrows.append(f'<tr {attrs(u)} data-category="{category}" data-subject="{e(r["subject"])}" data-publisher="{r["provider"]}" data-rank="{key(r)}"><th scope="row">{university(u)}<small>{e(u["city"])} · {e(u["state"])}</small></th><td><strong>{label}</strong><span class="rk-en">{e(r["subject"])}</span></td><td>{r["provider"]}<small>{r["year"]}年版</small></td><td><strong class="rankValue">{e(r["rank"])}</strong></td><td>{source(r)}</td></tr>')
+catopts=''.join(f'<option value="{k}">{v}</option>' for k,v in CATEGORIES.items())
+stateopts=''.join(f'<option>{e(s)}</option>' for s in sorted({u['state'] for u in by.values()}))
+cityopts=''.join(f'<option>{e(s)}</option>' for s in sorted({u['city'] for u in by.values()}))
+subjects=sorted({r['subject'] for r in D['records'] if r['subject']!='総合'})
+subjectopts=''.join(f'<option value="{e(s)}" data-category="{SUBJECTS[s][0]}">{SUBJECTS[s][1]} / {e(s)}</option>' for s in subjects)
+counts={p:sum(r['provider']==p and r['subject']=='総合' for r in D['records']) for p in ['QS','THE','ARWU']}
+title='ドイツ大学ランキング｜QS・THE・ARWU世界順位・分野別比較'
+description=f'ドイツの{len(by)}大学をQS 2027・THE 2027・ARWU 2026で比較。工科大学・大学院選びに役立つ2026年版の分野別世界順位、都市・州検索、大学ガイドを掲載。'
+url='https://hungarystudy.org/germany/rankings.html'
+schema={'@context':'https://schema.org','@graph':[{'@type':'WebPage','@id':url,'url':url,'name':title,'description':description,'inLanguage':'ja','dateModified':D['checkedOn']},{'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'ドイツ留学ラボ','item':'https://hungarystudy.org/germany/'},{'@type':'ListItem','position':2,'name':'ドイツ大学ランキング','item':url}]}]}
+nav='<nav aria-label="目次" class="topBar"><div class="topBarInner"><div class="topNav"><a href="index.html">TOP</a><a href="basics.html">ドイツ留学の全体像</a><a href="universities.html">大学ガイド</a><a href="rankings.html" aria-current="page">ドイツ大学ランキング</a><a href="index.html#students">現役生を探す</a><a href="index.html#contact">問い合わせ</a></div></div></nav>'
+page=f'''<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{description}"><link rel="canonical" href="{url}"><meta property="og:type" content="website"><meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta property="og:url" content="{url}"><meta property="og:site_name" content="ドイツ留学ラボ"><link rel="icon" href="images/favicon-32x32.png?v=20261014-brand-icon"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="germany.css"><link rel="stylesheet" href="pages.css"><link rel="stylesheet" href="ranking-comparison.css?v=20261017"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><script defer src="ranking-comparison.js?v=20261017"></script></head>
+<body><a class="skipLink" href="#main">本文へ移動</a><div class="container rankingPage"><header class="card pageHero rankingHero"><a href="index.html" class="rankingBrand"><img src="images/brand-mark.jpg" width="64" height="64" alt="ドイツ留学ラボのロゴ"><span>GERMANY STUDY LAB</span></a><p class="pageEyebrow">UNIVERSITY RANKINGS</p><h1>ドイツ大学ランキング</h1><p>大学全体の評価と、学びたい分野の強み。<br>2つの視点から、進学先を比較する。</p><div class="editionTags"><span>QS 2027</span><span>THE 2027</span><span>ARWU 2026</span><span>分野別 2026</span></div><p class="lastChecked">公式情報確認：{D['checkedOn']}</p></header>{nav}<div class="breadcrumb"><a href="index.html">ドイツ留学ラボ</a><span> › </span><span>ドイツ大学ランキング</span></div>
+<main id="main"><section class="rankingIntro"><p>ドイツの大学・大学院選びに、QS・THE・ARWUの世界順位を比較できます。<strong>総合ランキングと分野別ランキングは別の評価</strong>です。専攻・授業言語・出願条件と合わせてご活用ください。</p><div class="rankingStats"><div><strong>{len(by)}</strong><span>掲載大学</span></div><div><strong>{counts['QS']} / {counts['THE']} / {counts['ARWU']}</strong><span>総合順位あり：QS / THE / ARWU</span></div><div><strong>{len(subjectrows)}</strong><span>分野別の順位データ</span></div></div><p class="smallNote">確認済みの公開表・大学プロフィールに基づく収録です。ドイツの全大学を網羅する一覧ではありません。</p><div class="jumpLinks"><a href="#overall">総合ランキング ↓</a><a href="#subjects">分野別ランキング ↓</a><a href="#university-types">ドイツの大学制度 ↓</a><a href="#sources">出典と読み方 ↓</a></div></section>
+<section class="filterPanel" aria-label="共通検索条件"><h2>条件から大学を探す</h2><div class="rankingFilters"><label>大学名<input type="search" id="search" placeholder="日本語・英語・ドイツ語／略称"></label><label>専攻分野<select id="category"><option value="">すべての分野</option>{catopts}</select></label><label>州<select id="state"><option value="">すべての州</option>{stateopts}</select></label><label>都市<select id="city"><option value="">すべての都市</option>{cityopts}</select></label></div><button id="reset" type="button">条件をリセット</button><p class="smallNote">専攻分野は、収録した分野別ランキングがある大学を絞り込みます。学べる全専攻の一覧ではありません。</p></section>
+<section id="overall" class="rankingSection"><p class="rankingKicker">01 / OVERALL</p><h2>世界大学総合ランキング</h2><p>3機関を横に並べて比較。大学名に「大学ガイドを読む」がある場合は、既存ガイドへ進めます。</p><div class="tableTools"><label>表示・並べ替えの基準<select id="overallProvider"><option value="">3機関を比較（QS順）</option><option value="QS">QS 2027</option><option value="THE">THE 2027</option><option value="ARWU">ARWU 2026</option></select></label><label>順位の順序<select id="overallSort"><option value="asc">上位から</option><option value="desc">下位から</option></select></label></div><p id="overallCount" role="status" aria-live="polite">{len(rows)}大学</p><p class="smallNote">横にスクロールして比較できます。未掲載・未確認は末尾に表示。同じ順位帯の中に独自順位は付けません。</p><div class="rankingScroll" role="region" aria-label="総合ランキング比較表" tabindex="0"><table class="comparisonTable" id="overallTable"><caption>ドイツ大学の世界総合順位：QS 2027・THE 2027・ARWU 2026</caption><thead><tr><th scope="col">大学名</th><th scope="col">主な所在地・州</th><th scope="col" data-provider="QS">QS <small>2027年版</small></th><th scope="col" data-provider="THE">THE <small>2027年版</small></th><th scope="col" data-provider="ARWU">ARWU <small>2026年版</small></th></tr></thead><tbody>{''.join(rows)}</tbody></table></div><p id="overallEmpty" class="emptyResult" hidden>該当する大学がありません。検索条件を変更してください。</p></section>
+<section id="subjects" class="rankingSection"><p class="rankingKicker">02 / BY SUBJECT</p><h2>分野別の世界大学ランキング</h2><p>同じ評価機関・年度・正式な分野名で比較してください。工学全体と建築、コンピューター科学とAIは、それぞれ別の分野です。</p><div class="tableTools"><label>評価機関<select id="subjectProvider"><option value="QS">QS 2026</option><option value="THE">THE 2026</option><option value="">QS・THEすべて（分野ごと）</option></select></label><label>正式な分野<select id="discipline"><option value="">すべての分野（分野ごとに表示）</option>{subjectopts}</select></label><label>順位の順序<select id="subjectSort"><option value="asc">上位から</option><option value="desc">下位から</option></select></label></div><p id="subjectCount" role="status" aria-live="polite">{len(subjectrows)}件</p><p class="smallNote">初期表示はQSの分野別です。THEに切り替えると教育学・心理学・生命科学なども比較できます。異なる分野・機関の順位を合算していません。</p><div class="rankingScroll" role="region" aria-label="分野別ランキング比較表" tabindex="0"><table class="comparisonTable" id="subjectTable"><caption>2026年版・分野別の世界順位</caption><thead><tr><th scope="col">大学名・所在地</th><th scope="col">正式な分野名</th><th scope="col">機関・年度</th><th scope="col">世界順位</th><th scope="col">確認日・出典</th></tr></thead><tbody>{''.join(subjectrows)}</tbody></table></div><p id="subjectEmpty" class="emptyResult" hidden>この条件では確認済みデータがありません。大学が圏外であることや、その専攻がないことを意味しません。</p><p class="smallNote">データサイエンス・AIとコンピューター科学は別の表です。QSChinaの「Data Science」はTopUniversitiesの「Data Science and Artificial Intelligence」に対応します。ARWUは総合のみ掲載し、分野別のGRASとは区別しています。</p></section>
+<section id="university-types" class="rankingReading"><p class="rankingKicker">03 / CHOOSE YOUR PATH</p><h2>ドイツの大学は、総合順位だけで選ばない</h2><div class="typeGrid"><article><h3>Universität・TU</h3><p>総合大学・工科大学。研究と理論を重視し、博士課程への進学を考える際にも候補になります。TUも研究型大学の一種です。</p></article><article><h3>HAW・FH</h3><p>応用科学大学。実務に結びつく教育、インターンシップや企業との連携を重視。研究中心の世界総合ランキングでは評価が表れにくい場合があります。</p></article><article><h3>デュアル課程・大学</h3><p>大学での学習と企業での実務を組み合わせます。企業との契約、実習内容、給与や語学条件などを確認しましょう。HAW・FH等でも提供されます。</p></article></div><p><strong>ランキングに載っていない＝教育水準が低い、という意味ではありません。</strong>実務教育や就職を重視する場合は、認可・認証、授業内容、企業との連携、卒業後の進路まで比較しましょう。</p><div class="jumpLinks"><a href="basics-university.html">ドイツの大学制度・出願要件 →</a><a href="guide-dhbw.html">DHBWガイド →</a><a href="guide-iu.html">IUガイド →</a></div><p>学習環境を専攻ごとに確認するには、<a href="https://www.daad.de/en/studying-in-germany/universities/che-ranking/?che-a=subject-list" target="_blank" rel="noopener noreferrer">DAADのCHEランキング</a>も参考になります。</p></section>
+<section id="sources" class="rankingReading"><h2>出典・年度と順位の読み方</h2><div class="typeGrid"><article><h3>QS</h3><p>学術・雇用者の評判、研究の被引用、国際性など。総合2027年版、分野別2026年版。</p><a href="https://www.topuniversities.com/world-university-rankings" target="_blank" rel="noopener noreferrer">TopUniversities ↗</a><p>順位表はQS運営の<a href="https://www.qs-topuniversities.cn/en/university-rankings/world-university-rankings/2027" target="_blank" rel="noopener noreferrer">QSChina公開表 ↗</a>から取得し、主要大学は本家・大学公式発表とも照合しています。</p></article><article><h3>THE</h3><p>教育、研究環境・研究の質、国際性、産業との関係。総合2027年版、分野別2026年版。大学公式プロフィールの年度を個別に確認。</p><a href="https://www.timeshighereducation.com/world-university-rankings/latest/world-ranking" target="_blank" rel="noopener noreferrer">THE公式ランキング ↗</a></article><article><h3>ARWU</h3><p>受賞歴・高被引用研究者・論文等の研究実績。2026年版の公式公開表1000校を確認。</p><a href="https://www.shanghairanking.com/rankings/arwu/2026" target="_blank" rel="noopener noreferrer">ShanghaiRanking公式 ↗</a></article></div><ul><li><strong>「=」は同順位</strong>。「101–150」は順位帯です。帯内の順序は順位差を示しません。</li><li><strong>未掲載</strong>：当該年度の確認済み公開表に、その大学名がないこと。<strong>圏外</strong>：公表対象順位外と公式に明記された場合のみ使用。<strong>未確認</strong>：年度・順位の確認が完了していないこと。今回、圏外と断定した大学はありません。</li><li>QS・ARWUはドイツ掲載校の公開表を確認。THEは55大学のプロフィールを確認しており、それ以外を圏外扱いしていません。</li><li>所在地は主な拠点です。TUM、バイロイト大学、RPTUなどは課程により別都市のキャンパスとなる場合があります。</li><li>大学の改称・統合に伴う旧表記は検索に対応。RPTUとミュンスター大学の旧表記も保存しています。</li><li>分野別は確認できた2026年版のみです。THEプロフィールに過年度しかない分野は掲載していません。</li></ul><p>確認日：{D['checkedOn']}。各順位の公式出典は表内のリンクをご覧ください。年度・順位・参照URL・確認日を保存した<a href="data/ranking-catalog.json">収録データ（JSON）</a>も公開しています。</p></section>
+<section class="rankingConsult"><h2>候補が見つかったら、出願条件へ</h2><p>ランキングから大学を絞ったら、希望する学士・修士課程の授業言語、学費、入学要件を確認しましょう。</p><a class="btn primary" href="universities.html">大学ガイドを見る →</a><a class="btn" href="index.html#students">現役生に相談する →</a></section><noscript><p>JavaScriptが無効でも全順位と出典を閲覧できます。検索・並べ替えにはJavaScriptを有効にしてください。</p></noscript></main><footer class="footer"><a href="index.html">ドイツ留学ラボ</a></footer></div></body></html>'''
+(ROOT/'germany/rankings.html').write_text(page)
+print(f'Rendered {len(rows)} universities, {len(subjectrows)} subject rows')

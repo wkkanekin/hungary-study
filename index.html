@@ -228,13 +228,41 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=20261014-brand-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=20261014-brand-icon">
 <link rel="stylesheet" href="seo-navigation.css?v=20261011-guide-links" />
+<style id="hungary-hero-design">
+/* The Germany Study Lab hero design, scoped to Hungary's homepage. */
+#top.hungaryHero{min-height:620px;display:flex;flex-direction:column;padding:0;border-top:5px solid #c89b36;background:radial-gradient(ellipse at 10% 15%,#e0edf8,transparent 50%),radial-gradient(ellipse at 95% 55%,#e3eef7,transparent 55%),#fff;color:#081f50;text-align:center}
+.hungaryHero .heroContent{padding:52px 34px 32px;flex:1}
+.hungaryHero .brandLine{display:flex;align-items:center;justify-content:center;gap:30px;margin:12px 0 22px}
+.hungaryHero .brandMark{width:150px;height:150px;object-fit:contain;border-radius:50%;mix-blend-mode:multiply}
+.hungaryHero h1{font-family:'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif;font-size:clamp(42px,6vw,78px);font-weight:800;line-height:1.35;letter-spacing:.12em;margin:0;text-align:left}
+.hungaryHero .heroEyebrow{font-size:14px;font-weight:800;letter-spacing:.18em;color:#8a641c;margin:0}
+.hungaryHero .heroSubtitle{font-size:clamp(18px,2vw,26px);font-weight:800;margin:20px 0 12px}
+.hungaryHero .heroLead{margin:0 auto 22px;max-width:720px;color:#344a6b;font-weight:700;line-height:1.7}
+.hungaryHero .heroTopics{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin:26px 0}
+.hungaryHero .heroTopics span{padding:0 24px;border-right:1px solid #d0aa55;color:#103365;font-weight:800;font-size:18px}
+.hungaryHero .heroTopics span:last-child{border:0}
+.hungaryHero .heroActions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.hungaryHero .heroFoot{margin:0;padding:16px 22px;background:#081f50;color:#fff;font-family:'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif;font-size:18px;letter-spacing:.04em;border-top:3px solid #c89b36;line-height:1.7}
+@media(max-width:980px){#top.hungaryHero{min-height:520px}.hungaryHero .heroContent{padding:36px 22px}.hungaryHero .brandMark{width:110px;height:110px}.hungaryHero .brandLine{gap:20px}.hungaryHero .heroTopics span{padding:0 16px}}
+@media(max-width:720px){#top.hungaryHero{min-height:0}.hungaryHero .heroContent{padding:28px 16px}.hungaryHero .brandLine{gap:12px;margin:18px 0}.hungaryHero .brandMark{width:72px;height:72px}.hungaryHero h1{font-size:clamp(28px,7.2vw,48px);letter-spacing:.06em}.hungaryHero .heroSubtitle{font-size:19px}.hungaryHero .heroLead{font-size:16px}.hungaryHero .heroTopics{display:grid;grid-template-columns:1fr 1fr;row-gap:12px}.hungaryHero .heroTopics span{font-size:16px;padding:0 12px}.hungaryHero .heroTopics span:nth-child(2){border:0}.hungaryHero .heroFoot{font-size:16px;padding:14px}.hungaryHero .heroActions .btn{width:100%}.hungaryHero .heroEyebrow{letter-spacing:.1em}}
+</style>
 </head>
 <body>
   <div class="container">
-    <header class="card heroHeader" id="top">
-      <div class="heroBg" aria-hidden="true"></div>
-
-         </header>
+    <header class="card heroHeader hungaryHero" id="top">
+      <div class="heroContent">
+        <p class="heroEyebrow" lang="en">HUNGARY STUDY LAB</p>
+        <div class="brandLine">
+          <img class="brandMark" src="images/apple-touch-icon.png?v=20261014-brand-icon" width="150" height="150" alt="ハンガリー留学ラボのロゴ" fetchpriority="high" />
+          <h1>ハンガリー<br />留学ラボ</h1>
+        </div>
+        <p class="heroSubtitle">現役生だから話せる、留学のリアル。</p>
+        <p class="heroLead">ハンガリーの大学で学ぶ学生と、これから留学を目指すあなたをつなぐ。<br />出願から現地での暮らしまで、実体験を次の一歩へ。</p>
+        <div class="heroTopics" aria-label="相談テーマ"><span>大学・奨学金</span><span>出願・英語学習</span><span>生活費・住居</span><span>授業・大学生活</span></div>
+        <div class="heroActions"><a class="btn primary" href="#recent-students">現役学生を知る</a><a class="btn whiteBtn" href="#service">サービス・料金を見る</a></div>
+      </div>
+      <p class="heroFoot">留学を、一部の人の特別なものにしない。</p>
+    </header>
 
     <header class="topBar" aria-label="目次">
       <div class="topBarInner">
@@ -288,7 +316,7 @@
 </section>
 
     <section class="section" id="service">
-      <h1 class="secTitle">ハンガリー留学を現役大学生に相談</h1>
+      <h2 class="secTitle">ハンガリー留学を現役大学生に相談</h2>
 <p class="seo-intro">大学選び・政府奨学金・出願・生活費。無料ガイドで全体像をつかみ、志望大学の現役生に実体験を聞いてみましょう。</p>
 
       <div class="grid3">

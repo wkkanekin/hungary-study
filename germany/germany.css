@@ -95,3 +95,16 @@ body{font-size:16px;line-height:1.7}
 @media(max-width:720px){#germanyMap{height:490px}.mapResults{max-height:420px}.studentFilterBar{align-items:flex-start;flex-direction:column}.mapToolbar{grid-template-columns:1fr}.mapToolbar .btn{width:100%}.mapScope,.mapSourceNote{font-size:11px}}
 
 body{font-weight:800}body .container :is(p,li,dd,span,small,time,td,input,select,textarea){font-weight:800}
+
+/* Shared gold header accent, matching the university ranking page. */
+.card.pageHero,
+.card.germanyHero,
+header.note-hero,
+.container > main > section.section:first-child:has(> h1.secTitle){
+  border-top:5px solid #c89b36;
+}
+.container > main > section.section:first-child:has(> h1.secTitle){
+  background:#fff;
+  border-radius:16px;
+  padding:24px 28px;
+}

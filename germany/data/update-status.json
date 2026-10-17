@@ -1,7 +1,6 @@
 {
-  "attemptedOn": "2026-10-16",
+  "attemptedOn": "2026-10-17",
   "errors": [
-    "DAAD日本: 403 Client Error: Forbidden for url: https://www.daad.jp/ja/news/; 403 Client Error: Forbidden for url: https://www.daad.jp/ja/feed/; 403 Client Error: Forbidden for url: https://www.daad.jp/ja/",
     "在ドイツ日本国大使館: 403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html"
   ],
   "message": "取得失敗時は直前の確認済みデータを維持します。"

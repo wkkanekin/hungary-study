@@ -154,5 +154,113 @@
   "https://en.tka.hu/stipendium-hungaricum-scholarship-programmes-data-facts-and-statistics": {
     "fingerprint": "fdcaa2f18cc810adcb13a4144bc26382793daf745a29c81d2c44fdda7fcc07b5",
     "date": null
+  },
+  "https://tobitate-mext.jasso.go.jp/news/540_00001.html": {
+    "fingerprint": "9de45e11413d806a9dd73bc160b708486c726a60b3b30304f858efd77966cdfa",
+    "date": "2026-10-19"
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00272.html": {
+    "date": "2026-10-08",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00271.html": {
+    "date": "2026-10-08",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00253.html": {
+    "date": "2026-09-30",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00027.html": {
+    "date": "2026-09-24",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00123.html": {
+    "date": "2026-09-15",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00122.html": {
+    "date": "2026-09-15",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00113.html": {
+    "date": "2026-09-08",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00112.html": {
+    "date": "2026-09-08",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00186.html": {
+    "date": "2026-09-03",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00252.html": {
+    "date": "2026-09-02",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00251.html": {
+    "date": "2026-09-02",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00154.html": {
+    "date": "2026-09-01",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00155.html": {
+    "date": "2026-09-01",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00066.html": {
+    "date": "2026-09-01",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00114.html": {
+    "date": "2026-08-28",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00217.html": {
+    "date": "2026-08-28",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00200.html": {
+    "date": "2026-08-28",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00118.html": {
+    "date": "2026-08-28",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00041.html": {
+    "date": "2026-08-27",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00178.html": {
+    "date": "2026-08-26",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00216.html": {
+    "date": "2026-08-26",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00249.html": {
+    "date": "2026-08-19",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00046.html": {
+    "date": "2026-08-18",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00043.html": {
+    "date": "2026-08-06",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00153.html": {
+    "date": "2026-08-05",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00150.html": {
+    "date": "2026-07-31",
+    "baseline": true
   }
 }

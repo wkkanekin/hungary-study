@@ -44,7 +44,7 @@
       "hosts": [
         "tokio.mfa.gov.hu"
       ],
-      "selector": ".flex.flex-col:has(> h2 a[href*='/articles/'])",
+      "selector": ".flex.flex-col:has(> h2)",
       "title_selector": "h2",
       "link_selector": "h2 a",
       "link_pattern": "/articles/"

@@ -1,0 +1,18 @@
+/* Shared gold accent for Hungary and Germany Study Lab. */
+html body :is(header:has(h1),.articleHero,.universityHero,.columnHero,.columnListHero,.pageHero,.pageHeader,.pageIntro,.note-hero,.arrivalPageHero,.consultHeader){
+ border-top:5px solid #c89b36!important;
+ border-radius:18px!important;
+ background-color:#fff;
+ box-shadow:0 10px 30px rgba(17,24,39,.06);
+}
+html body header.section:has(>h1),html body .pageHeader{
+ padding:28px 24px;
+ background:linear-gradient(120deg,#e8f2fc 0%,#fff 65%,#f8fbff 100%);
+}
+html body :is(.basicCard,.guideCard,.columnCard,.columnCardLink,.dailyGuideCard,.featuredGuide,.topNoteCard,.uniCard,.directoryItem){
+ border-top:4px solid #c89b36!important;
+ border-radius:16px!important;
+ overflow:hidden;
+}
+html body :is(.basicCard,.guideCard,.columnCardLink,.dailyGuideCard,.featuredGuide,.topNoteCard,.uniCard):hover{border-top-color:#a77a20!important}
+@media(max-width:600px){html body header.section:has(>h1),html body .pageHeader{padding:24px 18px}}

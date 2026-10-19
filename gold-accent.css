@@ -11,7 +11,7 @@ html body header.section:has(>h1),html body .pageHeader{
 }
 @media(max-width:600px){html body header.section:has(>h1),html body .pageHeader{padding:24px 18px}}
 
-/* Quiet, outlined navigation across both country sites. */
+/* Clearly visible navigation buttons across both country sites. */
 html body a:is(.btn,.readMore,.seo-guide-link,.article-cta__button,.detailAction),
 html body :is(.basicFooter,.guideLeadActions,.sectionActions,.recentStudentsAction) > a{
  display:inline-flex;
@@ -21,24 +21,24 @@ html body :is(.basicFooter,.guideLeadActions,.sectionActions,.recentStudentsActi
  max-width:100%;
  padding:12px 18px;
  box-sizing:border-box;
- border:1px solid #d8e1ed!important;
+ border:1px solid #1d4ed8!important;
  border-radius:12px;
- background:#fff!important;
- color:#142f59!important;
- font-weight:700;
+ background:#1d4ed8!important;
+ color:#fff!important;
+ font-weight:900;
  line-height:1.6;
  text-align:center;
  text-decoration:none!important;
  white-space:normal;
  cursor:pointer;
- box-shadow:none!important;
+ box-shadow:0 4px 12px rgba(29,78,216,.16);
 }
 html body a:is(.btn,.readMore,.seo-guide-link,.article-cta__button,.detailAction):hover,
 html body :is(.basicFooter,.guideLeadActions,.sectionActions,.recentStudentsAction)>a:hover{
- background:#f1f5fa!important;
- border-color:#b9c9dd!important;
+ background:#143ea9!important;
+ border-color:#143ea9!important;
 }
 html body a:is(.btn,.readMore,.seo-guide-link,.article-cta__button,.detailAction):focus-visible{
  outline:3px solid #8eb5ff;outline-offset:3px;
 }
-html body a.lineConsultBtn{background:#fff!important;border-color:#d8e1ed!important;color:#142f59!important;box-shadow:none!important}
+html body a.lineConsultBtn{background:#168342!important;border-color:#168342!important;color:#fff!important}

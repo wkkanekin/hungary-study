@@ -47,20 +47,20 @@
   }
   function renderClimate() {
     const city = climate?.cities?.[select.value];
-    if (!city || !Array.isArray(city.months) || city.months.length !== 12 || !Array.isArray(climate.comparison_years) || climate.comparison_years.length !== 2) {
-      rows.innerHTML='<tr><td colspan="7">気候の比較データを取得できません。出典の公式情報をご確認ください。</td></tr>'; chart.replaceChildren(); meta.textContent=''; return;
+    if (!city || !Array.isArray(city.months) || city.months.length !== 12) {
+      rows.innerHTML='<tr><td colspan="3">気候の比較データを取得できません。出典の公式情報をご確認ください。</td></tr>'; chart.replaceChildren(); meta.textContent=''; return;
     }
-    const [y1,y2] = climate.comparison_years;
-    meta.textContent = `${city.name}｜平年値：${climate.normal_period}／比較：${y1}年・${y2}年／取得：${date(climate.generated_at)}`;
-    head.innerHTML=`<tr><th scope="col">月</th><th scope="col">平年平均</th><th scope="col">${y1}年</th><th scope="col">平年差</th><th scope="col">${y2}年</th><th scope="col">平年差</th><th scope="col">平年降水量</th></tr>`;
+    const y1 = 2025;
+    meta.textContent = `${city.name}｜平年値：${climate.normal_period}／比較：${y1}年／取得：${date(climate.generated_at)}`;
+    head.innerHTML=`<tr><th scope="col">月</th><th scope="col">平年平均</th><th scope="col">${y1}年</th></tr>`;
     const delta = (n,b) => number(n) && number(b) ? (n-b >= 0 ? '+' : '')+(n-b).toFixed(1)+'℃' : '—';
-    rows.innerHTML=city.months.map(m => {const a=m.previous_mean?.[y1],b=m.previous_mean?.[y2];return `<tr><th scope="row">${esc(m.month)}月</th><td>${value(m.normal_mean)}</td><td>${value(a)}</td><td>${delta(a,m.normal_mean)}</td><td>${value(b)}</td><td>${delta(b,m.normal_mean)}</td><td>${value(m.normal_precipitation_mm,' mm')}</td></tr>`;}).join('');
-    const series=[{name:'平年値',color:'#1d4ed8',values:city.months.map(m=>m.normal_mean)},{name:y1+'年',color:'#c2410c',values:city.months.map(m=>m.previous_mean?.[y1])},{name:y2+'年',color:'#047857',values:city.months.map(m=>m.previous_mean?.[y2])}];
+    rows.innerHTML=city.months.map(m => {const a=m.previous_mean?.[y1];return `<tr><th scope="row">${esc(m.month)}月</th><td>${value(m.normal_mean)}</td><td>${value(a)}</td></tr>`;}).join('');
+    const series=[{name:'平年値',color:'#1d4ed8',values:city.months.map(m=>m.normal_mean)},{name:y1+'年',color:'#c2410c',values:city.months.map(m=>m.previous_mean?.[y1])}];
     const all=series.flatMap(s=>s.values).filter(number);
     if(!all.length){chart.replaceChildren();return;}
     const low=Math.floor(Math.min(...all)/5)*5-5, high=Math.ceil(Math.max(...all)/5)*5+5;
     const x=i=>48+i*62, y=v=>260-(v-low)/(high-low)*220;
-    let svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 310" role="img" aria-labelledby="climateSvgTitle climateSvgDesc"><title id="climateSvgTitle">月平均気温の比較</title><desc id="climateSvgDesc">平年値と過去2年の気温推移。正確な数値は下の表に掲載しています。</desc><rect width="770" height="310" fill="white"/>';
+    let svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 310" role="img" aria-labelledby="climateSvgTitle climateSvgDesc"><title id="climateSvgTitle">月平均気温の比較</title><desc id="climateSvgDesc">平年平均と2025年の気温推移。正確な数値は下の表に掲載しています。</desc><rect width="770" height="310" fill="white"/>';
     for(let t=low;t<=high;t+=5)svg+=`<line x1="48" y1="${y(t)}" x2="730" y2="${y(t)}" stroke="#e2e8f0"/><text x="4" y="${y(t)+5}" font-size="13" fill="#475569">${t}℃</text>`;
     for(let i=0;i<12;i++)svg+=`<text x="${x(i)}" y="290" text-anchor="middle" font-size="13" fill="#475569">${i+1}月</text>`;
     for(const s of series){let path='',drawing=false;for(let i=0;i<12;i++){if(number(s.values[i])){path+=(drawing?'L':'M')+x(i)+' '+y(s.values[i])+' ';drawing=true;}else drawing=false;}svg+=`<path d="${path}" fill="none" stroke="${s.color}" stroke-width="3"/>`;}

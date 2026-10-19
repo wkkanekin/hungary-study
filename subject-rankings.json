@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T13:27:58.793058+00:00",
+  "updated": "2026-10-19T10:28:18.769188+00:00",
   "subjects": [
     {
       "key": "arts-humanities",
@@ -185,16 +185,16 @@
           "url": "https://www.timeshighereducation.com/world-university-rankings/university-szeged"
         },
         {
-          "university": "Budapest University of Technology and Economics",
-          "city": "Budapest",
-          "rank": "801–1000",
-          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
-        },
-        {
           "university": "Hungarian University of Agriculture and Life Sciences (MATE)",
           "city": "Gödöllő",
           "rank": "801–1000",
           "url": "https://www.timeshighereducation.com/world-university-rankings/hungarian-university-agriculture-and-life-sciences"
+        },
+        {
+          "university": "Budapest University of Technology and Economics",
+          "city": "Budapest",
+          "rank": "801–1000",
+          "url": "https://www.timeshighereducation.com/world-university-rankings/budapest-university-technology-and-economics"
         },
         {
           "university": "University of Debrecen",

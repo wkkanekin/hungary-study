@@ -1,9 +1,10 @@
 {
   "checkedAt": "2026-10-19",
-  "sourcesSuccessful": 9,
+  "sourcesSuccessful": 8,
   "sourcesTotal": 10,
   "publishedItems": 6,
   "errors": [
+    "在日ハンガリー大使館: URLError: <urlopen error timed out>",
     "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
   ],
   "dryRun": false

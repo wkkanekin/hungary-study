@@ -1,29 +1,28 @@
 {
-  "attemptedOn": "2026-10-18",
+  "attemptedOn": "2026-10-19",
   "sources": [
     {
       "name": "DAAD日本",
-      "checkedOn": "2026-10-18",
-      "endpoint": "https://www.daad.jp/ja/news/"
+      "error": "403 Client Error: Forbidden for url: https://www.daad.jp/ja/news/; 403 Client Error: Forbidden for url: https://www.daad.jp/ja/feed/; 403 Client Error: Forbidden for url: https://www.daad.jp/ja/"
     },
     {
       "name": "JASSO",
-      "checkedOn": "2026-10-18",
+      "checkedOn": "2026-10-19",
       "endpoint": "https://ryugaku.jasso.go.jp/news/scholarship_2026.html"
     },
     {
       "name": "JASSO",
-      "checkedOn": "2026-10-18",
+      "checkedOn": "2026-10-19",
       "endpoint": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/"
     },
     {
       "name": "JASSO",
-      "checkedOn": "2026-10-18",
+      "checkedOn": "2026-10-19",
       "endpoint": "https://www.jasso.go.jp/ryugaku/scholarship_a/gakubu/"
     },
     {
       "name": "在日ドイツ大使館",
-      "checkedOn": "2026-10-18",
+      "checkedOn": "2026-10-19",
       "endpoint": "https://japan.diplo.de/ja-ja/service/study-908722"
     },
     {
@@ -32,21 +31,22 @@
     },
     {
       "name": "ミュンヘン工科大学（TUM）",
-      "checkedOn": "2026-10-18",
+      "checkedOn": "2026-10-19",
       "endpoint": "https://www.tum.de/en/studies/fees-and-financial-aid/scholarships"
     },
     {
       "name": "ボン大学",
-      "error": "HTTPSConnectionPool(host='www.uni-bonn.de', port=443): Max retries exceeded with url: /en/studying/consultation-and-service/financing-and-support/the-deutschlandstipendium/application (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+      "checkedOn": "2026-10-19",
+      "endpoint": "https://www.uni-bonn.de/en/studying/consultation-and-service/financing-and-support/the-deutschlandstipendium/application"
     },
     {
       "name": "ボン大学",
-      "error": "HTTPSConnectionPool(host='www.uni-bonn.de', port=443): Max retries exceeded with url: /en/studying/international-students/costs-and-financing-for-international-students/costs-and-financing-for-international-students (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+      "checkedOn": "2026-10-19",
+      "endpoint": "https://www.uni-bonn.de/en/studying/international-students/costs-and-financing-for-international-students/costs-and-financing-for-international-students"
     }
   ],
   "errors": [
-    "在ドイツ日本国大使館: 403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html",
-    "ボン大学: HTTPSConnectionPool(host='www.uni-bonn.de', port=443): Max retries exceeded with url: /en/studying/consultation-and-service/financing-and-support/the-deutschlandstipendium/application (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))",
-    "ボン大学: HTTPSConnectionPool(host='www.uni-bonn.de', port=443): Max retries exceeded with url: /en/studying/international-students/costs-and-financing-for-international-students/costs-and-financing-for-international-students (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+    "DAAD日本: 403 Client Error: Forbidden for url: https://www.daad.jp/ja/news/; 403 Client Error: Forbidden for url: https://www.daad.jp/ja/feed/; 403 Client Error: Forbidden for url: https://www.daad.jp/ja/",
+    "在ドイツ日本国大使館: 403 Client Error: Forbidden for url: https://www.de.emb-japan.go.jp/itprtop_ja/index.html"
   ]
 }

@@ -112,14 +112,14 @@
     {
       "@type": "SiteNavigationElement",
       "position": 2,
-      "name": "サービス内容",
-      "url": "https://hungarystudy.org/#service"
+      "name": "現役生のご紹介",
+      "url": "https://hungarystudy.org/#recent-students"
     },
     {
       "@type": "SiteNavigationElement",
       "position": 3,
-      "name": "最近参加した現役生",
-      "url": "https://hungarystudy.org/#recent-students"
+      "name": "サービス内容",
+      "url": "https://hungarystudy.org/#service"
     },
     {
       "@type": "SiteNavigationElement",
@@ -263,8 +263,8 @@
 
  <nav class="topNav" aria-label="横目次">
           <a href="#updates">更新情報</a>
+          <a href="#recent-students">現役生のご紹介</a>
           <a href="#service">サービス内容</a>
-          <a href="#recent-students">最近参加した現役生</a>
           <a href="#flow">相談の流れ</a>
           <a href="#basics-cards">ハンガリー留学の全体像</a>
           <a href="#youtube">最新動画</a>
@@ -306,6 +306,27 @@
     <p class="updatesStatus" id="updates-status" role="status">更新情報を読み込み中です。</p>
     <noscript><p class="updatesStatus">更新情報の表示にはJavaScriptが必要です。<a href="guide.html">ガイド</a>・<a href="column.html">コラム</a>もご覧ください。</p></noscript>
   </div>
+</section>
+
+<section class="section recentStudentsSection" id="recent-students">
+  <h2 class="secTitle">現役生のご紹介</h2>
+
+  <p class="recentStudentsLead">
+    実際にハンガリーの大学で学んでいる現役生に、
+    出願・英語力・入試・生活のリアルを直接聞けます。
+  </p>
+
+  <div
+    id="recentStudentList"
+    class="recentStudentGrid"
+    aria-label="現役生のご紹介"
+  ></div>
+
+  <div class="recentStudentsAction">
+  <button class="btn primary" id="recentShowAllStudents" type="button">
+    すべての現役生を見る
+  </button>
+</div>
 </section>
 
     <section class="section" id="service">
@@ -359,26 +380,7 @@
   </section>
 
 
-<section class="section recentStudentsSection" id="recent-students">
-  <h2 class="secTitle">最近参加した現役生</h2>
 
-  <p class="recentStudentsLead">
-    実際にハンガリーの大学で学んでいる現役生に、
-    出願・英語力・入試・生活のリアルを直接聞けます。
-  </p>
-
-  <div
-    id="recentStudentList"
-    class="recentStudentGrid"
-    aria-label="最近参加した現役生"
-  ></div>
-
-  <div class="recentStudentsAction">
-  <button class="btn primary" id="recentShowAllStudents" type="button">
-    すべての現役生を見る
-  </button>
-</div>
-</section>
 
 
 <!-- Temporarily removed from display at owner request (2026-10-19). Preserve for restoration. -->
@@ -1147,7 +1149,7 @@ root.innerHTML=posts.slice(0,3).map(p=>'<a class="topNoteCard" href="'+escapeHtm
     crossorigin=""
   ></script>
 
-  <script src="script.js?v=20261010-commonmail"></script>
+  <script src="script.js?v=20261019-random-students"></script>
   <script src="updates.js?v=20261014-video-news" defer></script>
 
   <script src="student-reviews.js"></script>

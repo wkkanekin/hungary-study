@@ -97,7 +97,12 @@
       "abbreviation": "ELTE",
       "institution_type": "university",
       "official_url": "http://www.elte.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/elte.webp",
+        "alt": "エトヴェシュ・ロラーンド大学（ELTE）のキャンパス",
+        "original": "images/erasmus-mundus/elte-campus.webp"
+      }
     },
     {
       "id": "debrecen",
@@ -142,7 +147,12 @@
       "abbreviation": "DE",
       "institution_type": "university",
       "official_url": "https://www.unideb.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/debrecen.webp",
+        "alt": "デブレツェン大学のキャンパス",
+        "original": "images/basics/debrecen-campus-official.webp"
+      }
     },
     {
       "id": "szeged",
@@ -191,7 +201,12 @@
       "abbreviation": "SZTE",
       "institution_type": "university",
       "official_url": "http://www.u-szeged.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/szeged.webp",
+        "alt": "セゲド大学のキャンパス",
+        "original": "images/universities/szeged-guide-1.jpg"
+      }
     },
     {
       "id": "semmelweis",
@@ -289,7 +304,12 @@
       "abbreviation": "BME",
       "institution_type": "university",
       "official_url": "https://www.bme.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/bme.webp",
+        "alt": "ブダペスト工科経済大学（BME）のキャンパス",
+        "original": "images/universities/bme-guide-1.jpg"
+      }
     },
     {
       "id": "pecs",
@@ -334,7 +354,12 @@
       "abbreviation": "PTE",
       "institution_type": "university",
       "official_url": "http://www.pte.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/pecs.webp",
+        "alt": "ペーチ大学のキャンパス",
+        "original": "images/universities/pecs-guide-1.jpg"
+      }
     },
     {
       "id": "obuda",
@@ -424,7 +449,12 @@
       "abbreviation": "CORVINUS",
       "institution_type": "university",
       "official_url": "http://www.uni-corvinus.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/corvinus.webp",
+        "alt": "コルヴィヌス大学のキャンパス",
+        "original": "images/universities/corvinus-guide-2.jpg"
+      }
     },
     {
       "id": "mate",
@@ -559,7 +589,12 @@
       "abbreviation": "SZE",
       "institution_type": "university",
       "official_url": "http://www.sze.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/szechenyi.webp",
+        "alt": "セーチェーニ・イシュトヴァーン大学（SZE）のキャンパス",
+        "original": "images/basics/gyor-university.jpg"
+      }
     },
     {
       "id": "bueb",
@@ -606,7 +641,12 @@
       "abbreviation": "BGE",
       "institution_type": "university",
       "official_url": "http://www.uni-bge.hu",
-      "registry_checked_at": "2026-10-04"
+      "registry_checked_at": "2026-10-04",
+      "photo": {
+        "src": "images/ranking-thumbnails/bueb.webp",
+        "alt": "ブダペスト経済ビジネス大学（BUEB）のキャンパス",
+        "original": "images/universities/bueb-guide-1.jpg"
+      }
     },
     {
       "id": "fi63573",

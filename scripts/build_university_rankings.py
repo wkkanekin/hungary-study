@@ -61,8 +61,16 @@ def cell(data,r,provider):
         return html
     names={'not_listed':'未掲載','unconfirmed':'未確認','fetch_failed':'取得失敗'}
     return f'<span class="rk-year">{r["year"]}年版</span><span class="rk-status">{names[r["status"]]}</span>'+source_link(data,r)
+def university_photo(uni):
+    photo=uni.get('photo')
+    if not photo:return ''
+    return f'<img class="rk-university-photo" src="{esc(photo["src"])}" alt="{esc(photo["alt"])}" width="96" height="64" loading="lazy" decoding="async">'
+
+def university_heading(uni):
+    return f'<span class="rk-university-heading">{university_photo(uni)}<strong>{esc(uni["name_ja"])}</strong></span>'
+
 def university(uni):
-    name=f'<strong>{esc(uni["name_ja"])}</strong><span class="rk-en">{esc(uni["name"])}</span><span class="rk-city">{esc(uni["city"])}</span>'
+    name=f'{university_heading(uni)}<span class="rk-en">{esc(uni["name"])}</span><span class="rk-city">{esc(uni["city"])}</span>'
     if uni['detail_url']:name+=f'<a class="rk-source" href="{esc(uni["detail_url"])}">{esc(uni["name_ja"])}の大学紹介・出願条件 →</a>'
     if uni.get('institution_type'):name+=f'<span class="rk-city">{esc(TYPES[uni["institution_type"]])} · {esc(uni["abbreviation"])}</span>'
     if uni.get('official_url'):name+=f'<a class="rk-source" href="{esc(uni["official_url"])}" target="_blank" rel="noopener noreferrer">大学公式サイト ↗</a>'
@@ -95,7 +103,7 @@ def subjects(data):
     entries=sorted(data['subjects'],key=lambda r:(r['category'],r['official_subject'],r['provider'],int(re.search(r'\d+',r['rank'])[0]),r['university_id']))
     for r in entries:
         u=universities[r['university_id']];p='ShanghaiRanking GRAS' if r['provider']=='ARWU' else r['provider']
-        rows.append(f'<tr data-subject-row data-search="{esc(r["subject_ja"]+" "+r["official_subject"]+" "+u["name_ja"]+" "+u["name"])}" data-category="{esc(r["category"])}" data-provider="{esc(r["provider"])}" data-year="{r["year"]}" data-university="{esc(u["id"])}"><th scope="row"><strong>{esc(u["name_ja"])}</strong><span class="rk-city">{esc(u["city"])}</span></th><td><strong>{esc(r["subject_ja"])}</strong><span class="rk-en rk-official">{esc(r["official_subject"])}</span></td><td><span>{esc(p)}</span><span class="rk-year">{r["year"]}年版</span></td><td><strong class="rk-rank">{esc(r["rank"])}<small>位</small></strong></td><td>{source_link(data,r)}<span class="rk-checked">確認 {esc(r["checked_at"])}</span>'+('<span class="rk-old">更新取得失敗・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='failed' else '<span class="rk-old">版年・対象を再確認中・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='needs_review' else '')+'</td></tr>')
+        rows.append(f'<tr data-subject-row data-search="{esc(r["subject_ja"]+" "+r["official_subject"]+" "+u["name_ja"]+" "+u["name"])}" data-category="{esc(r["category"])}" data-provider="{esc(r["provider"])}" data-year="{r["year"]}" data-university="{esc(u["id"])}"><th scope="row">{university_heading(u)}<span class="rk-city">{esc(u["city"])}</span></th><td><strong>{esc(r["subject_ja"])}</strong><span class="rk-en rk-official">{esc(r["official_subject"])}</span></td><td><span>{esc(p)}</span><span class="rk-year">{r["year"]}年版</span></td><td><strong class="rk-rank">{esc(r["rank"])}<small>位</small></strong></td><td>{source_link(data,r)}<span class="rk-checked">確認 {esc(r["checked_at"])}</span>'+('<span class="rk-old">更新取得失敗・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='failed' else '<span class="rk-old">版年・対象を再確認中・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='needs_review' else '')+'</td></tr>')
     options=''.join(f'<option value="{esc(c["id"])}"'+'>'+esc(c['label'])+'</option>' for c in data['categories'])
     return f'''<div class="rk-component" data-ranking-subjects data-subject-year="{data['subject_target_year']}">
 <p class="rk-note">分野の選択肢は探すための分類です。順位の対象は各行の<strong>公式分野名</strong>です。「Social Sciences」は社会科学全体の評価です。「Sociology（社会学）」や国際関係学単独の順位とは区別してください。</p>

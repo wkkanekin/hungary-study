@@ -93,3 +93,9 @@
 .rk-button:disabled{opacity:.4;cursor:default}
 [data-subject-table]{max-height:680px}
 [data-subject-table] thead th{position:sticky;top:0;z-index:2;background:#eff5fa}
+
+/* Compact campus photos stay beside names without widening the comparison table. */
+.rk-university-heading{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.rk-university-heading>strong{min-width:0}
+.rk-table .rk-university-photo{display:block;flex:0 0 72px;width:72px;height:48px;max-width:none;object-fit:cover;border-radius:6px}
+@media(max-width:600px){.rk-university-heading{gap:8px}.rk-table .rk-university-photo{flex-basis:54px;width:54px;height:36px}}

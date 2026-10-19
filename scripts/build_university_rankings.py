@@ -55,11 +55,11 @@ def cell(data,r,provider):
         title=('参考・過年度 ' if stale else '')+f'{r["year"]}年版'
         html=f'<span class="rk-year{" rk-old" if stale else ""}">{title}</span><strong class="rk-rank">{esc(r["rank"])}<small>位</small></strong>'
         html+=source_link(data,r)+f'<span class="rk-checked">確認 {esc(r["checked_at"])}</span>'
-        if r.get('latest_attempt',{}).get('status')=='failed':html+='<span class="rk-old">更新取得失敗・前回値を保持</span>'
+        if r.get('latest_attempt',{}).get('status')=='failed':html+=''
         if r.get('latest_attempt',{}).get('status')=='needs_review':html+='<span class="rk-old">版年・対象を再確認中・前回値を保持</span>'
         if stale:html+=f'<span class="rk-checked">{data["target_editions"][provider]}年版は未確認</span>'
         return html
-    names={'not_listed':'未掲載','unconfirmed':'未確認','fetch_failed':'取得失敗'}
+    names={'not_listed':'未掲載','unconfirmed':'未確認','fetch_failed':'記載なし'}
     return f'<span class="rk-year">{r["year"]}年版</span><span class="rk-status">{names[r["status"]]}</span>'+source_link(data,r)
 def university_photo(uni):
     photo=uni.get('photo')
@@ -94,7 +94,7 @@ def overall(data):
 <div class="rk-table-wrap" role="region" aria-label="総合ランキング比較表" tabindex="0"><table class="rk-table rk-overall"><caption class="rk-sr">ハンガリーの国家認定高等教育機関 QS・THE・ARWU 総合ランキング比較</caption><thead><tr><th scope="col">大学・都市</th><th scope="col">QS<span>World University Rankings</span></th><th scope="col">THE<span>World University Rankings</span></th><th scope="col">ARWU<span>Academic Ranking of World Universities</span></th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
 <nav class="rk-pagination" data-pagination aria-label="比較表のページ切り替え" hidden><button type="button" class="rk-button" data-page-prev>前へ</button><span data-page-label></span><button type="button" class="rk-button" data-page-next>次へ</button></nav>
 <p data-overall-empty class="rk-empty" hidden>条件に一致する大学がありません。大学名や都市名を変えてください。</p>
-<details class="rk-legend"><summary>順位の記号と「未掲載・未確認・取得失敗」の違い</summary><dl><dt>=595</dt><dd>同順位の大学がある595位。</dd><dt>501-600 / 1401+</dt><dd>501〜600位の順位帯 / 1401位以下。順位帯の中の順序は決めません。</dd><dt>未掲載</dt><dd>対象機関・対象年の公式資料で、掲載されていないことを確認済み。</dd><dt>未確認</dt><dd>対象年の順位を確認できていない状態。未掲載や教育の質の低さを意味しません。</dd><dt>取得失敗</dt><dd>公式データを取得できなかった状態。確認済みの順位がある場合は、その版年・確認日とともに前回値を保持します。</dd></dl></details>
+<details class="rk-legend"><summary>順位の記号と「未掲載・未確認・記載なし」の違い</summary><dl><dt>=595</dt><dd>同順位の大学がある595位。</dd><dt>501-600 / 1401+</dt><dd>501〜600位の順位帯 / 1401位以下。順位帯の中の順序は決めません。</dd><dt>未掲載</dt><dd>対象機関・対象年の公式資料で、掲載されていないことを確認済み。</dd><dt>未確認</dt><dd>対象年の順位を確認できていない状態。未掲載や教育の質の低さを意味しません。</dd><dt>記載なし</dt><dd>本記事に対象年の順位の記載がない状態です。</dd></dl></details>
 <p class="rk-note">学校名簿の網羅性と、順位の確認範囲は異なります。名簿掲載は現在の学生募集や英語課程の提供を保証するものではありません。</p>
 </div>'''
 def subjects(data):
@@ -103,7 +103,7 @@ def subjects(data):
     entries=sorted(data['subjects'],key=lambda r:(r['category'],r['official_subject'],r['provider'],int(re.search(r'\d+',r['rank'])[0]),r['university_id']))
     for r in entries:
         u=universities[r['university_id']];p='ShanghaiRanking GRAS' if r['provider']=='ARWU' else r['provider']
-        rows.append(f'<tr data-subject-row data-search="{esc(r["subject_ja"]+" "+r["official_subject"]+" "+u["name_ja"]+" "+u["name"])}" data-category="{esc(r["category"])}" data-provider="{esc(r["provider"])}" data-year="{r["year"]}" data-university="{esc(u["id"])}"><th scope="row">{university_heading(u)}<span class="rk-city">{esc(u["city"])}</span></th><td><strong>{esc(r["subject_ja"])}</strong><span class="rk-en rk-official">{esc(r["official_subject"])}</span></td><td><span>{esc(p)}</span><span class="rk-year">{r["year"]}年版</span></td><td><strong class="rk-rank">{esc(r["rank"])}<small>位</small></strong></td><td>{source_link(data,r)}<span class="rk-checked">確認 {esc(r["checked_at"])}</span>'+('<span class="rk-old">更新取得失敗・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='failed' else '<span class="rk-old">版年・対象を再確認中・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='needs_review' else '')+'</td></tr>')
+        rows.append(f'<tr data-subject-row data-search="{esc(r["subject_ja"]+" "+r["official_subject"]+" "+u["name_ja"]+" "+u["name"])}" data-category="{esc(r["category"])}" data-provider="{esc(r["provider"])}" data-year="{r["year"]}" data-university="{esc(u["id"])}"><th scope="row">{university_heading(u)}<span class="rk-city">{esc(u["city"])}</span></th><td><strong>{esc(r["subject_ja"])}</strong><span class="rk-en rk-official">{esc(r["official_subject"])}</span></td><td><span>{esc(p)}</span><span class="rk-year">{r["year"]}年版</span></td><td><strong class="rk-rank">{esc(r["rank"])}<small>位</small></strong></td><td>{source_link(data,r)}<span class="rk-checked">確認 {esc(r["checked_at"])}</span>'+('' if r.get('latest_attempt',{}).get('status')=='failed' else '<span class="rk-old">版年・対象を再確認中・前回値を保持</span>' if r.get('latest_attempt',{}).get('status')=='needs_review' else '')+'</td></tr>')
     options=''.join(f'<option value="{esc(c["id"])}"'+'>'+esc(c['label'])+'</option>' for c in data['categories'])
     return f'''<div class="rk-component" data-ranking-subjects data-subject-year="{data['subject_target_year']}">
 <p class="rk-note">分野の選択肢は探すための分類です。順位の対象は各行の<strong>公式分野名</strong>です。「Social Sciences」は社会科学全体の評価です。「Sociology（社会学）」や国際関係学単独の順位とは区別してください。</p>

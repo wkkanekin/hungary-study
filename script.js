@@ -149,13 +149,12 @@ const hitCountEl = document.getElementById("hitCount");
 
 
 function getRecentStudents(max = 3) {
- const recent = students.filter((s) => !!s.enabled && !!s.recent);
-
- if (recent.length) {
-   return recent.slice(0, max);
+ const pool = students.filter((s) => !!s.enabled);
+ for (let i = pool.length - 1; i > 0; i--) {
+   const j = Math.floor(Math.random() * (i + 1));
+   [pool[i], pool[j]] = [pool[j], pool[i]];
  }
-
- return [];
+ return pool.slice(0, max);
 }
 
 function shortText(value, max = 92) {

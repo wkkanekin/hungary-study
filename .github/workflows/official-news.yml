@@ -14,7 +14,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: official-news-and-pages
+  group: official-news-and-pages-v2
   cancel-in-progress: false
 
 jobs:

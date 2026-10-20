@@ -218,5 +218,54 @@ window.GERMANY_STUDENTS = [
     ],
     "enabled": true,
     "message": ""
+  },
+  {
+    "id": "hiroki-oshio",
+    "name": "大塩浩輝",
+    "photo": "hiroki-oshio.svg",
+    "role": "現役学生",
+    "university": "ゲーテ大学フランクフルト（Goethe-Universität Frankfurt am Main）",
+    "major": "M.Sc. Management Science（経済・経営）",
+    "region": "フランクフルト",
+    "entry": "2025年10月",
+    "year": "修士2年（第3セメスター／2026年10月提供）",
+    "type": "Universität",
+    "language": "英語",
+    "admission": "TOEFL iBT 100／ドイツ語資格不要（本人出願時）",
+    "selection": "書類審査のみ",
+    "preparation": "出願手続きに約半年（英語学習を除く）",
+    "education": "東京理科大学経営学部経営学科卒",
+    "scholarship": "JASSO第二種奨学金（海外・貸与型）",
+    "learning": "TOEFL対策本・単語帳",
+    "bio": "フランクフルトのゲーテ大学で経済・経営を学ぶ修士課程の学生です。最近は特にファイナンスに注力しています。東京理科大学在学中に1年間ドイツへ交換留学した経験から、ドイツの大学院への進学を決めました。英語の学習と大学院への出願を自分で進め、準備段階で感じた不安や、塾講師として働いた経験をもとに相談に応じます。",
+    "message": "経済・経営系で海外の大学院へ進学する方はまだ多くなく、私も準備中は不安を感じました。同じように迷う方へ、自分の経験を共有できればと思います。",
+    "tags": [
+      "大学院選び",
+      "ドイツの大学院出願",
+      "交換留学",
+      "英語・TOEFL対策",
+      "生活費",
+      "住居探し",
+      "ビザ準備",
+      "大学生活"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.uni-frankfurt.de/en"
+      ],
+      [
+        "note",
+        "https://note.com/concrete_hsmath"
+      ],
+      [
+        "LinkedIn",
+        "https://www.linkedin.com/in/hiroki-oshio-shizuoka"
+      ]
+    ],
+    "sources": [
+      "2026-10-20 本人メール「基本情報の共有につきまして」"
+    ],
+    "enabled": true
   }
 ];

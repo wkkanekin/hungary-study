@@ -222,7 +222,7 @@ window.GERMANY_STUDENTS = [
   {
     "id": "hiroki-oshio",
     "name": "大塩浩輝",
-    "photo": "hiroki-oshio.svg",
+    "photo": "hiroki-oshio.jpg",
     "role": "現役学生",
     "university": "ゲーテ大学フランクフルト（Goethe-Universität Frankfurt am Main）",
     "major": "M.Sc. Management Science（経済・経営）",

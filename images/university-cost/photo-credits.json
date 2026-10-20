@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-20",
+  "assets": {
+    "corvinus": {
+      "source": "https://commons.wikimedia.org/wiki/File:Corvinus_University_Budapest_Main_Building.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Corvinus_University_Budapest_Main_Building.jpg",
+      "author": "Darkone",
+      "path": "images/university-cost/corvinus.webp",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "Centre crop to 8:5, resize to 640x400, WebP compression; derivative retains source license."
+    },
+    "debrecen": {
+      "source": "https://commons.wikimedia.org/wiki/File:DebrecenUniversity1.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/DebrecenUniversity1.jpg",
+      "author": "Alensha",
+      "path": "images/university-cost/debrecen.webp",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:DebrecenUniversity1.jpg",
+      "changes": "Centre crop to 8:5, resize to 640x400, WebP compression; derivative retains source license."
+    },
+    "pecs": {
+      "source": "https://commons.wikimedia.org/wiki/File:Universit%C3%A4t_Pecs.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Universit%C3%A4t_Pecs.jpg",
+      "author": "Fadi",
+      "path": "images/university-cost/pecs.webp",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Centre crop to 8:5, resize to 640x400, WebP compression; derivative retains source license."
+    },
+    "bme": {
+      "source": "https://commons.wikimedia.org/wiki/File:Budapest_University_of_Technology_and_Economics_K_building%2C_University_191003.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Budapest_University_of_Technology_and_Economics_K_building%2C_University_191003.jpg",
+      "author": "Grigorius m",
+      "path": "images/university-cost/bme.webp",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Centre crop to 8:5, resize to 640x400, WebP compression; derivative retains source license."
+    },
+    "szeged": {
+      "source": "https://commons.wikimedia.org/wiki/File:Szeged%2C_Rector_building.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Szeged%2C_Rector_building.jpg",
+      "author": "McAnt",
+      "path": "images/university-cost/szeged.webp",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Centre crop to 8:5, resize to 640x400, WebP compression; derivative retains source license."
+    },
+    "elte": {
+      "path": "images/erasmus-mundus/elte-campus.webp",
+      "author": "Misibacsi",
+      "source": "https://commons.wikimedia.org/wiki/File:Budapest_ELTE_Univ_central_building.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "Existing site asset reused; CSS crops display to a landscape rectangle."
+    }
+  }
+}

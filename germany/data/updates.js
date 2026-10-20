@@ -1,5 +1,12 @@
 window.GERMANY_UPDATES = [
   {
+    "title": "ゲーテ大学で経済・経営を学ぶ大塩浩輝さんが現役生として参加しました",
+    "date": "2026-10-20",
+    "url": "index.html#student-hiroki-oshio",
+    "category": "現役生参加",
+    "enabled": true
+  },
+  {
     "title": "OstfaliaでITを学ぶMizuさんが現役生として新しく参加しました",
     "date": "2026-10-13",
     "url": "index.html#student-mizu",

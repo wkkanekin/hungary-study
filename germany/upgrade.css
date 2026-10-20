@@ -51,4 +51,4 @@ body .container :is(h1,h2,h3,h4,strong,dt,th,label,summary,.btn){font-weight:900
 .countryGermany span{font-size:21px;background:#fff9e9;border:2px solid #173b68;padding:2px 12px;box-shadow:0 2px 8px #173b6826}
 @media(max-width:600px){.everydayPriceGrid{grid-template-columns:1fr}.everydayPriceCard{grid-template-columns:80px minmax(0,1fr);padding:16px;gap:12px}.priceIllustration{width:80px;height:80px}.contactCard{padding:20px 16px}.studentRecruitment{padding:20px 16px}.studentRecruitment .btn{width:100%}.flowIllustration{height:180px}.countryLabel span{font-size:10px}.countryGermany span{font-size:18px}}
 
-.newsNew{display:inline-block;margin-left:10px;padding:2px 5px;border-radius:4px;background:#c62828;color:#fff;font-size:11px;font-weight:800;line-height:1.7;vertical-align:middle}
+.newsNew{display:inline-block;margin-left:10px;color:#c62828;font-size:12px;font-weight:800;line-height:1.7;vertical-align:middle}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "status": "pending_approval",
+  "approved": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "ハンガリー大学の学費まとめ｜主要6大学×プログラム別",
+  "article_url": "https://hungarystudy.org/guide-hungary-university-cost.html",
+  "text": "🇭🇺 ハンガリー大学の学費は専攻で違う！\n同じ大学でも金額が異なり、「年額」と「学期額」の表記も混在。出願料にも注意。\n主要6大学の学費を比較👇\nhttps://hungarystudy.org/guide-hungary-university-cost.html",
+  "image_url": null,
+  "image_status": "記事HTMLにimg要素・og:image・picture・figureなし。既存記事画像URLは見つからず、画像使用権の確認対象なし。画像なしを提案。",
+  "source_checked": "GitHub main: guide-hungary-university-cost.html; canonical URLと本文を確認。公開URLの直接取得は未確認。",
+  "notes": "未承認。X・Threadsとも投稿禁止。"
+}

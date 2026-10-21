@@ -1,0 +1,54 @@
+/* Hungary Study Labの既存クラス・フォントを継承 */
+.photoCredit{display:block;font-size:11px;color:#596676;line-height:1.6;margin:10px 0}.basicImg{object-fit:cover;width:100%;height:200px}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.metric,.newsItem,.directoryItem{background:#fff;border:1px solid #dbe3ec;border-radius:16px;padding:18px;margin:12px 0}.metric strong{display:block;font-size:25px;color:#173b68}.metric small{display:block}.filterTools{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.filterTools label{flex:1;min-width:180px}.filterTools input,.filterTools select{width:100%;min-height:44px;border:1px solid #ccd5df;border-radius:10px;padding:10px;background:#fff;font:inherit}.rankScroll{overflow-x:auto}.rankTable{border-collapse:collapse;width:100%;font-size:14px}.rankTable th,.rankTable td{padding:12px;text-align:left;border-bottom:1px solid #dce4ed}.rankTable th{background:#edf3f8}.articleBody section{scroll-margin-top:80px}.articleBody a{overflow-wrap:anywhere}.newsItem a{font-weight:700}.newsItem time{display:block;font-size:12px}.coverage{background:#eef4fa;border-left:4px solid #245382;padding:16px;line-height:1.8}.guideFacts{display:grid;grid-template-columns:130px minmax(0,1fr);gap:10px}.guideFacts dt{font-weight:bold}.guideFacts dd{margin:0}.basicGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.avatar img{object-position:center 40%}@media(max-width:700px){.basicGrid,.metrics{grid-template-columns:1fr}.guideFacts{grid-template-columns:1fr}.filterTools{display:block}.filterTools label{display:block;margin:10px 0}.rankTable{min-width:580px}.pageHero h1{overflow-wrap:anywhere;font-size:28px}.articleBody{padding:20px!important}}
+
+.basicImgWrap{height:200px;aspect-ratio:auto;flex:none;overflow:hidden}.basicImg{height:100%}
+/* Homepage sections aligned with the Hungary Study Lab visitor journey. */
+.recentStudentGrid,.comparisonGrid,.featuredGuideGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.recentStudent{display:flex;align-items:center;gap:16px;padding:16px}.recentStudent img{width:84px;height:84px;object-fit:cover;border-radius:50%;flex:none}.recentStudent h3{margin:0 0 6px}.recentStudent p{margin:4px 0;font-size:14px}.recentStudent .btn{margin-top:8px}.consultFlow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;list-style:none;padding:0;counter-reset:flow}.consultFlow li,.featuredGuide{display:flex;flex-direction:column;gap:8px;padding:18px;background:#fff;border:1px solid #dbe3ec;border-radius:16px}.consultFlow li{counter-increment:flow}.consultFlow li:before{content:counter(flow);color:#245382;font-weight:800;font-size:24px}.consultFlow strong{font-size:18px}.consultFlow span,.featuredGuide span{font-size:14px;color:#4c5968}.faqItem{padding:16px 18px;margin:10px 0;border:1px solid #dbe3ec;border-radius:14px;background:#fff}.faqItem summary{font-weight:700;cursor:pointer}.faqItem p{margin-bottom:0;line-height:1.8}.featuredGuide{color:inherit;text-decoration:none}.featuredGuide strong{font-size:17px}.featuredGuide:hover{border-color:#245382}@media(max-width:700px){.recentStudentGrid,.comparisonGrid,.featuredGuideGrid,.consultFlow{grid-template-columns:1fr}.recentStudent{align-items:flex-start}.recentStudent img{width:68px;height:68px}}
+
+/* Readable bold text and university campus photography. */
+body .container :is(p,li,dd,span,small,time,td,input,select,textarea){font-weight:800}
+body .container :is(h1,h2,h3,h4,strong,dt,th,label,summary,.btn){font-weight:900}
+.campusPhoto{margin:0 0 28px}.campusPhoto img{display:block;width:100%;height:auto;border-radius:16px}.campusPhoto figcaption{font-size:12px;line-height:1.7;color:#48617f;margin-top:10px}
+.campusThumb{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:12px}.campusCardCredit{font-size:11px;line-height:1.6;color:#48617f}.directoryItem .campusThumb{max-width:440px;margin-bottom:12px}
+
+.yenEstimate{font-size:21px;color:#17345d;margin:0 0 8px}
+.supportComparison{align-items:stretch}.supportComparison .infoCard{display:flex;flex-direction:column;text-align:left;padding:22px}
+.supportComparison h3{border-radius:10px;padding:12px;color:white;margin:0 0 18px;text-align:center;font-size:18px}
+.supportAgent h3{background:#1976c9}.supportCommunity h3{background:#77549c}.supportOfficial h3{background:#bd780e}.supportLab h3{background:#2d8957}
+.comparisonPart{margin-bottom:14px}.comparisonPart h4{font-size:16px;color:#17345d;margin:0 0 6px}.comparisonPart ul{margin:0;padding-left:1.3em;line-height:1.8;font-size:14px}.comparisonPart li{margin:6px 0}.comparisonNote{font-size:12px;line-height:1.7;color:#48617f}
+.comparisonConclusion{background:#eef8f1;border-left:4px solid #2d8957;padding:18px;font-size:17px;line-height:1.8;color:#17345d}
+@media(min-width:1150px){.supportComparison{grid-template-columns:repeat(4,minmax(0,1fr))}.supportComparison .infoCard{padding:16px}.supportComparison h3{font-size:16px}}
+
+/* Photo directory: one verified image per listed university record. */
+#directoryList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#directoryList .directoryItem{min-width:0;margin:0;padding:18px;overflow:hidden}
+.directoryPhoto{margin:0 0 16px}.directoryItem .campusThumb{max-width:none;width:100%;aspect-ratio:16/10;margin:0 0 8px;background:#edf3f8}
+.directoryPhoto figcaption{font-size:12px;line-height:1.6;margin-bottom:6px}.directoryPhoto .campusCardCredit{display:block;overflow-wrap:anywhere}.directoryItem h3{overflow-wrap:anywhere;line-height:1.5}
+@media(max-width:760px){#directoryList{grid-template-columns:1fr;gap:16px}}
+
+.directoryItem .universityLogo{object-fit:contain;background:#fff;padding:30px;border:1px solid #e2e9f0}
+
+/* Purpose-specific illustrations, familiar prices and contact forms. */
+[hidden]{display:none!important}
+.basicImgWrap .basicImg{object-fit:contain;background:#edf4fb}
+.flowIllustration{width:100%;height:160px;object-fit:contain;display:block;border-radius:12px}
+.consultFlow li{position:relative;padding-top:18px}.consultFlow li:before{position:absolute;left:26px;top:26px;background:#173b68;color:#fff;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-size:18px}
+.consultFlow span{line-height:1.9}
+.everydayPriceGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.everydayPriceCard{display:grid;grid-template-columns:90px minmax(0,1fr);gap:16px;background:#fff;border:1px solid #d5e0eb;border-radius:16px;padding:18px;align-items:start}
+.priceIllustration{width:90px;height:90px;object-fit:contain;border-radius:12px}
+.everydayPriceCard h3{font-size:17px;margin:0!important;line-height:1.6}
+.everydayPriceCard p{margin:6px 0!important;line-height:1.7}
+.priceQuantity,.priceSource{font-size:12px;color:#48617f}.priceSource{display:block;line-height:1.7;margin-top:12px}
+.everydayAmount{font-size:18px;color:#173b68}.priceItemNote{font-size:12px;color:#526173}
+.studentRecruitment{padding:24px;border:2px solid #d5aa45;background:#fff9e9;border-radius:16px;max-width:960px;margin:18px auto 24px}
+.studentRecruitment h3{font-size:23px;color:#173b68;margin:0 0 14px}.studentRecruitment p{line-height:1.9}.studentRecruitment .btn{margin-top:10px}
+.contactCard{max-width:960px;margin:auto;padding:28px}.studentContactFields,.contactMessage{margin-top:20px}
+.currencyReference{font-size:12px;line-height:1.8;padding:18px;max-width:960px;margin:24px auto;color:#48617f;border-top:1px solid #d5e0eb}
+.legendCountry{display:inline-block;width:22px;height:12px;border:3px solid #173b68;background:#f9e7bd;vertical-align:middle;margin-right:6px}
+.countryLabel{background:transparent;border:0;white-space:nowrap;text-align:center;pointer-events:none}
+.countryLabel span{display:inline-block;color:#173b68;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:900!important;background:rgba(255,255,255,.8);padding:2px 4px;border-radius:4px}
+.countryGermany span{font-size:21px;background:#fff9e9;border:2px solid #173b68;padding:2px 12px;box-shadow:0 2px 8px #173b6826}
+@media(max-width:600px){.everydayPriceGrid{grid-template-columns:1fr}.everydayPriceCard{grid-template-columns:80px minmax(0,1fr);padding:16px;gap:12px}.priceIllustration{width:80px;height:80px}.contactCard{padding:20px 16px}.studentRecruitment{padding:20px 16px}.studentRecruitment .btn{width:100%}.flowIllustration{height:180px}.countryLabel span{font-size:10px}.countryGermany span{font-size:18px}}
+
+.newsNew{display:inline-block;margin-left:10px;color:#c62828;font-size:12px;font-weight:800;line-height:1.7;vertical-align:middle}

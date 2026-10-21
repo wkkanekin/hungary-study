@@ -1,0 +1,270 @@
+{
+  "checkedOn": "2026-10-21",
+  "universities": [
+    {
+      "id": "polimi",
+      "jp": "ミラノ工科大学",
+      "en": "Politecnico di Milano",
+      "city": "ミラノ",
+      "region": "ロンバルディア",
+      "lat": 45.478,
+      "lon": 9.228,
+      "url": "https://www.polimi.it/en/",
+      "qs": 87,
+      "the": "157",
+      "arwu": "201–300",
+      "intro": "工学・建築・デザインを中心に学ぶ理工系大学。英語で学べる修士課程もあります。",
+      "rankSource": "https://www.polimi.it/en/the-politecnico/our-figures",
+      "shanghai": "polytechnic-university-of-milan"
+    },
+    {
+      "id": "sapienza",
+      "jp": "ローマ・サピエンツァ大学",
+      "en": "Sapienza University of Rome",
+      "city": "ローマ",
+      "region": "ラツィオ",
+      "lat": 41.903,
+      "lon": 12.515,
+      "url": "https://www.uniroma1.it/en",
+      "qs": 111,
+      "the": "147",
+      "arwu": "151–200",
+      "intro": "人文科学から理工・医療分野まで幅広く学べる総合大学。英語課程は専攻ごとに確認できます。",
+      "rankSource": "https://www.uniroma1.it/en/notizia/sapienza-international-rankings",
+      "shanghai": "sapienza-university-of-rome"
+    },
+    {
+      "id": "bologna",
+      "jp": "ボローニャ大学",
+      "en": "University of Bologna",
+      "city": "ボローニャ",
+      "region": "エミリア＝ロマーニャ",
+      "lat": 44.497,
+      "lon": 11.354,
+      "url": "https://www.unibo.it/en",
+      "qs": 123,
+      "the": "111",
+      "arwu": "201–300",
+      "intro": "人文・社会・自然科学を幅広く学べる総合大学。ボローニャ以外にもキャンパスがあります。",
+      "rankSource": "https://www.unibo.it/en/university/who-we-are/rankings-what-they-are-and-how-the-university-of-bologna-fares/rankings-what-they-are-and-how-the-university-of-bologna-fares",
+      "shanghai": "university-of-bologna"
+    },
+    {
+      "id": "padua",
+      "jp": "パドヴァ大学",
+      "en": "University of Padua",
+      "city": "パドヴァ",
+      "region": "ヴェネト",
+      "lat": 45.407,
+      "lon": 11.877,
+      "url": "https://www.unipd.it/en/",
+      "qs": 204,
+      "the": "224",
+      "arwu": "151–200",
+      "intro": "心理・生命科学・理工・人文社会などを学べる総合大学。学士と修士の英語課程を探せます。",
+      "rankSource": "https://www.unipd.it/en/ranking",
+      "shanghai": "university-of-padua"
+    },
+    {
+      "id": "pisa",
+      "jp": "ピサ大学",
+      "en": "University of Pisa",
+      "city": "ピサ",
+      "region": "トスカーナ",
+      "lat": 43.716,
+      "lon": 10.4,
+      "url": "https://www.unipi.it/en/",
+      "qs": 341,
+      "the": "401–450",
+      "arwu": "201–300",
+      "intro": "理学・工学・人文・医療分野を持つ総合大学。同じ街の高等研究機関とは別の大学です。",
+      "rankSource": "https://www.unipi.it/en/news/qs-world-university-rankings-2027_eng/",
+      "shanghai": "university-of-pisa"
+    },
+    {
+      "id": "turin",
+      "jp": "トリノ大学",
+      "en": "University of Turin",
+      "city": "トリノ",
+      "region": "ピエモンテ",
+      "lat": 45.07,
+      "lon": 7.688,
+      "url": "https://en.unito.it/",
+      "qs": 405,
+      "the": "376–400",
+      "arwu": "201–300",
+      "intro": "人文社会・経済・自然科学・医療などを持つ総合大学。トリノ工科大学とは別の大学です。",
+      "rankSource": "https://en.unito.it/university/about-us/rankings",
+      "shanghai": "university-of-turin"
+    },
+    {
+      "id": "florence",
+      "jp": "フィレンツェ大学",
+      "en": "University of Florence",
+      "city": "フィレンツェ",
+      "region": "トスカーナ",
+      "lat": 43.778,
+      "lon": 11.259,
+      "url": "https://www.unifi.it/en",
+      "qs": 409,
+      "the": "351–375",
+      "arwu": "301–400",
+      "intro": "人文・建築・社会科学・自然科学などを学べる総合大学。学部により通学先が異なります。",
+      "rankSource": "https://www.topuniversities.com/universities/university-florence",
+      "shanghai": "university-of-florence"
+    },
+    {
+      "id": "venice",
+      "jp": "ヴェネツィア・カフォスカリ大学",
+      "en": "Ca’ Foscari University of Venice",
+      "city": "ヴェネツィア",
+      "region": "ヴェネト",
+      "lat": 45.434,
+      "lon": 12.326,
+      "url": "https://www.unive.it/english",
+      "qs": 600,
+      "the": "451–500",
+      "arwu": "未記載",
+      "intro": "言語・人文・経済経営・科学分野を学べる大学。歴史あるヴェネツィアの街に拠点があります。",
+      "rankSource": "https://www.unive.it/pag/45050/",
+      "shanghai": "ca-foscari-university-of-venice"
+    }
+  ],
+  "subjects": [
+    [
+      "polimi",
+      "QS",
+      2026,
+      "建築学・建造環境",
+      "Architecture & Built Environment",
+      "6",
+      "https://www.polimi.it/en/the-politecnico/our-figures"
+    ],
+    [
+      "polimi",
+      "QS",
+      2026,
+      "アート・デザイン",
+      "Art & Design",
+      "7",
+      "https://www.polimi.it/en/the-politecnico/our-figures"
+    ],
+    [
+      "polimi",
+      "QS",
+      2026,
+      "工学・技術",
+      "Engineering & Technology",
+      "20",
+      "https://www.polimi.it/en/the-politecnico/our-figures"
+    ],
+    [
+      "sapienza",
+      "QS",
+      2026,
+      "古典・古代史",
+      "Classics & Ancient History",
+      "1",
+      "https://www.uniroma1.it/en/notizia/sapienza-international-rankings"
+    ],
+    [
+      "sapienza",
+      "QS",
+      2026,
+      "考古学",
+      "Archaeology",
+      "7",
+      "https://www.uniroma1.it/en/notizia/sapienza-international-rankings"
+    ],
+    [
+      "sapienza",
+      "QS",
+      2026,
+      "美術史",
+      "History of Art",
+      "7",
+      "https://www.uniroma1.it/en/notizia/sapienza-international-rankings"
+    ],
+    [
+      "sapienza",
+      "QS",
+      2026,
+      "物理学・天文学",
+      "Physics & Astronomy",
+      "38",
+      "https://www.uniroma1.it/en/notizia/sapienza-international-rankings"
+    ],
+    [
+      "padua",
+      "QS",
+      2026,
+      "生命科学・医学",
+      "Life Sciences & Medicine",
+      "100",
+      "https://www.unipd.it/en/ranking/qs_performance"
+    ],
+    [
+      "padua",
+      "QS",
+      2026,
+      "自然科学",
+      "Natural Sciences",
+      "111",
+      "https://www.unipd.it/en/ranking/qs_performance"
+    ],
+    [
+      "venice",
+      "QS",
+      2026,
+      "古典・古代史",
+      "Classics & Ancient History",
+      "24",
+      "https://www.unive.it/pag/45050/"
+    ],
+    [
+      "venice",
+      "QS",
+      2026,
+      "現代語学",
+      "Modern Languages",
+      "69",
+      "https://www.unive.it/pag/45050/"
+    ],
+    [
+      "pisa",
+      "ARWU",
+      2026,
+      "獣医学",
+      "Veterinary Sciences",
+      "27",
+      "https://www.shanghairanking.com/universities/university-of-pisa"
+    ],
+    [
+      "turin",
+      "ARWU",
+      2026,
+      "農学",
+      "Agricultural Sciences",
+      "50",
+      "https://www.shanghairanking.com/universities/university-of-turin"
+    ],
+    [
+      "polimi",
+      "THE",
+      2026,
+      "芸術・人文科学",
+      "Arts and Humanities",
+      "69",
+      "https://www.timeshighereducation.com/world-university-rankings/politecnico-di-milano"
+    ],
+    [
+      "polimi",
+      "THE",
+      2026,
+      "コンピューター科学",
+      "Computer Science",
+      "101–125",
+      "https://www.timeshighereducation.com/world-university-rankings/politecnico-di-milano"
+    ]
+  ]
+}

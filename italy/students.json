@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sample-1",
+    "name": "学生1（仮）",
+    "university": "ボローニャ大学",
+    "region": "ボローニャ",
+    "photo": "student-placeholder.svg",
+    "isDummy": true,
+    "enabled": false
+  },
+  {
+    "id": "sample-2",
+    "name": "学生2（仮）",
+    "university": "ミラノ工科大学",
+    "region": "ミラノ",
+    "photo": "student-placeholder.svg",
+    "isDummy": true,
+    "enabled": false
+  },
+  {
+    "id": "sample-3",
+    "name": "学生3（仮）",
+    "university": "パドヴァ大学",
+    "region": "パドヴァ",
+    "photo": "student-placeholder.svg",
+    "isDummy": true,
+    "enabled": false
+  },
+  {
+    "id": "sample-4",
+    "name": "学生4（仮）",
+    "university": "ローマ・サピエンツァ大学",
+    "region": "ローマ",
+    "photo": "student-placeholder.svg",
+    "isDummy": true,
+    "enabled": false
+  }
+]

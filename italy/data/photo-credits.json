@@ -1,0 +1,58 @@
+{
+  "padua": {
+    "src": "images/padua.jpg",
+    "caption": "Palazzo Bo is the historical seat of University of Padua since 1493",
+    "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Bo_%28Padua%29.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Didier Descouens"
+  },
+  "sapienza": {
+    "src": "images/sapienza.jpg",
+    "caption": "Palazzo della Sapienza , former home of the university until 1935",
+    "source": "https://commons.wikimedia.org/wiki/File:Innenhof_des_Palazzo_della_Sapienza.jpg",
+    "license": "CC BY 2.0",
+    "author": "Uploaded on May 19, 2005; by antmoose"
+  },
+  "pisa": {
+    "src": "images/pisa.jpg",
+    "caption": "Palazzo della Sapienza's courtyard",
+    "source": "https://commons.wikimedia.org/wiki/File:UniPI_Palazzo_Sapienza.jpg",
+    "license": "Public domain",
+    "author": "Antonio D'Agnelli"
+  },
+  "turin": {
+    "src": "images/turin.jpg",
+    "caption": "Hall of the Rectorate Palace of the University of Turin",
+    "source": "https://commons.wikimedia.org/wiki/File:Palazzo_dell%27Universit%C3%A0_%28Turin%29.jpg",
+    "license": "CC BY 4.0",
+    "author": "Derbrauni"
+  },
+  "polimi": {
+    "src": "images/polimi.jpg",
+    "caption": "Città Studi buildings in 1930",
+    "source": "https://commons.wikimedia.org/wiki/File:Citta_studi_1930.jpg",
+    "license": "Public domain",
+    "author": "Unknown author Unknown author"
+  },
+  "bologna": {
+    "src": "images/bologna.jpg",
+    "caption": "Navile Campus houses the departments of Chemistry, Industrial Chemistry, Pharmacy and Physics and Astronomy.",
+    "source": "https://commons.wikimedia.org/wiki/File:Edifici_Distretto_Navile.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Mattia Barci"
+  },
+  "florence": {
+    "src": "images/florence.jpg",
+    "caption": "Rectorate's auditorium",
+    "source": "https://commons.wikimedia.org/wiki/File:Rettorato_firenze%2C_aula_magna_02.JPG",
+    "license": "GFDL / CC BY-SA 3.0",
+    "author": "sailko"
+  },
+  "venice": {
+    "src": "images/venice.jpg",
+    "caption": "The Ca' Foscari Palace seen from the Grand Canal.",
+    "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Giustinian_%2B_Ca%27_Foscari_Venedig.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Freddo213"
+  }
+}

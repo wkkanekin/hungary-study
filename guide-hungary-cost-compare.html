@@ -70,9 +70,9 @@
               <div class="infoBox">
                 <h3 class="infoBoxTitle">このページの見方</h3>
                 <p>
-                  表とグラフは、Numbeoから取得して保存した指標を使っています。取得日を確認して比較してください。
-                  数値が高いほど、相対的にコストが高いと考えてください。
-                  指数の基準は <b>New York = 100</b> です。
+                  この表は都市ごとの物価を比べたものです。
+                  数字が大きいほど、物価が高い傾向にあります。
+                  <b>ニューヨークを100とした比較</b>です。
                 </p>
               </div>
             </section>
@@ -81,7 +81,7 @@
 <section class="seo-snapshot">
 <h2 id="cost-comparison-table">都市別の物価比較表</h2>
 <p id="metaText">データ取得日：2026-05-18 / 取得元：Numbeo / 基準：New York = 100</p>
-<p class="seo-data-note">取得日当時の保存済みデータです。現在の店頭価格や家賃を示すものではありません。更新データを取得できない場合も、この表は読めます。</p>
+<p class="seo-data-note">※数字は物価を比べる目安で、実際の支払額ではありません。</p>
 <div class="tableWrap"><table><caption>日本・ハンガリーの主要都市の相対的な価格指数</caption><thead><tr><th scope="col">都市</th><th scope="col">生活費（家賃除く）</th><th scope="col">家賃</th><th scope="col">外食</th></tr></thead><tbody id="compareTableBody"><tr><th scope="row">東京</th><td>54.1</td><td>24.9</td><td>35.8</td></tr><tr><th scope="row">大阪</th><td>42.5</td><td>17.9</td><td>28.3</td></tr><tr><th scope="row">ブダペスト</th><td>53.7</td><td>21.1</td><td>53.1</td></tr><tr><th scope="row">ペーチ</th><td>50.1</td><td>13.4</td><td>45.8</td></tr><tr><th scope="row">デブレツェン</th><td>48.1</td><td>15.9</td><td>45.8</td></tr><tr><th scope="row">セゲド</th><td>47.5</td><td>11.0</td><td>40.8</td></tr></tbody></table></div>
 <p><a href="https://www.numbeo.com/cost-of-living/rankings_current.jsp" target="_blank" rel="noopener">出典：Numbeoの都市別ランキング</a>。指数は金額ではなく、基準都市に対する相対値です。</p>
 </section>
@@ -98,7 +98,7 @@
                 <canvas id="costChart"></canvas>
               </div>
               <p class="muted" style="margin-top:10px;">
-                ※ 指数は New York = 100 を基準としています。
+                
               </p>
             </section>
 
@@ -108,7 +108,7 @@
                 <canvas id="rentChart"></canvas>
               </div>
               <p class="muted" style="margin-top:10px;">
-                ※ 指数は New York = 100 を基準としています。
+                
               </p>
             </section>
 
@@ -118,14 +118,14 @@
                 <canvas id="restaurantChart"></canvas>
               </div>
               <p class="muted" style="margin-top:10px;">
-                ※ 指数は New York = 100 を基準としています。
+                
               </p>
             </section>
 
 
 
             <section>
-              <h2 id="seo-section-4">指数と実際の支出の違い</h2><p>100はニューヨークを基準にした相対値で、円やフォリントの金額ではありません。Numbeoは利用者の投稿などから集計するデータで、政府の公式統計とは異なります。サンプルや集計時期、住み方によって実際の支出は変わります。</p><p><a href="https://www.numbeo.com/cost-of-living/cpi_explained.jsp" target="_blank" rel="noopener">Numbeo：各指数の定義</a>。生活費指数は家賃を含まないため、家賃と分けて比較してください。</p><p>商品の値段を知りたい方は<a href="guide-hungary-food-prices.html">食料品の価格と単位</a>、学費は<a href="guide-hungary-university-cost.html">大学の学費ガイド</a>をご覧ください。</p>
+              <h2 id="seo-section-4">指数と実際の支出の違い</h2><p>表の数字は物価の目安です。実際の家賃や生活費は住む場所や生活スタイルで変わります。</p><p><a href="https://www.numbeo.com/cost-of-living/cpi_explained.jsp" target="_blank" rel="noopener">Numbeo：各指数の定義</a>。家賃は生活費とは別に比較しています。</p><p>商品の値段を知りたい方は<a href="guide-hungary-food-prices.html">食料品の価格と単位</a>、学費は<a href="guide-hungary-university-cost.html">大学の学費ガイド</a>をご覧ください。</p>
               <p>
                 ブダペストは日本の大都市に比較的近い水準でも、
                 ペーチ・セゲド・デブレツェンのような地方都市は、
@@ -338,7 +338,7 @@
         );
       } catch (error) {
         console.error(error);
-        metaText.append(" / 更新データを取得できないため、掲載済みの表を表示しています。");
+        metaText.append("");
       }
     });
   </script>

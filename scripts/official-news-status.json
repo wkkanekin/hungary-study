@@ -4,11 +4,11 @@
   "sourcesTotal": 10,
   "publishedItems": 6,
   "errors": [
-    "Stipendium Hungaricum公式: URLError: <urlopen error timed out>",
-    "Study in Hungary（Tempus）: HTTPError: HTTP Error 503: Service Unavailable",
+    "Stipendium Hungaricum公式: ValueError: News selector matched no entries",
+    "Study in Hungary（Tempus）: URLError: <urlopen error timed out>",
     "Tempus Public Foundation: URLError: <urlopen error timed out>",
     "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden",
-    "Tempus Public Foundation: URLError: <urlopen error timed out>"
+    "Tempus Public Foundation: ValueError: Watched page heading changed or redirected"
   ],
   "dryRun": false
 }

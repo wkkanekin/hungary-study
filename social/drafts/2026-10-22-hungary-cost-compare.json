@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-22",
+  "status": "pending_approval",
+  "approved": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "ハンガリーと日本の物価比較｜主要都市の生活費・家賃",
+  "article_url": "https://hungarystudy.org/guide-hungary-cost-compare.html",
+  "text": "🇭🇺 ハンガリー留学、どの街が安い？\n\n首都ブダペストと地方都市では家賃に差があります。ペーチ・セゲド・デブレツェンは家賃を抑えやすい傾向。東京・大阪との比較も紹介👇\n\nhttps://hungarystudy.org/guide-hungary-cost-compare.html",
+  "image_url": null,
+  "image_status": "画像未確認。記事HTMLにimg要素・picture・og:image・twitter:imageは見当たらず、SNSに利用可能な既存画像URLと使用権は確認できない。画像なしを提案。",
+  "source_checked": "GitHub main guide-hungary-cost-compare.html と公開URL本文を確認。2026-05-18取得のNumbeo指標に基づく都市比較。",
+  "notes": "承認されるまでX・Threadsに投稿しない。前回のguide-hungary-living.htmlなど既存drafts/approvedのファイル名と重複しない記事。"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T20:08:54.165792+00:00",
+  "generated_at": "2026-10-22T23:24:38.838795+00:00",
   "source": "MET Norway Locationforecast",
   "source_url": "https://api.met.no/",
   "license": "CC BY 4.0",
@@ -9,36 +9,9 @@
       "name": "デブレツェン",
       "latitude": 47.5316,
       "longitude": 21.6273,
-      "provider_updated_at": "2026-10-22T19:17:32Z",
-      "fetched_at": "2026-10-22T20:08:54.933076+00:00",
+      "provider_updated_at": "2026-10-22T19:17:33Z",
+      "fetched_at": "2026-10-22T23:24:39.791727+00:00",
       "hours": [
-        {
-          "time": "2026-10-22T20:00:00Z",
-          "temperature": 11.2,
-          "wind_ms": 1.4,
-          "humidity": 93.1,
-          "symbol": "cloudy",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T21:00:00Z",
-          "temperature": 11.2,
-          "wind_ms": 1.7,
-          "humidity": 92.7,
-          "symbol": "lightrain",
-          "precipitation_mm": 0.1,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T22:00:00Z",
-          "temperature": 11.0,
-          "wind_ms": 2.5,
-          "humidity": 91.7,
-          "symbol": "cloudy",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
         {
           "time": "2026-10-22T23:00:00Z",
           "temperature": 10.5,
@@ -659,6 +632,33 @@
           "symbol": "partlycloudy_day",
           "precipitation_mm": 0.0,
           "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T12:00:00Z",
+          "temperature": 16.0,
+          "wind_ms": 2.4,
+          "humidity": 54.6,
+          "symbol": "fair_day",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T18:00:00Z",
+          "temperature": 10.2,
+          "wind_ms": 0.8,
+          "humidity": 77.1,
+          "symbol": "fair_night",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-28T00:00:00Z",
+          "temperature": 7.2,
+          "wind_ms": 0.2,
+          "humidity": 87.1,
+          "symbol": "clearsky_night",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
         }
       ]
     },
@@ -667,35 +667,8 @@
       "latitude": 47.4979,
       "longitude": 19.0402,
       "provider_updated_at": "2026-10-22T19:17:33Z",
-      "fetched_at": "2026-10-22T20:08:55.001001+00:00",
+      "fetched_at": "2026-10-22T23:24:39.785185+00:00",
       "hours": [
-        {
-          "time": "2026-10-22T20:00:00Z",
-          "temperature": 9.7,
-          "wind_ms": 4.3,
-          "humidity": 66.8,
-          "symbol": "partlycloudy_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T21:00:00Z",
-          "temperature": 9.1,
-          "wind_ms": 4.0,
-          "humidity": 67.4,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T22:00:00Z",
-          "temperature": 8.1,
-          "wind_ms": 3.4,
-          "humidity": 71.5,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
         {
           "time": "2026-10-22T23:00:00Z",
           "temperature": 7.3,
@@ -1316,6 +1289,33 @@
           "symbol": "cloudy",
           "precipitation_mm": 0.0,
           "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T12:00:00Z",
+          "temperature": 13.2,
+          "wind_ms": 1.2,
+          "humidity": 64.5,
+          "symbol": "cloudy",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T18:00:00Z",
+          "temperature": 9.7,
+          "wind_ms": 0.4,
+          "humidity": 81.9,
+          "symbol": "partlycloudy_night",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-28T00:00:00Z",
+          "temperature": 10.1,
+          "wind_ms": 0.5,
+          "humidity": 82.2,
+          "symbol": "cloudy",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
         }
       ]
     },
@@ -1324,44 +1324,8 @@
       "latitude": 46.253,
       "longitude": 20.1414,
       "provider_updated_at": "2026-10-22T19:17:33Z",
-      "fetched_at": "2026-10-22T20:08:55.853804+00:00",
+      "fetched_at": "2026-10-22T23:24:40.823914+00:00",
       "hours": [
-        {
-          "time": "2026-10-22T19:00:00Z",
-          "temperature": 11.4,
-          "wind_ms": 4.9,
-          "humidity": 66.8,
-          "symbol": "partlycloudy_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T20:00:00Z",
-          "temperature": 10.7,
-          "wind_ms": 3.8,
-          "humidity": 70.2,
-          "symbol": "cloudy",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T21:00:00Z",
-          "temperature": 10.0,
-          "wind_ms": 3.1,
-          "humidity": 75.6,
-          "symbol": "cloudy",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T22:00:00Z",
-          "temperature": 9.3,
-          "wind_ms": 3.1,
-          "humidity": 78.6,
-          "symbol": "partlycloudy_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
         {
           "time": "2026-10-22T23:00:00Z",
           "temperature": 8.8,
@@ -1973,6 +1937,42 @@
           "symbol": "cloudy",
           "precipitation_mm": 0.0,
           "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T06:00:00Z",
+          "temperature": 7.2,
+          "wind_ms": 1.5,
+          "humidity": 87.9,
+          "symbol": "fair_day",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T12:00:00Z",
+          "temperature": 17.2,
+          "wind_ms": 0.6,
+          "humidity": 50.7,
+          "symbol": "fair_day",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T18:00:00Z",
+          "temperature": 11.5,
+          "wind_ms": 1.4,
+          "humidity": 74.1,
+          "symbol": "clearsky_night",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-28T00:00:00Z",
+          "temperature": 10.2,
+          "wind_ms": 1.1,
+          "humidity": 84.0,
+          "symbol": "cloudy",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
         }
       ]
     },
@@ -1980,36 +1980,9 @@
       "name": "ペーチ",
       "latitude": 46.0727,
       "longitude": 18.2323,
-      "provider_updated_at": "2026-10-22T19:17:33Z",
-      "fetched_at": "2026-10-22T20:08:55.754837+00:00",
+      "provider_updated_at": "2026-10-22T19:17:37Z",
+      "fetched_at": "2026-10-22T23:24:40.838021+00:00",
       "hours": [
-        {
-          "time": "2026-10-22T20:00:00Z",
-          "temperature": 8.8,
-          "wind_ms": 2.2,
-          "humidity": 77.7,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T21:00:00Z",
-          "temperature": 8.3,
-          "wind_ms": 1.8,
-          "humidity": 78.7,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T22:00:00Z",
-          "temperature": 7.5,
-          "wind_ms": 1.5,
-          "humidity": 80.6,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
         {
           "time": "2026-10-22T23:00:00Z",
           "temperature": 7.2,
@@ -2630,6 +2603,33 @@
           "symbol": "cloudy",
           "precipitation_mm": 0.0,
           "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T12:00:00Z",
+          "temperature": 16.4,
+          "wind_ms": 2.0,
+          "humidity": 51.6,
+          "symbol": "partlycloudy_day",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T18:00:00Z",
+          "temperature": 11.0,
+          "wind_ms": 1.1,
+          "humidity": 78.4,
+          "symbol": "fair_night",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-28T00:00:00Z",
+          "temperature": 11.8,
+          "wind_ms": 1.1,
+          "humidity": 73.2,
+          "symbol": "cloudy",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
         }
       ]
     },
@@ -2637,36 +2637,9 @@
       "name": "ジェール",
       "latitude": 47.6875,
       "longitude": 17.6504,
-      "provider_updated_at": "2026-10-22T19:17:32Z",
-      "fetched_at": "2026-10-22T20:08:56.442245+00:00",
+      "provider_updated_at": "2026-10-22T19:17:37Z",
+      "fetched_at": "2026-10-22T23:24:41.715410+00:00",
       "hours": [
-        {
-          "time": "2026-10-22T20:00:00Z",
-          "temperature": 7.9,
-          "wind_ms": 2.8,
-          "humidity": 77.8,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T21:00:00Z",
-          "temperature": 7.3,
-          "wind_ms": 2.6,
-          "humidity": 80.2,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
-        {
-          "time": "2026-10-22T22:00:00Z",
-          "temperature": 6.9,
-          "wind_ms": 2.7,
-          "humidity": 82.0,
-          "symbol": "clearsky_night",
-          "precipitation_mm": 0.0,
-          "precipitation_period_hours": 1
-        },
         {
           "time": "2026-10-22T23:00:00Z",
           "temperature": 6.6,
@@ -3284,6 +3257,33 @@
           "temperature": 7.9,
           "wind_ms": 2.1,
           "humidity": 88.9,
+          "symbol": "cloudy",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T12:00:00Z",
+          "temperature": 11.9,
+          "wind_ms": 1.6,
+          "humidity": 76.6,
+          "symbol": "cloudy",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-27T18:00:00Z",
+          "temperature": 9.1,
+          "wind_ms": 0.9,
+          "humidity": 90.2,
+          "symbol": "fair_night",
+          "precipitation_mm": 0.0,
+          "precipitation_period_hours": 6
+        },
+        {
+          "time": "2026-10-28T00:00:00Z",
+          "temperature": 9.7,
+          "wind_ms": 0.8,
+          "humidity": 87.9,
           "symbol": "cloudy",
           "precipitation_mm": 0.0,
           "precipitation_period_hours": 6

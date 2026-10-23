@@ -262,5 +262,21 @@
   "https://ryugaku.jasso.go.jp/scholarship/search/data_00150.html": {
     "fingerprint": "20be343381bdb0f9b09302ca9de37ef91d81b1dfd080897d44be696496d22b1e",
     "date": "2026-07-31"
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00072.html": {
+    "date": "2026-10-15",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00071.html": {
+    "date": "2026-10-15",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00034.html": {
+    "date": "2026-10-15",
+    "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00033.html": {
+    "date": "2026-10-15",
+    "baseline": true
   }
 }

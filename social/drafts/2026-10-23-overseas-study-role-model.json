@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-23",
+  "status": "pending_approval",
+  "approved": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "海外留学を考えるきっかけ1位は「身近な人の話」――海外進学にロールモデルが必要な理由",
+  "article_url": "https://hungarystudy.org/guide-overseas-study-role-model.html",
+  "text": "🇭🇺 海外大学への進学、身近に相談できる先輩はいますか？\n\n留学に興味を持ったきっかけで最多は「家族や友人など身近な経験者の話」（文科省調査、25.2%）。経験者の声が進路のヒントになるかもしれません👇\n\nhttps://hungarystudy.org/guide-overseas-study-role-model.html",
+  "image_candidate_url": "https://hungarystudy.org/images/guides/guide-overseas-study-role-model-hero.png",
+  "image_status": "画像未確認：記事内の画像URLとGitHubリポジトリ内のファイル存在は確認済み。ただし著作権者・SNS再利用許諾は確認できないため承認前の投稿画像には使用しない。",
+  "source_checked": "公開記事の本文およびGitHub mainのguide-overseas-study-role-model.htmlを確認。文部科学省『学生の海外留学に関する調査』について記事記載の25.2%を引用。",
+  "notes": "過去のsocial/drafts/およびsocial/approved/一覧と重複しない。ユーザー承認まで公開投稿・予約投稿は行わない。"
+}

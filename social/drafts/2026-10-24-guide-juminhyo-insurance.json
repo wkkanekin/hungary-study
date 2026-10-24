@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-24",
+  "status": "pending_approval",
+  "approved": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "海外大学進学前に確認したい住民票・健康保険・国民年金の手続きまとめ",
+  "article_url": "https://hungarystudy.org/guide-juminhyo-insurance.html",
+  "text": "🌍 海外大学への進学、住民票はどうする？\n\n留学前は学費やビザだけでなく、健康保険・マイナンバーカード・20歳以降の国民年金も要確認。保護者と一緒にチェックしたい手続きをまとめました👇\n\nhttps://hungarystudy.org/guide-juminhyo-insurance.html",
+  "image_url": null,
+  "image_status": "画像未確認。記事HTMLに本文用のimg要素・og:image・CSS背景画像は見当たらず、使用権を確認できる既存画像はありません。画像なしを提案。",
+  "source_checked": "2026-10-24 GitHub main guide-juminhyo-insurance.html と公開ページ本文を確認。",
+  "notes": "過去のsocial/draftsとsocial/approvedのファイル名を確認し、別記事を選定。ユーザー承認前のためX・Threadsへ公開しない。"
+}

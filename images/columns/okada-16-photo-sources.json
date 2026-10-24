@@ -4,16 +4,27 @@
   "checked": "2026-10-24",
   "photos": [
     {
-      "file": "okada-16-study-desk-01.jpg",
+      "file": "images/columns/okada-16-study-desk-01.jpg",
       "author": "Muhtelifane",
-      "source": "https://www.pexels.com/photo/cozy-study-scene-with-coffee-and-notebooks-29091898/",
-      "usage": "イメージ写真"
+      "source": "https://www.pexels.com/photo/cozy-study-scene-with-coffee-and-notebooks-29091898/"
     },
     {
-      "file": "okada-16-japanese-food-02.jpg",
-      "author": "Ivan S",
-      "source": "https://www.pexels.com/photo/japanese-food-on-a-table-8951534/",
-      "usage": "イメージ写真"
+      "file": "images/columns/okada-16-japan-perspective-02.jpg",
+      "author": "Huy Phan",
+      "source": "https://www.pexels.com/photo/bustling-tokyo-street-scene-with-modern-architecture-34975694/"
+    },
+    {
+      "file": "images/columns/yugo-second-semester-park.JPG",
+      "source": "岡田さんの既存コラム掲載写真を再使用"
+    },
+    {
+      "file": "images/columns/yugo-library-study.jpg",
+      "source": "岡田さんの既存コラム掲載写真を再使用"
+    },
+    {
+      "file": "images/columns/okada-16-departure-05.jpg",
+      "author": "Jenna Hamra",
+      "source": "https://www.pexels.com/photo/aircraft-wing-804436/"
     }
   ]
 }

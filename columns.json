@@ -413,5 +413,24 @@
     ],
     "readingTime": "5分",
     "url": "column-yugo-programming-study.html"
+  },
+  {
+    "id": "yugo-values-growth",
+    "enabled": true,
+    "title": "「海外で働きたい」から「日本最高！」へ？ハンガリー留学で変わった僕の価値観とリアルな成長【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-10-24",
+    "thumbnail": "images/columns/okada-16-study-desk-01.jpg",
+    "summary": "ハンガリー留学で変わった価値観と、変わらなかった生活習慣。デブレツェン大学のユウゴが、自己管理、日本への思い、自分の軸について本音で語ります。",
+    "tags": [
+      "留学生活",
+      "価値観",
+      "デブレツェン",
+      "自己管理"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-values-growth.html"
   }
 ]

@@ -122,10 +122,8 @@
     }
   ],
   "maps": {
-    "renderer": "Leaflet 1.9.4 / raster tiles (no WebGL)",
-    "tiles": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-    "attribution": "© OpenStreetMap contributors",
-    "copyright": "https://www.openstreetmap.org/copyright",
-    "loading": "Initialize only when a map approaches the visible viewport; no offline tile downloading."
+    "source": "Eurostat GISCO NUTS 2024 (NUTS 3)",
+    "geometry_reused_from": "images/universities/hungary-location-gyor.svg",
+    "display": "Highlight the county containing each city; Budapest uses the capital administrative area. No external map links or interactive controls."
   }
 }

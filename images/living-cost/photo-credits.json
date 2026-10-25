@@ -1,0 +1,123 @@
+{
+  "checked_at": "2026-10-25",
+  "processing": "Real photographs; resize and WebP compression only. CSS crops landscape displays; source licenses retained.",
+  "assets": [
+    {
+      "path": "images/guides/hungary-living-cost-cities.svg",
+      "caption": "6都市の位置。各都市の拡大地図でも場所を確認できます。",
+      "links": []
+    },
+    {
+      "path": "images/guides/safety/city-photo.webp",
+      "caption": "ブダペストの街並みとトラム · Benjamin Grull / Unsplash License",
+      "links": [
+        "https://unsplash.com/photos/two-yellow-trams-next-to-road-UnBAJK5Llx4",
+        "https://unsplash.com/license"
+      ]
+    },
+    {
+      "path": "images/university-cost/corvinus.webp",
+      "caption": "コルヴィヌス大学の本館 · Darkone / CC BY-SA 2.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Corvinus_University_Budapest_Main_Building.jpg",
+        "https://creativecommons.org/licenses/by-sa/2.0/"
+      ]
+    },
+    {
+      "path": "images/university-cost/bme.webp",
+      "caption": "BMEのK棟 · Grigorius m / CC BY-SA 4.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Budapest_University_of_Technology_and_Economics_K_building%2C_University_191003.jpg",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ]
+    },
+    {
+      "path": "images/erasmus-mundus/elte-campus.webp",
+      "caption": "ELTEの中央棟 · Misibacsi / CC BY-SA 3.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Budapest_ELTE_Univ_central_building.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ]
+    },
+    {
+      "path": "images/living-cost/debrecen-city.webp",
+      "caption": "デブレツェンのコシュート広場と大改革派教会 · Elelicht / CC BY-SA 3.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Debrecen_1.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ]
+    },
+    {
+      "path": "images/university-cost/debrecen.webp",
+      "caption": "デブレツェン大学の本館 · Alensha / Public domain",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:DebrecenUniversity1.jpg",
+        "https://commons.wikimedia.org/wiki/File:DebrecenUniversity1.jpg"
+      ]
+    },
+    {
+      "path": "images/living-cost/gyor-city.webp",
+      "caption": "ジェールの市庁舎と街並み · Slashme / CC BY-SA 4.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Gyor_town_hall.jpg",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ]
+    },
+    {
+      "path": "images/living-cost/gyor-university.webp",
+      "caption": "セーチェーニ大学のK0棟 · Globetrotter19 / CC BY-SA 3.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Istv%C3%A1n_University,_Multifunctional_Building,_2018_Gy%C5%91r.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ]
+    },
+    {
+      "path": "images/living-cost/miskolc-city.webp",
+      "caption": "アヴァシュ展望塔から見たミシュコルツ · Jan Pešula / CC0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Miskolc_from_Avas_tower.JPG",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "path": "images/living-cost/miskolc-university.webp",
+      "caption": "ミシュコルツ大学の正面入口 · Serinde（原典表記による推定） / CC BY-SA 3.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:UnivMiskolc_Main.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ]
+    },
+    {
+      "path": "images/living-cost/pecs-city.webp",
+      "caption": "ペーチのセーチェーニ広場 · Alensha / Public domain",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_square,_P%C3%A9cs_2.jpg",
+        "https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_square,_P%C3%A9cs_2.jpg"
+      ]
+    },
+    {
+      "path": "images/university-cost/pecs.webp",
+      "caption": "ペーチ大学の建物 · Fadi / CC BY-SA 3.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Universit%C3%A4t_Pecs.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ]
+    },
+    {
+      "path": "images/living-cost/szeged-city.webp",
+      "caption": "セゲドの大聖堂とドーム広場 · János Tamás / CC BY 2.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:1_Szeged_Cathedral.jpg",
+        "https://creativecommons.org/licenses/by/2.0/"
+      ]
+    },
+    {
+      "path": "images/university-cost/szeged.webp",
+      "caption": "セゲド大学の本部棟 · McAnt / CC BY-SA 3.0",
+      "links": [
+        "https://commons.wikimedia.org/wiki/File:Szeged%2C_Rector_building.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ]
+    }
+  ]
+}

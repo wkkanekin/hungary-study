@@ -1,5 +1,18 @@
 [
   {
+    "id": "hungary-living-cost",
+    "enabled": true,
+    "featured": false,
+    "homePick": true,
+    "comingSoon": false,
+    "title": "ハンガリー留学の生活費｜大学公式データで6都市を比較",
+    "description": "ハンガリー留学には毎月いくら必要？ブダペストやデブレツェンなど6都市の住居費と、大学が公表する生活費を日本円で分かりやすく紹介します。",
+    "category": "費用",
+    "url": "guide-hungary-living-cost.html",
+    "date": "2026-10-25",
+    "thumbnail": "images/guides/safety/city-photo.webp"
+  },
+  {
     "id": "erasmus-mundus",
     "enabled": true,
     "featured": true,

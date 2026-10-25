@@ -3,14 +3,6 @@
   "processing": "Real photographs; resize and WebP compression only. CSS crops landscape displays; source licenses retained.",
   "assets": [
     {
-      "path": "images/guides/safety/city-photo.webp",
-      "caption": "ブダペストの街並みとトラム · Benjamin Grull / Unsplash License",
-      "links": [
-        "https://unsplash.com/photos/two-yellow-trams-next-to-road-UnBAJK5Llx4",
-        "https://unsplash.com/license"
-      ]
-    },
-    {
       "path": "images/university-cost/bme.webp",
       "caption": "BMEのK棟 · Grigorius m / CC BY-SA 4.0",
       "links": [
@@ -119,6 +111,12 @@
       "links": [
         "https://www.uni-corvinus.hu/downloads/c9uc.dytpd9/international-student-guide-2026-27-205x205mm.pdf"
       ]
+    },
+    {
+      "path": "images/universities/corvinus-guide-2.jpg",
+      "caption": "ブダペスト・ブダ城とドナウ川",
+      "source": "https://www.uni-corvinus.hu/downloads/c9uc.dytpd9/international-student-guide-2026-27-205x205mm.pdf",
+      "note": "Existing site photograph from the official city introduction; shows Buda Castle, not a university building."
     }
   ],
   "maps": {

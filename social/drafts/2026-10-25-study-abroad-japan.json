@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-25",
+  "status": "pending_approval",
+  "approved": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "日本人の海外留学の現状と、留学を阻む課題",
+  "article_url": "https://hungarystudy.org/guide-study-abroad-japan.html",
+  "text": "🌏 日本人の海外留学、増えている？\n\n2024年度、国内大学等が把握した海外留学者数は91,054人。前年より2.1％増えました。\n\nただし短期留学も含む数字で、海外大学への正規進学者数とは別です。\n\n費用・語学・奨学金など、進路選びで確認したいポイントを解説👇\nhttps://hungarystudy.org/guide-study-abroad-japan.html",
+  "image_url": null,
+  "image_candidate_url": "https://hungarystudy.org/images/ogp-guide-study-abroad-japan.jpg",
+  "image_status": "画像未確認。記事本文にimg要素なし。og:image指定の候補はあるがGitHubリポジトリ内に当該画像ファイルを確認できず、公開URLの画像表示・使用権も確認できないため投稿には使わない。",
+  "source_checked": "公開記事を2026-10-25に確認。2024年度91,054人、2023年度89,179人、前年比2.1%増。国内大学等が把握した留学者数で短期留学を含む。",
+  "notes": "既存social/drafts/とsocial/approved/のファイル名を確認し、同じ記事の投稿履歴なし。承認までX・Threadsに公開しない。画像なし提案。"
+}

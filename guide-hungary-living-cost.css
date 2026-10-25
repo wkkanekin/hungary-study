@@ -2,3 +2,5 @@
 @media(max-width:720px){.living-guide .articleHero{padding:24px 18px}.living-guide .articleBody{padding:22px 16px}.visuals,.uni-layout{grid-template-columns:minmax(0,1fr)}.living-guide .city-photo img{height:220px}.city-map iframe{height:220px;flex:none}.rent-grid{grid-template-columns:minmax(0,1fr)}.rent-grid>div{display:grid;grid-template-columns:90px minmax(0,1fr);align-items:center;gap:2px 10px}.rent-grid small{grid-column:2}.rent-grid strong{font-size:21px}.rent{padding:16px}.budapest-campus-photos{grid-template-columns:minmax(0,1fr)}.budapest-campus-photos .uni-photo img,.living-guide .uni-photo img{height:200px}.price{font-size:22px}.note,.cta{padding:18px}.city-title{align-items:start}.city-title h2 small{display:block}.city-title .region{font-size:12px}.living-guide .lead{font-size:16px}}
 
 .living-guide img[src$="gyor-university.webp"]{object-fit:contain;background:#eef3f6}
+
+.living-guide .city-position-map{width:100%;height:auto;object-fit:contain;display:block;margin:auto}.city-map{justify-content:space-between;background:#f3f7fb}.city-map>a{display:block;background:white}

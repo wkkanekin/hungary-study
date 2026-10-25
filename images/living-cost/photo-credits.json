@@ -3,24 +3,11 @@
   "processing": "Real photographs; resize and WebP compression only. CSS crops landscape displays; source licenses retained.",
   "assets": [
     {
-      "path": "images/guides/hungary-living-cost-cities.svg",
-      "caption": "6都市の位置。各都市の拡大地図でも場所を確認できます。",
-      "links": []
-    },
-    {
       "path": "images/guides/safety/city-photo.webp",
       "caption": "ブダペストの街並みとトラム · Benjamin Grull / Unsplash License",
       "links": [
         "https://unsplash.com/photos/two-yellow-trams-next-to-road-UnBAJK5Llx4",
         "https://unsplash.com/license"
-      ]
-    },
-    {
-      "path": "images/university-cost/corvinus.webp",
-      "caption": "コルヴィヌス大学の本館 · Darkone / CC BY-SA 2.0",
-      "links": [
-        "https://commons.wikimedia.org/wiki/File:Corvinus_University_Budapest_Main_Building.jpg",
-        "https://creativecommons.org/licenses/by-sa/2.0/"
       ]
     },
     {
@@ -118,6 +105,27 @@
         "https://commons.wikimedia.org/wiki/File:Szeged%2C_Rector_building.jpg",
         "https://creativecommons.org/licenses/by-sa/3.0/"
       ]
+    },
+    {
+      "path": "images/universities/bueb-guide-1.jpg",
+      "caption": "BUEBで卒業を祝う学生たち · BUEB公式大学紹介フライヤー",
+      "links": [
+        "https://webapi.uni-bge.hu/api/v1/files/download/documents/international-admission-brochures/bueb_general_flyer.pdf?id=72937"
+      ]
+    },
+    {
+      "path": "images/universities/corvinus-guide-1.jpg",
+      "caption": "コルヴィヌス大学 Gellértキャンパス · 大学公式2026–27年版ガイド",
+      "links": [
+        "https://www.uni-corvinus.hu/downloads/c9uc.dytpd9/international-student-guide-2026-27-205x205mm.pdf"
+      ]
     }
-  ]
+  ],
+  "maps": {
+    "renderer": "Leaflet 1.9.4 / raster tiles (no WebGL)",
+    "tiles": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "attribution": "© OpenStreetMap contributors",
+    "copyright": "https://www.openstreetmap.org/copyright",
+    "loading": "Initialize only when a map approaches the visible viewport; no offline tile downloading."
+  }
 }

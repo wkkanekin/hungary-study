@@ -1,4 +1,11 @@
 window.GERMANY_UPDATES = [
+{
+  "title": "動画「日本の大学か、ドイツか？学費・奨学金と『卒業後の自由』を考える」を公開しました",
+  "date": "2026-10-26",
+  "url": "index.html#youtube",
+  "category": "動画",
+  "enabled": true
+},
   {
     "title": "ゲーテ大学で経済・経営を学ぶ大塩浩輝さんが現役生として参加しました",
     "date": "2026-10-20",

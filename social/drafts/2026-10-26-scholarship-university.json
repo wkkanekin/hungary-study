@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-26",
+  "status": "pending_approval",
+  "approved": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "ハンガリー奨学金はどの大学に多い？受け入れ大学ランキングを解説",
+  "article_url": "https://hungarystudy.org/guide-scholarship-university.html",
+  "text": "🇭🇺 ハンガリー政府奨学金、どの大学に奨学生が多い？\n\n2025/26年度の在籍奨学生数は、デブレツェン大学1,924人、ELTE1,716人、ペーチ大学1,160人。\n\nこれは新規合格者数ではなく、在籍者の合計です。人数が多い＝合格しやすい、ではありません。\n\n大学別データはこちら👇\nhttps://hungarystudy.org/guide-scholarship-university.html",
+  "image_url": null,
+  "image_candidate_url": null,
+  "image_status": "画像未確認。公開記事およびGitHub上の当該記事HTMLに本文用img要素・picture要素・og:image指定が見つからず、記事固有の既存画像URL・SNS使用権を確認できないため、画像なしの投稿を提案する。",
+  "source_checked": "2026-10-26に公開記事とGitHubのHTMLを確認。2025/26年度の在籍奨学生数はデブレツェン大学1,924人、ELTE1,716人、ペーチ大学1,160人。新規合格者数ではない。",
+  "notes": "social/drafts/およびsocial/approved/の既存ファイル名を確認し、当該記事の過去案は見当たらない。承認まで公開投稿しない。"
+}

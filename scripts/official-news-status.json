@@ -1,11 +1,13 @@
 {
   "checkedAt": "2026-10-26",
-  "sourcesSuccessful": 8,
+  "sourcesSuccessful": 6,
   "sourcesTotal": 10,
   "publishedItems": 7,
   "errors": [
-    "Study in Hungary（Tempus）: URLError: <urlopen error [Errno 111] Connection refused>",
-    "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
+    "Study in Hungary（Tempus）: HTTPError: HTTP Error 503: Service Unavailable",
+    "Tempus Public Foundation: URLError: <urlopen error _ssl.c:993: The handshake operation timed out>",
+    "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden",
+    "Tempus Public Foundation: URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
   ],
   "dryRun": false
 }

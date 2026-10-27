@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-27",
+  "status": "pending_approval",
+  "approved": false,
+  "published": false,
+  "platforms": [
+    "X",
+    "Threads"
+  ],
+  "article_title": "エラスムス・ムンドゥス奨学金｜応募前に知りたいこと",
+  "article_url": "https://hungarystudy.org/guide-erasmus-mundus.html",
+  "text": "🇪🇺 ヨーロッパの複数大学で学ぶ「エラスムス・ムンドゥス」。\n\n奨学金に採用されると、月1,400ユーロ（最長24か月）の給付と授業料免除を受けられます。\n\n日本人・社会人も応募可能。ただし対象は修士課程で、高校卒業後の学部進学には使えません。\n\n応募条件・2027年入学の締切はこちら👇\nhttps://hungarystudy.org/guide-erasmus-mundus.html",
+  "image_candidate_url": "https://hungarystudy.org/images/erasmus-mundus/ppke-campus.webp",
+  "image_repo_path": "images/erasmus-mundus/ppke-campus.webp",
+  "image_license": "CC BY-SA 4.0",
+  "image_license_verified": true,
+  "image_rights": "Wikimedia Commonsで原著作者Sir MorosusがCC BY-SA 4.0として公開。SNS利用可能。ただし作者・原典・ライセンスURL・改変（縮小/WebP化）を表示し、改変部分も同一または互換ライセンスで公開する条件付き。",
+  "image_attribution": "写真: Sir Morosus / CC BY-SA 4.0（縮小・WebP化）",
+  "image_original_url": "https://commons.wikimedia.org/wiki/File:PPCU_Faculty_of_Information_Technology_and_Bionics_(d)_(2).jpg",
+  "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "image_use_note": "画像を投稿する場合は、作者・原典リンク・ライセンスリンク・加工の有無を投稿文または付随する説明に表示する。画像使用自体も承認待ち。",
+  "source_checked": "2026-10-27。公開記事本文、GitHub HTML、画像ファイル、Wikimedia Commonsの原画像ライセンスを確認。",
+  "previous_articles_avoided": [
+    "guide-scholarship-university.html",
+    "guide-study-abroad-japan.html",
+    "guide-juminhyo-insurance.html",
+    "guide-overseas-study-role-model.html",
+    "guide-scholarship-odds.html",
+    "guide-student-debt-overseas-scholarship.html",
+    "guide-hungary-cost-compare.html"
+  ],
+  "notes": "承認前はX・Threads等に投稿・予約しない。"
+}

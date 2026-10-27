@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-26",
+  "checkedAt": "2026-10-27",
   "sourcesSuccessful": 8,
   "sourcesTotal": 10,
   "publishedItems": 7,
   "errors": [
-    "Study in Hungary（Tempus）: URLError: <urlopen error [Errno 111] Connection refused>",
+    "Study in Hungary（Tempus）: ValueError: News selector matched no entries",
     "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
   ],
   "dryRun": false

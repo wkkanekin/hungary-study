@@ -1,0 +1,40 @@
+/* Reuse the existing dailyGuide cards on the homepage and shared catalogue. */
+.articleLinkCard{color:inherit;text-decoration:none;min-width:0;transition:box-shadow .15s}
+.articleLinkCard:hover{box-shadow:0 12px 30px rgba(17,24,39,.16)}
+.articleLinkCard:focus-visible{outline:3px solid #173a8f;outline-offset:4px}
+.articleLinkCard .dailyGuideCategory{white-space:nowrap}
+.articleLinkCard .dailyGuideCardTop{flex-wrap:wrap}
+.articleLinkCard .dailyGuideCardTitle{overflow-wrap:anywhere}
+#articles .dailyGuideGrid{margin-top:24px}
+#articles .sectionActions{display:flex;justify-content:center;margin-top:24px}
+.hungaryHero .heroCatch{font-size:clamp(23px,2.7vw,32px);line-height:1.65;margin:20px auto 12px;max-width:900px;color:#081f50;letter-spacing:0}
+.hungaryHero .heroSubtitle{font-size:clamp(17px,1.9vw,22px);line-height:1.75;max-width:790px;margin:0 auto 18px}
+.hungaryHero .heroLead{text-align:left;line-height:1.85;font-weight:500}
+.hungaryHero .heroLead p{margin:0 0 14px}
+html body .topBarInner{flex-wrap:wrap}
+html body .topNav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));flex:1 1 100%;gap:10px}
+html body .countryNav{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:12px;width:100%;padding-top:10px;border-top:1px solid #dce1e8}
+.countryNav a,.footerNav a{display:inline-flex;align-items:center;justify-content:center;gap:7px;color:#17345d;text-decoration:none;min-height:44px;font-size:14px}
+.countryNav a:hover,.footerNav a:hover{text-decoration:underline}
+.footerNav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;margin-bottom:18px}
+.footerNav img{flex-shrink:0}
+.catalogueHeader{padding:28px;text-align:center}
+.catalogueHeader h1{font-size:clamp(25px,4vw,36px);line-height:1.5;color:#0f2a5a}
+.catalogueHeader p{line-height:1.8}
+.articlePagination{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:28px 0}
+.articlePagination a,.articlePagination span{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;border:1px solid #cbd5e1;border-radius:10px;padding:8px 12px;background:white;text-decoration:none;color:#17345d}
+.articlePagination [aria-current]{background:#17345d;color:white}
+#articleCount{text-align:center;color:#475569}
+#article-catalogue{scroll-margin-top:20px}
+@media(max-width:720px){
+ html body .topNav{grid-template-columns:repeat(2,minmax(0,1fr))}
+ html body .countryNav{justify-content:center;gap:4px 14px}
+ .countryNav a{font-size:13px}
+ .hungaryHero .heroCatch{font-size:23px;text-align:left}
+ .hungaryHero .heroSubtitle{font-size:17px;text-align:left}
+ .hungaryHero .heroLead{font-size:15px;line-height:1.85}
+ .catalogueHeader{padding:22px 16px}
+}
+.hungaryHero .heroCatch,.hungaryHero .heroSubtitle{text-wrap:balance}
+#basics-cards,#articles,#search,#service,#faq,#contact{scroll-margin-top:180px}
+@media(max-width:720px){#basics-cards,#articles,#search,#service,#faq,#contact{scroll-margin-top:16px}}

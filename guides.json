@@ -375,5 +375,44 @@
     "url": "guide-hungary-food-prices.html",
     "date": "2026-10-16",
     "thumbnail": "images/guides/hungary-food-prices.svg"
+  },
+  {
+    "id": "student-debt-overseas-scholarship",
+    "title": "日本の大学進学か、海外か。奨学金と卒業後の自由を考える",
+    "description": "日本の貸与型奨学金の返済、金利上昇、長期ローンが卒業後の仕事や人生に与える影響を整理し、返済不要のハンガリー政府奨学金という選択肢を紹介します。",
+    "category": "奨学金",
+    "url": "guide-student-debt-overseas-scholarship.html",
+    "date": "2026-07-19",
+    "thumbnail": "images/guides/guide-student-debt-hero.png",
+    "enabled": true,
+    "featured": false,
+    "homePick": true,
+    "comingSoon": false
+  },
+  {
+    "id": "hungary-living",
+    "title": "ハンガリー留学の生活準備｜住居・交通・気候・持ち物",
+    "description": "住まい・移動・持ち物。ハンガリーでの生活に向けた住居探し、公共交通、気候や電源などの基本情報を紹介します。",
+    "category": "生活情報",
+    "url": "guide-hungary-living.html",
+    "date": "",
+    "thumbnail": "images/apartment.jpg",
+    "enabled": true,
+    "featured": false,
+    "homePick": true,
+    "comingSoon": false
+  },
+  {
+    "id": "hungary-friendship-debrecen",
+    "title": "ハンガリー留学での友達作りと人間関係｜国籍バランスからリアルな付き合い方まで",
+    "description": "デブレツェン大学CS専攻の現役生が、多国籍な同級生、日本人コミュニティ、最初の友達ができたきっかけ、英語への不安と文化の違いを紹介します。",
+    "category": "体験談",
+    "url": "guide-hungary-friendship-debrecen.html",
+    "date": "2026-09-30",
+    "thumbnail": "images/columns/hungary-friendship-debrecen.png",
+    "enabled": true,
+    "featured": false,
+    "homePick": true,
+    "comingSoon": false
   }
 ]

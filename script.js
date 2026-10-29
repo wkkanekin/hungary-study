@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
  const clearSearchBtn = document.getElementById("clearSearch");
  const showAllStudentsBtn = document.getElementById("showAllStudents");
 const recentShowAllStudentsBtn =
-  document.getElementById("recentShowAllStudents") ||
-  document.querySelector(".recentStudentsAction .btn"); 
+  document.getElementById("recentShowAllStudents");
 
 const suggestBox = document.getElementById("suggestBox");
 
@@ -368,6 +367,7 @@ function renderDailyGuides(guides) {
 }).join("");
 }
 async function loadDailyGuides() {
+  if (!dailyGuideListEl) return;
 
   const txt = await fetchText("guides.json");
 
@@ -445,6 +445,7 @@ function renderLatestColumns(columns) {
 }
 
 async function loadColumns() {
+  if (!latestColumnListEl) return;
   const txt = await fetchText("columns.json");
 
   const data = safeJsonParse(txt, "columns.json");

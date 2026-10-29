@@ -38,3 +38,8 @@ html body .countryNav{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:1
 .hungaryHero .heroCatch,.hungaryHero .heroSubtitle{text-wrap:balance}
 #basics-cards,#articles,#search,#service,#faq,#contact{scroll-margin-top:180px}
 @media(max-width:720px){#basics-cards,#articles,#search,#service,#faq,#contact{scroll-margin-top:16px}}
+/* Keep the four menu buttons equal even when shared styles load later. */
+html body .topBar .topBarInner .topNav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:64px;gap:10px;flex:1 1 100%;width:100%}
+html body .topBar .topBarInner .topNav>a{width:100%;height:100%;min-width:0;margin:0;padding:8px 10px;box-sizing:border-box;font-size:14px;line-height:1.5}
+.articleLinkCard .dailyGuideImg{object-fit:contain;background:#f8fafc}
+@media(max-width:980px){html body .topBar .topBarInner .topNav{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:64px}}

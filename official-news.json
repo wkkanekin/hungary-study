@@ -2,6 +2,20 @@
   {
     "enabled": true,
     "type": "お知らせ",
+    "publishedAt": "2026-10-30",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～（内容変更を検知・詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/550.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～",
+    "sourcePublishedAt": "2026-10-30",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-30",
+    "dateBasis": "detected_content_change",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
     "publishedAt": "2026-10-27",
     "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：2026年10月開催・留学イベントのお知らせ（10/23現在）（内容変更を検知・詳細は公式へ）",
     "url": "https://tobitate-mext.jasso.go.jp/news/490.html",
@@ -11,6 +25,20 @@
     "sourceUpdatedAt": null,
     "detectedAt": "2026-10-27",
     "dateBasis": "detected_content_change",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
+    "publishedAt": "2026-10-23",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：生徒からの発案でトビタテ！留学JAPANへの寄附型自動販売機設置！ ～立命館守山中学校・高等学校～（詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/507_00001.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "生徒からの発案でトビタテ！留学JAPANへの寄附型自動販売機設置！ ～立命館守山中学校・高等学校～",
+    "sourcePublishedAt": "2026-10-23",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-10-30",
+    "dateBasis": "official",
     "priority": 1
   },
   {
@@ -38,20 +66,6 @@
     "sourcePublishedAt": "2026-10-08",
     "sourceUpdatedAt": null,
     "detectedAt": "2026-10-09",
-    "dateBasis": "official",
-    "priority": 1
-  },
-  {
-    "enabled": true,
-    "type": "お知らせ",
-    "publishedAt": "2026-10-01",
-    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～（詳細は公式へ）",
-    "url": "https://tobitate-mext.jasso.go.jp/news/550.html",
-    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
-    "sourceTitle": "【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～",
-    "sourcePublishedAt": "2026-10-01",
-    "sourceUpdatedAt": null,
-    "detectedAt": "2026-10-05",
     "dateBasis": "official",
     "priority": 1
   },

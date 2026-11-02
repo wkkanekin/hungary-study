@@ -2,6 +2,20 @@
   {
     "enabled": true,
     "type": "お知らせ",
+    "publishedAt": "2026-11-02",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【拠点形成支援事業】各地域の留学事業のご紹介・ご支援のお願い（内容変更を検知・詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/540_00001.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【拠点形成支援事業】各地域の留学事業のご紹介・ご支援のお願い",
+    "sourcePublishedAt": "2026-11-02",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-11-02",
+    "dateBasis": "detected_content_change",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
     "publishedAt": "2026-10-30",
     "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【大学生等対象】2027年度（第19期）応募への準備お役立ち情報～新・日本代表プログラム～（内容変更を検知・詳細は公式へ）",
     "url": "https://tobitate-mext.jasso.go.jp/news/550.html",
@@ -38,20 +52,6 @@
     "sourcePublishedAt": "2026-10-23",
     "sourceUpdatedAt": null,
     "detectedAt": "2026-10-30",
-    "dateBasis": "official",
-    "priority": 1
-  },
-  {
-    "enabled": true,
-    "type": "お知らせ",
-    "publishedAt": "2026-10-19",
-    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【拠点形成支援事業】各地域の留学事業のご紹介・ご支援のお願い（詳細は公式へ）",
-    "url": "https://tobitate-mext.jasso.go.jp/news/540_00001.html",
-    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
-    "sourceTitle": "【拠点形成支援事業】各地域の留学事業のご紹介・ご支援のお願い",
-    "sourcePublishedAt": "2026-10-19",
-    "sourceUpdatedAt": null,
-    "detectedAt": "2026-10-19",
     "dateBasis": "official",
     "priority": 1
   },

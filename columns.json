@@ -432,5 +432,23 @@
     ],
     "readingTime": "6分",
     "url": "column-yugo-values-growth.html"
+  },
+  {
+    "id": "yugo-transport",
+    "enabled": true,
+    "title": "月1,000円で電車も乗り放題！？デブレツェンの交通事情とおすすめ移動手段【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-11-02",
+    "thumbnail": "images/columns/okada-17-debrecen-tram-city-02.jpg",
+    "summary": "デブレツェン大学のユウゴが、自転車・トラム・バスの使い分け、学生向けハンガリーパス、中古自転車の購入について紹介します。",
+    "tags": [
+      "交通",
+      "デブレツェン",
+      "留学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-transport.html"
   }
 ]

@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-05",
   "sourcesSuccessful": 7,
   "sourcesTotal": 10,
-  "publishedItems": 8,
+  "publishedItems": 9,
   "errors": [
     "Stipendium Hungaricum公式: ValueError: News selector matched no entries",
     "Study in Hungary（Tempus）: HTTPError: HTTP Error 404: Not Found",

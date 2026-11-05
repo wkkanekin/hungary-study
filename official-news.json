@@ -2,6 +2,20 @@
   {
     "enabled": true,
     "type": "お知らせ",
+    "publishedAt": "2026-11-05",
+    "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【高校等向け】2026年度「トビタテ派遣留学生による出張授業」 実施希望校募集について（詳細は公式へ）",
+    "url": "https://tobitate-mext.jasso.go.jp/news/schoolvisit2026.html",
+    "source": "トビタテ！留学JAPAN（文部科学省・JASSO）",
+    "sourceTitle": "【高校等向け】2026年度「トビタテ派遣留学生による出張授業」 実施希望校募集について",
+    "sourcePublishedAt": "2026-11-05",
+    "sourceUpdatedAt": null,
+    "detectedAt": "2026-11-05",
+    "dateBasis": "official",
+    "priority": 1
+  },
+  {
+    "enabled": true,
+    "type": "お知らせ",
     "publishedAt": "2026-11-02",
     "title": "【日本の大学等に在籍する方向け】トビタテ！留学JAPAN（文部科学省・JASSO）：【拠点形成支援事業】各地域の留学事業のご紹介・ご支援のお願い（内容変更を検知・詳細は公式へ）",
     "url": "https://tobitate-mext.jasso.go.jp/news/540_00001.html",

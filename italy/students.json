@@ -1,38 +1,91 @@
 [
   {
-    "id": "sample-1",
-    "name": "学生1（仮）",
-    "university": "ボローニャ大学",
-    "region": "ボローニャ",
-    "photo": "student-placeholder.svg",
-    "isDummy": true,
+    "id": "saku",
+    "name": "saku",
+    "university": "フィレンツェ大学",
+    "region": "フィレンツェ",
+    "universityId": "florence",
+    "major": "Geography, Spatial Management, Heritage for International Cooperation（都市地理学）修士課程",
+    "short": "都市地理学 修士課程",
+    "entry": "2025年",
+    "year": "修士2年",
+    "admission": "IELTS 7.0",
+    "selection": "書類審査",
+    "preparation": "1年",
+    "education": "学士卒・日本企業での勤務経験あり",
+    "scholarship": "なし",
+    "tags": [
+      "大学院出願",
+      "IELTS対策",
+      "学生ビザ",
+      "生活費",
+      "大学生活・試験対策",
+      "奨学金",
+      "社会人からの大学院進学"
+    ],
+    "bio": [
+      "日本企業で働いた後、アカデミックの世界に戻るためイタリアの大学院へ進学しました。フィレンツェ大学では都市計画・空間分析・都市地理学を学び、修士論文の執筆やインターンシップの準備を進めています。",
+      "IELTS対策やCV・志望理由書の準備、学生ビザ申請について、実体験をもとにお話しできます。JASSOの給付型奨学金に応募した経験から、申請書類や最終選考の面接についてもお伝えできます。",
+      "現地の生活費や授業、期末試験対策のほか、欧州の大学が主催するサマースクールやハッカソンに参加した経験もお話しできます。"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.unifi.it/en"
+      ],
+      [
+        "note",
+        "https://note.com/saku_takimoto"
+      ]
+    ],
+    "photo": "saku.jpg",
+    "type": "Università",
+    "language": "英語",
+    "learning": "IELTS公式教材",
     "enabled": false
   },
   {
-    "id": "sample-2",
-    "name": "学生2（仮）",
-    "university": "ミラノ工科大学",
-    "region": "ミラノ",
-    "photo": "student-placeholder.svg",
-    "isDummy": true,
-    "enabled": false
-  },
-  {
-    "id": "sample-3",
-    "name": "学生3（仮）",
-    "university": "パドヴァ大学",
-    "region": "パドヴァ",
-    "photo": "student-placeholder.svg",
-    "isDummy": true,
-    "enabled": false
-  },
-  {
-    "id": "sample-4",
-    "name": "学生4（仮）",
-    "university": "ローマ・サピエンツァ大学",
-    "region": "ローマ",
-    "photo": "student-placeholder.svg",
-    "isDummy": true,
+    "id": "yuyuka",
+    "name": "yuyuka",
+    "university": "シエナ大学",
+    "region": "シエナ",
+    "universityId": "siena",
+    "role": "運営者・現役学生",
+    "major": "International Relations and Public Diplomacy（国際関係・公共外交）修士課程",
+    "short": "公共外交 修士課程",
+    "entry": "2026年（シエナ大学）",
+    "year": "修士2年",
+    "admission": "IELTS 6.5",
+    "selection": "志望理由書・英語力証明書類",
+    "preparation": "約半年",
+    "education": "学士卒",
+    "scholarship": "Erasmus+奨学金、ポーランド政府奨学金（学費免除）",
+    "tags": [
+      "大学院出願",
+      "奨学金",
+      "生活費",
+      "住居探し",
+      "大学生活・治安",
+      "ポーランド・オランダとの比較"
+    ],
+    "bio": [
+      "日本の高校を卒業後、ポーランドのヤギェウォ大学へ進学しました。現在はダブルディグリーで国際関係・公共外交を学んでいます。IELTSや志望理由書の準備から合格まで、私が経験した出願の流れをお話しできます。",
+      "ポーランドとオランダにも留学し、奨学金を利用しました。実際に受けた奨学金や取得までの流れ、生活費、住まい探し、大学生活や治安について、国ごとの違いも交えてお伝えできます。"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.unisi.it"
+      ],
+      [
+        "note",
+        "https://note.com/catarina1210"
+      ]
+    ],
+    "photo": "yuyuka.jpg",
+    "type": "Università",
+    "language": "英語",
+    "learning": "IELTS公式教材",
     "enabled": false
   }
 ]

@@ -1,50 +1,5 @@
 [
   {
-    "id": "saku",
-    "name": "saku",
-    "university": "フィレンツェ大学",
-    "region": "フィレンツェ",
-    "universityId": "florence",
-    "major": "Geography, Spatial Management, Heritage for International Cooperation（都市地理学）修士課程",
-    "short": "都市地理学 修士課程",
-    "entry": "2025年",
-    "year": "修士2年",
-    "admission": "IELTS 7.0",
-    "selection": "書類審査",
-    "preparation": "1年",
-    "education": "学士卒・日本企業での勤務経験あり",
-    "scholarship": "なし",
-    "tags": [
-      "大学院出願",
-      "IELTS対策",
-      "学生ビザ",
-      "生活費",
-      "大学生活・試験対策",
-      "奨学金",
-      "社会人からの大学院進学"
-    ],
-    "bio": [
-      "日本企業で働いた後、アカデミックの世界に戻るためイタリアの大学院へ進学しました。フィレンツェ大学では都市計画・空間分析・都市地理学を学び、修士論文の執筆やインターンシップの準備を進めています。",
-      "IELTS対策やCV・志望理由書の準備、学生ビザ申請について、実体験をもとにお話しできます。JASSOの給付型奨学金に応募した経験から、申請書類や最終選考の面接についてもお伝えできます。",
-      "現地の生活費や授業、期末試験対策のほか、欧州の大学が主催するサマースクールやハッカソンに参加した経験もお話しできます。"
-    ],
-    "links": [
-      [
-        "大学公式サイト",
-        "https://www.unifi.it/en"
-      ],
-      [
-        "note",
-        "https://note.com/saku_takimoto"
-      ]
-    ],
-    "photo": "saku.jpg",
-    "type": "Università",
-    "language": "英語",
-    "learning": "IELTS公式教材",
-    "enabled": false
-  },
-  {
     "id": "yuyuka",
     "name": "yuyuka",
     "university": "シエナ大学",
@@ -69,8 +24,7 @@
       "ポーランド・オランダとの比較"
     ],
     "bio": [
-      "日本の高校を卒業後、ポーランドのヤギェウォ大学へ進学しました。現在はダブルディグリーで国際関係・公共外交を学んでいます。IELTSや志望理由書の準備から合格まで、私が経験した出願の流れをお話しできます。",
-      "ポーランドとオランダにも留学し、奨学金を利用しました。実際に受けた奨学金や取得までの流れ、生活費、住まい探し、大学生活や治安について、国ごとの違いも交えてお伝えできます。"
+      "日本の高校卒業後、ポーランドのJagiellonian Universityへ進学(Double Degree)し、International Relations and Public Diplomacy(MA)を専攻しています。出願では英語要件（IELTS）、志望理由書などの書類を経験しており、合格をいただくまでの具体的な流れについてお話しできます。また、ポーランドとオランダへの留学経験もあり、全ての留学において奨学金をいただくことができました。実際にいただいた奨学金や取得までの道のり、生活費、学生生活や治安などあらゆるご相談に対応可能です。"
     ],
     "links": [
       [
@@ -83,6 +37,51 @@
       ]
     ],
     "photo": "yuyuka.jpg",
+    "type": "Università",
+    "language": "英語",
+    "learning": "IELTS公式教材",
+    "enabled": false
+  },
+  {
+    "id": "saku",
+    "name": "saku",
+    "university": "フィレンツェ大学",
+    "region": "フィレンツェ",
+    "universityId": "florence",
+    "major": "Geography, Spatial Management, Heritage for International Cooperation（都市地理学）修士課程",
+    "short": "都市地理学 修士課程",
+    "entry": "2025年",
+    "year": "修士2年",
+    "admission": "IELTS 7.0",
+    "selection": "書類審査",
+    "preparation": "1年",
+    "education": "学士卒・日本企業での勤務経験あり",
+    "scholarship": "なし",
+    "tags": [
+      "大学院出願",
+      "IELTS対策",
+      "学生ビザ",
+      "生活費",
+      "大学生活・試験対策",
+      "奨学金",
+      "社会人からの大学院進学"
+    ],
+    "bio": [
+      "日本企業での社会人経験を経て、アカデミックの世界へ戻るためイタリアの大学院進学を決意しました。現在はフィレンツェ大学の修士課程に在籍し、都市計画や空間分析、都市地理学を専攻しながら、修士論文の執筆やインターンシップの準備を進めています。",
+      "自身の経験をもとに、大学院出願に必要なIELTS対策をはじめ、CV（履歴書）やモチベーションレターの添削をお手伝いできます。また、繁雑になりがちなイタリアの学生ビザ申請手続きや、最終選考で不採用にはなりましたが、進学時に応募したJASSO給付型奨学金についても、申請書類のポイントや面接での失敗談を含めてお話しできます。",
+      "そのほか、現地での生活感や生活費、授業の様子、期末試験対策に加え、1年目の夏に参加した欧州大学主催のサマースクールやハッカソンでの体験談もお伝え可能です。イタリア留学や社会人からの大学院進学をお考えの方、お気軽にご相談ください。"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.unifi.it/en"
+      ],
+      [
+        "note",
+        "https://note.com/saku_takimoto"
+      ]
+    ],
+    "photo": "saku.jpg",
     "type": "Università",
     "language": "英語",
     "learning": "IELTS公式教材",

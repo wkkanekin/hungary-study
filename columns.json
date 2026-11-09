@@ -450,5 +450,23 @@
     ],
     "readingTime": "5分",
     "url": "column-yugo-transport.html"
+  },
+  {
+    "id": "yugo-safety",
+    "enabled": true,
+    "title": "ハンガリー・デブレツェンの治安は実際どう？自転車盗難の失敗談とリアルな防犯対策【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-11-09",
+    "thumbnail": "images/columns/okada-18-night-plaza-01.jpg",
+    "summary": "デブレツェン大学の現役生ユウゴが、夜道で感じたこと、自転車盗難の体験、留学生活で実践する防犯対策を紹介します。",
+    "tags": [
+      "治安",
+      "デブレツェン",
+      "留学生活"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-safety.html"
   }
 ]

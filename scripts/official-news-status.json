@@ -4,8 +4,8 @@
   "sourcesTotal": 10,
   "publishedItems": 9,
   "errors": [
-    "Stipendium Hungaricum公式: ValueError: News selector matched no entries",
-    "Study in Hungary（Tempus）: HTTPError: HTTP Error 404: Not Found",
+    "Stipendium Hungaricum公式: URLError: <urlopen error [Errno 111] Connection refused>",
+    "Study in Hungary（Tempus）: URLError: <urlopen error [Errno 111] Connection refused>",
     "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
   ],
   "dryRun": false

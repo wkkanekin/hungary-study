@@ -1,12 +1,14 @@
 {
-  "checkedAt": "2026-11-11",
-  "sourcesSuccessful": 7,
+  "checkedAt": "2026-11-12",
+  "sourcesSuccessful": 5,
   "sourcesTotal": 10,
-  "publishedItems": 9,
+  "publishedItems": 11,
   "errors": [
     "Stipendium Hungaricum公式: ValueError: News selector matched no entries",
     "Study in Hungary（Tempus）: HTTPError: HTTP Error 404: Not Found",
-    "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
+    "Tempus Public Foundation: URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1011)>",
+    "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden",
+    "Tempus Public Foundation: HTTPError: HTTP Error 404: Not Found"
   ],
   "dryRun": false
 }

@@ -298,5 +298,13 @@
   "https://ryugaku.jasso.go.jp/scholarship/search/data_00042.html": {
     "date": "2026-10-30",
     "baseline": true
+  },
+  "https://tobitate-mext.jasso.go.jp/news/650.html": {
+    "fingerprint": "3e29afd5b869f7c70f28a286bc00859e4fda66ca64912aedd2a55d0091af0000",
+    "date": "2026-11-12"
+  },
+  "https://tobitate-mext.jasso.go.jp/news/443.html": {
+    "fingerprint": "71e312f832d3636591396a54d36ac12ef6835220385c91a78f4ce4039206fd1d",
+    "date": "2026-11-12"
   }
 }

@@ -1,0 +1,21 @@
+.card.polandHero {
+  background: radial-gradient(ellipse at 88% 72%, #ffe5eb, transparent 60%), #fff;
+}
+.polandHero .heroEyebrow { color: #97253d; }
+.polandHero .heroFoot { border-top-color: #dc143c; }
+.polandHero .brandMark.polandFlag {
+  flex: 0 0 auto;
+  background: linear-gradient(#fff 50%, #dc143c 50%);
+  border: 1px solid #f1c8d1;
+  box-shadow: 0 8px 22px #59243420;
+  mix-blend-mode: normal;
+}
+.polandGuide {
+  margin-top: 14px;
+  padding: 18px 24px;
+  scroll-margin-top: 110px;
+  overflow-wrap: anywhere;
+}
+.polandGuide h3 { margin-top: 0; }
+.polandGuide p:last-child,
+.polandGuide ul:last-child { margin-bottom: 0; }

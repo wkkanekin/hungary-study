@@ -11,17 +11,16 @@
     "entry": "2026年（シエナ大学）",
     "year": "修士2年",
     "admission": "IELTS 6.5",
-    "selection": "志望理由書・英語力証明書類",
-    "preparation": "約半年",
+    "selection": "モチベーションレター、英語力証明書類",
+    "preparation": "半年ほど",
     "education": "学士卒",
-    "scholarship": "Erasmus+奨学金、ポーランド政府奨学金（学費免除）",
+    "scholarship": "Erasmus+ scholarship, ポーランド政府奨学金（学費免除）",
     "tags": [
-      "大学院出願",
       "奨学金",
       "生活費",
       "住居探し",
-      "大学生活・治安",
-      "ポーランド・オランダとの比較"
+      "大学生活",
+      "他国との比較（オランダ、ポーランドへの留学経験あり）"
     ],
     "bio": [
       "日本の大学卒業後、ポーランドのJagiellonian Universityへ進学(Double Degree)し、International Relations and Public Diplomacy(MA)を専攻しています。出願では英語要件（IELTS）、志望理由書などの書類を経験しており、合格をいただくまでの具体的な流れについてお話しできます。また、ポーランドとオランダへの留学経験もあり、全ての留学において奨学金をいただくことができました。実際にいただいた奨学金や取得までの道のり、生活費、学生生活や治安などあらゆるご相談に対応可能です。"
@@ -40,7 +39,8 @@
     "type": "Università",
     "language": "英語",
     "learning": "IELTS公式教材",
-    "enabled": false
+    "enabled": false,
+    "languageService": "なし"
   },
   {
     "id": "saku",

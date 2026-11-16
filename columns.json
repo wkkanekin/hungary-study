@@ -468,5 +468,23 @@
     ],
     "readingTime": "5分",
     "url": "column-yugo-safety.html"
+  },
+  {
+    "id": "yugo-class-style",
+    "enabled": true,
+    "title": "日本の大学とここが違う！ハンガリーの「授業スタイル」と教科書代0円のリアル【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-11-16",
+    "thumbnail": "images/columns/okada-19-lecture-hall-01.jpg",
+    "summary": "デブレツェン大学CS専攻のユウゴが、講義と演習、出席ルール、TAへの質問、教科書を買わずに学んだ体験を紹介します。",
+    "tags": [
+      "授業",
+      "デブレツェン",
+      "Computer Science"
+    ],
+    "readingTime": "5分",
+    "url": "column-yugo-class-style.html"
   }
 ]

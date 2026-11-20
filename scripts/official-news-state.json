@@ -136,8 +136,8 @@
     "date": "2026-10-01"
   },
   "https://tobitate-mext.jasso.go.jp/news/490.html": {
-    "fingerprint": "c682519dffe6b6634c909b34cba63cf49b99cf31832a4f80c6aa3baaeabd47a3",
-    "date": "2026-10-23"
+    "fingerprint": "6e30f571cdc79eb3df3d3e2ebdeb088ca80c6088499bc1c05693cce4252084a3",
+    "date": "2026-11-20"
   },
   "https://tobitate-mext.jasso.go.jp/news/1001_00438.html": {
     "fingerprint": "169ce686d3ed58bc40e4f8f16c103593b47502db45e4bb8da5f98c9234df8f14",
@@ -300,7 +300,7 @@
     "baseline": true
   },
   "https://tobitate-mext.jasso.go.jp/news/650.html": {
-    "fingerprint": "7b475c4a3de3d10f2da0bd79e9b6899504d1ddff36b41ade2101709c079184dd",
+    "fingerprint": "80e55a588ba94e6d04f8abf1bc80d36ce2bb55993304921c9740b85f2829e896",
     "date": "2026-11-12"
   },
   "https://tobitate-mext.jasso.go.jp/news/443.html": {

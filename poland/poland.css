@@ -119,3 +119,34 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.campusPhoto {
+  margin: 0 0 14px;
+}
+
+.campusPhoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #edf3f8;
+}
+
+.campusPhoto figcaption {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.campusPhotoLead {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.campusPhotoLead img {
+  max-height: 580px;
+  object-fit: contain;
+}

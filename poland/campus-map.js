@@ -11,6 +11,7 @@ if (mapElement && window.L && campusMapData) {
   }).addTo(map);
   map.fitBounds(outline.getBounds(), {padding: [22, 22]});
   map.attributionControl.addAttribution('<a href="https://www.naturalearthdata.com/">Natural Earth</a>');
+  const markers = [];
   for (const city of campusMapData.cities) {
     const popup = document.createElement('div');
     const title = document.createElement('strong');
@@ -26,7 +27,29 @@ if (mapElement && window.L && campusMapData) {
       list.append(item);
     }
     popup.append(list);
-    L.marker([city.lat, city.lon], {title: city.name, alt: city.name})
+    const marker = L.marker([city.lat, city.lon], {title: city.name, alt: city.name})
       .addTo(map).bindTooltip(city.name, {permanent: true, direction: 'top', offset: [0, -30]}).bindPopup(popup);
+    markers.push({city, marker, list});
   }
+  document.addEventListener('universities-filtered', () => {
+    const visibleGuides = new Set(
+      [...document.querySelectorAll('.universityItem:not([hidden]) a[href^="guide-"]')]
+        .map(link => link.getAttribute('href'))
+    );
+    const locations = [];
+    for (const {city, marker, list} of markers) {
+      const matches = city.guides.filter(guide => visibleGuides.has('guide-' + guide.id + '.html'));
+      for (const item of list.children) {
+        item.hidden = !visibleGuides.has(item.firstElementChild.getAttribute('href'));
+      }
+      if (matches.length) {
+        marker.addTo(map);
+        locations.push([city.lat, city.lon]);
+      } else {
+        map.removeLayer(marker);
+      }
+    }
+    if (locations.length === 1) map.setView(locations[0], 11);
+    if (locations.length > 1) map.fitBounds(locations, {padding: [35, 35], maxZoom: 11});
+  });
 }

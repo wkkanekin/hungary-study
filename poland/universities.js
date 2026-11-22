@@ -18,6 +18,7 @@ function filterUniversities() {
     card.hidden = !matches;
     count += Number(matches);
   }
+  document.dispatchEvent(new CustomEvent('universities-filtered'));
   universityCount.textContent = count ? `${count}件` : '条件に一致する大学はありません。';
 }
 

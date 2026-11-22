@@ -13,35 +13,35 @@
 <link href="/germany/guide-detail.css" rel="stylesheet"/>
 <link href="poland.css" rel="stylesheet"/>
 <script defer="" src="universities.js"></script>
-  <link rel="stylesheet" href="/germany/vendor/leaflet/leaflet.css">
-  <script defer src="/germany/vendor/leaflet/leaflet.js"></script>
-  <script defer src="data/campus-map.js"></script>
-  <script defer src="campus-map.js"></script>
+<link href="/germany/vendor/leaflet/leaflet.css" rel="stylesheet"/>
+<script defer="" src="/germany/vendor/leaflet/leaflet.js"></script>
+<script defer="" src="data/campus-map.js"></script>
+<script defer="" src="campus-map.js"></script>
 </head><body>
 <a class="skipLink" href="#main">本文へ移動</a>
 <div class="container">
 <nav aria-label="目次" class="topBar"><div class="topBarInner"><div class="topNav">
 <a href="./">トップページ</a><a href="./#news">更新情報・公式ニュース</a><a href="universities.html">大学一覧・ガイド</a>
 <a href="basics.html">留学の全体像</a><a href="./#students">現役生を探す</a><a href="./#contact">問い合わせ</a>
-<a class="backToHungary" href="/"><img class="labFlag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAARUlEQVR4nO3OMREAIADDwNpBBDMrUlCKJZDQsR2Si4DXHbNqxQWAAAEClBbUg15ZgFyAXIBcgFyAXFpnVw0IECBA6etAH24ykseGcY0bAAAAAElFTkSuQmCC" alt="" width="24" height="16" style="display:inline-block;flex:none;vertical-align:-2px;margin-inline-end:6px;border:1px solid #cbd5e1;border-radius:2px">ハンガリー留学ラボ</a>
-<a class="backToHungary" href="/germany/"><img class="labFlag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAAOklEQVR4nO3OMREAMAzEsPAHVwbFku7ZOn0G+QxAVZIk/XWXnRcAAQEBLTsvmKA+u84LgICAgNKC8QPYsih82P/08QAAAABJRU5ErkJggg==" alt="" width="24" height="16" style="display:inline-block;flex:none;vertical-align:-2px;margin-inline-end:6px;border:1px solid #cbd5e1;border-radius:2px">ドイツ留学ラボ</a>
-<a class="backToHungary" href="/italy/"><img class="labFlag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAAOklEQVR4nO3OMREAIAADsfpBAA4QiDAsgYYuTPl7AUn2qr5lZ8zqAAEBAQEBAQEBAQEBAQEBAQH9BD2nMQqXNLnDWAAAAABJRU5ErkJggg==" alt="" width="24" height="16" style="display:inline-block;flex:none;vertical-align:-2px;margin-inline-end:6px;border:1px solid #cbd5e1;border-radius:2px">イタリア留学ラボ <small>準備中</small></a>
+<a class="backToHungary" href="/"><img alt="" class="labFlag" height="16" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAARUlEQVR4nO3OMREAIADDwNpBBDMrUlCKJZDQsR2Si4DXHbNqxQWAAAEClBbUg15ZgFyAXIBcgFyAXFpnVw0IECBA6etAH24ykseGcY0bAAAAAElFTkSuQmCC" style="display:inline-block;flex:none;vertical-align:-2px;margin-inline-end:6px;border:1px solid #cbd5e1;border-radius:2px" width="24"/>ハンガリー留学ラボ</a>
+<a class="backToHungary" href="/germany/"><img alt="" class="labFlag" height="16" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAAOklEQVR4nO3OMREAMAzEsPAHVwbFku7ZOn0G+QxAVZIk/XWXnRcAAQEBLTsvmKA+u84LgICAgNKC8QPYsih82P/08QAAAABJRU5ErkJggg==" style="display:inline-block;flex:none;vertical-align:-2px;margin-inline-end:6px;border:1px solid #cbd5e1;border-radius:2px" width="24"/>ドイツ留学ラボ</a>
+<a class="backToHungary" href="/italy/"><img alt="" class="labFlag" height="16" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAIAAADbtmxLAAAAOklEQVR4nO3OMREAIAADsfpBAA4QiDAsgYYuTPl7AUn2qr5lZ8zqAAEBAQEBAQEBAQEBAQEBAQH9BD2nMQqXNLnDWAAAAABJRU5ErkJggg==" style="display:inline-block;flex:none;vertical-align:-2px;margin-inline-end:6px;border:1px solid #cbd5e1;border-radius:2px" width="24"/>イタリア留学ラボ <small>準備中</small></a>
 </div></div></nav>
 <main id="main">
 <section class="section">
 <h1 class="secTitle">ポーランドの大学一覧・ガイド</h1>
 <p class="introText">大学名や分野から、ポーランドの公立・私立大学を探せます。掲載情報で「大学別詳細ガイド」を選べます。</p>
-<section class="section" id="campus-map" aria-labelledby="campus-map-title">
-  <h2 class="secTitle" id="campus-map-title">大学の所在地</h2>
-  <p>地図のピンから都市を選ぶと、その都市の大学別ガイドを開けます。</p>
-  <div class="card polandCampusMap"><div id="poland-map" role="region" aria-label="ポーランドの大学都市の地図"></div></div>
-</section>
+<section aria-labelledby="campus-map-title" class="section" id="campus-map">
 <div class="card simpleCard universityFilters">
 <label>大学名・専攻<input id="university-query" placeholder="例　ワルシャワ、Computer Science" type="search"/></label>
 <label>都市<select id="university-city"><option value="">すべて</option><option value="ワルシャワ">ワルシャワ</option><option value="クラクフ">クラクフ</option><option value="ヴロツワフ">ヴロツワフ</option><option value="ポズナン">ポズナン</option><option value="グダニスク">グダニスク</option><option value="ウッチ">ウッチ</option><option value="トルン">トルン</option></select></label>
 <label>分野<select id="university-kind"><option value="">すべて</option><option value="総合">総合</option><option value="経済・経営">経済・経営</option><option value="理工">理工</option><option value="医学">医学</option><option value="農学・生命科学">農学・生命科学</option><option value="教育">教育</option><option value="芸術">芸術</option><option value="体育">体育</option><option value="海事">海事</option><option value="軍事">軍事</option><option value="公共サービス">公共サービス</option><option value="応用科学">応用科学</option><option value="宗教系">宗教系</option><option value="私立大学">私立大学</option><option value="私立専門大学">私立専門大学</option></select></label>
 <label>学位<select id="university-level"><option value="">すべて</option><option value="学士">学士</option><option value="修士">修士</option><option value="一貫課程">一貫課程</option></select></label>
-<label>掲載情報<select id="university-mode"><option value="">すべて</option><option value="detail">大学別詳細ガイド</option></select></label></div>
+<label>掲載情報<select id="university-mode"><option value="">すべて</option><option value="detail">大学別詳細ガイド</option></select></label></div><h2 class="secTitle" id="campus-map-title">大学の所在地</h2>
+<p>大学名・専攻・都市で検索すると、一覧と地図のピンが連動します。</p>
+<div class="card polandCampusMap"><div aria-label="ポーランドの大学都市の地図" id="poland-map" role="region"></div></div>
+</section>
+
 <p id="university-count" role="status">165件</p>
 <div class="universityGrid"><article class="card simpleCard universityItem" data-city="ワルシャワ" data-kind="総合" data-level="学士"><figure class="campusPhoto"><img alt="ワルシャワ大学・カジミエシュ宮殿" decoding="async" height="600" loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/PL_Warszawa%2C_UW%2C_Pa%C5%82ac_Kazimierzowski.jpg/960px-PL_Warszawa%2C_UW%2C_Pa%C5%82ac_Kazimierzowski.jpg?utm_campaign=index&amp;utm_content=thumbnail&amp;utm_source=commons.wikimedia.org" width="960"/></figure>
 <h2><a href="guide-warsaw.html">ワルシャワ大学</a></h2>

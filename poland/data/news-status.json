@@ -1,0 +1,47 @@
+{
+  "attemptedOn": "2026-11-22",
+  "sources": [
+    {
+      "name": "NAWA修士奨学金",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://nawa.gov.pl/en/students/foreign-students/poland-my-first-choice-programme/about-the-programme",
+      "errors": []
+    },
+    {
+      "name": "在日ポーランド大使館",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://www.gov.pl/web/nippon/2026-Polish-government-scholarship",
+      "errors": []
+    },
+    {
+      "name": "JASSO学部",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://www.jasso.go.jp/ryugaku/scholarship_a/gakubu/",
+      "errors": []
+    },
+    {
+      "name": "JASSO大学院",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/",
+      "errors": []
+    },
+    {
+      "name": "グダニスク工科大学修士募集",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://pg.edu.pl/en/node/2713",
+      "errors": []
+    },
+    {
+      "name": "ヤギェウォ大学英語課程",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://rekrutacja.uj.edu.pl/en/admissions-in-english",
+      "errors": []
+    },
+    {
+      "name": "SGH募集情報",
+      "checkedOn": "2026-11-22",
+      "endpoint": "https://www.sgh.waw.pl/en/sgh-admissions-20262027",
+      "errors": []
+    }
+  ]
+}

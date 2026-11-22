@@ -1,0 +1,72 @@
+[
+  {
+    "name": "NAWA修士奨学金",
+    "url": "https://nawa.gov.pl/en/students/foreign-students/poland-my-first-choice-programme/about-the-programme",
+    "kind": "watch",
+    "hosts": [
+      "nawa.gov.pl"
+    ],
+    "expected_heading": "About the programme",
+    "title": "NAWA修士奨学金の公式案内が更新されました"
+  },
+  {
+    "name": "在日ポーランド大使館",
+    "url": "https://www.gov.pl/web/nippon/2026-Polish-government-scholarship",
+    "kind": "watch",
+    "hosts": [
+      "www.gov.pl"
+    ],
+    "expected_heading": "2026",
+    "title": "在日ポーランド大使館の公式案内が更新されました"
+  },
+  {
+    "name": "JASSO学部",
+    "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/gakubu/",
+    "kind": "watch",
+    "hosts": [
+      "www.jasso.go.jp"
+    ],
+    "expected_heading": "学部学位取得",
+    "title": "JASSO学部の公式案内が更新されました"
+  },
+  {
+    "name": "JASSO大学院",
+    "url": "https://www.jasso.go.jp/ryugaku/scholarship_a/daigakuin/",
+    "kind": "watch",
+    "hosts": [
+      "www.jasso.go.jp"
+    ],
+    "expected_heading": "大学院学位取得",
+    "title": "JASSO大学院の公式案内が更新されました"
+  },
+  {
+    "name": "グダニスク工科大学修士募集",
+    "url": "https://pg.edu.pl/en/node/2713",
+    "kind": "watch",
+    "hosts": [
+      "pg.edu.pl"
+    ],
+    "expected_heading": "Dates and deadlines",
+    "title": "グダニスク工科大学修士募集の公式案内が更新されました"
+  },
+  {
+    "name": "ヤギェウォ大学英語課程",
+    "url": "https://rekrutacja.uj.edu.pl/en/admissions-in-english",
+    "kind": "watch",
+    "hosts": [
+      "rekrutacja.uj.edu.pl"
+    ],
+    "expected_heading": "Admissions",
+    "title": "ヤギェウォ大学英語課程の公式案内が更新されました"
+  },
+  {
+    "name": "SGH募集情報",
+    "url": "https://www.sgh.waw.pl/en/sgh-admissions-20262027",
+    "kind": "watch",
+    "hosts": [
+      "www.sgh.waw.pl"
+    ],
+    "expected_heading": "Admissions",
+    "title": "SGH募集情報の公式案内が更新されました"
+  }
+]

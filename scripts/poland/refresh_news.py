@@ -50,24 +50,21 @@ def main():
     news.write(DATA / "news-status.json", {"attemptedOn": TODAY.isoformat(), "sources": statuses})
     path = ROOT / "poland/index.html"
     soup = BeautifulSoup(path.read_text(), "html.parser")
-    target = soup.select_one("#official-news-heading").parent
-    listing = target.select_one(".polandNewsList")
+    listing = soup.select_one("#news [data-news-list]")
     listing.clear()
-    for item in document["items"][:8]:
-        li = soup.new_tag("li")
-        meta = soup.new_tag("p", attrs={"class": "roleLabel"})
-        meta.string = item["date"] + "｜" + item.get("category", "公式情報")
-        title = soup.new_tag("h4")
+    site_updates = load("site-updates.json", [])
+    eligible = lambda item: item["date"] <= TODAY.isoformat()
+    newest = lambda items: sorted(filter(eligible, items), key=lambda item: item["date"], reverse=True)[:3]
+    rows = sorted(newest(site_updates) + newest(document["items"]), key=lambda item: item["date"], reverse=True)
+    for item in rows:
+        article = soup.new_tag("article", attrs={"class": "newsItem"})
+        stamp = soup.new_tag("time", datetime=item["date"])
+        stamp.string = item["date"] + " / " + item.get("category", "公式情報")
         anchor = soup.new_tag("a", href=item["url"])
         anchor.string = item["title"]
-        title.append(anchor)
-        li.extend([meta, title])
-        if item.get("summary"):
-            paragraph = soup.new_tag("p")
-            paragraph.string = item["summary"]
-            li.append(paragraph)
-        listing.append(li)
-    note = target.select_one(".mapSourceNote")
+        article.extend([stamp, anchor])
+        listing.append(article)
+    note = soup.select_one("#news .mapSourceNote")
     note.string = "公式情報の確認日 " + document.get("checkedOn", "未確認")
     path.write_text(str(soup))
 

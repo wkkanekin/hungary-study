@@ -63,3 +63,59 @@
     grid-template-columns: minmax(0, auto) minmax(0, 1fr);
   }
 }
+
+.universityGrid,
+.universityFilters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  gap: 16px;
+}
+
+.universityFilters label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.universityFilters input,
+.universityFilters select {
+  min-width: 0;
+  border: 1px solid #9daac1;
+  border-radius: 8px;
+  padding: 10px;
+  font: inherit;
+}
+
+.universityItem h2 {
+  font-size: 1.2rem;
+}
+
+.polandNewsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.polandNewsList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.polandNewsList li + li {
+  border-top: 1px solid #dbe2ee;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.polandNewsList h4,
+.polandNewsList p {
+  margin: 6px 0;
+}
+
+@media (max-width: 720px) {
+  .polandNewsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

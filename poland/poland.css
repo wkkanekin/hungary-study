@@ -1,21 +1,65 @@
-.card.polandHero {
-  background: radial-gradient(ellipse at 88% 72%, #ffe5eb, transparent 60%), #fff;
+.polandHero .brandMark {
+  flex-shrink: 0;
 }
-.polandHero .heroEyebrow { color: #97253d; }
-.polandHero .heroFoot { border-top-color: #dc143c; }
-.polandHero .brandMark.polandFlag {
-  flex: 0 0 auto;
-  background: linear-gradient(#fff 50%, #dc143c 50%);
-  border: 1px solid #f1c8d1;
-  box-shadow: 0 8px 22px #59243420;
-  mix-blend-mode: normal;
+
+.polandHero h1 {
+  font-size: clamp(36px, 5.4vw, 72px);
 }
+
+#recent-students .recentStudentGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-inline: auto;
+}
+
+#recent-students .recentStudent {
+  min-width: 0;
+}
+
+#service .pricingGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .polandGuide {
   margin-top: 14px;
   padding: 18px 24px;
   scroll-margin-top: 110px;
   overflow-wrap: anywhere;
 }
+
 .polandGuide h3 { margin-top: 0; }
 .polandGuide p:last-child,
 .polandGuide ul:last-child { margin-bottom: 0; }
+
+#students .studentCard {
+  min-width: 0;
+}
+
+#students .profileText {
+  overflow-wrap: anywhere;
+}
+
+.polandOperator {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.polandOperator .founderPhoto {
+  object-position: center 30%;
+}
+
+@media (max-width: 720px) {
+  .polandHero h1 {
+    font-size: clamp(24px, 7vw, 42px);
+  }
+
+  #recent-students .recentStudentGrid,
+  #service .pricingGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #students .studentTop {
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  }
+}

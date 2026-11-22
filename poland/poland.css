@@ -150,3 +150,18 @@
   max-height: 580px;
   object-fit: contain;
 }
+
+.polandCampusMap {
+  padding: 8px;
+  margin: 14px 0 22px;
+}
+
+#poland-map {
+  height: clamp(300px, 48vw, 450px);
+  background: #f5f7fa;
+  border-radius: 12px;
+}
+
+#poland-map .leaflet-popup-content ul {
+  padding-inline-start: 18px;
+}

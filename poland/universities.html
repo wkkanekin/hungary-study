@@ -13,6 +13,10 @@
 <link href="/germany/guide-detail.css" rel="stylesheet"/>
 <link href="poland.css" rel="stylesheet"/>
 <script defer="" src="universities.js"></script>
+  <link rel="stylesheet" href="/germany/vendor/leaflet/leaflet.css">
+  <script defer src="/germany/vendor/leaflet/leaflet.js"></script>
+  <script defer src="data/campus-map.js"></script>
+  <script defer src="campus-map.js"></script>
 </head><body>
 <a class="skipLink" href="#main">本文へ移動</a>
 <div class="container">
@@ -27,6 +31,11 @@
 <section class="section">
 <h1 class="secTitle">ポーランドの大学一覧・ガイド</h1>
 <p class="introText">大学名や分野から、ポーランドの公立・私立大学を探せます。掲載情報で「大学別詳細ガイド」を選べます。</p>
+<section class="section" id="campus-map" aria-labelledby="campus-map-title">
+  <h2 class="secTitle" id="campus-map-title">大学の所在地</h2>
+  <p>地図のピンから都市を選ぶと、その都市の大学別ガイドを開けます。</p>
+  <div class="card polandCampusMap"><div id="poland-map" role="region" aria-label="ポーランドの大学都市の地図"></div></div>
+</section>
 <div class="card simpleCard universityFilters">
 <label>大学名・専攻<input id="university-query" placeholder="例　ワルシャワ、Computer Science" type="search"/></label>
 <label>都市<select id="university-city"><option value="">すべて</option><option value="ワルシャワ">ワルシャワ</option><option value="クラクフ">クラクフ</option><option value="ヴロツワフ">ヴロツワフ</option><option value="ポズナン">ポズナン</option><option value="グダニスク">グダニスク</option><option value="ウッチ">ウッチ</option><option value="トルン">トルン</option></select></label>

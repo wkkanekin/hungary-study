@@ -1012,7 +1012,9 @@ window.GERMANY_UNIVERSITIES = {
       "sourceUrl": "https://www.stmwk.bayern.de/wissenschaftler/hochschulen/universitaeten.html",
       "sourceLabel": "州政府の大学一覧",
       "checkedOn": "2026-10-01",
-      "studentIds": []
+      "studentIds": [
+        "momo"
+      ]
     },
     {
       "id": "u18",

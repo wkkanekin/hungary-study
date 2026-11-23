@@ -267,5 +267,44 @@ window.GERMANY_STUDENTS = [
       "2026-10-20 本人メール「基本情報の共有につきまして」"
     ],
     "enabled": true
+  },
+  {
+    "id": "momo",
+    "name": "もも",
+    "photo": "momo-regensburg.jpg",
+    "role": "現役学生",
+    "university": "Universität Regensburg",
+    "major": "B.Sc.Chemie",
+    "region": "レーゲンスブルク",
+    "entry": "2021年（休学期間あり）",
+    "year": "学士４年目",
+    "language": "ドイツ語＆英語",
+    "type": "Universität",
+    "scholarship": "無し",
+    "admission": "ドイツ語：telc B2／英語資格不要",
+    "selection": "書類審査（日本の共通テスト利用）",
+    "preparation": "１年",
+    "education": "日本の高校卒業",
+    "bio": "日本の高校卒業後渡独。語学学校でドイツ語を学び、ドイツの大学に進学しました。コロナ禍に一度日本に帰国し、３年働いた後大学に復学しました。実験とレポート、試験勉強の両立が難しく標準修業年限は３年ですが、バイトやインターンをしたりしながら２年延ばす予定です。",
+    "tags": [
+      "ドイツの大学出願",
+      "生活費",
+      "住居探し",
+      "大学生活",
+      "バイト探し"
+    ],
+    "links": [
+      [
+        "大学公式サイト",
+        "https://www.uni-regensburg.de"
+      ],
+      [
+        "ももさんのnoteを読む",
+        "https://note.com/apt_tiger8396"
+      ]
+    ],
+    "enabled": true,
+    "consultationAvailable": false,
+    "consultationStatus": "現在、個別相談の受付を休止しています。留学体験はnoteでご覧いただけます。"
   }
 ];

@@ -2,6 +2,7 @@
 (() => {
   const config = window.GERMANY_CONFIG || {};
   const students = (window.GERMANY_STUDENTS || []).filter(s => s.enabled !== false);
+  const consultingStudents = students.filter(s => s.consultationAvailable !== false);
   const byId = new Map(students.map(s => [s.id, s]));
   function https(value, hosts) {
     try { const u = new URL(value); return u.protocol === 'https:' && !u.username && !u.password && (!hosts || hosts.includes(u.hostname)) ? u.href : ''; } catch { return ''; }
@@ -52,8 +53,8 @@
   const bookingPanel = document.getElementById('bookingPanel');
   if (bookingPanel) {
     const select = document.getElementById('bookingStudent');
-    students.forEach(s => select.add(new Option(s.name, s.id)));
-    if (byId.has(id)) select.value = id;
+    consultingStudents.forEach(s => select.add(new Option(s.name, s.id)));
+    if (consultingStudents.some(s => s.id === id)) select.value = id;
     const link = document.getElementById('bookingLink'), status = document.getElementById('bookingStatus');
     function update() {
       const s = byId.get(select.value), url = booking(select.value);
@@ -72,8 +73,8 @@
   const form = document.getElementById('arrivalForm');
   if (form) {
     const select = document.getElementById('lineStudent'), plan = document.getElementById('linePlan');
-    students.forEach(s => select.add(new Option(s.name, s.id)));
-    if (byId.has(id)) select.value = id;
+    consultingStudents.forEach(s => select.add(new Option(s.name, s.id)));
+    if (consultingStudents.some(s => s.id === id)) select.value = id;
     const email = /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/.test(config.lineApplicationEmail || '') ? config.lineApplicationEmail : '';
     const external = https(config.lineApplicationUrl);
     const friend = https(config.lineFriendUrl, ['line.me', 'www.line.me', 'lin.ee']);

@@ -64,7 +64,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-eotvos-lorand-university",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -76,7 +76,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-2",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -85,10 +85,10 @@
           "status": "ranked",
           "year": 2026,
           "rank": "501-600",
-          "checked_at": "2026-11-16",
+          "checked_at": "2026-11-23",
           "source_id": "sh-eotvos-lorand-university",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "ok"
           }
         }
@@ -119,7 +119,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-university-debrecen",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -131,7 +131,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-3",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -170,7 +170,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-university-szeged",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -182,7 +182,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-4",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -191,10 +191,10 @@
           "status": "ranked",
           "year": 2026,
           "rank": "501-600",
-          "checked_at": "2026-11-16",
+          "checked_at": "2026-11-23",
           "source_id": "sh-university-of-szeged",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "ok"
           }
         }
@@ -225,7 +225,7 @@
           "checked_at": null,
           "source_id": "qs-semmelweis",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -237,7 +237,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-0",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -246,10 +246,10 @@
           "status": "ranked",
           "year": 2026,
           "rank": "701-800",
-          "checked_at": "2026-11-16",
+          "checked_at": "2026-11-23",
           "source_id": "sh-semmelweis-university",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "ok"
           }
         }
@@ -275,7 +275,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-budapest-university-technology-economics",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -287,7 +287,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-6",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -296,10 +296,10 @@
           "status": "ranked",
           "year": 2026,
           "rank": "901-1000",
-          "checked_at": "2026-11-16",
+          "checked_at": "2026-11-23",
           "source_id": "sh-budapest-university-of-technology-and-economics",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "ok"
           }
         }
@@ -330,7 +330,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-university-pecs",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -342,7 +342,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-5",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -381,7 +381,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-obuda-university",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -393,7 +393,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-1",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -427,7 +427,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-corvinus-university-budapest",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -439,7 +439,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-7",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -478,7 +478,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-mate-hungarian-university-agriculture-life-sciences",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -490,7 +490,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-8",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -524,7 +524,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-university-miskolc",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -536,7 +536,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-9",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -570,7 +570,7 @@
           "checked_at": "2026-10-04",
           "source_id": "qs-szechenyi-istvan-university-university-gyor",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -582,7 +582,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-szechenyi",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -621,7 +621,7 @@
           "checked_at": null,
           "source_id": "qs-bueb",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -634,7 +634,7 @@
           "source_id": "the-21",
           "note": "公式プロフィールから対象版の総合順位を確認できていません。",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -967,7 +967,7 @@
           "checked_at": null,
           "source_id": "the-fi33842",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -1225,7 +1225,7 @@
           "checked_at": null,
           "source_id": "the-fi10955",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -1554,7 +1554,7 @@
           "checked_at": null,
           "source_id": "the-fi96377",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -1912,7 +1912,7 @@
           "checked_at": null,
           "source_id": "qs-fi79633",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -1924,7 +1924,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-fi79633",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -2355,7 +2355,7 @@
           "checked_at": "2026-10-05",
           "source_id": "qs-fi80554",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -2367,7 +2367,7 @@
           "checked_at": "2026-11-02",
           "source_id": "the-fi80554",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -2401,7 +2401,7 @@
           "checked_at": null,
           "source_id": "qs-fi21120",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -2413,7 +2413,7 @@
           "checked_at": null,
           "source_id": "the-fi21120",
           "latest_attempt": {
-            "at": "2026-11-16",
+            "at": "2026-11-23",
             "status": "failed",
             "reason": "source_fetch_failed"
           }
@@ -2592,7 +2592,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2609,7 +2609,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2626,7 +2626,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2643,7 +2643,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2660,7 +2660,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2677,7 +2677,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2694,7 +2694,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2711,7 +2711,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2728,7 +2728,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-2",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2742,10 +2742,10 @@
       "year": 2026,
       "rank": "151-200",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2758,10 +2758,10 @@
       "year": 2026,
       "rank": "151-200",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2774,10 +2774,10 @@
       "year": 2026,
       "rank": "151-200",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2790,10 +2790,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2806,10 +2806,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2822,10 +2822,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2838,10 +2838,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2854,10 +2854,10 @@
       "year": 2026,
       "rank": "301-400",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2870,10 +2870,10 @@
       "year": 2026,
       "rank": "301-400",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-eotvos-lorand-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -2889,7 +2889,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2906,7 +2906,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2923,7 +2923,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2940,7 +2940,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2957,7 +2957,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2974,7 +2974,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -2991,7 +2991,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3008,7 +3008,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-3",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3025,7 +3025,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3042,7 +3042,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3059,7 +3059,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3076,7 +3076,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3093,7 +3093,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3110,7 +3110,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3127,7 +3127,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3144,7 +3144,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3161,7 +3161,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3178,7 +3178,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3195,7 +3195,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-4",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3209,10 +3209,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-university-of-szeged",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3225,10 +3225,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-university-of-szeged",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3241,10 +3241,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-university-of-szeged",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3257,10 +3257,10 @@
       "year": 2026,
       "rank": "301-400",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-university-of-szeged",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3273,10 +3273,10 @@
       "year": 2026,
       "rank": "301-400",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-university-of-szeged",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3292,7 +3292,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-0",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3306,10 +3306,10 @@
       "year": 2026,
       "rank": "44",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3322,10 +3322,10 @@
       "year": 2026,
       "rank": "151-200",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3338,10 +3338,10 @@
       "year": 2026,
       "rank": "151-200",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3354,10 +3354,10 @@
       "year": 2026,
       "rank": "151-200",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3370,10 +3370,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3386,10 +3386,10 @@
       "year": 2026,
       "rank": "301-400",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3402,10 +3402,10 @@
       "year": 2026,
       "rank": "401-500",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-semmelweis-university",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3421,7 +3421,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-6",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3438,7 +3438,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-6",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3455,7 +3455,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-6",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3472,7 +3472,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-6",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3489,7 +3489,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-6",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3506,7 +3506,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-6",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3520,10 +3520,10 @@
       "year": 2026,
       "rank": "101-150",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-budapest-university-of-technology-and-economics",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3536,10 +3536,10 @@
       "year": 2026,
       "rank": "201-300",
       "status": "ranked",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-23",
       "source_id": "sh-budapest-university-of-technology-and-economics",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "ok"
       }
     },
@@ -3555,7 +3555,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3572,7 +3572,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3589,7 +3589,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3606,7 +3606,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3623,7 +3623,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3640,7 +3640,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3657,7 +3657,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3674,7 +3674,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-5",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3691,7 +3691,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-1",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3708,7 +3708,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-1",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3725,7 +3725,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-1",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3742,7 +3742,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-1",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3759,7 +3759,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-8",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3776,7 +3776,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-8",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3793,7 +3793,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-8",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3810,7 +3810,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-8",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3827,7 +3827,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-8",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3844,7 +3844,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-9",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3861,7 +3861,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-9",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3878,7 +3878,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-szechenyi",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3895,7 +3895,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-szechenyi",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3912,7 +3912,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-szechenyi",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3929,7 +3929,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-fi80554",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3946,7 +3946,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-fi79633",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }
@@ -3963,7 +3963,7 @@
       "checked_at": "2026-11-02",
       "source_id": "the-fi79633",
       "latest_attempt": {
-        "at": "2026-11-16",
+        "at": "2026-11-23",
         "status": "failed",
         "reason": "source_fetch_failed"
       }

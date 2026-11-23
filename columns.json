@@ -486,5 +486,23 @@
     ],
     "readingTime": "5分",
     "url": "column-yugo-class-style.html"
+  },
+  {
+    "id": "yugo-mobile-sim",
+    "enabled": true,
+    "title": "ハンガリー留学のスマホ・SIM事情！渡航初日のネット確保から月800円の通信費まで徹底解説【デブレツェン大学CS専攻】",
+    "author": "ユウゴ",
+    "authorId": "okada",
+    "university": "University of Debrecen",
+    "date": "2026-11-23",
+    "thumbnail": "images/columns/okada-20-airport-smartphone-04.jpg",
+    "summary": "デブレツェン大学のユウゴが、渡航初日のeSIM、OneのプリペイドSIM、日本の電話番号保管と一時帰国時の通信を体験から紹介します。",
+    "tags": [
+      "スマホ",
+      "SIM",
+      "デブレツェン"
+    ],
+    "readingTime": "6分",
+    "url": "column-yugo-mobile-sim.html"
   }
 ]

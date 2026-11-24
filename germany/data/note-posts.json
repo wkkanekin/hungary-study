@@ -1,15 +1,6 @@
 {
-  "updatedAt": "2026-11-23T01:49:05.754330+00:00",
+  "updatedAt": "2026-11-24T05:21:45.736506+00:00",
   "posts": [
-    {
-      "authorId": "mizu",
-      "author": "Mizu",
-      "title": "【CAだった頃】入社から怒涛の新人訓練、そして初フライトまで",
-      "date": "2026-11-19",
-      "summary": "2021年に退職するまで、私は日系航空会社で客室乗務員（CA）として働いていました。 訓練、フライト、ステイ先での出来事、一緒に働いた人たち、一期一会のお客様、そして訪れたコロナ禍の水際対策。 あの頃は当たり前だった毎日も、時間が経つにつれて少しずつ記憶が薄れていきます…（時間って恐ろしい！） CAだった頃の自分が見ていた景色や感じていたことを、完全に忘れて",
-      "image": "https://assets.st-note.com/production/uploads/images/337011802/rectangle_large_type_2_b6022b92ae737efaf06426e1b91ebf39.png?fit=bounds&quality=85&width=1280",
-      "url": "https://note.com/mizulog_de/n/nb2127401216b"
-    },
     {
       "authorId": "momo",
       "author": "もも",
@@ -18,6 +9,15 @@
       "summary": "今年の夏、母とイタリアとスイスを旅行しました。 おたがい世界名作劇場ファンのため、イタリアの世界名作劇場の舞台も訪れてみることに。 ジェノヴァ→母をたずねて三千里 ミラノ→ロミオの青い空 どちらも世界名作劇場の中ではあまり私に刺さらず、2,3回子供の頃視聴しただけなのであまり内容覚えておらず、、。おそらく内容が重めで、気軽に好きな話だけみるということがしにく",
       "image": "https://assets.st-note.com/production/uploads/images/337610148/rectangle_large_type_2_e2f8bfbff1ab6a71a5715d5ce6ec609f.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/nb9f3009a605d"
+    },
+    {
+      "authorId": "mizu",
+      "author": "Mizu",
+      "title": "【CAだった頃】入社から怒涛の新人訓練、そして初フライトまで",
+      "date": "2026-11-19",
+      "summary": "2021年に退職するまで、私は日系航空会社で客室乗務員（CA）として働いていました。 訓練、フライト、ステイ先での出来事、一緒に働いた人たち、一期一会のお客様、そして訪れたコロナ禍の水際対策。 あの頃は当たり前だった毎日も、時間が経つにつれて少しずつ記憶が薄れていきます…（時間って恐ろしい！） CAだった頃の自分が見ていた景色や感じていたことを、完全に忘れて",
+      "image": "https://assets.st-note.com/production/uploads/images/337011802/rectangle_large_type_2_b6022b92ae737efaf06426e1b91ebf39.png?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/mizulog_de/n/nb2127401216b"
     },
     {
       "authorId": "momo",
@@ -101,15 +101,6 @@
       "url": "https://note.com/mizulog_de/n/n013eb38d3575"
     },
     {
-      "authorId": "mizu",
-      "author": "Mizu",
-      "title": "英文科卒なのに、英語が出てこない⁉",
-      "date": "2026-09-24",
-      "summary": "最近、本格的に英語の勉強を始めました。 「ドイツに住んでいるのに、なぜ今さら英語？」と思われるかもしれませんが、ドイツ語をC1レベルまで勉強したからこそ、英語が全然出てこなくなってしまったんです… 相手が言っていることは、まだなんとか分かるんです。 でも、いざ自分で話そうとすると言葉がぜーんぜん出てこない。 しかも英語を話したいのに、なぜか先にドイツ語が出て",
-      "image": "https://assets.st-note.com/production/uploads/images/316071098/rectangle_large_type_2_a9db53e6afdd802f92f5969bda9a0d4d.png?fit=bounds&quality=85&width=1280",
-      "url": "https://note.com/mizulog_de/n/nc22edb74734c"
-    },
-    {
       "authorId": "momo",
       "author": "もも",
       "title": "１ヶ月、農家で住み込みバイト",
@@ -117,6 +108,15 @@
       "summary": "次のSemesterは大学がオンラインで完結するので２ヶ月半ほど日本に滞在します。 そのうち１ヶ月、農家さんのお手伝いバイトをすることにしました🌱 私が行く11,12月は、みかんの収穫時期なので、和歌山、愛媛の求人が豊富。いろいろ考えて、観光も楽しそうで、交通費や住み込みの家賃もかからない、愛媛県の農家さんを選びました。 なぜかずっとやってみたかった農業。 ",
       "image": "https://assets.st-note.com/production/uploads/images/316064709/rectangle_large_type_2_b6d77d7b8078977fbe631a43919089d4.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/n81f647622767"
+    },
+    {
+      "authorId": "mizu",
+      "author": "Mizu",
+      "title": "英文科卒なのに、英語が出てこない⁉",
+      "date": "2026-09-24",
+      "summary": "最近、本格的に英語の勉強を始めました。 「ドイツに住んでいるのに、なぜ今さら英語？」と思われるかもしれませんが、ドイツ語をC1レベルまで勉強したからこそ、英語が全然出てこなくなってしまったんです… 相手が言っていることは、まだなんとか分かるんです。 でも、いざ自分で話そうとすると言葉がぜーんぜん出てこない。 しかも英語を話したいのに、なぜか先にドイツ語が出て",
+      "image": "https://assets.st-note.com/production/uploads/images/316071098/rectangle_large_type_2_a9db53e6afdd802f92f5969bda9a0d4d.png?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/mizulog_de/n/nc22edb74734c"
     },
     {
       "authorId": "mizu",
@@ -479,15 +479,6 @@
       "url": "https://note.com/apt_tiger8396/n/n12b0b563ace1"
     },
     {
-      "authorId": "airi-kawakita",
-      "author": "河北彩里",
-      "title": "2026年の目標",
-      "date": "2026-01-24",
-      "summary": "みなさん、あけましておめでとうございます👋 ドイツの工科大学生、あいりです 🇩🇪 なんか、気づいたら1月もう終わりそうだけど、ほんと信じられないくらい最近時間過ぎるの早いけど、今日が私が一番若い日！って考えて何事も。 今年は20歳になるということもあるので、20個目標立てます。 ほなほな、Los geht's! 自分の機嫌は自分で取る😁 ワークライフバランス",
-      "image": "https://assets.st-note.com/production/uploads/images/246334914/rectangle_large_type_2_7a35b36b78e5d4dfa644d9fd3e1af6c2.png?fit=bounds&quality=85&width=1280",
-      "url": "https://note.com/akunigermany/n/n45e51bdc1ae1"
-    },
-    {
       "authorId": "momo",
       "author": "もも",
       "title": "ドイツでお酒飲めないの、きつい",
@@ -495,6 +486,15 @@
       "summary": "ドイツといえばビール！！🍺 私はせっかくドイツにいるのに、お酒にめちゃくちゃ弱いです🍻 これまでのお酒激弱エピソード👇 ⭐︎ほろ酔い半分でまっすぐ歩けなくなる ⭐︎梅の梅酒漬け5個食べて倒れる ⭐︎ドイツでビール1杯飲んで、倒れる 吐くとか、頭痛いを通り越して、倒れるのでお酒は全く飲んでません🙅‍♀️ ドイツ人は基本、数人で集まるとお酒飲みます。 私の住んで",
       "image": "https://assets.st-note.com/production/uploads/images/245884383/rectangle_large_type_2_87fb607a58bc2b17d6236a6aa3f694f5.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/nb165463c918d"
+    },
+    {
+      "authorId": "airi-kawakita",
+      "author": "河北彩里",
+      "title": "2026年の目標",
+      "date": "2026-01-24",
+      "summary": "みなさん、あけましておめでとうございます👋 ドイツの工科大学生、あいりです 🇩🇪 なんか、気づいたら1月もう終わりそうだけど、ほんと信じられないくらい最近時間過ぎるの早いけど、今日が私が一番若い日！って考えて何事も。 今年は20歳になるということもあるので、20個目標立てます。 ほなほな、Los geht's! 自分の機嫌は自分で取る😁 ワークライフバランス",
+      "image": "https://assets.st-note.com/production/uploads/images/246334914/rectangle_large_type_2_7a35b36b78e5d4dfa644d9fd3e1af6c2.png?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/akunigermany/n/n45e51bdc1ae1"
     },
     {
       "authorId": "momo",
@@ -758,15 +758,6 @@
       "url": "https://note.com/apt_tiger8396/n/n3c202a0e7433"
     },
     {
-      "authorId": "airi-kawakita",
-      "author": "河北彩里",
-      "title": "ハプニングオンパレード",
-      "date": "2025-10-03",
-      "summary": "みなさん、こんにちは！ 2025年10月からドイツ大学へ正規留学するあいりです 🇩🇪 今回は、私の渡航日の色々ハプニングについて日記形式で記します。 結構エンターテインメント要素強めです（笑） 完璧なはずだった \"予定\" 私の渡航日は9月15日羽田発の夜便でした。 夜だからあまり急がず車で家族みんなで行って、会いに来てくれる友達と落ち合って、最後にゆっくりご",
-      "image": "https://assets.st-note.com/production/uploads/images/219363242/rectangle_large_type_2_c3f144dacfe5513f01c56c8018db69fa.png?fit=bounds&quality=85&width=1280",
-      "url": "https://note.com/akunigermany/n/n463395ee8681"
-    },
-    {
       "authorId": "momo",
       "author": "もも",
       "title": "【悪名高きドイツ鉄道】真冬に電車から降ろされる。",
@@ -774,6 +765,15 @@
       "summary": "ドイツの電車はよく遅延する。 もはやドイツに住んでる人にとっては常識だと思います。 冬学期中の出来事ですが、近くの町のクリスマスマーケットに友達と行きました🎄行きは問題なく到着できましたが、問題は帰り。 時間通りに出発し、順調に見えた電車が急に停車。すぐに動くかなと思ったら、「電気トラブルのためしばらくお待ちください」とのこと。 30分待っても同じアナウンス",
       "image": "https://assets.st-note.com/production/uploads/images/219696320/rectangle_large_type_2_cd6efcbbe9f63a0e961822e629049ba1.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/nc8d71846637e"
+    },
+    {
+      "authorId": "airi-kawakita",
+      "author": "河北彩里",
+      "title": "ハプニングオンパレード",
+      "date": "2025-10-03",
+      "summary": "みなさん、こんにちは！ 2025年10月からドイツ大学へ正規留学するあいりです 🇩🇪 今回は、私の渡航日の色々ハプニングについて日記形式で記します。 結構エンターテインメント要素強めです（笑） 完璧なはずだった \"予定\" 私の渡航日は9月15日羽田発の夜便でした。 夜だからあまり急がず車で家族みんなで行って、会いに来てくれる友達と落ち合って、最後にゆっくりご",
+      "image": "https://assets.st-note.com/production/uploads/images/219363242/rectangle_large_type_2_c3f144dacfe5513f01c56c8018db69fa.png?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/akunigermany/n/n463395ee8681"
     },
     {
       "authorId": "aina",
@@ -785,15 +785,6 @@
       "url": "https://note.com/_poppo_germany_/n/ne692112a0e42"
     },
     {
-      "authorId": "megumi-yamada",
-      "author": "山田恵",
-      "title": "DAAD YouTubeライブのお知らせ",
-      "date": "2025-10-01",
-      "summary": "DAAD【YouTubeライブ】英語でドイツ留学 に参加します。英語留学としてのドイツ留学や、平和学の日々の学びについて紹介させていただきます。 【日時】2025年10月24日（金）日本時間18:00-19:00 詳細は以下のリンクから閲覧可能です。 アーカイブはこちら↓",
-      "image": "https://i.ytimg.com/vi/TkpqPEwM62I/maxresdefault.jpg",
-      "url": "https://note.com/bratsche_viola/n/n24af04c05205"
-    },
-    {
       "authorId": "momo",
       "author": "もも",
       "title": "パリは古着屋天国🇫🇷〜おすすめの古着屋紹介〜",
@@ -801,6 +792,15 @@
       "summary": "先日初のパリ旅行に行ってきました！ パリの４区、３区あたりに古着屋さんがたくさんあります✨ サムネのようなthe 古着屋さんっていうお店から、一見古着屋さんというよりセレクトショップに見えるようなお店もありました。店によってジャンルが違ってとても面白かったです。 最終の日をショッピングDayにしたのですが、もう１日欲しいくらいたくさんのお店があって、リサーチ",
       "image": "https://assets.st-note.com/production/uploads/images/219121651/rectangle_large_type_2_51d21055cb2a1a281c55542fa9e120a8.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/na1669f14d90a"
+    },
+    {
+      "authorId": "megumi-yamada",
+      "author": "山田恵",
+      "title": "DAAD YouTubeライブのお知らせ",
+      "date": "2025-10-01",
+      "summary": "DAAD【YouTubeライブ】英語でドイツ留学 に参加します。英語留学としてのドイツ留学や、平和学の日々の学びについて紹介させていただきます。 【日時】2025年10月24日（金）日本時間18:00-19:00 詳細は以下のリンクから閲覧可能です。 アーカイブはこちら↓",
+      "image": "https://i.ytimg.com/vi/TkpqPEwM62I/maxresdefault.jpg",
+      "url": "https://note.com/bratsche_viola/n/n24af04c05205"
     },
     {
       "authorId": "momo",
@@ -965,15 +965,6 @@
       "url": "https://note.com/apt_tiger8396/n/na38763c70f60"
     },
     {
-      "authorId": "megumi-yamada",
-      "author": "山田恵",
-      "title": "【楽しいことばかりじゃない】ドイツ留学批判",
-      "date": "2025-05-04",
-      "summary": "「留学するならドイツ」のNoteでは、ドイツ留学の良さを発信してきました。楽しいことが大半のドイツ留学でももちろん辛いこともあります。ドイツ留学生たるもの、物事を過剰に評価せず、批判的に見ることは忘れてはいけません。このドイツ留学推進アカウントもずっとドイツ留学のプロパガンダを垂れ流す訳にはいかないので、今回はなるべくクリティカルな目線からドイツ留学を評価し",
-      "image": "https://assets.st-note.com/production/uploads/images/186098130/rectangle_large_type_2_be6f25aa416cf3c036a05f432e43cb07.png?fit=bounds&quality=85&width=1280",
-      "url": "https://note.com/bratsche_viola/n/ndb68bb86c2d6"
-    },
-    {
       "authorId": "momo",
       "author": "もも",
       "title": "【ダッハウ収容所🇩🇪】ホロコーストの遺産〜ミュンヘンから30分〜",
@@ -990,6 +981,15 @@
       "summary": "南ドイツやスイス、オーストリア、スイスなどの森林地帯ではダニを媒介としたウイルス性脳炎の発症例があり、FSMEと呼ばれています。日本語では「初夏脳髄膜炎」。 ドイツではバイエルン州やバーデン=ヴュルテンベルク州はほぼ全域、危険地域に入っています。 主な症状 最初は風邪やインフルエンザの様に熱が出ることが多く、ほとんどの場合はこのまま自然に治っていく。 次いで",
       "image": "https://assets.st-note.com/production/uploads/images/187677125/rectangle_large_type_2_fae3abd6f9ba51bfe301f4b121c19295.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/nf13a4e98b996"
+    },
+    {
+      "authorId": "megumi-yamada",
+      "author": "山田恵",
+      "title": "【楽しいことばかりじゃない】ドイツ留学批判",
+      "date": "2025-05-04",
+      "summary": "「留学するならドイツ」のNoteでは、ドイツ留学の良さを発信してきました。楽しいことが大半のドイツ留学でももちろん辛いこともあります。ドイツ留学生たるもの、物事を過剰に評価せず、批判的に見ることは忘れてはいけません。このドイツ留学推進アカウントもずっとドイツ留学のプロパガンダを垂れ流す訳にはいかないので、今回はなるべくクリティカルな目線からドイツ留学を評価し",
+      "image": "https://assets.st-note.com/production/uploads/images/186098130/rectangle_large_type_2_be6f25aa416cf3c036a05f432e43cb07.png?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/bratsche_viola/n/ndb68bb86c2d6"
     },
     {
       "authorId": "momo",
@@ -1037,15 +1037,6 @@
       "url": "https://note.com/apt_tiger8396/n/nba8081eb12a2"
     },
     {
-      "authorId": "megumi-yamada",
-      "author": "山田恵",
-      "title": "ドイツが社会政治系統の学問を学ぶのに適している理由",
-      "date": "2025-04-11",
-      "summary": "ドイツで法学、歴史学、社会学、国際関係学を学ぶことはベストな選択です。これはドイツ留学の経験に基づいた私の個人的な主張です。 これらの学問は、日本国外を訪れないと分からないことも多いからです。特に、法の運用体制、市民社会、宗教学など、大陸ヨーロッパの概念になると日本の常識が通じないことばかりです。 確かに、オンラインでどんな論文でもアクセスできるこの時代、日",
-      "image": "https://assets.st-note.com/production/uploads/images/183549780/rectangle_large_type_2_e1b6d41e0ce98d96ce5170f8d2a170ff.jpg?fit=bounds&quality=85&width=1280",
-      "url": "https://note.com/bratsche_viola/n/n38bb5d31ac60"
-    },
-    {
       "authorId": "momo",
       "author": "もも",
       "title": "海外生活は常に省エネで過ごすべし💡",
@@ -1053,6 +1044,15 @@
       "summary": "海外で生活するようになると、はじめは意気込んでいろいろ慣れないことをやろうとするもの。 私は、初めてのドイツ生活が始まった時、語学を伸ばそうといろんなイベントに行ったり、たくさん友達と遊んだりしていました。 インドア派ではないものの、1人行動が大好きな私にとってはかなりのストレスで、疲れてしまい、1人の時間を増やしました。 すると、それに対して罪悪感を感じて",
       "image": "https://assets.st-note.com/production/uploads/images/183589557/rectangle_large_type_2_2199547df59a657629cff01237446383.jpeg?fit=bounds&quality=85&width=1280",
       "url": "https://note.com/apt_tiger8396/n/ndffa00fc5255"
+    },
+    {
+      "authorId": "megumi-yamada",
+      "author": "山田恵",
+      "title": "ドイツが社会政治系統の学問を学ぶのに適している理由",
+      "date": "2025-04-11",
+      "summary": "ドイツで法学、歴史学、社会学、国際関係学を学ぶことはベストな選択です。これはドイツ留学の経験に基づいた私の個人的な主張です。 これらの学問は、日本国外を訪れないと分からないことも多いからです。特に、法の運用体制、市民社会、宗教学など、大陸ヨーロッパの概念になると日本の常識が通じないことばかりです。 確かに、オンラインでどんな論文でもアクセスできるこの時代、日",
+      "image": "https://assets.st-note.com/production/uploads/images/183549780/rectangle_large_type_2_e1b6d41e0ce98d96ce5170f8d2a170ff.jpg?fit=bounds&quality=85&width=1280",
+      "url": "https://note.com/bratsche_viola/n/n38bb5d31ac60"
     },
     {
       "authorId": "momo",

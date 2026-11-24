@@ -120,24 +120,24 @@
     "date": "2024-07-24"
   },
   "https://tobitate-mext.jasso.go.jp/news/550.html": {
-    "fingerprint": "6335db893ba6e3f9699cc4f8f1e11f829e0c5843becc1cf832db475b739a0487",
-    "date": "2026-11-13"
+    "fingerprint": "27ed139452773461807203de6beab5b142fb0255ffab3a02359090fb5d7fc929",
+    "date": "2026-11-24"
   },
   "https://tobitate-mext.jasso.go.jp/news/437.html": {
-    "fingerprint": "d2c3dc43c5e178b0dadbaa62aba642413582a164fffaa2cb66e2f6127271d969",
-    "date": "2026-11-11"
+    "fingerprint": "dfc0b596e1148d73529453f373f9a9ef974b05079d08999e697cf34ed57c4ca1",
+    "date": "2026-11-24"
   },
   "https://tobitate-mext.jasso.go.jp/news/412.html": {
-    "fingerprint": "99a662b41c3a99d4a53e419b32e47020375112e8947b5ec72750acdc8b589566",
-    "date": "2026-10-01"
+    "fingerprint": "428d132cee2e584e416d862442ef67396046cacb65a021572c83e0842f6e223d",
+    "date": "2026-11-24"
   },
   "https://tobitate-mext.jasso.go.jp/news/401.html": {
     "fingerprint": "616f47418241090c245e25f6a72dda7e105ffdd77f8f795e6c8b250f76469a49",
     "date": "2026-10-01"
   },
   "https://tobitate-mext.jasso.go.jp/news/490.html": {
-    "fingerprint": "6e30f571cdc79eb3df3d3e2ebdeb088ca80c6088499bc1c05693cce4252084a3",
-    "date": "2026-11-20"
+    "fingerprint": "cfdc6467a963e9307af27bf30cf7f9394de8a23a862da6a0857ab276cc4932c4",
+    "date": "2026-11-24"
   },
   "https://tobitate-mext.jasso.go.jp/news/1001_00438.html": {
     "fingerprint": "169ce686d3ed58bc40e4f8f16c103593b47502db45e4bb8da5f98c9234df8f14",
@@ -308,7 +308,7 @@
     "date": "2026-11-12"
   },
   "https://tobitate-mext.jasso.go.jp/news/557.html": {
-    "fingerprint": "1f5810d39c969cf0a98a471e9f9c90367bd0f8e699d77424391e7c30948d71ee",
+    "fingerprint": "dace4dc6c30681c8e56d14b52359cf71b1ede8f6e603d59176a9c10196370fbf",
     "date": "2026-11-13"
   },
   "https://ryugaku.jasso.go.jp/scholarship/search/data_00254.html": {
@@ -326,5 +326,9 @@
   "https://ryugaku.jasso.go.jp/scholarship/search/data_00004.html": {
     "date": "2026-11-11",
     "baseline": true
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00202.html": {
+    "fingerprint": "eff003268b61f97b4bfb4efbe8cd58078bd74f4ba4bc738cbd326da395fa2c9f",
+    "date": "2026-11-24"
   }
 }

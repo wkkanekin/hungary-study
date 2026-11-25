@@ -1,5 +1,12 @@
 window.GERMANY_UPDATES = [
 {
+  "title": "第25回「ベンチャー・カップCHIBA」ビジネスアイデア部門で優秀賞を受賞しました",
+  "date": "2026-11-25",
+  "url": "/venture-cup-chiba-2026.html",
+  "category": "受賞のお知らせ",
+  "enabled": true
+},
+{
   "title": "動画「日本の大学か、ドイツか？学費・奨学金と『卒業後の自由』を考える」を公開しました",
   "date": "2026-10-26",
   "url": "index.html#youtube",

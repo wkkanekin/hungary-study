@@ -136,8 +136,8 @@
     "date": "2026-10-01"
   },
   "https://tobitate-mext.jasso.go.jp/news/490.html": {
-    "fingerprint": "cfdc6467a963e9307af27bf30cf7f9394de8a23a862da6a0857ab276cc4932c4",
-    "date": "2026-11-24"
+    "fingerprint": "df55466ead429331da1845cb8d43cfa139b1e4e516f1e500c3cc4dcfd6b89a85",
+    "date": "2026-11-25"
   },
   "https://tobitate-mext.jasso.go.jp/news/1001_00438.html": {
     "fingerprint": "169ce686d3ed58bc40e4f8f16c103593b47502db45e4bb8da5f98c9234df8f14",
@@ -330,5 +330,9 @@
   "https://ryugaku.jasso.go.jp/scholarship/search/data_00202.html": {
     "fingerprint": "eff003268b61f97b4bfb4efbe8cd58078bd74f4ba4bc738cbd326da395fa2c9f",
     "date": "2026-11-24"
+  },
+  "https://ryugaku.jasso.go.jp/scholarship/search/data_00108.html": {
+    "date": "2026-11-18",
+    "baseline": true
   }
 }

@@ -1,11 +1,12 @@
 {
-  "checkedAt": "2026-11-27",
-  "sourcesSuccessful": 7,
+  "checkedAt": "2026-11-28",
+  "sourcesSuccessful": 6,
   "sourcesTotal": 10,
   "publishedItems": 13,
   "errors": [
     "Stipendium Hungaricum公式: ValueError: News selector matched no entries",
     "Study in Hungary（Tempus）: HTTPError: HTTP Error 404: Not Found",
+    "在日ハンガリー大使館: ValueError: News selector matched no entries",
     "在ハンガリー日本国大使館: HTTPError: HTTP Error 403: Forbidden"
   ],
   "dryRun": false
